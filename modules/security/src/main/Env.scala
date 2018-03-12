@@ -47,6 +47,10 @@ final class Env(
     val NetBaseUrl = config getString "net.base_url"
     val NetDomain = config getString "net.domain"
     val NetEmail = config getString "net.email"
+    val PassportUrl = config getString "passport.url"
+    val PassportClientId = config getString "passport.client"
+    val PassportClientSecret = config getString "passport.secret"
+    val PassportClientScope = config getString "passport.scope"
   }
   import settings._
 
@@ -76,6 +80,13 @@ final class Env(
     captcher = captcher,
     authenticator = authenticator,
     emailValidator = emailAddressValidator
+  )
+
+  lazy val oidc = new Oidc(
+    providerUrl = PassportUrl,
+    clientId = PassportClientId,
+    clientSecret = PassportClientSecret,
+    scope = PassportClientScope
   )
 
   lazy val geoIP = new GeoIP(

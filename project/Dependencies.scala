@@ -53,6 +53,14 @@ object Dependencies {
       .exclude("com.typesafe.play", "*")
   }
 
+  object pac4j {
+    val playPac4jVersion = "2.3.2"
+    val pac4jVersion = "1.9.9"
+    val play = "org.pac4j" % "play-pac4j" % playPac4jVersion
+    val http = "org.pac4j" % "pac4j-http" % pac4jVersion
+    val oidc = "org.pac4j" % "pac4j-oidc" % pac4jVersion exclude("commons-io" , "commons-io")
+  }
+
   object play {
     val version = "2.4.11"
     val api = "com.typesafe.play" %% "play" % version
