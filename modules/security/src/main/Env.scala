@@ -47,10 +47,6 @@ final class Env(
     val NetBaseUrl = config getString "net.base_url"
     val NetDomain = config getString "net.domain"
     val NetEmail = config getString "net.email"
-    val PassportUrl = config getString "passport.url"
-    val PassportClientId = config getString "passport.client"
-    val PassportClientSecret = config getString "passport.secret"
-    val PassportClientScope = config getString "passport.scope"
   }
   import settings._
 
@@ -80,13 +76,6 @@ final class Env(
     captcher = captcher,
     authenticator = authenticator,
     emailValidator = emailAddressValidator
-  )
-
-  lazy val oidc = new Oidc(
-    providerUrl = PassportUrl,
-    clientId = PassportClientId,
-    clientSecret = PassportClientSecret,
-    scope = PassportClientScope
   )
 
   lazy val geoIP = new GeoIP(
@@ -185,6 +174,37 @@ final class Env(
   lazy val csrfRequestHandler = new CSRFRequestHandler(NetDomain)
 
   def cli = new Cli
+
+  // oidc
+  /*
+  val oidc = new Oidc(
+    providerUrl = config getString "passport.url",
+    clientId = config getString "passport.client",
+    clientSecret = config getString "passport.secret",
+    scope = config getString "passport.scope",
+    baseUrl = NetBaseUrl
+  )
+
+  val oidcConfiguration = new OidcConfiguration()
+  oidcConfiguration.setClientId(clientId)
+  oidcConfiguration.setSecret(clientSecret)
+  oidcConfiguration.setDiscoveryURI(s"$providerUrl/.well-known/openid-configuration")
+  oidcConfiguration.setScope(s"openid $scope");
+  val oidcClient = new OidcClient[OidcProfile](oidcConfiguration)
+
+  val clients = new Clients(baseUrl + "/callback", oidcClient)
+
+  // callback
+  val callbackController = new CallbackController()
+  callbackController.setDefaultUrl("/")
+  callbackController.setMultiProfile(true)
+  bind(classOf[CallbackController]).toInstance(callbackController)
+
+  // logout
+  val logoutController = new ApplicationLogoutController()
+  logoutController.setDefaultUrl("/")
+  bind(classOf[ApplicationLogoutController]).toInstance(logoutController)
+  */
 
   // api actor
   system.lilaBus.subscribe(system.actorOf(Props(new Actor {

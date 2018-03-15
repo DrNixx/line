@@ -34,7 +34,7 @@ libraryDependencies ++= Seq(
   reactivemongo.driver, reactivemongo.iteratees, akka.actor, akka.slf4j,
   maxmind, prismic, netty, guava, jwt,
   kamon.core, kamon.influxdb,
-  pac4j.play, pac4j.oidc,
+  nimbusds.jwt, nimbusds.oidc,
   java8compat, semver, scrimage, scalaConfigs, scaffeine
 )
 TwirlKeys.templateImports ++= Seq(
@@ -269,7 +269,7 @@ lazy val oauth = module("oauth", Seq(common, db, user)).settings(
 )
 
 lazy val security = module("security", Seq(common, hub, db, user, i18n, slack, oauth)).settings(
-  libraryDependencies ++= provided(play.api, reactivemongo.driver, maxmind, hasher, pac4j.play, pac4j.oidc)
+  libraryDependencies ++= provided(play.api, reactivemongo.driver, maxmind, hasher, nimbusds.jwt, nimbusds.oidc)
 )
 
 lazy val shutup = module("shutup", Seq(common, db, hub, game, relation)).settings(

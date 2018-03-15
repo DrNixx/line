@@ -53,12 +53,9 @@ object Dependencies {
       .exclude("com.typesafe.play", "*")
   }
 
-  object pac4j {
-    val playPac4jVersion = "2.3.2"
-    val pac4jVersion = "1.9.9"
-    val play = "org.pac4j" % "play-pac4j" % playPac4jVersion
-    val http = "org.pac4j" % "pac4j-http" % pac4jVersion
-    val oidc = "org.pac4j" % "pac4j-oidc" % pac4jVersion exclude("commons-io" , "commons-io")
+  object nimbusds {
+    val jwt = "com.nimbusds" % "nimbus-jose-jwt" % "4.29"
+    val oidc = "com.nimbusds" % "oauth2-oidc-sdk" % "5.24.2"
   }
 
   object play {
