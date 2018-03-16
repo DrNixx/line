@@ -175,37 +175,6 @@ final class Env(
 
   def cli = new Cli
 
-  // oidc
-  /*
-  val oidc = new Oidc(
-    providerUrl = config getString "passport.url",
-    clientId = config getString "passport.client",
-    clientSecret = config getString "passport.secret",
-    scope = config getString "passport.scope",
-    baseUrl = NetBaseUrl
-  )
-
-  val oidcConfiguration = new OidcConfiguration()
-  oidcConfiguration.setClientId(clientId)
-  oidcConfiguration.setSecret(clientSecret)
-  oidcConfiguration.setDiscoveryURI(s"$providerUrl/.well-known/openid-configuration")
-  oidcConfiguration.setScope(s"openid $scope");
-  val oidcClient = new OidcClient[OidcProfile](oidcConfiguration)
-
-  val clients = new Clients(baseUrl + "/callback", oidcClient)
-
-  // callback
-  val callbackController = new CallbackController()
-  callbackController.setDefaultUrl("/")
-  callbackController.setMultiProfile(true)
-  bind(classOf[CallbackController]).toInstance(callbackController)
-
-  // logout
-  val logoutController = new ApplicationLogoutController()
-  logoutController.setDefaultUrl("/")
-  bind(classOf[ApplicationLogoutController]).toInstance(logoutController)
-  */
-
   // api actor
   system.lilaBus.subscribe(system.actorOf(Props(new Actor {
     def receive = {

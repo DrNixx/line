@@ -169,6 +169,7 @@ object Env {
   def db = lila.db.Env.current
   def user = lila.user.Env.current
   def security = lila.security.Env.current
+  def oidc = lila.oidc.Env.current
   def hub = lila.hub.Env.current
   def socket = lila.socket.Env.current
   def memo = lila.memo.Env.current

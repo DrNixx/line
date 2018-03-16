@@ -54,7 +54,7 @@ scalariformPreferences := scalariformPrefs(scalariformPreferences.value)
 excludeFilter in scalariformFormat := "*Routes*"
 
 lazy val modules = Seq(
-  common, db, rating, user, security, hub, socket,
+  common, db, rating, user, security, oidc, hub, socket,
   message, notifyModule, i18n, game, bookmark, search,
   gameSearch, timeline, forum, forumSearch, team, teamSearch,
   analyse, mod, site, round, pool, lobby, setup,
@@ -218,7 +218,7 @@ lazy val activity = module("activity", Seq(common, game, analyse, user, forum, s
 
 lazy val lobby = module("lobby", Seq(
   common, db, memo, hub, socket, game, user,
-  round, timeline, relation, playban, security, pool
+  round, timeline, relation, playban, security, oidc, pool
 )).settings(
   libraryDependencies ++= provided(play.api, reactivemongo.driver)
 )
@@ -268,8 +268,12 @@ lazy val oauth = module("oauth", Seq(common, db, user)).settings(
   libraryDependencies ++= provided(play.api, reactivemongo.driver, jwt)
 )
 
+lazy val oidc = module("oidc", Seq(common, db, user)).settings(
+  libraryDependencies ++= provided(play.api, reactivemongo.driver, nimbusds.jwt, nimbusds.oidc)
+)
+
 lazy val security = module("security", Seq(common, hub, db, user, i18n, slack, oauth)).settings(
-  libraryDependencies ++= provided(play.api, reactivemongo.driver, maxmind, hasher, nimbusds.jwt, nimbusds.oidc)
+  libraryDependencies ++= provided(play.api, reactivemongo.driver, maxmind, hasher)
 )
 
 lazy val shutup = module("shutup", Seq(common, db, hub, game, relation)).settings(

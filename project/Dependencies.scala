@@ -54,8 +54,8 @@ object Dependencies {
   }
 
   object nimbusds {
-    val jwt = "com.nimbusds" % "nimbus-jose-jwt" % "4.29"
-    val oidc = "com.nimbusds" % "oauth2-oidc-sdk" % "5.24.2"
+    val jwt = "com.nimbusds" % "nimbus-jose-jwt" % "5.7"
+    val oidc = "com.nimbusds" % "oauth2-oidc-sdk" % "5.56"
   }
 
   object play {
