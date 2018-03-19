@@ -331,13 +331,11 @@ GET   /video/:id                       controllers.Video.show(id: String)
 # I18n
 POST  /translation/select              controllers.I18n.select
 
-# OIDC
-# GET         /callback                  @org.pac4j.play.CallbackController.callback()
-# POST        /callback                  @org.pac4j.play.CallbackController.callback()
-
 # Authentication
-GET   /login                           controllers.Auth.login
+GET   /login                           controllers.Oidc.login
 POST  /login                           controllers.Auth.authenticate
+GET         /oidc-signin               controllers.Oidc.callback
+POST        /oidc-signin               controllers.Oidc.callback
 GET   /logout                          controllers.Auth.logoutGet
 POST  /logout                          controllers.Auth.logout
 GET   /signup                          controllers.Auth.signup

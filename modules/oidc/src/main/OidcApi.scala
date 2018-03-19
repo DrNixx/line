@@ -20,4 +20,16 @@ final class OidcApi(
     val authenticationRequest = client.createOIDCAuthenticationRequest(oidc.issuer, oidc.clientID, oidc.signinCallbackUrl)
     authenticationRequest
   }
+
+  def authenticate(
+    params: Map[String, String],
+    redirectURI: String,
+    state: String,
+    nonce: String
+  ) = {
+    val client = new OpenIDConnectService();
+    val user = client.authenticate(params, new URI(redirectURI), new State(state), new Nonce(nonce), oidc)
+
+  }
+
 }

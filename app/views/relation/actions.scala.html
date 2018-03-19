@@ -37,7 +37,7 @@
   }.getOrElse {
   @if(signup) {
   @trans.youNeedAnAccountToDoThat()
-  <a href="@routes.Auth.login" class="signup">@trans.signUp</a>
+  <a href="@routes.Oidc.login" class="signup">@trans.signUp</a>
   }
   }
 </div>
