@@ -97,6 +97,7 @@ final class OpenIDConnectService() {
       obtainOIDCToken(authenticationResponse.getAuthorizationCode, nonce, redirectURI, oidc) flatMap { claims =>
         Seq("email", "preferred_username", "name").map(k => Option(claims.getStringClaim(k))) match {
           case Seq(Some(email), preferredUsername, name) =>
+            logger.info(s"Claims: claims=${claims.toJSONObject}")
             getOrCreateFederatedUser(claims.getIssuer.getValue, claims.getSubject.getValue, email, preferredUsername, name)
           case _ =>
             logger.info(s"OIDC ID token must have an email claim: claims=${claims.toJSONObject}")
