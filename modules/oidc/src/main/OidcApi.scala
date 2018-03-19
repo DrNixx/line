@@ -23,12 +23,11 @@ final class OidcApi(
 
   def authenticate(
     params: Map[String, String],
-    redirectURI: String,
     state: String,
     nonce: String
   ) = {
     val client = new OpenIDConnectService();
-    val user = client.authenticate(params, new URI(redirectURI), new State(state), new Nonce(nonce), oidc)
+    val user = client.authenticate(params, oidc.signinCallbackUrl, new State(state), new Nonce(nonce), oidc)
 
   }
 
