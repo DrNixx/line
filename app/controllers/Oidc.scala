@@ -35,7 +35,6 @@ object Oidc extends LilaController {
 
     api.authenticate(
       req.queryString.map { case (k, Seq(v)) => (k, v) },
-      redirectBackURI,
       state,
       nonce
     )
