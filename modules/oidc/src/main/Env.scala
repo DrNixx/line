@@ -13,11 +13,11 @@ final class Env(
     lifecycle: play.api.inject.ApplicationLifecycle
 ) {
   private val settings = new {
-    val OidcIssuer = config getString "oidc.issuer"
-    val OidcClientId = config getString "oidc.client_id"
-    val OidcClientSecret = config getString "oidc.client_secret"
-    val OidcScopes = config getString "oidc.scopes"
-    val OidcJwsAlgorithm = config getString "oidc.jws_alg"
+    val OidcIssuer = config getString "issuer.base_url"
+    val OidcClientId = config getString "issuer.client_id"
+    val OidcClientSecret = config getString "issuer.client_secret"
+    val OidcScopes = config getString "issuer.scopes"
+    val OidcJwsAlgorithm = config getString "issuer.jws_alg"
     val NetBaseUrl = config getString "net.base_url"
     val NetDomain = config getString "net.domain"
     val NetEmail = config getString "net.email"

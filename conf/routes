@@ -334,8 +334,8 @@ POST  /translation/select              controllers.I18n.select
 # Authentication
 GET   /login                           controllers.Oidc.login
 POST  /login                           controllers.Auth.authenticate
-GET         /oidc-signin               controllers.Oidc.callback
-POST        /oidc-signin               controllers.Oidc.callback
+GET   /signin-oidc                     controllers.Oidc.callback
+POST  /signin-oidc                     controllers.Oidc.callback
 GET   /logout                          controllers.Auth.logoutGet
 POST  /logout                          controllers.Auth.logout
 GET   /signup                          controllers.Auth.signup
