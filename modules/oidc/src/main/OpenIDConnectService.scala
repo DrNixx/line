@@ -16,7 +16,7 @@ import com.nimbusds.openid.connect.sdk.claims.IDTokenClaimsSet
 import com.nimbusds.openid.connect.sdk.op.OIDCProviderMetadata
 import com.nimbusds.openid.connect.sdk.validators.IDTokenValidator
 import com.nimbusds.openid.connect.sdk.{ AuthenticationErrorResponse, _ }
-import com.nimbusds.openid.connect.sdk.claims._;
+import com.nimbusds.openid.connect.sdk.claims._
 
 import scala.collection.JavaConversions._
 
@@ -28,7 +28,7 @@ final class OpenIDConnectService(
     val oidc: OIDC
 ) {
 
-  lazy val metadata = getMetadata(oidc.issuer)
+  private lazy val metadata = getMetadata(oidc.issuer)
 
   private val JWK_REQUEST_TIMEOUT = 5000
 
@@ -44,20 +44,10 @@ final class OpenIDConnectService(
   /**
    * Get or create a user account federated with OIDC or SAML IdP.
    *
-   * @param issuer            Issuer
-   * @param subject           Subject
-   * @param mailAddress       Mail address
-   * @param preferredUserName Username (if this is none, username will be generated from the mail address)
-   * @param fullName          Fullname (defaults to username)
+   * @param userInfo            Issuer
    * @return User
    */
-  def getOrCreateFederatedUser(
-    issuer: String,
-    subject: String,
-    mailAddress: String,
-    preferredUserName: Option[String],
-    fullName: Option[String]
-  ): Fu[User] = fufail("123")
+  def getOrCreateFederatedUser(userInfo: UserInfo): Fu[User] = fufail("123")
 
   /**
    * Create an authentication request.
@@ -92,14 +82,11 @@ final class OpenIDConnectService(
     nonce: Nonce
   ): Fu[User] =
     validateOIDCAuthenticationResponse(params, state) flatMap { authenticationResponse =>
-      obtainOIDCToken(authenticationResponse.getAuthorizationCode, nonce) flatMap { claims =>
-        Seq("email", "preferred_username", "name").map(k => Option(claims.getStringClaim(k))) match {
-          case Seq(Some(email), preferredUsername, name) =>
-            logger.info(s"Claims: claims=${claims.toJSONObject}")
-            getOrCreateFederatedUser(claims.getIssuer.getValue, claims.getSubject.getValue, email, preferredUsername, name)
-          case _ =>
-            logger.info(s"OIDC ID token must have an email claim: claims=${claims.toJSONObject}")
-            fufail(s"OIDC ID token must have an email claim: claims=${claims.toJSONObject}")
+      obtainOIDCToken(authenticationResponse.getAuthorizationCode, nonce) flatMap { token =>
+        logger.info(s"Claims: claims=${token.toJSONObject}")
+        obtainUserInfo(token) flatMap { userInfo =>
+          logger.info(s"UserInfo: ${userInfo}")
+          getOrCreateFederatedUser(userInfo)
         }
       }
     }
@@ -138,25 +125,33 @@ final class OpenIDConnectService(
   def obtainOIDCToken(
     authorizationCode: AuthorizationCode,
     nonce: Nonce
-  ): Fu[IDTokenClaimsSet] = metadata.flatMap { metadata =>
-    sendOIDCTokenRequest(authorizationCode).flatMap { httpResponse =>
-      try {
-        OIDCTokenResponseParser.parse(httpResponse) match {
-          case response: OIDCTokenResponse =>
-            validateOIDCTokenResponse(response, nonce)
-          case response: TokenErrorResponse =>
-            fufail(s"OIDC token response has error: ${response.getErrorObject.toJSONObject}")
-        }
-      } catch {
-        case e: ParseException =>
-          fufail(s"OIDC token response has error: $e")
+  ): Fu[BearerAccessToken] = sendOIDCTokenRequest(authorizationCode).flatMap { httpResponse =>
+    try {
+      OIDCTokenResponseParser.parse(httpResponse) match {
+        case response: OIDCTokenResponse =>
+          validateOIDCTokenResponse(response, nonce) flatMap { claims =>
+            Seq("sub").map(k => Option(claims.getStringClaim(k))) match {
+              case Seq(Some(sub)) =>
+                logger.info(s"OIDC Claims: claims=${claims.toJSONObject}")
+                val successResponse = response.toSuccessResponse
+                fuccess(successResponse.getOIDCTokens.getBearerAccessToken)
+              case _ =>
+                logger.info(s"OIDC ID token must have an sub claim: claims=${claims.toJSONObject}")
+                fufail(s"OIDC ID token must have an email claim: claims=${claims.toJSONObject}")
+            }
+          }
+        case response: TokenErrorResponse =>
+          fufail(s"OIDC token response has error: ${response.getErrorObject.toJSONObject}")
       }
+    } catch {
+      case e: ParseException =>
+        fufail(s"OIDC token response has error: $e")
     }
   }
 
   /**
    * Execute oidc token request
-   * @param authorizationCode
+   * @param authorizationCode OpentId authorization code
    * @return
    */
   private def sendOIDCTokenRequest(
@@ -175,7 +170,7 @@ final class OpenIDConnectService(
 
   /**
    * Create oidc token request
-   * @param authorizationCode
+   * @param authorizationCode OpentId authorization code
    * @return
    */
   private def buildOIDCTokenRequest(
@@ -183,7 +178,7 @@ final class OpenIDConnectService(
   ): Fu[TokenRequest] = metadata.flatMap { metadata =>
     fuccess(
       new TokenRequest(
-        metadata.getTokenEndpointURI(),
+        metadata.getTokenEndpointURI,
         new ClientSecretBasic(oidc.clientID, oidc.clientSecret),
         new AuthorizationCodeGrant(authorizationCode, oidc.signinCallbackUrl),
         OIDC_SCOPE
@@ -195,7 +190,6 @@ final class OpenIDConnectService(
    * Validate the token response.
    *
    * @param response Token response
-   * @param metadata OpenID Provider metadata
    * @param nonce    Nonce
    * @return Claims
    */
@@ -226,7 +220,6 @@ final class OpenIDConnectService(
   /**
    * Retrieve user info from oidc provider
    * @param token
-   * @param oidc
    * @return
    */
   def obtainUserInfo(
@@ -235,7 +228,7 @@ final class OpenIDConnectService(
     try {
       UserInfoResponse.parse(httpResponse) match {
         case successResponse: UserInfoSuccessResponse =>
-          fuccess(successResponse.getUserInfo())
+          fuccess(successResponse.getUserInfo)
         case errorResponse: UserInfoErrorResponse =>
           fufail(s"OIDC token response has error: ${errorResponse.getErrorObject.toJSONObject}")
       }
@@ -262,7 +255,7 @@ final class OpenIDConnectService(
     token: BearerAccessToken
   ): Fu[UserInfoRequest] = metadata.flatMap { metadata =>
     fuccess(
-      new UserInfoRequest(metadata.getUserInfoEndpointURI(), token)
+      new UserInfoRequest(metadata.getUserInfoEndpointURI, token)
     )
   }
 
