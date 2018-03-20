@@ -98,6 +98,7 @@ final class OpenIDConnectService(
             logger.info(s"Claims: claims=${claims.toJSONObject}")
             getOrCreateFederatedUser(claims.getIssuer.getValue, claims.getSubject.getValue, email, preferredUsername, name)
           case _ =>
+            logger.info(s"OIDC ID token must have an email claim: claims=${claims.toJSONObject}")
             fufail(s"OIDC ID token must have an email claim: claims=${claims.toJSONObject}")
         }
       }
