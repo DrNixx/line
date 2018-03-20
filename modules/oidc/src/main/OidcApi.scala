@@ -15,9 +15,9 @@ final class OidcApi(
     authenticator: lila.user.Authenticator
 ) {
 
-  def getAuthenticationRequest(): AuthenticationRequest = {
-    val client = new OpenIDConnectService();
-    val authenticationRequest = client.createOIDCAuthenticationRequest(oidc.issuer, oidc.clientID, oidc.signinCallbackUrl)
+  def getAuthenticationRequest(): Fu[AuthenticationRequest] = {
+    val client = new OpenIDConnectService(oidc);
+    val authenticationRequest = client.createOIDCAuthenticationRequest()
     authenticationRequest
   }
 
@@ -26,8 +26,8 @@ final class OidcApi(
     state: String,
     nonce: String
   ) = {
-    val client = new OpenIDConnectService();
-    val user = client.authenticate(params, oidc.signinCallbackUrl, new State(state), new Nonce(nonce), oidc)
+    val client = new OpenIDConnectService(oidc);
+    val user = client.authenticate(params, new State(state), new Nonce(nonce))
 
   }
 

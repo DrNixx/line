@@ -1,6 +1,7 @@
 package lila.oidc
 
 import java.net.URI
+import java.io.IOException
 
 import com.nimbusds.jose.JWSAlgorithm.Family
 import com.nimbusds.jose.proc.BadJOSEException
@@ -8,11 +9,14 @@ import com.nimbusds.jose.util.DefaultResourceRetriever
 import com.nimbusds.jose.{ JOSEException, JWSAlgorithm }
 import com.nimbusds.oauth2.sdk._
 import com.nimbusds.oauth2.sdk.auth.ClientSecretBasic
+import com.nimbusds.oauth2.sdk.http.HTTPResponse
 import com.nimbusds.oauth2.sdk.id.{ ClientID, Issuer, State }
+import com.nimbusds.oauth2.sdk.token.BearerAccessToken
 import com.nimbusds.openid.connect.sdk.claims.IDTokenClaimsSet
 import com.nimbusds.openid.connect.sdk.op.OIDCProviderMetadata
 import com.nimbusds.openid.connect.sdk.validators.IDTokenValidator
 import com.nimbusds.openid.connect.sdk.{ AuthenticationErrorResponse, _ }
+import com.nimbusds.openid.connect.sdk.claims._;
 
 import scala.collection.JavaConversions._
 
@@ -20,7 +24,11 @@ import lila.user.{ User, UserRepo }
 
 // http://nemcio.cf/gitbucket/
 
-final class OpenIDConnectService() {
+final class OpenIDConnectService(
+    val oidc: OIDC
+) {
+
+  lazy val metadata = getMetadata(oidc.issuer)
 
   private val JWK_REQUEST_TIMEOUT = 5000
 
@@ -49,30 +57,24 @@ final class OpenIDConnectService() {
     mailAddress: String,
     preferredUserName: Option[String],
     fullName: Option[String]
-  ): Option[User] = None
+  ): Fu[User] = fufail("123")
 
   /**
-   * Obtain the OIDC metadata from discovery and create an authentication request.
+   * Create an authentication request.
    *
-   * @param issuer      Issuer, used to construct the discovery endpoint URL, e.g. https://accounts.google.com
-   * @param clientID    Client ID (given by the issuer)
-   * @param redirectURI Redirect URI
    * @return Authentication request
    */
-  def createOIDCAuthenticationRequest(
-    issuer: Issuer,
-    clientID: ClientID,
-    redirectURI: URI
-  ): AuthenticationRequest = {
-    val metadata = OIDCProviderMetadata.resolve(issuer)
-    new AuthenticationRequest(
-      metadata.getAuthorizationEndpointURI,
-      new ResponseType(ResponseType.Value.CODE),
-      OIDC_SCOPE,
-      clientID,
-      redirectURI,
-      new State(),
-      new Nonce()
+  def createOIDCAuthenticationRequest(): Fu[AuthenticationRequest] = metadata.flatMap { metadata =>
+    fuccess(
+      new AuthenticationRequest(
+        metadata.getAuthorizationEndpointURI,
+        new ResponseType(ResponseType.Value.CODE),
+        OIDC_SCOPE,
+        oidc.clientID,
+        oidc.signinCallbackUrl,
+        new State(),
+        new Nonce()
+      )
     )
   }
 
@@ -80,28 +82,23 @@ final class OpenIDConnectService() {
    * Proceed the OpenID Connect authentication.
    *
    * @param params      Query parameters of the authentication response
-   * @param redirectURI Redirect URI
    * @param state       State saved in the session
    * @param nonce       Nonce saved in the session
-   * @param oidc        OIDC settings
    * @return User
    */
   def authenticate(
     params: Map[String, String],
-    redirectURI: URI,
     state: State,
-    nonce: Nonce,
-    oidc: OIDC
-  ): Option[User] =
-    validateOIDCAuthenticationResponse(params, state, redirectURI) flatMap { authenticationResponse =>
-      obtainOIDCToken(authenticationResponse.getAuthorizationCode, nonce, redirectURI, oidc) flatMap { claims =>
+    nonce: Nonce
+  ): Fu[User] =
+    validateOIDCAuthenticationResponse(params, state) flatMap { authenticationResponse =>
+      obtainOIDCToken(authenticationResponse.getAuthorizationCode, nonce) flatMap { claims =>
         Seq("email", "preferred_username", "name").map(k => Option(claims.getStringClaim(k))) match {
           case Seq(Some(email), preferredUsername, name) =>
             logger.info(s"Claims: claims=${claims.toJSONObject}")
             getOrCreateFederatedUser(claims.getIssuer.getValue, claims.getSubject.getValue, email, preferredUsername, name)
           case _ =>
-            logger.info(s"OIDC ID token must have an email claim: claims=${claims.toJSONObject}")
-            None
+            fufail(s"OIDC ID token must have an email claim: claims=${claims.toJSONObject}")
         }
       }
     }
@@ -111,27 +108,23 @@ final class OpenIDConnectService() {
    *
    * @param params      Query parameters of the authentication response
    * @param state       State saved in the session
-   * @param redirectURI Redirect URI
    * @return Authentication response
    */
-  def validateOIDCAuthenticationResponse(params: Map[String, String], state: State, redirectURI: URI): Option[AuthenticationSuccessResponse] =
+  def validateOIDCAuthenticationResponse(params: Map[String, String], state: State): Fu[AuthenticationSuccessResponse] =
     try {
-      AuthenticationResponseParser.parse(redirectURI, params) match {
+      AuthenticationResponseParser.parse(oidc.signinCallbackUrl, params) match {
         case response: AuthenticationSuccessResponse =>
           if (response.getState == state) {
-            Some(response)
+            fuccess(response)
           } else {
-            logger.info(s"OIDC authentication state did not match: response(${response.getState}) != session($state)")
-            None
+            fufail(s"OIDC authentication state did not match: response(${response.getState}) != session($state)")
           }
         case response: AuthenticationErrorResponse =>
-          logger.info(s"OIDC authentication response has error: ${response.getErrorObject}")
-          None
+          fufail(s"OIDC authentication response has error: ${response.getErrorObject}")
       }
     } catch {
       case e: ParseException =>
-        logger.info(s"OIDC authentication response has error: $e")
-        None
+        fufail(s"OIDC authentication response has error: $e")
     }
 
   /**
@@ -139,37 +132,62 @@ final class OpenIDConnectService() {
    *
    * @param authorizationCode Authorization code in the query string
    * @param nonce             Nonce
-   * @param redirectURI       Redirect URI
-   * @param oidc              OIDC settings
    * @return Token response
    */
   def obtainOIDCToken(
     authorizationCode: AuthorizationCode,
-    nonce: Nonce,
-    redirectURI: URI,
-    oidc: OIDC
-  ): Option[IDTokenClaimsSet] = {
-    val metadata = OIDCProviderMetadata.resolve(oidc.issuer)
-    val tokenRequest = new TokenRequest(
-      metadata.getTokenEndpointURI,
-      new ClientSecretBasic(oidc.clientID, oidc.clientSecret),
-      new AuthorizationCodeGrant(authorizationCode, redirectURI),
-      OIDC_SCOPE
-    )
-    val httpResponse = tokenRequest.toHTTPRequest.send()
-    try {
-      OIDCTokenResponseParser.parse(httpResponse) match {
-        case response: OIDCTokenResponse =>
-          validateOIDCTokenResponse(response, metadata, nonce, oidc)
-        case response: TokenErrorResponse =>
-          logger.info(s"OIDC token response has error: ${response.getErrorObject.toJSONObject}")
-          None
+    nonce: Nonce
+  ): Fu[IDTokenClaimsSet] = metadata.flatMap { metadata =>
+    sendOIDCTokenRequest(authorizationCode).flatMap { httpResponse =>
+      try {
+        OIDCTokenResponseParser.parse(httpResponse) match {
+          case response: OIDCTokenResponse =>
+            validateOIDCTokenResponse(response, nonce)
+          case response: TokenErrorResponse =>
+            fufail(s"OIDC token response has error: ${response.getErrorObject.toJSONObject}")
+        }
+      } catch {
+        case e: ParseException =>
+          fufail(s"OIDC token response has error: $e")
       }
-    } catch {
-      case e: ParseException =>
-        logger.info(s"OIDC token response has error: $e")
-        None
     }
+  }
+
+  /**
+   * Execute oidc token request
+   * @param authorizationCode
+   * @return
+   */
+  private def sendOIDCTokenRequest(
+    authorizationCode: AuthorizationCode
+  ): Fu[HTTPResponse] = buildOIDCTokenRequest(authorizationCode).flatMap { request =>
+    try {
+      fuccess(request.toHTTPRequest.send())
+    } catch {
+      case se: SerializeException =>
+        fufail(s"Failed to send oidc code verification request (SerializeException) $se")
+
+      case e: IOException =>
+        fufail(s"Failed to send oidc code verification request (IOException) $e")
+    }
+  }
+
+  /**
+   * Create oidc token request
+   * @param authorizationCode
+   * @return
+   */
+  private def buildOIDCTokenRequest(
+    authorizationCode: AuthorizationCode
+  ): Fu[TokenRequest] = metadata.flatMap { metadata =>
+    fuccess(
+      new TokenRequest(
+        metadata.getTokenEndpointURI(),
+        new ClientSecretBasic(oidc.clientID, oidc.clientSecret),
+        new AuthorizationCodeGrant(authorizationCode, oidc.signinCallbackUrl),
+        OIDC_SCOPE
+      )
+    )
   }
 
   /**
@@ -180,29 +198,84 @@ final class OpenIDConnectService() {
    * @param nonce    Nonce
    * @return Claims
    */
-  def validateOIDCTokenResponse(
+  private def validateOIDCTokenResponse(
     response: OIDCTokenResponse,
-    metadata: OIDCProviderMetadata,
-    nonce: Nonce,
-    oidc: OIDC
-  ): Option[IDTokenClaimsSet] =
-    Option(response.getOIDCTokens.getIDToken) match {
-      case Some(jwt) =>
+    nonce: Nonce
+  ): Fu[IDTokenClaimsSet] = Option(response.getOIDCTokens.getIDToken) match {
+    case Some(jwt) =>
+      metadata.flatMap { metadata =>
         val validator = oidc.jwsAlgorithm map { jwsAlgorithm =>
           new IDTokenValidator(metadata.getIssuer, oidc.clientID, jwsAlgorithm, metadata.getJWKSetURI.toURL,
             new DefaultResourceRetriever(JWK_REQUEST_TIMEOUT, JWK_REQUEST_TIMEOUT))
         } getOrElse {
           new IDTokenValidator(metadata.getIssuer, oidc.clientID)
         }
+
         try {
-          Some(validator.validate(jwt, nonce))
+          fuccess(validator.validate(jwt, nonce))
         } catch {
           case e @ (_: BadJOSEException | _: JOSEException) =>
-            logger.info(s"OIDC ID token has error: $e")
-            None
+            fufail(s"OIDC ID token has error: $e")
         }
-      case None =>
-        logger.info(s"OIDC token response does not have a valid ID token: ${response.toJSONObject}")
-        None
+      }
+    case None =>
+      fufail(s"OIDC token response does not have a valid ID token: ${response.toJSONObject}")
+  }
+
+  /**
+   * Retrieve user info from oidc provider
+   * @param token
+   * @param oidc
+   * @return
+   */
+  def obtainUserInfo(
+    token: BearerAccessToken
+  ): Fu[UserInfo] = sendUserInfoRequest(token).flatMap { httpResponse =>
+    try {
+      UserInfoResponse.parse(httpResponse) match {
+        case successResponse: UserInfoSuccessResponse =>
+          fuccess(successResponse.getUserInfo())
+        case errorResponse: UserInfoErrorResponse =>
+          fufail(s"OIDC token response has error: ${errorResponse.getErrorObject.toJSONObject}")
+      }
+    } catch {
+      case e: ParseException =>
+        fufail(s"UserInfo response has error: $e")
+    }
+  }
+
+  private def sendUserInfoRequest(
+    token: BearerAccessToken
+  ): Fu[HTTPResponse] = buildUserInfoRequest(token).flatMap { request =>
+    try {
+      fuccess(request.toHTTPRequest.send())
+    } catch {
+      case se: SerializeException =>
+        fufail(s"Failed to send oidc user info request (SerializeException) $se")
+      case e: IOException =>
+        fufail(s"Failed to send oidc user info request (IOException) $e")
+    }
+  }
+
+  private def buildUserInfoRequest(
+    token: BearerAccessToken
+  ): Fu[UserInfoRequest] = metadata.flatMap { metadata =>
+    fuccess(
+      new UserInfoRequest(metadata.getUserInfoEndpointURI(), token)
+    )
+  }
+
+  /**
+   * Retrieve oidc provider metadata
+   *
+   * @param issuer
+   * @return Either[String, OIDCProviderMetadata]
+   */
+  private def getMetadata(issuer: Issuer): Fu[OIDCProviderMetadata] =
+    try {
+      fuccess(OIDCProviderMetadata.resolve(issuer))
+    } catch {
+      case e @ (_: GeneralException | _: IOException) =>
+        fufail(s"Unable retrieve OIDC metadata")
     }
 }

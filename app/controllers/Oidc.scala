@@ -14,16 +14,17 @@ object Oidc extends LilaController {
   def login = Open { implicit ctx =>
     implicit val req = ctx.req
 
-    val authenticationRequest = api.getAuthenticationRequest()
-    val redirectBackURI = req.session.data.getOrElse("redirect", "/")
+    api.getAuthenticationRequest().flatMap { request =>
+      val redirectBackURI = req.session.data.getOrElse("redirect", "/")
 
-    fuccess(
-      Redirect(authenticationRequest.toURI.toString).flashing(
-        "oidcBackUrl" -> redirectBackURI,
-        "oidcState" -> authenticationRequest.getState().getValue(),
-        "oidcNonce" -> authenticationRequest.getNonce().getValue()
+      fuccess(
+        Redirect(request.toURI.toString).flashing(
+          "oidcBackUrl" -> redirectBackURI,
+          "oidcState" -> request.getState().getValue(),
+          "oidcNonce" -> request.getNonce().getValue()
+        )
       )
-    )
+    }
   }
 
   def callback = Open { implicit ctx =>
