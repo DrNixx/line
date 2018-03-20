@@ -242,6 +242,23 @@ object UserRepo {
       }
     }
 
+  def create2(
+    id: User.ID,
+    username: String,
+    passwordHash: HashedPassword,
+    email: EmailAddress,
+    blind: Boolean,
+    mobileApiVersion: Option[ApiVersion],
+    mustConfirmEmail: Boolean
+  ): Fu[Option[User]] =
+    !idExists(username) flatMap {
+      _ ?? {
+        val doc = newUser2(id, username, passwordHash, email, blind, mobileApiVersion, mustConfirmEmail) ++
+          ("len" -> BSONInteger(username.size))
+        coll.insert(doc) >> byId(id)
+      }
+    }
+
   def nameExists(username: String): Fu[Boolean] = idExists(normalize(username))
   def idExists(id: String): Fu[Boolean] = coll exists $id(id)
 
@@ -431,5 +448,37 @@ object UserRepo {
     ) ++ {
         if (blind) $doc("blind" -> true) else $empty
       }
+  }
+
+  private def newUser2(
+    id: User.ID,
+    username: String,
+    passwordHash: HashedPassword,
+    email: EmailAddress,
+    blind: Boolean,
+    mobileApiVersion: Option[ApiVersion],
+    mustConfirmEmail: Boolean
+  ) = {
+
+    implicit def countHandler = Count.countBSONHandler
+    implicit def perfsHandler = Perfs.perfsBSONHandler
+    import lila.db.BSON.BSONJodaDateTimeHandler
+
+    $doc(
+      F.id -> id,
+      F.username -> username,
+      F.email -> email,
+      F.mustConfirmEmail -> mustConfirmEmail.option(DateTime.now),
+      F.bpass -> passwordHash,
+      F.perfs -> $empty,
+      F.count -> Count.default,
+      F.enabled -> true,
+      F.createdAt -> DateTime.now,
+      F.createdWithApiVersion -> mobileApiVersion.map(_.value),
+      F.seenAt -> DateTime.now,
+      F.playTime -> User.PlayTime(0, 0)
+    ) ++ {
+      if (blind) $doc("blind" -> true) else $empty
+    }
   }
 }

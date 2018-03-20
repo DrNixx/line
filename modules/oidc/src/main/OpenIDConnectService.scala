@@ -83,9 +83,9 @@ final class OpenIDConnectService(
   ): Fu[User] =
     validateOIDCAuthenticationResponse(params, state) flatMap { authenticationResponse =>
       obtainOIDCToken(authenticationResponse.getAuthorizationCode, nonce) flatMap { token =>
-        logger.debug(s"Claims: claims=${token.toJSONObject}")
+        logger.info(s"Claims: claims=${token.toJSONObject}")
         obtainUserInfo(token) flatMap { userInfo =>
-          logger.debug(s"UserInfo: ${userInfo.toJSONObject}")
+          logger.info(s"UserInfo: ${userInfo.toJSONObject}")
           getOrCreateFederatedUser(userInfo)
         }
       }
@@ -132,7 +132,7 @@ final class OpenIDConnectService(
           validateOIDCTokenResponse(response, nonce) flatMap { claims =>
             Seq("sub").map(k => Option(claims.getStringClaim(k))) match {
               case Seq(Some(sub)) =>
-                logger.debug(s"OIDC Claims: claims=${claims.toJSONObject}")
+                logger.info(s"OIDC Claims: claims=${claims.toJSONObject}")
                 val successResponse = response.toSuccessResponse
                 fuccess(successResponse.getOIDCTokens.getBearerAccessToken)
               case _ =>
