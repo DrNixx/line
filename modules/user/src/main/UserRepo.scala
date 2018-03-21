@@ -478,7 +478,7 @@ object UserRepo {
       F.seenAt -> DateTime.now,
       F.playTime -> User.PlayTime(0, 0)
     ) ++ {
-      if (blind) $doc("blind" -> true) else $empty
-    }
+        if (blind) $doc("blind" -> true) else $empty
+      }
   }
 }

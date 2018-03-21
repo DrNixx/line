@@ -20,8 +20,6 @@ import com.nimbusds.openid.connect.sdk.claims._
 
 import scala.collection.JavaConversions._
 
-import lila.user.{ User, UserRepo }
-
 // http://nemcio.cf/gitbucket/
 
 final class OpenIDConnectService(
@@ -40,14 +38,6 @@ final class OpenIDConnectService(
   )
 
   OIDC_SCOPE.add("profile_ex")
-
-  /**
-   * Get or create a user account federated with OIDC or SAML IdP.
-   *
-   * @param userInfo            Issuer
-   * @return User
-   */
-  def getOrCreateFederatedUser(userInfo: UserInfo): Fu[User] = fufail("123")
 
   /**
    * Create an authentication request.
@@ -80,13 +70,12 @@ final class OpenIDConnectService(
     params: Map[String, String],
     state: State,
     nonce: Nonce
-  ): Fu[User] =
+  ): Fu[UserInfo] =
     validateOIDCAuthenticationResponse(params, state) flatMap { authenticationResponse =>
       obtainOIDCToken(authenticationResponse.getAuthorizationCode, nonce) flatMap { token =>
         logger.info(s"Claims: claims=${token.toJSONObject}")
         obtainUserInfo(token) flatMap { userInfo =>
-          logger.info(s"UserInfo: ${userInfo.toJSONObject}")
-          getOrCreateFederatedUser(userInfo)
+          fuccess(userInfo)
         }
       }
     }

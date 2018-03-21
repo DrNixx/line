@@ -332,10 +332,10 @@ GET   /video/:id                       controllers.Video.show(id: String)
 POST  /translation/select              controllers.I18n.select
 
 # Authentication
-GET   /login                           controllers.Oidc.login
+GET   /login                           controllers.Auth.oidcLogin
 POST  /login                           controllers.Auth.authenticate
-GET   /signin-oidc                     controllers.Oidc.callback
-POST  /signin-oidc                     controllers.Oidc.callback
+GET   /signin-oidc                     controllers.Auth.oidcCallback
+POST  /signin-oidc                     controllers.Auth.oidcCallback
 GET   /logout                          controllers.Auth.logoutGet
 POST  /logout                          controllers.Auth.logout
 GET   /signup                          controllers.Auth.signup

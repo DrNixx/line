@@ -1,8 +1,10 @@
 package controllers
 
 import ornicar.scalalib.Zero
+import ornicar.scalalib.Random
 import play.api.libs.json._
 import play.api.mvc._
+import com.nimbusds.openid.connect.sdk.claims.UserInfo
 import scala.concurrent.duration._
 
 import lila.api.Context
@@ -45,6 +47,7 @@ object Auth extends LilaController {
         negotiate(
           html = result | Redirect {
             get("referrer").filter(goodReferrer) orElse
+              req.flash.get("referrer") orElse
               req.session.get(api.AccessUri) getOrElse
               routes.Lobby.home.url
           }.fuccess,
@@ -371,6 +374,66 @@ object Auth extends LilaController {
         _.fold(notFound)(authenticateUser(_))
       }
     }
+  }
+
+  def oidcLogin = Open { implicit ctx =>
+    implicit val req = ctx.req
+
+    Env.oidc.api.getAuthenticationRequest() flatMap { request =>
+      val referrer = get("referrer").filter(goodReferrer)
+
+      fuccess(
+        Redirect(request.toURI.toString).flashing(
+          "referrer" -> referrer.getOrElse("/"),
+          "oidcState" -> request.getState.getValue,
+          "oidcNonce" -> request.getNonce.getValue
+        )
+      )
+    }
+  }
+
+  def oidcCallback = Open { implicit ctx =>
+    authOidc() flatMap { userInfo =>
+      getOrCreateUser(userInfo) flatMap { userOp =>
+        userOp match {
+          case None => BadRequest.fuccess
+          case Some(user) =>
+            authenticateUser(user)
+        }
+      }
+    }
+  }
+
+  private def authOidc()(implicit ctx: Context): Fu[UserInfo] = {
+    implicit val req = ctx.req
+
+    val redirectBackURI = req.flash("referrer")
+    val state = req.flash("oidcState")
+    val nonce = req.flash("oidcNonce")
+
+    Env.oidc.api.authenticate(
+      req.queryString.map { case (k, Seq(v)) => (k, v) },
+      state,
+      nonce
+    )
+  }
+
+  private def getOrCreateUser(userInfo: UserInfo)(implicit ctx: Context): Fu[Option[UserModel]] = {
+    UserRepo byId userInfo.getSubject.toString flatMap {
+      case Some(user) =>
+        fuccess(Some(user))
+      case None =>
+        createOidcUser(userInfo)
+    }
+  }
+
+  private def createOidcUser(userInfo: UserInfo): Fu[Option[UserModel]] = {
+    val pwd = Env.user.authenticator passEnc ClearPassword(Random secureString 12)
+    val blind = false
+    val confirmEmail = false
+    val email = new EmailAddress(userInfo.getEmailAddress)
+    var username = userInfo.getPreferredUsername
+    UserRepo.create2(userInfo.getSubject.toString, userInfo.getPreferredUsername, pwd, email, blind, none, confirmEmail)
   }
 
   private implicit val limitedDefault = Zero.instance[Result](TooManyRequest)

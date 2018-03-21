@@ -129,7 +129,7 @@ asyncJs: Boolean = false)(body: Html)(implicit ctx: Context)
         </a>
         <div id="dasher_app" class="dropdown"@if(playing){ data-playing="true"}></div>
       </div>
-      <a href="@routes.Oidc.login?referrer=@currentPath" class="signin button text">@trans.signIn()</a>
+      <a href="@routes.Auth.oidcLogin?referrer=@currentPath" class="signin button text">@trans.signIn()</a>
       }
       }
       @if(ctx.teamNbRequests > 0) {

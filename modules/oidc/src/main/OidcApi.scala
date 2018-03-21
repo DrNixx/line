@@ -5,9 +5,7 @@ import java.net.URI
 import com.nimbusds.openid.connect.sdk.AuthenticationRequest
 import com.nimbusds.oauth2.sdk.id.State
 import com.nimbusds.openid.connect.sdk.Nonce
-
-import lila.common.{ LilaCookie }
-import lila.user.{ User, UserRepo }
+import com.nimbusds.openid.connect.sdk.claims.UserInfo
 
 final class OidcApi(
     baseUrl: String,
@@ -25,10 +23,8 @@ final class OidcApi(
     params: Map[String, String],
     state: String,
     nonce: String
-  ) = {
+  ): Fu[UserInfo] = {
     val client = new OpenIDConnectService(oidc);
-    val user = client.authenticate(params, new State(state), new Nonce(nonce))
-
+    client.authenticate(params, new State(state), new Nonce(nonce))
   }
-
 }
