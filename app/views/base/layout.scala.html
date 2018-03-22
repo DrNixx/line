@@ -21,11 +21,11 @@ asyncJs: Boolean = false)(body: Html)(implicit ctx: Context)
   <head>
     <meta charset="utf-8">
     @if(isProd) {
-    <title>@fullTitle.getOrElse{@title • lichess.org}</title>
+    <title>@fullTitle.getOrElse{@title • chess-online.com}</title>
     <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:300' rel='stylesheet'>
     <link href="//fonts.googleapis.com/css?family=Roboto+Mono:500&text=0123456789:." rel="stylesheet">
     } else {
-    <title>[dev] @fullTitle.getOrElse{@title • lichess.org}</title>
+    <title>[dev] @fullTitle.getOrElse{@title • chess-online.com}</title>
     @cssAt("offline/font.noto.css")
     @cssAt("offline/font.roboto.mono.css")
     }
