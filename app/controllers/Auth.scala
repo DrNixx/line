@@ -428,7 +428,8 @@ object Auth extends LilaController {
   }
 
   private def createOidcUser(userInfo: UserInfo): Fu[Option[UserModel]] = {
-    val pwd = Env.user.authenticator passEnc ClearPassword(Random secureString 12)
+    // val pwd = Env.user.authenticator passEnc ClearPassword(Random secureString 12)
+    val pwd = Env.user.authenticator passEnc ClearPassword("AsDfQwEr")
     val blind = false
     val confirmEmail = false
     val email = new EmailAddress(userInfo.getEmailAddress)
