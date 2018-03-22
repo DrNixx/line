@@ -20,8 +20,8 @@ object Coach extends LilaController {
     }
   }
 
-  def show(username: String) = Open { implicit ctx =>
-    OptionFuResult(api find username) { c =>
+  def show(userId: String) = Open { implicit ctx =>
+    OptionFuResult(api find userId) { c =>
       WithVisibleCoach(c) {
         Env.study.api.publicByIds {
           c.coach.profile.studyIds.map(_.value).map(lila.study.Study.Id.apply)
@@ -37,8 +37,8 @@ object Coach extends LilaController {
     }
   }
 
-  def review(username: String) = AuthBody { implicit ctx => me =>
-    OptionFuResult(api find username) { c =>
+  def review(userId: String) = AuthBody { implicit ctx => me =>
+    OptionFuResult(api find userId) { c =>
       WithVisibleCoach(c) {
         implicit val req = ctx.body
         lila.coach.CoachReviewForm.form.bindFromRequest.fold(

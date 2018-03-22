@@ -21,8 +21,8 @@ final class StreamerApi(
 
   def byId(id: Streamer.Id): Fu[Option[Streamer]] = coll.byId[Streamer](id.value)
 
-  def find(username: String): Fu[Option[Streamer.WithUser]] =
-    UserRepo named username flatMap { _ ?? find }
+  def find(userId: User.ID): Fu[Option[Streamer.WithUser]] =
+    UserRepo byId userId flatMap { _ ?? find }
 
   def find(user: User): Fu[Option[Streamer.WithUser]] =
     byId(Streamer.Id(user.id)) map2 withUser(user)
@@ -34,7 +34,7 @@ final class StreamerApi(
     }
 
   def withUser(s: Stream): Fu[Option[Streamer.WithUserAndStream]] =
-    UserRepo named s.streamer.userId map {
+    UserRepo byId s.streamer.userId map {
       _ map { user => Streamer.WithUserAndStream(s.streamer, user, s.some) }
     }
 

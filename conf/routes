@@ -35,30 +35,30 @@ POST  /rel/follow/:userId              controllers.Relation.follow(userId: Strin
 POST  /rel/unfollow/:userId            controllers.Relation.unfollow(userId: String)
 POST  /rel/block/:userId               controllers.Relation.block(userId: String)
 POST  /rel/unblock/:userId             controllers.Relation.unblock(userId: String)
-GET   /@/:username/following           controllers.Relation.following(username: String, page: Int ?= 1)
-GET   /@/:username/followers           controllers.Relation.followers(username: String, page: Int ?= 1)
+GET   /@/:userId/following             controllers.Relation.following(userId: String, page: Int ?= 1)
+GET   /@/:userId/followers             controllers.Relation.followers(userId: String, page: Int ?= 1)
 GET   /rel/blocks                      controllers.Relation.blocks(page: Int ?= 1)
 
 # Insight
-POST  /insights/refresh/:username      controllers.Insight.refresh(username: String)
-POST  /insights/data/:username         controllers.Insight.json(username: String)
-GET   /insights/:username              controllers.Insight.index(username: String)
-GET   /insights/:username/:metric/:dimension controllers.Insight.path(username: String, metric: String, dimension: String, filters: String = "")
-GET   /insights/:username/:metric/:dimension/*filters controllers.Insight.path(username: String, metric: String, dimension: String, filters: String)
+POST  /insights/refresh/:userId        controllers.Insight.refresh(userId: String)
+POST  /insights/data/:userId           controllers.Insight.json(userId: String)
+GET   /insights/:userId                controllers.Insight.index(userId: String)
+GET   /insights/:userId/:metric/:dimension controllers.Insight.path(userId: String, metric: String, dimension: String, filters: String = "")
+GET   /insights/:userId/:metric/:dimension/*filters controllers.Insight.path(userId: String, metric: String, dimension: String, filters: String)
 
 # User subpages
-GET   /@/:username/tournaments/:path   controllers.UserTournament.path(username: String, path: String, page: Int ?= 1)
+GET   /@/:userId/tournaments/:path     controllers.UserTournament.path(userId: String, path: String, page: Int ?= 1)
 
 # User
-GET   /@/:username/mod                 controllers.User.mod(username: String)
-POST  /@/:username/note                controllers.User.writeNote(username: String)
-GET   /@/:username/mini                controllers.User.showMini(username: String)
-GET   /@/:username/tv                  controllers.User.tv(username: String)
-GET   /@/:username/studyTv             controllers.User.studyTv(username: String)
-GET   /@/:username/perf/:perfKey       controllers.User.perfStat(username: String, perfKey: String)
-GET   /@/:username/all                 controllers.User.gamesAll(username: String, page: Int ?= 1)
-GET   /@/:username/:filterName         controllers.User.games(username: String, filterName: String, page: Int ?= 1)
-GET   /@/:username                     controllers.User.show(username: String)
+GET   /@/:userId/mod                   controllers.User.mod(userId: String)
+POST  /@/:userId/note                  controllers.User.writeNote(userId: String)
+GET   /@/:userId/mini                  controllers.User.showMini(userId: String)
+GET   /@/:userId/tv                    controllers.User.tv(userId: String)
+GET   /@/:userId/studyTv               controllers.User.studyTv(userId: String)
+GET   /@/:userId/perf/:perfKey         controllers.User.perfStat(userId: String, perfKey: String)
+GET   /@/:userId/all                   controllers.User.gamesAll(userId: String, page: Int ?= 1)
+GET   /@/:userId/:filterName           controllers.User.games(userId: String, filterName: String, page: Int ?= 1)
+GET   /@/:userId                       controllers.User.show(userId: String)
 GET   /player/myself                   controllers.User.myself
 GET   /player/opponents                controllers.User.opponents
 GET   /player                          controllers.User.list
@@ -112,8 +112,8 @@ GET   /study/member/:order             controllers.Study.mineMember(order: Strin
 GET   /study/public/:order             controllers.Study.minePublic(order: String, page: Int ?= 1)
 GET   /study/private/:order            controllers.Study.minePrivate(order: String, page: Int ?= 1)
 GET   /study/likes/:order              controllers.Study.mineLikes(order: String, page: Int ?= 1)
-GET   /study/by/:username              controllers.Study.byOwnerDefault(username: String, page: Int ?= 1)
-GET   /study/by/:username/:order       controllers.Study.byOwner(username: String, order: String, page: Int ?= 1)
+GET   /study/by/:userId                controllers.Study.byOwnerDefault(userId: String, page: Int ?= 1)
+GET   /study/by/:userId/:order         controllers.Study.byOwner(userId: String, order: String, page: Int ?= 1)
 GET   /study/search                    controllers.Study.search(q: String ?= "", page: Int ?= 1)
 GET   /study/$id<\w{8}>                controllers.Study.show(id: String)
 POST  /study                           controllers.Study.create
@@ -177,7 +177,7 @@ POST  /streamer/approval/request       controllers.Streamer.approvalRequest
 GET   /streamer/picture/edit           controllers.Streamer.picture
 POST  /streamer/picture/upload         controllers.Streamer.pictureApply
 POST  /streamer/picture/delete         controllers.Streamer.pictureDelete
-GET   /streamer/:username              controllers.Streamer.show(username: String)
+GET   /streamer/:userId                controllers.Streamer.show(userId: String)
 
 # Round
 GET   /$gameId<\w{8}>                            controllers.Round.watcher(gameId: String, color: String = "white")
@@ -352,32 +352,32 @@ POST  /auth/token                      controllers.Auth.makeLoginToken
 GET   /auth/token/:token               controllers.Auth.loginWithToken(token: String)
 
 # Mod
-POST  /mod/:username/engine/:v         controllers.Mod.engine(username: String, v: Boolean)
-POST  /mod/:username/booster/:v        controllers.Mod.booster(username: String, v: Boolean)
-POST  /mod/:username/troll/:v          controllers.Mod.troll(username: String, v: Boolean)
-POST  /mod/:username/ban/:v            controllers.Mod.ban(username: String, v: Boolean)
-POST  /mod/:username/delete-pms-and-chats controllers.Mod.deletePmsAndChats(username: String)
-POST  /mod/:username/warn              controllers.Mod.warn(username: String, subject: String)
-POST  /mod/:username/close             controllers.Mod.closeAccount(username: String)
-POST  /mod/:username/reopen            controllers.Mod.reopenAccount(username: String)
-POST  /mod/:username/title             controllers.Mod.setTitle(username: String)
-POST  /mod/:username/inquiry           controllers.Mod.spontaneousInquiry(username: String)
-GET   /mod/:username/communication     controllers.Mod.communicationPublic(username: String)
-GET   /mod/:username/communication/private controllers.Mod.communicationPrivate(username: String)
-POST  /mod/:username/rankban/:v        controllers.Mod.rankban(username: String, v: Boolean)
-POST  /mod/:username/reportban/:v      controllers.Mod.reportban(username: String, v: Boolean)
-POST  /mod/:username/impersonate       controllers.Mod.impersonate(username: String)
+POST  /mod/:userId/engine/:v           controllers.Mod.engine(userId: String, v: Boolean)
+POST  /mod/:userId/booster/:v          controllers.Mod.booster(userId: String, v: Boolean)
+POST  /mod/:userId/troll/:v            controllers.Mod.troll(userId: String, v: Boolean)
+POST  /mod/:userId/ban/:v              controllers.Mod.ban(userId: String, v: Boolean)
+POST  /mod/:userId/delete-pms-and-chats controllers.Mod.deletePmsAndChats(userId: String)
+POST  /mod/:userId/warn                controllers.Mod.warn(userId: String, subject: String)
+POST  /mod/:userId/close               controllers.Mod.closeAccount(userId: String)
+POST  /mod/:userId/reopen              controllers.Mod.reopenAccount(userId: String)
+POST  /mod/:userId/title               controllers.Mod.setTitle(userId: String)
+POST  /mod/:userId/inquiry             controllers.Mod.spontaneousInquiry(userId: String)
+GET   /mod/:userId/communication       controllers.Mod.communicationPublic(userId: String)
+GET   /mod/:userId/communication/private controllers.Mod.communicationPrivate(userId: String)
+POST  /mod/:userId/rankban/:v          controllers.Mod.rankban(userId: String, v: Boolean)
+POST  /mod/:userId/reportban/:v        controllers.Mod.reportban(userId: String, v: Boolean)
+POST  /mod/:userId/impersonate         controllers.Mod.impersonate(userId: String)
 GET   /mod/log                         controllers.Mod.log
-POST  /mod/:username/refreshUserAssess controllers.Mod.refreshUserAssess(username: String)
-POST  /mod/:username/email             controllers.Mod.setEmail(username: String)
-POST  /mod/:username/notify-slack      controllers.Mod.notifySlack(username: String)
+POST  /mod/:userId/refreshUserAssess   controllers.Mod.refreshUserAssess(userId: String)
+POST  /mod/:userId/email               controllers.Mod.setEmail(userId: String)
+POST  /mod/:userId/notify-slack        controllers.Mod.notifySlack(userId: String)
 GET   /mod/ip-intel                    controllers.Mod.ipIntel(ip: String)
 GET   /mod/leaderboard                 controllers.Mod.gamify
 GET   /mod/leaderboard/:period         controllers.Mod.gamifyPeriod(period: String)
 GET   /mod/search                      controllers.Mod.search
-GET   /mod/chat-user/:username         controllers.Mod.chatUser(username: String)
-GET   /mod/:username/permissions       controllers.Mod.permissions(username: String)
-POST  /mod/:username/permissions       controllers.Mod.savePermissions(username: String)
+GET   /mod/chat-user/:userId           controllers.Mod.chatUser(userId: String)
+GET   /mod/:userId/permissions         controllers.Mod.permissions(userId: String)
+POST  /mod/:userId/permissions         controllers.Mod.savePermissions(userId: String)
 GET   /mod/public-chat                 controllers.Mod.publicChat
 GET   /mod/email-confirm               controllers.Mod.emailConfirm
 GET   /mod/chat-panic                  controllers.Mod.chatPanic
@@ -387,7 +387,7 @@ POST  /mod/chat-panic                  controllers.Mod.chatPanicPost
 GET   /irwin                               controllers.Irwin.dashboard
 GET   /irwin/stream                        controllers.Irwin.eventStream
 POST  /irwin/report                        controllers.Irwin.saveReport
-GET   /irwin/:username/assessment          controllers.Irwin.assessment(username: String)
+GET   /irwin/:userId/assessment            controllers.Irwin.assessment(userId: String)
 GET   /irwin/users-mark-and-current-report controllers.Irwin.usersMarkAndCurrentReport(ids: String)
 
 # Bookmark
@@ -429,8 +429,8 @@ POST  /coach/picture/upload            controllers.Coach.pictureApply
 POST  /coach/picture/delete            controllers.Coach.pictureDelete
 POST  /coach/approve-review/:id        controllers.Coach.approveReview(id: String)
 POST  /coach/mod-review/:id            controllers.Coach.modReview(id: String)
-GET   /coach/:username                 controllers.Coach.show(username: String)
-POST  /coach/:username/review          controllers.Coach.review(username: String)
+GET   /coach/:userId                   controllers.Coach.show(userId: String)
+POST  /coach/:userId/review            controllers.Coach.review(userId: String)
 
 # DB image
 GET   /image/:id/:hash/:name           controllers.Main.image(id: String, hash: String, name: String)

@@ -22,7 +22,7 @@ title = "Thank you for your support!") {
     <p>
       You now have a permanent Patron account.<br />
       @ctx.me.map { me =>
-      Check out your <a href="@routes.User.show(me.username)">profile page</a>!
+      Check out your <a href="@routes.User.show(me.id)">profile page</a>!
       }
     </p>
     } else {
@@ -38,7 +38,7 @@ title = "Thank you for your support!") {
     <p>
       You are now a lichess Patron for one month!<br />
       @ctx.me.map { me =>
-      Check out your <a href="@routes.User.show(me.username)">profile page</a>.
+      Check out your <a href="@routes.User.show(me.id)">profile page</a>.
       }
     </p>
     <p>

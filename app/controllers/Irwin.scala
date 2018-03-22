@@ -28,9 +28,9 @@ object Irwin extends LilaController {
     }
   }
 
-  def assessment(username: String) = Open { implicit ctx =>
+  def assessment(userId: String) = Open { implicit ctx =>
     ModExternalBot {
-      OptionFuResult(UserRepo named username) { user =>
+      OptionFuResult(UserRepo byId userId) { user =>
         lila.mon.mod.irwin.assessment.count()
         (Env.mod.assessApi.refreshAssessByUsername(user.id) >>
           Env.mod.jsonView(user) map {

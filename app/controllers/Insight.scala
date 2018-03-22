@@ -10,21 +10,21 @@ object Insight extends LilaController {
 
   private def env = Env.insight
 
-  def refresh(username: String) = Open { implicit ctx =>
-    Accessible(username) { user =>
+  def refresh(userId: String) = Open { implicit ctx =>
+    Accessible(userId) { user =>
       env.api indexAll user inject Ok
     }
   }
 
-  def index(username: String) = path(
-    username,
+  def index(userId: String) = path(
+    userId,
     metric = Metric.MeanCpl.key,
     dimension = Dimension.Perf.key,
     filters = ""
   )
 
-  def path(username: String, metric: String, dimension: String, filters: String) = Open { implicit ctx =>
-    Accessible(username) { user =>
+  def path(userId: String, metric: String, dimension: String, filters: String) = Open { implicit ctx =>
+    Accessible(userId) { user =>
       import lila.insight.InsightApi.UserStatus._
       env.api userStatus user flatMap {
         case NoGame => Ok(html.insight.noGame(user)).fuccess
@@ -44,9 +44,9 @@ object Insight extends LilaController {
     }
   }
 
-  def json(username: String) = OpenBody(BodyParsers.parse.json) { implicit ctx =>
+  def json(userId: String) = OpenBody(BodyParsers.parse.json) { implicit ctx =>
     import lila.insight.JsonQuestion, JsonQuestion._
-    Accessible(username) { user =>
+    Accessible(userId) { user =>
       ctx.body.body.validate[JsonQuestion].fold(
         err => BadRequest(jsonError(err.toString)).fuccess,
         qJson => qJson.question.fold(BadRequest.fuccess) { q =>
@@ -58,8 +58,8 @@ object Insight extends LilaController {
     }
   }
 
-  private def Accessible(username: String)(f: lila.user.User => Fu[Result])(implicit ctx: Context) =
-    lila.user.UserRepo named username flatMap {
+  private def Accessible(userId: String)(f: lila.user.User => Fu[Result])(implicit ctx: Context) =
+    lila.user.UserRepo byId userId flatMap {
       _.fold(notFound) { u =>
         env.share.grant(u, ctx.me) flatMap {
           _.fold(f(u), fuccess(Forbidden(html.insight.forbidden(u))))

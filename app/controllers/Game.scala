@@ -17,7 +17,7 @@ object Game extends LilaController {
         (GameRepo remove game.id) >>
           (lila.analyse.AnalysisRepo remove game.id) >>
           Env.game.cached.clearNbImportedByCache(me.id) inject
-          Redirect(routes.User.show(me.username))
+          Redirect(routes.User.show(me.id))
       } else fuccess {
         Redirect(routes.Round.watcher(game.id, game.firstColor.name))
       }

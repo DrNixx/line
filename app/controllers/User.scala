@@ -22,19 +22,19 @@ object User extends LilaController {
   private def relationApi = Env.relation.api
   private def userGameSearch = Env.gameSearch.userGameSearch
 
-  def tv(username: String) = Open { implicit ctx =>
-    OptionFuResult(UserRepo named username) { user =>
+  def tv(userId: UserModel.ID) = Open { implicit ctx =>
+    OptionFuResult(UserRepo byId userId) { user =>
       (GameRepo lastPlayedPlaying user) orElse
         (GameRepo lastPlayed user) flatMap {
-          _.fold(fuccess(Redirect(routes.User.show(username)))) { pov =>
+          _.fold(fuccess(Redirect(routes.User.show(user.id)))) { pov =>
             Round.watch(pov, userTv = user.some)
           }
         }
     }
   }
 
-  def studyTv(username: String) = Open { implicit ctx =>
-    OptionResult(UserRepo named username) { user =>
+  def studyTv(userId: UserModel.ID) = Open { implicit ctx =>
+    OptionResult(UserRepo byId userId) { user =>
       Redirect {
         Env.relation.online.studying getIfPresent user.id match {
           case None => routes.Study.byOwnerDefault(user.id)
@@ -50,8 +50,8 @@ object User extends LilaController {
     }
   }.mon(_.http.response.user.show.mobile)
 
-  def show(username: String) = OpenBody { implicit ctx =>
-    EnabledUser(username) { u =>
+  def show(userId: UserModel.ID) = OpenBody { implicit ctx =>
+    EnabledUserById(userId) { u =>
       negotiate(
         html = renderShow(u),
         api = _ => apiGames(u, GameFilter.All.name, 1)
@@ -71,11 +71,11 @@ object User extends LilaController {
       status(html.activity.list(u, as))
     }
 
-  def gamesAll(username: String, page: Int) = games(username, GameFilter.All.name, page)
+  def gamesAll(userId: UserModel.ID, page: Int) = games(userId, GameFilter.All.name, page)
 
-  def games(username: String, filter: String, page: Int) = OpenBody { implicit ctx =>
+  def games(userId: UserModel.ID, filter: String, page: Int) = OpenBody { implicit ctx =>
     Reasonable(page) {
-      EnabledUser(username) { u =>
+      EnabledUser(userId) { u =>
         negotiate(
           html = for {
             nbs ← Env.current.userNbGames(u, ctx)
@@ -106,8 +106,8 @@ object User extends LilaController {
     }
   }
 
-  private def EnabledUser(username: String)(f: UserModel => Fu[Result])(implicit ctx: Context): Fu[Result] =
-    OptionFuResult(UserRepo named username) { u =>
+  private def EnabledUser(userId: UserModel.ID)(f: UserModel => Fu[Result])(implicit ctx: Context): Fu[Result] =
+    OptionFuResult(UserRepo byId userId) { u =>
       if (u.enabled || isGranted(_.UserSpy)) f(u)
       else negotiate(
         html = fuccess(NotFound(html.user.disabled(u))),
@@ -115,8 +115,17 @@ object User extends LilaController {
       )
     }
 
-  def showMini(username: String) = Open { implicit ctx =>
-    OptionFuResult(UserRepo named username) { user =>
+  private def EnabledUserById(id: UserModel.ID)(f: UserModel => Fu[Result])(implicit ctx: Context): Fu[Result] =
+    OptionFuResult(UserRepo byId id) { u =>
+      if (u.enabled || isGranted(_.UserSpy)) f(u)
+      else negotiate(
+        html = fuccess(NotFound(html.user.disabled(u))),
+        api = _ => fuccess(NotFound(jsonError("No such user, or account closed")))
+      )
+    }
+
+  def showMini(userId: UserModel.ID) = Open { implicit ctx =>
+    OptionFuResult(UserRepo byId userId) { user =>
       if (user.enabled || isGranted(_.UserSpy)) for {
         blocked <- ctx.userId ?? { relationApi.fetchBlocks(user.id, _) }
         crosstable <- ctx.userId ?? { Env.game.crosstableApi(user.id, _) }
@@ -239,9 +248,9 @@ object User extends LilaController {
     )
   }
 
-  def mod(username: String) = Secure(_.UserSpy) { implicit ctx => me =>
+  def mod(userId: UserModel.ID) = Secure(_.UserSpy) { implicit ctx => me =>
     if (Env.streamer.liveStreamApi.isStreaming(me.id)) fuccess(Ok("Disabled while streaming"))
-    else OptionFuOk(UserRepo named username) { user =>
+    else OptionFuOk(UserRepo byId userId) { user =>
       UserRepo.emails(user.id) zip
         (Env.security userSpy user) zip
         Env.mod.assessApi.getPlayerAggregateAssessmentWithGames(user.id) zip
@@ -264,13 +273,13 @@ object User extends LilaController {
     }
   }
 
-  def writeNote(username: String) = AuthBody { implicit ctx => me =>
-    OptionFuResult(UserRepo named username) { user =>
+  def writeNote(userId: UserModel.ID) = AuthBody { implicit ctx => me =>
+    OptionFuResult(UserRepo byId userId) { user =>
       implicit val req = ctx.body
       env.forms.note.bindFromRequest.fold(
         err => renderShow(user, Results.BadRequest),
         data => env.noteApi.write(user, data.text, me, data.mod && isGranted(_.ModNote)) inject
-          Redirect(routes.User.show(username).url + "?note")
+          Redirect(routes.User.show(userId).url + "?note")
       )
     }
   }
@@ -287,8 +296,8 @@ object User extends LilaController {
     } yield html.user.opponents(me, relateds)
   }
 
-  def perfStat(username: String, perfKey: String) = Open { implicit ctx =>
-    OptionFuResult(UserRepo named username) { u =>
+  def perfStat(userId: UserModel.ID, perfKey: String) = Open { implicit ctx =>
+    OptionFuResult(UserRepo byId userId) { u =>
       if ((u.disabled || (u.lame && !ctx.is(u))) && !isGranted(_.UserSpy)) notFound
       else PerfType(perfKey).fold(notFound) { perfType =>
         for {
@@ -342,6 +351,6 @@ object User extends LilaController {
   }
 
   def myself = Auth { ctx => me =>
-    fuccess(Redirect(routes.User.show(me.username)))
+    fuccess(Redirect(routes.User.show(me.id)))
   }
 }

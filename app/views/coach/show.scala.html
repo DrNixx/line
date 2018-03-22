@@ -23,7 +23,7 @@ $('.review-form form').show();
 @side = {
 <div class="coach-side">
   <div class="profile">
-    <a class="blue" href="@routes.User.show(c.user.username)">View @c.user.username lichess profile</a>
+    <a class="blue" href="@routes.User.show(c.user.id)">View @c.user.username lichess profile</a>
   </div>
   @if(ctx.me.exists(_.id != c.user.id)) {
   @reviewForm(c, myReview)
@@ -89,7 +89,7 @@ image = c.coach.picturePath.map(p => dbImageUrl(p.value))).some) {
               @profile.officialRating.map { r =>
               @r.name.toUpperCase: @r.rating,
               }
-              <a href="@routes.User.show(c.user.username)">
+              <a href="@routes.User.show(c.user.id)">
                 @c.user.best8Perfs.take(6).filter(c.user.hasEstablishedRating).map { pt =>
                 @showPerfRating(c.user, pt)
                 }

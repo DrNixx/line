@@ -34,7 +34,7 @@
           @profile.fideRating.map { r =>
           FIDE: @r,
           }
-          <a href="@routes.User.show(c.user.username)">
+          <a href="@routes.User.show(c.user.id)">
             @c.user.best8Perfs.take(6).filter(c.user.hasEstablishedRating).map { pt =>
             @showPerfRating(c.user, pt)
             }

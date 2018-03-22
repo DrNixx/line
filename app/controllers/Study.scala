@@ -46,10 +46,10 @@ object Study extends LilaController {
     }
   }
 
-  def byOwnerDefault(username: String, page: Int) = byOwner(username, Order.default.key, page)
+  def byOwnerDefault(userId: String, page: Int) = byOwner(userId, Order.default.key, page)
 
-  def byOwner(username: String, order: String, page: Int) = Open { implicit ctx =>
-    OptionFuOk(lila.user.UserRepo named username) { owner =>
+  def byOwner(userId: String, order: String, page: Int) = Open { implicit ctx =>
+    OptionFuOk(lila.user.UserRepo byId userId) { owner =>
       env.pager.byOwner(owner, ctx.me, Order(order), page) map { pag =>
         html.study.byOwner(pag, Order(order), owner)
       }
@@ -183,7 +183,7 @@ object Study extends LilaController {
   def createAs = AuthBody { implicit ctx => me =>
     implicit val req = ctx.body
     lila.study.DataForm.form.bindFromRequest.fold(
-      err => Redirect(routes.Study.byOwnerDefault(me.username)).fuccess,
+      err => Redirect(routes.Study.byOwnerDefault(me.id)).fuccess,
       data => for {
         owner <- env.studyRepo.recentByOwner(me.id, 50)
         contrib <- env.studyRepo.recentByContributor(me.id, 50)
@@ -196,7 +196,7 @@ object Study extends LilaController {
   def create = AuthBody { implicit ctx => me =>
     implicit val req = ctx.body
     lila.study.DataForm.form.bindFromRequest.fold(
-      err => Redirect(routes.Study.byOwnerDefault(me.username)).fuccess,
+      err => Redirect(routes.Study.byOwnerDefault(me.id)).fuccess,
       data => createStudy(data, me)
     )
   }

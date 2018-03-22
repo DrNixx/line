@@ -6,9 +6,9 @@ import views._
 
 object UserTournament extends LilaController {
 
-  def path(username: String, path: String, page: Int) = Open { implicit ctx =>
+  def path(userId: String, path: String, page: Int) = Open { implicit ctx =>
     Reasonable(page) {
-      OptionFuResult(UserRepo named username) { user =>
+      OptionFuResult(UserRepo byId userId) { user =>
         path match {
           case "recent" =>
             Env.tournament.leaderboardApi.recentByUser(user, page).map { entries =>

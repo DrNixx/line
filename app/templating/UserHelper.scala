@@ -158,7 +158,7 @@ trait UserHelper { self: I18nHelper with StringHelper with NumberHelper =>
     modIcon: Boolean
   ): String = {
     val klass = userClass(userId, cssClass, withOnline)
-    val href = userHref(username, params = params)
+    val href = userHref(userId, params = params)
     val content = truncate.fold(username)(username.take)
     val titleS = if (withTitle) titleTag(title).body else ""
     val icon = withOnline ?? (if (modIcon) moderatorIcon else lineIcon(isPatron))
@@ -177,7 +177,7 @@ trait UserHelper { self: I18nHelper with StringHelper with NumberHelper =>
     params: String = ""
   ): Html = Html {
     val klass = userClass(user.id, cssClass, withOnline, withPowerTip)
-    val href = userHref(user.username, params)
+    val href = userHref(user.id, params)
     val content = text | user.username
     val titleS = if (withTitle) titleTag(user.title).body else ""
     val rating = userRating(user, withPerfRating, withBestRating)
@@ -196,7 +196,7 @@ trait UserHelper { self: I18nHelper with StringHelper with NumberHelper =>
     val user = lightUser(userId)
     val name = user.fold(userId)(_.name)
     val klass = userClass(userId, cssClass, withOnline, withPowerTip)
-    val href = userHref(name)
+    val href = userHref(userId)
     val rat = rating ?? { r => s" ($r)" }
     val titleS = titleTag(user.flatMap(_.title) ifTrue withTitle).body
     val icon = withOnline ?? lineIcon(user)
@@ -214,7 +214,7 @@ trait UserHelper { self: I18nHelper with StringHelper with NumberHelper =>
     text: Option[String] = None
   ) = Html {
     val klass = userClass(user.id, cssClass, withOnline, withPowerTip)
-    val href = s"data-${userHref(user.username)}"
+    val href = s"data-${userHref(user.id)}"
     val content = text | user.username
     val titleS = if (withTitle) titleTag(user.title).body else ""
     val rating = userRating(user, withPerfRating, withBestRating)
@@ -228,7 +228,7 @@ trait UserHelper { self: I18nHelper with StringHelper with NumberHelper =>
     val content = user.fold(userId)(_.name)
     val titleS = user.??(u => titleTag(u.title).body)
     val klass = userClass(userId, none, withOnline)
-    val href = s"data-${userHref(name)}"
+    val href = s"data-${userHref(userId)}"
     val icon = withOnline ?? lineIcon(user)
     s"""<span $klass $href>$icon$titleS$content</span>"""
   }
@@ -245,8 +245,8 @@ trait UserHelper { self: I18nHelper with StringHelper with NumberHelper =>
       case _ => ""
     }
 
-  private def userHref(username: String, params: String = "") =
-    s"""href="${routes.User.show(username)}$params""""
+  private def userHref(userId: User.ID, params: String = "") =
+    s"""href="${routes.User.show(userId)}$params""""
 
   protected def userClass(
     userId: String,

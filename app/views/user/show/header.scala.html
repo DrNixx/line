@@ -24,12 +24,12 @@
 </div>
 <div class="social content_box_inter">
   <div class="links">
-    <a class="intertab" href="@routes.Relation.followers(u.username)">@splitNumber(trans.nbFollowers.pluralSame(info.nbFollowers))</a>
+    <a class="intertab" href="@routes.Relation.followers(u.id)">@splitNumber(trans.nbFollowers.pluralSame(info.nbFollowers))</a>
     @info.nbBlockers.map { nb =>
     <a class="intertab">@splitNumber(nb + " Blockers")</a>
     }
-    <a href="@routes.UserTournament.path(u.username, "recent")" class="intertab tournament_stats" data-toints="@u.toints">@splitNumber(trans.nbTournamentPoints.pluralSame(u.toints))</a>
-    <a href="@routes.Study.byOwnerDefault(u.username)" class="intertab">@splitNumber(info.nbStudies + " studies")</a>
+    <a href="@routes.UserTournament.path(u.id, "recent")" class="intertab tournament_stats" data-toints="@u.toints">@splitNumber(trans.nbTournamentPoints.pluralSame(u.toints))</a>
+    <a href="@routes.Study.byOwnerDefault(u.id)" class="intertab">@splitNumber(info.nbStudies + " studies")</a>
     <a class="intertab" @NotForKids {
       href="@routes.ForumPost.search("user:" + u.username, 1)"
       }>@splitNumber(trans.nbForumPosts.pluralSame(info.nbPosts))</a>
@@ -49,9 +49,9 @@
     </a>
     }
     @if(isGranted(_.UserSpy)) {
-    <a class="button mod_zone_toggle hint--top-left" href="@routes.User.mod(u.username)" data-hint="Mod zone"><span data-icon=""></span></a>
+    <a class="button mod_zone_toggle hint--top-left" href="@routes.User.mod(u.id)" data-hint="Mod zone"><span data-icon=""></span></a>
     }
-    <a class="button hint--top-left" href="@routes.User.tv(u.username)" data-hint="@trans.watchGames()"><span data-icon="1"></span></a>
+    <a class="button hint--top-left" href="@routes.User.tv(u.id)" data-hint="@trans.watchGames()"><span data-icon="1"></span></a>
     @if(ctx.isAuth && !ctx.is(u)) {
     @views.html.relation.actions(u.id, relation = relation, followable = followable, blocked = blocked)
     @NotForKids {
@@ -68,7 +68,7 @@
 @NotForKids {
 @if(!(ctx is u)) {
 <div class="note_zone">
-  <form class="wide" action="@routes.User.writeNote(u.username)?note" method="post">
+  <form class="wide" action="@routes.User.writeNote(u.id)?note" method="post">
     <textarea name="text" placeholder="Write a note about this user only you and your friends can read"></textarea>
     <button type="submit" class="button">@trans.send()</button>
     @if(isGranted(_.ModNote)) {
@@ -193,9 +193,9 @@ case _ => {
 }
 }
 <div class="content_box_inter angles tabs">
-  <a data-tab="activity" class="intertab to_activity @if(angle == Angle.Activity){ active}" href="@routes.User.show(u.username)">@trans.activity.activity()</a>
+  <a data-tab="activity" class="intertab to_activity @if(angle == Angle.Activity){ active}" href="@routes.User.show(u.id)">@trans.activity.activity()</a>
   @defining(lila.app.mashup.GameFilter.All) { f =>
-  <a data-tab="games" class="intertab to_games @if(angle.key == "games"){ active}" href="@routes.User.gamesAll(u.username)">
+  <a data-tab="games" class="intertab to_games @if(angle.key == "games"){ active}" href="@routes.User.gamesAll(u.id)">
     @trans.nbGames.plural(info.user.count.game, info.user.count.game.localize)
     @if(info.nbs.playing > 0) {
     <span class="unread hint--top" data-hint="@trans.nbPlaying.plural(info.nbs.playing, info.nbs.playing.localize)">@info.nbs.playing</span>

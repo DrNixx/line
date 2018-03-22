@@ -6,7 +6,7 @@
 <a data-icon="@perfType.iconChar"
   title="@perfType.title"
   @if(lila.rating.PerfType.isGame(perfType)) {
-  href="@routes.User.perfStat(u.username, perfType.key)"
+  href="@routes.User.perfStat(u.id, perfType.key)"
   class="game@if(active.contains(perfType)){ active}@if(perf.isEmpty){ empty}"
   } else {
   class="@if(perf.isEmpty){empty}"

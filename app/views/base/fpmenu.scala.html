@@ -8,7 +8,7 @@
       <div class="perfs">
         @topBarSortedPerfTypes.map { pt =>
         @me.perfs(pt.key).map { perf =>
-        <a href="@routes.User.perfStat(me.username, pt.key)" class="perf@if(perf.nb == 0){ nope}" data-icon="@pt.iconChar">
+        <a href="@routes.User.perfStat(me.id, pt.key)" class="perf@if(perf.nb == 0){ nope}" data-icon="@pt.iconChar">
           <h3>@pt.name</h3>
           @if(perf.nb > 0) {
           <div class="rating">

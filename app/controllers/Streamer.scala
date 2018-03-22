@@ -20,8 +20,8 @@ object Streamer extends LilaController {
     } yield Ok(html.streamer.index(live, pager, requests))
   }
 
-  def show(username: String) = Open { implicit ctx =>
-    OptionFuResult(api find username) { s =>
+  def show(userId: String) = Open { implicit ctx =>
+    OptionFuResult(api find userId) { s =>
       WithVisibleStreamer(s) {
         for {
           sws <- Env.streamer.liveStreamApi of s

@@ -89,7 +89,7 @@ case _ => {
 <div class="content_box no_padding streamer">
   @header(s, following.some)
   <div class="description">@richText(s.streamer.description.fold("")(_.value))</div>
-  <a class="ratings" href="@routes.User.show(s.user.username)">
+  <a class="ratings" href="@routes.User.show(s.user.id)">
     @s.user.best6Perfs.map { pt =>
     @showPerfRating(s.user, pt)
     }

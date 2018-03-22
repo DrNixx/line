@@ -46,9 +46,9 @@ object Relation extends LilaController {
     env.api.unblock(me.id, UserModel normalize userId).nevermind >> renderActions(userId, getBool("mini"))
   }
 
-  def following(username: String, page: Int) = Open { implicit ctx =>
+  def following(userId: UserModel.ID, page: Int) = Open { implicit ctx =>
     Reasonable(page, 20) {
-      OptionFuResult(UserRepo named username) { user =>
+      OptionFuResult(UserRepo byId userId) { user =>
         RelatedPager(env.api.followingPaginatorAdapter(user.id), page) flatMap { pag =>
           negotiate(
             html = env.api countFollowers user.id map { nbFollowers =>
@@ -61,9 +61,9 @@ object Relation extends LilaController {
     }
   }
 
-  def followers(username: String, page: Int) = Open { implicit ctx =>
+  def followers(userId: UserModel.ID, page: Int) = Open { implicit ctx =>
     Reasonable(page, 20) {
-      OptionFuResult(UserRepo named username) { user =>
+      OptionFuResult(UserRepo byId userId) { user =>
         RelatedPager(env.api.followersPaginatorAdapter(user.id), page) flatMap { pag =>
           negotiate(
             html = env.api countFollowing user.id map { nbFollowing =>

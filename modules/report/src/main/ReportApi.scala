@@ -53,14 +53,14 @@ final class ReportApi(
       (candidate.isAutomatic && candidate.isOther && candidate.suspect.user.troll) ||
       (candidate.isTrollOrInsult && candidate.suspect.user.troll)
 
-  def getMod(username: String): Fu[Option[Mod]] =
-    UserRepo named username map2 Mod.apply
+  def getMod(userId: User.ID): Fu[Option[Mod]] =
+    UserRepo byId userId map2 Mod.apply
 
   def getLichessMod: Fu[Mod] = UserRepo.lichess map2 Mod.apply flatten "User lichess is missing"
   def getLichessReporter: Fu[Reporter] = getLichessMod map { l => Reporter(l.user) }
 
-  def getSuspect(username: String): Fu[Option[Suspect]] =
-    UserRepo named username map2 Suspect.apply
+  def getSuspect(userId: User.ID): Fu[Option[Suspect]] =
+    UserRepo byId userId map2 Suspect.apply
 
   def autoCheatPrintReport(userId: String): Funit =
     coll.exists($doc(

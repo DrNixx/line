@@ -24,13 +24,13 @@ evenMoreCss = moreCss) {
 <div class="content_box no_padding @perfType.key" id="perfStat">
   <div class="content_box_top">
     @if(u.perfs(perfType).nb > 0) {
-    <a class="button text view_games" data-icon="@perfType.iconChar" href="@routes.User.games(u.username, "search")?perf=@perfType.id">
+    <a class="button text view_games" data-icon="@perfType.iconChar" href="@routes.User.games(u.id, "search")?perf=@perfType.id">
       View the games
     </a>
     }
     @show.perfTrophies(u, rankMap.filterKeys(perfType.key==))
     <h1 class="lichess_title">
-      <a href="@routes.User.show(u.username)" data-icon="I" class="text">
+      <a href="@routes.User.show(u.id)" data-icon="I" class="text">
         @u.username <span>@perfType.name stats</span>
       </a>
     </h1>

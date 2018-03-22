@@ -94,19 +94,19 @@ final class ModApi(
     _ <- ipBan ?? setBan(mod, sus, true)
   } yield logApi.garbageCollect(mod, sus)
 
-  def closeAccount(mod: String, username: String): Fu[Option[User]] = withUser(username) { user =>
+  def closeAccount(mod: String, userId: User.ID): Fu[Option[User]] = withUser(userId) { user =>
     user.enabled ?? {
       logApi.closeAccount(mod, user.id) inject user.some
     }
   }
 
-  def reopenAccount(mod: String, username: String): Funit = withUser(username) { user =>
+  def reopenAccount(mod: String, userId: User.ID): Funit = withUser(userId) { user =>
     !user.enabled ?? {
       (UserRepo enable user.id) >> logApi.reopenAccount(mod, user.id)
     }
   }
 
-  def setTitle(mod: String, username: String, title: Option[String]): Funit = withUser(username) { user =>
+  def setTitle(mod: String, userId: User.ID, title: Option[String]): Funit = withUser(userId) { user =>
     title match {
       case None => {
         UserRepo.removeTitle(user.id) >>-
@@ -121,13 +121,13 @@ final class ModApi(
     }
   }
 
-  def setEmail(mod: String, username: String, email: EmailAddress): Funit = withUser(username) { user =>
+  def setEmail(mod: String, userId: User.ID, email: EmailAddress): Funit = withUser(userId) { user =>
     UserRepo.email(user.id, email) >>
       UserRepo.setEmailConfirmed(user.id) >>
       logApi.setEmail(mod, user.id)
   }
 
-  def setPermissions(mod: String, username: String, permissions: List[Permission]): Funit = withUser(username) { user =>
+  def setPermissions(mod: String, userId: User.ID, permissions: List[Permission]): Funit = withUser(userId) { user =>
     UserRepo.setRoles(user.id, permissions.map(_.name)) >>
       logApi.setPermissions(mod, user.id, permissions)
   }
@@ -143,6 +143,6 @@ final class ModApi(
     UserRepo.setRankban(sus.user.id, v) >>- logApi.rankban(mod, sus, v)
   }
 
-  private def withUser[A](username: String)(op: User => Fu[A]): Fu[A] =
-    UserRepo named username flatten "[mod] missing user " + username flatMap op
+  private def withUser[A](userId: User.ID)(op: User => Fu[A]): Fu[A] =
+    UserRepo byId userId flatten "[mod] missing user " + userId flatMap op
 }

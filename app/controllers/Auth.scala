@@ -262,7 +262,7 @@ object Auth extends LilaController {
     implicit val req = ctx.req
     api.saveAuthentication(user.id, ctx.mobileApiVersion) flatMap { sessionId =>
       negotiate(
-        html = Redirect(routes.User.show(user.username)).fuccess,
+        html = Redirect(routes.User.show(user.id)).fuccess,
         api = _ => mobileUserOk(user)
       ) map {
         _ withCookies LilaCookie.session("sessionId", sessionId)

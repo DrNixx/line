@@ -19,8 +19,8 @@ object Mod extends LilaController {
   private def modLogApi = Env.mod.logApi
   private def assessApi = Env.mod.assessApi
 
-  def engine(username: String, v: Boolean) = SecureBody(_.MarkEngine) { implicit ctx => me =>
-    withSuspect(username) { sus =>
+  def engine(userId: UserModel.ID, v: Boolean) = SecureBody(_.MarkEngine) { implicit ctx => me =>
+    withSuspect(userId) { sus =>
       for {
         inquiry <- Env.report.api.inquiries ofModId me.id
         _ <- modApi.setEngine(AsMod(me), sus, v)
@@ -36,14 +36,14 @@ object Mod extends LilaController {
     }
   }
 
-  def booster(username: String, v: Boolean) = Secure(_.MarkBooster) { implicit ctx => me =>
-    withSuspect(username) { sus =>
-      modApi.setBooster(AsMod(me), sus, v) inject redirect(username)
+  def booster(userId: UserModel.ID, v: Boolean) = Secure(_.MarkBooster) { implicit ctx => me =>
+    withSuspect(userId) { sus =>
+      modApi.setBooster(AsMod(me), sus, v) inject redirect(userId)
     }
   }
 
-  def troll(username: String, v: Boolean) = SecureBody(_.MarkTroll) { implicit ctx => me =>
-    withSuspect(username) { prev =>
+  def troll(userId: UserModel.ID, v: Boolean) = SecureBody(_.MarkTroll) { implicit ctx => me =>
+    withSuspect(userId) { prev =>
       for {
         inquiry <- Env.report.api.inquiries ofModId me.id
         suspect <- modApi.setTroll(AsMod(me), prev, v)
@@ -52,9 +52,9 @@ object Mod extends LilaController {
     }
   }
 
-  def warn(username: String, subject: String) = SecureBody(_.ModMessage) { implicit ctx => me =>
+  def warn(userId: UserModel.ID, subject: String) = SecureBody(_.ModMessage) { implicit ctx => me =>
     lila.message.ModPreset.bySubject(subject).fold(notFound) { preset =>
-      withSuspect(username) { prev =>
+      withSuspect(userId) { prev =>
         for {
           inquiry <- Env.report.api.inquiries ofModId me.id
           suspect <- modApi.setTroll(AsMod(me), prev, prev.user.troll)
@@ -66,82 +66,82 @@ object Mod extends LilaController {
     }
   }
 
-  def ban(username: String, v: Boolean) = Secure(_.IpBan) { implicit ctx => me =>
-    withSuspect(username) { sus =>
+  def ban(userId: UserModel.ID, v: Boolean) = Secure(_.IpBan) { implicit ctx => me =>
+    withSuspect(userId) { sus =>
       modApi.setBan(AsMod(me), sus, v)
-    } inject redirect(username)
+    } inject redirect(userId)
   }
 
-  def deletePmsAndChats(username: String) = Secure(_.MarkTroll) { implicit ctx => me =>
-    withSuspect(username) { sus =>
+  def deletePmsAndChats(userId: UserModel.ID) = Secure(_.MarkTroll) { implicit ctx => me =>
+    withSuspect(userId) { sus =>
       Env.mod.publicChat.delete(sus) >>
         Env.message.api.deleteThreadsBy(sus.user)
-    } inject redirect(username)
+    } inject redirect(userId)
   }
 
-  def closeAccount(username: String) = Secure(_.CloseAccount) { implicit ctx => me =>
-    modApi.closeAccount(me.id, username) flatMap {
+  def closeAccount(userId: UserModel.ID) = Secure(_.CloseAccount) { implicit ctx => me =>
+    modApi.closeAccount(me.id, userId) flatMap {
       _ ?? { user =>
         Env.current.closeAccount(user.id, self = false)
       }
-    } inject redirect(username)
+    } inject redirect(userId)
   }
 
-  def reopenAccount(username: String) = Secure(_.ReopenAccount) { implicit ctx => me =>
-    modApi.reopenAccount(me.id, username) inject redirect(username)
+  def reopenAccount(userId: UserModel.ID) = Secure(_.ReopenAccount) { implicit ctx => me =>
+    modApi.reopenAccount(me.id, userId) inject redirect(userId)
   }
 
-  def reportban(username: String, v: Boolean) = Secure(_.ReportBan) { implicit ctx => me =>
-    withSuspect(username) { sus =>
-      modApi.setReportban(AsMod(me), sus, v) inject redirect(username)
+  def reportban(userId: UserModel.ID, v: Boolean) = Secure(_.ReportBan) { implicit ctx => me =>
+    withSuspect(userId) { sus =>
+      modApi.setReportban(AsMod(me), sus, v) inject redirect(userId)
     }
   }
 
-  def rankban(username: String, v: Boolean) = Secure(_.RemoveRanking) { implicit ctx => me =>
-    withSuspect(username) { sus =>
-      modApi.setRankban(AsMod(me), sus, v) inject redirect(username)
+  def rankban(userId: UserModel.ID, v: Boolean) = Secure(_.RemoveRanking) { implicit ctx => me =>
+    withSuspect(userId) { sus =>
+      modApi.setRankban(AsMod(me), sus, v) inject redirect(userId)
     }
   }
 
-  def impersonate(username: String) = Auth { implicit ctx => me =>
-    if (username == "-" && lila.mod.Impersonate.isImpersonated(me)) fuccess {
+  def impersonate(userId: UserModel.ID) = Auth { implicit ctx => me =>
+    if (userId == "-" && lila.mod.Impersonate.isImpersonated(me)) fuccess {
       lila.mod.Impersonate.stop(me)
-      Redirect(routes.User.show(me.username))
+      Redirect(routes.User.show(me.id))
     }
-    else if (isGranted(_.Impersonate)) OptionFuRedirect(UserRepo named username) { user =>
+    else if (isGranted(_.Impersonate)) OptionFuRedirect(UserRepo byId userId) { user =>
       lila.mod.Impersonate.start(me, user)
-      fuccess(routes.User.show(user.username))
+      fuccess(routes.User.show(user.id))
     }
     else notFound
   }
 
-  def setTitle(username: String) = SecureBody(_.SetTitle) { implicit ctx => me =>
+  def setTitle(userId: UserModel.ID) = SecureBody(_.SetTitle) { implicit ctx => me =>
     implicit def req = ctx.body
     lila.user.DataForm.title.bindFromRequest.fold(
-      err => fuccess(redirect(username, mod = true)),
-      title => modApi.setTitle(me.id, username, title) >>
-        Env.security.automaticEmail.onTitleSet(username) >>-
-        Env.user.uncacheLightUser(UserModel normalize username) inject
-        redirect(username, mod = false)
+      err => fuccess(redirect(userId, mod = true)),
+      title => modApi.setTitle(me.id, userId, title) >>
+        Env.security.automaticEmail.onTitleSet(userId) >>-
+        Env.user.uncacheLightUser(UserModel normalize userId) inject
+        redirect(userId, mod = false)
     )
   }
 
-  def setEmail(username: String) = SecureBody(_.SetEmail) { implicit ctx => me =>
+  def setEmail(userId: UserModel.ID) = SecureBody(_.SetEmail) { implicit ctx => me =>
     implicit def req = ctx.body
-    OptionFuResult(UserRepo named username) { user =>
+    OptionFuResult(UserRepo byId userId) { user =>
       Env.security.forms.modEmail(user).bindFromRequest.fold(
         err => BadRequest(err.toString).fuccess,
         rawEmail => {
           val email = Env.security.emailAddressValidator.validate(EmailAddress(rawEmail)) err s"Invalid email ${rawEmail}"
-          modApi.setEmail(me.id, user.id, email) inject redirect(user.username, mod = true)
+          modApi.setEmail(me.id, user.id, email) inject redirect(user.id, mod = true)
         }
       )
     }
   }
 
-  def notifySlack(username: String) = Auth { implicit ctx => me =>
-    OptionFuResult(UserRepo named username) { user =>
-      Env.slack.api.userMod(user = user, mod = me) inject redirect(user.username)
+  def notifySlack(userId: UserModel.ID) = Auth { implicit ctx => me =>
+    OptionFuResult(UserRepo byId userId) { user =>
+      Env.slack.api.userMod(user = user, mod = me) inject redirect(user.id)
     }
   }
 
@@ -149,10 +149,10 @@ object Mod extends LilaController {
     modLogApi.recent map { html.mod.log(_) }
   }
 
-  private def communications(username: String, priv: Boolean) = Secure {
+  private def communications(userId: UserModel.ID, priv: Boolean) = Secure {
     perms => if (priv) perms.ViewPrivateComms else perms.MarkTroll
   } { implicit ctx => me =>
-    OptionFuOk(UserRepo named username) { user =>
+    OptionFuOk(UserRepo byId userId) { user =>
       lila.game.GameRepo.recentPovsByUserFromSecondary(user, 80) flatMap { povs =>
         priv.?? {
           Env.chat.api.playerChat optionsByOrderedIds povs.map(_.gameId).map(Chat.Id.apply)
@@ -180,8 +180,8 @@ object Mod extends LilaController {
     }
   }
 
-  def communicationPublic(username: String) = communications(username, false)
-  def communicationPrivate(username: String) = communications(username, true)
+  def communicationPublic(userId: UserModel.ID) = communications(userId, false)
+  def communicationPrivate(userId: UserModel.ID) = communications(userId, true)
 
   def ipIntel(ip: String) = Secure(_.IpBan) { ctx => me =>
     Env.security.ipIntel.failable(IpAddress(ip)).map { Ok(_) }.recover {
@@ -189,18 +189,18 @@ object Mod extends LilaController {
     }
   }
 
-  protected[controllers] def redirect(username: String, mod: Boolean = true) =
-    Redirect(routes.User.show(username).url + mod.??("?mod"))
+  protected[controllers] def redirect(userId: UserModel.ID, mod: Boolean = true) =
+    Redirect(routes.User.show(userId).url + mod.??("?mod"))
 
-  def refreshUserAssess(username: String) = Secure(_.MarkEngine) { implicit ctx => me =>
-    assessApi.refreshAssessByUsername(username) >>
-      Env.irwin.api.requests.fromMod(SuspectId normalize username, me) inject
-      redirect(username)
+  def refreshUserAssess(userId: UserModel.ID) = Secure(_.MarkEngine) { implicit ctx => me =>
+    assessApi.refreshAssessByUsername(userId) >>
+      Env.irwin.api.requests.fromMod(SuspectId normalize userId, me) inject
+      redirect(userId)
   }
 
-  def spontaneousInquiry(username: String) = Secure(_.SeeReport) { implicit ctx => me =>
-    OptionFuResult(UserRepo named username) { user =>
-      Env.report.api.inquiries.spontaneous(AsMod(me), Suspect(user)) inject redirect(user.username, true)
+  def spontaneousInquiry(userId: UserModel.ID) = Secure(_.SeeReport) { implicit ctx => me =>
+    OptionFuResult(UserRepo byId userId) { user =>
+      Env.report.api.inquiries.spontaneous(AsMod(me), Suspect(user)) inject redirect(user.id, true)
     }
   }
 
@@ -225,23 +225,23 @@ object Mod extends LilaController {
     }
   }
 
-  def chatUser(username: String) = Secure(_.ChatTimeout) { implicit ctx => me =>
+  def chatUser(userId: UserModel.ID) = Secure(_.ChatTimeout) { implicit ctx => me =>
     implicit val lightUser = Env.user.lightUserSync _
     JsonOptionOk {
-      Env.chat.api.userChat userModInfo username map2 lila.chat.JsonView.userModInfo
+      Env.chat.api.userChat userModInfo userId map2 lila.chat.JsonView.userModInfo
     }
   }
 
-  def permissions(username: String) = Secure(_.ChangePermission) { implicit ctx => me =>
-    OptionOk(UserRepo named username) { user =>
+  def permissions(userId: UserModel.ID) = Secure(_.ChangePermission) { implicit ctx => me =>
+    OptionOk(UserRepo byId userId) { user =>
       html.mod.permissions(user)
     }
   }
 
-  def savePermissions(username: String) = SecureBody(_.ChangePermission) { implicit ctx => me =>
+  def savePermissions(userId: UserModel.ID) = SecureBody(_.ChangePermission) { implicit ctx => me =>
     implicit def req = ctx.body
     import lila.security.Permission
-    OptionFuResult(UserRepo named username) { user =>
+    OptionFuResult(UserRepo byId userId) { user =>
       Form(single(
         "permissions" -> list(nonEmptyText.verifying { str =>
           Permission.allButSuperAdmin.exists(_.name == str)
@@ -249,10 +249,10 @@ object Mod extends LilaController {
       )).bindFromRequest.fold(
         err => BadRequest(html.mod.permissions(user)).fuccess,
         permissions =>
-          modApi.setPermissions(me.id, user.username, Permission(permissions)) >> {
+          modApi.setPermissions(me.id, user.id, Permission(permissions)) >> {
             (Permission(permissions) diff Permission(user.roles) contains Permission.Coach) ??
               Env.security.automaticEmail.onBecomeCoach(user)
-          } inject redirect(user.username, true)
+          } inject redirect(user.id, true)
       )
     }
   }
@@ -294,8 +294,8 @@ object Mod extends LilaController {
     Redirect(routes.Mod.chatPanic).fuccess
   }
 
-  private def withSuspect(username: String)(f: Suspect => Fu[Result])(implicit ctx: Context) =
-    Env.report.api getSuspect username flatMap {
+  private def withSuspect(userId: UserModel.ID)(f: Suspect => Fu[Result])(implicit ctx: Context) =
+    Env.report.api getSuspect userId flatMap {
       _.fold(notFound)(f)
     }
 }
