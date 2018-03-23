@@ -122,7 +122,7 @@ object Auth extends LilaController {
       html = notFound,
       api = _ => {
         req.session get "sessionId" foreach lila.security.Store.delete
-        Ok(Json.obj("ok" -> true)).fuccess
+        Ok(Json.obj("ok" -> true)).withCookies(LilaCookie.newSession).fuccess
       }
     )
   }
@@ -131,7 +131,7 @@ object Auth extends LilaController {
     negotiate(
       html = Redirect(routes.Auth.oidcLogin()).fuccess,
       api = _ => {
-        Ok(Json.obj("ok" -> true)).withCookies(LilaCookie.newSession).fuccess
+        Ok(Json.obj("ok" -> true)).fuccess
       }
     )
   }
