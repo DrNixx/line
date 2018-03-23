@@ -338,7 +338,7 @@ GET   /signin-oidc                     controllers.Auth.oidcCallback
 POST  /signin-oidc                     controllers.Auth.oidcCallback
 GET   /logout                          controllers.Auth.logoutGet
 POST  /logout                          controllers.Auth.logout
-GET   /signup                          controllers.Auth.signup
+GET   /signup                          controllers.Auth.oidcLogin
 POST  /signup                          controllers.Auth.signupPost
 GET   /signup/check-your-email/:name   controllers.Auth.checkYourEmail(name: String)
 GET   /signup/confirm/:token           controllers.Auth.signupConfirmEmail(token: String)
