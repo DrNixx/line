@@ -73,7 +73,6 @@ final class OpenIDConnectService(
   ): Fu[UserInfo] =
     validateOIDCAuthenticationResponse(params, state) flatMap { authenticationResponse =>
       obtainOIDCToken(authenticationResponse.getAuthorizationCode, nonce) flatMap { token =>
-        logger.info(s"Claims: claims=${token.toJSONObject}")
         obtainUserInfo(token) flatMap { userInfo =>
           fuccess(userInfo)
         }
@@ -121,11 +120,9 @@ final class OpenIDConnectService(
           validateOIDCTokenResponse(response, nonce) flatMap { claims =>
             Seq("sub").map(k => Option(claims.getStringClaim(k))) match {
               case Seq(Some(sub)) =>
-                logger.info(s"OIDC Claims: claims=${claims.toJSONObject}")
                 val successResponse = response.toSuccessResponse
                 fuccess(successResponse.getOIDCTokens.getBearerAccessToken)
               case _ =>
-                logger.info(s"OIDC ID token must have an sub claim: claims=${claims.toJSONObject}")
                 fufail(s"OIDC ID token must have an email claim: claims=${claims.toJSONObject}")
             }
           }
