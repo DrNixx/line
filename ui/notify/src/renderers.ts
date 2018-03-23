@@ -184,14 +184,14 @@ export const renderers: Renderers = {
     text: _ => 'Time is almost up!'
   },
   irwinDone: {
-    html: n => generic(n, '/@/' + n.content.user.name + '?mod', '', [
+    html: n => generic(n, '/@/' + n.content.user.id + '?mod', '', [
       h('span', [
         h('strong', userFullName(n.content.user)),
         drawTime(n)
       ]),
       h('span', 'Irwin job complete!')
     ]),
-    text: n => n.content.user.name + ': Irwin job complete!'
+    text: n => n.content.user.id + ': Irwin job complete!'
   }
 };
 

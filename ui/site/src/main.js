@@ -821,8 +821,9 @@ lichess.topMenuIntent = function() {
       },
       _renderUser: function(user) {
         var icon = '<i class="is-green line' + (user.patron ? ' patron' : '') + '"></i>';
+        var id = lichess.fp.contains(user.id, ' ') ? user.id.split(' ')[1] : user.id;
         var name = lichess.fp.contains(user.name, ' ') ? user.name.split(' ')[1] : user.name;
-        var url = '/@/' + name;
+        var url = '/@/' + id;
         var tvButton = user.playing ? '<a data-icon="1" class="tv is-green ulpt" data-pt-pos="nw" href="' + url + '/tv" data-href="' + url + '"></a>' : '';
         var studyButton = user.studying ? '<a data-icon="4" class="is-green friend-study" href="' + url + '/studyTv"></a>' : '';
         var rightButton = tvButton || studyButton;
