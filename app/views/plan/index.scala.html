@@ -1,6 +1,6 @@
 @(email: Option[lila.common.EmailAddress], stripePublicKey: String, patron: Option[lila.plan.Patron], recentIds: List[String], bestIds: List[String])(implicit ctx: Context)
 
-@title = @{"Become a Patron of lichess.org"}
+@title = @{"Become a Patron of Chess-Online.Com"}
 
 @moreJs = {
 <script src="https://checkout.stripe.com/checkout.js"></script>
@@ -79,13 +79,13 @@ description = "Free chess for everyone, forever!").some) {
             <input type="hidden" name="amount" class="amount" value="">
             <input type="hidden" name="cmd" value="_xclick">
             <input type="hidden" name="business" value="Q3H72BENTXL4G">
-            <input type="hidden" name="item_name" value="lichess.org one-time">
+            <input type="hidden" name="item_name" value="Chess-Online.Com one-time">
             <input type="hidden" name="button_subtype" value="services">
             <input type="hidden" name="no_note" value="1">
             <input type="hidden" name="no_shipping" value="1">
             <input type="hidden" name="rm" value="1">
-            <input type="hidden" name="return" value="https://lichess.org/patron/thanks">
-            <input type="hidden" name="cancel_return" value="https://lichess.org/patron">
+            <input type="hidden" name="return" value="https://live.chess-online.com/patron/thanks">
+            <input type="hidden" name="cancel_return" value="https://live.chess-online.com/patron">
             <input type="hidden" name="lc" value="US">
             <input type="hidden" name="currency_code" value="USD">
           </form>
@@ -94,12 +94,12 @@ description = "Free chess for everyone, forever!").some) {
             <input type="hidden" name="a3" class="amount" value="">
             <input type="hidden" name="cmd" value="_xclick-subscriptions">
             <input type="hidden" name="business" value="Q3H72BENTXL4G">
-            <input type="hidden" name="item_name" value="lichess.org monthly">
+            <input type="hidden" name="item_name" value="Chess-Online.Com monthly">
             <input type="hidden" name="no_note" value="1">
             <input type="hidden" name="no_shipping" value="1">
             <input type="hidden" name="rm" value="1">
-            <input type="hidden" name="return" value="https://lichess.org/patron/thanks">
-            <input type="hidden" name="cancel_return" value="https://lichess.org/patron">
+            <input type="hidden" name="return" value="https://live.chess-online.com/patron/thanks">
+            <input type="hidden" name="cancel_return" value="https://live.chess-online.com/patron">
             <input type="hidden" name="src" value="1">
             <input type="hidden" name="p3" value="1">
             <input type="hidden" name="t3" value="M">
@@ -154,10 +154,6 @@ description = "Free chess for everyone, forever!").some) {
           First of all, powerful servers.<br />
           Then we pay a full-time developer: @userIdLink("thibault".some), the founder of lichess.<br />
           See the <a href="https://docs.google.com/spreadsheets/d/1CGgu-7aNxlZkjLl9l-OlL00fch06xp0Q7eCVDDakYEE/preview" target="_blank">detailed cost breakdown</a>.
-        </dd>
-        <dt>Is lichess an official non-profit?</dt>
-        <dd>
-          Yes, here's the <a href="http://www.journal-officiel.gouv.fr/association/index.php?ACTION=Rechercher&WHAT=lichess.org">act of creation (FR)</a>.
         </dd>
       </dl>
       <dl>

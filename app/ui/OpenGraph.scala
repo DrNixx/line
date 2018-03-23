@@ -10,7 +10,7 @@ case class OpenGraph(
     url: String,
     `type`: String = "website",
     image: Option[String] = None,
-    siteName: String = "lichess.org",
+    siteName: String = "chess-online.coim",
     more: List[(String, String)] = Nil
 ) {
 
@@ -45,7 +45,7 @@ case class OpenGraph(
       "card" -> "summary",
       "title" -> title,
       "description" -> description,
-      "site" -> "@lichess"
+      "site" -> "@playschess"
     ).map(tupledTag).mkString +
       image.?? { tag("image", _) } +
       more.map(tupledTag).mkString
