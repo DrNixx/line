@@ -122,7 +122,7 @@ object Auth extends LilaController {
       html = notFound,
       api = _ => {
         req.session get "sessionId" foreach lila.security.Store.delete
-        Ok(Json.obj("ok" -> true)).withCookies(LilaCookie.newSession).fuccess
+        Ok(Json.obj("ok" -> true)).fuccess
       }
     )
   }
