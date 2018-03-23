@@ -65,6 +65,7 @@ case class Hook(
     "s" -> speed.id
   ).add("prov" -> perf.map(_.provisional).filter(identity))
     .add("u" -> user.map(_.username))
+    .add("uin" -> user.map(_.id))
     .add("rating" -> rating)
     .add("variant" -> realVariant.exotic.option(realVariant.key))
     .add("ra" -> realMode.rated.option(1))
