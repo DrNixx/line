@@ -130,7 +130,7 @@ image = c.coach.picturePath.map(p => dbImageUrl(p.value))).some) {
           <tr class="contact">
             <th>Contact</th>
             <td>
-              <a class="text" data-icon="c" href="@routes.Message.form?user=@c.user.username">Send a private message</a>
+              <a class="text" data-icon="c" href="@routes.Message.form?user=@c.user.id">Send a private message</a>
             </td>
           </tr>
           }

@@ -6,6 +6,7 @@ import { Hook } from '../../interfaces';
 
 function renderHook(ctrl: LobbyController, hook: Hook) {
   const noarg = ctrl.trans.noarg;
+  console.log(hook);
   return h('tr.hook.' + hook.action, {
     key: hook.id,
     class: { disabled: hook.disabled },
