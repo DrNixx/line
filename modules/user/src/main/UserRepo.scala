@@ -290,6 +290,8 @@ object UserRepo {
       $set("engine" -> !u.engine)
     }
 
+  def setUsername(id: ID, username: String): Funit = coll.updateField($id(id), "username", username).void
+
   def setEngine(id: ID, v: Boolean): Funit = coll.updateField($id(id), "engine", v).void
 
   def setBooster(id: ID, v: Boolean): Funit = coll.updateField($id(id), "booster", v).void

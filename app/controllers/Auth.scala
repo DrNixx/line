@@ -128,9 +128,12 @@ object Auth extends LilaController {
   }
 
   def signup = Open { implicit ctx =>
-    NoTor {
-      Ok(html.auth.signup(forms.signup.website, env.recaptchaPublicConfig)).fuccess
-    }
+    negotiate(
+      html = Redirect(routes.Auth.oidcLogin()).fuccess,
+      api = _ => {
+        Ok(Json.obj("ok" -> true)).withCookies(LilaCookie.newSession).fuccess
+      }
+    )
   }
 
   private sealed abstract class MustConfirmEmail(val value: Boolean)
@@ -421,6 +424,7 @@ object Auth extends LilaController {
   private def getOrCreateUser(userInfo: UserInfo)(implicit ctx: Context): Fu[Option[UserModel]] = {
     UserRepo byId userInfo.getSubject.toString flatMap {
       case Some(user) =>
+        UserRepo setUsername (user.id, userInfo.getPreferredUsername)
         fuccess(Some(user))
       case None =>
         createOidcUser(userInfo)
