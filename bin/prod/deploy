@@ -88,6 +88,9 @@ echo "rsync complete"
 if [ $mode == "main" ]; then
   lilalog "Deploy logger configuration"
   rsync -av conf/prod-logger.xml $REMOTE:/etc/lichess.logger.xml
+
+  lilalog "Deploy base configuration"
+  rsync -av conf/base.conf $REMOTE:/etc/lichess/base.conf
 fi
 
 read -n 1 -p "Press [Enter] to complete deployment to $mode server $REMOTE:$REMOTE_DIR"
