@@ -2,7 +2,7 @@
 <div class="side">
   <div class="side_box padded">
     @povOption.map { pov =>
-    <h2 data-icon="1" class="text">Lichess TV</h2>
+    <h2 data-icon="1" class="text">Chess TV</h2>
     <br />
     <div class="confrontation">
       @playerLink(pov.game.whitePlayer, withRating = false, withOnline = false, withDiff = false)
@@ -15,7 +15,7 @@
     , @trans.rated()
     }
     }.getOrElse {
-    <h2 data-icon="1" class="text">Lichess games</h2>
+    <h2 data-icon="1" class="text">Chess games</h2>
     }
   </div>
   @povOption.map { pov =>
