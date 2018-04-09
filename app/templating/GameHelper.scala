@@ -132,7 +132,7 @@ trait GameHelper { self: I18nHelper with UserHelper with AiHelper with StringHel
         s"""<span class="user_link$klass">$content$statusIcon</span>"""
       case Some(user) =>
         val klass = userClass(user.id, cssClass, withOnline)
-        val href = s"${routes.User show user.name}${if (mod) "?mod" else ""}"
+        val href = s"${routes.User show user.id}${if (mod) "?mod" else ""}"
         val content = playerUsername(player, withRating)
         val diff = (player.ratingDiff ifTrue withDiff).fold(emptyHtml)(showRatingDiff)
         val mark = engine ?? s"""<span class="engine_mark" title="${I18nKeys.thisPlayerUsesChessComputerAssistance()}"></span>"""
