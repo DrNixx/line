@@ -19,7 +19,10 @@ final class MongoCache[K, V: MongoCache.Handler] private (
 ) {
 
   def apply(k: K): Fu[V] = cache.get(k, k =>
-    coll.find($id(makeKey(k))).uno[Entry] flatMap {
+    coll.find(
+      $id(makeKey(k)),
+      $doc("e" $gt DateTime.now)
+    ).uno[Entry] flatMap {
       case None => f(k) flatMap { v =>
         persist(k, v) inject v
       }
