@@ -1,7 +1,7 @@
 var m = require('mithril');
 
 function playerHtml(p) {
-  var html = '<a class="text ulpt user_link online" href="/@/' + p.username + '">';
+  var html = '<a class="text ulpt user_link online" href="/@/' + p.id + '">';
   html += p.patron ? '<i class="line patron"></i>' : '<i class="line"></i>';
   html += (p.title ? p.title + ' ' : '') + p.username;
   if (p.rating) html += '<em>' + p.rating + (p.provisional ? '?' : '') + '</em>';
