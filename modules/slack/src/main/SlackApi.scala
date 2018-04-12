@@ -72,7 +72,7 @@ final class SlackApi(
     channel = "commlog"
   ))
 
-  def chatPanicLink = "<https://lichess.org/mod/chat-panic|Chat Panic>"
+  def chatPanicLink = "<https://live.chess-online.com/mod/chat-panic|Chat Panic>"
 
   def chatPanic(mod: User, v: Boolean): Funit = client(SlackMessage(
     username = mod.username,
@@ -117,7 +117,7 @@ final class SlackApi(
   ))
 
   def publishRestart =
-    if (isProd) publishInfo("Lichess has restarted!")
+    if (isProd) publishInfo("ChessOnline Live has restarted!")
     else client(SlackMessage(
       username = stage.name,
       icon = stage.icon,
@@ -125,13 +125,13 @@ final class SlackApi(
       channel = "general"
     ))
 
-  private def userLink(name: String) = s"<https://lichess.org/@/$name?mod|$name>"
-  private def userNotesLink(name: String) = s"<https://lichess.org/@/$name?notes|notes>"
+  private def userLink(name: String) = s"<https://live.chess-online.com/@/$name?mod|$name>"
+  private def userNotesLink(name: String) = s"<https://live.chess-online.com/@/$name?notes|notes>"
 
   val userRegex = lila.common.String.atUsernameRegex.pattern
 
   private def linkifyUsers(msg: String) =
-    userRegex matcher msg replaceAll "<https://lichess.org/@/$1?mod|@$1>"
+    userRegex matcher msg replaceAll "<https://live.chess-online.com/@/$1?mod|@$1>"
 
   def userMod(user: User, mod: User): Funit = client(SlackMessage(
     username = mod.username,
@@ -153,7 +153,7 @@ final class SlackApi(
     if (isProd) client(SlackMessage(
       username = "deployment",
       icon = "rocket",
-      text = "Lichess will be updated in a minute! Fasten your seatbelts.",
+      text = "ChessOnline Live will be updated in a minute! Fasten your seatbelts.",
       channel = "general"
     ))
     else client(SlackMessage(
@@ -167,7 +167,7 @@ final class SlackApi(
     if (isProd) client(SlackMessage(
       username = "deployment",
       icon = "rocket",
-      text = "Lichess is being updated! Brace for impact.",
+      text = "ChessOnline Live is being updated! Brace for impact.",
       channel = "general"
     ))
     else client(SlackMessage(

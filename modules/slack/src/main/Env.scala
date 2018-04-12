@@ -18,7 +18,7 @@ final class Env(
   private val IncomingDefaultChannel = config getString "incoming.default_channel"
   private val NetDomain = config getString "domain"
 
-  private val isProd = NetDomain == "lichess.org"
+  private val isProd = NetDomain == "live.chess-online.com"
 
   lazy val api = new SlackApi(client, isProd, getLightUser)
 
