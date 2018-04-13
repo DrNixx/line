@@ -13,7 +13,7 @@ function scoreTag(s) {
 }
 
 function playerTr(ctrl: TournamentController, player) {
-  const userId = player.name.toLowerCase(),
+  const userId = player.id,
   nbScores = player.sheet.scores.length;
   return h('tr', {
     key: userId,
@@ -43,7 +43,6 @@ function playerTr(ctrl: TournamentController, player) {
 }
 
 function podiumUsername(p) {
-  console.log(p);
   return h('a.text.ulpt.user_link', {
     attrs: { href: '/@/' + p.id }
   }, p.name);
