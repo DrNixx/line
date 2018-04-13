@@ -17,7 +17,7 @@ function renderRatingDiff(rd: number | undefined): VNode | undefined {
 function renderPlayer(ctrl: AnalyseCtrl, color: Color): VNode {
   const p = game.getPlayer(ctrl.data, color);
   if (p.user) return h('a.user_link.ulpt', {
-    attrs: { href: '/@/' + p.user.username }
+    attrs: { href: '/@/' + p.user.id }
   }, [
     h('span', p.user.username),
     renderRatingDiff(p.ratingDiff)

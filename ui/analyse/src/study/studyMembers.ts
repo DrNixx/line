@@ -158,7 +158,7 @@ export function view(ctrl: StudyCtrl): VNode {
   function username(member: StudyMember) {
     var u = member.user;
     return h('span.user_link.ulpt', {
-      attrs: { 'data-href': '/@/' + u.name }
+      attrs: { 'data-href': '/@/' + u.id }
     }, (u.title ? u.title + ' ' : '') + u.name);
   };
 

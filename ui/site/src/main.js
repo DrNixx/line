@@ -133,7 +133,7 @@ lichess.topMenuIntent = function() {
           pending: lichess.spinnerHtml,
           suggestion: function(o) {
             var tag = opts.tag || 'a';
-            return '<' + tag + ' class="ulpt user_link' + (o.online ? ' online' : '') + '" ' + (tag === 'a' ? '' : 'data-') + 'href="/@/' + o.name + '">' +
+            return '<' + tag + ' class="ulpt user_link' + (o.online ? ' online' : '') + '" ' + (tag === 'a' ? '' : 'data-') + 'href="/@/' + o.id + '">' +
             '<i class="line' + (o.patron ? ' patron' : '') + '"></i>' + (o.title ? o.title + ' ' : '') + o.name +
             '</' + tag + '>';
           }

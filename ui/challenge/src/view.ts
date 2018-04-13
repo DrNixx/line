@@ -127,7 +127,7 @@ function renderUser(u?: ChallengeUser): VNode {
   if (!u) return h('span', 'Open challenge');
   const rating = u.rating + (u.provisional ? '?' : '');
   return h('a.ulpt.user_link', {
-    attrs: { href: `/@/${u.name}`},
+    attrs: { href: `/@/${u.id}`},
     class: { online: !!u.online }
   }, [
     h('i.line' + (u.patron ? '.patron' : '')),
