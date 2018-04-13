@@ -729,10 +729,10 @@ lichess.topMenuIntent = function() {
         self.$nbOnline = $title.find('.online');
         self.$nobody = el.find(".nobody");
 
-        var users = el.data('preload').split(','),
-          playings = el.data('playing').split(','),
-          studyings = el.data('studying').split(','),
-          patrons = el.data('patrons').split(',');
+        var users = el.data('preload').toString().split(','),
+          playings = el.data('playing').toString().split(','),
+          studyings = el.data('studying').toString().split(','),
+          patrons = el.data('patrons').toString().split(',');
         self.set(users, playings, studyings, patrons);
       },
       _findByUsername: function(n) {
