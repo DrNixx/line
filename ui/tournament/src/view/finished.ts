@@ -46,7 +46,6 @@ export function main(ctrl: TournamentController): MaybeVNodes {
 }
 
 export function side(ctrl: TournamentController): MaybeVNodes {
-  console.log(ctrl);
   return ctrl.playerInfo.id ? [playerInfo(ctrl)] : [
     stats ? stats(ctrl.data.stats, ctrl.trans.noarg) : null,
     ...tourSide(ctrl)
