@@ -11,6 +11,7 @@ case class LightUser(
 
   def titleName = title.fold(name)(_ + " " + name)
   def titleNameHtml = title.fold(name)(_ + "&nbsp;" + name)
+  def idVsTitleName = title.fold(id + "/" + name)(id + "/" + _ + " " + name)
 }
 
 object LightUser {

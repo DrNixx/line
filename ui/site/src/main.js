@@ -710,8 +710,7 @@ lichess.topMenuIntent = function() {
 
   lichess.widget("friends", (function() {
     var isSameUser = function(userId, user) {
-      var id = lichess.fp.contains(user.name, ' ') ? user.name.split(' ')[1] : user.name;
-      return id.toLowerCase() === userId;
+      return user.id === userId;
     };
     return {
       _create: function() {
@@ -735,14 +734,16 @@ lichess.topMenuIntent = function() {
           patrons = el.data('patrons').toString().split(',');
         self.set(users, playings, studyings, patrons);
       },
-      _findByUsername: function(n) {
+      _findById: function(id) {
         return this.users.filter(function(u) {
-          return isSameUser(n.toLowerCase(), u);
+          return isSameUser(id, u);
         })[0];
       },
-      _makeUser: function(name, playing, studying, patron) {
+      _makeUser: function(us, playing, studying, patron) {
+        var inp = us.split('/');
         return {
-          'name': name,
+          'id': inp[0],
+          'name': inp[1],
           'playing': !!playing,
           'studying': !!studying,
           'patron': !!patron
@@ -751,10 +752,10 @@ lichess.topMenuIntent = function() {
       _uniqueUsers: function(users) {
         var usersEncountered = [];
         return users.filter(function(u) {
-          if (usersEncountered.indexOf(u.name) !== -1) {
+          if (usersEncountered.indexOf(u.id) !== -1) {
             return false;
           } else {
-            usersEncountered.push(u.name);
+            usersEncountered.push(u.id);
             return true;
           }
         })
@@ -762,7 +763,7 @@ lichess.topMenuIntent = function() {
       repaint: function() {
         lichess.raf(function() {
           this.users = this._uniqueUsers(this.users.filter(function(u) {
-            return u.name !== '';
+            return u.id !== '';
           }));
           this.$nbOnline.text(this.users.length);
           this.$nobody.toggleNone(!this.users.length);
@@ -771,7 +772,7 @@ lichess.topMenuIntent = function() {
           }).map(this._renderUser).join(""));
         }.bind(this));
       },
-      set: function(us, playings, studyings, patrons) {
+      set: function(us, names, playings, studyings, patrons) {
         this.users = us.map(function(user) {
           return this._makeUser(user, false, false, false);
         }.bind(this));
@@ -785,45 +786,43 @@ lichess.topMenuIntent = function() {
         this.users.push(user);
         this.repaint();
       },
-      leaves: function(userName) {
+      leaves: function(userId) {
         this.users = this.users.filter(function(u) {
-          return u.name != userName
+          return u.id != userId
         });
         this.repaint();
       },
-      _setPlaying: function(userName, playing) {
-        var user = this._findByUsername(userName);
+      _setPlaying: function(userId, playing) {
+        var user = this._findById(userId);
         if (user) user.playing = playing;
       },
-      _setPatron: function(userName, patron) {
-        var user = this._findByUsername(userName);
+      _setPatron: function(userId, patron) {
+        var user = this._findById(userId);
         if (user) user.patron = patron;
       },
-      _setStudying: function(userName, studying) {
-        var user = this._findByUsername(userName);
+      _setStudying: function(userId, studying) {
+        var user = this._findById(userId);
         if (user) user.studying = studying;
       },
-      playing: function(userName) {
-        this._setPlaying(userName, true);
+      playing: function(userId) {
+        this._setPlaying(userId, true);
         this.repaint();
       },
-      stopped_playing: function(userName) {
-        this._setPlaying(userName, false);
+      stopped_playing: function(userId) {
+        this._setPlaying(userId, false);
         this.repaint();
       },
-      study_join: function(userName) {
-        this._setStudying(userName, true);
+      study_join: function(userId) {
+        this._setStudying(userId, true);
         this.repaint();
       },
-      study_leave: function(userName) {
-        this._setStudying(userName, false);
+      study_leave: function(userId) {
+        this._setStudying(userId, false);
         this.repaint();
       },
       _renderUser: function(user) {
         var icon = '<i class="is-green line' + (user.patron ? ' patron' : '') + '"></i>';
-        var id = lichess.fp.contains(user.id, ' ') ? user.id.split(' ')[1] : user.id;
-        var name = lichess.fp.contains(user.name, ' ') ? user.name.split(' ')[1] : user.name;
-        var url = '/@/' + id;
+        var url = '/@/' + user.id;
         var tvButton = user.playing ? '<a data-icon="1" class="tv is-green ulpt" data-pt-pos="nw" href="' + url + '/tv" data-href="' + url + '"></a>' : '';
         var studyButton = user.studying ? '<a data-icon="4" class="is-green friend-study" href="' + url + '/studyTv"></a>' : '';
         var rightButton = tvButton || studyButton;

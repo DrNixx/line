@@ -8,6 +8,7 @@ object JsonView {
   implicit def relatedWrites(implicit userWrites: Writes[lila.user.User]) =
     OWrites[Related] { r =>
       Json.obj(
+        "id" -> r.user.id,
         "user" -> r.user,
         "patron" -> r.user.isPatron,
         "nbGames" -> r.nbGames,
@@ -20,7 +21,7 @@ object JsonView {
     // We use 'd' for backward compatibility with the mobile client
     Json.obj(
       "t" -> "following_onlines",
-      "d" -> onlineFriends.users.map(_.titleName),
+      "d" -> onlineFriends.users.map(_.idVsTitleName),
       "playing" -> onlineFriends.playing,
       "studying" -> onlineFriends.studying,
       "patrons" -> onlineFriends.patrons
@@ -31,7 +32,7 @@ object JsonView {
     // We use 'd' for backward compatibility with the mobile client
     Json.obj(
       "t" -> "following_enters",
-      "d" -> friendEntering.user.titleName,
+      "d" -> friendEntering.user.idVsTitleName,
       "playing" -> friendEntering.isPlaying,
       "studying" -> friendEntering.isStudying,
       "patron" -> friendEntering.user.isPatron
