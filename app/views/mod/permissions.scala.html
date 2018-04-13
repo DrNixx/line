@@ -10,7 +10,7 @@ moreCss = moreCss) {
 
 <div id="permissions" class="content_box small_box">
   <h1>@userLink(u) permissions</h1>
-  <form action="@routes.Mod.permissions(u.username)" method="post">
+  <form action="@routes.Mod.permissions(u.id)" method="post">
     <select name="permissions[]" multiple>
       @lila.security.Permission.allButSuperAdmin.map { p =>
       <option
