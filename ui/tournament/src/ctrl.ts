@@ -132,6 +132,7 @@ export default class TournamentController {
   };
 
   showPlayerInfo = (player) => {
+    console.log(player);
     const userId = player.name.toLowerCase();
     this.playerInfo = {
       id: this.playerInfo.id === userId ? null : userId,
