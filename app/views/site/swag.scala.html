@@ -9,9 +9,9 @@
 @base.layout(
 moreCss = cssTag("swag.css"),
 side = side.some,
-title = "Lichess Swag",
+title = "Chess Swag",
 openGraph = lila.app.ui.OpenGraph(
-title = "Lichess merch store",
+title = "Chess merch store",
 description = "Great chess deserves great T-shirts! Get yourself some swag and help pay for the servers.",
 url = s"$netBaseUrl${routes.Page.swag}").some) {
 
@@ -19,13 +19,13 @@ url = s"$netBaseUrl${routes.Page.swag}").some) {
   <div id="myShop">
     @base.spinner()
     <p class="loading">
-      Not loading? <a target="_blank" href="https://shop.spreadshirt.com/lichess-org/">Open the shop in a new tab</a>.
+      Not loading? <a target="_blank" href="https://shop.spreadshirt.com/chess-online-com/">Open the shop in a new tab</a>.
     </p>
   </div>
 
   @embedJs {
     var spread_shop_config = {
-      shopName: 'lichess-org',
+      shopName: 'chess-online-com',
         locale: 'us_US',
         prefix: '//shop.spreadshirt.com',
         baseId: 'myShop'
