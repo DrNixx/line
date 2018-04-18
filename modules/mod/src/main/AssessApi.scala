@@ -78,7 +78,7 @@ final class AssessApi(
       case Some(pag) => withGames(pag).map(_.some)
     }
 
-  def refreshAssessByUsername(username: String): Funit = withUser(username) { user =>
+  def refreshAssessById(userId: User.ID): Funit = withUser(userId) { user =>
     (GameRepo.gamesForAssessment(user.id, 100) flatMap { gs =>
       (gs map { g =>
         AnalysisRepo.byGame(g) flatMap {
@@ -200,7 +200,7 @@ final class AssessApi(
     funit
   }
 
-  private def withUser[A](username: String)(op: User => Fu[A]): Fu[A] =
-    UserRepo named username flatten "[mod] missing user " + username flatMap op
+  private def withUser[A](userId: User.ID)(op: User => Fu[A]): Fu[A] =
+    UserRepo byId userId flatten "[mod] missing user " + userId flatMap op
 
 }

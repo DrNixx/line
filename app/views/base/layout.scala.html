@@ -78,6 +78,7 @@ asyncJs: Boolean = false)(body: Html)(implicit ctx: Context)
     @if(!isProd){data-dev="true"}
     @ctx.userId.map {id => data-user="@id"}
     data-sound-set="@ctx.currentSoundSet"
+    data-socket-domain="@socketDomain"
     data-asset-url="@assetBaseUrl"
     data-asset-version="@ctx.pageData.assetVersion"
     @ctx.zoom.map { zoom => data-zoom="@zoom" }>
@@ -92,6 +93,7 @@ asyncJs: Boolean = false)(body: Html)(implicit ctx: Context)
     @if(isStage) {
     <div id="stage">This is an empty Chess-Online preview website for developers. <a href="https://live.chess-online.com">Go to Chess-Online.Com instead</a></div>
     }
+    @lila.security.EmailConfirm.cookie.get(ctx.req).map(auth.emailConfirmBanner(_))
     @if(playing) { <a data-icon="E" id="zentog" class="text fbt active@if(!ctx.pref.isZen){ none}">ZEN MODE</a> }
     <div id="top" class="@ctx.pref.is3d.fold("is3d", "is2d")">
       @topmenu()

@@ -58,7 +58,7 @@ object UserRepo {
     }
 
   def byOrderedIds(ids: Seq[ID], readPreference: ReadPreference): Fu[List[User]] =
-    coll.byOrderedIds[User, User.ID](ids, readPreference)(_.id)
+    coll.byOrderedIds[User, User.ID](ids, readPreference = readPreference)(_.id)
 
   def idsMap(ids: Seq[ID], readPreference: ReadPreference = ReadPreference.secondaryPreferred): Fu[Map[User.ID, User]] =
     coll.idsMap[User, User.ID](ids, readPreference)(_.id)
@@ -136,8 +136,7 @@ object UserRepo {
   def incColor(userId: User.ID, value: Int): Unit =
     coll.update($id(userId), $inc(F.colorIt -> value), writeConcern = GetLastError.Unacknowledged)
 
-  val lichessId = "lichess"
-  def lichess = byId(lichessId)
+  def lichess = byId(User.lichessId)
 
   val irwinId = "irwin"
   def irwin = byId(irwinId)
@@ -302,7 +301,7 @@ object UserRepo {
 
   def setIpBan(id: ID, v: Boolean) = coll.updateField($id(id), "ipBan", v).void
 
-  def toggleKid(user: User) = coll.updateField($id(user.id), "kid", !user.kid)
+  def setKid(user: User, v: Boolean) = coll.updateField($id(user.id), "kid", v)
 
   def isKid(id: ID) = coll.exists($id(id) ++ $doc("kid" -> true))
 
@@ -389,13 +388,13 @@ object UserRepo {
   def langOf(id: ID): Fu[Option[String]] = coll.primitiveOne[String]($id(id), "lang")
 
   def idsSumToints(ids: Iterable[String]): Fu[Int] =
-    ids.nonEmpty ?? coll.aggregateWithReadPreference(
+    ids.nonEmpty ?? coll.aggregateOne(
       Match($inIds(ids)),
       List(Group(BSONNull)(F.toints -> SumField(F.toints))),
       ReadPreference.secondaryPreferred
-    ).map(
-        _.firstBatch.headOption flatMap { _.getAs[Int](F.toints) }
-      ).map(~_)
+    ).map {
+        _ flatMap { _.getAs[Int](F.toints) }
+      }.map(~_)
 
   def filterByEngine(userIds: Iterable[User.ID]): Fu[Set[User.ID]] =
     coll.distinctWithReadPreference[String, Set](
@@ -416,10 +415,10 @@ object UserRepo {
   def containsEngine(userIds: List[User.ID]): Fu[Boolean] =
     coll.exists($inIds(userIds) ++ engineSelect(true))
 
-  def mustConfirmEmail(id: String): Fu[Boolean] =
+  def mustConfirmEmail(id: User.ID): Fu[Boolean] =
     coll.exists($id(id) ++ $doc(F.mustConfirmEmail $exists true))
 
-  def setEmailConfirmed(id: String): Funit = coll.update($id(id), $unset(F.mustConfirmEmail)).void
+  def setEmailConfirmed(id: User.ID): Funit = coll.update($id(id), $unset(F.mustConfirmEmail)).void
 
   private def newUser(
     username: String,

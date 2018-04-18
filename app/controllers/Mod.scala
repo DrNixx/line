@@ -36,9 +36,13 @@ object Mod extends LilaController {
     }
   }
 
-  def booster(userId: UserModel.ID, v: Boolean) = Secure(_.MarkBooster) { implicit ctx => me =>
-    withSuspect(userId) { sus =>
-      modApi.setBooster(AsMod(me), sus, v) inject redirect(userId)
+  def booster(userId: UserModel.ID, v: Boolean) = SecureBody(_.MarkBooster) { implicit ctx => me =>
+    withSuspect(userId) { prev =>
+      for {
+        inquiry <- Env.report.api.inquiries ofModId me.id
+        suspect <- modApi.setBooster(AsMod(me), prev, v)
+        res <- Report.onInquiryClose(inquiry, me, suspect.some)
+      } yield res
     }
   }
 
@@ -68,38 +72,39 @@ object Mod extends LilaController {
 
   def ban(userId: UserModel.ID, v: Boolean) = Secure(_.IpBan) { implicit ctx => me =>
     withSuspect(userId) { sus =>
-      modApi.setBan(AsMod(me), sus, v)
-    } inject redirect(userId)
+      modApi.setBan(AsMod(me), sus, v) >> User.modZoneOrRedirect(userId, me)
+    }
   }
 
   def deletePmsAndChats(userId: UserModel.ID) = Secure(_.MarkTroll) { implicit ctx => me =>
     withSuspect(userId) { sus =>
       Env.mod.publicChat.delete(sus) >>
-        Env.message.api.deleteThreadsBy(sus.user)
-    } inject redirect(userId)
+        Env.message.api.deleteThreadsBy(sus.user) >>
+        User.modZoneOrRedirect(userId, me)
+    }
   }
 
   def closeAccount(userId: UserModel.ID) = Secure(_.CloseAccount) { implicit ctx => me =>
-    modApi.closeAccount(me.id, userId) flatMap {
-      _ ?? { user =>
+    modApi.closeAccount(me.id, userId).flatMap {
+      _.?? { user =>
         Env.current.closeAccount(user.id, self = false)
-      }
-    } inject redirect(userId)
+      } >> User.modZoneOrRedirect(userId, me)
+    }
   }
 
   def reopenAccount(userId: UserModel.ID) = Secure(_.ReopenAccount) { implicit ctx => me =>
-    modApi.reopenAccount(me.id, userId) inject redirect(userId)
+    modApi.reopenAccount(me.id, userId) >> User.modZoneOrRedirect(userId, me)
   }
 
   def reportban(userId: UserModel.ID, v: Boolean) = Secure(_.ReportBan) { implicit ctx => me =>
     withSuspect(userId) { sus =>
-      modApi.setReportban(AsMod(me), sus, v) inject redirect(userId)
+      modApi.setReportban(AsMod(me), sus, v) >> User.modZoneOrRedirect(userId, me)
     }
   }
 
   def rankban(userId: UserModel.ID, v: Boolean) = Secure(_.RemoveRanking) { implicit ctx => me =>
     withSuspect(userId) { sus =>
-      modApi.setRankban(AsMod(me), sus, v) inject redirect(userId)
+      modApi.setRankban(AsMod(me), sus, v) >> User.modZoneOrRedirect(userId, me)
     }
   }
 
@@ -121,7 +126,7 @@ object Mod extends LilaController {
       err => fuccess(redirect(userId, mod = true)),
       title => modApi.setTitle(me.id, userId, title) >>
         Env.security.automaticEmail.onTitleSet(userId) >>-
-        Env.user.uncacheLightUser(UserModel normalize userId) inject
+        Env.user.uncacheLightUser(userId) inject
         redirect(userId, mod = false)
     )
   }
@@ -141,11 +146,11 @@ object Mod extends LilaController {
 
   def notifySlack(userId: UserModel.ID) = Auth { implicit ctx => me =>
     OptionFuResult(UserRepo byId userId) { user =>
-      Env.slack.api.userMod(user = user, mod = me) inject redirect(user.id)
+      Env.slack.api.userMod(user = user, mod = me) >> User.modZoneOrRedirect(userId, me)
     }
   }
 
-  def log = Secure(_.SeeReport) { implicit ctx => me =>
+  def log = Secure(_.ModLog) { implicit ctx => me =>
     modLogApi.recent map { html.mod.log(_) }
   }
 
@@ -193,9 +198,9 @@ object Mod extends LilaController {
     Redirect(routes.User.show(userId).url + mod.??("?mod"))
 
   def refreshUserAssess(userId: UserModel.ID) = Secure(_.MarkEngine) { implicit ctx => me =>
-    assessApi.refreshAssessByUsername(userId) >>
-      Env.irwin.api.requests.fromMod(SuspectId normalize userId, me) inject
-      redirect(userId)
+    assessApi.refreshAssessById(userId) >>
+      Env.irwin.api.requests.fromMod(userId, me) >>
+      User.modZoneOrRedirect(userId, me)
   }
 
   def spontaneousInquiry(userId: UserModel.ID) = Secure(_.SeeReport) { implicit ctx => me =>
@@ -252,6 +257,8 @@ object Mod extends LilaController {
           modApi.setPermissions(me.id, user.id, Permission(permissions)) >> {
             (Permission(permissions) diff Permission(user.roles) contains Permission.Coach) ??
               Env.security.automaticEmail.onBecomeCoach(user)
+          } >> {
+            Permission(permissions).exists(_ is Permission.SeeReport) ?? Env.plan.api.setLifetime(user)
           } inject redirect(user.id, true)
       )
     }
