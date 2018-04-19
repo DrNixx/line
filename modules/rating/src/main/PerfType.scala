@@ -12,6 +12,8 @@ sealed abstract class PerfType(
     val iconChar: Char
 ) {
 
+  def shortName = name
+
   def iconString = iconChar.toString
 }
 

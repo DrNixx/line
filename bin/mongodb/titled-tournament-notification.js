@@ -8,6 +8,7 @@ var userIds = db.user4.distinct('_id', {
     $ne: 'LM'
   }
 });
+'thibault arex'.split(' ').forEach(u => userIds.push(u));
 
 print('Inviting ' + userIds.join(', '));
 
