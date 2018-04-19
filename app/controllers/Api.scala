@@ -65,13 +65,13 @@ object Api extends LilaController {
   )
 
   def usersByIds = OpenBody(parse.tolerantText) { implicit ctx =>
-    val usernames = ctx.body.body.split(',').take(300).toList
+    val ids = ctx.body.body.split(',').take(300).toList
     val ip = HTTPRequest lastRemoteAddress ctx.req
-    val cost = usernames.size / 4
+    val cost = ids.size / 4
     UsersRateLimitPerIP(ip, cost = cost) {
       UsersRateLimitGlobal("-", cost = cost, msg = ip.value) {
         lila.mon.api.users.cost(cost)
-        lila.user.UserRepo nameds usernames map {
+        lila.user.UserRepo byIds ids map {
           _.map { Env.user.jsonView(_, none) }
         } map toApiResult map toHttp
       }
@@ -138,13 +138,13 @@ object Api extends LilaController {
       token = get("token")
     )
 
-  def userGames(name: String) = ApiRequest { implicit ctx =>
+  def userGames(userId: String) = ApiRequest { implicit ctx =>
     val page = (getInt("page") | 1) atLeast 1 atMost 200
     val nb = (getInt("nb") | 10) atLeast 1 atMost 100
     val cost = page * nb + 10
     UserRateLimit(cost = cost) {
       lila.mon.api.userGames.cost(cost)
-      lila.user.UserRepo named name flatMap {
+      lila.user.UserRepo byId userId flatMap {
         _ ?? { user =>
           gameApi.byUser(
             user = user,
@@ -274,11 +274,11 @@ object Api extends LilaController {
     }
   }
 
-  def activity(name: String) = ApiRequest { implicit ctx =>
+  def activity(userId: String) = ApiRequest { implicit ctx =>
     val cost = 50
     UserRateLimit(cost = cost) {
       lila.mon.api.activity.cost(cost)
-      lila.user.UserRepo named name flatMap {
+      lila.user.UserRepo byId userId flatMap {
         _ ?? { user =>
           Env.activity.read.recent(user) flatMap {
             _.map { Env.activity.jsonView(_, user) }.sequenceFu

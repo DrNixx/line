@@ -92,18 +92,18 @@ object Report extends LilaController {
     api.moveToXfiles(id) inject Redirect(routes.Report.list)
   }
 
-  def currentCheatInquiry(id: String) = Secure(_.Hunter) { implicit ctx => me =>
-    OptionFuResult(UserRepo byId id) { user =>
+  def currentCheatInquiry(userId: String) = Secure(_.Hunter) { implicit ctx => me =>
+    OptionFuResult(UserRepo byId userId) { user =>
       env.api.currentCheatReport(lila.report.Suspect(user)) flatMap {
         _ ?? { report =>
           env.api.inquiries.toggle(lila.report.Mod(me), report.id)
-        } inject Mod.redirect(username, true)
+        } inject Mod.redirect(userId, true)
       }
     }
   }
 
   def form = Auth { implicit ctx => implicit me =>
-    get("username") ?? UserRepo.named flatMap { user =>
+    get("username") ?? UserRepo.byId flatMap { user =>
       env.forms.createWithCaptcha map {
         case (form, captcha) => Ok(html.report.form(form, user, captcha))
       }
@@ -113,7 +113,7 @@ object Report extends LilaController {
   def create = AuthBody { implicit ctx => implicit me =>
     implicit val req = ctx.body
     env.forms.create.bindFromRequest.fold(
-      err => get("username") ?? UserRepo.named flatMap { user =>
+      err => get("username") ?? UserRepo.byId flatMap { user =>
         env.forms.anyCaptcha map { captcha =>
           BadRequest(html.report.form(err, user, captcha))
         }
@@ -121,7 +121,7 @@ object Report extends LilaController {
       data =>
         if (data.user == me) notFound
         else api.create(data candidate lila.report.Reporter(me)) map { report =>
-          Redirect(routes.Report.thanks(data.user.username))
+          Redirect(routes.Report.thanks(data.user.id))
         }
     )
   }

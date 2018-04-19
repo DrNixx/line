@@ -29,12 +29,12 @@ object Game extends LilaController {
   }
 
   def export(userId: UserModel.ID) = OpenOrScoped()(
-    open = ctx => handleExport(username, ctx.me, ctx.req),
+    open = ctx => handleExport(userId, ctx.me, ctx.req),
     scoped = req => me => handleExport(userId, me.some, req)
   )
 
-  private def handleExport(username: String, me: Option[lila.user.User], req: RequestHeader) =
-    lila.user.UserRepo named username flatMap {
+  private def handleExport(userId: UserModel.ID, me: Option[lila.user.User], req: RequestHeader) =
+    lila.user.UserRepo byId userId flatMap {
       _ ?? { user =>
         RequireHttp11(req) {
           Api.GlobalLinearLimitPerIP(HTTPRequest lastRemoteAddress req) {

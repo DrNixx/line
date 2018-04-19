@@ -254,7 +254,7 @@ object Auth extends LilaController {
         email => UserRepo.named(userEmail.username) flatMap {
           _.fold(Redirect(routes.Auth.signup).fuccess) { user =>
             UserRepo.mustConfirmEmail(user.id) flatMap {
-              case false => Redirect(routes.Auth.login).fuccess
+              case false => Redirect(routes.Auth.oidcLogin).fuccess
               case _ =>
                 val newUserEmail = userEmail.copy(email = EmailAddress(email))
                 EmailConfirmRateLimit(newUserEmail, ctx.req) {

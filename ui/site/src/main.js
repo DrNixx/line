@@ -772,7 +772,7 @@ lichess.topMenuIntent = function() {
           }).map(this._renderUser).join(""));
         }.bind(this));
       },
-      set: function(us, names, playings, studyings, patrons) {
+      set: function(us, playings, studyings, patrons) {
         this.users = us.map(function(user) {
           return this._makeUser(user, false, false, false);
         }.bind(this));

@@ -31,7 +31,7 @@
     <a href="@routes.UserTournament.path(u.id, "recent")" class="intertab tournament_stats" data-toints="@u.toints">@splitNumber(trans.nbTournamentPoints.pluralSame(u.toints))</a>
     <a href="@routes.Study.byOwnerDefault(u.id)" class="intertab">@splitNumber(info.nbStudies + " studies")</a>
     <a class="intertab" @NotForKids {
-      href="@routes.ForumPost.search("user:" + u.username, 1)"
+      href="@routes.ForumPost.search("user:" + u.id, 1)"
       }>@splitNumber(trans.nbForumPosts.pluralSame(info.nbPosts))</a>
     @NotForKids {
     @if(ctx.isAuth && !ctx.is(u)) {
@@ -55,13 +55,13 @@
     @if(ctx.isAuth && !ctx.is(u)) {
     @views.html.relation.actions(u.id, relation = relation, followable = followable, blocked = blocked)
     @NotForKids {
-    <a data-hint="@trans.reportXToModerators(u.username)" class="button hint--top-left" href="@routes.Report.form?username=@u.username">
+    <a data-hint="@trans.reportXToModerators(u.id)" class="button hint--top-left" href="@routes.Report.form?username=@u.id">
       <span data-icon="!"></span>
     </a>
     }
     }
     @if(ctx is u) {
-    <a class="button hint--top-left" href="@routes.Game.exportForm" data-hint="@trans.exportGames()"><span data-icon="x"></span></a>
+    <a class="button hint--top-left" href="@routes.Game.export(u.id)" data-hint="@trans.exportGames()"><span data-icon="x"></span></a>
     }
   </div>
 </div>
@@ -183,10 +183,10 @@ case _ => {
   </div>
   }
   @if(info.insightVisible) {
-  <a class="insight" href="@routes.Insight.index(u.username)">
+  <a class="insight" href="@routes.Insight.index(u.id)">
     <span class="icon" data-icon="7"></span>
     <strong>Chess Insights</strong>
-    <em>Analytics from @if(ctx.is(u)){your}else{@u.username's} games</em>
+    <em>Analytics from @if(ctx.is(u)){your}else{@u.id's} games</em>
   </a>
   }
 </div>

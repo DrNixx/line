@@ -12,12 +12,9 @@ POST  /timeline/unsub/:channel         controllers.Timeline.unsub(channel: Strin
 
 # Search
 GET   /games/search                    controllers.Search.index(page: Int ?= 1)
-GET   /games/export/search             controllers.Search.export
 
-# Game
-GET   /games/export-form               controllers.Game.exportForm
-POST  /games/export/mine               controllers.Game.exportConfirm
-GET   /games/export/mine               controllers.Game.exportApi
+# Game export
+GET   /games/export/:userId            controllers.Game.export(userId: String)
 
 # TV
 GET   /tv                              controllers.Tv.index
@@ -493,9 +490,9 @@ GET    /stat/rating/distribution/:perf controllers.Stat.ratingDistribution(perf:
 # API
 GET   /api                             controllers.Api.index
 POST  /api/users                       controllers.Api.usersByIds
-GET   /api/user/:name                  controllers.Api.user(name: String)
-GET   /api/user/:name/games            controllers.Api.userGames(name: String)
-GET   /api/user/:name/activity         controllers.Api.activity(name: String)
+GET   /api/user/:userId                controllers.Api.user(userId: String)
+GET   /api/user/:userId/games          controllers.Api.userGames(userId: String)
+GET   /api/user/:userId/activity       controllers.Api.activity(userId: String)
 GET   /api/game/:id                    controllers.Api.game(id: String)
 GET   /api/games/vs/:u1/:u2            controllers.Api.gamesVs(u1: String, u2: String)
 GET   /api/games/team/:teamId          controllers.Api.gamesVsTeam(teamId: String)

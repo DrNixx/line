@@ -19,7 +19,7 @@ case class Suspect(user: User) extends AnyVal {
 }
 case class SuspectId(value: User.ID) extends AnyVal
 object SuspectId {
-  def normalize(username: String) = SuspectId(User normalize username)
+  def normalize(UserId: String) = SuspectId(User normalize UserId)
 }
 
 case class Victim(user: User) extends AnyVal

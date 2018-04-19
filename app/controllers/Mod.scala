@@ -199,7 +199,7 @@ object Mod extends LilaController {
 
   def refreshUserAssess(userId: UserModel.ID) = Secure(_.MarkEngine) { implicit ctx => me =>
     assessApi.refreshAssessById(userId) >>
-      Env.irwin.api.requests.fromMod(userId, me) >>
+      Env.irwin.api.requests.fromMod(SuspectId normalize userId, me) >>
       User.modZoneOrRedirect(userId, me)
   }
 
