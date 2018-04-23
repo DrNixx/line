@@ -47,7 +47,7 @@ final class MessageApi(
 
   def makeThread(data: DataForm.ThreadData, me: User): Fu[Thread] = {
     val fromMod = Granter(_.MessageAnyone)(me)
-    UserRepo named data.user.id flatMap {
+    UserRepo byId data.user.id flatMap {
       _.fold(fufail[Thread]("No such recipient")) { invited =>
         val t = Thread.make(
           name = data.subject,

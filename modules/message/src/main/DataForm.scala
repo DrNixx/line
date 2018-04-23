@@ -11,19 +11,19 @@ private[message] final class DataForm(security: MessageSecurity) {
   import DataForm._
 
   def thread(me: User) = Form(mapping(
-    "username" -> nonEmptyText(maxLength = 20)
-      .verifying("Unknown username", { fetchUser(_).isDefined })
-      .verifying("Sorry, this player doesn't accept new messages", { name =>
+    "userid" -> nonEmptyText(maxLength = 20)
+      .verifying("Unknown user", { fetchUser(_).isDefined })
+      .verifying("Sorry, this player doesn't accept new messages", { userId =>
         Granter(_.MessageAnyone)(me) || {
-          security.canMessage(me.id, User normalize name) awaitSeconds 2 // damn you blocking API
+          security.canMessage(me.id, userId) awaitSeconds 2 // damn you blocking API
         }
       }),
     "subject" -> text(minLength = 3, maxLength = 100),
     "text" -> text(minLength = 3, maxLength = 8000),
     "mod" -> optional(nonEmptyText)
   )({
-      case (username, subject, text, mod) => ThreadData(
-        user = fetchUser(username) err "Unknown username " + username,
+      case (userid, subject, text, mod) => ThreadData(
+        user = fetchUser(userid) err "Unknown user " + userid,
         subject = subject,
         text = text,
         asMod = mod.isDefined
@@ -34,7 +34,7 @@ private[message] final class DataForm(security: MessageSecurity) {
     "text" -> text(minLength = 3)
   ))
 
-  private def fetchUser(username: String) = UserRepo named username awaitSeconds 2
+  private def fetchUser(userid: String) = UserRepo byId userid awaitSeconds 2
 }
 
 object DataForm {
@@ -46,6 +46,6 @@ object DataForm {
       asMod: Boolean
   ) {
 
-    def export = (user.username, subject, text, asMod option "1")
+    def export = (user.id, subject, text, asMod option "1")
   }
 }
