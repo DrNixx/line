@@ -14,26 +14,26 @@ title = trans.composeMessage.txt()) {
     <p>Sorry, you cannot start conversations yet.</p>
     } else {
     <div class="center form">
-      <form action="@routes.Message.create()@reqUser.map(u => "?username=" + u.username)" method="post">
+      <form action="@routes.Message.create()@reqUser.map(u => "?userid=" + u.id)" method="post">
         <div class="field_to">
-          <label for="@form("username").id">@trans.recipient():</label>
+          <label for="@form("userid").id">@trans.recipient():</label>
           @reqUser.map { user =>
           @userLink(user)
           <input
           type="hidden"
-          name="@form("username").name"
+          name="@form("userid").name"
           value="@user.id">
           }.getOrElse {
           <input
           type="text"
           class="user-autocomplete"
           required="required"
-          name="@form("username").name"
-          id="@form("username").id"
-          value="@form("username").value"
+          name="@form("userid").name"
+          id="@form("userid").id"
+          value="@form("userid").value"
           autofocus="1"
           data-tag="span">
-          @errMsg(form("username"))
+          @errMsg(form("userid"))
           }
         </div>
 
