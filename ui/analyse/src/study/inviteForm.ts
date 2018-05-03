@@ -84,7 +84,7 @@ export function view(ctrl): VNode {
               window.lichess.userAutocomplete($(el), {
                 tag: 'span',
                 onSelect(v) {
-                  ctrl.invite(v.name);
+                  ctrl.invite(v.id);
                   $(el).typeahead('close');
                   el.value = '';
                   ctrl.redraw();
