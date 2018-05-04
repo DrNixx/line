@@ -429,8 +429,8 @@ arvutianalüüsi, mängu jututoa ning jagatava URL-i.</string>
   <string name="country">Maa</string>
   <string name="preferences">Sätted</string>
   <string name="inlineNotation">Tekstisisene märge</string>
-  <string name="watchLichessTV">Vaata Lichess TV-d</string>
-  <string name="previouslyOnLichessTV">Eelnevalt Lichess TV-s</string>
+  <string name="watchLichessTV">Vaata Chess TV-d</string>
+  <string name="previouslyOnLichessTV">Eelnevalt Chess TV-s</string>
   <string name="onlinePlayers">Online -s mängijad</string>
   <string name="activeToday">aktiivne täna</string>
   <string name="activePlayers">aktiivsed mängijad</string>
@@ -440,7 +440,7 @@ arvutianalüüsi, mängu jututoa ning jagatava URL-i.</string>
   <string name="findTheBestMoveForWhite">Leia parim käik valgele</string>
   <string name="findTheBestMoveForBlack">Leia parim käik mustale</string>
   <string name="toTrackYourProgress">Vaata oma arengut</string>
-  <string name="trainingSignupExplanation">Lichess pakub sinu võimetele vastavaid ülesandeid, tehes treeningsessiooni paremaks.</string>
+  <string name="trainingSignupExplanation">Chess-Online pakub sinu võimetele vastavaid ülesandeid, tehes treeningsessiooni paremaks.</string>
   <string name="puzzleId">%s ülesanne</string>
   <string name="puzzleOfTheDay">Päevaülesanne</string>
   <string name="clickToSolve">Lahendamiseks vajuta</string>
@@ -589,7 +589,7 @@ arvutianalüüsi, mängu jututoa ning jagatava URL-i.</string>
   <string name="clock">Kell</string>
   <string name="unauthorizedError">Juurdepääs on keelatud.</string>
   <string name="noInternetConnection">Puudub internetiühendus. Saate siiski mängida ühenduseta olevast menüüst.</string>
-  <string name="connectedToLichess">Oled nüüd ühendatud lichess.org</string>
+  <string name="connectedToLichess">Oled nüüd ühendatud live.chess-online.com</string>
   <string name="signedOut">Olete välja logitud</string>
   <string name="loginSuccessful">Oled sisse logitud</string>
   <string name="playOnTheBoardOffline">Reaalelumäng</string>
@@ -749,7 +749,7 @@ arvutianalüüsi, mängu jututoa ning jagatava URL-i.</string>
   <string name="embedInYourWebsite">Lubad oma veebilehel</string>
   <string name="usernameAlreadyUsed">See kasutajanimi on juba olemas, proovige midagi muud.</string>
   <string name="usernameUnacceptable">Selline kasutajanimi ei ole lubatud.</string>
-  <string name="directlySupportLichess">Toeta Lichess-i</string>
+  <string name="directlySupportLichess">Toeta Chess-Online-i</string>
   <string name="playChessInStyle">Mängi malet stiiliga</string>
   <string name="chessBasics">Male põhitõed</string>
   <string name="coaches">Treenerid</string>

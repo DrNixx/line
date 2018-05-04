@@ -114,7 +114,7 @@
   <string name="viewInFullSize">Дивитися в повний розмір</string>
   <string name="logOut">Вийти</string>
   <string name="signIn">Увійти</string>
-  <string name="newToLichess">Уперше на Lichess?</string>
+  <string name="newToLichess">Уперше на Chess-Online?</string>
   <string name="youNeedAnAccountToDoThat">Для цього вам потрібен обліковий запис</string>
   <string name="signUp">Зареєструватися</string>
   <string name="computersAreNotAllowedToPlay">Заборонено грати, користуючись підказками шахових програм та безпосередньо програмами. Будь ласка, не послуговуйтеся під час гри допомогою програм (\"рушіїв\"), баз даних або інших гравців. Також зверніть увагу, що створення декількох облікових записів не заохочується і використання надмірної кількості облікових записів призведе до блокування.</string>
@@ -175,6 +175,8 @@
   <string name="thisGameIsRated">Гра на рейтинґ</string>
   <string name="rematch">Повторна гра</string>
   <string name="rematchOfferSent">Запит на повторну гру...</string>
+  <string name="rematchOfferSentWhite">Білі пропонують реванш</string>
+  <string name="rematchOfferSentBlack">Чорні пропонують реванш</string>
   <string name="rematchOfferAccepted">Виклик прийнято</string>
   <string name="rematchOfferCanceled">Запит на повторну гру скасовано</string>
   <string name="rematchOfferDeclined">Запит на повторну гру відхилено</string>
@@ -338,8 +340,8 @@
   <string name="country">Країна</string>
   <string name="preferences">Налаштування</string>
   <string name="inlineNotation">Вбудована нотація</string>
-  <string name="watchLichessTV">Дивитися Lichess ТБ</string>
-  <string name="previouslyOnLichessTV">Попередні трансляції на Lichess ТБ</string>
+  <string name="watchLichessTV">Дивитися Chess-Online ТБ</string>
+  <string name="previouslyOnLichessTV">Попередні трансляції на Chess-Online ТБ</string>
   <string name="onlinePlayers">Гравці онлайн</string>
   <string name="activeToday">Активність сьогодні</string>
   <string name="activePlayers">Активні гравці</string>
@@ -349,7 +351,7 @@
   <string name="findTheBestMoveForWhite">Знайдіть найкращий хід за білих.</string>
   <string name="findTheBestMoveForBlack">Знайдіть найкращий хід за чорних.</string>
   <string name="toTrackYourProgress">Стежити за своїм прогресом:</string>
-  <string name="trainingSignupExplanation">Lichess буде пропонувати вам задачі, відповідні до вашого рівня, для кращого тренування.</string>
+  <string name="trainingSignupExplanation">Chess-Online буде пропонувати вам задачі, відповідні до вашого рівня, для кращого тренування.</string>
   <string name="puzzleId">Задача %s</string>
   <string name="puzzleOfTheDay">Задача дня</string>
   <string name="clickToSolve">Натисніть, щоби розпочати</string>
@@ -361,7 +363,7 @@
   <string name="butYouCanKeepTrying">Але ви можете продовжувати</string>
   <string name="success">Успіх</string>
   <string name="wasThisPuzzleAnyGood">Чи сподобалася вам ця задача?</string>
-  <string name="pleaseVotePuzzle">Допоможіть Lichess зробитися кращими, натиснувши на одну зі стрілок:</string>
+  <string name="pleaseVotePuzzle">Допоможіть Chess-Online зробитися кращими, натиснувши на одну зі стрілок:</string>
   <string name="thankYou">Дякуємо!</string>
   <string name="ratingX">Рівень: %s</string>
   <string name="fromGameLink">Вилучено з гри %s</string>
@@ -483,7 +485,7 @@
   <string name="clock">Годинник</string>
   <string name="unauthorizedError">Доступ не надано.</string>
   <string name="noInternetConnection">Немає зв\'язку з Інтернетом. Ви можете грати оффлайн через меню.</string>
-  <string name="connectedToLichess">Ви з\'єднані з lichess.org</string>
+  <string name="connectedToLichess">Ви з\'єднані з live.chess-online.com</string>
   <string name="signedOut">Ви вийшли.</string>
   <string name="loginSuccessful">Вхід у систему успішно здійснений</string>
   <string name="playOnTheBoardOffline">Грайте оффлайн на ґаджеті</string>
@@ -547,7 +549,7 @@
   <string name="simulClockHint">Налаштування Фішера. Більша кількість учасників – більше часу для сеансера.</string>
   <string name="simulAddExtraTime">Ви можете додати собі час, щоб упоратися з сеансом.</string>
   <string name="simulHostExtraTime">Додатковий час для сеансера</string>
-  <string name="lichessTournaments">Турніри Lichess</string>
+  <string name="lichessTournaments">Турніри Chess-Online</string>
   <string name="tournamentFAQ">FAQ сторінки турнірів</string>
   <string name="tournamentOfficial">Офіційні</string>
   <string name="timeBeforeTournamentStarts">Час до початку турніру</string>
@@ -603,7 +605,7 @@
   <string name="alternativelyYouCanX">Крім того, Ви можете %s.</string>
   <string name="revokeAllSessions">завершити усі сеанси</string>
   <string name="playChessEverywhere">Грайте в шахи будь-де</string>
-  <string name="asFreeAsLichess">Вільний як Lichess</string>
+  <string name="asFreeAsLichess">Вільний як Chess-Online</string>
   <string name="builtForTheLoveOfChessNotMoney">Створений з любов\'ю до шахів, не до грошей</string>
   <string name="everybodyGetsAllFeaturesForFree">Повна функціональність безкоштовно</string>
   <string name="zeroAdvertisement">Без реклами</string>
@@ -639,7 +641,7 @@
   <string name="usernameSuffixInvalid">Ім\'я користувача має закінчуватися буквою або цифрою.</string>
   <string name="usernameCharsInvalid">Ім\'я користувача має містити тільки літери, цифри, символи підкреслення і тире.</string>
   <string name="usernameUnacceptable">Неприйнятне ім\'я користувача.</string>
-  <string name="directlySupportLichess">Підтримує Lichess</string>
+  <string name="directlySupportLichess">Підтримує Chess-Online</string>
   <string name="playChessInStyle">В шаховому стилі</string>
   <string name="chessBasics">Шахові основи</string>
   <string name="coaches">Тренери</string>

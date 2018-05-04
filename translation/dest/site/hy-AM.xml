@@ -111,7 +111,7 @@
   <string name="viewInFullSize">Մեծացնել չափը</string>
   <string name="logOut">Ելք</string>
   <string name="signIn">Մուտք</string>
-  <string name="newToLichess">Նոր ե՞ք Lichess-ում</string>
+  <string name="newToLichess">Նոր ե՞ք Chess-Online-ում</string>
   <string name="youNeedAnAccountToDoThat">Դա անելու համար պետք է հաշիվ ունենալ</string>
   <string name="signUp">Գրանցվել</string>
   <string name="computersAreNotAllowedToPlay">Համակարգիչներն ու համակարգչից օգնություն վերցնող խաղացողներն իրավունք չունեն խաղալ։ Խնդրում ենք խաղալիս չօգտվել շախմատային ծրագրերից, տվյալների բազաներից և այլ մարդկանցից։</string>
@@ -336,8 +336,8 @@
   <string name="biography">Կենսագրություն</string>
   <string name="country">Երկիր</string>
   <string name="preferences">Նախընտրություններ</string>
-  <string name="watchLichessTV">Դիտել Lichess TV</string>
-  <string name="previouslyOnLichessTV">Նախորդները Lichess TV-ով</string>
+  <string name="watchLichessTV">Դիտել Chess TV</string>
+  <string name="previouslyOnLichessTV">Նախորդները Chess TV-ով</string>
   <string name="onlinePlayers">առցանց խաղացողներ</string>
   <string name="activeToday">Ակտիվ այսօր</string>
   <string name="activePlayers">Ակտիվ խաղացողներ</string>
@@ -347,7 +347,7 @@
   <string name="findTheBestMoveForWhite">Փնտրիր լավագույն քայլը սպիտակների համար</string>
   <string name="findTheBestMoveForBlack">Փնտրիր լավագույն քայլը սևերի համար</string>
   <string name="toTrackYourProgress">Ձեր առաջընթացը հետևելու համար՝</string>
-  <string name="trainingSignupExplanation">Lichess-ը կառաջարկի խնդիրներ, որոնք համապատասխանում են Ձեր ունակությանը՝  նպաստելով ավելի արդյունավետ մարզման։</string>
+  <string name="trainingSignupExplanation">Chess-Online-ը կառաջարկի խնդիրներ, որոնք համապատասխանում են Ձեր ունակությանը՝  նպաստելով ավելի արդյունավետ մարզման։</string>
   <string name="puzzleId">Խնդիր %s</string>
   <string name="puzzleOfTheDay">Օրվա խնդիրը</string>
   <string name="clickToSolve">Սեղմեք լուծելու համար</string>
@@ -467,7 +467,7 @@
   <string name="clock">ժամացույց</string>
   <string name="unauthorizedError">Մուտքն արգելված է։</string>
   <string name="noInternetConnection">Չկա ինտերնետ կապ : Դուք կարող եք խաղալ օֆլայն</string>
-  <string name="connectedToLichess">Դուք նորից միացաք lichess.org կայքին</string>
+  <string name="connectedToLichess">Դուք նորից միացաք live.chess-online.com կայքին</string>
   <string name="signedOut">Դուք հաջողությամբ դուրս եկաք ձեր էջից</string>
   <string name="loginSuccessful">Դուք հաջողությամբ մուտք գործեցիք ձեր էջ</string>
   <string name="playOfflineComputer">Համակարգիչ</string>
@@ -500,7 +500,7 @@
   <string name="termsOfService">Ծառայությունների մատուցման պայմաններ</string>
   <string name="host">Ընդունող</string>
   <string name="create">Ստեղծել</string>
-  <string name="lichessTournaments">Lichess մրցաշարեր</string>
+  <string name="lichessTournaments">Chess-Online մրցաշարեր</string>
   <string name="tournamentOfficial">Պաշտոնական</string>
   <string name="averageCentipawnLoss">Միջինուն հարյուրերորդական զինվորի կորուստ</string>
   <string name="newTournament">Նոր մրցաշար</string>

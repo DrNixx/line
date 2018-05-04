@@ -144,7 +144,7 @@
   <string name="viewInFullSize">Посмотреть в полном размере</string>
   <string name="logOut">Выйти</string>
   <string name="signIn">Войти</string>
-  <string name="newToLichess">Впервые на Lichess?</string>
+  <string name="newToLichess">Впервые на Chess-Online?</string>
   <string name="youNeedAnAccountToDoThat">Вам нужно зарегистрироваться, чтобы сделать это</string>
   <string name="signUp">Регистрация</string>
   <string name="computersAreNotAllowedToPlay">Создание учётных записей для ботов запрещено. Пожалуйста, во время игры не используйте шахматные движки, базы данных или подсказки других игроков. Также учтите, что создание нескольких аккаунтов не приветствуется и чрезмерное их количество приведёт к блокировке.</string>
@@ -229,6 +229,8 @@
   <string name="thisGameIsRated">Игра на рейтинг</string>
   <string name="rematch">Реванш</string>
   <string name="rematchOfferSent">Предложение реванша отправлено</string>
+  <string name="rematchOfferSentWhite">Белые предлагают реванш</string>
+  <string name="rematchOfferSentBlack">Чёрные предлагают реванш</string>
   <string name="rematchOfferAccepted">Предложение реванша принято</string>
   <string name="rematchOfferCanceled">Предложение реванша отменено</string>
   <string name="rematchOfferDeclined">Предложение реванша отклонено</string>
@@ -487,8 +489,8 @@
   <string name="country">Страна</string>
   <string name="preferences">Настройки</string>
   <string name="inlineNotation">Строчная нотация</string>
-  <string name="watchLichessTV">Смотреть Lichess TV</string>
-  <string name="previouslyOnLichessTV">Ранее на Lichess TV</string>
+  <string name="watchLichessTV">Смотреть Chess TV</string>
+  <string name="previouslyOnLichessTV">Ранее на Chess TV</string>
   <string name="onlinePlayers">Игроки в сети</string>
   <string name="activeToday">Активные сегодня</string>
   <string name="activePlayers">Активные игроки</string>
@@ -498,7 +500,7 @@
   <string name="findTheBestMoveForWhite">Найдите лучший ход за белых.</string>
   <string name="findTheBestMoveForBlack">Найдите лучший ход за чёрных.</string>
   <string name="toTrackYourProgress">Зарегистрируйтесь, чтобы следить за своими успехами:</string>
-  <string name="trainingSignupExplanation">Lichess подберёт задачи для вашего уровня, чтобы повысить эффективность ваших тренировок.</string>
+  <string name="trainingSignupExplanation">Chess-Online подберёт задачи для вашего уровня, чтобы повысить эффективность ваших тренировок.</string>
   <string name="puzzleId">Задача № %s</string>
   <string name="puzzleOfTheDay">Шахматная задача дня</string>
   <string name="clickToSolve">Нажмите, чтобы решить</string>
@@ -655,7 +657,7 @@
   <string name="clock">Часы</string>
   <string name="unauthorizedError">Неавторизованный доступ.</string>
   <string name="noInternetConnection">Нет интернет соединения. Вы можете пока играть офлайн из меню.</string>
-  <string name="connectedToLichess">Сейчас вы подключены к lichess.org</string>
+  <string name="connectedToLichess">Сейчас вы подключены к live.chess-online.com</string>
   <string name="signedOut">Вы вышли</string>
   <string name="loginSuccessful">Вы вошли</string>
   <string name="playOnTheBoardOffline">Вдвоём за доской</string>
@@ -725,7 +727,7 @@
   <string name="simulClockHint">Настройка часов Фишера. Чем больше игроков играет против вас, тем больше времени вам может понадобится.</string>
   <string name="simulAddExtraTime">Вы можете взять себе дополнительное время на обдумывание партий.</string>
   <string name="simulHostExtraTime">Дополнительное время сеансёра</string>
-  <string name="lichessTournaments">Турниры Lichess</string>
+  <string name="lichessTournaments">Турниры Chess-Online</string>
   <string name="tournamentFAQ">Вопросы и ответы про Арену</string>
   <string name="tournamentOfficial">Официальный</string>
   <string name="timeBeforeTournamentStarts">Время до начала турнира</string>
@@ -737,7 +739,7 @@
   <string name="keyEnterOrExitVariation">ввести/закрыть вариант</string>
   <string name="newTournament">Новый турнир</string>
   <string name="tournamentHomeTitle">Шахматный турнир по различным вариантам шахмат и контролем времени</string>
-  <string name="tournamentHomeDescription">Играйте в быстрые шахматы на турнире! Выбирайте любой из официальных турниров Lichess или создайте свой собственный. Пуля, блиц, классика, шахматы Фишера, король в центре, три шаха и другие варианты игры обеспечат вам бесконечное шахматное удовольствие!</string>
+  <string name="tournamentHomeDescription">Играйте в быстрые шахматы на турнире! Выбирайте любой из официальных турниров Chess-Online или создайте свой собственный. Пуля, блиц, классика, шахматы Фишера, король в центре, три шаха и другие варианты игры обеспечат вам бесконечное шахматное удовольствие!</string>
   <string name="tournamentNotFound">Турнир не найден</string>
   <string name="tournamentDoesNotExist">Такого турнира не существует.</string>
   <string name="tournamentMayHaveBeenCanceled">Может быть отменён в том случае, если все игроки покинули турнир до его старта.</string>
@@ -787,7 +789,7 @@
   <string name="alternativelyYouCanX">Также вы можете %s.</string>
   <string name="revokeAllSessions">закрыть все сессии</string>
   <string name="playChessEverywhere">Играйте в шахматы везде</string>
-  <string name="asFreeAsLichess">Свободен, как Lichess</string>
+  <string name="asFreeAsLichess">Свободен, как Chess-Online</string>
   <string name="builtForTheLoveOfChessNotMoney">С любовью к шахматам, а не к деньгам</string>
   <string name="everybodyGetsAllFeaturesForFree">Все возможности для всех бесплатно</string>
   <string name="zeroAdvertisement">Никакой рекламы</string>
@@ -829,7 +831,7 @@
   <string name="usernameSuffixInvalid">Имя пользователя должно заканчиваться буквой или цифрой.</string>
   <string name="usernameCharsInvalid">Имя пользователя должно состоять только из букв, цифр, подчёркиваний и дефисов.</string>
   <string name="usernameUnacceptable">Это имя пользователя уже занято или недопустимо.</string>
-  <string name="directlySupportLichess">Поддержать Lichess</string>
+  <string name="directlySupportLichess">Поддержать Chess-Online</string>
   <string name="playChessInStyle">В шахматном стиле</string>
   <string name="chessBasics">Основы шахмат</string>
   <string name="coaches">Тренеры</string>

@@ -134,7 +134,7 @@
   <string name="viewInFullSize">Sjå i full storleik</string>
   <string name="logOut">Logg ut</string>
   <string name="signIn">Logg inn</string>
-  <string name="newToLichess">Er du ny på Lichess?</string>
+  <string name="newToLichess">Er du ny på Chess-Online?</string>
   <string name="youNeedAnAccountToDoThat">For å gjera det treng du ein konto</string>
   <string name="signUp">Registrer deg</string>
   <string name="computersAreNotAllowedToPlay">Datamaskinar og spelarar som brukar sjakkprogram har ikkje lov til å spela. Ver venleg å ikkje ta i bruk hjelp frå sjakkprogram, databasar eller andre spelarar så lenge partiet er i gang. Merk at det vert sterkt frårådd å oppretta fleire kontoar. Oppretting av svært mange kontoar vil føra til utestenging.</string>
@@ -211,6 +211,8 @@
   <string name="thisGameIsRated">Dette partiet er rangert</string>
   <string name="rematch">Omkamp</string>
   <string name="rematchOfferSent">Tilbod om omkamp sendt</string>
+  <string name="rematchOfferSentWhite">Kvit tilbyr omkamp</string>
+  <string name="rematchOfferSentBlack">Svart tilbyr omkamp</string>
   <string name="rematchOfferAccepted">Tilbod om omkamp godteke</string>
   <string name="rematchOfferCanceled">Førespurnad om omkamp trekt tilbake</string>
   <string name="rematchOfferDeclined">Tilbod om omkamp avslått</string>
@@ -386,6 +388,14 @@ få en computeranalyse, chatte eller dele ein URL.</string>
   <string name="standing">Stilling</string>
   <string name="createANewTournament">Lag ei ny turnering</string>
   <string name="tournamentCalendar">Turneringskalender</string>
+  <string name="conditionOfEntry">Vilkår for å delta:</string>
+  <string name="advancedSettings">Avanserte innstillingar</string>
+  <string name="safeTournamentName">Finn eit svært sikkert namn på turneringa.</string>
+  <string name="inappropriateNameWarning">Upassande innhald kan føre til at brukarkontoen din blir stengd.</string>
+  <string name="emptyTournamentName">Lat stå tomt for at turneringa skal få namn etter ein tilfeldig stormester.</string>
+  <string name="recommendNotTouching">Vi tilrår å ikkje endre desse.</string>
+  <string name="fewerPlayers">Om du set opp vilkår for deltaking vil turneringa di få færre deltakarar.</string>
+  <string name="showAdvancedSettings">Vis avanserte innstillingar</string>
   <string name="join">Bli med</string>
   <string name="withdraw">Trekk deg</string>
   <string name="points">Poeng</string>
@@ -430,8 +440,8 @@ få en computeranalyse, chatte eller dele ein URL.</string>
   <string name="country">Land</string>
   <string name="preferences">Preferansar</string>
   <string name="inlineNotation">Innbygd notasjon</string>
-  <string name="watchLichessTV">Sjå på Lichess TV</string>
-  <string name="previouslyOnLichessTV">Tidlegare på Lichess TV</string>
+  <string name="watchLichessTV">Sjå på Chess TV</string>
+  <string name="previouslyOnLichessTV">Tidlegare på Chess TV</string>
   <string name="onlinePlayers">Innlogga spelarar</string>
   <string name="activeToday">Aktive i dag</string>
   <string name="activePlayers">Aktive spelarar</string>
@@ -441,7 +451,7 @@ få en computeranalyse, chatte eller dele ein URL.</string>
   <string name="findTheBestMoveForWhite">Finn beste trekket for kvit.</string>
   <string name="findTheBestMoveForBlack">Finn beste trekket for svart.</string>
   <string name="toTrackYourProgress">Finn ut kor stor framgong du har:</string>
-  <string name="trainingSignupExplanation">Lichess gjev deg oppgåver som er tilpassa ditt nivå, og dette gjev betre treningsøkter.</string>
+  <string name="trainingSignupExplanation">Chess-Online gjev deg oppgåver som er tilpassa ditt nivå, og dette gjev betre treningsøkter.</string>
   <string name="puzzleId">Oppgåve %s</string>
   <string name="puzzleOfTheDay">Dagens oppgåve</string>
   <string name="clickToSolve">Trykk for å løysa oppgåva</string>
@@ -591,7 +601,7 @@ i %3$s</string>
   <string name="clock">Klokke</string>
   <string name="unauthorizedError">Ikkje tilgjenge.</string>
   <string name="noInternetConnection">Ingen internettforbindelse. Du kan framleis spele offline frå denne menyen.</string>
-  <string name="connectedToLichess">Du er no tilkopla lichess.org</string>
+  <string name="connectedToLichess">Du er no tilkopla live.chess-online.com</string>
   <string name="signedOut">Du er logga ut</string>
   <string name="loginSuccessful">Du er no logga inn</string>
   <string name="playOnTheBoardOffline">Spel offline, over brettet.</string>
@@ -659,7 +669,7 @@ i %3$s</string>
   <string name="simulClockHint">Fischer klokkesett. Jo fleire spelarar du tar med, jo meir tid kan du trengje.</string>
   <string name="simulAddExtraTime">Du kan legge til ekstra tid på di eiga klokka for å makte simultanframsyninga.</string>
   <string name="simulHostExtraTime">Ekstra tid for simultanoppvisaren</string>
-  <string name="lichessTournaments">Lichess-turnering</string>
+  <string name="lichessTournaments">Chess-Online-turnering</string>
   <string name="tournamentFAQ">Spørsmål og svar knytta til arenaturnering</string>
   <string name="tournamentOfficial">Offisiell</string>
   <string name="timeBeforeTournamentStarts">Tid til turneringa startar</string>
@@ -759,7 +769,7 @@ i %3$s</string>
   <string name="usernameSuffixInvalid">Det siste teiknet i brukarnamnet må vera ein bokstav eller eit tal.</string>
   <string name="usernameCharsInvalid">Brukarnamnet kan berre innehalde bokstavar, tal, understrekingsteikn og bindestrekar.</string>
   <string name="usernameUnacceptable">Dette brukarnamnet er ikkje akseptabelt.</string>
-  <string name="directlySupportLichess">Støtt Lichess direkte</string>
+  <string name="directlySupportLichess">Støtt Chess-Online direkte</string>
   <string name="playChessInStyle">Spel sjakk med stil</string>
   <string name="chessBasics">Grunnleggande sjakk</string>
   <string name="coaches">Sjakklærarar</string>

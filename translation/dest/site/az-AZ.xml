@@ -130,7 +130,7 @@
   <string name="viewInFullSize">Tam görünüşlə bax</string>
   <string name="logOut">Xətdən çıx</string>
   <string name="signIn">Xəttə bağlan</string>
-  <string name="newToLichess">Lichess-ə yeni gəlmisiniz?</string>
+  <string name="newToLichess">Chess-Online-ə yeni gəlmisiniz?</string>
   <string name="youNeedAnAccountToDoThat">Bunun üçün siz qeydiyyatdan keçməlisiniz</string>
   <string name="signUp">Üzv ol</string>
   <string name="computersAreNotAllowedToPlay">Bilgisayarlar və bilgisayardan yararlan oyunçulara oynamaq qadağandır. Oyun zamanı şahmat programlarından, məlumat bazalarından və ya digər oyunçulardan yardım alınmaması xahiş olunur.</string>
@@ -373,8 +373,8 @@
   <string name="biography">Özü haqqında</string>
   <string name="country">Ölkə</string>
   <string name="preferences">Seçimlər</string>
-  <string name="watchLichessTV">Lichess TV izlə</string>
-  <string name="previouslyOnLichessTV">Daha öncə Lichess TV-də</string>
+  <string name="watchLichessTV">Chess TV izlə</string>
+  <string name="previouslyOnLichessTV">Daha öncə Chess TV-də</string>
   <string name="onlinePlayers">Onlayn oyunçular</string>
   <string name="activeToday">Bu gün aktiv olanlar</string>
   <string name="activePlayers">Aktiv oyunçular</string>
@@ -384,7 +384,7 @@
   <string name="findTheBestMoveForWhite">Ağlar üçün ən yaxşı gedişi tapın</string>
   <string name="findTheBestMoveForBlack">Qaralar üçün ən yaxşı gedişi tapın</string>
   <string name="toTrackYourProgress">Progresinizi izləmək üçün</string>
-  <string name="trainingSignupExplanation">Lichess təliminizdə daha uğurlu olmağınız üçün sizin səviyyənizə uyğun tapmacalar təklif edəcək.</string>
+  <string name="trainingSignupExplanation">Chess-Online təliminizdə daha uğurlu olmağınız üçün sizin səviyyənizə uyğun tapmacalar təklif edəcək.</string>
   <string name="puzzleId">Tapmaca %s</string>
   <string name="puzzleOfTheDay">Günün tapmacası</string>
   <string name="clickToSolve">Həll edin</string>
@@ -396,7 +396,7 @@
   <string name="butYouCanKeepTrying">Bəxtinizi bir daha sınayın</string>
   <string name="success">Müvəffəqiyyət</string>
   <string name="wasThisPuzzleAnyGood">Bu tapmaca sizə yararlı oldu?</string>
-  <string name="pleaseVotePuzzle">Lichess inkişafına tövhə vermək üçün səs verin, yuxarı və aşağı oxlardan istifadə edin.</string>
+  <string name="pleaseVotePuzzle">Chess-Online inkişafına tövhə vermək üçün səs verin, yuxarı və aşağı oxlardan istifadə edin.</string>
   <string name="thankYou">Təşşəkkür edirik!</string>
   <string name="ratingX">Reyting: %s</string>
   <plurals name="playedXTimes">
@@ -525,7 +525,7 @@
   <string name="clock">Saat</string>
   <string name="unauthorizedError">Kecid qadağan olunmuşdur</string>
   <string name="noInternetConnection">İnternet bağlantısı yoxdur. Sən yenə də menyudan offlayn oynaya bilərsən</string>
-  <string name="connectedToLichess">Sen indi lichess.org bağlandın</string>
+  <string name="connectedToLichess">Sen indi live.chess-online.com bağlandın</string>
   <string name="signedOut">siz xəttdən ayrıldınız</string>
   <string name="loginSuccessful">siz xəttə bağlandınız</string>
   <string name="playOnTheBoardOffline">Taxta üzərində</string>
@@ -588,7 +588,7 @@
   <string name="simulClockHint">Fişer Saatını quraşdırma. Çoxlu sayda oyunçları qəbul etdikdə, daha çox zamana ehtiyacın olacaq.</string>
   <string name="simulAddExtraTime">Simulla başa çıxmaq üçün öz saatına əlavə vaxtlar artıra bilərsən.</string>
   <string name="simulHostExtraTime">Dəvət edənin əlavə vaxtı</string>
-  <string name="lichessTournaments">Lichess turnirləri</string>
+  <string name="lichessTournaments">Chess-Online turnirləri</string>
   <string name="tournamentFAQ">Arena turnirinin TSS</string>
   <string name="tournamentOfficial">Rəsmi</string>
   <string name="timeBeforeTournamentStarts">Turnir başlamadan öncəki zaman</string>
@@ -615,7 +615,7 @@
   <string name="weHaveSentYouAnEmailTo">Biz %s-ə e-poçt göndərdik. Şifrəni yeniləmək üçün e-poçtundakı linki kliklə.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Qeydiyyatdan keçməklə sən, bizim %s-la razılaşırsan.</string>
   <string name="networkLagBetweenYouAndLichess">Sən və lichess arasında şəbəkə geçikməsi</string>
-  <string name="timeToProcessAMoveOnLichessServer">Lichess serverində gedişi icra etmə zamanı</string>
+  <string name="timeToProcessAMoveOnLichessServer">Chess-Online serverində gedişi icra etmə zamanı</string>
   <string name="downloadAnnotated">Annotasiyanı endir.</string>
   <string name="downloadRaw">İşlənməmişi ednir</string>
   <string name="downloadImported">Çıxarılşı endir</string>
@@ -628,7 +628,7 @@
   <string name="youHaveAlreadyRegisteredTheEmail">Sən e-poçtu artıq qeydiyyatdan keçirmisən: %s</string>
   <string name="kidMode">Uşaq tərzi</string>
   <string name="playChessEverywhere">Şahmatı hər yerdə oyna</string>
-  <string name="asFreeAsLichess">Lichess kimi azad</string>
+  <string name="asFreeAsLichess">Chess-Online kimi azad</string>
   <string name="builtForTheLoveOfChessNotMoney">Pula görə deyil, şahamat sevgisinə görə yarat</string>
   <string name="everybodyGetsAllFeaturesForFree">Hər kəs bütün özəllikləri pulsuz əldə edir</string>
   <string name="zeroAdvertisement">Sıfır reklam</string>

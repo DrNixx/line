@@ -139,7 +139,7 @@
   <string name="viewInFullSize">Vezi la dimensiune completă</string>
   <string name="logOut">Deconectare</string>
   <string name="signIn">Autentificare</string>
-  <string name="newToLichess">Nou pe Lichess?</string>
+  <string name="newToLichess">Nou pe Chess-Online?</string>
   <string name="youNeedAnAccountToDoThat">Aveți nevoie de cont pentru această acțiune</string>
   <string name="signUp">Înregistrare</string>
   <string name="computersAreNotAllowedToPlay">Computerele și jucătorii asistați de computer nu au voie să joace. Vă rugăm ca în timpul partidei să nu primiți asistență de la motoare de șah, baze de date, sau de la alți jucători. Rețineți totodată că acțiunea de creare a mai multor conturi este descurajată și că un număr mare de conturi vor conduce la blocarea accesului pe site (ban).</string>
@@ -220,6 +220,8 @@
   <string name="thisGameIsRated">Această partidă este oficială</string>
   <string name="rematch">Revanşă</string>
   <string name="rematchOfferSent">Propunerea de revanșă a fost trimisă</string>
+  <string name="rematchOfferSentWhite">Albul oferă remiză</string>
+  <string name="rematchOfferSentBlack">Negrul oferă remiză</string>
   <string name="rematchOfferAccepted">Propunerea de revanșă a fost acceptată</string>
   <string name="rematchOfferCanceled">Propunerea de revanșă a fost anulată</string>
   <string name="rematchOfferDeclined">Propunerea de revanșă a fost respinsă</string>
@@ -410,6 +412,14 @@
   <string name="standing">Clasament</string>
   <string name="createANewTournament">Creați un turneu nou</string>
   <string name="tournamentCalendar">Calendarul competiției</string>
+  <string name="conditionOfEntry">Condiție de admitere:</string>
+  <string name="advancedSettings">Setări avansate</string>
+  <string name="safeTournamentName">Alege un nume foarte sigur pentru turneu.</string>
+  <string name="inappropriateNameWarning">Orice nume care este chiar și ușor nepotrivit poate cauza închiderea contului dvs.</string>
+  <string name="emptyTournamentName">Lăsați necompletat pentru a numi turneul după un mare maestru oarecare.</string>
+  <string name="recommendNotTouching">Recomandăm să nu modificați aceste setări.</string>
+  <string name="fewerPlayers">Dacă stabiliți condiții de admitere, turneul dvs. va avea mai puțini jucători.</string>
+  <string name="showAdvancedSettings">Afișează setările avansate</string>
   <string name="join">Intră</string>
   <string name="withdraw">Retrage-te</string>
   <string name="points">Puncte</string>
@@ -454,8 +464,8 @@
   <string name="country">Țară</string>
   <string name="preferences">Preferințe</string>
   <string name="inlineNotation">Notație integrată</string>
-  <string name="watchLichessTV">Urmarește Lichess TV</string>
-  <string name="previouslyOnLichessTV">Anterior pe Lichess TV</string>
+  <string name="watchLichessTV">Urmarește Chess TV</string>
+  <string name="previouslyOnLichessTV">Anterior pe Chess TV</string>
   <string name="onlinePlayers">Jucători online</string>
   <string name="activeToday">Activ azi</string>
   <string name="activePlayers">Jucători activi</string>
@@ -465,7 +475,7 @@
   <string name="findTheBestMoveForWhite">Găsiți cea mai bună mutare pentru alb</string>
   <string name="findTheBestMoveForBlack">Găsiți cea mai bună mutare pentru negru</string>
   <string name="toTrackYourProgress">Pentru urmărirea progresului</string>
-  <string name="trainingSignupExplanation">Lichess vă va oferi probleme conform nivelului dvs., ceea ce va duce la sesiuni mai bune de antrenament.</string>
+  <string name="trainingSignupExplanation">Chess-Online vă va oferi probleme conform nivelului dvs., ceea ce va duce la sesiuni mai bune de antrenament.</string>
   <string name="puzzleId">Problema %s</string>
   <string name="puzzleOfTheDay">Problema zilei</string>
   <string name="clickToSolve">Apăsați pentru a rezolva</string>
@@ -619,7 +629,7 @@
   <string name="clock">Ceas</string>
   <string name="unauthorizedError">Acces neautorizat.</string>
   <string name="noInternetConnection">Nu ai acces la Internet. Poți juca doar offline (din meniu).</string>
-  <string name="connectedToLichess">Acum sunteți conectat la lichess.org</string>
+  <string name="connectedToLichess">Acum sunteți conectat la live.chess-online.com</string>
   <string name="signedOut">V-ați deconectat</string>
   <string name="loginSuccessful">Ești autentificat</string>
   <string name="playOnTheBoardOffline">Joacă offline folosind tabla</string>
@@ -688,7 +698,7 @@
   <string name="simulClockHint">Configurare de ceas Fischer. Cu cât joci împotriva mai multor jucători, cu atât vei avea nevoie de mai mult timp.</string>
   <string name="simulAddExtraTime">Poți adăuga timp în plus pe ceasul tău pentru a te ajuta să faci față simultanului.</string>
   <string name="simulHostExtraTime">Timp suplimentar pe ceasul gazdei</string>
-  <string name="lichessTournaments">Turnee Lichess</string>
+  <string name="lichessTournaments">Turnee Chess-Online</string>
   <string name="tournamentFAQ">Intrebări și răspunsuri pentru turneu</string>
   <string name="tournamentOfficial">Oficial</string>
   <string name="timeBeforeTournamentStarts">Timp până la începerea turneului</string>
@@ -790,7 +800,7 @@
   <string name="usernameSuffixInvalid">Numele de utilizator trebuie să se termine cu o literă sau o cifră.</string>
   <string name="usernameCharsInvalid">Numele de utilizator poate conține doar litere, cifre, linii de subliniere și cratime.</string>
   <string name="usernameUnacceptable">Numele de utilizator nu e acceptabil.</string>
-  <string name="directlySupportLichess">Susține în mod direct Lichess</string>
+  <string name="directlySupportLichess">Susține în mod direct Chess-Online</string>
   <string name="playChessInStyle">Joacă șah cu stil</string>
   <string name="chessBasics">Bazele șahului</string>
   <string name="coaches">Antrenori</string>

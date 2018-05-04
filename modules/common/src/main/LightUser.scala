@@ -30,4 +30,5 @@ object LightUser {
 
   type Getter = String => Fu[Option[LightUser]]
   type GetterSync = String => Option[LightUser]
+  type IsBotSync = String => Boolean
 }

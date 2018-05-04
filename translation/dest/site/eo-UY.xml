@@ -134,7 +134,7 @@
   <string name="viewInFullSize">Vidi plengrande</string>
   <string name="logOut">Elsaluti</string>
   <string name="signIn">Ensaluti</string>
-  <string name="newToLichess">Ne jam konas vi Lichess?</string>
+  <string name="newToLichess">Ne jam konas vi Chess-Online?</string>
   <string name="youNeedAnAccountToDoThat">Vi bezonas konton por fari tion</string>
   <string name="signUp">Registriĝi</string>
   <string name="computersAreNotAllowedToPlay">Estas nepermesate ludi per komputiloj aŭ komputilasisto. Bonvolu ne akiri asiston de iu ŝakaŭtomato, datumbazo aŭ aliaj ludantoj dum ludado. Krome, notu ke la kreado de multaj kontoj estas forte malrekomendata, kaj troa uzo de multaj kontoj rezultigos vian forbaron.</string>
@@ -428,8 +428,8 @@
   <string name="country">Lando</string>
   <string name="preferences">Preferoj</string>
   <string name="inlineNotation">Enlineaj markoj</string>
-  <string name="watchLichessTV">Spekti Lichess-TV</string>
-  <string name="previouslyOnLichessTV">Antaŭe ĉe Lichess-TV</string>
+  <string name="watchLichessTV">Spekti Chess-TV</string>
+  <string name="previouslyOnLichessTV">Antaŭe ĉe Chess-TV</string>
   <string name="onlinePlayers">Konektitaj ludantoj</string>
   <string name="activeToday">Aktivaj hodiaŭ</string>
   <string name="activePlayers">Aktivaj ludantoj</string>
@@ -439,7 +439,7 @@
   <string name="findTheBestMoveForWhite">Trovu la plej bonan movon por la blanka ludanto.</string>
   <string name="findTheBestMoveForBlack">Trovu la plej bonan movon por la nigra ludanto.</string>
   <string name="toTrackYourProgress">Por atenti vian progreson:</string>
-  <string name="trainingSignupExplanation">Por bona trejnado, Lichess produktos puzlojn, kiuj kongruas kun via kapablo.</string>
+  <string name="trainingSignupExplanation">Por bona trejnado, Chess-Online produktos puzlojn, kiuj kongruas kun via kapablo.</string>
   <string name="puzzleId">Puzlo %s</string>
   <string name="puzzleOfTheDay">Puzlo de la tago</string>
   <string name="clickToSolve">Alklaku por solvi</string>
@@ -451,7 +451,7 @@
   <string name="butYouCanKeepTrying">Sed vi rajtas daŭrigi la provon.</string>
   <string name="success">Sukceso</string>
   <string name="wasThisPuzzleAnyGood">Ĉu vi ŝatis ĉi tiun puzlon?</string>
-  <string name="pleaseVotePuzzle">Helpu al Lichess pliboniĝi per voĉdoni, uzante la supren- aŭ suben-sagbutonojn:</string>
+  <string name="pleaseVotePuzzle">Helpu al Chess-Online pliboniĝi per voĉdoni, uzante la supren- aŭ suben-sagbutonojn:</string>
   <string name="thankYou">Dankon!</string>
   <string name="ratingX">Rango: %s</string>
   <plurals name="playedXTimes">
@@ -588,7 +588,7 @@
   <string name="clock">Horloĝo</string>
   <string name="unauthorizedError">Aliro estas malpermesata.</string>
   <string name="noInternetConnection">Neniu interreta konekto. Vi ja povas ludi malkonektite de la menuo.</string>
-  <string name="connectedToLichess">Vi nun estas konektita al lichess.org</string>
+  <string name="connectedToLichess">Vi nun estas konektita al live.chess-online.com</string>
   <string name="signedOut">Vi elsalutis</string>
   <string name="loginSuccessful">Vi ĵus ensalutis</string>
   <string name="playOnTheBoardOffline">Ludi fizike kun aliulo</string>
@@ -655,7 +655,7 @@
   <string name="simulClockHint">Ŝakhorloĝo. Ju pli da ludantoj kiujn vi defios, des pli da tempo kiun vi eble bezonos.</string>
   <string name="simulAddExtraTime">Vi povas aldoni plian tempon al via ŝakhorloĝo por helpi vian ludadon.</string>
   <string name="simulHostExtraTime">Plia tempo por la gastiganto</string>
-  <string name="lichessTournaments">Turniroj de Lichess</string>
+  <string name="lichessTournaments">Turniroj de Chess-Online</string>
   <string name="tournamentFAQ">Oftaj demandoj pri la turnira areno</string>
   <string name="tournamentOfficial">Oficiala</string>
   <string name="timeBeforeTournamentStarts">Tempo ĝis la turniro komenciĝas</string>
@@ -685,8 +685,8 @@
   <string name="ifYouDoNotSeeTheEmailCheckOtherPlaces">Se vi ne vidas la retpoŝton , kontrolu aliajn lokojn kie ĝi povas esti, kiel via rubo , spam, socia , aŭ aliaj dosierujoj.</string>
   <string name="weHaveSentYouAnEmailTo">Ni sendis retmesaĝon al %s. Klaku la ligilon en la poŝto por rekomencigi vian pasvorton.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">De registranta , vi konsentas al esti ligita de nia %s.</string>
-  <string name="networkLagBetweenYouAndLichess">Reto lag inter vi kaj Lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Tempo por prilabori moviĝon sur Lichess servilo</string>
+  <string name="networkLagBetweenYouAndLichess">Reto lag inter vi kaj Chess-Online</string>
+  <string name="timeToProcessAMoveOnLichessServer">Tempo por prilabori moviĝon sur Chess-Online servilo</string>
   <string name="downloadAnnotated">Elŝutu prinotitan</string>
   <string name="downloadRaw">Elŝutu krudaj</string>
   <string name="downloadImported">Elŝutu importitan</string>
@@ -752,7 +752,7 @@
   <string name="embedInYourWebsite">Enkorpigi en via retejo</string>
   <string name="usernameAlreadyUsed">Ĉi tiu uzantnomo estas jam uzanta, bonvolu provi aliun.</string>
   <string name="usernameUnacceptable">Ĉi tiu uzantnomo estas malakceptata.</string>
-  <string name="directlySupportLichess">Rekte subteni Lichess</string>
+  <string name="directlySupportLichess">Rekte subteni Chess-Online</string>
   <string name="playChessInStyle">Ludu ŝakon elegante</string>
   <string name="chessBasics">Ŝaka aboco</string>
   <string name="coaches">Trejnistoj</string>

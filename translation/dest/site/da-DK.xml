@@ -134,7 +134,7 @@
   <string name="viewInFullSize">Se i fuldskærm</string>
   <string name="logOut">Log ud</string>
   <string name="signIn">Log ind</string>
-  <string name="newToLichess">Nyt medlem hos Lichess?</string>
+  <string name="newToLichess">Nyt medlem hos Chess-Online?</string>
   <string name="youNeedAnAccountToDoThat">Du skal have en konto for at gøre dette</string>
   <string name="signUp">Registrer</string>
   <string name="computersAreNotAllowedToPlay">Computere og computerassisterede spillere må ikke deltage. Lad venligst være med at modtage assistance fra skakcomputere, databaser eller andre spillere mens du spiller</string>
@@ -439,8 +439,8 @@
   <string name="country">Land</string>
   <string name="preferences">Indstillinger</string>
   <string name="inlineNotation">Notation uden linjeskift</string>
-  <string name="watchLichessTV">Se Lichess TV</string>
-  <string name="previouslyOnLichessTV">Tidligere på Lichess TV</string>
+  <string name="watchLichessTV">Se Chess TV</string>
+  <string name="previouslyOnLichessTV">Tidligere på Chess TV</string>
   <string name="onlinePlayers">Online spillere</string>
   <string name="activeToday">Aktiv i dag</string>
   <string name="activePlayers">Aktive spillere</string>
@@ -450,7 +450,7 @@
   <string name="findTheBestMoveForWhite">Find det bedste træk for hvid.</string>
   <string name="findTheBestMoveForBlack">Find det bedste træk for sort.</string>
   <string name="toTrackYourProgress">Følg din udvikling:</string>
-  <string name="trainingSignupExplanation">Lichess vil finde opgaver som passer til dit niveau, hvilket øger kvaliteten af træningen.</string>
+  <string name="trainingSignupExplanation">Chess-Online vil finde opgaver som passer til dit niveau, hvilket øger kvaliteten af træningen.</string>
   <string name="puzzleId">Opgave %s</string>
   <string name="puzzleOfTheDay">Dagens opgave</string>
   <string name="clickToSolve">Klik for at løse</string>
@@ -599,7 +599,7 @@
   <string name="clock">Ur</string>
   <string name="unauthorizedError">Adgang ikke givet.</string>
   <string name="noInternetConnection">Ingen internetforbindelse. Du kan stadig spille offline fra menuen.</string>
-  <string name="connectedToLichess">Du er nu forbundet til lichess.org</string>
+  <string name="connectedToLichess">Du er nu forbundet til live.chess-online.com</string>
   <string name="signedOut">Du er blevet logget ud</string>
   <string name="loginSuccessful">Du er nu logget ind</string>
   <string name="playOnTheBoardOffline">Spil offline, brug som bræt</string>
@@ -667,7 +667,7 @@
   <string name="simulClockHint">Fischer Clock opsætning. Jo flere spillere du udfordrer, jo mere tid kan være nødvendig.</string>
   <string name="simulAddExtraTime">Du kan tilføje ekstra tid til dit ur for at hjælpe med at klare simultanspillet.</string>
   <string name="simulHostExtraTime">Ekstra tid til værtsuret</string>
-  <string name="lichessTournaments">Lichess-turneringer</string>
+  <string name="lichessTournaments">Chess-Online-turneringer</string>
   <string name="tournamentFAQ">Arena-turnering FAQ</string>
   <string name="tournamentOfficial">Officiel</string>
   <string name="timeBeforeTournamentStarts">Tid før turnering starter</string>
@@ -767,7 +767,7 @@
   <string name="usernameSuffixInvalid">Brugernavnet skal afsluttes med et bogstav eller et tal.</string>
   <string name="usernameCharsInvalid">Brugernavnet må kun indeholde bogstaver, tal, underscore og bindestreger.</string>
   <string name="usernameUnacceptable">Dette brugernavn er ikke acceptabelt.</string>
-  <string name="directlySupportLichess">Støt Lichess direkte</string>
+  <string name="directlySupportLichess">Støt Chess-Online direkte</string>
   <string name="playChessInStyle">Spil skak med stil</string>
   <string name="chessBasics">Skak basics</string>
   <string name="coaches">Trænere</string>

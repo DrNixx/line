@@ -44,9 +44,6 @@ final class StreamerApi(
   def allListed: Fu[List[Streamer]] =
     coll.find(selectListedApproved).list[Streamer]()
 
-  def save(s: Streamer): Funit =
-    coll.update($id(s.id), s, upsert = true).void
-
   def setSeenAt(user: User): Funit =
     listedIdsCache.get flatMap { ids =>
       ids.contains(Streamer.Id(user.id)) ??

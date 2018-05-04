@@ -73,7 +73,7 @@
   <string name="viewInFullSize">پوری سکرین پر دیکھیں</string>
   <string name="logOut">خارج ہوں</string>
   <string name="signIn">داخل ہوں</string>
-  <string name="newToLichess">Lichess میں نئے وارد؟</string>
+  <string name="newToLichess">Chess-Online میں نئے وارد؟</string>
   <string name="youNeedAnAccountToDoThat">اس کارروائی کے لیے اکاؤنٹ ہونا لازم ہے</string>
   <string name="signUp">اکاؤنٹ بنا‏ئیں</string>
   <string name="computersAreNotAllowedToPlay">کمپوٹر اور کمپیوٹر کی مدد لینے والے کھلاڑیوں کا یہاں کھیلنا منع ہے- برا‏ئے مہربانی دوران کھیل کمپیوٹر یا دوسروں کی مدد مت لیں</string>
@@ -295,8 +295,8 @@
   <string name="biography">سوانح حیات</string>
   <string name="country">ملک</string>
   <string name="preferences">ترجیحات</string>
-  <string name="watchLichessTV">Lichess نشریات</string>
-  <string name="previouslyOnLichessTV">Lichess گذشتہ نشریات</string>
+  <string name="watchLichessTV">Chess-Online نشریات</string>
+  <string name="previouslyOnLichessTV">Chess-Online گذشتہ نشریات</string>
   <string name="onlinePlayers">آن لائن کھلاڑی</string>
   <string name="activeToday">آج سب سے فعال</string>
   <string name="activePlayers">فعال کھلاڑی</string>
@@ -441,7 +441,7 @@
   <string name="clock">دورانیہ</string>
   <string name="unauthorizedError">داخلہ ممنوع ہے</string>
   <string name="noInternetConnection">انٹرنیٹ سے رابطہ نہیں- آپ پھربھی فہرست سے بغیر رابطے کے کھیل شروع کر سکتے ہیں</string>
-  <string name="connectedToLichess">آپ اب lichess.org سے منسلک ہیں</string>
+  <string name="connectedToLichess">آپ اب live.chess-online.com سے منسلک ہیں</string>
   <string name="signedOut">آپکو خارج کردیا گیا ہے</string>
   <string name="loginSuccessful">آپ داخل ہیں</string>
   <string name="playOnTheBoardOffline">حقیقی بساط پر</string>

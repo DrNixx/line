@@ -134,7 +134,7 @@
   <string name="viewInFullSize">Agrandir</string>
   <string name="logOut">Déconnexion</string>
   <string name="signIn">Connexion</string>
-  <string name="newToLichess">Nouveau sur Lichess  ?</string>
+  <string name="newToLichess">Nouveau sur Chess-Online  ?</string>
   <string name="youNeedAnAccountToDoThat">Compte d\'utilisateur requis</string>
   <string name="signUp">S\'inscrire</string>
   <string name="computersAreNotAllowedToPlay">Les ordinateurs et les joueurs assistés par ordinateur ne sont pas autorisés à jouer. Veuillez ne pas vous aider de moteurs d\'analyse, de bases de données ou d\'autres joueurs pendant la partie. Notez également qu\'il est fortement déconseillé de créer plusieurs comptes. Le multi-compte excessif mènera à l\'exclusion.</string>
@@ -439,8 +439,8 @@
   <string name="country">Pays</string>
   <string name="preferences">Préférences</string>
   <string name="inlineNotation">Notation en ligne</string>
-  <string name="watchLichessTV">Regarder Lichess TV</string>
-  <string name="previouslyOnLichessTV">Précédemment sur Lichess TV</string>
+  <string name="watchLichessTV">Regarder Chess TV</string>
+  <string name="previouslyOnLichessTV">Précédemment sur Chess TV</string>
   <string name="onlinePlayers">Joueurs en ligne</string>
   <string name="activeToday">Actifs aujourd\'hui</string>
   <string name="activePlayers">Joueurs actifs</string>
@@ -450,7 +450,7 @@
   <string name="findTheBestMoveForWhite">Trouvez le meilleur coup pour les Blancs.</string>
   <string name="findTheBestMoveForBlack">Trouvez le meilleur coup pour les Noirs.</string>
   <string name="toTrackYourProgress">Pour suivre votre progression :</string>
-  <string name="trainingSignupExplanation">Lichess fournit des problèmes adaptés à votre niveau, pour de meilleures sessions d\'entraînement.</string>
+  <string name="trainingSignupExplanation">Chess-Online fournit des problèmes adaptés à votre niveau, pour de meilleures sessions d\'entraînement.</string>
   <string name="puzzleId">Problème %s</string>
   <string name="puzzleOfTheDay">Problème du jour</string>
   <string name="clickToSolve">Cliquez pour résoudre</string>
@@ -462,7 +462,7 @@
   <string name="butYouCanKeepTrying">Mais vous pouvez réessayer.</string>
   <string name="success">Réussi</string>
   <string name="wasThisPuzzleAnyGood">Ce problème était-il intéressant  ?</string>
-  <string name="pleaseVotePuzzle">Aidez Lichess à s\'améliorer en votant grâce aux flèches :</string>
+  <string name="pleaseVotePuzzle">Aidez Chess-Online à s\'améliorer en votant grâce aux flèches :</string>
   <string name="thankYou">Merci !</string>
   <string name="ratingX">Cote : %s</string>
   <plurals name="playedXTimes">
@@ -600,7 +600,7 @@ en %3$s</string>
   <string name="clock">Pendule</string>
   <string name="unauthorizedError">Accès non autorisé.</string>
   <string name="noInternetConnection">Pas de connexion à Internet. Vous pouvez cependant jouer hors ligne à partir du menu.</string>
-  <string name="connectedToLichess">Vous êtes maintenant connecté à lichess.org</string>
+  <string name="connectedToLichess">Vous êtes maintenant connecté à live.chess-online.com</string>
   <string name="signedOut">Vous vous êtes déconnecté</string>
   <string name="loginSuccessful">Vous êtes connecté</string>
   <string name="playOnTheBoardOffline">Jouer hors ligne, avec un ami</string>
@@ -668,7 +668,7 @@ en %3$s</string>
   <string name="simulClockHint">Configuration de la cadence Fischer. Plus il y a d\'adversaires, plus vous pourriez avoir besoin de temps.</string>
   <string name="simulAddExtraTime">Vous pouvez ajouter du temps supplémentaire à votre pendule pour gérer la simultanée.</string>
   <string name="simulHostExtraTime">Temps supplémentaire de l\'hôte</string>
-  <string name="lichessTournaments">Tournois Lichess</string>
+  <string name="lichessTournaments">Tournois Chess-Online</string>
   <string name="tournamentFAQ">FAQ des tournois</string>
   <string name="tournamentOfficial">Officiel</string>
   <string name="timeBeforeTournamentStarts">Temps restant avant le début du tournoi</string>
@@ -732,7 +732,7 @@ en %3$s</string>
   <string name="builtForTheLoveOfChessNotMoney">Construit pour l\'amour du jeu d\'échecs, pas pour l\'argent</string>
   <string name="everybodyGetsAllFeaturesForFree">Toutes les fonctionnalités sont gratuites pour tout le monde</string>
   <string name="zeroAdvertisement">Aucune publicité</string>
-  <string name="fullFeatured">Tout Lichess, et encore plus</string>
+  <string name="fullFeatured">Tout Chess-Online, et encore plus</string>
   <string name="phoneAndTablet">Smartphones et tablettes</string>
   <string name="bulletBlitzClassical">Partie éclair, Rapide, Semi-Rapide</string>
   <string name="correspondenceChess">Échecs par correspondance</string>
@@ -768,7 +768,7 @@ en %3$s</string>
   <string name="usernameSuffixInvalid">Le nom d’utilisateur doit se terminer par une lettre ou un chiffre.</string>
   <string name="usernameCharsInvalid">Le nom d\'utilisateur doit contenir uniquement des lettres, des chiffres, des tirets.</string>
   <string name="usernameUnacceptable">Ce nom d\'utilisateur existe déjà ou est insultant.</string>
-  <string name="directlySupportLichess">Financer Lichess</string>
+  <string name="directlySupportLichess">Financer Chess-Online</string>
   <string name="playChessInStyle">Jouez aux échecs avec classe</string>
   <string name="chessBasics">Bases des échecs</string>
   <string name="coaches">Entraîneurs</string>

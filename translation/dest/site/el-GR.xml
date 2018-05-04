@@ -134,10 +134,10 @@
   <string name="viewInFullSize">Προβολή σε πλήρες μέγεθος</string>
   <string name="logOut">Έξοδος</string>
   <string name="signIn">Είσοδος</string>
-  <string name="newToLichess">Νέοι στο Lichess;</string>
+  <string name="newToLichess">Νέοι στο Chess-Online;</string>
   <string name="youNeedAnAccountToDoThat">Χρειάζεστε λογαριασμό για να το κάνετε αυτό</string>
   <string name="signUp">Εγγραφή</string>
-  <string name="computersAreNotAllowedToPlay">Δεν επιτρέπουμε στους υπολογιστές και παίκτες με υποβοήθηση υπολογιστή να παίζουν στο Lichess. Παρακαλούμε μη δεχτείτε βοήθεια από σκακιστικούς υπολογιστές, βάσεις δεδομένων ή άλλους παίκτες όσο παίζετε εδώ. Επίσης σημειώστε πως αποθαρρύνoυμε την δημιουργία πολλών λογαριασμών και υπερβολή σε αυτό θα καταλήξει σε αποκλεισμό.</string>
+  <string name="computersAreNotAllowedToPlay">Δεν επιτρέπουμε στους υπολογιστές και παίκτες με υποβοήθηση υπολογιστή να παίζουν στο Chess-Online. Παρακαλούμε μη δεχτείτε βοήθεια από σκακιστικούς υπολογιστές, βάσεις δεδομένων ή άλλους παίκτες όσο παίζετε εδώ. Επίσης σημειώστε πως αποθαρρύνoυμε την δημιουργία πολλών λογαριασμών και υπερβολή σε αυτό θα καταλήξει σε αποκλεισμό.</string>
   <string name="games">Παιχνίδια</string>
   <string name="forum">Φόρουμ</string>
   <string name="xPostedInForumY">Ο χρήστης %1$s έγραψε στη συζήτηση %2$s</string>
@@ -429,8 +429,8 @@
   <string name="country">Χώρα</string>
   <string name="preferences">Προτιμήσεις</string>
   <string name="inlineNotation">Ενσωματωμένη σημειογραφία</string>
-  <string name="watchLichessTV">Παρακολουθήστε Lichess TV</string>
-  <string name="previouslyOnLichessTV">Νωρίτερα στη Tηλεόραση Lichess</string>
+  <string name="watchLichessTV">Παρακολουθήστε Chess TV</string>
+  <string name="previouslyOnLichessTV">Νωρίτερα στη Tηλεόραση Chess-Online</string>
   <string name="onlinePlayers">Συνδεδεμένοι παίκτες</string>
   <string name="activeToday">Ενεργοί σήμερα</string>
   <string name="activePlayers">Ενεργοί παίκτες</string>
@@ -590,7 +590,7 @@
   <string name="clock">Χρόνος</string>
   <string name="unauthorizedError">Άρνηση πρόσβασης.</string>
   <string name="noInternetConnection">Χωρίς σύνδεση. Για να παίξετε χωρίς σύνδεση, ανοίξτε το μενού.</string>
-  <string name="connectedToLichess">Έχετε συνδεθεί στο lichess.org</string>
+  <string name="connectedToLichess">Έχετε συνδεθεί στο live.chess-online.com</string>
   <string name="signedOut">Έχετε αποσυνδεθεί επιτυχώς</string>
   <string name="loginSuccessful">Είσοδος επιτυχής</string>
   <string name="playOnTheBoardOffline">Τοπικά</string>
@@ -758,7 +758,7 @@
   <string name="usernameSuffixInvalid">Το όνομα χρήστη πρέπει να τελειώνει με ένα γράμμα ή έναν αριθμό.</string>
   <string name="usernameCharsInvalid">Το όνομα χρήστη πρέπει να περιέχει μόνο γράμματα, αριθμούς, κάτω παύλες και ενωτικά.</string>
   <string name="usernameUnacceptable">Αυτό το όνομα χρήστη δεν είναι αποδεκτό.</string>
-  <string name="directlySupportLichess">Υποστηρίξτε άμεσα το Lichess</string>
+  <string name="directlySupportLichess">Υποστηρίξτε άμεσα το Chess-Online</string>
   <string name="playChessInStyle">Παίξτε σκάκι με στυλ</string>
   <string name="chessBasics">Τα βασικά στο σκάκι</string>
   <string name="coaches">Προπονητές</string>

@@ -134,7 +134,7 @@
   <string name="viewInFullSize">Ver a tamaño completo</string>
   <string name="logOut">Pechar sesión</string>
   <string name="signIn">Iniciar sesión</string>
-  <string name="newToLichess">Novo en Lichess?</string>
+  <string name="newToLichess">Novo en Chess-Online?</string>
   <string name="youNeedAnAccountToDoThat">Precisas dunha conta de usuario para facer iso</string>
   <string name="signUp">Rexistrarse</string>
   <string name="computersAreNotAllowedToPlay">Non están permitidos os ordenadores ou os xogadores asistidos por eles. Por favor non te axudes de módulos de xadrez, bases de datos ou otros xogadores durante a partida. Lembra tamén que o uso de múltiples contas está altamente desaconsellado e que o uso abusivo deste tipo de contas pode conducir á suspensión</string>
@@ -211,6 +211,8 @@
   <string name="thisGameIsRated">Esta partida é puntuada</string>
   <string name="rematch">Desquite</string>
   <string name="rematchOfferSent">Oferta de desquite enviada</string>
+  <string name="rematchOfferSentWhite">As brancas ofrecen un desquite</string>
+  <string name="rematchOfferSentBlack">As negras ofrecen un desquite</string>
   <string name="rematchOfferAccepted">Oferta de desquite aceptada</string>
   <string name="rematchOfferCanceled">Oferta de desquite cancelada</string>
   <string name="rematchOfferDeclined">Oferta de desquite rexeitada</string>
@@ -386,6 +388,14 @@ unha análise por ordenador, un chat de xogo e unha URL para compartir.</string>
   <string name="standing">Posición</string>
   <string name="createANewTournament">Crear un novo torneo</string>
   <string name="tournamentCalendar">Calendario do torneo</string>
+  <string name="conditionOfEntry">Condicións de participación:</string>
+  <string name="advancedSettings">Axustes avanzados</string>
+  <string name="safeTournamentName">Escolla un nome seguro para o torneo.</string>
+  <string name="inappropriateNameWarning">Calquera comportamento lixeiramente inadecuado podería levar ao peche da súa conta.</string>
+  <string name="emptyTournamentName">Deixe en branco e o torneo terá o nome aleatorio de un Grande Mestre.</string>
+  <string name="recommendNotTouching">Nós recomendamos que non toque nestas opcións.</string>
+  <string name="fewerPlayers">Se estableces condicións de entrada, o teu torneo terá menos xogadores.</string>
+  <string name="showAdvancedSettings">Amosar axustes avanzados</string>
   <string name="join">Unirse</string>
   <string name="withdraw">Retirarse</string>
   <string name="points">Puntos</string>
@@ -430,8 +440,8 @@ unha análise por ordenador, un chat de xogo e unha URL para compartir.</string>
   <string name="country">País</string>
   <string name="preferences">Preferencias</string>
   <string name="inlineNotation">Notación compacta</string>
-  <string name="watchLichessTV">Mirar Lichess TV</string>
-  <string name="previouslyOnLichessTV">Previamente en Lichess TV</string>
+  <string name="watchLichessTV">Mirar Chess TV</string>
+  <string name="previouslyOnLichessTV">Previamente en Chess TV</string>
   <string name="onlinePlayers">Xogadores en liña</string>
   <string name="activeToday">Activos hoxe</string>
   <string name="activePlayers">Xogadores activos</string>
@@ -441,7 +451,7 @@ unha análise por ordenador, un chat de xogo e unha URL para compartir.</string>
   <string name="findTheBestMoveForWhite">Atopa a mellor xogada para o branco.</string>
   <string name="findTheBestMoveForBlack">Atopa a mellor xogada para o negro.</string>
   <string name="toTrackYourProgress">Para avaliar o teu progreso:</string>
-  <string name="trainingSignupExplanation">Lichess proporcionarache problemas que poñan a proba a túa habilidade, mellorando as túas sesións de adestramento.</string>
+  <string name="trainingSignupExplanation">Chess-Online proporcionarache problemas que poñan a proba a túa habilidade, mellorando as túas sesións de adestramento.</string>
   <string name="puzzleId">Problema %s</string>
   <string name="puzzleOfTheDay">Problema do día</string>
   <string name="clickToSolve">Fai clic para resolver</string>
@@ -453,7 +463,7 @@ unha análise por ordenador, un chat de xogo e unha URL para compartir.</string>
   <string name="butYouCanKeepTrying">Pero podes seguir intentándoo.</string>
   <string name="success">Éxito</string>
   <string name="wasThisPuzzleAnyGood">Que che pareceu este problema?</string>
-  <string name="pleaseVotePuzzle">Axúdanos a mellorar Lichess votando, mediante as frechas arriba e abaixo:</string>
+  <string name="pleaseVotePuzzle">Axúdanos a mellorar Chess-Online votando, mediante as frechas arriba e abaixo:</string>
   <string name="thankYou">Grazas!</string>
   <string name="ratingX">Dificultade: %s</string>
   <plurals name="playedXTimes">
@@ -591,7 +601,7 @@ en %3$s</string>
   <string name="clock">Reloxo</string>
   <string name="unauthorizedError">Acceso non autorizado.</string>
   <string name="noInternetConnection">Sen conexión a Internet. Aínda podes xogar offline dende o menú.</string>
-  <string name="connectedToLichess">Estás conectado a lichess.org</string>
+  <string name="connectedToLichess">Estás conectado a live.chess-online.com</string>
   <string name="signedOut">Finalizaches a túa sesión.</string>
   <string name="loginSuccessful">Iniciaches sesión</string>
   <string name="playOnTheBoardOffline">No taboleiro</string>
@@ -659,7 +669,7 @@ en %3$s</string>
   <string name="simulClockHint">Modo Fischer de reloxo. Cantos máis xogadores, máis tempo necesitas.</string>
   <string name="simulAddExtraTime">Podes engadir tempo extra ó teu reloxo para axudarte coa simultánea.</string>
   <string name="simulHostExtraTime">Tempo extra para o simultaneador</string>
-  <string name="lichessTournaments">Torneos de Lichess</string>
+  <string name="lichessTournaments">Torneos de Chess-Online</string>
   <string name="tournamentFAQ">Preguntas frecuentes sobre torneos</string>
   <string name="tournamentOfficial">Oficial</string>
   <string name="timeBeforeTournamentStarts">Tempo antes de que o torneo comece</string>
@@ -700,7 +710,7 @@ en %3$s</string>
   <string name="analysisShapesHowTo">Pulsa Mays+clic ou fai clic dereito para debuxar círculos e frechas no taboleiro.</string>
   <string name="confirmResignationAndDrawOffers">Confirmar abandono e ofertas de táboas</string>
   <string name="inputMovesWithTheKeyboard">Introducción de movementos co teclado</string>
-  <string name="letOtherPlayersMessageYou">Deizar que outros xogadores te envíen mensaxes</string>
+  <string name="letOtherPlayersMessageYou">Permitir que outros xogadores te envíen mensaxes</string>
   <string name="castleByMovingTheKingTwoSquaresOrOntoTheRook">Método de enroque</string>
   <string name="castleByMovingTwoSquares">Movendo o rei dúas casillas</string>
   <string name="castleByMovingOntoTheRook">Movendo rei ata a torre</string>
@@ -759,7 +769,7 @@ en %3$s</string>
   <string name="usernameSuffixInvalid">O nome de usuarui debe rematar cunha letra ou cun número.</string>
   <string name="usernameCharsInvalid">O nome de usuario só pode conter letras, números, trazos baixos e guións.</string>
   <string name="usernameUnacceptable">Este nome de usuario non é aceptable.</string>
-  <string name="directlySupportLichess">Apoiar directamente a Lichess</string>
+  <string name="directlySupportLichess">Apoiar directamente a Chess-Online</string>
   <string name="playChessInStyle">Xogar ao xadrez con estilo</string>
   <string name="chessBasics">Fundamentos de xadrez</string>
   <string name="coaches">Entrenadores</string>

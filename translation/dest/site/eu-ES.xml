@@ -134,7 +134,7 @@
   <string name="viewInFullSize">Pantaila osoa</string>
   <string name="logOut">Irten</string>
   <string name="signIn">Sartu</string>
-  <string name="newToLichess">Berria Lichess-en?</string>
+  <string name="newToLichess">Berria Chess-Online-en?</string>
   <string name="youNeedAnAccountToDoThat">Kontu bat behar duzu hori egiteko</string>
   <string name="signUp">Izen ematea</string>
   <string name="computersAreNotAllowedToPlay">Xake-programen erabilera debekatuta dago. Mesedez, ez erabili beste jokalari, xake-programa edo datu-baseren laguntzariik. Kontuan izan kontu asko sortzea ere oso gaizki ikusita dagoela; kontu gehieg sortzeak zu kanporatzea ekar dezake.</string>
@@ -211,6 +211,8 @@
   <string name="thisGameIsRated">Partida honek sailkapen-puntuei eragingo die</string>
   <string name="rematch">Errebantxa</string>
   <string name="rematchOfferSent">Errebantxa eskaria bidalita</string>
+  <string name="rematchOfferSentWhite">Zuriak errebantxa eskeintzen du</string>
+  <string name="rematchOfferSentBlack">Beltzak errebantxa eskaintzen du</string>
   <string name="rematchOfferAccepted">Errebantxa eskaria onartuta</string>
   <string name="rematchOfferCanceled">Errebantxa-eskaintza ezeztatu da</string>
   <string name="rematchOfferDeclined">Errebantxa-eskaintzari uko egin dio</string>
@@ -384,6 +386,15 @@
   <string name="winner">Irabazlea</string>
   <string name="standing">Sailkapen-taula</string>
   <string name="createANewTournament">Txapelketa berria sortu</string>
+  <string name="tournamentCalendar">Txapelketa-egutegia</string>
+  <string name="conditionOfEntry">Parte hartzeko baldintza:</string>
+  <string name="advancedSettings">Ezarpen aurreratuak</string>
+  <string name="safeTournamentName">Adeitasunezko izena hauta ezazu.</string>
+  <string name="inappropriateNameWarning">Errespetua galduz gero, zure kontua itxiko dugu.</string>
+  <string name="emptyTournamentName">Ez baduzu betetzen, txapelketak Maisu Handi baten izena hartuko du, ausaz.</string>
+  <string name="recommendNotTouching">Hobe ez ukitu hau.</string>
+  <string name="fewerPlayers">Parte hartzeko balditzak jartzen badituzu, jokalari gutxiago sartuko dira txapelketan.</string>
+  <string name="showAdvancedSettings">Ezarpen aurreratuak</string>
   <string name="join">Sartu</string>
   <string name="withdraw">Txapelketa utzi</string>
   <string name="points">Puntuak</string>
@@ -428,8 +439,8 @@
   <string name="country">Herrialdea</string>
   <string name="preferences">Lehentasunak</string>
   <string name="inlineNotation">Lerroarteko oharrak</string>
-  <string name="watchLichessTV">Lichess TV Ikusi</string>
-  <string name="previouslyOnLichessTV">Aurreko Lichess TV saioak</string>
+  <string name="watchLichessTV">Chess TV Ikusi</string>
+  <string name="previouslyOnLichessTV">Aurreko Chess TV saioak</string>
   <string name="onlinePlayers">Konektatutako jokalariak</string>
   <string name="activeToday">Gaurko aktiboak</string>
   <string name="activePlayers">Jokalari aktiboak</string>
@@ -439,7 +450,7 @@
   <string name="findTheBestMoveForWhite">Zurien jokaldi onena bilatu.</string>
   <string name="findTheBestMoveForBlack">Beltzen jokaldi onena bilatu.</string>
   <string name="toTrackYourProgress">Zure aurrerabidea  ikusteko</string>
-  <string name="trainingSignupExplanation">Lichess-ek  zure mailako puzzleak bilatuko ditu, entrenamendu hobeak lortzeko.</string>
+  <string name="trainingSignupExplanation">Chess-Online-ek  zure mailako puzzleak bilatuko ditu, entrenamendu hobeak lortzeko.</string>
   <string name="puzzleId">Puzzlea %s</string>
   <string name="puzzleOfTheDay">Eguneko puzzlea</string>
   <string name="clickToSolve">Ebazteko klik egin</string>
@@ -451,7 +462,7 @@
   <string name="butYouCanKeepTrying">Baina berriro saia zaitezke.</string>
   <string name="success">Zorionak</string>
   <string name="wasThisPuzzleAnyGood">Puzzle hau gustatu zaizu?</string>
-  <string name="pleaseVotePuzzle">Eman botoa Lichess-i laguntzeko, goranzko zein beheranzko gezia hautatuz:</string>
+  <string name="pleaseVotePuzzle">Eman botoa Chess-Online-i laguntzeko, goranzko zein beheranzko gezia hautatuz:</string>
   <string name="thankYou">Eskerrik asko!</string>
   <string name="ratingX">Sailkapena: %s</string>
   <plurals name="playedXTimes">
@@ -588,7 +599,7 @@
   <string name="clock">Erlojua</string>
   <string name="unauthorizedError">Ez baimendutako sarbidea</string>
   <string name="noInternetConnection">Ez dago internet konexiorik. Offine ere jokatu dezakezu.</string>
-  <string name="connectedToLichess">Lichess.org-era konektatuta</string>
+  <string name="connectedToLichess">live.chess-online.com-era konektatuta</string>
   <string name="signedOut">Deskonektatuta</string>
   <string name="loginSuccessful">Konektatuta</string>
   <string name="playOnTheBoardOffline">Taulan</string>
@@ -656,7 +667,7 @@
   <string name="simulClockHint">Fischer erloju doikuntza. Zenbat eta jokalari gehiagoren aurka jokatua,  are denbora gehiago behar izango duzu</string>
   <string name="simulAddExtraTime">Aldibereko partidetan aritu ahal izateko, agian  denbora gehiago gehitu beharko diozu zure erlojuari</string>
   <string name="simulHostExtraTime">Denbora gehitu erlojuan</string>
-  <string name="lichessTournaments">Lichess txapelketak</string>
+  <string name="lichessTournaments">Chess-Online txapelketak</string>
   <string name="tournamentFAQ">Arena txapelketaren ohiko galderak</string>
   <string name="tournamentOfficial">Ofiziala</string>
   <string name="timeBeforeTournamentStarts">Txapelketa hasteko denbora</string>
@@ -687,7 +698,7 @@
   <string name="weHaveSentYouAnEmailTo">Mezu bat bidali dugu %s helbidera. Egizu klik mezuan zure pasahitza berrizteko.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Izena ematean, gure %s onartzen dituzu.</string>
   <string name="networkLagBetweenYouAndLichess">Sarearen atzerapena lichess-en eta zure artean.</string>
-  <string name="timeToProcessAMoveOnLichessServer">Lichess zerbitzariak jokaldi bat egiteko denbora</string>
+  <string name="timeToProcessAMoveOnLichessServer">Chess-Online zerbitzariak jokaldi bat egiteko denbora</string>
   <string name="downloadAnnotated">Oharrekin jaitsi</string>
   <string name="downloadRaw">Oharrik gabe jaitsi</string>
   <string name="downloadImported">Igo zen moduan jaitsi</string>
@@ -756,7 +767,7 @@
   <string name="usernameSuffixInvalid">Erabiltzaile izena hizki edo zenbaki batekin bukatu behar da.</string>
   <string name="usernameCharsInvalid">Erabiltzaile izenak hizkiak, zenbakiak, azpiko marrak eta gidoiak bakarrik izan ditzake.</string>
   <string name="usernameUnacceptable">Erabiltzaile hori ezin da erabili.</string>
-  <string name="directlySupportLichess">Lichess zuzenean lagundu</string>
+  <string name="directlySupportLichess">Chess-Online zuzenean lagundu</string>
   <string name="playChessInStyle">Xakean estiloarekin jokatu</string>
   <string name="chessBasics">Oinarrizko xakea</string>
   <string name="coaches">Entrenatzaileak</string>

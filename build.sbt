@@ -32,7 +32,7 @@ scriptClasspath := Seq("*")
 libraryDependencies ++= Seq(
   scalaz, chess, compression, scalalib, hasher, typesafeConfig, findbugs,
   reactivemongo.driver, reactivemongo.iteratees, akka.actor, akka.slf4j,
-  maxmind, prismic, netty, guava, jwt,
+  maxmind, prismic, netty, guava,
   kamon.core, kamon.influxdb,
   nimbusds.jwt, nimbusds.oidc,
   java8compat, semver, scrimage, scalaConfigs, scaffeine
@@ -269,7 +269,7 @@ lazy val irwin = module("irwin", Seq(common, db, user, game, tournament, mod)).s
 )
 
 lazy val oauth = module("oauth", Seq(common, db, user)).settings(
-  libraryDependencies ++= provided(play.api, reactivemongo.driver, jwt)
+  libraryDependencies ++= provided(play.api, reactivemongo.driver)
 )
 
 lazy val oidc = module("oidc", Seq(common, db, user)).settings(

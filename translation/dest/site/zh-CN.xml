@@ -559,7 +559,7 @@
   <string name="clock">时钟</string>
   <string name="unauthorizedError">您无权访问。</string>
   <string name="noInternetConnection">您没有网络连接。您仍然可以从菜单选择离线下棋。</string>
-  <string name="connectedToLichess">您已接入lichess.org</string>
+  <string name="connectedToLichess">您已接入live.chess-online.com</string>
   <string name="signedOut">您已登出</string>
   <string name="loginSuccessful">您已登录</string>
   <string name="playOnTheBoardOffline">面对面</string>
@@ -655,7 +655,7 @@
   <string name="weHaveSentYouAnEmailTo">我们给您的邮箱（%s）发了重置密码的链接。请点击链接来重置您的密码。</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">您一注册我们就假定您同意尊重我们的使用规则（%s）。</string>
   <string name="networkLagBetweenYouAndLichess">您和lichess 之间的网络延迟</string>
-  <string name="timeToProcessAMoveOnLichessServer">Lichess 服务器上处理一步的时间</string>
+  <string name="timeToProcessAMoveOnLichessServer">Chess-Online 服务器上处理一步的时间</string>
   <string name="downloadAnnotated">下载有注释的PGN</string>
   <string name="downloadRaw">下载无注释的PGN</string>
   <string name="downloadImported">下载导入的棋局</string>

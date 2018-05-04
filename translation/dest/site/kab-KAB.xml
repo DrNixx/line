@@ -81,7 +81,7 @@
   <string name="viewInFullSize">Ssemɣweṛ</string>
   <string name="logOut">Asenser</string>
   <string name="signIn">Tuqqna</string>
-  <string name="newToLichess">Amaynu ɣef Lichess?</string>
+  <string name="newToLichess">Amaynu ɣef Chess-Online?</string>
   <string name="youNeedAnAccountToDoThat">Ḥwajeḍ amidan n umseqdac</string>
   <string name="signUp">Tiggezt</string>
   <string name="games">Temliliyin</string>
@@ -290,8 +290,8 @@
   <string name="biography">Tameddurt</string>
   <string name="country">Tamurt</string>
   <string name="preferences">Isemnyafen</string>
-  <string name="watchLichessTV">Walli Lichess TV</string>
-  <string name="previouslyOnLichessTV">Uqbel s Lichess TV</string>
+  <string name="watchLichessTV">Walli Chess TV</string>
+  <string name="previouslyOnLichessTV">Uqbel s Chess TV</string>
   <string name="onlinePlayers">Imariren s weskar uqqin</string>
   <string name="activeToday">Urmid ass-a</string>
   <string name="activePlayers">Imariren urmiden</string>
@@ -310,7 +310,7 @@
   <string name="puzzleFailed">Aεewwiq ixeṣren</string>
   <string name="butYouCanKeepTrying">Maca tzemṛed ad tɛawdeḍ tikkelt niḍen.</string>
   <string name="wasThisPuzzleAnyGood">I sɣa azal ugur agi</string>
-  <string name="pleaseVotePuzzle">All Lichess a d-i sileɣ s dɣeṛ s innecaben</string>
+  <string name="pleaseVotePuzzle">All Chess-Online a d-i sileɣ s dɣeṛ s innecaben</string>
   <string name="thankYou">Tanemmirt!</string>
   <string name="ratingX">Abellez : %s</string>
   <plurals name="playedXTimes">

@@ -144,7 +144,7 @@
   <string name="viewInFullSize">Pogled v polni velikosti</string>
   <string name="logOut">Odjava</string>
   <string name="signIn">Prijava</string>
-  <string name="newToLichess">Nov na Lichess-u?</string>
+  <string name="newToLichess">Nov na Chess-Online-u?</string>
   <string name="youNeedAnAccountToDoThat">Za to dejanje potrebuješ račun</string>
   <string name="signUp">Registracija</string>
   <string name="computersAreNotAllowedToPlay">Računalniška pomoč ni dovoljena. Prosimo da med igro ne uporabljate računalniških programov, baz ali pridobivate pomoč ostalih igralcev. Uporabnik, ki ustvarja več zaporednih uporabniških računov bo onemogočen.</string>
@@ -487,8 +487,8 @@
   <string name="country">Država</string>
   <string name="preferences">Nastavitve</string>
   <string name="inlineNotation">Dodatna notacijja</string>
-  <string name="watchLichessTV">Glej Lichess TV</string>
-  <string name="previouslyOnLichessTV">Nazadnje na Lichess TV</string>
+  <string name="watchLichessTV">Glej Chess TV</string>
+  <string name="previouslyOnLichessTV">Nazadnje na Chess TV</string>
   <string name="onlinePlayers">Prijavljeni igralci</string>
   <string name="activeToday">Danes aktivni</string>
   <string name="activePlayers">Aktivni igralci</string>
@@ -498,7 +498,7 @@
   <string name="findTheBestMoveForWhite">Poišči najboljšo potezo za belega</string>
   <string name="findTheBestMoveForBlack">Poišči najboljšo potezo za črnega</string>
   <string name="toTrackYourProgress">Spremljaj svoj napredek:</string>
-  <string name="trainingSignupExplanation">Da bo reševanje uspešnejše, bo Lichess poiskal probleme primerne tvojemu ratingu.</string>
+  <string name="trainingSignupExplanation">Da bo reševanje uspešnejše, bo Chess-Online poiskal probleme primerne tvojemu ratingu.</string>
   <string name="puzzleId">Problem %s</string>
   <string name="puzzleOfTheDay">Problem dneva</string>
   <string name="clickToSolve">Klikni za reševanje</string>
@@ -510,7 +510,7 @@
   <string name="butYouCanKeepTrying">Lahko poskušaš še naprej</string>
   <string name="success">Uspešno</string>
   <string name="wasThisPuzzleAnyGood">Je bil problem zanimiv?</string>
-  <string name="pleaseVotePuzzle">Pomagajte izboljšati Lichess z glasovanjem, uporabite navzgor ali navzdol puščico:</string>
+  <string name="pleaseVotePuzzle">Pomagajte izboljšati Chess-Online z glasovanjem, uporabite navzgor ali navzdol puščico:</string>
   <string name="thankYou">Hvala!</string>
   <string name="ratingX">Rating: %s</string>
   <plurals name="playedXTimes">
@@ -656,7 +656,7 @@ v %3$s</string>
   <string name="clock">Ura</string>
   <string name="unauthorizedError">Dostop ni avtoriziran</string>
   <string name="noInternetConnection">Ni internetne povezave. Še vedno lahko igraš nepovezan preko menija.</string>
-  <string name="connectedToLichess">Povezani ste na lichess.org</string>
+  <string name="connectedToLichess">Povezani ste na live.chess-online.com</string>
   <string name="signedOut">Odjavili ste se</string>
   <string name="loginSuccessful">Prijava uspešna</string>
   <string name="playOnTheBoardOffline">Proti človeku</string>
@@ -726,7 +726,7 @@ v %3$s</string>
   <string name="simulClockHint">Fischerjeva nastavitev ure. Več igralcev kot sprejmeš, več časa potrebuješ.</string>
   <string name="simulAddExtraTime">Morda boš potreboval več časa, kot pomoč pri igranju simultanke.</string>
   <string name="simulHostExtraTime">Gostuj dodaten čas igranja.</string>
-  <string name="lichessTournaments">Lichess turnirji</string>
+  <string name="lichessTournaments">Chess-Online turnirji</string>
   <string name="tournamentFAQ">Turnirji - pogosta vprašanja</string>
   <string name="tournamentOfficial">Uradno</string>
   <string name="timeBeforeTournamentStarts">Čas do začetka turnirja</string>
@@ -830,7 +830,7 @@ v %3$s</string>
   <string name="usernameSuffixInvalid">Uporabniško ime se mora končati s črko ali s številko.</string>
   <string name="usernameCharsInvalid">Uporabniško ime sme vsebovati le črke, številke, podčrtaje in vezaje.</string>
   <string name="usernameUnacceptable">To uporabniško ime ni sprejemljivo.</string>
-  <string name="directlySupportLichess">Direktno pomagaj Lichess-u</string>
+  <string name="directlySupportLichess">Direktno pomagaj Chess-Online-u</string>
   <string name="playChessInStyle">Šahirajte v slogu</string>
   <string name="chessBasics">Šahovske osnove</string>
   <string name="coaches">Trenerji</string>

@@ -87,7 +87,7 @@
   <string name="pieceValue">टुकड़ा मूल्य</string>
   <string name="evaluatePieceStrength">टुकड़ा ताकत का मूल्यांकन करें</string>
   <string name="register">पंजीकृत करें</string>
-  <string name="getAFreeLichessAccount">एक मुफ्त Lichess खाता प्राप्त करें</string>
+  <string name="getAFreeLichessAccount">एक मुफ्त Chess-Online खाता प्राप्त करें</string>
   <string name="practice">अभ्यास</string>
   <string name="learnCommonChessPositions">सामान्य शतरंज की स्थिति जानें</string>
   <string name="puzzles">पहेलियाँ</string>

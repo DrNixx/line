@@ -134,7 +134,7 @@
   <string name="viewInFullSize">Bekijk op volledige grootte</string>
   <string name="logOut">Afmelden</string>
   <string name="signIn">Aanmelden</string>
-  <string name="newToLichess">Nieuw op Lichess?</string>
+  <string name="newToLichess">Nieuw op Chess-Online?</string>
   <string name="youNeedAnAccountToDoThat">Je hebt een account nodig om dat te doen</string>
   <string name="signUp">Registreren</string>
   <string name="computersAreNotAllowedToPlay">Computers en spelers met ondersteuning van schaakengines mogen hier niet spelen. Maak a.u.b. geen gebruik van schaakengines, databases of de hulp van andere spelers terwijl je je partijen speelt.</string>
@@ -211,6 +211,8 @@
   <string name="thisGameIsRated">Deze partij telt mee voor rating</string>
   <string name="rematch">Opnieuw spelen</string>
   <string name="rematchOfferSent">Uitnodiging voor nieuwe partij verstuurd</string>
+  <string name="rematchOfferSentWhite">Wit vraagt revanche</string>
+  <string name="rematchOfferSentBlack">Zwart vraagt revanche</string>
   <string name="rematchOfferAccepted">Uitnodiging voor nieuwe partij geaccepteerd</string>
   <string name="rematchOfferCanceled">Uitnodiging voor nieuwe partij geannuleerd</string>
   <string name="rematchOfferDeclined">Uitnodiging voor nieuwe partij geweigerd</string>
@@ -384,6 +386,15 @@
   <string name="winner">Winnaar</string>
   <string name="standing">Ranglijst</string>
   <string name="createANewTournament">Start een nieuw toernooi</string>
+  <string name="tournamentCalendar">Toernooikalender</string>
+  <string name="conditionOfEntry">Voorwaarde voor deelname:</string>
+  <string name="advancedSettings">Geavanceerde instellingen</string>
+  <string name="safeTournamentName">Kies een zeer veilige naam voor het toernooi.</string>
+  <string name="inappropriateNameWarning">Uw account kan bij het kiezen van een misplaatste naam al gesloten worden.</string>
+  <string name="emptyTournamentName">Laat het veld leeg om het toernooi naar een willekeurige grootmeester te vernoemen.</string>
+  <string name="recommendNotTouching">Wij raden aan om deze niet aan te raken.</string>
+  <string name="fewerPlayers">Als u voorwaarden voor deelname instelt, zullen er minder spelers meedoen.</string>
+  <string name="showAdvancedSettings">Toon uitgebreide instellingen >></string>
   <string name="join">Neem deel</string>
   <string name="withdraw">Trek terug</string>
   <string name="points">Punten</string>
@@ -428,8 +439,8 @@
   <string name="country">Land</string>
   <string name="preferences">Voorkeuren</string>
   <string name="inlineNotation">Geïntegreerde notatie</string>
-  <string name="watchLichessTV">Kijk Lichess TV</string>
-  <string name="previouslyOnLichessTV">Voorheen op Lichess TV</string>
+  <string name="watchLichessTV">Kijk Chess TV</string>
+  <string name="previouslyOnLichessTV">Voorheen op Chess TV</string>
   <string name="onlinePlayers">Online spelers</string>
   <string name="activeToday">Vandaag actief</string>
   <string name="activePlayers">Actieve spelers</string>
@@ -439,7 +450,7 @@
   <string name="findTheBestMoveForWhite">Vind de beste zet voor wit.</string>
   <string name="findTheBestMoveForBlack">Vind de beste zet voor zwart.</string>
   <string name="toTrackYourProgress">Om je vooruitgang te volgen:</string>
-  <string name="trainingSignupExplanation">Lichess zal puzzels verschaffen die overeenkomen met je niveau, wat leidt tot betere trainingssessies.</string>
+  <string name="trainingSignupExplanation">Chess-Online zal puzzels verschaffen die overeenkomen met je niveau, wat leidt tot betere trainingssessies.</string>
   <string name="puzzleId">Puzzel %s</string>
   <string name="puzzleOfTheDay">Puzzel van de dag</string>
   <string name="clickToSolve">Klik om op te lossen</string>
@@ -588,7 +599,7 @@
   <string name="clock">Klok</string>
   <string name="unauthorizedError">Toegang geweigerd</string>
   <string name="noInternetConnection">Geen internetverbinding. U kan nog wel offline spelen vanuit het menu.</string>
-  <string name="connectedToLichess">U bent nu verbonden met lichess.org</string>
+  <string name="connectedToLichess">U bent nu verbonden met live.chess-online.com</string>
   <string name="signedOut">U bent uitgelogd</string>
   <string name="loginSuccessful">Inloggen succesvol</string>
   <string name="playOnTheBoardOffline">Speel offline</string>
@@ -656,7 +667,7 @@
   <string name="simulClockHint">Fischer-speeltempo. Hoe meer tegenstanders er zijn, hoe meer tijd je nodig hebt.</string>
   <string name="simulAddExtraTime">Je mag extra tijd aan je eigen klok toevoegen om beter met de simultaan om te kunnen gaan.</string>
   <string name="simulHostExtraTime">Extra tijd voor de simultaangever</string>
-  <string name="lichessTournaments">Lichess toernooien</string>
+  <string name="lichessTournaments">Chess-Online toernooien</string>
   <string name="tournamentFAQ">Veelgestelde vragen over Arena toernooien</string>
   <string name="tournamentOfficial">Officieel</string>
   <string name="timeBeforeTournamentStarts">Tijd voordat het toernooi start</string>
@@ -686,7 +697,7 @@
   <string name="ifYouDoNotSeeTheEmailCheckOtherPlaces">Als je de email niet ziet, kijk dan op andere plaatsen, zoals je spam of andere mappen.</string>
   <string name="weHaveSentYouAnEmailTo">We hebben een email verstuurd naar %s. Klik op de link in de email om je wachtwoord te resetten.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Door je registratie ben je gebonden aan onze %s.</string>
-  <string name="networkLagBetweenYouAndLichess">Netwerkvertraging tussen u en Lichess</string>
+  <string name="networkLagBetweenYouAndLichess">Netwerkvertraging tussen u en Chess-Online</string>
   <string name="timeToProcessAMoveOnLichessServer">Tijd om een zet te verwerken op de lichess server</string>
   <string name="downloadAnnotated">Download de geannoteerde partij</string>
   <string name="downloadRaw">Download PGN</string>
@@ -756,7 +767,7 @@
   <string name="usernameSuffixInvalid">De gebruikersnaam moet eindigen met een letter of een cijfer.</string>
   <string name="usernameCharsInvalid">De gebruikersnaam mag alleen letters, cijfers, underscores, en koppeltekens bevatten.</string>
   <string name="usernameUnacceptable">Deze gebruikersnaam is niet acceptabel.</string>
-  <string name="directlySupportLichess">Lichess direct ondersteunen</string>
+  <string name="directlySupportLichess">Chess-Online direct ondersteunen</string>
   <string name="playChessInStyle">Speel schaken in stijl</string>
   <string name="chessBasics">Basis schaken</string>
   <string name="coaches">Coaches</string>

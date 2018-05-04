@@ -42,7 +42,7 @@
     <item quantity="one">Saavutas #%1$s koha (parima %2$s%% seas) %3$s mänguga turniiril %4$s</item>
     <item quantity="other">Saavutas #%1$s koha (parima %2$s%% seas) %3$s mänguga turniiril %4$s</item>
   </plurals>
-  <string name="signedUp">Registreerus lehel lichess.org</string>
+  <string name="signedUp">Registreerus lehel live.chess-online.com</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">Liitus %s rühmaga</item>
     <item quantity="other">Liitus %s rühmaga</item>

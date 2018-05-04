@@ -73,7 +73,7 @@
   <string name="viewInFullSize">Sien vol-grootte</string>
   <string name="logOut">Teken uit</string>
   <string name="signIn">Teken in</string>
-  <string name="newToLichess">Nuut by Lichess?</string>
+  <string name="newToLichess">Nuut by Chess-Online?</string>
   <string name="youNeedAnAccountToDoThat">Jy het \'n rekening nodig om dit te doen</string>
   <string name="signUp">Registreer</string>
   <string name="computersAreNotAllowedToPlay">Rekenaars en rekenaargesteunde spelers word nie toegelaat om te speel. Moet asseblief nie die hulp van skaak enjins, databasisse, of uit ander spelers te kry, terwyl die speel van. Let ook daarop dat die maak van verskeie rekeninge is ten sterkste ontmoedig en oormatige multi-rekeningkunde sal lei tot verban.</string>
@@ -295,8 +295,8 @@
   <string name="biography">Biografie</string>
   <string name="country">Land</string>
   <string name="preferences">Voorkeure</string>
-  <string name="watchLichessTV">Kyk Lichess TV</string>
-  <string name="previouslyOnLichessTV">Voorigekeer op Lichess TV</string>
+  <string name="watchLichessTV">Kyk Chess TV</string>
+  <string name="previouslyOnLichessTV">Voorigekeer op Chess TV</string>
   <string name="onlinePlayers">Online Speelers</string>
   <string name="activeToday">Aktief vandag</string>
   <string name="activePlayers">Actiewe spelers</string>
@@ -306,7 +306,7 @@
   <string name="findTheBestMoveForWhite">Vind die beste skuif vir wit.</string>
   <string name="findTheBestMoveForBlack">Vind die beste skuif vir swart</string>
   <string name="toTrackYourProgress">Om jou vordering na te spoor:</string>
-  <string name="trainingSignupExplanation">Lichess sal kopkrappers bied wat jou vermoë pas, wat beter oefensessies maak.</string>
+  <string name="trainingSignupExplanation">Chess-Online sal kopkrappers bied wat jou vermoë pas, wat beter oefensessies maak.</string>
   <string name="puzzleId">Kopkrapper %s</string>
   <string name="puzzleOfTheDay">Kopkrapper van die dag</string>
   <string name="clickToSolve">Kliek om op te los</string>
@@ -441,7 +441,7 @@
   <string name="clock">Skaakklok</string>
   <string name="unauthorizedError">Toegang is verbode</string>
   <string name="noInternetConnection">Geen internet koppeling. Jy kan steeds vanlyn speel van die kieslys.</string>
-  <string name="connectedToLichess">Jy is nou verbind aan lichess.org</string>
+  <string name="connectedToLichess">Jy is nou verbind aan live.chess-online.com</string>
   <string name="signedOut">Jy is uitgeteken</string>
   <string name="loginSuccessful">Jy is nou ingeteken</string>
   <string name="playOnTheBoardOffline">Oor die bord</string>
@@ -504,7 +504,7 @@
   <string name="simulClockHint">Fischer klok opstel. Hoe meer spelers wat jy op te neem, hoe meer tyd jy mag nodig wees.</string>
   <string name="simulAddExtraTime">Jy kan ekstra tyd by jou horlosie te help cope met die simul.</string>
   <string name="simulHostExtraTime">Host ekstra klok tyd</string>
-  <string name="lichessTournaments">Lichess toernooie</string>
+  <string name="lichessTournaments">Chess-Online toernooie</string>
   <string name="tournamentFAQ">Arena toernooi Vrae</string>
   <string name="tournamentOfficial">Amptelik</string>
   <string name="timeBeforeTournamentStarts">Tydsduur tot aanvang van toernooi</string>

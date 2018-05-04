@@ -126,7 +126,7 @@
   <string name="viewInFullSize">Xem ở kích thước đầy đủ</string>
   <string name="logOut">Đăng xuất</string>
   <string name="signIn">Đăng nhập</string>
-  <string name="newToLichess">Mới tham gia Lichess?</string>
+  <string name="newToLichess">Mới tham gia Chess-Online?</string>
   <string name="youNeedAnAccountToDoThat">Bạn cần một tài khoản để làm điều đó</string>
   <string name="signUp">Đăng kí</string>
   <string name="computersAreNotAllowedToPlay">Máy tính và chơi với sự trợ giúp của máy tính không được chấp nhận. Đừng nhờ sự trợ giúp của máy chơi cờ, các dữ liệu, hoặc từ những người chơi khác khi chơi.</string>
@@ -350,7 +350,7 @@
   <string name="biography">Lý lịch</string>
   <string name="country">Quốc gia</string>
   <string name="preferences">Sửa giao diện</string>
-  <string name="watchLichessTV">Xem ti vi Lichess</string>
+  <string name="watchLichessTV">Xem ti vi Chess-Online</string>
   <string name="previouslyOnLichessTV">Kênh trước</string>
   <string name="onlinePlayers">Các kỳ thủ có mặt</string>
   <string name="activeToday">Hoạt động trong ngày</string>
@@ -361,7 +361,7 @@
   <string name="findTheBestMoveForWhite">Tìm nước tối ưu cho Trắng</string>
   <string name="findTheBestMoveForBlack">Tìm nước tối ưu cho Đen</string>
   <string name="toTrackYourProgress">Theo dõi sự tiến bộ của bạn</string>
-  <string name="trainingSignupExplanation">Lichess sẽ cung cấp những câu đố phù hợp với kỹ năng của bạn, tạo nên hiệu quả đào taoh tốt hơn</string>
+  <string name="trainingSignupExplanation">Chess-Online sẽ cung cấp những câu đố phù hợp với kỹ năng của bạn, tạo nên hiệu quả đào taoh tốt hơn</string>
   <string name="puzzleId">Bài số %s</string>
   <string name="puzzleOfTheDay">Câu đố trong ngày</string>
   <string name="clickToSolve">Click để giải</string>
@@ -492,7 +492,7 @@
   <string name="clock">Đồng hồ</string>
   <string name="unauthorizedError">Không được quyền truy cập</string>
   <string name="noInternetConnection">Không có nối mạng. Bạn vẫn có thể chơi ngoại tuyến từ bảng chọn.</string>
-  <string name="connectedToLichess">Bây giờ bạn đã kết nối với lichess.org</string>
+  <string name="connectedToLichess">Bây giờ bạn đã kết nối với live.chess-online.com</string>
   <string name="signedOut">Bạn đã đăng xuất.</string>
   <string name="loginSuccessful">Bây gió bạn đã đăng nhập thành công</string>
   <string name="playOnTheBoardOffline">Chơi ngoại tuyến, trên bàn cờ.</string>
@@ -526,7 +526,7 @@
   </plurals>
   <string name="tpTimeSpentPlaying">Thời gian đã chơi: %s</string>
   <string name="watchGames">Xem các ván đấu</string>
-  <string name="tpTimeSpentOnTV">Thời gian xem Lichess TV: %s</string>
+  <string name="tpTimeSpentOnTV">Thời gian xem Chess TV: %s</string>
   <string name="watch">Xem</string>
   <string name="internationalEvents">Các sự kiện quốc tế</string>
   <string name="videoLibrary">Thư viện video</string>
@@ -554,7 +554,7 @@
   <string name="simulClockHint">Thiết lập Đồng hồ Fischer. Bạn càng chơi với nhiều người thì càng có thể cần nhiều thời gian.</string>
   <string name="simulAddExtraTime">Bạn có thể thêm thời gian cho đồng hồ của bạn để đấu cờ đồng loạt dễ hơn.</string>
   <string name="simulHostExtraTime">Thời gian thêm cho người chủ trì</string>
-  <string name="lichessTournaments">Các giải đấu Lichess</string>
+  <string name="lichessTournaments">Các giải đấu Chess-Online</string>
   <string name="tournamentFAQ">Các câu hỏi thường gặp về đấu trường giải đấu</string>
   <string name="tournamentOfficial">Chính thức</string>
   <string name="timeBeforeTournamentStarts">Thời gian trước khi giải đấu bắt đầu</string>

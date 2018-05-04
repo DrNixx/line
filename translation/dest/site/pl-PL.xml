@@ -144,7 +144,7 @@
   <string name="viewInFullSize">Zobacz w pełnym rozmiarze</string>
   <string name="logOut">Wyloguj</string>
   <string name="signIn">Zaloguj się</string>
-  <string name="newToLichess">Nowy na Lichess?</string>
+  <string name="newToLichess">Nowy na Chess-Online?</string>
   <string name="youNeedAnAccountToDoThat">Musisz mieć konto, aby to zrobić</string>
   <string name="signUp">Zarejestruj się</string>
   <string name="computersAreNotAllowedToPlay">Podczas gry niedozwolone jest korzystanie z pomocy programów szachowych, baz danych oraz pomocy innych graczy. Zakładanie wielu kont jest zabronione i prowadzi do zablokowania użytkownika.</string>
@@ -489,8 +489,8 @@
   <string name="country">Kraj</string>
   <string name="preferences">Ustawienia</string>
   <string name="inlineNotation">Notacja inline</string>
-  <string name="watchLichessTV">Oglądaj Lichess TV</string>
-  <string name="previouslyOnLichessTV">Poprzednio w Lichess TV</string>
+  <string name="watchLichessTV">Oglądaj Chess TV</string>
+  <string name="previouslyOnLichessTV">Poprzednio w Chess TV</string>
   <string name="onlinePlayers">Gracze online</string>
   <string name="activeToday">Aktywni dzisiaj</string>
   <string name="activePlayers">Aktywni gracze</string>
@@ -500,7 +500,7 @@
   <string name="findTheBestMoveForWhite">Znajdź najlepszy ruch dla białych.</string>
   <string name="findTheBestMoveForBlack">Znajdź najlepszy ruch dla czarnych.</string>
   <string name="toTrackYourProgress">Zarejestruj się aby śledzić swoje postępy</string>
-  <string name="trainingSignupExplanation">Lichess będzie dodawał zadania dostosowane do twoich umiejętności.</string>
+  <string name="trainingSignupExplanation">Chess-Online będzie dodawał zadania dostosowane do twoich umiejętności.</string>
   <string name="puzzleId">Zadanie %s</string>
   <string name="puzzleOfTheDay">Zadanie dnia</string>
   <string name="clickToSolve">Kliknij, aby rozwiązać</string>
@@ -657,7 +657,7 @@
   <string name="clock">Zegar</string>
   <string name="unauthorizedError">Brak dostępu.</string>
   <string name="noInternetConnection">Brak połączenia. Możesz jednak wybrać z menu opcję gry offline.</string>
-  <string name="connectedToLichess">Zostałeś połączony z lichess.org</string>
+  <string name="connectedToLichess">Zostałeś połączony z live.chess-online.com</string>
   <string name="signedOut">Wylogowałeś się</string>
   <string name="loginSuccessful">Jesteś zalogowany</string>
   <string name="playOnTheBoardOffline">Graj offline</string>
@@ -727,7 +727,7 @@
   <string name="simulClockHint">Ustawienie zegara Fischera. Przy większej ilości przeciwników możesz potrzebować więcej czasu.</string>
   <string name="simulAddExtraTime">Aby ułatwić sobie rozegranie symultany możesz ustawić dodatkowy czas dla siebie.</string>
   <string name="simulHostExtraTime">Dodatkowy czas dla symultanisty</string>
-  <string name="lichessTournaments">Turnieje Lichess</string>
+  <string name="lichessTournaments">Turnieje Chess-Online</string>
   <string name="tournamentFAQ">Turnieje typu Arena FAQ</string>
   <string name="tournamentOfficial">Oficjalny</string>
   <string name="timeBeforeTournamentStarts">Czas do rozpoczęcia turnieju</string>
@@ -831,7 +831,7 @@
   <string name="usernameSuffixInvalid">Nazwa użytkownika musi kończyć się literą lub liczbą.</string>
   <string name="usernameCharsInvalid">Nazwa użytkownika może zawierać tylko litery, cyfry, znaki podkreślenia i myślniki.</string>
   <string name="usernameUnacceptable">Ta nazwa użytkownika jest niedozwolona.</string>
-  <string name="directlySupportLichess">Wspomóż Lichess</string>
+  <string name="directlySupportLichess">Wspomóż Chess-Online</string>
   <string name="playChessInStyle">Graj w szachy z klasą</string>
   <string name="chessBasics">Podstawy gry</string>
   <string name="coaches">Trenerzy</string>

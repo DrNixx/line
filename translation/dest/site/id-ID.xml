@@ -129,7 +129,7 @@
   <string name="viewInFullSize">Lihat dalam ukuran penuh</string>
   <string name="logOut">Keluar</string>
   <string name="signIn">Masuk</string>
-  <string name="newToLichess">Baru di Lichess?</string>
+  <string name="newToLichess">Baru di Chess-Online?</string>
   <string name="youNeedAnAccountToDoThat">Anda perlu mendaftar untuk melakukannya</string>
   <string name="signUp">Daftar</string>
   <string name="computersAreNotAllowedToPlay">Komputer maupun pemain yang menggunakan bantuan komputer dilarang bermain. Mohon untuk tidak menggunakan bantuan dari program komputer, database, maupun pemain lain ketika bermain. Juga menggunakan beberapa akun bersamaan sangat dilarang dan akan mengakibatkan akun anda di-BANNED!</string>
@@ -403,8 +403,8 @@
   <string name="country">Negara</string>
   <string name="preferences">Preferensi</string>
   <string name="inlineNotation">Notasi inline</string>
-  <string name="watchLichessTV">Nonton Lichess TV</string>
-  <string name="previouslyOnLichessTV">Sebelumnya di Lichess TV</string>
+  <string name="watchLichessTV">Nonton Chess TV</string>
+  <string name="previouslyOnLichessTV">Sebelumnya di Chess TV</string>
   <string name="onlinePlayers">Pemain online</string>
   <string name="activeToday">Aktif hari ini</string>
   <string name="activePlayers">Pemain aktif</string>
@@ -414,7 +414,7 @@
   <string name="findTheBestMoveForWhite">Temukan langkah terbaik untuk putih.</string>
   <string name="findTheBestMoveForBlack">Temukan langkah terbaik untuk hitam.</string>
   <string name="toTrackYourProgress">Lihat perkembangan anda:</string>
-  <string name="trainingSignupExplanation">Lichess akan menyediakan taktik yang sesuai dengan kemampuan anda, untuk sesi latihan yang lebih baik.</string>
+  <string name="trainingSignupExplanation">Chess-Online akan menyediakan taktik yang sesuai dengan kemampuan anda, untuk sesi latihan yang lebih baik.</string>
   <string name="puzzleId">Taktik nomer %s</string>
   <string name="puzzleOfTheDay">Taktik hari ini</string>
   <string name="clickToSolve">Klik untuk menyelesaikan</string>
@@ -560,7 +560,7 @@ masuk %3$s</string>
   <string name="clock">Jam</string>
   <string name="unauthorizedError">Akses tidak sah.</string>
   <string name="noInternetConnection">Tak ada koneksi internet. Anda masih bisa bermain offline dari menu.</string>
-  <string name="connectedToLichess">Anda telah terhubung ke lichess.org</string>
+  <string name="connectedToLichess">Anda telah terhubung ke live.chess-online.com</string>
   <string name="signedOut">Anda baru saja keluar</string>
   <string name="loginSuccessful">Anda sudah masuk</string>
   <string name="playOnTheBoardOffline">Di atas papan</string>
@@ -626,7 +626,7 @@ masuk %3$s</string>
   <string name="simulClockHint">Aturan Jam Fischer: Semakin banyak peserta yang ikut, semakin banyak waktu diperlukan.</string>
   <string name="simulAddExtraTime">Anda bisa menambah waktu pada jam anda untuk membantu simultan anda</string>
   <string name="simulHostExtraTime">Penyedia waktu tambahan</string>
-  <string name="lichessTournaments">Turnamen Lichess</string>
+  <string name="lichessTournaments">Turnamen Chess-Online</string>
   <string name="tournamentFAQ">Arena Turnamen FAQ</string>
   <string name="tournamentOfficial">Resmi</string>
   <string name="timeBeforeTournamentStarts">Waktu sebelum turnamen dimulai</string>
@@ -721,7 +721,7 @@ masuk %3$s</string>
   <string name="embedInYourWebsite">Salin dalam website Anda</string>
   <string name="usernameAlreadyUsed">Nama pengguna ini sudah digunakan, coba yang lain.</string>
   <string name="usernameUnacceptable">Nama pengguna ini tidak dapat diterima.</string>
-  <string name="directlySupportLichess">Mendukung Lichess secara langsung</string>
+  <string name="directlySupportLichess">Mendukung Chess-Online secara langsung</string>
   <string name="playChessInStyle">Bermain catur dengan gaya</string>
   <string name="chessBasics">Dasar-dasar catur</string>
   <string name="coaches">Pembina</string>

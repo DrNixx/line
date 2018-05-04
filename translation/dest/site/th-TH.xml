@@ -129,7 +129,7 @@
   <string name="viewInFullSize">ดูแบบเต็มขนาด</string>
   <string name="logOut">ลงชื่อออก</string>
   <string name="signIn">ลงชื่อเข้า</string>
-  <string name="newToLichess">มา Lichess ครั้งแรก?</string>
+  <string name="newToLichess">มา Chess-Online ครั้งแรก?</string>
   <string name="youNeedAnAccountToDoThat">คุณต้องมีบัญชีผู้ใช้เพื่อทำสิ่งนั้น</string>
   <string name="signUp">ลงทะเบียน</string>
   <string name="computersAreNotAllowedToPlay">ผู้เล่นที่เป็นคอมพิวเตอร์หรือใช้คอมพิวเตอร์ช่วย จะไม่ได้รับอนุญาตให้เล่น  โปรดอย่าใช้การช่วยเหลือจากตัวช่วยเล่นหมากรุก, ฐานข้อมูล หรือบุคคลอื่น ในขณะเล่น</string>
@@ -404,8 +404,8 @@
   <string name="country">ประเทศ</string>
   <string name="preferences">การตั้งค่า</string>
   <string name="inlineNotation">สัญกรณ์ในบรรทัด</string>
-  <string name="watchLichessTV">ดู Lichess TV</string>
-  <string name="previouslyOnLichessTV">Lichess TV ก่อนหน้า</string>
+  <string name="watchLichessTV">ดู Chess TV</string>
+  <string name="previouslyOnLichessTV">Chess TV ก่อนหน้า</string>
   <string name="onlinePlayers">ผู้เล่นออนไลน์</string>
   <string name="activeToday">ขยันในวันนี้</string>
   <string name="activePlayers">ผู้เล่นที่ขยัน</string>
@@ -415,7 +415,7 @@
   <string name="findTheBestMoveForWhite">หาการเดินที่ดีที่สุดสำหรับฝ่ายขาว</string>
   <string name="findTheBestMoveForBlack">หาการเดินที่ดีที่สุดสำหรับฝ่ายดำ</string>
   <string name="toTrackYourProgress">เพื่อติดตามความก้าวหน้าของคุณ:</string>
-  <string name="trainingSignupExplanation">Lichess จะสรรหาปริศนาที่เหมาะสมกับความสามารถของคุณ, เพื่อสร้างโจทย์ฝึกที่ดียิ่งขึ้น</string>
+  <string name="trainingSignupExplanation">Chess-Online จะสรรหาปริศนาที่เหมาะสมกับความสามารถของคุณ, เพื่อสร้างโจทย์ฝึกที่ดียิ่งขึ้น</string>
   <string name="puzzleId">ปริศนา %s</string>
   <string name="puzzleOfTheDay">ปริศนาประจำวัน</string>
   <string name="clickToSolve">คลิกเพื่อแก้ปริศนา</string>
@@ -561,7 +561,7 @@
   <string name="clock">นาฬิกา</string>
   <string name="unauthorizedError">สิทธิ์เข้าถึงยังไม่ถูกต้อง</string>
   <string name="noInternetConnection">ไม่มีการเชื่อมต่ออินเตอร์เน็ต แต่คุณสามารถเล่นออฟไลน์ได้จากเมนู</string>
-  <string name="connectedToLichess">ขณะนี้คุณเชื่อมต่ออยู่กับ lichess.org</string>
+  <string name="connectedToLichess">ขณะนี้คุณเชื่อมต่ออยู่กับ live.chess-online.com</string>
   <string name="signedOut">คุณได้ลงชื่อออกแล้ว</string>
   <string name="loginSuccessful">ตอนนี้คุณลงชื่อเข้าแล้ว</string>
   <string name="playOnTheBoardOffline">เล่นกระดานเดียวกัน</string>
@@ -628,7 +628,7 @@
   <string name="simulClockHint">การตั้งนาฬิกาฟิสเชอร์ ยิ่งคุณเล่นกับผู้เล่นหลายคน คุณยิ่งต้องการเวลามากขึ้น</string>
   <string name="simulAddExtraTime">คุณอาจบวกเวลาพิเศษให้นาฬิกาของคุณ เพื่อช่วยคุณรับมือกับไซมัล</string>
   <string name="simulHostExtraTime">เวลานาฬิกาพิเศษโฮสต์</string>
-  <string name="lichessTournaments">ทัวร์นาเมนต์ Lichess</string>
+  <string name="lichessTournaments">ทัวร์นาเมนต์ Chess-Online</string>
   <string name="tournamentFAQ">ถามตอบสนามทัวร์นาเมนต์</string>
   <string name="tournamentOfficial">เป็นทางการ</string>
   <string name="timeBeforeTournamentStarts">เวลาก่อนทัวร์นาเมนต์จะเริ่ม</string>
@@ -726,7 +726,7 @@
   <string name="usernameSuffixInvalid">ชื่อผู้ใช้ที่ต้องลงท้ายด้วยตัวอักษรหรือตัวเลข</string>
   <string name="usernameCharsInvalid">ชื่อผู้ใช้ประกอบด้วยตัวอักษร, ตัวเลข, ขีดล่าง และเครื่องหมายขีด เท่านั้น</string>
   <string name="usernameUnacceptable">ไม่ยอมรับชื่อผู้ใช้นี้</string>
-  <string name="directlySupportLichess">สนับสนุน Lichess โดยตรง</string>
+  <string name="directlySupportLichess">สนับสนุน Chess-Online โดยตรง</string>
   <string name="playChessInStyle">เล่นหมากรุกแบบมีสไตล์</string>
   <string name="chessBasics">พื้นฐานหมากรุก</string>
   <string name="coaches">ผู้ฝึกสอน</string>

@@ -429,8 +429,8 @@
   <string name="country">দেশ</string>
   <string name="preferences">পছন্দসমূহ</string>
   <string name="inlineNotation">রেখা চিহ্ন</string>
-  <string name="watchLichessTV">Lichess TV দেখুন</string>
-  <string name="previouslyOnLichessTV">এর আগে Lichess TV- তে যা হয়েছে</string>
+  <string name="watchLichessTV">Chess TV দেখুন</string>
+  <string name="previouslyOnLichessTV">এর আগে Chess TV- তে যা হয়েছে</string>
   <string name="onlinePlayers">যে সমস্ত  খেলোয়ার অনলাইন আছে</string>
   <string name="activeToday">যারা আজকে সক্রিয় রয়েছে</string>
   <string name="activePlayers">সক্রিয় খেলোয়াড়গণ</string>
@@ -440,7 +440,7 @@
   <string name="findTheBestMoveForWhite">সাদার জন্য সবচেয়ে ভালো চাল খোঁজার চেষ্টা করুন</string>
   <string name="findTheBestMoveForBlack">কালোর জন্য সবচেয়ে ভালো চাল খোঁজার চেষ্টা করুন</string>
   <string name="toTrackYourProgress">আপনার উন্নতির পরিসংখ্যান দেখুন</string>
-  <string name="trainingSignupExplanation">Lichess আপনার সাম্যর্থ অনুসারে  ধাঁধা দেবে যাতে আপনার প্রশিক্ষণ ভালো ভাবে হয়</string>
+  <string name="trainingSignupExplanation">Chess-Online আপনার সাম্যর্থ অনুসারে  ধাঁধা দেবে যাতে আপনার প্রশিক্ষণ ভালো ভাবে হয়</string>
   <string name="puzzleId">ধাঁধা  %s</string>
   <string name="puzzleOfTheDay">আজকের দিনের সেরা ধাঁধা</string>
   <string name="clickToSolve">সমাধান করার জন্য ক্লিক করুন</string>
@@ -590,7 +590,7 @@
   <string name="clock">ঘড়ি</string>
   <string name="unauthorizedError">অধিগমন অননুমোদিত করা হয়েছে.</string>
   <string name="noInternetConnection">ইন্টারনেট সংযোগ নেই. অবশ্যই আপনি ইন্টারনেট সংযোগ ছাড়া মেনু থেকে খেলতে পারবেন.</string>
-  <string name="connectedToLichess">এখন আপনি সংযুক্ত হয়েছেন lichess.org</string>
+  <string name="connectedToLichess">এখন আপনি সংযুক্ত হয়েছেন live.chess-online.com</string>
   <string name="signedOut">আপনি সাইন আউট হয়েছেন</string>
   <string name="loginSuccessful">আপনি এখন সাইন ইন হয়েছেন</string>
   <string name="playOnTheBoardOffline">বোর্ডের উপরে</string>

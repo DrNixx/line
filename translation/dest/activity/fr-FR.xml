@@ -55,7 +55,7 @@
     <item quantity="one">Classé #%1$s (pourcentage: %2$s%%) avec %3$s partie en %4$s</item>
     <item quantity="other">Classé #%1$s (pourcentage: %2$s%%) avec %3$s parties en %4$s</item>
   </plurals>
-  <string name="signedUp">Inscription à lichess.org</string>
+  <string name="signedUp">Inscription à live.chess-online.com</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">A rejoint %s équipe</item>
     <item quantity="other">A rejoint %s équipes</item>

@@ -14,7 +14,7 @@
   <string name="toggleSound">Activa/Desactiva el so</string>
   <string name="chat">Xat</string>
   <string name="resign">Rendir-se</string>
-  <string name="checkmate">Has guanyat!</string>
+  <string name="checkmate">Escac i mat</string>
   <string name="stalemate">Empat</string>
   <string name="white">Blanques</string>
   <string name="black">Negres</string>
@@ -379,8 +379,8 @@
   <string name="biography">Biografia</string>
   <string name="country">País</string>
   <string name="preferences">Preferències</string>
-  <string name="watchLichessTV">Mira Lichess TV</string>
-  <string name="previouslyOnLichessTV">Prèviament a Lichess TV</string>
+  <string name="watchLichessTV">Mira Chess TV</string>
+  <string name="previouslyOnLichessTV">Prèviament a Chess TV</string>
   <string name="onlinePlayers">Jugadors connectats</string>
   <string name="activeToday">Actius avui</string>
   <string name="activePlayers">Jugadors actius</string>
@@ -390,7 +390,7 @@
   <string name="findTheBestMoveForWhite">Troba el millor moviment per a les blanques</string>
   <string name="findTheBestMoveForBlack">Troba el millor moviment per a les negres</string>
   <string name="toTrackYourProgress">Per seguir el vostre progrés:</string>
-  <string name="trainingSignupExplanation">Lichess us proporcionarà problemes adequats al vostre nivell, de manera que les sessions d\'entrenament seran millors.</string>
+  <string name="trainingSignupExplanation">Chess-Online us proporcionarà problemes adequats al vostre nivell, de manera que les sessions d\'entrenament seran millors.</string>
   <string name="puzzleId">Problema %s</string>
   <string name="puzzleOfTheDay">Problema del dia</string>
   <string name="clickToSolve">Clica per a resoldre</string>
@@ -538,7 +538,7 @@ en %3$s</string>
   <string name="clock">Rellotge</string>
   <string name="unauthorizedError">Accés no autoritzat.</string>
   <string name="noInternetConnection">Sense connexió a internet. Pots seguir jugar offline des del menú.</string>
-  <string name="connectedToLichess">Ara estàs connectat a lichess.org</string>
+  <string name="connectedToLichess">Ara estàs connectat a live.chess-online.com</string>
   <string name="signedOut">Has tancat la sessió</string>
   <string name="loginSuccessful">Ara ja estàs registrat</string>
   <string name="playOnTheBoardOffline">Juga offline, sobre el tauler</string>
@@ -605,7 +605,7 @@ en %3$s</string>
   <string name="simulClockHint">Sistema de Rellotge Fischer. Com més oponents tinguis, més temps et pot caldre.</string>
   <string name="simulAddExtraTime">Pots afegir temps extra al rellotge per ajudar-te amb les simultànies.</string>
   <string name="simulHostExtraTime">Temps extra per a l\'amfitrió</string>
-  <string name="lichessTournaments">Tornejos de Lichess</string>
+  <string name="lichessTournaments">Tornejos de Chess-Online</string>
   <string name="tournamentFAQ">Torneig Arena: Preguntes Més Freqüents</string>
   <string name="tournamentOfficial">Oficial</string>
   <string name="timeBeforeTournamentStarts">Temps per a què comenci el torneig</string>

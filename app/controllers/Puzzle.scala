@@ -103,7 +103,7 @@ object Puzzle extends LilaController {
           val result = Result(resultInt == 1)
           ctx.me match {
             case Some(me) => for {
-              (round, mode) <- env.finisher(puzzle, me, result)
+              (round, mode) <- env.finisher(puzzle, me, result, mobile = true)
               me2 <- mode.rated.fold(UserRepo byId me.id map (_ | me), fuccess(me))
               infos <- env userInfos me2
               voted <- ctx.me.?? { env.api.vote.value(puzzle.id, _) }
@@ -137,7 +137,12 @@ object Puzzle extends LilaController {
           err => fuccess(BadRequest(errorsAsJson(err))),
           resultInt => ctx.me match {
             case Some(me) => for {
-              (round, mode) <- env.finisher(puzzle, me, Result(resultInt == 1))
+              (round, mode) <- env.finisher(
+                puzzle = puzzle,
+                user = me,
+                result = Result(resultInt == 1),
+                mobile = lila.api.Mobile.Api.requested(ctx.req)
+              )
               me2 <- mode.rated.fold(UserRepo byId me.id map (_ | me), fuccess(me))
               infos <- env userInfos me2
               voted <- ctx.me.?? { env.api.vote.value(puzzle.id, _) }
@@ -184,7 +189,7 @@ object Puzzle extends LilaController {
       Env.game.recentGoodGameActor ? true mapTo manifest[Option[String]] flatMap {
         _ ?? lila.game.GameRepo.gameWithInitialFen flatMap {
           case Some((game, initialFen)) =>
-            Env.api.pgnDump(game, initialFen.map(_.value), PgnDump.WithFlags(clocks = false)) map { pgn =>
+            Env.api.pgnDump(game, initialFen.map(_.value), analysis = none, PgnDump.WithFlags(clocks = false)) map { pgn =>
               Ok(pgn.render)
             }
           case _ =>
@@ -192,7 +197,7 @@ object Puzzle extends LilaController {
             lila.game.GameRepo.findRandomFinished(1000) flatMap {
               _ ?? { game =>
                 lila.game.GameRepo.initialFen(game) flatMap { fen =>
-                  Env.api.pgnDump(game, fen, PgnDump.WithFlags(clocks = false)) map { pgn =>
+                  Env.api.pgnDump(game, fen, analysis = none, PgnDump.WithFlags(clocks = false)) map { pgn =>
                     Ok(pgn.render)
                   }
                 }
@@ -234,7 +239,13 @@ object Puzzle extends LilaController {
       err => BadRequest(err.toString).fuccess,
       data => negotiate(
         html = notFound,
-        api = _ => env.batch.solve(me, data)
+        api = _ => for {
+          _ <- env.batch.solve(me, data)
+          me2 <- UserRepo byId me.id map (_ | me)
+          infos <- env userInfos me2
+        } yield Ok(Json.obj(
+          "user" -> lila.puzzle.JsonView.infos(false)(infos)
+        ))
       )
     )
   }

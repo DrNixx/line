@@ -95,7 +95,7 @@
   <string name="viewInFullSize">Skoða í fullri mynd</string>
   <string name="logOut">Skrá út</string>
   <string name="signIn">Skrá inn</string>
-  <string name="newToLichess">Nýr á Lichess?</string>
+  <string name="newToLichess">Nýr á Chess-Online?</string>
   <string name="youNeedAnAccountToDoThat">Þú þarft aðgang til að geta þetta</string>
   <string name="signUp">Sækja um</string>
   <string name="computersAreNotAllowedToPlay">Skákforrit eða skákmenn sem nota aðstoð skákforrita mega ekki tefla. Vinsamlegast ekki fá hjá frá tölvuforritum, gagnagrunnum eða öðrum spilurum meðan þú teflir</string>
@@ -336,7 +336,7 @@
   <string name="findTheBestMoveForWhite">Finndu besta leikinn fyrir hvítan.</string>
   <string name="findTheBestMoveForBlack">Finndu besta leikinn fyrir svartan</string>
   <string name="toTrackYourProgress">Til að fylgjast með bætingu:</string>
-  <string name="trainingSignupExplanation">Lichess lætur yður fá þrautir sem hæfa getu yðar sem gerir þjálfunina betri</string>
+  <string name="trainingSignupExplanation">Chess-Online lætur yður fá þrautir sem hæfa getu yðar sem gerir þjálfunina betri</string>
   <string name="puzzleId">Þraut %s</string>
   <string name="puzzleOfTheDay">Þraut dagsins</string>
   <string name="clickToSolve">Smelltu til að leysa</string>
@@ -473,7 +473,7 @@
   <string name="clock">Tími</string>
   <string name="unauthorizedError">Aðgangur óheimill</string>
   <string name="noInternetConnection">Engin tenging. Þú getur enn spilað ótengdur.</string>
-  <string name="connectedToLichess">Þú ert tengd(ur) við lichess.org</string>
+  <string name="connectedToLichess">Þú ert tengd(ur) við live.chess-online.com</string>
   <string name="signedOut">Þú ert útskráður</string>
   <string name="loginSuccessful">Þú ert innskráður</string>
   <string name="playOnTheBoardOffline">Yfir borðið</string>
@@ -537,7 +537,7 @@
   <string name="simulClockHint">Uppsetning á Fischer-klukku. Því fleiri andstæðinga sem þú teflir við, því meiri tíma gætirðu þurft.</string>
   <string name="simulAddExtraTime">Þú getur bætt við tíma til að hjálpa þér að ráða við hópskákina.</string>
   <string name="simulHostExtraTime">Aukatími á klukku þess sem hýsir.</string>
-  <string name="lichessTournaments">Lichess mót</string>
+  <string name="lichessTournaments">Chess-Online mót</string>
   <string name="tournamentFAQ">Leikvangsmót - Algengar spurningar</string>
   <string name="tournamentOfficial">Opinbert</string>
   <string name="timeBeforeTournamentStarts">Tími áður en mót hefst</string>

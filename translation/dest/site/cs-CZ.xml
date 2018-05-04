@@ -144,7 +144,7 @@
   <string name="viewInFullSize">Zobrazit v plné velikosti</string>
   <string name="logOut">Odhlásit se</string>
   <string name="signIn">Přihlásit se</string>
-  <string name="newToLichess">Jste na Lichess nový?</string>
+  <string name="newToLichess">Jste na Chess-Online nový?</string>
   <string name="youNeedAnAccountToDoThat">Pro následující akci je vyžadován účet</string>
   <string name="signUp">Registrace</string>
   <string name="computersAreNotAllowedToPlay">Počítačová asistence není během hraní povolena. Nepoužívejte během hraní šachové motory, databáze nebo nápovědu jiných hráčů.</string>
@@ -229,6 +229,8 @@
   <string name="thisGameIsRated">Tato hra se započítává do hodnocení</string>
   <string name="rematch">Odveta</string>
   <string name="rematchOfferSent">Nabídka odvety byla odeslána</string>
+  <string name="rematchOfferSentWhite">Bílý nabízí odvetu</string>
+  <string name="rematchOfferSentBlack">Černý nabízí odvetu</string>
   <string name="rematchOfferAccepted">Nabídka odvety byla přijata</string>
   <string name="rematchOfferCanceled">Nabídka odvety byla zrušena</string>
   <string name="rematchOfferDeclined">Nabídka odvety byla odmítnuta</string>
@@ -487,8 +489,8 @@
   <string name="country">Země</string>
   <string name="preferences">Předvolby</string>
   <string name="inlineNotation">Notace v řádcích</string>
-  <string name="watchLichessTV">Sledujte Lichess TV</string>
-  <string name="previouslyOnLichessTV">Dříve na Lichess TV</string>
+  <string name="watchLichessTV">Sledujte Chess TV</string>
+  <string name="previouslyOnLichessTV">Dříve na Chess TV</string>
   <string name="onlinePlayers">Hráči online</string>
   <string name="activeToday">Aktivní dnes</string>
   <string name="activePlayers">Aktivní hráči</string>
@@ -498,7 +500,7 @@
   <string name="findTheBestMoveForWhite">Najděte nejlepší tah bílého.</string>
   <string name="findTheBestMoveForBlack">Najděte nejlepší tah černého.</string>
   <string name="toTrackYourProgress">Pro sledování Vašeho pokroku:</string>
-  <string name="trainingSignupExplanation">Pro lepší trénink Vám Lichess vybere úlohy odpovídající Vašim schopnostem.</string>
+  <string name="trainingSignupExplanation">Pro lepší trénink Vám Chess-Online vybere úlohy odpovídající Vašim schopnostem.</string>
   <string name="puzzleId">Úloha %s</string>
   <string name="puzzleOfTheDay">Úloha dne</string>
   <string name="clickToSolve">Přejít k řešení</string>
@@ -510,7 +512,7 @@
   <string name="butYouCanKeepTrying">Ale můžete to zkoušet znovu.</string>
   <string name="success">Úspěch</string>
   <string name="wasThisPuzzleAnyGood">Líbila se Vám tato úloha?</string>
-  <string name="pleaseVotePuzzle">Pomozte zlepšit Lichess díky hlasování, pomocí šipek nahoru a dolů:</string>
+  <string name="pleaseVotePuzzle">Pomozte zlepšit Chess-Online díky hlasování, pomocí šipek nahoru a dolů:</string>
   <string name="thankYou">Děkujeme!</string>
   <string name="ratingX">Rating: %s</string>
   <plurals name="playedXTimes">
@@ -656,7 +658,7 @@ v %3$s</string>
   <string name="clock">Čas</string>
   <string name="unauthorizedError">Přístup není autorizovaný.</string>
   <string name="noInternetConnection">Bez internetového připojení. Je možné hrát offline z menu.</string>
-  <string name="connectedToLichess">Nyní jste připojeni do lichess.org</string>
+  <string name="connectedToLichess">Nyní jste připojeni do live.chess-online.com</string>
   <string name="signedOut">Byli jste odhlášeni.</string>
   <string name="loginSuccessful">Přihlášení úspěšné</string>
   <string name="playOnTheBoardOffline">Hrej offline, na šachovnici počítače.</string>
@@ -726,7 +728,7 @@ v %3$s</string>
   <string name="simulClockHint">Nastavení Fisherových hodin. Čím víc hráčů přijmete, tím víc času budete potřebovat.</string>
   <string name="simulAddExtraTime">Můžete si přidat více času, abyste  tu simultánku lépe zvládli.</string>
   <string name="simulHostExtraTime">Hostův bonusový čas</string>
-  <string name="lichessTournaments">Lichess turnaje</string>
+  <string name="lichessTournaments">Chess-Online turnaje</string>
   <string name="tournamentFAQ">Arena turnaj - často kladené otázky</string>
   <string name="tournamentOfficial">oficiální</string>
   <string name="timeBeforeTournamentStarts">Čas do začátku turnaje</string>
@@ -780,7 +782,7 @@ v %3$s</string>
   <string name="youHaveAlreadyRegisteredTheEmail">Již máte zaregistrován email: %s</string>
   <string name="kidMode">Dětský režim</string>
   <string name="kidModeExplanation">To je pro bezpečnost. V dětském režimu je jakákoli komunikace zablokována. Zapněte to pro děti a studenty, pro ochranu před ostatními na Internetu.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">Když je zapnutý dětský režim, tak se u loga Lichess objeví ikona %s. Podle toho poznáte, je je Vaše dítě v bezpečí.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">Když je zapnutý dětský režim, tak se u loga Chess-Online objeví ikona %s. Podle toho poznáte, je je Vaše dítě v bezpečí.</string>
   <string name="enableKidMode">Povolit dětský režim</string>
   <string name="disableKidMode">Vypnout dětský režim</string>
   <string name="security">Zabezpečení</string>
@@ -830,7 +832,7 @@ v %3$s</string>
   <string name="usernameSuffixInvalid">Uživatelské jméno musí končit písmenem nebo číslem.</string>
   <string name="usernameCharsInvalid">Uživatelské jméno musí obsahovat pouze písmena, číslice, podtržítka a pomlčky.</string>
   <string name="usernameUnacceptable">Toto uživatelské jméno není přijatelné.</string>
-  <string name="directlySupportLichess">Podpořte Lichess přímo</string>
+  <string name="directlySupportLichess">Podpořte Chess-Online přímo</string>
   <string name="playChessInStyle">Hrajte šachy stylově</string>
   <string name="chessBasics">Základy šachu</string>
   <string name="coaches">Trenéři</string>

@@ -1,11 +1,11 @@
-var tournamentId = 'GToVqkC9';
-var text = 'With a prize found of $1000!';
+var tournamentId = 'qkdW41M2';
+var text = 'With a prize pool of $3200!';
 
 var userIds = db.user4.distinct('_id', {
   enabled: true,
   title: {
     $exists: true,
-    $ne: 'LM'
+    $nin: ['LM', 'BOT']
   }
 });
 'thibault arex'.split(' ').forEach(u => userIds.push(u));

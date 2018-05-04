@@ -67,7 +67,7 @@
   <string name="viewInFullSize">Alehibiazo</string>
   <string name="logOut">Mivoaha</string>
   <string name="signIn">Midira</string>
-  <string name="newToLichess">Vaovao ho anao Lichess?</string>
+  <string name="newToLichess">Vaovao ho anao Chess-Online?</string>
   <string name="youNeedAnAccountToDoThat">Mila kaonty ianao mba hanaovana an\'izay</string>
   <string name="signUp">Mamorona kaonty</string>
   <string name="games">Lalao</string>
@@ -274,8 +274,8 @@
   <string name="biography">Biographie</string>
   <string name="country">Firenena</string>
   <string name="preferences">Preferences</string>
-  <string name="watchLichessTV">Mijereva Lichess TV</string>
-  <string name="previouslyOnLichessTV">Teto amin\'ny Lichess TV</string>
+  <string name="watchLichessTV">Mijereva Chess TV</string>
+  <string name="previouslyOnLichessTV">Teto amin\'ny Chess TV</string>
   <string name="onlinePlayers">Ny mpilalao connectés</string>
   <string name="activeToday">Mpifaninana nilalao be indrindra androany</string>
   <string name="activePlayers">Mpifaninana nilalao be indrindra</string>

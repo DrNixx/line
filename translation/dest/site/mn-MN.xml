@@ -558,7 +558,7 @@
   <string name="clock">Цаг</string>
   <string name="unauthorizedError">Та нэвтрэх эрхгүй байна.</string>
   <string name="noInternetConnection">Та интернэт холболтгүй байна. Хэдий тийм ч та интернетийн орчингүй горимоор шатар тоглох боломжтой.</string>
-  <string name="connectedToLichess">Та lichess.org хуудаст холбогдлоо</string>
+  <string name="connectedToLichess">Та live.chess-online.com хуудаст холбогдлоо</string>
   <string name="signedOut">Та бүртгэлээсээ гарсан байна</string>
   <string name="loginSuccessful">Та бүртгэгдэн орлоо</string>
   <string name="playOnTheBoardOffline">Нүүр тулсан өрөг</string>

@@ -64,7 +64,7 @@
   <string name="viewInFullSize">Edrych yn maint llawn</string>
   <string name="logOut">Allgofnodi</string>
   <string name="signIn">Mewngofnodi</string>
-  <string name="newToLichess">Heb gofrestru ar Lichess?</string>
+  <string name="newToLichess">Heb gofrestru ar Chess-Online?</string>
   <string name="youNeedAnAccountToDoThat">Rhaid ichi gofrestru i wneud hynny</string>
   <string name="signUp">Cofrestru</string>
   <string name="computersAreNotAllowedToPlay">Ni chanateir chwarae gyda help cyfrifiaduron. Peidiwch â chael help gan injan wyddbwyll, cronfeydd data neu chwaraewyr eraill wrth chwarae. Cofiwch fod cofrestru mwy nag unwaith yn erbyn y rheolau a gall chwaraewr wedi\'i gofrestru llawergwaith gael ei ysgymuno.</string>
@@ -240,7 +240,7 @@
   <string name="country">Gwlad</string>
   <string name="preferences">Hoffterau</string>
   <string name="watchLichessTV">Gwylio ar lichess TV</string>
-  <string name="previouslyOnLichessTV">Ar Lichess TV yn barod</string>
+  <string name="previouslyOnLichessTV">Ar Chess TV yn barod</string>
   <string name="onlinePlayers">Chwarewyr ar-lein</string>
   <string name="activeToday">Gweithredol heddiw</string>
   <string name="activePlayers">Chwaraewyr gweithredol</string>
@@ -250,7 +250,7 @@
   <string name="findTheBestMoveForWhite">Chwilia am y symudiad gorau i Wyn</string>
   <string name="findTheBestMoveForBlack">Chwilia am y symudiad gorau i Ddu</string>
   <string name="toTrackYourProgress">I ddilyn dy welliant:</string>
-  <string name="trainingSignupExplanation">Bydd Lichess yn rhoi iti posau sy\'n addas i\'th allu.</string>
+  <string name="trainingSignupExplanation">Bydd Chess-Online yn rhoi iti posau sy\'n addas i\'th allu.</string>
   <string name="puzzleId">Pos %s</string>
   <string name="puzzleOfTheDay">Pos heddiw</string>
   <string name="clickToSolve">Clicia i ddatrys</string>
@@ -370,7 +370,7 @@
   <string name="clock">Cloc</string>
   <string name="unauthorizedError">Dim mynediad.</string>
   <string name="noInternetConnection">Dim cysylltiad i\'r rhyngrwyd. Gellwch chwarae all-lein o\'r ddewislen.</string>
-  <string name="connectedToLichess">Rydych â chysylltiad â lichess.org rwan</string>
+  <string name="connectedToLichess">Rydych â chysylltiad â live.chess-online.com rwan</string>
   <string name="signedOut">Allgofnodioch</string>
   <string name="loginSuccessful">Mewngofnodioch</string>
   <string name="playOnTheBoardOffline">Dros y bwrdd</string>

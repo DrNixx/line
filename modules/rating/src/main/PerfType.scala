@@ -65,7 +65,9 @@ object PerfType {
     name = "Correspondence",
     title = "Correspondence (days per turn)",
     iconChar = ';'
-  )
+  ) {
+    override def shortName = "Corresp."
+  }
 
   case object Standard extends PerfType(
     5,

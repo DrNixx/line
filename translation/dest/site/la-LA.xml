@@ -337,8 +337,8 @@
   <string name="biography">Biographia</string>
   <string name="country">Patria</string>
   <string name="preferences">Praepositiones</string>
-  <string name="watchLichessTV">Videre Lichess TV</string>
-  <string name="previouslyOnLichessTV">Prius in Lichess TV</string>
+  <string name="watchLichessTV">Videre Chess TV</string>
+  <string name="previouslyOnLichessTV">Prius in Chess TV</string>
   <string name="onlinePlayers">Lusores presentes</string>
   <string name="activeToday">Frequentes hodie</string>
   <string name="activePlayers">Lusores frequentes</string>
@@ -348,7 +348,7 @@
   <string name="findTheBestMoveForWhite">Inveni motus optimus albo.</string>
   <string name="findTheBestMoveForBlack">Inveni motus optimus nigro.</string>
   <string name="toTrackYourProgress">Ut progressum tuum serves:</string>
-  <string name="trainingSignupExplanation">Lichess problemata tuo ingenio comparia praebebit ut sessiones exercitii meliores habeas.</string>
+  <string name="trainingSignupExplanation">Chess-Online problemata tuo ingenio comparia praebebit ut sessiones exercitii meliores habeas.</string>
   <string name="puzzleId">Problema %s</string>
   <string name="puzzleOfTheDay">Problema diei</string>
   <string name="clickToSolve">Lude ad hoc solvendum</string>
@@ -485,7 +485,7 @@
   <string name="clock">Horologium</string>
   <string name="unauthorizedError">Admissio non approbata est.</string>
   <string name="noInternetConnection">Nullus conexus. Extra systema ex apparato ludere potes.</string>
-  <string name="connectedToLichess">Conexus ad lichess.org nunc es</string>
+  <string name="connectedToLichess">Conexus ad live.chess-online.com nunc es</string>
   <string name="signedOut">Nunc existi</string>
   <string name="loginSuccessful">Nunc inisti</string>
   <string name="playOnTheBoardOffline">Trans tabulam</string>
@@ -549,7 +549,7 @@
   <string name="simulClockHint">Fischer Horologica fabrica. Tot lusores ludeabis ut plurem tempus requireas.</string>
   <string name="simulAddExtraTime">Plurem tempus in tuo horologio addeas ut exhibitio simultanea molliatur.</string>
   <string name="simulHostExtraTime">Praebe magis temporis</string>
-  <string name="lichessTournaments">Lichess certamina</string>
+  <string name="lichessTournaments">Chess-Online certamina</string>
   <string name="tournamentFAQ">Certaminis FAQ</string>
   <string name="tournamentOfficial">Officialis</string>
   <string name="timeBeforeTournamentStarts">Tempus ante principio certaminis</string>
@@ -593,7 +593,7 @@
   <string name="youHaveAlreadyRegisteredTheEmail">Iam email %s inscripsisti.</string>
   <string name="kidMode">Modus puerilis</string>
   <string name="playChessEverywhere">Ubique scaccos.</string>
-  <string name="asFreeAsLichess">Tam quam Lichess gratuito.</string>
+  <string name="asFreeAsLichess">Tam quam Chess-Online gratuito.</string>
   <string name="builtForTheLoveOfChessNotMoney">Non divitiis, sed scaccorum amori creata.</string>
   <string name="everybodyGetsAllFeaturesForFree">Omnes omnia gratuito sunt.</string>
   <string name="zeroAdvertisement">Sine praeconiis mercatoriis.</string>
@@ -625,7 +625,7 @@
   <string name="embedInYourWebsite">Ostende in locum</string>
   <string name="usernameAlreadyUsed">Username hanc iam usus aliquam alia.</string>
   <string name="usernameUnacceptable">Hoc nomen usoris acceptabile non est.</string>
-  <string name="directlySupportLichess">Lichess directe auxilium</string>
+  <string name="directlySupportLichess">Chess-Online directe auxilium</string>
   <string name="playChessInStyle">Lude scacos moris</string>
   <string name="chessBasics">Scacci fundamenta</string>
   <string name="coaches">Tutores</string>

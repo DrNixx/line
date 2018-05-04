@@ -211,6 +211,8 @@
   <string name="thisGameIsRated">Тази игра е с рейтинг</string>
   <string name="rematch">Повторна</string>
   <string name="rematchOfferSent">Предложението за повторна е изпратено</string>
+  <string name="rematchOfferSentWhite">Белите предлагат реванш</string>
+  <string name="rematchOfferSentBlack">Черните предлагат реванш</string>
   <string name="rematchOfferAccepted">Предложението за повторна е прието</string>
   <string name="rematchOfferCanceled">Предложението за повторна е отхвърлено</string>
   <string name="rematchOfferDeclined">Предложението за повторна е отказано</string>
@@ -386,8 +388,13 @@
   <string name="standing">Място</string>
   <string name="createANewTournament">Създай нов турнир</string>
   <string name="tournamentCalendar">Календар на турнирите</string>
+  <string name="conditionOfEntry">Условие за участие:</string>
   <string name="advancedSettings">Разширени настройки</string>
+  <string name="safeTournamentName">Изберете много сигурно име за турнира.</string>
+  <string name="inappropriateNameWarning">Нещо дори и леко неуместно може да доведе до затваряне на вашия акаунт.</string>
+  <string name="emptyTournamentName">Ако оставите празно името, тогава турнирът ще бъде кръстен на случайно избран гросмайстор.</string>
   <string name="recommendNotTouching">Препоръчваме да не пипате тези.</string>
+  <string name="fewerPlayers">Ако сте задали условия за влизане, вашият турнир ще има по-малко играчи.</string>
   <string name="showAdvancedSettings">Показване на разширените настройки</string>
   <string name="join">Включи се</string>
   <string name="withdraw">Напусни</string>
@@ -433,7 +440,7 @@
   <string name="country">Страна</string>
   <string name="preferences">Предпочитания</string>
   <string name="inlineNotation">Вградена нотация</string>
-  <string name="watchLichessTV">Гледай Lichess TV</string>
+  <string name="watchLichessTV">Гледай Chess TV</string>
   <string name="previouslyOnLichessTV">Приключили игри</string>
   <string name="onlinePlayers">Свързани играчи</string>
   <string name="activeToday">Активни днес</string>
@@ -444,7 +451,7 @@
   <string name="findTheBestMoveForWhite">Открий най-добрия ход за белите.</string>
   <string name="findTheBestMoveForBlack">Открий най-добрия ход за черните.</string>
   <string name="toTrackYourProgress">За да следите напредъка си:</string>
-  <string name="trainingSignupExplanation">Lichess ви предоставя задачи, които подхождат на вашето умение, помагайки за по-добри упражнения.</string>
+  <string name="trainingSignupExplanation">Chess-Online ви предоставя задачи, които подхождат на вашето умение, помагайки за по-добри упражнения.</string>
   <string name="puzzleId">Задача %s</string>
   <string name="puzzleOfTheDay">Задача на деня</string>
   <string name="clickToSolve">Кликни, за да решиш</string>
@@ -662,7 +669,7 @@
   <string name="simulClockHint">Fischer-засичане на времето. Колкото повече играчи приемеш, толкова повече време ти е нужно.</string>
   <string name="simulAddExtraTime">Можеш да си прибавиш време, за да се справиш с предизвикателството.</string>
   <string name="simulHostExtraTime">Допълнително време</string>
-  <string name="lichessTournaments">Lichess състезания</string>
+  <string name="lichessTournaments">Chess-Online състезания</string>
   <string name="tournamentFAQ">ЧЗВ относно състезанието</string>
   <string name="tournamentOfficial">Официален</string>
   <string name="timeBeforeTournamentStarts">Време до началото на турнира</string>
@@ -714,7 +721,7 @@
   <string name="youHaveAlreadyRegisteredTheEmail">Вече сте записали ел. поща: %s</string>
   <string name="kidMode">Детски режим</string>
   <string name="kidModeExplanation">В името на безопасността. В детския режим цялата комуникация в сайта е изключена. Включете детския режим, за да защитите вашите деца и ученици от другите потребители.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">В детския режим логото на Lichess става %s, за да сте сигурни в безопасността на своите деца.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">В детския режим логото на Chess-Online става %s, за да сте сигурни в безопасността на своите деца.</string>
   <string name="enableKidMode">Включване на детски режим</string>
   <string name="disableKidMode">Изключване на детски режим</string>
   <string name="security">Сигурност</string>
@@ -762,7 +769,7 @@
   <string name="usernameSuffixInvalid">Потребителското име трябва да завършва с буква или число.</string>
   <string name="usernameCharsInvalid">Потребителското име трябва да съдържа само букви, цифри, долни черти и тирета.</string>
   <string name="usernameUnacceptable">Това потребителско име не е приемливо.</string>
-  <string name="directlySupportLichess">Подкрепи директно Lichess</string>
+  <string name="directlySupportLichess">Подкрепи директно Chess-Online</string>
   <string name="playChessInStyle">Играй шах в стил</string>
   <string name="chessBasics">Основи на шаха</string>
   <string name="coaches">Треньори</string>
@@ -832,4 +839,9 @@
   <string name="addCurrentVariation">Добавяне на настоящата линия</string>
   <string name="playVariationToCreateConditionalPremoves">Изиграйте вариация за да създадете предварителни ходове под условие</string>
   <string name="noConditionalPremoves">Без предварителни ходове под условие</string>
+  <string name="playX">Играй %s</string>
+  <plurals name="andSaveNbPremoveLines">
+    <item quantity="one">и запиши %s като предварителен ход</item>
+    <item quantity="other">и запиши %s като предварителен ход</item>
+  </plurals>
 </resources>

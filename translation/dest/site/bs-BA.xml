@@ -397,8 +397,8 @@
   <string name="biography">Biografija</string>
   <string name="country">Država</string>
   <string name="preferences">Postavke</string>
-  <string name="watchLichessTV">Gledajte Lichess TV</string>
-  <string name="previouslyOnLichessTV">Prethodno na Lichess TV-u</string>
+  <string name="watchLichessTV">Gledajte Chess TV</string>
+  <string name="previouslyOnLichessTV">Prethodno na Chess TV-u</string>
   <string name="onlinePlayers">Prisutni igrači</string>
   <string name="activeToday">Aktivni danas</string>
   <string name="activePlayers">Aktivni igrači</string>
@@ -408,7 +408,7 @@
   <string name="findTheBestMoveForWhite">Pronađi najbolji potez za bijelog</string>
   <string name="findTheBestMoveForBlack">Pronađi najbolji potez za crnog</string>
   <string name="toTrackYourProgress">Da pratite napredak:</string>
-  <string name="trainingSignupExplanation">Lichess će zadavati probleme koji odgovaraju Vašim mogućnostima da vježba bude bolja i uspješnija.</string>
+  <string name="trainingSignupExplanation">Chess-Online će zadavati probleme koji odgovaraju Vašim mogućnostima da vježba bude bolja i uspješnija.</string>
   <string name="puzzleId">Problem %s</string>
   <string name="puzzleOfTheDay">Problem dana</string>
   <string name="clickToSolve">Kliknite za rješenje</string>
@@ -419,7 +419,7 @@
   <string name="puzzleFailed">Vježba neuspješna</string>
   <string name="butYouCanKeepTrying">Ali možete nastaviti pokušavati.</string>
   <string name="wasThisPuzzleAnyGood">Da li je ovaj problem bio dobar?</string>
-  <string name="pleaseVotePuzzle">Pomozi da se Lichess poboljša, koristeći strelice gore/dolje:</string>
+  <string name="pleaseVotePuzzle">Pomozi da se Chess-Online poboljša, koristeći strelice gore/dolje:</string>
   <string name="thankYou">Hvala!</string>
   <string name="ratingX">Rejting: %s</string>
   <plurals name="playedXTimes">
@@ -552,7 +552,7 @@ u %3$s</string>
   <string name="clock">Sat</string>
   <string name="unauthorizedError">Pristup neodozvoljen.</string>
   <string name="noInternetConnection">Nedostupan internet. Možete i dalje igrati vanmrežno preko menija.</string>
-  <string name="connectedToLichess">Spojeni ste na lichess.org</string>
+  <string name="connectedToLichess">Spojeni ste na live.chess-online.com</string>
   <string name="signedOut">Odjavljeni ste</string>
   <string name="loginSuccessful">Prijavljeni ste</string>
   <string name="playOnTheBoardOffline">Igraj u dvoje</string>
@@ -620,7 +620,7 @@ u %3$s</string>
   <string name="simulClockHint">Fischerovo podešavanje sata. Što više igrača primiš, više vremena bit će ti potrebno.</string>
   <string name="simulAddExtraTime">Možeš dodati vrijeme na svoj sat da ti pomogne savladati simultanku.</string>
   <string name="simulHostExtraTime">Dodatno vrijeme domaćina</string>
-  <string name="lichessTournaments">Lichess turniri</string>
+  <string name="lichessTournaments">Chess-Online turniri</string>
   <string name="tournamentFAQ">Najčešće postavljena pitanja za Arena turnire</string>
   <string name="tournamentOfficial">Službeno</string>
   <string name="timeBeforeTournamentStarts">Vrijeme do početka turnira</string>
@@ -714,7 +714,7 @@ u %3$s</string>
   <string name="embedInYourWebsite">Ugradi u svoju stranicu</string>
   <string name="usernameAlreadyUsed">Ovo korisničko ime je već u uporabi, molimo probaj s drugim.</string>
   <string name="usernameUnacceptable">Ovo korisničko ime nije prihvatljivo.</string>
-  <string name="directlySupportLichess">Direktno podrži Lichess</string>
+  <string name="directlySupportLichess">Direktno podrži Chess-Online</string>
   <string name="playChessInStyle">Igraj šah u stilu</string>
   <string name="chessBasics">Šahovske osnove</string>
   <string name="middlegame">Središnjica</string>

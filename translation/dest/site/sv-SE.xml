@@ -428,8 +428,8 @@
   <string name="country">Land</string>
   <string name="preferences">Inställningar</string>
   <string name="inlineNotation">Visa notation</string>
-  <string name="watchLichessTV">Titta på Lichess TV</string>
-  <string name="previouslyOnLichessTV">Föregående Lichess TV</string>
+  <string name="watchLichessTV">Titta på Chess TV</string>
+  <string name="previouslyOnLichessTV">Föregående Chess TV</string>
   <string name="onlinePlayers">Spelare online</string>
   <string name="activeToday">Aktivast i dag</string>
   <string name="activePlayers">Aktiva spelare</string>
@@ -439,7 +439,7 @@
   <string name="findTheBestMoveForWhite">Hitta bästa draget för vit.</string>
   <string name="findTheBestMoveForBlack">Hitta bästa draget för svart.</string>
   <string name="toTrackYourProgress">För att följa din utveckling:</string>
-  <string name="trainingSignupExplanation">Lichess kommer att erbjuda schackproblem som matchar din förmåga, vilket ger dig bättre träning.</string>
+  <string name="trainingSignupExplanation">Chess-Online kommer att erbjuda schackproblem som matchar din förmåga, vilket ger dig bättre träning.</string>
   <string name="puzzleId">Schackproblem %s</string>
   <string name="puzzleOfTheDay">Dagens schackproblem</string>
   <string name="clickToSolve">Klicka för att lösa</string>
@@ -588,7 +588,7 @@
   <string name="clock">Klocka</string>
   <string name="unauthorizedError">Tillgång är oauktoriserad</string>
   <string name="noInternetConnection">Ingen internet förbindelse. Du kan spela offline från menyn.</string>
-  <string name="connectedToLichess">Du är nu ansluten till lichess.org</string>
+  <string name="connectedToLichess">Du är nu ansluten till live.chess-online.com</string>
   <string name="signedOut">Du har loggat ut</string>
   <string name="loginSuccessful">Lyckad inloggning</string>
   <string name="playOnTheBoardOffline">Spela offline, över bräden</string>
@@ -632,7 +632,7 @@
   <string name="videoLibrary">Videobibliotek</string>
   <string name="mobileApp">Mobilapp</string>
   <string name="webmasters">Webbmasters</string>
-  <string name="about">Om Lichess</string>
+  <string name="about">Om Chess-Online</string>
   <string name="contribute">Hjälp till</string>
   <string name="contact">Kontakt</string>
   <string name="termsOfService">Användarvillkor</string>
@@ -656,7 +656,7 @@
   <string name="simulClockHint">Inställningar för fischerklocka. Ju fler spelare du tar dig an, desto mer tid kan du behöva.</string>
   <string name="simulAddExtraTime">Du kan lägga till extra tid för att klara av simultanspelet.</string>
   <string name="simulHostExtraTime">Värdens extratid</string>
-  <string name="lichessTournaments">Lichess-turneringar</string>
+  <string name="lichessTournaments">Chess-Online-turneringar</string>
   <string name="tournamentFAQ">Turnering FAQ</string>
   <string name="tournamentOfficial">Officiell</string>
   <string name="timeBeforeTournamentStarts">Tid tills turneringen börjar</string>
@@ -756,7 +756,7 @@
   <string name="usernameSuffixInvalid">Användarnamnet måste sluta med en bokstav eller ett nummer.</string>
   <string name="usernameCharsInvalid">Användarnamnet får bara innehålla bokstäver, siffror, understrykningstecken och bindestreck.</string>
   <string name="usernameUnacceptable">Detta användarnamn är inte acceptabelt.</string>
-  <string name="directlySupportLichess">Stöd Lichess</string>
+  <string name="directlySupportLichess">Stöd Chess-Online</string>
   <string name="playChessInStyle">Spela schack med stil</string>
   <string name="chessBasics">Grunderna i schack</string>
   <string name="coaches">Schackcoacher</string>

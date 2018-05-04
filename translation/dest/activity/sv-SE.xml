@@ -51,5 +51,5 @@
     <item quantity="one">Tävlat i %s turnering</item>
     <item quantity="other">Tävlat i %s turneringar</item>
   </plurals>
-  <string name="signedUp">Registrerade på lichess.org</string>
+  <string name="signedUp">Registrerade på live.chess-online.com</string>
 </resources>

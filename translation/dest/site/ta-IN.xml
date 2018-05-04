@@ -74,7 +74,7 @@
   <string name="viewInFullSize">முழு அளவில் காண்க</string>
   <string name="logOut">வெளியேறு</string>
   <string name="signIn">உள்நுழை</string>
-  <string name="newToLichess">நீர் இலைச்செசுக்குப் (Lichess) புதியவரா?</string>
+  <string name="newToLichess">நீர் இலைச்செசுக்குப் (Chess-Online) புதியவரா?</string>
   <string name="youNeedAnAccountToDoThat">அதைச் செய்யக் கணக்கொன்று தேவை</string>
   <string name="signUp">பதிக</string>
   <string name="computersAreNotAllowedToPlay">கணினிகள் மற்றும் கணினி உதவியுடன் விளையாட அனுமதி இல்லை. விளையாடும் போது சதுரங்க மென்பொருட்கள், தரவுத்தளங்கள், அல்லது மற்றவர்களிடம் இருந்து உதவி பெற வேண்டாம்.</string>

@@ -584,7 +584,7 @@
   <string name="clock">ساعت</string>
   <string name="unauthorizedError">دسترسی مقدور نیست</string>
   <string name="noInternetConnection">ارتباط اینترنتی قطع است. همچنان می‌توانید از طریق منو به صورت آفلاین بازی کنید.</string>
-  <string name="connectedToLichess">اکنون به lichess.org وصل شده‌اید.</string>
+  <string name="connectedToLichess">اکنون به live.chess-online.com وصل شده‌اید.</string>
   <string name="signedOut">شما بیرون رفتید</string>
   <string name="loginSuccessful">شما وارد شدید</string>
   <string name="playOnTheBoardOffline">آفلاین روی تخته بازی کنید</string>

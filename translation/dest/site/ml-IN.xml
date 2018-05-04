@@ -439,8 +439,8 @@
   <string name="country">രാജ്യം</string>
   <string name="preferences">പരിഗണനകൾ</string>
   <string name="inlineNotation">ഇൻഫയൽ നോട്ടെഷൻ</string>
-  <string name="watchLichessTV">കാണാം Lichess TV</string>
-  <string name="previouslyOnLichessTV">Lichess TV യിൽ നേരെത്തെയുള്ളത്</string>
+  <string name="watchLichessTV">കാണാം Chess TV</string>
+  <string name="previouslyOnLichessTV">Chess TV യിൽ നേരെത്തെയുള്ളത്</string>
   <string name="onlinePlayers">ഓൺലൈൻ കളിക്കാർ</string>
   <string name="activeToday">ഇന്ന് സജീവമായ</string>
   <string name="activePlayers">സജീവ കളിക്കാർ</string>
@@ -450,7 +450,7 @@
   <string name="findTheBestMoveForWhite">വെള്ളയുടെ ഉത്തമ നീക്കം കണ്ടു പിടിക്കൂ</string>
   <string name="findTheBestMoveForBlack">കറുപ്പിന്റെ ഉത്തമ നീക്കം കണ്ടു പിടിക്കൂ.</string>
   <string name="toTrackYourProgress">നിങ്ങളുടെ നിലവാരം പിന്തുടരാൻ:</string>
-  <string name="trainingSignupExplanation">മികച്ച പരിശീലന കളരികളിലേക്കു നിങ്ങളുടെ കഴിവിനൊത്തുള്ള സമസ്യകൾ Lichess ലഭ്യമാക്കും.</string>
+  <string name="trainingSignupExplanation">മികച്ച പരിശീലന കളരികളിലേക്കു നിങ്ങളുടെ കഴിവിനൊത്തുള്ള സമസ്യകൾ Chess-Online ലഭ്യമാക്കും.</string>
   <string name="puzzleId">%s സമസ്യ</string>
   <string name="puzzleOfTheDay">ഇന്നത്തെ സമസ്യ</string>
   <string name="clickToSolve">പരിഹാരത്തിന് ക്ലിക്ക് ചെയ്യൂ</string>
@@ -462,7 +462,7 @@
   <string name="butYouCanKeepTrying">എന്നാലും നിങ്ങൾ ശ്രമിച്ചു നോക്കൂ.</string>
   <string name="success">വിജയകരം</string>
   <string name="wasThisPuzzleAnyGood">ഈ സമസ്യ നല്ലതായിരുന്നോ?</string>
-  <string name="pleaseVotePuzzle">Lichess മികവുറ്റതാക്കാൻ അപ്പ് അല്ലെങ്കിൽ ഡൗൺ ആരോ ഉപയോഗിച്ച് വോട്ട് ചെയ്തു സഹായിക്കൂ:</string>
+  <string name="pleaseVotePuzzle">Chess-Online മികവുറ്റതാക്കാൻ അപ്പ് അല്ലെങ്കിൽ ഡൗൺ ആരോ ഉപയോഗിച്ച് വോട്ട് ചെയ്തു സഹായിക്കൂ:</string>
   <string name="thankYou">നന്ദി!</string>
   <string name="ratingX">നിലവാരം: %s</string>
   <plurals name="playedXTimes">
@@ -600,7 +600,7 @@ in %3$s</string>
   <string name="clock">ഘടികാരം</string>
   <string name="unauthorizedError">പ്രവേശനം വിലക്കിയിരിക്കുന്നു.</string>
   <string name="noInternetConnection">ഇന്റർനെറ്റ് കണക്ഷൻ ഇല്ല. നിങ്ങൾക്ക് ഇപ്പോഴും പട്ടികയുടെ സഹായത്തോടെ ഓഫ്‌ലൈനായി കളിക്കാവുന്നതാണ്.</string>
-  <string name="connectedToLichess">നിങ്ങൾ ഇപ്പോൾ lichess.org ആയി ബന്ധപ്പെട്ടിരിക്കുന്നു</string>
+  <string name="connectedToLichess">നിങ്ങൾ ഇപ്പോൾ live.chess-online.com ആയി ബന്ധപ്പെട്ടിരിക്കുന്നു</string>
   <string name="signedOut">നിങ്ങൾ സൈൻ ഔട്ട് ചെയ്തിരിക്കുന്നു</string>
   <string name="loginSuccessful">നിങ്ങൾ ഇപ്പോൾ സൈൻ ഇൻ ചെയ്തു</string>
   <string name="playOnTheBoardOffline">ചതുരംഗ പലകയിൽ</string>
@@ -668,7 +668,7 @@ in %3$s</string>
   <string name="simulClockHint">ഫിഷെറിന്റെ ക്ലോക്ക് ക്രമീകരണം. കൂടുതൽ കളിക്കാരെ നേരിടുമ്പോൾ കൂടുതൽ സമയം ആവശ്യമായി വരും.</string>
   <string name="simulAddExtraTime">Simul-മായി പൊരുത്തപ്പെടാൻ കുറച്ച് അധികം സമയം നിങ്ങൾക്ക് ചേർക്കാം.</string>
   <string name="simulHostExtraTime">ഹോസ്റ്റിന്റെ കൂടുതൽ ക്ലോക്ക് സമയം</string>
-  <string name="lichessTournaments">Lichess പരമ്പരകൾ</string>
+  <string name="lichessTournaments">Chess-Online പരമ്പരകൾ</string>
   <string name="tournamentFAQ">അറീന പരമ്പര</string>
   <string name="tournamentOfficial">ഔദ്യോഗികമായ</string>
   <string name="timeBeforeTournamentStarts">പരമ്പര തുടങ്ങുന്നതിനു മുൻപുള്ള സമയം</string>
@@ -699,7 +699,7 @@ in %3$s</string>
   <string name="weHaveSentYouAnEmailTo">%s ഞങ്ങൾ ഒരു ഇമെയിൽ അയച്ചിട്ടുണ്ട്. ഇമെയിൽ ലിങ്കിൽ ക്ലിക്ക് ചെയ്ത് നിങ്ങളുടെ പാസ്സ്‌വേർഡ് പുനഃക്രമീകരിക്കാവുന്നതാണ്.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">രജിസ്റ്റർ ചെയ്യുന്നത് വഴി നിങ്ങൾ ഞങ്ങളുടെ %s പിന്തുടരുമെന്നു സമ്മതിക്കുന്നു.</string>
   <string name="networkLagBetweenYouAndLichess">നിങ്ങളും lichessഉം തമ്മിലുള്ള നെറ്റ്വർക്ക് കാലയളവ്</string>
-  <string name="timeToProcessAMoveOnLichessServer">Lichess സെർവറിൽ ഒരു നീക്കം വിശകലനം ചെയ്യാൻ എടുക്കുന്ന സമയം</string>
+  <string name="timeToProcessAMoveOnLichessServer">Chess-Online സെർവറിൽ ഒരു നീക്കം വിശകലനം ചെയ്യാൻ എടുക്കുന്ന സമയം</string>
   <string name="downloadAnnotated">Annotated ആയി ഡൗൺലോഡ് ചെയ്യുക</string>
   <string name="downloadRaw">അസംസ്കൃതമായി ഡൗൺലോഡ് ചെയ്യുക</string>
   <string name="downloadImported">Import ചെയ്തത് ഡൌൺലോഡ് ചെയ്യുക</string>
@@ -728,7 +728,7 @@ in %3$s</string>
   <string name="alternativelyYouCanX">ഇതിനുപുറമേ നിങ്ങൾക്ക് %s പറ്റും.</string>
   <string name="revokeAllSessions">എല്ലാ സെഷനും പിൻവലിക്കാൻ</string>
   <string name="playChessEverywhere">എല്ലായിടത്തും ചതുരംഗം കളിക്കൂ</string>
-  <string name="asFreeAsLichess">Lichess തികച്ചും സ്വതന്ത്രമാണ്</string>
+  <string name="asFreeAsLichess">Chess-Online തികച്ചും സ്വതന്ത്രമാണ്</string>
   <string name="builtForTheLoveOfChessNotMoney">ചതുരംഗ പ്രേമികൾക്ക് മാത്രം രൂപപ്പെടുത്തിയതാണ്, പണത്തിനല്ല</string>
   <string name="everybodyGetsAllFeaturesForFree">എല്ലാ സൗകര്യവും എല്ലാവർക്കും സൗജന്യം</string>
   <string name="zeroAdvertisement">പരസ്യമുക്തം</string>

@@ -128,7 +128,7 @@
   <string name="viewInFullSize">Shihe në madhësi të plotë</string>
   <string name="logOut">Dilni</string>
   <string name="signIn">Hyni</string>
-  <string name="newToLichess">I ri në Lichess?</string>
+  <string name="newToLichess">I ri në Chess-Online?</string>
   <string name="youNeedAnAccountToDoThat">Ju nevojitet një llogari për të kryer këtë veprim</string>
   <string name="signUp">Regjistrohuni</string>
   <string name="computersAreNotAllowedToPlay">Kompjuterit dhe programit -ndihmës për lojtarin nuk ju lejohet të luajnë. Ju lutem mos merrni ndihmë nga motorët e shahut, bazat e të dhënave, apo nga lojtarët e tjerë duke luajtur. Gjithashtu vini re se bërja e llogarive të shumëfishta është e dekurajuar fuqimisht dhe i tepruar multi-kontabilitetit do të çojë në duke u ndaluar.</string>
@@ -415,8 +415,8 @@
   <string name="country">Shteti</string>
   <string name="preferences">Personifikimet</string>
   <string name="inlineNotation">Shenimet ne rresht</string>
-  <string name="watchLichessTV">Shiko Lichess TV</string>
-  <string name="previouslyOnLichessTV">Herën e fundit në Lichess TV</string>
+  <string name="watchLichessTV">Shiko Chess TV</string>
+  <string name="previouslyOnLichessTV">Herën e fundit në Chess TV</string>
   <string name="onlinePlayers">Lojtarët në linjë</string>
   <string name="activeToday">Aktiv sot</string>
   <string name="activePlayers">Lojëtarët aktivë</string>
@@ -426,7 +426,7 @@
   <string name="findTheBestMoveForWhite">Gjej lëvizjen më të mirë për të bardhin.</string>
   <string name="findTheBestMoveForBlack">Gjej lëvizjen më të mirë për të ziun.</string>
   <string name="toTrackYourProgress">Për të ndjekur progresin:</string>
-  <string name="trainingSignupExplanation">Lichess do të sigurojë ushtrime që përputhen me aftësinë tuaj, për një trajnim më të mirë.</string>
+  <string name="trainingSignupExplanation">Chess-Online do të sigurojë ushtrime që përputhen me aftësinë tuaj, për një trajnim më të mirë.</string>
   <string name="puzzleId">Ushtrimi %s</string>
   <string name="puzzleOfTheDay">Ushtrimi i ditës</string>
   <string name="clickToSolve">Kliko për t\'a zgjidhur</string>
@@ -576,7 +576,7 @@ ne %3$s</string>
   <string name="clock">Koha</string>
   <string name="unauthorizedError">Hyrje e paautorizuar.</string>
   <string name="noInternetConnection">Nuk ka lidhje interneti. Gjithsesi, ju mund të luani të shkëputur nga interneti nëpërmjet menusë.</string>
-  <string name="connectedToLichess">Tani jeni të lidhur me lichess.org</string>
+  <string name="connectedToLichess">Tani jeni të lidhur me live.chess-online.com</string>
   <string name="signedOut">Ju keni dalë nga faqja.</string>
   <string name="loginSuccessful">Hyrje me sukses</string>
   <string name="playOnTheBoardOffline">Luaj i shkëputur, në ekran.</string>
@@ -643,7 +643,7 @@ ne %3$s</string>
   <string name="simulClockHint">Koha Fisher. Kundër sa më shumë lojtarëve luani, aq më shumë kohë mund t\'ju nevojitet.</string>
   <string name="simulAddExtraTime">Ju mund të shtoni kohë shtesë për t\'i bërë ballë simultanes.</string>
   <string name="simulHostExtraTime">Kohë shtesë për pritësin</string>
-  <string name="lichessTournaments">Turnetë në Lichess</string>
+  <string name="lichessTournaments">Turnetë në Chess-Online</string>
   <string name="tournamentFAQ">Pyetjet e turneve</string>
   <string name="tournamentOfficial">Zyrtar</string>
   <string name="timeBeforeTournamentStarts">Koha deri sa të fillojë turneu</string>
@@ -740,7 +740,7 @@ ne %3$s</string>
   <string name="embedInYourWebsite">Fut ne faqen tuaj te webit</string>
   <string name="usernameAlreadyUsed">Ky emër përdoruesi ekziston tashmë, ju lutem zgjidhni një tjetër.</string>
   <string name="usernameUnacceptable">Emri i perdoruesit nuk eshte i pranueshem.</string>
-  <string name="directlySupportLichess">Mbeshtet Lichess ne menyre te drejtperdrejte</string>
+  <string name="directlySupportLichess">Mbeshtet Chess-Online ne menyre te drejtperdrejte</string>
   <string name="playChessInStyle">Luaj shah ne stil</string>
   <string name="chessBasics">Bazat e shahut</string>
   <string name="coaches">Trajnerë</string>

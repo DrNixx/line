@@ -134,7 +134,7 @@
   <string name="viewInFullSize">View in full size</string>
   <string name="logOut">Sign out</string>
   <string name="signIn">Sign in</string>
-  <string name="newToLichess">New to Lichess?</string>
+  <string name="newToLichess">New to Chess-Online?</string>
   <string name="youNeedAnAccountToDoThat">You need an account to do that</string>
   <string name="signUp">Register</string>
   <string name="computersAreNotAllowedToPlay">Computers and computer-assisted players are not allowed to play. Please do not get assistance from chess engines, databases, or from other players while playing. Also note that making multiple accounts is strongly discouraged and excessive multi-accounting will lead to being banned.</string>
@@ -440,8 +440,8 @@ a computer analysis, a game chat and a shareable URL.</string>
   <string name="country">Country</string>
   <string name="preferences">Preferences</string>
   <string name="inlineNotation">Inline notation</string>
-  <string name="watchLichessTV">Watch Lichess TV</string>
-  <string name="previouslyOnLichessTV">Previously on Lichess TV</string>
+  <string name="watchLichessTV">Watch Chess TV</string>
+  <string name="previouslyOnLichessTV">Previously on Chess TV</string>
   <string name="onlinePlayers">Online players</string>
   <string name="activeToday">Active today</string>
   <string name="activePlayers">Active players</string>
@@ -451,7 +451,7 @@ a computer analysis, a game chat and a shareable URL.</string>
   <string name="findTheBestMoveForWhite">Find the best move for white.</string>
   <string name="findTheBestMoveForBlack">Find the best move for black.</string>
   <string name="toTrackYourProgress">To track your progress:</string>
-  <string name="trainingSignupExplanation">Lichess will provide puzzles that match your ability, making for better training sessions.</string>
+  <string name="trainingSignupExplanation">Chess-Online will provide puzzles that match your ability, making for better training sessions.</string>
   <string name="puzzleId">Puzzle %s</string>
   <string name="puzzleOfTheDay">Puzzle of the day</string>
   <string name="clickToSolve">Click to solve</string>
@@ -601,7 +601,7 @@ in %3$s</string>
   <string name="clock">Clock</string>
   <string name="unauthorizedError">Access is unauthorized.</string>
   <string name="noInternetConnection">No internet connection. You can still play offline from the menu.</string>
-  <string name="connectedToLichess">You are now connected to lichess.org</string>
+  <string name="connectedToLichess">You are now connected to live.chess-online.com</string>
   <string name="signedOut">You have been signed out</string>
   <string name="loginSuccessful">You are now signed in</string>
   <string name="playOnTheBoardOffline">Over the board</string>
@@ -669,7 +669,7 @@ in %3$s</string>
   <string name="simulClockHint">Fischer Clock setup. The more players you take on, the more time you may need.</string>
   <string name="simulAddExtraTime">You may add extra time to your clock to help cope with the simul.</string>
   <string name="simulHostExtraTime">Host extra clock time</string>
-  <string name="lichessTournaments">Lichess tournaments</string>
+  <string name="lichessTournaments">Chess-Online tournaments</string>
   <string name="tournamentFAQ">Arena tournament FAQ</string>
   <string name="tournamentOfficial">Official</string>
   <string name="timeBeforeTournamentStarts">Time before tournament starts</string>
@@ -769,7 +769,7 @@ in %3$s</string>
   <string name="usernameSuffixInvalid">The username must end with a letter or a number.</string>
   <string name="usernameCharsInvalid">The username must only contain letters, numbers, underscores, and hyphens.</string>
   <string name="usernameUnacceptable">This username is not acceptable.</string>
-  <string name="directlySupportLichess">Directly support Lichess</string>
+  <string name="directlySupportLichess">Directly support Chess-Online</string>
   <string name="playChessInStyle">Play chess in style</string>
   <string name="chessBasics">Chess basics</string>
   <string name="coaches">Coaches</string>

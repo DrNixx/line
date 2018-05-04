@@ -134,7 +134,7 @@
   <string name="viewInFullSize">Teljes méret</string>
   <string name="logOut">Kijelentkezés</string>
   <string name="signIn">Bejelentkezés</string>
-  <string name="newToLichess">Új vagy a Lichess-en?</string>
+  <string name="newToLichess">Új vagy a Chess-Online-en?</string>
   <string name="youNeedAnAccountToDoThat">Ehhez egy fiókra van szükséged</string>
   <string name="signUp">Regisztráció</string>
   <string name="computersAreNotAllowedToPlay">Számítógépek és számítógép segítségét igénybe vevő játékosok nem játszhatnak. Kérünk játék közben ne vegyél igénybe segítséget sakk programoktól, adatbázisoktól, vagy más játékosoktól. Több fiók készítése és használata egyszerre az oldalról való kitiltást vonja maga után.</string>
@@ -439,8 +439,8 @@
   <string name="country">Ország</string>
   <string name="preferences">Beállítások</string>
   <string name="inlineNotation">Megjegyzések beszúrása</string>
-  <string name="watchLichessTV">Lichess TV</string>
-  <string name="previouslyOnLichessTV">A Lichess TV korábbi műsorai</string>
+  <string name="watchLichessTV">Chess TV</string>
+  <string name="previouslyOnLichessTV">A Chess TV korábbi műsorai</string>
   <string name="onlinePlayers">Játékosok online</string>
   <string name="activeToday">Aktív ma</string>
   <string name="activePlayers">Aktív játékosok</string>
@@ -450,7 +450,7 @@
   <string name="findTheBestMoveForWhite">Találd meg a legjobb lépést világossal.</string>
   <string name="findTheBestMoveForBlack">Találd meg a legjobb lépést sötéttel.</string>
   <string name="toTrackYourProgress">Fejlődésed nyomon követéséhez:</string>
-  <string name="trainingSignupExplanation">Lichess a képességeidnek megfelelő feladványokat biztosít, hogy minél jobb képzésben részesülj.</string>
+  <string name="trainingSignupExplanation">Chess-Online a képességeidnek megfelelő feladványokat biztosít, hogy minél jobb képzésben részesülj.</string>
   <string name="puzzleId">%s. feladvány</string>
   <string name="puzzleOfTheDay">A nap feladványa</string>
   <string name="clickToSolve">Katt a megoldáshoz</string>
@@ -599,7 +599,7 @@
   <string name="clock">Óra</string>
   <string name="unauthorizedError">Hozzáférés megtagadva.</string>
   <string name="noInternetConnection">Nincs internetkapcsolat. Offline módban tudsz játszani.</string>
-  <string name="connectedToLichess">Csatlakoztál a lichess.org oldalhoz</string>
+  <string name="connectedToLichess">Csatlakoztál a live.chess-online.com oldalhoz</string>
   <string name="signedOut">Kijelentkeztél</string>
   <string name="loginSuccessful">Sikeres bejelntkezés</string>
   <string name="playOnTheBoardOffline">Asztali játék</string>
@@ -667,7 +667,7 @@
   <string name="simulClockHint">Fisher óra beállítás. Minél több játékossal játszol, annál több időre lesz szükség</string>
   <string name="simulAddExtraTime">Plusz időt adhatsz az órához, hogy a szimultán könnyebb legyen.</string>
   <string name="simulHostExtraTime">Időbónusz</string>
-  <string name="lichessTournaments">Lichess versenyek</string>
+  <string name="lichessTournaments">Chess-Online versenyek</string>
   <string name="tournamentFAQ">Aréna verseny GYIK</string>
   <string name="tournamentOfficial">Hivatalos</string>
   <string name="timeBeforeTournamentStarts">Kezdés ennyi perc múlva</string>

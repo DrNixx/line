@@ -414,8 +414,8 @@
   <string name="biography">Kuvaus</string>
   <string name="country">Maa</string>
   <string name="preferences">Asetukset</string>
-  <string name="watchLichessTV">Katso Lichess TV:tä</string>
-  <string name="previouslyOnLichessTV">Viimeksi Lichess TV:ssä</string>
+  <string name="watchLichessTV">Katso Chess TV:tä</string>
+  <string name="previouslyOnLichessTV">Viimeksi Chess TV:ssä</string>
   <string name="onlinePlayers">Paikalla olevat pelaajat</string>
   <string name="activeToday">Aktiivisena tänään</string>
   <string name="activePlayers">Aktiiviset pelaajat</string>
@@ -425,7 +425,7 @@
   <string name="findTheBestMoveForWhite">Etsi paras siirto valkoiselle.</string>
   <string name="findTheBestMoveForBlack">Etsi paras siirto mustalle.</string>
   <string name="toTrackYourProgress">Seurataksesi edistymistäsi:</string>
-  <string name="trainingSignupExplanation">Lichess tarjoaa tehtäviä jotka vastaavat kykyjäsi, luoden sopivampia harjoittelutuokioita.</string>
+  <string name="trainingSignupExplanation">Chess-Online tarjoaa tehtäviä jotka vastaavat kykyjäsi, luoden sopivampia harjoittelutuokioita.</string>
   <string name="puzzleId">Tehtävä %s</string>
   <string name="puzzleOfTheDay">Päivän tehtävä</string>
   <string name="clickToSolve">Klikkaa ratkaistaksesi</string>
@@ -575,7 +575,7 @@
   <string name="clock">Kello</string>
   <string name="unauthorizedError">Pääsy evätty.</string>
   <string name="noInternetConnection">Ei Internet-yhteyttä. Voit silti pelata offline-tilassa.</string>
-  <string name="connectedToLichess">Nyt olet yhteydessä lichess.org:iin</string>
+  <string name="connectedToLichess">Nyt olet yhteydessä live.chess-online.com:iin</string>
   <string name="signedOut">Olet kirjautunut ulos</string>
   <string name="loginSuccessful">Kirjautuminen onnistui</string>
   <string name="playOnTheBoardOffline">Pelaa offline-tilassa kaveria vastaan</string>

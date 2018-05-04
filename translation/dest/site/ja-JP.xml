@@ -415,8 +415,8 @@
   <string name="country">国</string>
   <string name="preferences">設定</string>
   <string name="inlineNotation">棋譜を行書き</string>
-  <string name="watchLichessTV">Lichess TV を観戦</string>
-  <string name="previouslyOnLichessTV">過去の Lichess TV 対局</string>
+  <string name="watchLichessTV">Chess TV を観戦</string>
+  <string name="previouslyOnLichessTV">過去の Chess TV 対局</string>
   <string name="onlinePlayers">接続中のプレイヤー</string>
   <string name="activeToday">今日の対局数上位</string>
   <string name="activePlayers">総対局数上位</string>
@@ -426,7 +426,7 @@
   <string name="findTheBestMoveForWhite">白の最善手を見つけてください。</string>
   <string name="findTheBestMoveForBlack">黒の最善手を見つけてください。</string>
   <string name="toTrackYourProgress">履歴を保存するには:</string>
-  <string name="trainingSignupExplanation">Lichess に登録するとレベルに応じた問題が出題され、効率的にトレーニングできます。</string>
+  <string name="trainingSignupExplanation">Chess-Online に登録するとレベルに応じた問題が出題され、効率的にトレーニングできます。</string>
   <string name="puzzleId">問題番号 %s</string>
   <string name="puzzleOfTheDay">今日の問題</string>
   <string name="clickToSolve">問題を解く</string>
@@ -572,7 +572,7 @@
   <string name="clock">時間制限</string>
   <string name="unauthorizedError">アクセス権限がありません。</string>
   <string name="noInternetConnection">インターネット接続なし。メニューからオフラインでプレイできます。</string>
-  <string name="connectedToLichess">lichess.org に接続しています。</string>
+  <string name="connectedToLichess">live.chess-online.com に接続しています。</string>
   <string name="signedOut">サインアウトしました。</string>
   <string name="loginSuccessful">ログインしました</string>
   <string name="playOnTheBoardOffline">オフライン（2人対戦）</string>
@@ -639,7 +639,7 @@
   <string name="simulClockHint">フィッシャーモードの設定。相手が多いほど追加時間は長めに。</string>
   <string name="simulAddExtraTime">同時対局の手間を考え、自分に持時間をさらに追加できます。</string>
   <string name="simulHostExtraTime">ホスト延長時間</string>
-  <string name="lichessTournaments">Lichess トーナメント</string>
+  <string name="lichessTournaments">Chess-Online トーナメント</string>
   <string name="tournamentFAQ">アリーナ・トーナメントFAQ</string>
   <string name="tournamentOfficial">公式</string>
   <string name="timeBeforeTournamentStarts">開始までの時間</string>
@@ -668,8 +668,8 @@
   <string name="ifYouDoNotSeeTheEmailCheckOtherPlaces">メールが見つからない場合は、他の場所（スパムフォルダなど）を確認してください。</string>
   <string name="weHaveSentYouAnEmailTo">%sにメールを送信しました。リンクをクリックしてパスワードの変更を完了してください。</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">登録するとあなたは %s に従うと同意したことになります。</string>
-  <string name="networkLagBetweenYouAndLichess">あなたと Lichess の間のネットワークラグ</string>
-  <string name="timeToProcessAMoveOnLichessServer">Lichess サーバが手を処理する時間</string>
+  <string name="networkLagBetweenYouAndLichess">あなたと Chess-Online の間のネットワークラグ</string>
+  <string name="timeToProcessAMoveOnLichessServer">Chess-Online サーバが手を処理する時間</string>
   <string name="downloadAnnotated">解説つきダウンロード</string>
   <string name="downloadRaw">棋譜のみダウンロード</string>
   <string name="downloadImported">インポート分のダウンロード</string>
@@ -690,7 +690,7 @@
   <string name="youHaveAlreadyRegisteredTheEmail">あなたは既にメールアドレスを登録しています: %s</string>
   <string name="kidMode">キッズモード</string>
   <string name="kidModeExplanation">これは安全対策です。「キッズモード」ではサイト上の会話がすべて無効になります。子供や生徒のアカウントでこのモードを有効にしておけば、彼らを他のユーザーから守ることができます。</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">キッズモードでは Lichess のロゴに %s のアイコンが付き、安全であることを示します。</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">キッズモードでは Chess-Online のロゴに %s のアイコンが付き、安全であることを示します。</string>
   <string name="enableKidMode">キッズモードを有効化</string>
   <string name="disableKidMode">キッズモードを無効化</string>
   <string name="security">セキュリティ</string>
@@ -698,7 +698,7 @@
   <string name="alternativelyYouCanX">あるいは %s こともできます。</string>
   <string name="revokeAllSessions">すべてのセッションを取り消す</string>
   <string name="playChessEverywhere">どこでもチェスをプレイ</string>
-  <string name="asFreeAsLichess">Lichess は常に無料</string>
+  <string name="asFreeAsLichess">Chess-Online は常に無料</string>
   <string name="builtForTheLoveOfChessNotMoney">金ではなくチェス愛のために作られたアプリ</string>
   <string name="everybodyGetsAllFeaturesForFree">誰でもすべての機能が無料です</string>
   <string name="zeroAdvertisement">広告いっさいなし</string>
@@ -737,7 +737,7 @@
   <string name="usernameSuffixInvalid">ユーザー名の最後は英字か数字でなくてはなりません。</string>
   <string name="usernameCharsInvalid">ユーザー名に使えるのは英字、数字、アンダースコア、ハイフンだけです。</string>
   <string name="usernameUnacceptable">このユーザー名は認められません。</string>
-  <string name="directlySupportLichess">Lichess を支援（寄付）</string>
+  <string name="directlySupportLichess">Chess-Online を支援（寄付）</string>
   <string name="playChessInStyle">グッズ購入</string>
   <string name="chessBasics">チェスの基本</string>
   <string name="coaches">コーチ</string>
