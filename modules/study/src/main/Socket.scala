@@ -270,7 +270,7 @@ private final class Socket(
       selectedUids.map(lightUser).sequenceFu map { users =>
         Json.obj(
           "nb" -> total,
-          "users" -> users.flatten.map(_.titleName),
+          "users" -> users.flatten.map(_.idVsTitleName),
           "anons" -> anons
         )
       }

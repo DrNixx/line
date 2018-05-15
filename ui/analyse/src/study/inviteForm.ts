@@ -69,11 +69,14 @@ export function view(ctrl): VNode {
         'and who actively want to join this study.'
       ]),
       candidates.length ? h('div.users', candidates.map(function(username) {
+        const parts = username.split('/');
+        const id = parts[0];
+        const name = (parts.length > 1) ? parts[1] : parts[0];
         return h('span.user_link.button', {
-          key: username,
-          attrs: { 'data-href': '/@/' + username },
-          hook: bind('click', _ => ctrl.invite(username))
-        }, username);
+          key: id,
+          attrs: { 'data-href': '/@/' + id },
+          hook: bind('click', _ => ctrl.invite(id))
+        }, name);
       })) : undefined,
       h('div.input-wrapper', [ // because typeahead messes up with snabbdom
         h('input', {
