@@ -51,13 +51,13 @@ menu = menu("edit", s.withoutStream.some).some) {
   @if(s.streamer.listed.value) {
   <div class="status is@if(granted){-green}" data-icon="@if(granted){E}else{}">
     @if(granted) {
-    Your stream is approved and listed on <a href="@routes.Streamer.index()">lichess streamers list</a>.
+    Your stream is approved and listed on <a href="@routes.Streamer.index()">Chess-Online streamers list</a>.
     } else {
     @if(s.streamer.approval.requested) {
-    Your stream is being reviewed by moderators, and will soon be listed on <a href="@routes.Streamer.index()">lichess streamers list</a>.
+    Your stream is being reviewed by moderators, and will soon be listed on <a href="@routes.Streamer.index()">Chess-Online streamers list</a>.
     } else {
     @if(s.streamer.completeEnough) {
-    When you are ready to be listed on <a href="@routes.Streamer.index()">lichess streamers list</a>,
+    When you are ready to be listed on <a href="@routes.Streamer.index()">Chess-Online streamers list</a>,
     <form method="post" action="@routes.Streamer.approvalRequest">
       <button type="submmit" class="button" @if(!ctx.is(s.user)){disabled}>request a moderator review</button>
     </form>
@@ -97,7 +97,7 @@ menu = menu("edit", s.withoutStream.some).some) {
       @base.form.select(field, booleanChoices)
       }
       @if(granted) {
-      @base.form.group(form("approval.featured"), Html("Feature on lichess homepage"), help = Html("Moderators only").some, half = true) { field =>
+      @base.form.group(form("approval.featured"), Html("Feature on Chess-Online homepage"), help = Html("Moderators only").some, half = true) { field =>
       @base.form.select(field, booleanChoices)
       }
       } else {
@@ -117,7 +117,7 @@ menu = menu("edit", s.withoutStream.some).some) {
       }
     </div>
     <div>
-      @base.form.group(form("name"), Html("Your streamer name on lichess"), help = Html("Keep it short: 20 characters max").some, half = true) { field =>
+      @base.form.group(form("name"), Html("Your streamer name on Chess-Online"), help = Html("Keep it short: 20 characters max").some, half = true) { field =>
       @base.form.input(field, maxLength = 20)
       }
       @base.form.group(form("listed"), Html("Visible on the streamers page"), help = Html("When approved by moderators").some, half = true) { field =>
