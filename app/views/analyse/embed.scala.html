@@ -18,6 +18,13 @@
     @cssTag("analyse-embed.css")
     <link id="piece-sprite" href="@staticUrl(s"stylesheets/piece/${ctx.currentPieceSet}.css?v=@ctx.pageData.assetVersion")" type="text/css" rel="stylesheet"/>
     <meta charset="utf-8">
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-33469827-5');
+    </script>
   </head>
   <body class="base highlight @List(
     ctx.currentTheme.cssClass,
