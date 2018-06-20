@@ -63,6 +63,17 @@ asyncJs: Boolean = false)(body: Html)(implicit ctx: Context)
     <link rel="preload" href="@staticUrl("font80/fonts/lichess.woff")" as="font" type="font/woff" crossorigin/>
     <link rel="manifest" href="/manifest.json" />
     <meta name="twitter:site" content="@@playschess" />
+
+    @if(!ctx.userId && isProd) {
+    <script src="https://passport.chess-online.com/script"></script>
+    <script>
+        window.chessPassport.isLoggedIn(function (online) {
+            if (online) {
+                location.href = "/login?referrer=" + encodeURIComponent(location.href);
+            }
+        });
+    </script>
+    }
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-33469827-5"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
