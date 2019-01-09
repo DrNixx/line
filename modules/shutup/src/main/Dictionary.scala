@@ -8,9 +8,9 @@ package lila.shutup
 private object Dictionary {
 
   def en = dict("""
-(c|k)oc?k(y|suc?ker|)
-(c|k)um(shot|)
-(c|k)unt(ing|)
+[ck]oc?k(y|suc?ker|)
+[ck]um(shot|)
+[ck]unt(ing|)
 (f+|ph)(u{1,}|a{1,}|e{1,})c?k(er|r|u|k|ed|d|t|ing?|ign|en|tard?|face|off?|)
 fck(er|r|u|k|ed|d|t|ing?|ign|tard?|face|off?|)
 abortion
@@ -137,6 +137,7 @@ shemale
 shit(z|e|y|ty|bag|)
 sister
 slag
+slave
 slut
 spastic
 spaz
@@ -148,6 +149,7 @@ spunk
 stfu
 stripper
 stupid
+suicide
 taint
 tart
 terrorist
@@ -171,9 +173,9 @@ wog
 пидор
 пидераст
 pid(a|o)r
+Лох
+Сосать
 """)
 
   private def dict(words: String) = words.lines.filter(_.nonEmpty)
-
-  val youtubeIds = List("7UpltimWY_E")
 }
