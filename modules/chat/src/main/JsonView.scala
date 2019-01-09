@@ -18,6 +18,11 @@ object JsonView {
       "history" -> u.history
     )
 
+  def mobile(chat: AnyChat, writeable: Boolean = true) = Json.obj(
+    "lines" -> apply(chat),
+    "writeable" -> writeable
+  )
+
   implicit val chatIdWrites: Writes[Chat.Id] = stringIsoWriter(Chat.chatIdIso)
 
   lazy val timeoutReasons = Json toJson ChatTimeout.Reason.all
@@ -51,7 +56,7 @@ object JsonView {
     Json.obj(
       "u" -> l.username,
       "t" -> l.text
-    ).add("r" -> l.troll).add("d" -> l.deleted)
+    ).add("r" -> l.troll).add("d" -> l.deleted).add("title" -> l.title)
   }
 
   private implicit val playerLineWriter = Writes[PlayerLine] { l =>

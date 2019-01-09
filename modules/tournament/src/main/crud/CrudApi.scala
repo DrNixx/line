@@ -1,6 +1,11 @@
 package lila.tournament
 package crud
 
+import BSONHandlers._
+
+import lila.common.paginator.Paginator
+import lila.db.dsl._
+import lila.db.paginator.Adapter
 import lila.user.User
 
 final class CrudApi {
@@ -35,6 +40,13 @@ final class CrudApi {
     TournamentRepo insert tour inject tour
   }
 
+  def paginator(page: Int) = Paginator[Tournament](adapter = new Adapter[Tournament](
+    collection = TournamentRepo.coll,
+    selector = TournamentRepo.selectUnique,
+    projection = $empty,
+    sort = $doc("startsAt" -> -1)
+  ), currentPage = page)
+
   private def empty = Tournament.make(
     by = Left(User.lichessId),
     name = none,
@@ -44,26 +56,25 @@ final class CrudApi {
     variant = chess.variant.Standard,
     position = chess.StartingPosition.initial,
     mode = chess.Mode.Rated,
-    `private` = false,
     password = None,
     waitMinutes = 0,
+    startDate = none,
     berserkable = true
   )
 
   private def updateTour(tour: Tournament, data: CrudForm.Data) = {
     import data._
     val clock = chess.Clock.Config((clockTime * 60).toInt, clockIncrement)
-    val v = chess.variant.Variant.orDefault(variant)
     tour.copy(
       name = name,
       clock = clock,
       minutes = minutes,
-      variant = v,
+      variant = realVariant,
       startsAt = date,
       schedule = Schedule(
         freq = Schedule.Freq.Unique,
         speed = Schedule.Speed.fromClock(clock),
-        variant = v,
+        variant = realVariant,
         position = chess.StartingPosition.initial,
         at = date
       ).some,
@@ -74,11 +85,11 @@ final class CrudApi {
         iconFont = none,
         iconImg = image.some.filter(_.nonEmpty)
       ).some,
-      position = DataForm.startingPosition(data.position, v),
+      position = DataForm.startingPosition(data.position, realVariant),
       noBerserk = !data.berserkable
     ) |> { tour =>
         tour.perfType.fold(tour) { perfType =>
-          tour.copy(conditions = data.conditions convert perfType)
+          tour.copy(conditions = data.conditions.convert(perfType, Map.empty)) // the CRUD form doesn't support team restrictions so Map.empty is fine
         }
       }
   }

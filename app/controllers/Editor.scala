@@ -25,7 +25,7 @@ object Editor extends LilaController {
 
   def load(urlFen: String) = Open { implicit ctx =>
     val fenStr = lila.common.String.decodeUriPath(urlFen)
-      .map(_.replace("_", " ").trim).filter(_.nonEmpty)
+      .map(_.replace('_', ' ').trim).filter(_.nonEmpty)
       .orElse(get("fen"))
     fuccess {
       val situation = readFen(fenStr)
@@ -41,7 +41,7 @@ object Editor extends LilaController {
   def data = Open { implicit ctx =>
     fuccess {
       val situation = readFen(get("fen"))
-      Ok(html.board.JsData(
+      Ok(html.board.bits.jsData(
         sit = situation,
         fen = Forsyth >> situation,
         animationDuration = Env.api.EditorAnimationDuration

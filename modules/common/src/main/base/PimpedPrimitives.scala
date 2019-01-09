@@ -13,16 +13,7 @@ final class PimpedBoolean(private val self: Boolean) extends AnyVal {
    */
   def ??[A](a: => A)(implicit z: Zero[A]): A = if (self) a else z.zero
 
-  def !(f: => Unit) = if (self) f
-
-  def fold[A](t: => A, f: => A): A = if (self) t else f
-
-  def ?[X](t: => X) = new { def |(f: => X) = if (self) t else f }
-
   def option[A](a: => A): Option[A] = if (self) Some(a) else None
-
-  def optionFu[A](v: => Fu[A])(implicit ec: ExecutionContext): Fu[Option[A]] =
-    if (self) v map { Some(_) } else fuccess(None)
 }
 
 final class PimpedLong(private val self: Long) extends AnyVal {

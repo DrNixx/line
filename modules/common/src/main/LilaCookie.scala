@@ -1,16 +1,14 @@
 package lila.common
 
-import java.util.regex.Matcher.quoteReplacement
-
 import ornicar.scalalib.Random
 import play.api.mvc.{ Cookie, DiscardingCookie, Session, RequestHeader }
 
 object LilaCookie {
 
-  private val domainRegex = """^.+(\.[^\.]+\.[^\.]+)$""".r
+  private val domainRegex = """\.[^.]++\.[^.]++$""".r
 
   private def domain(req: RequestHeader): String =
-    domainRegex.replaceAllIn(req.domain, m => quoteReplacement(m group 1))
+    domainRegex.findFirstIn(req.domain).getOrElse(req.domain)
 
   val sessionId = "sid"
 
@@ -20,7 +18,7 @@ object LilaCookie {
     s + (name -> value)
   }
 
-  def newSession(implicit req: RequestHeader): Cookie = withSession(identity)
+  def newSession(implicit req: RequestHeader): Cookie = withSession(_ => Session.emptyCookie)
 
   def withSession(op: Session => Session)(implicit req: RequestHeader): Cookie = cookie(
     Session.COOKIE_NAME,

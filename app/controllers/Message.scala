@@ -33,6 +33,15 @@ object Message extends LilaController {
     }
   }
 
+  def unreadCount = Auth { implicit ctx => me =>
+    NotForKids {
+      negotiate(
+        html = notFound,
+        api = _ => JsonOk(api unreadCount me)
+      )
+    }
+  }
+
   def thread(id: String) = Auth { implicit ctx => implicit me =>
     NotForKids {
       negotiate(
@@ -112,7 +121,7 @@ object Message extends LilaController {
             }
           ),
           api = _ => forms.thread(me).bindFromRequest.fold(
-            err => fuccess(BadRequest(errorsAsJson(err))),
+            jsonFormError,
             data => api.makeThread(data, me) map { thread =>
               Ok(Json.obj("ok" -> true, "id" -> thread.id))
             }

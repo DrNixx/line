@@ -43,6 +43,15 @@ final class PimpedString(private val s: String) extends AnyVal {
   def boot[A](v: => A): A = lila.common.Chronometer.syncEffect(v) { lap =>
     lila.log.boot.info(s"${lap.millis}ms $s")
   }
+
+  def replaceIf(t: Char, r: Char): String =
+    if (s.indexOf(t) >= 0) s.replace(t, r) else s
+
+  def replaceIf(t: Char, r: CharSequence): String =
+    if (s.indexOf(t) >= 0) s.replace(String.valueOf(t), r) else s
+
+  def replaceIf(t: CharSequence, r: CharSequence): String =
+    if (s.contains(t)) s.replace(t, r) else s
 }
 
 final class PimpedConfig(private val config: Config) extends AnyVal {
@@ -72,12 +81,22 @@ final class PimpedTry[A](private val v: Try[A]) extends AnyVal {
   }
 
   def future: Fu[A] = fold(Future.failed, fuccess)
+
+  def toEither: Either[Throwable, A] = v match {
+    case scala.util.Success(res) => Right(res)
+    case scala.util.Failure(err) => Left(err)
+  }
 }
 
 final class PimpedEither[A, B](private val v: Either[A, B]) extends AnyVal {
   import ornicar.scalalib.ValidTypes
 
   def toValid: Valid[B] = ValidTypes.eitherToValid(v)
+
+  def orElse(other: => Either[A, B]): Either[A, B] = v match {
+    case scala.util.Right(res) => Right(res)
+    case scala.util.Left(_) => other
+  }
 }
 
 final class PimpedFiniteDuration(private val d: FiniteDuration) extends AnyVal {

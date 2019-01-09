@@ -6,37 +6,45 @@ import akka.pattern.ask
 import lila.hub.actorApi.map._
 import lila.socket.actorApi.{ Connected => _, _ }
 import lila.socket.Handler
-import lila.socket.Socket.Uid
+import lila.socket.Socket.{ Uid, SocketVersion }
 import lila.user.User
-import makeTimeout.short
+import lila.common.ApiVersion
 
 private[challenge] final class SocketHandler(
     hub: lila.hub.Env,
-    socketHub: ActorRef,
+    socketMap: SocketMap,
     pingChallenge: Challenge.ID => Funit
 ) {
+
+  import ChallengeSocket._
 
   def join(
     challengeId: Challenge.ID,
     uid: Uid,
     userId: Option[User.ID],
-    owner: Boolean
-  ): Fu[Option[JsSocketHandler]] = for {
-    socket ← socketHub ? Get(challengeId) mapTo manifest[ActorRef]
-    join = Socket.Join(uid, userId = userId, owner = owner)
-    handler ← Handler(hub, socket, uid, join) {
-      case Socket.Connected(enum, member) =>
-        (controller(socket, challengeId, uid, member), enum, member)
+    owner: Boolean,
+    version: Option[SocketVersion],
+    apiVersion: ApiVersion
+  ): Fu[JsSocketHandler] = {
+    val socket = socketMap getOrMake challengeId
+    socket.ask[Connected](Join(uid, userId, owner, version, _)) map {
+      case Connected(enum, member) => Handler.iteratee(
+        hub,
+        controller(socket, challengeId, uid, member),
+        member,
+        socket,
+        uid,
+        apiVersion
+      ) -> enum
     }
-  } yield handler.some
+  }
 
   private def controller(
-    socket: ActorRef,
+    socket: ChallengeSocket,
     challengeId: Challenge.ID,
     uid: Uid,
-    member: Socket.Member
+    member: Member
   ): Handler.Controller = {
-    case ("p", o) => socket ! Ping(uid, o)
     case ("ping", _) if member.owner => pingChallenge(challengeId)
   }
 }

@@ -21,14 +21,15 @@ case class User(
     booster: Boolean = false,
     toints: Int = 0,
     playTime: Option[User.PlayTime],
-    title: Option[String] = None,
+    title: Option[Title] = None,
     createdAt: DateTime,
     seenAt: Option[DateTime],
     kid: Boolean,
     lang: Option[String],
     plan: Plan,
     reportban: Boolean = false,
-    rankban: Boolean = false
+    rankban: Boolean = false,
+    totpSecret: Option[TotpSecret] = None
 ) extends Ordered[User] {
 
   override def equals(other: Any) = other match {
@@ -39,7 +40,7 @@ case class User(
   override def toString =
     s"User $username(${perfs.bestRating}) games:${count.game}${troll ?? " troll"}${engine ?? " engine"}"
 
-  def light = LightUser(id = id, name = username, title = title, isPatron = isPatron)
+  def light = LightUser(id = id, name = username, title = title.map(_.value), isPatron = isPatron)
 
   def realNameOrUsername = profileOrDefault.nonEmptyRealName | username
 
@@ -87,7 +88,7 @@ case class User(
 
   private def bestOf(perfTypes: List[PerfType], nb: Int) =
     perfTypes.sortBy { pt =>
-      -(perfs(pt).nb * PerfType.totalTimeRoughEstimation.get(pt).fold(0)(_.centis))
+      -(perfs(pt).nb * PerfType.totalTimeRoughEstimation.get(pt).fold(0)(_.roundSeconds))
     } take nb
 
   private val firstRow: List[PerfType] = List(PerfType.Bullet, PerfType.Blitz, PerfType.Rapid, PerfType.Classical, PerfType.Correspondence)
@@ -109,10 +110,12 @@ case class User(
 
   def is(name: String) = id == User.normalize(name)
 
-  def isBot = title has User.botTitle
+  def isBot = title has Title.BOT
   def noBot = !isBot
 
   def rankable = noBot && !rankban
+
+  def addRole(role: String) = copy(roles = role :: roles)
 }
 
 object User {
@@ -121,17 +124,34 @@ object User {
 
   type CredentialCheck = ClearPassword => Boolean
   case class LoginCandidate(user: User, check: CredentialCheck) {
-    def apply(p: ClearPassword): Option[User] = {
-      val res = check(p)
-      lila.mon.user.auth.result(res)()
-      res option user
+    import LoginCandidate._
+    def apply(p: PasswordAndToken): Result = {
+      val res =
+        if (check(p.password)) user.totpSecret.fold[Result](Success(user)) { tp =>
+          p.token.fold[Result](MissingTotpToken) { token =>
+            if (tp verify token) Success(user) else InvalidTotpToken
+          }
+        }
+        else InvalidUsernameOrPassword
+      lila.mon.user.auth.result(res.success)()
+      res
     }
+    def option(p: PasswordAndToken): Option[User] = apply(p).toOption
+  }
+  object LoginCandidate {
+    sealed abstract class Result(val toOption: Option[User]) {
+      def success = toOption.isDefined
+    }
+    case class Success(user: User) extends Result(user.some)
+    case object InvalidUsernameOrPassword extends Result(none)
+    case object MissingTotpToken extends Result(none)
+    case object InvalidTotpToken extends Result(none)
   }
 
   val anonymous = "Anonymous"
   val lichessId = "lichess"
-
-  val idPattern = """^[\w-]{3,20}$""".r.pattern
+  val broadcasterId = "broadcaster"
+  def isOfficial(userId: ID) = userId == lichessId || userId == broadcasterId
 
   case class GDPRErase(user: User) extends AnyVal
   case class Erased(value: Boolean) extends AnyVal
@@ -142,9 +162,16 @@ object User {
   case class Active(user: User)
 
   case class Emails(current: Option[EmailAddress], previous: Option[EmailAddress])
+  case class WithEmails(user: User, emails: Emails)
 
   case class ClearPassword(value: String) extends AnyVal {
     override def toString = "ClearPassword(****)"
+  }
+  case class TotpToken(value: String) extends AnyVal
+  case class PasswordAndToken(password: ClearPassword, token: Option[TotpToken])
+
+  case class Speaker(username: String, title: Option[Title], enabled: Boolean, troll: Option[Boolean]) {
+    def isBot = title has Title.BOT
   }
 
   case class PlayTime(total: Int, tv: Int) {
@@ -156,9 +183,10 @@ object User {
   implicit def playTimeHandler = reactivemongo.bson.Macros.handler[PlayTime]
 
   // what existing usernames are like
-  val historicalUsernameRegex = """(?i)[a-z0-9][\w-]*[a-z0-9]""".r
+  val historicalUsernameRegex = """(?i)[a-z0-9][\w-]{0,28}[a-z0-9]""".r
+
   // what new usernames should be like -- now split into further parts for clearer error messages
-  val newUsernameRegex = """(?i)[a-z][\w-]*[a-z0-9]""".r
+  val newUsernameRegex = """(?i)[a-z][\w-]{0,28}[a-z0-9]""".r
 
   val newUsernamePrefix = """(?i)[a-z].*""".r
 
@@ -166,30 +194,9 @@ object User {
 
   val newUsernameChars = """(?i)[\w-]*""".r
 
-  def couldBeUsername(str: User.ID) = historicalUsernameRegex.pattern.matcher(str).matches && str.size < 30
+  def couldBeUsername(str: User.ID) = historicalUsernameRegex.matches(str)
 
   def normalize(username: String) = username.toLowerCase
-
-  val titles = Seq(
-    "GM" -> "Grandmaster",
-    "WGM" -> "Woman Grandmaster",
-    "IM" -> "International Master",
-    "WIM" -> "Woman Intl. Master",
-    "FM" -> "FIDE Master",
-    "WFM" -> "Woman FIDE Master",
-    "NM" -> "National Master",
-    "CM" -> "Candidate Master",
-    "WCM" -> "Woman Candidate Master",
-    "WNM" -> "Woman National Master",
-    "LM" -> "Lichess Master",
-    "BOT" -> "Chess Robot"
-  )
-
-  val botTitle = LightUser.botTitle
-
-  val titlesMap = titles.toMap
-
-  def titleName(title: String) = titlesMap get title getOrElse title
 
   object BSONFields {
     val id = "_id"
@@ -222,10 +229,12 @@ object User {
     val salt = "salt"
     val bpass = "bpass"
     val sha512 = "sha512"
+    val totpSecret = "totp"
   }
 
   import lila.db.BSON
   import lila.db.dsl._
+  import Title.titleBsonHandler
 
   implicit val userBSONHandler = new BSON[User] {
 
@@ -235,6 +244,7 @@ object User {
     private implicit def profileHandler = Profile.profileBSONHandler
     private implicit def perfsHandler = Perfs.perfsBSONHandler
     private implicit def planHandler = Plan.planBSONHandler
+    private implicit def totpSecretHandler = TotpSecret.totpSecretBSONHandler
 
     def reads(r: BSON.Reader): User = User(
       id = r str id,
@@ -254,10 +264,11 @@ object User {
       seenAt = r dateO seenAt,
       kid = r boolD kid,
       lang = r strO lang,
-      title = r strO title,
+      title = r.getO[Title](title),
       plan = r.getO[Plan](plan) | Plan.empty,
       reportban = r boolD reportban,
-      rankban = r boolD rankban
+      rankban = r boolD rankban,
+      totpSecret = r.getO[TotpSecret](totpSecret)
     )
 
     def writes(w: BSON.Writer, o: User) = BSONDocument(
@@ -281,7 +292,10 @@ object User {
       title -> o.title,
       plan -> o.plan.nonEmpty,
       reportban -> w.boolO(o.reportban),
-      rankban -> w.boolO(o.rankban)
+      rankban -> w.boolO(o.rankban),
+      totpSecret -> o.totpSecret
     )
   }
+
+  implicit val speakerHandler = reactivemongo.bson.Macros.handler[Speaker]
 }

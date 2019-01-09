@@ -29,15 +29,17 @@ final class Env(
 
   lazy val api = new RelationApi(
     coll = coll,
-    actor = hub.actor.relation,
+    actor = hub.relation,
     bus = system.lilaBus,
-    timeline = hub.actor.timeline,
-    reporter = hub.actor.report,
+    timeline = hub.timeline,
+    reporter = hub.report,
     followable = followable,
     asyncCache = asyncCache,
     maxFollow = MaxFollow,
     maxBlock = MaxBlock
   )
+
+  lazy val stream = new RelationStream(coll = coll)(system)
 
   val online = new OnlineDoing(
     api,

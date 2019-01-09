@@ -16,18 +16,27 @@ final class EventStream(
     setOnline: User.ID => Unit
 ) {
 
-  import lila.common.HttpStream._
+  private case object SetOnline
 
-  def apply(me: User, gamesInProgress: List[Game], challenges: List[Challenge]): Enumerator[String] = {
+  def apply(me: User, gamesInProgress: List[Game], challenges: List[Challenge]): Enumerator[Option[JsObject]] = {
 
     var stream: Option[ActorRef] = None
+
+    val classifiers = List(
+      Symbol(s"userStartGame:${me.id}"),
+      Symbol(s"rematchFor:${me.id}"),
+      'challenge
+    )
 
     val enumerator = Concurrent.unicast[Option[JsObject]](
       onStart = channel => {
         val actor = system.actorOf(Props(new Actor {
 
-          gamesInProgress foreach pushGameStart
-          challenges foreach pushChallenge
+          override def postStop() = {
+            super.postStop()
+            system.lilaBus.unsubscribe(self, classifiers)
+          }
+
           self ! SetOnline
 
           def receive = {
@@ -40,37 +49,36 @@ final class EventStream(
                 self ! SetOnline
               }
 
-            case UserStartGame(userId, game) if userId == me.id => pushGameStart(game)
+            case UserStartGame(userId, game) if userId == me.id => channel push toJson(game).some
 
-            case lila.challenge.Event.Create(c) if c.destUserId has me.id => pushChallenge(c)
+            case lila.challenge.Event.Create(c) if c.destUserId has me.id => channel push toJson(c).some
 
             // pretend like the rematch is a challenge
             case lila.hub.actorApi.round.RematchOffer(gameId) => ChallengeMaker.makeRematchFor(gameId, me) foreach {
-              _ foreach { c => pushChallenge(c.copy(_id = gameId)) }
+              _ foreach { c =>
+                channel push toJson(c.copy(_id = gameId)).some
+              }
             }
           }
-
-          def pushGameStart(game: Game) = channel push Json.obj(
-            "type" -> "gameStart",
-            "game" -> Json.obj("id" -> game.id)
-          ).some
-
-          def pushChallenge(c: lila.challenge.Challenge) = channel push Json.obj(
-            "type" -> "challenge",
-            "challenge" -> challengeJsonView(none)(c)
-          ).some
         }))
-        system.lilaBus.subscribe(
-          actor,
-          Symbol(s"userStartGame:${me.id}"),
-          Symbol(s"rematchFor:${me.id}"),
-          'challenge
-        )
+        system.lilaBus.subscribe(actor, classifiers: _*)
         stream = actor.some
       },
-      onComplete = onComplete(stream, system)
+      onComplete = stream foreach { _ ! PoisonPill }
     )
 
-    enumerator &> stringifyOrEmpty
+    lila.common.Iteratee.prepend(
+      ((gamesInProgress map toJson) ::: (challenges map toJson)) map some,
+      enumerator
+    )
   }
+
+  private def toJson(game: Game) = Json.obj(
+    "type" -> "gameStart",
+    "game" -> Json.obj("id" -> game.id)
+  )
+  private def toJson(c: Challenge) = Json.obj(
+    "type" -> "challenge",
+    "challenge" -> challengeJsonView(none)(c)
+  )
 }

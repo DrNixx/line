@@ -7,6 +7,7 @@ import play.api.data.Forms._
 import play.api.data.validation.Constraints._
 
 import chess.StartingPosition
+import chess.variant.Variant
 import lila.common.Form._
 
 object CrudForm {
@@ -17,17 +18,17 @@ object CrudForm {
   val maxHomepageHours = 72
 
   lazy val apply = Form(mapping(
-    "name" -> nonEmptyText(minLength = 3, maxLength = 40),
+    "name" -> text(minLength = 3, maxLength = 40),
     "homepageHours" -> number(min = 0, max = maxHomepageHours),
-    "clockTime" -> numberInDouble(clockTimePrivateChoices),
-    "clockIncrement" -> numberIn(clockIncrementPrivateChoices),
+    "clockTime" -> numberInDouble(clockTimeChoices),
+    "clockIncrement" -> numberIn(clockIncrementChoices),
     "minutes" -> number(min = 20, max = 1440),
-    "variant" -> number.verifying(validVariantIds contains _),
-    "position" -> nonEmptyText.verifying(DataForm.positions contains _),
+    "variant" -> number.verifying(Variant exists _),
+    "position" -> text.verifying(DataForm.positions contains _),
     "date" -> utcDate,
     "image" -> stringIn(imageChoices),
-    "headline" -> nonEmptyText(minLength = 5, maxLength = 30),
-    "description" -> nonEmptyText(minLength = 10, maxLength = 400),
+    "headline" -> text(minLength = 5, maxLength = 30),
+    "description" -> text(minLength = 10, maxLength = 400),
     "conditions" -> Condition.DataForm.all,
     "berserkable" -> boolean
   )(CrudForm.Data.apply)(CrudForm.Data.unapply)
@@ -63,6 +64,8 @@ object CrudForm {
       conditions: Condition.DataForm.AllSetup,
       berserkable: Boolean
   ) {
+
+    def realVariant = Variant orDefault variant
 
     def validClock = (clockTime + clockIncrement) > 0
 

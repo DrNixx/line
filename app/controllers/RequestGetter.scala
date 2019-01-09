@@ -3,6 +3,8 @@ package controllers
 import lila.api._
 import lila.socket.Socket.Uid
 import lila.user.UserContext
+import lila.common.Form.trueish
+import lila.common.IsMobile
 
 import play.api.mvc.RequestHeader
 
@@ -40,5 +42,6 @@ trait RequestGetter {
   protected def getBoolOpt(name: String, req: RequestHeader) =
     (getInt(name, req) map (trueish)) orElse (get(name, req) map trueish)
 
-  private def trueish(v: Any) = v == 1 || v == "true"
+  protected def getMobile(implicit ctx: UserContext) =
+    IsMobile(getBool("mobile"))
 }

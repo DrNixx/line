@@ -6,12 +6,15 @@ import play.api.mvc.RequestHeader
 object HTTPRequest {
 
   def isXhr(req: RequestHeader): Boolean =
-    (req.headers get "X-Requested-With") contains "XMLHttpRequest"
+    req.headers get "X-Requested-With" contains "XMLHttpRequest"
 
   def isSocket(req: RequestHeader): Boolean =
     (req.headers get HeaderNames.UPGRADE).exists(_.toLowerCase == "websocket")
 
   def isSynchronousHttp(req: RequestHeader) = !isXhr(req) && !isSocket(req)
+
+  def isEventSource(req: RequestHeader): Boolean =
+    req.headers get "Accept" contains "text/event-stream"
 
   def isSafe(req: RequestHeader) = req.method == "GET" || req.method == "HEAD" || req.method == "OPTIONS"
   def isUnsafe(req: RequestHeader) = !isSafe(req)
@@ -44,23 +47,23 @@ object HTTPRequest {
       """coccoc|integromedb|contentcrawlerspider|toplistbot|seokicks-robot|it2media-domain-crawler|ip-web-crawler\.com|siteexplorer\.info|elisabot|proximic|changedetection|blexbot|arabot|wesee:search|niki-bot|crystalsemanticsbot|rogerbot|360spider|psbot|interfaxscanbot|lipperheyseoservice|ccmetadatascaper|g00g1e\.net|grapeshotcrawler|urlappendbot|brainobot|fr-crawler|binlar|simplecrawler|simplecrawler|livelapbot|twitterbot|cxensebot|smtbot|facebookexternalhit|daumoa|sputnikimagebot|visionutils|yisouspider|parsijoobot|mediatoolkit\.com|semrushbot""")
   }
 
-  case class UaMatcher(regex: String) {
-    val pattern = regex.r.pattern
+  case class UaMatcher(rStr: String) {
+    private val regex = rStr.r
 
-    def apply(req: RequestHeader): Boolean =
-      userAgent(req) ?? { ua => pattern.matcher(ua).find }
+    def apply(req: RequestHeader): Boolean = userAgent(req) ?? { regex.find(_) }
   }
 
-  def isHuman(req: RequestHeader) = !isBot(req)
+  def isFishnet(req: RequestHeader) = req.path startsWith "/fishnet/"
+
+  def isHuman(req: RequestHeader) = !isBot(req) && !isFishnet(req)
 
   def isFacebookOrTwitterBot(req: RequestHeader) = userAgent(req) ?? { ua =>
     ua.contains("facebookexternalhit/") || ua.contains("twitterbot/")
   }
 
-  private val fileExtensionPattern = """.+\.[a-z0-9]{2,4}$""".r.pattern
+  private[this] val fileExtensionRegex = """\.(?<!^\.)[a-z0-9]{2,4}$""".r
 
-  def hasFileExtension(req: RequestHeader) =
-    fileExtensionPattern.matcher(req.path).matches
+  def hasFileExtension(req: RequestHeader) = fileExtensionRegex.find(req.path)
 
   def weirdUA(req: RequestHeader) = userAgent(req).fold(true)(_.size < 30)
 
@@ -73,4 +76,7 @@ object HTTPRequest {
   def isOAuth(req: RequestHeader) = req.headers.toMap.contains(HeaderNames.AUTHORIZATION)
 
   def isHttp10(req: RequestHeader) = req.version == "HTTP/1.0"
+
+  def acceptsNdJson(req: RequestHeader) = req.headers get HeaderNames.ACCEPT contains "application/x-ndjson"
+  def acceptsJson(req: RequestHeader) = req.headers get HeaderNames.ACCEPT contains "application/json"
 }

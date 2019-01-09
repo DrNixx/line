@@ -31,21 +31,21 @@ trait DateHelper { self: I18nHelper =>
 
   private def dateTimeFormatter(ctx: Context): DateTimeFormatter =
     dateTimeFormatters.getOrElseUpdate(
-      lang(ctx).code,
-      DateTimeFormat forStyle dateTimeStyle withLocale lang(ctx).toLocale
+      ctx.lang.code,
+      DateTimeFormat forStyle dateTimeStyle withLocale ctx.lang.toLocale
     )
 
   private def dateFormatter(ctx: Context): DateTimeFormatter =
     dateFormatters.getOrElseUpdate(
-      lang(ctx).code,
-      DateTimeFormat forStyle dateStyle withLocale lang(ctx).toLocale
+      ctx.lang.code,
+      DateTimeFormat forStyle dateStyle withLocale ctx.lang.toLocale
     )
 
   private def periodFormatter(ctx: Context): PeriodFormatter =
     periodFormatters.getOrElseUpdate(
-      lang(ctx).code, {
+      ctx.lang.code, {
         Locale setDefault Locale.ENGLISH
-        PeriodFormat wordBased lang(ctx).toLocale
+        PeriodFormat wordBased ctx.lang.toLocale
       }
     )
 
@@ -74,13 +74,14 @@ trait DateHelper { self: I18nHelper =>
   def isoDate(date: DateTime): String = isoFormatter print date
 
   private val oneDayMillis = 1000 * 60 * 60 * 24
-  def momentFromNow(date: DateTime, alwaysRelative: Boolean = false) = Html {
+  def momentFromNow(date: DateTime, alwaysRelative: Boolean = false, once: Boolean = false) = Html {
     if (!alwaysRelative && (date.getMillis - nowMillis) > oneDayMillis) absClientDateTime(date)
-    s"""<time class="timeago" datetime="${isoDate(date)}"></time>"""
+    s"""<time class="timeago${if (once) " once" else ""}" datetime="${isoDate(date)}"></time>"""
   }
   def absClientDateTime(date: DateTime) = Html {
     s"""<time class="timeago abs" datetime="${isoDate(date)}"></time>"""
   }
+  def momentFromNowOnce(date: DateTime) = momentFromNow(date, once = true)
 
   def secondsFromNow(seconds: Int, alwaysRelative: Boolean = false)(implicit ctx: Context) =
     momentFromNow(DateTime.now plusSeconds seconds, alwaysRelative)

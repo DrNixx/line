@@ -17,8 +17,8 @@ private[challenge] final class Joiner(onStart: String => Unit) {
           def makeChess(variant: chess.variant.Variant): chess.Game =
             chess.Game(situation = Situation(variant), clock = c.clock.map(_.config.toClock))
 
-          val baseState = c.initialFen.ifTrue(c.variant.fromPosition) flatMap {
-            Forsyth.<<<@(chess.variant.FromPosition, _)
+          val baseState = c.initialFen.ifTrue(c.variant.fromPosition) flatMap { fen =>
+            Forsyth.<<<@(chess.variant.FromPosition, fen.value)
           }
           val (chessGame, state) = baseState.fold(makeChess(c.variant) -> none[SituationPlus]) {
             case sit @ SituationPlus(s, _) =>
@@ -36,11 +36,11 @@ private[challenge] final class Joiner(onStart: String => Unit) {
             chess = chessGame,
             whitePlayer = Player.make(chess.White, c.finalColor.fold(challengerUser, destUser), perfPicker),
             blackPlayer = Player.make(chess.Black, c.finalColor.fold(destUser, challengerUser), perfPicker),
-            mode = chessGame.board.variant.fromPosition.fold(Mode.Casual, c.mode),
-            source = chessGame.board.variant.fromPosition.fold(Source.Position, Source.Friend),
+            mode = if (chessGame.board.variant.fromPosition) Mode.Casual else c.mode,
+            source = if (chessGame.board.variant.fromPosition) Source.Position else Source.Friend,
             daysPerTurn = c.daysPerTurn,
             pgnImport = None
-          ).copy(id = c.id).|> { g =>
+          ).withId(c.id).|> { g =>
               state.fold(g) {
                 case sit @ SituationPlus(Situation(board, _), _) => g.copy(
                   chess = g.chess.copy(

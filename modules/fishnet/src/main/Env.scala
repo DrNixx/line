@@ -3,6 +3,7 @@ package lila.fishnet
 import akka.actor._
 import com.typesafe.config.Config
 import scala.concurrent.duration._
+import scala.concurrent.Promise
 
 final class Env(
     config: Config,
@@ -35,14 +36,10 @@ final class Env(
     asyncCache = asyncCache
   )
 
-  private val moveDb = new MoveDB(
-    roundMap = hub.actor.roundMap,
-    system = system
-  )
+  private val moveDb = new MoveDB(system = system)
 
   private val sequencer = new lila.hub.FutureSequencer(
     system = system,
-    receiveTimeout = None,
     executionTimeout = Some(1 second),
     logger = logger
   )
@@ -61,12 +58,7 @@ final class Env(
     sequencer = sequencer,
     monitor = monitor,
     sink = sink,
-    socketExists = id => {
-      import lila.hub.actorApi.map.Exists
-      import akka.pattern.ask
-      import makeTimeout.short
-      hub.socket.round ? Exists(id) mapTo manifest[Boolean]
-    },
+    socketExists = id => bus.ask[Boolean]('roundSocket)(lila.hub.actorApi.map.Exists(id, _)),
     clientVersion = clientVersion,
     offlineMode = OfflineMode,
     analysisNodes = AnalysisNodes
@@ -76,7 +68,7 @@ final class Env(
     moveDb = moveDb,
     uciMemo = uciMemo,
     maxPlies = MovePlies
-  )
+  )(system)
 
   private val limiter = new Limiter(
     analysisColl = analysisColl,

@@ -32,7 +32,7 @@ object UserAnalysis extends LilaController with TheftPrevention {
 
   def load(urlFen: String, variant: Variant) = Open { implicit ctx =>
     val decodedFen: Option[FEN] = lila.common.String.decodeUriPath(urlFen)
-      .map(_.replace("_", " ").trim).filter(_.nonEmpty)
+      .map(_.replace('_', ' ').trim).filter(_.nonEmpty)
       .orElse(get("fen")) map FEN.apply
     val pov = makePov(decodedFen, variant)
     val orientation = get("color").flatMap(chess.Color.apply) | pov.color
@@ -58,7 +58,7 @@ object UserAnalysis extends LilaController with TheftPrevention {
       mode = chess.Mode.Casual,
       source = lila.game.Source.Api,
       pgnImport = None
-    ).copy(id = "synthetic"),
+    ).withId("synthetic"),
     from.situation.color
   )
 
@@ -70,7 +70,7 @@ object UserAnalysis extends LilaController with TheftPrevention {
           if (game.replayable) Redirect(routes.Round.watcher(game.id, color)).fuccess
           else for {
             initialFen <- GameRepo initialFen game.id
-            data <- Env.api.roundApi.userAnalysisJson(pov, ctx.pref, initialFen map FEN, pov.color, owner = isMyPov(pov), me = ctx.me)
+            data <- Env.api.roundApi.userAnalysisJson(pov, ctx.pref, initialFen, pov.color, owner = isMyPov(pov), me = ctx.me)
           } yield NoCache(Ok(html.board.userAnalysis(data, pov))),
         api = apiVersion => mobileAnalysis(pov, apiVersion)
       )
@@ -88,16 +88,16 @@ object UserAnalysis extends LilaController with TheftPrevention {
             Env.api.roundApi.review(pov, apiVersion,
               tv = none,
               analysis,
-              initialFenO = initialFen.map(FEN).some,
+              initialFenO = initialFen.some,
               withFlags = WithFlags(division = true, opening = true, clocks = true, movetimes = true)) map { data =>
                 Ok(data.add("crosstable", crosstable))
               }
         }
     }
 
-  def socket = SocketOption { implicit ctx =>
+  def socket(apiVersion: Int) = SocketOption { implicit ctx =>
     getSocketUid("sri") ?? { uid =>
-      Env.analyse.socketHandler.join(uid, ctx.me) map some
+      Env.analyse.socketHandler.join(uid, ctx.me, apiVersion) map some
     }
   }
 
@@ -105,7 +105,7 @@ object UserAnalysis extends LilaController with TheftPrevention {
   def pgn = OpenBody { implicit ctx =>
     implicit val req = ctx.body
     Env.importer.forms.importForm.bindFromRequest.fold(
-      failure => BadRequest(errorsAsJson(failure)).fuccess,
+      jsonFormError,
       data => Env.importer.importer.inMemory(data).fold(
         err => BadRequest(jsonError(err.shows)).fuccess, {
           case (game, fen) =>

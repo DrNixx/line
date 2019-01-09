@@ -23,7 +23,7 @@ final class Env(
     gamePgnDump: lila.game.PgnDump,
     gameCache: lila.game.Cached,
     userEnv: lila.user.Env,
-    analyseEnv: lila.analyse.Env,
+    annotator: lila.analyse.Annotator,
     lobbyEnv: lila.lobby.Env,
     setupEnv: lila.setup.Env,
     getSimul: Simul.ID => Fu[Option[Simul]],
@@ -35,8 +35,6 @@ final class Env(
     challengeJsonView: lila.challenge.JsonView,
     val isProd: Boolean
 ) {
-
-  val CliUsername = config getString "cli.username"
 
   val apiToken = config getString "api.token"
 
@@ -51,6 +49,7 @@ final class Env(
     val SocketDomain = config getString "net.socket.domain"
     val Email = config getString "net.email"
     val Crawlable = config getBoolean "net.crawlable"
+    val RateLimit = config getBoolean "net.ratelimit"
   }
   val PrismicApiUrl = config getString "prismic.api_url"
   val EditorAnimationDuration = config duration "editor.animation.duration"
@@ -60,16 +59,16 @@ final class Env(
   private val InfluxEventEndpoint = config getString "api.influx_event.endpoint"
   private val InfluxEventEnv = config getString "api.influx_event.env"
 
-  val assetVersionSetting = settingStore[Int](
-    "assetVersion",
-    default = config getInt "net.asset.version",
-    text = "Assets version. Increment to force all clients to load a new version of static assets. Decrement to serve a previous revision of static assets.".some,
-    init = (config, db) => config.value max db.value
+  val cspEnabledSetting = settingStore[Boolean](
+    "cspEnabled",
+    default = true,
+    text = "Enable CSP for everyone.".some
   )
-  val roundRouterSetting = settingStore[Boolean](
-    "roundRouter",
+
+  val wasmxEnabledSetting = settingStore[Boolean](
+    "wasmxEnabled",
     default = false,
-    text = "enable round router".some
+    text = "Enable WASMX for everyone.".some
   )
 
   object Accessibility {
@@ -84,9 +83,10 @@ final class Env(
 
   val pgnDump = new PgnDump(
     dumper = gamePgnDump,
+    annotator = annotator,
     getSimulName = getSimulName,
     getTournamentName = getTournamentName
-  )(system)
+  )
 
   val userApi = new UserApi(
     jsonView = userEnv.jsonView,
@@ -109,23 +109,23 @@ final class Env(
     crosstableApi = crosstableApi
   )
 
+  val gameApiV2 = new GameApiV2(
+    pgnDump = pgnDump,
+    getLightUser = userEnv.lightUser
+  )(system)
+
   val userGameApi = new UserGameApi(
     bookmarkApi = bookmarkApi,
     lightUser = userEnv.lightUserSync
   )
 
-  val roundApi = new RoundApiBalancer(
-    api = new RoundApi(
-      jsonView = roundJsonView,
-      noteApi = noteApi,
-      forecastApi = forecastApi,
-      bookmarkApi = bookmarkApi,
-      getTourAndRanks = getTourAndRanks,
-      getSimul = getSimul
-    ),
-    enabled = roundRouterSetting.get,
-    system = system,
-    nbActors = math.max(1, math.min(16, Runtime.getRuntime.availableProcessors - 1))
+  val roundApi = new RoundApi(
+    jsonView = roundJsonView,
+    noteApi = noteApi,
+    forecastApi = forecastApi,
+    bookmarkApi = bookmarkApi,
+    getTourAndRanks = getTourAndRanks,
+    getSimul = getSimul
   )
 
   val lobbyApi = new LobbyApi(
@@ -149,6 +149,10 @@ final class Env(
     endpoint = InfluxEventEndpoint,
     env = InfluxEventEnv
   )), name = "influx-event")
+
+  system.registerOnTermination {
+    system.lilaBus.publish(lila.hub.actorApi.Shutdown, 'shutdown)
+  }
 }
 
 object Env {
@@ -156,9 +160,9 @@ object Env {
   lazy val current = "api" boot new Env(
     config = lila.common.PlayApp.loadConfig,
     settingStore = lila.memo.Env.current.settingStore,
-    renderer = lila.hub.Env.current.actor.renderer,
+    renderer = lila.hub.Env.current.renderer,
     userEnv = lila.user.Env.current,
-    analyseEnv = lila.analyse.Env.current,
+    annotator = lila.analyse.Env.current.annotator,
     lobbyEnv = lila.lobby.Env.current,
     setupEnv = lila.setup.Env.current,
     getSimul = lila.simul.Env.current.repo.find,

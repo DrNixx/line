@@ -85,7 +85,7 @@ private final class Monitor(
 
     moveDb.monitor
 
-    sequencer.withQueueSize(lila.mon.fishnet.queue.sequencer(Analysis.key)(_))
+    lila.mon.fishnet.queue.sequencer(Analysis.key)(sequencer.queueSize)
 
     repo.countAnalysis(acquired = false).map { queued(Analysis.key)(_) } >>
       repo.countAnalysis(acquired = true).map { acquired(Analysis.key)(_) } >>
@@ -122,8 +122,8 @@ object Monitor {
     }
   }
 
-  private[fishnet] def failure(work: Work, client: Client) = {
-    logger.warn(s"Received invalid ${work.skill} ${work.id} for ${work.game.id} by ${client.fullId}")
+  private[fishnet] def failure(work: Work, client: Client, e: Exception) = {
+    logger.warn(s"Received invalid ${work.skill} ${work.id} for ${work.game.id} by ${client.fullId}", e)
     lila.mon.fishnet.client.result(client.userId.value, work.skill.key).failure()
   }
 

@@ -49,7 +49,7 @@ final class FishnetApi(
     .logIfSlow(100, logger)(_ => s"acquire ${client.skill}")
     .result
     .recover {
-      case e: FutureSequencer.Timeout =>
+      case e: lila.hub.Duct.Timeout =>
         lila.mon.fishnet.acquire.timeout(client.skill.key)()
         logger.warn(s"[${client.skill}] Fishnet.acquire ${e.getMessage}")
         none
@@ -98,7 +98,7 @@ final class FishnetApi(
             }
           } recoverWith {
             case e: Exception =>
-              Monitor.failure(work, client)
+              Monitor.failure(work, client, e)
               repo.updateOrGiveUpAnalysis(work.invalid) >> fufail(e)
           }
           case partial: PartialAnalysis => {
@@ -135,8 +135,7 @@ final class FishnetApi(
     }
   }
 
-  def prioritaryAnalysisInProgress(gameId: String): Fu[Option[Work.InProgress]] =
-    repo.getAnalysisByGameId(gameId) map { _.flatMap(_.inProgress) }
+  def gameIdExists(gameId: String) = analysisColl.exists($doc("game.id" -> gameId))
 
   def status = repo.countAnalysis(acquired = false) map { queued =>
     import play.api.libs.json.Json

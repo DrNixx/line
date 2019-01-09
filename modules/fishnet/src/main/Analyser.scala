@@ -2,8 +2,7 @@ package lila.fishnet
 
 import org.joda.time.DateTime
 
-import chess.format.FEN
-import chess.format.Uci
+import chess.format.{ FEN, Forsyth, Uci }
 
 import lila.analyse.AnalysisRepo
 import lila.game.{ Game, GameRepo, UciMemo }
@@ -19,7 +18,7 @@ final class Analyser(
   val maxPlies = 200
 
   def apply(game: Game, sender: Work.Sender): Fu[Boolean] =
-    AnalysisRepo exists game.id flatMap {
+    (game.metadata.analysed ?? AnalysisRepo.exists(game.id)) flatMap {
       case true => fuFalse
       case _ if Game.isOldHorde(game) => fuFalse
       case _ =>
@@ -57,7 +56,7 @@ final class Analyser(
       case true => fuFalse
       case _ => {
         import req._
-        val sender = Work.Sender(req.userId, none, false, system = req.userId == "lichess")
+        val sender = Work.Sender(req.userId.some, none, false, system = lila.user.User isOfficial req.userId)
         limiter(sender, ignoreConcurrentCheck = true) flatMap { accepted =>
           if (!accepted) logger.info(s"Study request declined: ${req.studyId}/${req.chapterId} by $sender")
           accepted ?? {
@@ -69,7 +68,8 @@ final class Analyser(
                 variant = variant,
                 moves = moves take maxPlies map (_.uci) mkString " "
               ),
-              startPly = 0,
+              // if black moves first, use 1 as startPly so the analysis doesn't get reversed
+              startPly = initialFen.map(_.value).flatMap(Forsyth.getColor).fold(0)(_.fold(0, 1)),
               sender = sender
             )
             sequencer {
@@ -93,7 +93,7 @@ final class Analyser(
       case (initialFen, moves) => makeWork(
         game = Work.Game(
           id = game.id,
-          initialFen = initialFen map FEN.apply,
+          initialFen = initialFen,
           studyId = none,
           variant = game.variant,
           moves = moves take maxPlies mkString " "

@@ -2,6 +2,7 @@ package lila.tournament
 
 import org.joda.time.DateTime
 import reactivemongo.bson._
+import reactivemongo.api.{ CursorProducer, ReadPreference }
 import scala.collection.breakOut
 
 import BSONHandlers._
@@ -27,7 +28,7 @@ object PairingRepo {
   def byId(id: Tournament.ID): Fu[Option[Pairing]] = coll.find($id(id)).uno[Pairing]
 
   def recentByTour(tourId: Tournament.ID, nb: Int): Fu[Pairings] =
-    coll.find(selectTour(tourId)).sort(recentSort).cursor[Pairing]().gather[List](nb)
+    coll.find(selectTour(tourId)).sort(recentSort).list[Pairing](nb)
 
   def lastOpponents(tourId: Tournament.ID, userIds: Iterable[User.ID], nb: Int): Fu[Pairing.LastOpponents] = coll.find(
     selectTour(tourId) ++ $doc("u" $in userIds),
@@ -35,15 +36,15 @@ object PairingRepo {
   ).sort(recentSort).cursor[Bdoc]().fold(Map.empty[User.ID, User.ID], nb) { (acc, doc) =>
       ~doc.getAs[List[User.ID]]("u") match {
         case List(u1, u2) =>
-          val acc1 = acc.contains(u1).fold(acc, acc.updated(u1, u2))
-          acc.contains(u2).fold(acc1, acc1.updated(u2, u1))
+          val acc1 = if (acc.contains(u1)) acc else acc.updated(u1, u2)
+          if (acc.contains(u2)) acc1 else acc1.updated(u2, u1)
       }
     } map Pairing.LastOpponents.apply
 
   def opponentsOf(tourId: Tournament.ID, userId: User.ID): Fu[Set[User.ID]] = coll.find(
     selectTourUser(tourId, userId),
     $doc("_id" -> false, "u" -> true)
-  ).cursor[Bdoc]().gather[List]().map {
+  ).list[Bdoc]().map {
       _.flatMap { doc =>
         ~doc.getAs[List[User.ID]]("u").find(userId!=)
       }(breakOut)
@@ -52,7 +53,7 @@ object PairingRepo {
   def recentIdsByTourAndUserId(tourId: Tournament.ID, userId: User.ID, nb: Int): Fu[List[Tournament.ID]] = coll.find(
     selectTourUser(tourId, userId),
     $doc("_id" -> true)
-  ).sort(recentSort).cursor[Bdoc]().gather[List](nb).map {
+  ).sort(recentSort).list[Bdoc](nb).map {
       _.flatMap(_.getAs[Game.ID]("_id"))
     }
 
@@ -99,7 +100,7 @@ object PairingRepo {
   def removePlaying(tourId: Tournament.ID) = coll.remove(selectTour(tourId) ++ selectPlaying).void
 
   def findPlaying(tourId: Tournament.ID): Fu[Pairings] =
-    coll.find(selectTour(tourId) ++ selectPlaying).cursor[Pairing]().gather[List]()
+    coll.find(selectTour(tourId) ++ selectPlaying).list[Pairing]()
 
   def findPlaying(tourId: Tournament.ID, userId: User.ID): Fu[Option[Pairing]] =
     coll.find(selectTourUser(tourId, userId) ++ selectPlaying).uno[Pairing]
@@ -136,6 +137,17 @@ object PairingRepo {
       $id(pairing.id),
       $set(field -> true)
     ).void
+  }
+
+  def sortedGameIdsCursor(
+    tournamentId: Tournament.ID,
+    batchSize: Int = 0,
+    readPreference: ReadPreference = ReadPreference.secondaryPreferred
+  )(implicit cp: CursorProducer[Bdoc]) = {
+    val query = coll
+      .find(selectTour(tournamentId), $id(true))
+      .sort(recentSort)
+    query.copy(options = query.options.batchSize(batchSize)).cursor[Bdoc](readPreference)
   }
 
   private[tournament] def playingUserIds(tour: Tournament): Fu[Set[User.ID]] =

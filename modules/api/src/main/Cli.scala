@@ -15,8 +15,13 @@ private[api] final class Cli(bus: lila.common.Bus) extends lila.common.Cli {
   }
 
   def process = {
+    case "uptime" :: Nil => fuccess(lila.common.PlayApp.uptime.toStandardSeconds.getSeconds.toString)
     case "deploy" :: "pre" :: Nil => remindDeploy(lila.hub.actorApi.DeployPre)
     case "deploy" :: "post" :: Nil => remindDeploy(lila.hub.actorApi.DeployPost)
+    case "change" :: ("asset" | "assets") :: "version" :: Nil =>
+      import lila.common.AssetVersion
+      AssetVersion.change
+      fuccess(s"Changed to ${AssetVersion.current}")
     case "gdpr" :: "erase" :: username :: "forever" :: Nil =>
       lila.user.UserRepo named username flatMap {
         case None => fuccess("No such user.")
@@ -25,7 +30,7 @@ private[api] final class Cli(bus: lila.common.Bus) extends lila.common.Cli {
           case Some(email) if email.value.toLowerCase == s"${user.id}@erase.forever" =>
             bus.publish(lila.user.User.GDPRErase(user), 'gdprErase)
             s"Erasing all data about ${user.username} now"
-          case None => s"The user email must be set to <username>@erase.forever for erasing to start."
+          case _ => s"The user email must be set to <username>@erase.forever for erasing to start."
         }
       }
   }

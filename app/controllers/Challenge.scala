@@ -8,6 +8,7 @@ import lila.app._
 import lila.challenge.{ Challenge => ChallengeModel }
 import lila.common.{ HTTPRequest, LilaCookie }
 import lila.game.{ Pov, GameRepo, AnonCookie }
+import lila.socket.Socket.SocketVersion
 import lila.user.UserRepo
 import views.html
 
@@ -73,13 +74,14 @@ object Challenge extends LilaController {
       }
     }
   }
-  def apiAccept(id: String) = Scoped() { _ => me =>
+  def apiAccept(id: String) = Scoped(_.Challenge.Write, _.Bot.Play) { _ => me =>
     env.api.onlineByIdFor(id, me) flatMap {
       _ ?? { env.api.accept(_, me.some) }
     } flatMap { res =>
       if (res.isDefined) jsonOkResult.fuccess
       else Env.bot.player.rematchAccept(id, me) flatMap {
-        _.fold(jsonOkResult.fuccess, notFoundJson())
+        case true => jsonOkResult.fuccess
+        case _ => notFoundJson()
       }
     }
   }
@@ -91,7 +93,7 @@ object Challenge extends LilaController {
           implicit val req = ctx.req
           LilaCookie.cookie(
             AnonCookie.name,
-            game.player(owner.fold(c.finalColor, !c.finalColor)).id,
+            game.player(if (owner) c.finalColor else !c.finalColor).id,
             maxAge = AnonCookie.maxAge.some,
             httpOnly = false.some
           )
@@ -107,10 +109,11 @@ object Challenge extends LilaController {
       else notFound
     }
   }
-  def apiDecline(id: String) = Scoped() { _ => me =>
+  def apiDecline(id: String) = Scoped(_.Challenge.Write, _.Bot.Play) { _ => me =>
     env.api.activeByIdFor(id, me) flatMap {
       case None => Env.bot.player.rematchDecline(id, me) flatMap {
-        _.fold(jsonOkResult.fuccess, notFoundJson())
+        case true => jsonOkResult.fuccess
+        case _ => notFoundJson()
       }
       case Some(c) => env.api.decline(c) inject jsonOkResult
     }
@@ -129,7 +132,7 @@ object Challenge extends LilaController {
     implicit def req = ctx.body
     OptionFuResult(env.api byId id) { c =>
       if (isMine(c)) Form(single(
-        "username" -> nonEmptyText
+        "username" -> lila.user.DataForm.historicalUsernameField
       )).bindFromRequest.fold(
         err => funit,
         username => UserRepo named username flatMap {
@@ -144,6 +147,43 @@ object Challenge extends LilaController {
     }
   }
 
+  def apiCreate(userId: String) = ScopedBody(_.Challenge.Write, _.Bot.Play) { implicit req => me =>
+    implicit val lang = lila.i18n.I18nLangPicker(req, me.some)
+    Setup.PostRateLimit(HTTPRequest lastRemoteAddress req) {
+      Env.setup.forms.api.bindFromRequest.fold(
+        jsonFormErrorDefaultLang,
+        config => UserRepo enabledById userId flatMap { destUser =>
+          destUser ?? { Env.challenge.granter(me.some, _, config.perfType) } flatMap {
+            case Some(denied) =>
+              BadRequest(jsonError(lila.challenge.ChallengeDenied.translated(denied))).fuccess
+            case _ =>
+              import lila.challenge.Challenge._
+              val challenge = lila.challenge.Challenge.make(
+                variant = config.variant,
+                initialFen = config.position,
+                timeControl = config.clock map { c =>
+                  TimeControl.Clock(c)
+                } orElse config.days.map {
+                  TimeControl.Correspondence.apply
+                } getOrElse TimeControl.Unlimited,
+                mode = config.mode,
+                color = config.color.name,
+                challenger = Right(me),
+                destUser = destUser,
+                rematchOf = none
+              )
+              (Env.challenge.api create challenge) map {
+                case true =>
+                  JsonOk(env.jsonView.show(challenge, SocketVersion(0), lila.challenge.Direction.Out.some))
+                case false =>
+                  BadRequest(jsonError("Challenge not created"))
+              }
+          } map (_ as JSON)
+        }
+      )
+    }
+  }
+
   def rematchOf(gameId: String) = Auth { implicit ctx => me =>
     OptionFuResult(GameRepo game gameId) { g =>
       Pov.opponentOfUserId(g, me.id).flatMap(_.userId) ?? UserRepo.byId flatMap {
@@ -153,7 +193,8 @@ object Challenge extends LilaController {
               lila.challenge.ChallengeDenied translated d
             }).fuccess
             case _ => env.api.sendRematchOf(g, me) map {
-              _.fold(Ok, BadRequest(jsonError("Sorry, couldn't create the rematch.")))
+              case true => Ok
+              case _ => BadRequest(jsonError("Sorry, couldn't create the rematch."))
             }
           }
         }
@@ -165,7 +206,7 @@ object Challenge extends LilaController {
     env.api byId id flatMap {
       _ ?? { c =>
         getSocketUid("sri") ?? { uid =>
-          env.socketHandler.join(id, uid, ctx.userId, isMine(c))
+          env.socketHandler.join(id, uid, ctx.userId, isMine(c), getSocketVersion, apiVersion) map some
         }
       }
     }

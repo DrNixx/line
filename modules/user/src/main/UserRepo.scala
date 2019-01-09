@@ -318,11 +318,23 @@ object UserRepo {
 
   def setRoles(id: ID, roles: List[String]) = coll.updateField($id(id), "roles", roles)
 
-  def enable(id: ID) = coll.updateField($id(id), F.enabled, true)
+  def disableTwoFactor(id: ID) = coll.update($id(id), $unset(F.totpSecret))
+
+  def setupTwoFactor(id: ID, totp: TotpSecret): Funit =
+    coll.update(
+      $id(id) ++ (F.totpSecret $exists false), // never overwrite existing secret
+      $set(F.totpSecret -> totp.secret)
+    ).void
+
+  def reopen(id: ID) = coll.updateField($id(id), F.enabled, true) >>
+    coll.update(
+      $id(id) ++ $doc(F.email $exists false),
+      $doc("$rename" -> $doc(F.prevEmail -> F.email))
+    ).recover(lila.db.recoverDuplicateKey(_ => ()))
 
   def disable(user: User, keepEmail: Boolean) = coll.update(
     $id(user.id),
-    $set(F.enabled -> false) ++ {
+    $set(F.enabled -> false) ++ $unset(F.roles) ++ {
       if (keepEmail) $empty
       else $doc("$rename" -> $doc(F.email -> F.prevEmail))
     }
@@ -339,25 +351,36 @@ object UserRepo {
 
   def email(id: ID): Fu[Option[EmailAddress]] = coll.primitiveOne[EmailAddress]($id(id), F.email)
 
-  def emails(id: ID): Fu[User.Emails] =
-    coll.find($id(id), $doc(F.email -> true, F.prevEmail -> true)).uno[Bdoc].map { doc =>
-      User.Emails(
-        current = doc.flatMap(_.getAs[EmailAddress](F.email)),
-        previous = doc.flatMap(_.getAs[EmailAddress](F.prevEmail))
-      )
+  def withEmails(name: String): Fu[Option[User.WithEmails]] =
+    coll.find($id(normalize(name))).uno[Bdoc].map {
+      _ ?? { doc =>
+        User.WithEmails(
+          userBSONHandler read doc,
+          User.Emails(
+            current = doc.getAs[EmailAddress](F.email),
+            previous = doc.getAs[EmailAddress](F.prevEmail)
+          )
+        ).some
+      }
     }
 
   def hasEmail(id: ID): Fu[Boolean] = email(id).map(_.isDefined)
 
   def setBot(user: User): Funit =
     if (user.count.game > 0) fufail("You already have games played. Make a new account.")
-    else coll.updateField($id(user.id), F.title, User.botTitle).void
+    else coll.updateField($id(user.id), F.title, Title.BOT).void
 
   private def botSelect(v: Boolean) =
-    if (v) $doc(F.title -> User.botTitle)
-    else $doc(F.title -> $ne(User.botTitle))
+    if (v) $doc(F.title -> Title.BOT)
+    else $doc(F.title -> $ne(Title.BOT))
 
-  def getTitle(id: ID): Fu[Option[String]] = coll.primitiveOne[String]($id(id), F.title)
+  private[user] def botIds = coll.distinctWithReadPreference[String, Set](
+    "_id",
+    some(botSelect(true) ++ enabledSelect),
+    ReadPreference.secondaryPreferred
+  )
+
+  def getTitle(id: ID): Fu[Option[Title]] = coll.primitiveOne[Title]($id(id), F.title)
 
   def setPlan(user: User, plan: Plan): Funit = {
     implicit val pbw: BSONValueWriter[Plan] = Plan.planBSONHandler
@@ -408,13 +431,6 @@ object UserRepo {
         _ flatMap { _.getAs[Int](F.toints) }
       }.map(~_)
 
-  def filterByEngine(userIds: Iterable[User.ID]): Fu[Set[User.ID]] =
-    coll.distinctWithReadPreference[String, Set](
-      F.id,
-      Some($inIds(userIds) ++ engineSelect(true)),
-      ReadPreference.secondaryPreferred
-    )
-
   def filterByEnabledPatrons(userIds: List[User.ID]): Fu[Set[User.ID]] =
     coll.distinct[String, Set](F.id, Some($inIds(userIds) ++ enabledSelect ++ patronSelect))
 
@@ -430,15 +446,25 @@ object UserRepo {
   def mustConfirmEmail(id: User.ID): Fu[Boolean] =
     coll.exists($id(id) ++ $doc(F.mustConfirmEmail $exists true))
 
-  def setEmailConfirmed(id: User.ID): Funit = coll.update($id(id), $unset(F.mustConfirmEmail)).void
+  def setEmailConfirmed(id: User.ID): Funit =
+    coll.update($id(id) ++ $doc(F.mustConfirmEmail $exists true), $unset(F.mustConfirmEmail)).void
+
+  def speaker(id: User.ID): Fu[Option[User.Speaker]] = {
+    import User.speakerHandler
+    coll.uno[User.Speaker]($id(id))
+  }
 
   def erase(user: User): Funit = coll.update(
     $id(user.id),
-    $unset(F.profile) ++ $set("erasedAt" -> DateTime.now)
+    $unset(F.profile) ++ $set(
+      "enabled" -> false,
+      "erasedAt" -> DateTime.now
+    )
   ).void
 
-  def isErased(user: User): Fu[User.Erased] =
-    coll.exists($id(user.id) ++ $doc("erasedAt" $exists true)) map User.Erased.apply
+  def isErased(user: User): Fu[User.Erased] = user.disabled ?? {
+    coll.exists($id(user.id) ++ $doc("erasedAt" $exists true))
+  } map User.Erased.apply
 
   private def newUser(
     username: String,

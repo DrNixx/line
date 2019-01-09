@@ -1,27 +1,16 @@
 package lila.hub
 package actorApi
 
+import chess.format.Uci
 import org.joda.time.DateTime
 import play.api.libs.json._
-import chess.format.Uci
-
-case class SendTo(userId: String, message: JsObject)
-
-object SendTo {
-  def apply[A: Writes](userId: String, typ: String, data: A): SendTo =
-    SendTo(userId, Json.obj("t" -> typ, "d" -> data))
-}
-
-case class SendTos(userIds: Set[String], message: JsObject)
-
-object SendTos {
-  def apply[A: Writes](userIds: Set[String], typ: String, data: A): SendTos =
-    SendTos(userIds, Json.obj("t" -> typ, "d" -> data))
-}
+import scala.concurrent.Promise
 
 sealed abstract class Deploy(val key: String)
 case object DeployPre extends Deploy("deployPre")
 case object DeployPost extends Deploy("deployPost")
+
+case object Shutdown // on actor system termination
 
 package streamer {
   case class StreamsOnAir(html: String)
@@ -29,28 +18,35 @@ package streamer {
 }
 
 package map {
-  case class Get(id: String)
   case class Tell(id: String, msg: Any)
-  case class TellIds(ids: Seq[String], msg: Any)
-  case class TellAll(msg: Any)
-  case class Ask(id: String, msg: Any)
-  case class Exists(id: String)
+  case class TellIfExists(id: String, msg: Any)
+  case class Exists(id: String, promise: Promise[Boolean])
 }
 
-case class WithUserIds(f: Iterable[String] => Unit)
-
-case class HasUserId(userId: String)
+package socket {
+  case class WithUserIds(f: Iterable[String] => Unit)
+  case class HasUserId(userId: String, promise: Promise[Boolean])
+  case class SendTo(userId: String, message: JsObject)
+  object SendTo {
+    def apply[A: Writes](userId: String, typ: String, data: A): SendTo =
+      SendTo(userId, Json.obj("t" -> typ, "d" -> data))
+  }
+  case class SendTos(userIds: Set[String], message: JsObject)
+  object SendTos {
+    def apply[A: Writes](userIds: Set[String], typ: String, data: A): SendTos =
+      SendTos(userIds, Json.obj("t" -> typ, "d" -> data))
+  }
+}
 
 package report {
   case class Cheater(userId: String, text: String)
   case class Shutup(userId: String, text: String)
   case class Booster(winnerId: String, loserId: String)
-  case class Created(userId: String, reason: String, reporterId: String)
-  case class Processed(userId: String, reason: String)
 }
 
 package security {
   case class GarbageCollect(userId: String, ipBan: Boolean)
+  case class GCImmediateSb(userId: String)
   case class CloseAccount(userId: String)
 }
 
@@ -91,11 +87,10 @@ package captcha {
 package lobby {
   case class ReloadTournaments(html: String)
   case class ReloadSimuls(html: String)
-  case object NewForumPost
 }
 
 package simul {
-  case object GetHostIds
+  case class GetHostIds(promise: Promise[Set[String]])
   case class PlayerMove(gameId: String)
 }
 
@@ -108,7 +103,7 @@ package slack {
 }
 
 package timeline {
-  case class ReloadTimeline(user: String)
+  case class ReloadTimelines(userIds: List[String])
 
   sealed abstract class Atom(val channel: String, val okForKid: Boolean) {
     def userIds: List[String]
@@ -170,7 +165,6 @@ package timeline {
     case class Users(users: List[String]) extends Propagation
     case class Followers(user: String) extends Propagation
     case class Friends(user: String) extends Propagation
-    case class StaffFriends(user: String) extends Propagation
     case class ExceptUser(user: String) extends Propagation
     case class ModsOnly(value: Boolean) extends Propagation
   }
@@ -182,7 +176,6 @@ package timeline {
     def toUser(id: String) = add(Users(List(id)))
     def toFollowersOf(id: String) = add(Followers(id))
     def toFriendsOf(id: String) = add(Friends(id))
-    def toStaffFriendsOf(id: String) = add(StaffFriends(id))
     def exceptUser(id: String) = add(ExceptUser(id))
     def modsOnly(value: Boolean) = add(ModsOnly(value))
     private def add(p: Propagation) = copy(propagations = p :: propagations)
@@ -216,7 +209,7 @@ package fishnet {
       initialFen: Option[chess.format.FEN],
       variant: chess.variant.Variant,
       moves: List[Uci],
-      userId: Option[String]
+      userId: String
   )
 }
 
@@ -246,7 +239,7 @@ package round {
   )
   case class NbRounds(nb: Int)
   case class Berserk(gameId: String, userId: String)
-  case class IsOnGame(color: chess.Color)
+  case class IsOnGame(color: chess.Color, promise: Promise[Boolean])
   sealed trait SocketEvent
   case class TourStanding(json: JsArray)
   case class FishnetPlay(uci: Uci, currentFen: chess.format.FEN)

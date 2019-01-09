@@ -22,7 +22,7 @@ object Tv extends LilaController {
         OptionFuResult(GameRepo.pov(gameId, color)) { pov =>
           Env.tv.tv.getChampions zip
             Env.game.crosstableApi.withMatchup(pov.game) map {
-              case (champions, crosstable) => Ok(html.tv.sides(channel, champions, pov, crosstable))
+              case (champions, crosstable) => Ok(html.tv.side.sides(channel, champions, pov, crosstable))
             }
         }
     }
@@ -40,7 +40,7 @@ object Tv extends LilaController {
     OptionFuResult(Env.tv.tv getGameAndHistory channel) {
       case (game, history) =>
         val flip = getBool("flip")
-        val pov = flip.fold(Pov second game, Pov first game)
+        val pov = if (flip) Pov second game else Pov first game
         val onTv = lila.round.OnLichessTv(channel.key, flip)
         negotiate(
           html = {
@@ -71,16 +71,14 @@ object Tv extends LilaController {
   }
 
   def feed = Action.async { req =>
-    RequireHttp11(req) {
-      import makeTimeout.short
-      import akka.pattern.ask
-      import lila.round.TvBroadcast
-      import play.api.libs.EventSource
-      Env.round.tvBroadcast ? TvBroadcast.GetEnumerator mapTo
-        manifest[TvBroadcast.EnumeratorType] map { enum =>
-          Ok.chunked(enum &> EventSource()).as("text/event-stream")
-        }
-    }
+    import makeTimeout.short
+    import akka.pattern.ask
+    import lila.round.TvBroadcast
+    import play.api.libs.EventSource
+    Env.round.tvBroadcast ? TvBroadcast.GetEnumerator mapTo
+      manifest[TvBroadcast.EnumeratorType] map { enum =>
+        Ok.chunked(enum &> EventSource()).as("text/event-stream")
+      }
   }
 
   def embed = Action { req =>
@@ -88,18 +86,17 @@ object Tv extends LilaController {
       val bg = get("bg", req) | "light"
       val theme = get("theme", req) | "brown"
       val url = s"""${req.domain + routes.Tv.frame}?bg=$bg&theme=$theme"""
-      s"""document.write("<iframe src='//$url&embed=" + document.domain + "' class='lichess-tv-iframe' allowtransparency='true' frameBorder='0' style='width: 224px; height: 264px;' title='Lichess free online chess'></iframe>");"""
+      s"""document.write("<iframe src='https://$url&embed=" + document.domain + "' class='lichess-tv-iframe' allowtransparency='true' frameBorder='0' style='width: 224px; height: 264px;' title='Lichess free online chess'></iframe>");"""
     } as JAVASCRIPT withHeaders (CACHE_CONTROL -> "max-age=86400")
   }
 
-  def frame = Action.async { req =>
+  def frame = Action.async { implicit req =>
     Env.tv.tv.getBestGame map {
       case None => NotFound
       case Some(game) => Ok(views.html.tv.embed(
         Pov first game,
         get("bg", req) | "light",
-        lila.pref.Theme(~get("theme", req)).cssClass,
-        assetVersion = getAssetVersion
+        lila.pref.Theme(~get("theme", req)).cssClass
       ))
     }
   }

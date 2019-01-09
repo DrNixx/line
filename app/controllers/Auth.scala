@@ -32,6 +32,8 @@ object Auth extends LilaController {
       }
     }
 
+  private val refRegex = """[\w@/-]++""".r
+
   private def goodReferrer(referrer: String): Boolean = {
     referrer.nonEmpty &&
       referrer.stripPrefix("/") != "mobile" && {

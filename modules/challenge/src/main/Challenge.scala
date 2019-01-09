@@ -1,5 +1,6 @@
 package lila.challenge
 
+import chess.format.FEN
 import chess.variant.{ Variant, FromPosition }
 import chess.{ Mode, Speed }
 import org.joda.time.DateTime
@@ -12,7 +13,7 @@ case class Challenge(
     _id: String,
     status: Challenge.Status,
     variant: Variant,
-    initialFen: Option[String],
+    initialFen: Option[FEN],
     timeControl: Challenge.TimeControl,
     mode: Mode,
     colorChoice: Challenge.ColorChoice,
@@ -82,7 +83,7 @@ object Challenge {
   }
 
   case class Rating(int: Int, provisional: Boolean) {
-    def show = s"$int${provisional.fold("?", "")}"
+    def show = s"$int${if (provisional) "?" else ""}"
   }
   object Rating {
     def apply(p: lila.rating.Perf): Rating = Rating(p.intRating, p.provisional)
@@ -132,7 +133,7 @@ object Challenge {
 
   def make(
     variant: Variant,
-    initialFen: Option[String],
+    initialFen: Option[FEN],
     timeControl: TimeControl,
     mode: Mode,
     color: String,
@@ -146,17 +147,16 @@ object Challenge {
       case _ => ColorChoice.Random -> chess.Color(scala.util.Random.nextBoolean)
     }
     val finalMode = timeControl match {
-      case TimeControl.Clock(clock) if !lila.game.Game.allowRated(variant, clock) => Mode.Casual
+      case TimeControl.Clock(clock) if !lila.game.Game.allowRated(variant, clock.some) => Mode.Casual
       case _ => mode
     }
     new Challenge(
       _id = randomId,
       status = Status.Created,
       variant = variant,
-      initialFen = (variant == FromPosition).fold(
-        initialFen,
-        Some(variant.initialFen).ifFalse(variant.standardInitialPosition)
-      ),
+      initialFen =
+        if (variant == FromPosition) initialFen
+        else !variant.standardInitialPosition option FEN(variant.initialFen),
       timeControl = timeControl,
       mode = finalMode,
       colorChoice = colorChoice,
