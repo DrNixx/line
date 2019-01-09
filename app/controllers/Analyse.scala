@@ -19,7 +19,7 @@ object Analyse extends LilaController {
       Env.fishnet.analyser(game, lila.fishnet.Work.Sender(
         userId = me.id.some,
         ip = HTTPRequest.lastRemoteAddress(ctx.req).some,
-        mod = isGranted(_.Hunter),
+        mod = isGranted(_.Hunter) || isGranted(_.Relay),
         system = false
       )) map {
         case true => NoContent
@@ -33,7 +33,7 @@ object Analyse extends LilaController {
     else GameRepo initialFen pov.gameId flatMap { initialFen =>
       Game.preloadUsers(pov.game) >> RedirectAtFen(pov, initialFen) {
         (env.analyser get pov.game) zip
-          Env.fishnet.api.prioritaryAnalysisInProgress(pov.gameId) zip
+          Env.fishnet.api.gameIdExists(pov.gameId) zip
           (pov.game.simulId ?? Env.simul.repo.find) zip
           Round.getWatcherChat(pov.game) zip
           Env.game.crosstableApi.withMatchup(pov.game) zip
@@ -43,7 +43,7 @@ object Analyse extends LilaController {
               Env.api.roundApi.review(pov, lila.api.Mobile.Api.currentVersion,
                 tv = userTv.map { u => lila.round.OnUserTv(u.id) },
                 analysis,
-                initialFenO = initialFen.map(FEN).some,
+                initialFenO = initialFen.some,
                 withFlags = WithFlags(
                   movetimes = true,
                   clocks = true,
@@ -54,7 +54,7 @@ object Analyse extends LilaController {
                     pov,
                     data,
                     initialFen,
-                    Env.analyse.annotator(pgn, analysis, pov.game.opening, pov.game.winnerColor, pov.game.status, pov.game.clock).toString,
+                    Env.analyse.annotator(pgn, analysis, pov.game.opening, pov.game.winnerColor, pov.game.status).toString,
                     analysis,
                     analysisInProgress,
                     simul,
@@ -81,11 +81,11 @@ object Analyse extends LilaController {
     }
   }
 
-  private def RedirectAtFen(pov: Pov, initialFen: Option[String])(or: => Fu[Result])(implicit ctx: Context) =
+  private def RedirectAtFen(pov: Pov, initialFen: Option[FEN])(or: => Fu[Result])(implicit ctx: Context) =
     get("fen").fold(or) { atFen =>
       val url = routes.Round.watcher(pov.gameId, pov.color.name)
       fuccess {
-        chess.Replay.plyAtFen(pov.game.pgnMoves, initialFen, pov.game.variant, atFen).fold(
+        chess.Replay.plyAtFen(pov.game.pgnMoves, initialFen.map(_.value), pov.game.variant, atFen).fold(
           err => {
             lila.log("analyse").info(s"RedirectAtFen: ${pov.gameId} $atFen $err")
             Redirect(url)
@@ -104,7 +104,7 @@ object Analyse extends LilaController {
   } yield Ok(html.analyse.replayBot(
     pov,
     initialFen,
-    Env.analyse.annotator(pgn, analysis, pov.game.opening, pov.game.winnerColor, pov.game.status, pov.game.clock).toString,
+    Env.analyse.annotator(pgn, analysis, pov.game.opening, pov.game.winnerColor, pov.game.status).toString,
     analysis,
     simul,
     crosstable

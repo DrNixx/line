@@ -5,7 +5,7 @@ import reactivemongo.bson._
 
 import lila.common.EmailAddress
 import lila.db.dsl._
-import lila.user.User.{ ClearPassword, BSONFields => F }
+import lila.user.User.{ ClearPassword, PasswordAndToken, BSONFields => F }
 
 final class Authenticator(
     passHasher: PasswordHasher,
@@ -18,16 +18,16 @@ final class Authenticator(
   def compare(auth: AuthData, p: ClearPassword): Boolean = {
     val newP = auth.salt.fold(p) { s =>
       val salted = s"${p.value}{$s}" // BC
-      ClearPassword((~auth.sha512).fold(salted.sha512, salted.sha1))
+      ClearPassword(if (~auth.sha512) salted.sha512 else salted.sha1)
     }
     passHasher.check(auth.bpass, newP)
   }
 
-  def authenticateById(id: User.ID, password: ClearPassword): Fu[Option[User]] =
-    loginCandidateById(id) map { _ flatMap { _(password) } }
+  def authenticateById(id: User.ID, passwordAndToken: PasswordAndToken): Fu[Option[User]] =
+    loginCandidateById(id) map { _ flatMap { _ option passwordAndToken } }
 
-  def authenticateByEmail(email: EmailAddress, password: ClearPassword): Fu[Option[User]] =
-    loginCandidateByEmail(email) map { _ flatMap { _(password) } }
+  def authenticateByEmail(email: EmailAddress, passwordAndToken: PasswordAndToken): Fu[Option[User]] =
+    loginCandidateByEmail(email) map { _ flatMap { _ option passwordAndToken } }
 
   def loginCandidate(u: User): Fu[User.LoginCandidate] =
     loginCandidateById(u.id) map { _ | User.LoginCandidate(u, _ => false) }

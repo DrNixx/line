@@ -2,6 +2,7 @@ package controllers
 
 import lila.api.Context
 import lila.app._
+import lila.common.{ HTTPRequest, MaxPerSecond }
 import lila.security.Granter
 import lila.team.{ Joined, Motivate, Team => TeamModel, TeamRepo, MemberRepo }
 import lila.user.{ User => UserModel }
@@ -39,10 +40,8 @@ object Team extends LilaController {
 
   def search(text: String, page: Int) = OpenBody { implicit ctx =>
     NotForKids {
-      text.trim.isEmpty.fold(
-        paginator popularTeams page map { html.team.all(_) },
-        Env.teamSearch(text, page) map { html.team.search(text, _) }
-      )
+      if (text.trim.isEmpty) paginator popularTeams page map { html.team.all(_) }
+      else Env.teamSearch(text, page) map { html.team.search(text, _) }
     }
   }
 
@@ -52,22 +51,16 @@ object Team extends LilaController {
     _ <- Env.user.lightUserApi preloadMany info.userIds
   } yield html.team.show(team, members, info)
 
-  def users(teamId: String) = Api.ApiRequest { req =>
+  def users(teamId: String) = Action.async { req =>
     import Api.limitedDefault
     Env.team.api.team(teamId) flatMap {
       _ ?? { team =>
-        val max = getInt("max", req) map (_ atLeast 1)
-        val cost = 100
-        val ip = lila.common.HTTPRequest lastRemoteAddress req
-        Api.UsersRateLimitPerIP(ip, cost = cost) {
-          Api.UsersRateLimitGlobal("-", cost = cost, msg = ip.value) {
-            lila.mon.api.teamUsers.cost(cost)
-            import play.api.libs.iteratee._
-            Api.toApiResult {
-              Env.team.pager.stream(team, max = max) &>
-                Enumeratee.map(Env.api.userApi.one)
-            } |> fuccess
-          }
+        Api.GlobalLinearLimitPerIP(HTTPRequest lastRemoteAddress req) {
+          import play.api.libs.iteratee._
+          Api.jsonStream {
+            Env.team.memberStream(team, MaxPerSecond(20)) &>
+              Enumeratee.map(Env.api.userApi.one)
+          } |> fuccess
         }
       }
     }
@@ -95,7 +88,7 @@ object Team extends LilaController {
     OptionFuResult(api team id) { team =>
       Owner(team) {
         MemberRepo userIdsByTeam team.id map { userIds =>
-          html.team.kick(team, userIds.filterNot(me.id ==).toList.sorted)
+          html.team.kick(team, userIds - me.id)
         }
       }
     }
@@ -105,12 +98,31 @@ object Team extends LilaController {
     OptionFuResult(api team id) { team =>
       Owner(team) {
         implicit val req = ctx.body
-        forms.kick.bindFromRequest.value ?? { api.kick(team, _) } inject Redirect(routes.Team.show(team.id))
+        forms.selectMember.bindFromRequest.value ?? { api.kick(team, _, me) } inject Redirect(routes.Team.show(team.id))
       }
     }
   }
 
-  def close(id: String) = Secure(_.CloseTeam) { implicit ctx => me =>
+  def changeOwnerForm(id: String) = Auth { implicit ctx => me =>
+    OptionFuResult(api team id) { team =>
+      Owner(team) {
+        MemberRepo userIdsByTeam team.id map { userIds =>
+          html.team.changeOwner(team, userIds - team.createdBy)
+        }
+      }
+    }
+  }
+
+  def changeOwner(id: String) = AuthBody { implicit ctx => me =>
+    OptionFuResult(api team id) { team =>
+      Owner(team) {
+        implicit val req = ctx.body
+        forms.selectMember.bindFromRequest.value ?? { api.changeOwner(team, _, me) } inject Redirect(routes.Team.show(team.id))
+      }
+    }
+  }
+
+  def close(id: String) = Secure(_.ManageTeam) { implicit ctx => me =>
     OptionFuResult(api team id) { team =>
       (api delete team) >>
         Env.mod.logApi.deleteTeam(me.id, team.name, team.description) inject
@@ -144,17 +156,6 @@ object Team extends LilaController {
 
   def mine = Auth { implicit ctx => me =>
     api mine me map { html.team.mine(_) }
-  }
-
-  def joinPage(id: String) = Auth { implicit ctx => me =>
-    NotForKids {
-      OptionResult(api.requestable(id, me)) { team =>
-        team.open.fold(
-          Ok(html.team.join(team)),
-          Redirect(routes.Team.requestForm(team.id))
-        )
-      }
-    }
   }
 
   def join(id: String) = Auth { implicit ctx => implicit me =>
@@ -213,13 +214,11 @@ object Team extends LilaController {
 
   private def OnePerWeek[A <: Result](me: UserModel)(a: => Fu[A])(implicit ctx: Context): Fu[Result] =
     api.hasCreatedRecently(me) flatMap { did =>
-      (did && !Granter.superAdmin(me)) fold (
-        Forbidden(views.html.team.createLimit()).fuccess,
-        a
-      )
+      if (did && !Granter(_.SuperAdmin)(me)) Forbidden(views.html.site.message.teamCreateLimit).fuccess
+      else a
     }
 
-  private def Owner(team: TeamModel)(a: => Fu[Result])(implicit ctx: Context): Fu[Result] = {
-    ctx.me.??(me => team.isCreator(me.id) || Granter.superAdmin(me))
-  }.fold(a, renderTeam(team) map { Forbidden(_) })
+  private def Owner(team: TeamModel)(a: => Fu[Result])(implicit ctx: Context): Fu[Result] =
+    if (ctx.me.??(me => team.isCreator(me.id) || isGranted(_.ManageTeam))) a
+    else renderTeam(team) map { Forbidden(_) }
 }

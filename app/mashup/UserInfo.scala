@@ -13,7 +13,7 @@ import lila.user.{ User, Trophy, Trophies, TrophyApi }
 
 case class UserInfo(
     user: User,
-    ranks: lila.rating.UserRankMap,
+    ranks: Option[lila.rating.UserRankMap],
     hasSimul: Boolean,
     ratingChart: Option[String],
     nbs: UserInfo.NbGames,
@@ -36,25 +36,28 @@ case class UserInfo(
 
   def completionRatePercent = completionRate.map { cr => math.round(cr * 100) }
 
-  def isPublicMod = lila.security.Granter(_.PublicMod)(user)
-  def isDeveloper = lila.security.Granter(_.Developer)(user)
-
   lazy val allTrophies = List(
-    isPublicMod option Trophy(
+    Granter(_.PublicMod)(user) option Trophy(
       _id = "",
       user = user.id,
       kind = Trophy.Kind.Moderator,
       date = org.joda.time.DateTime.now
     ),
-    isDeveloper option Trophy(
+    Granter(_.Developer)(user) option Trophy(
       _id = "",
       user = user.id,
       kind = Trophy.Kind.Developer,
       date = org.joda.time.DateTime.now
+    ),
+    Granter(_.Verified)(user) option Trophy(
+      _id = "",
+      user = user.id,
+      kind = Trophy.Kind.Verified,
+      date = org.joda.time.DateTime.now
     )
   ).flatten ::: trophies
 
-  def countTrophiesAndPerfCups = allTrophies.size + ranks.count(_._2 <= 100)
+  def countTrophiesAndPerfCups = allTrophies.size + ranks.??(_.count(_._2 <= 100))
 }
 
 object UserInfo {
@@ -127,7 +130,7 @@ object UserInfo {
     postApi: PostApi,
     studyRepo: lila.study.StudyRepo,
     getRatingChart: User => Fu[Option[String]],
-    getRanks: User.ID => Fu[Map[String, Int]],
+    getRanks: User.ID => Fu[Option[lila.rating.UserRankMap]],
     isHostingSimul: User.ID => Fu[Boolean],
     fetchIsStreamer: User => Fu[Boolean],
     fetchTeamIds: User.ID => Fu[List[String]],

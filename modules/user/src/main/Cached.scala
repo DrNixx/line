@@ -17,7 +17,7 @@ final class Cached(
     mongoCache: lila.memo.MongoCache.Builder,
     asyncCache: lila.memo.AsyncCache.Builder,
     rankingApi: RankingApi
-) {
+)(implicit system: akka.actor.ActorSystem) {
 
   private def oneWeekAgo = DateTime.now minusWeeks 1
   private def oneMonthAgo = DateTime.now minusMonths 1
@@ -99,10 +99,18 @@ final class Cached(
 
     def getAll(userId: User.ID): Fu[Map[Perf.Key, Int]] =
       rankingApi.weeklyStableRanking of userId
+
+    def getAllQuicklyMaybe(userId: User.ID): Fu[Option[Map[Perf.Key, Int]]] =
+      getAll(userId).map(some).withTimeoutDefault(1 second, none)
   }
 
   object ratingDistribution {
-
     def apply(perf: PerfType) = rankingApi.weeklyRatingDistribution(perf)
   }
+
+  val botIds = asyncCache.single[Set[User.ID]](
+    name = "user.botIds",
+    f = UserRepo.botIds,
+    expireAfter = _.ExpireAfterWrite(10 minutes)
+  )
 }

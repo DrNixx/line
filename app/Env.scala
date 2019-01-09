@@ -11,8 +11,6 @@ final class Env(
     appPath: String
 ) {
 
-  val CliUsername = config getString "cli.username"
-
   private val RendererName = config getString "app.renderer.name"
 
   lazy val preloader = new mashup.Preload(
@@ -22,7 +20,7 @@ final class Env(
     timelineEntries = Env.timeline.entryApi.userEntries _,
     dailyPuzzle = tryDailyPuzzle,
     liveStreams = () => Env.streamer.liveStreamApi.all,
-    countRounds = Env.round.count,
+    countRounds = () => Env.round.count,
     lobbyApi = Env.api.lobbyApi,
     getPlayban = Env.playban.api.currentBan _,
     lightUserApi = Env.user.lightUserApi
@@ -48,7 +46,7 @@ final class Env(
     postApi = Env.forum.postApi,
     studyRepo = Env.study.studyRepo,
     getRatingChart = Env.history.ratingChartApi.apply,
-    getRanks = Env.user.cached.ranking.getAll,
+    getRanks = Env.user.cached.ranking.getAllQuicklyMaybe,
     isHostingSimul = Env.simul.isHosting,
     fetchIsStreamer = Env.streamer.api.isStreamer,
     fetchTeamIds = Env.team.cached.teamIdsList,
@@ -90,25 +88,22 @@ final class Env(
     _ <- Env.lobby.seekApi.removeByUser(user)
     _ <- Env.security.store.disconnect(user.id)
     _ <- Env.streamer.api.demote(user.id)
+    _ <- Env.coach.api.remove(user.id)
     reports <- Env.report.api.processAndGetBySuspect(lila.report.Suspect(user))
     _ <- self ?? Env.mod.logApi.selfCloseAccount(user.id, reports)
   } yield {
     system.lilaBus.publish(lila.hub.actorApi.security.CloseAccount(user.id), 'accountClose)
   }
 
-  system.lilaBus.subscribe(system.actorOf(Props(new Actor {
-    def receive = {
-      case lila.hub.actorApi.security.GarbageCollect(userId, _) =>
-        system.scheduler.scheduleOnce(1 second) {
-          closeAccount(userId, self = false)
-        }
-    }
-  })), 'garbageCollect)
+  system.lilaBus.subscribeFun('garbageCollect) {
+    case lila.hub.actorApi.security.GarbageCollect(userId, _) =>
+      system.scheduler.scheduleOnce(1 second) {
+        closeAccount(userId, self = false)
+      }
+  }
 
   system.actorOf(Props(new actor.Renderer), name = RendererName)
 
-  lila.log.boot.info(s"Java version ${System.getProperty("java.version")}")
-  lila.log.boot.info("Preloading modules")
   lila.common.Chronometer.syncEffect(List(
     Env.socket,
     Env.site,
@@ -230,4 +225,5 @@ object Env {
   def streamer = lila.streamer.Env.current
   def oAuth = lila.oauth.Env.current
   def bot = lila.bot.Env.current
+  def evalCache = lila.evalCache.Env.current
 }

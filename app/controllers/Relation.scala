@@ -1,11 +1,15 @@
 package controllers
 
+import play.api.libs.iteratee._
 import play.api.libs.json.Json
+import play.api.mvc._
 
 import lila.api.Context
 import lila.app._
 import lila.common.paginator.{ Paginator, AdapterLike, PaginatorJson }
+import lila.common.{ HTTPRequest, MaxPerSecond }
 import lila.relation.Related
+import lila.relation.RelationStream._
 import lila.user.{ User => UserModel, UserRepo }
 import views._
 
@@ -18,10 +22,10 @@ object Relation extends LilaController {
       (ctx.isAuth ?? { Env.pref.api followable userId }) zip
       (ctx.userId ?? { env.api.fetchBlocks(userId, _) }) flatMap {
         case relation ~ followable ~ blocked => negotiate(
-          html = fuccess(Ok(mini.fold(
-            html.relation.mini(userId, blocked = blocked, followable = followable, relation = relation),
-            html.relation.actions(userId, relation = relation, blocked = blocked, followable = followable)
-          ))),
+          html = fuccess(Ok {
+            if (mini) html.relation.mini(userId, blocked = blocked, followable = followable, relation = relation)
+            else html.relation.actions(userId, relation = relation, blocked = blocked, followable = followable)
+          }),
           api = _ => fuccess(Ok(Json.obj(
             "followable" -> followable,
             "following" -> relation.contains(true),

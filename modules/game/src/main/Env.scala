@@ -9,7 +9,7 @@ final class Env(
     mongoCache: lila.memo.MongoCache.Builder,
     system: ActorSystem,
     hub: lila.hub.Env,
-    getLightUser: lila.common.LightUser.GetterSync,
+    getLightUser: lila.common.LightUser.Getter,
     appPath: String,
     isProd: Boolean,
     asyncCache: lila.memo.AsyncCache.Builder,
@@ -71,9 +71,6 @@ final class Env(
   // load captcher actor
   private val captcher = system.actorOf(Props(new Captcher), name = CaptcherName)
 
-  val recentGoodGameActor = system.actorOf(Props[RecentGoodGame], name = "recent-good-game")
-  system.lilaBus.subscribe(recentGoodGameActor, 'finishGame)
-
   scheduler.message(CaptcherDuration) {
     captcher -> actorApi.NewCaptcha
   }
@@ -103,7 +100,7 @@ object Env {
     mongoCache = lila.memo.Env.current.mongoCache,
     system = lila.common.PlayApp.system,
     hub = lila.hub.Env.current,
-    getLightUser = lila.user.Env.current.lightUserSync,
+    getLightUser = lila.user.Env.current.lightUser,
     appPath = play.api.Play.current.path.getCanonicalPath,
     isProd = lila.common.PlayApp.isProd,
     asyncCache = lila.memo.Env.current.asyncCache,

@@ -3,7 +3,7 @@ package lila.game
 import chess.Color.{ White, Black }
 import chess.format.{ Uci, FEN }
 import chess.opening.{ FullOpening, FullOpeningDB }
-import chess.variant.{ Variant, Standard }
+import chess.variant.{ Variant, Standard, FromPosition }
 import chess.{ Speed, PieceMap, MoveMetrics, History => ChessHistory, CheckCount, Castles, Board, MoveOrDrop, Pos, Game => ChessGame, Clock, Status, Color, Mode, PositionHash, UnmovedRooks, Centis, Situation }
 import org.joda.time.DateTime
 
@@ -22,7 +22,7 @@ case class Game(
     daysPerTurn: Option[Int],
     binaryMoveTimes: Option[ByteArray] = None,
     mode: Mode = Mode.default,
-    next: Option[String] = None,
+    next: Option[Game.ID] = None,
     bookmarks: Int = 0,
     createdAt: DateTime = DateTime.now,
     movedAt: DateTime = DateTime.now,
@@ -66,7 +66,7 @@ case class Game(
   def firstPlayer = player(firstColor)
   def secondPlayer = player(!firstColor)
 
-  def turnColor = Color((turns & 1) == 0)
+  def turnColor = chess.player
 
   def turnOf(p: Player): Boolean = p == player
   def turnOf(c: Color): Boolean = c == turnColor
@@ -232,10 +232,10 @@ case class Game(
     blackPlayer = f(blackPlayer)
   )
 
-  def start = started.fold(this, copy(
+  def start = if (started) this else copy(
     status = Status.Started,
     mode = Mode(mode.rated && userIds.distinct.size == 2)
-  ))
+  )
 
   def correspondenceClock: Option[CorrespondenceClock] = daysPerTurn map { days =>
     val increment = days * 24 * 60 * 60
@@ -305,7 +305,9 @@ case class Game(
     !player(color).isOfferingRematch &&
       finishedOrAborted &&
       nonMandatory &&
-      !boosted
+      !boosted && !{
+        hasAi && variant == FromPosition && clock.exists(_.config.limitSeconds < 60)
+      }
 
   def playerCanProposeTakeback(color: Color) =
     started && playable && !isTournament && !isSimul &&
@@ -466,7 +468,7 @@ case class Game(
   }
 
   def expirable =
-    source.exists(Source.expirable.contains) && playable && !bothPlayersHaveMoved && nonAi && hasClock
+    !bothPlayersHaveMoved && source.exists(Source.expirable.contains) && playable && nonAi && hasClock
 
   def timeBeforeExpiration: Option[Centis] = expirable option {
     Centis.ofMillis(movedAt.getMillis - nowMillis + timeForFirstMove.millis).nonNeg
@@ -553,6 +555,8 @@ case class Game(
   def blackPov = pov(Black)
   def playerPov(p: Player) = pov(p.color)
   def loserPov = loser map playerPov
+
+  override def toString = s"""Game($id)"""
 }
 
 object Game {
@@ -596,8 +600,9 @@ object Game {
     game.variant == chess.variant.Horde &&
       game.createdAt.isBefore(Game.hordeWhitePawnsSince)
 
-  def allowRated(variant: Variant, clock: Clock.Config) =
-    variant.standard || clock.estimateTotalTime >= Centis(3000)
+  def allowRated(variant: Variant, clock: Option[Clock.Config]) = variant.standard || {
+    clock ?? { _.estimateTotalTime >= Centis(3000) }
+  }
 
   val gameIdSize = 8
   val playerIdSize = 4
@@ -628,10 +633,10 @@ object Game {
     source: Source,
     pgnImport: Option[PgnImport],
     daysPerTurn: Option[Int] = None
-  ): Game = {
-    var createdAt = DateTime.now
-    Game(
-      id = IdGenerator.game,
+  ): NewGame = {
+    val createdAt = DateTime.now
+    NewGame(Game(
+      id = IdGenerator.uncheckedGame,
       whitePlayer = whitePlayer,
       blackPlayer = blackPlayer,
       chess = chess,
@@ -647,7 +652,7 @@ object Game {
       ),
       createdAt = createdAt,
       movedAt = createdAt
-    )
+    ))
   }
 
   object BSONFields {

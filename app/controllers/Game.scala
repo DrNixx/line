@@ -2,14 +2,13 @@ package controllers
 
 import org.joda.time.DateTime
 import org.joda.time.format.DateTimeFormat
-import play.api.mvc.RequestHeader
+import play.api.mvc._
 import scala.concurrent.duration._
 
-import lila.api.PgnDump
+import lila.api.GameApiV2
 import lila.app._
 import lila.common.{ MaxPerSecond, HTTPRequest }
 import lila.game.{ GameRepo, Game => GameModel }
-import lila.user.{ User => UserModel }
 import views._
 
 object Game extends LilaController {
@@ -17,7 +16,7 @@ object Game extends LilaController {
   def delete(gameId: String) = Auth { implicit ctx => me =>
     OptionFuResult(GameRepo game gameId) { game =>
       if (game.pgnImport.flatMap(_.user) ?? (me.id==)) {
-        Env.hub.actor.bookmark ! lila.hub.actorApi.bookmark.Remove(game.id)
+        Env.hub.bookmark ! lila.hub.actorApi.bookmark.Remove(game.id)
         (GameRepo remove game.id) >>
           (lila.analyse.AnalysisRepo remove game.id) >>
           Env.game.cached.clearNbImportedByCache(me.id) inject
