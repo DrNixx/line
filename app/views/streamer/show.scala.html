@@ -71,7 +71,8 @@ title = title,
 description = shorten(~(s.streamer.headline.map(_.value) orElse s.streamer.description.map(_.value)), 152),
 url = s"$netBaseUrl${routes.Streamer.show(s.user.username)}",
 `type` = "video",
-image = s.streamer.picturePath.map(p => dbImageUrl(p.value))).some) {
+image = s.streamer.picturePath.map(p => dbImageUrl(p.value))).some,
+csp = defaultCsp.withTwitch.some) {
 @s.stream match {
 case Some(YouTube.Stream(_, _, videoId, _)) => {
 <div class="content_box no_padding livestream youTube">
@@ -99,11 +100,11 @@ case _ => {
 <div class="content_box no_padding streamer">
   @header(s, following.some)
   <div class="description">@richText(s.streamer.description.fold("")(_.value))</div>
-  <a class="ratings" href="@routes.User.show(s.user.id)">
+  <a class="ratings" href="@routes.User.show(s.user.username)">
     @s.user.best6Perfs.map { pt =>
     @showPerfRating(s.user, pt)
     }
   </a>
-  @views.html.activity.list(s.user, activities)
+  @views.html.activity(s.user, activities).toHtml
 </div>
-}
+}.toHtml

@@ -2,7 +2,6 @@ package lila.app
 package ui
 
 import lila.common.String.html.escapeHtml
-import play.twirl.api.Html
 
 case class OpenGraph(
     title: String,
@@ -10,11 +9,11 @@ case class OpenGraph(
     url: String,
     `type`: String = "website",
     image: Option[String] = None,
-    siteName: String = "chess-online.coim",
+    siteName: String = "chess-online.com",
     more: List[(String, String)] = Nil
 ) {
 
-  def html = Html(og.str + twitter.str)
+  def frag = scalatags.Text.RawFrag(s"${og.str}${twitter.str}")
 
   object og {
 

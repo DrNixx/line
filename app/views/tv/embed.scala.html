@@ -1,27 +1,27 @@
-@(pov: Pov, bg: String, theme: String, assetVersion: lila.common.AssetVersion)
-
+@(pov: Pov, bg: String, theme: String)(implicit req: RequestHeader)
 <!doctype html>
 <html>
   <head>
-    <title>Chess-Online.Com TV</title>
-    @if(bg == "dark") {
-    @cssAt("stylesheets/dark.css", true, assetVersion)
-    }
-    @cssAt(s"stylesheets/piece/merida.css", true, assetVersion)
-    @cssAt("stylesheets/common.css", true, assetVersion)
-    @cssAt("stylesheets/board.css", true, assetVersion)
     <meta charset="utf-8">
+    <meta name="Content-Security-Policy" content="@basicCsp">
+    <title>lichess.org TV</title>
+    @if(bg == "dark") {
+    @cssAt("stylesheets/dark.css")
+    }
+    @cssAt(s"stylesheets/piece/merida.css")
+    @cssAt("stylesheets/common.css")
+    @cssAt("stylesheets/board.css")
   </head>
   <body
     class="base highlight @bg"
     style="width: 224px; height: 264px; overflow: hidden; background: none!important"
     data-stream-url="@routes.Tv.feed">
-    <div id="featured_game" class="is2d highlight @bg @theme merida" title="Chess-Online.Com TV">
+    <div id="featured_game" class="is2d highlight @bg @theme merida" title="lichess.org TV">
       @gameFenNoCtx(pov, tv = true, blank = true)
-      @game.vstext(pov)(none)
+      @game.bits.vstext(pov)(none).toHtml
     </div>
     @jQueryTag
-    @jsAt("javascripts/vendor/chessground.min.js", true, false, assetVersion)
-    @jsAt("compiled/tv.js", true, false, assetVersion)
+    @jsAt("javascripts/vendor/chessground.min.js", false)
+    @jsAt("compiled/tv.js", false)
   </body>
 </html>

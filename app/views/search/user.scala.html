@@ -2,7 +2,7 @@
 
 @import lila.gameSearch.{ Query, Sorting }
 
-<form rel="nofollow" class="search realtime" action="@routes.User.games(u.id, "search")" method="get"
+<form rel="nofollow" class="search realtime" action="@routes.User.games(u.username, "search")" method="get"
   data-req-winner="@form("players")("winner").value"
   data-req-loser="@form("players")("loser").value"
   data-req-white="@form("players")("white").value"
@@ -114,7 +114,7 @@
       </th>
       <td class="usernames">
         <input value="@u.id" name="players.a" type="hidden">
-        @base.form.input(form("players")("b"))
+        @form3.inputHtml(form("players")("b"))()
       </td>
     </tr>
     <tr class="winner user_row">
@@ -179,7 +179,9 @@
         <label for="analysed">Analysis <span class="help" title="Whether computer analysis is available or not">(?)</span></label>
       </th>
       <td class="single">
-        @base.form.checkbox(form("analysed"), "", 1)
+        @defining(form("analysed")) { field =>
+        <input type="checkbox" id="@field.id" name="@field.name" value="1" @if(field.value.has("1")){checked} />
+        }
       </td>
     </tr>
   </table>

@@ -1,8 +1,8 @@
 @(me: User)(implicit ctx: Context)
 
 @site.message(
-title = "Become a Chess-Online streamer",
-icon = Some(Html("")),
+title = "Become a lichess streamer",
+icon = Some(""),
 back = true,
 moreCss = cssTag("streamer.form.css").some) {
 <form class="streamer-new" action="@routes.Streamer.create" method="POST">
@@ -12,4 +12,4 @@ moreCss = cssTag("streamer.form.css").some) {
     <button type="submit" class="submit button large new text" data-icon="">Here we go!</button>
   </p>
 </form>
-}
+}.toHtml

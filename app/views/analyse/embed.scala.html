@@ -3,10 +3,12 @@
 @title = @{ s"${playerText(pov.game.whitePlayer)} vs ${playerText(pov.game.blackPlayer)} in ${pov.gameId} : ${pov.game.opening.fold(trans.analysis.txt())(_.opening.ecoName)}" }
 
 <!doctype html>
-<html lang="@lang.language">
+<html lang="@ctx.lang.language">
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="@defaultCsp">
     <title>@title</title>
-    <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:300' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:300" rel="stylesheet">
     @ctx.currentBg match {
     case "dark" => { @cssTag("dark.css") }
     case "transp" => { @cssTag("dark.css")@cssTag("transp.css") }
@@ -16,16 +18,7 @@
     @cssTag("board.css")
     @cssTag("analyse.css")
     @cssTag("analyse-embed.css")
-    <link id="piece-sprite" href="@staticUrl(s"stylesheets/piece/${ctx.currentPieceSet}.css?v=@ctx.pageData.assetVersion")" type="text/css" rel="stylesheet"/>
-    <meta charset="utf-8">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-33469827-5"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-33469827-5');
-    </script>
+    <link id="piece-sprite" href="@assetUrl(s"stylesheets/piece/${ctx.currentPieceSet}.css")" type="text/css" rel="stylesheet"/>
   </head>
   <body class="base highlight @List(
     ctx.currentTheme.cssClass,

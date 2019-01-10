@@ -16,13 +16,13 @@
 
 @user.layout(
 title =  s"${u.username} : ${userGameFilterTitleNoTag(u, info.nbs, filters.current)}${if(games.currentPage == 1) "" else " - page " + games.currentPage}",
-side = side(u, info.ranks, none).some,
+side = Some(side(u, info.ranks, none)),
 robots = false,
 evenMoreJs = evenMoreJs,
 openGraph = lila.app.ui.OpenGraph(
 image = staticUrl("images/large_tile.png").some,
 title = u.titleUsernameWithBestRating,
-url = s"$netBaseUrl${routes.User.show(u.id).url}",
+url = s"$netBaseUrl${routes.User.show(u.username).url}",
 description = describeUser(u)).some) {
 <div data-username="@u.username" class="content_box no_padding user_show">
   @header(u, info, Angle.Games(searchForm), social)

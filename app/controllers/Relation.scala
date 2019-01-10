@@ -80,6 +80,23 @@ object Relation extends LilaController {
     }
   }
 
+  def apiFollowing(name: String) = apiRelation(name, Direction.Following)
+
+  def apiFollowers(name: String) = apiRelation(name, Direction.Followers)
+
+  private def apiRelation(name: String, direction: Direction) = Action.async { req =>
+    UserRepo.named(name) flatMap {
+      _ ?? { user =>
+        import Api.limitedDefault
+        Api.GlobalLinearLimitPerIP(HTTPRequest lastRemoteAddress req) {
+          Api.jsonStream {
+            env.stream.follow(user, direction, MaxPerSecond(20)) &> Enumeratee.map(Env.api.userApi.one)
+          } |> fuccess
+        }
+      }
+    }
+  }
+
   private def jsonRelatedPaginator(pag: Paginator[Related]) = {
     import lila.user.JsonView.nameWrites
     import lila.relation.JsonView.relatedWrites

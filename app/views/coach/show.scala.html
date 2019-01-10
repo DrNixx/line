@@ -23,7 +23,7 @@ $('.review-form form').show();
 @side = {
 <div class="coach-side">
   <div class="profile">
-    <a class="blue" href="@routes.User.show(c.user.id)">View @c.user.username lichess profile</a>
+    <a class="blue" href="@routes.User.show(c.user.username)">View @c.user.username lichess profile</a>
   </div>
   @if(ctx.me.exists(_.id != c.user.id)) {
   @reviewForm(c, myReview)
@@ -90,7 +90,7 @@ image = c.coach.picturePath.map(p => dbImageUrl(p.value))).some) {
               @profile.officialRating.map { r =>
               @r.name.toUpperCase: @r.rating,
               }
-              <a href="@routes.User.show(c.user.id)">
+              <a href="@routes.User.show(c.user.username)">
                 @c.user.best8Perfs.take(6).filter(c.user.hasEstablishedRating).map { pt =>
                 @showPerfRating(c.user, pt)
                 }
@@ -131,7 +131,7 @@ image = c.coach.picturePath.map(p => dbImageUrl(p.value))).some) {
           <tr class="contact">
             <th>Contact</th>
             <td>
-              <a class="text" data-icon="c" href="@routes.Message.form?user=@c.user.id">Send a private message</a>
+              <a class="text" data-icon="c" href="@routes.Message.form?user=@c.user.username">Send a private message</a>
             </td>
           </tr>
           }
@@ -178,4 +178,4 @@ image = c.coach.picturePath.map(p => dbImageUrl(p.value))).some) {
   }
   }
 </div>
-}
+}.toHtml

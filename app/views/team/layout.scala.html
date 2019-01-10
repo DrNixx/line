@@ -1,11 +1,8 @@
-@(title: String, currentTab: Option[String] = None, openGraph: Option[lila.app.ui.OpenGraph] = None)(body: Html)(implicit ctx: Context)
+@(title: String, currentTab: Option[String] = None, openGraph: Option[lila.app.ui.OpenGraph] = None, formCss: Boolean = false)(body: Html)(implicit ctx: Context)
 
-@moreCss = {
+@allCss = {
 @cssTag("team.css")
-}
-
-@moreJs = {
-@jsTag("vendor/jquery.infinitescroll.min.js")
+@if(formCss) { @cssTag("form3.css") }
 }
 
 @side = {
@@ -35,9 +32,9 @@
 
 @base.layout(
 title = title,
-moreCss = moreCss,
-moreJs = moreJs,
+moreCss = allCss,
+moreJs = infiniteScrollTag,
 openGraph = openGraph,
 side = side.some) {
 @body
-}
+}.toHtml

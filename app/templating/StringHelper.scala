@@ -1,7 +1,6 @@
 package lila.app
 package templating
 
-import ornicar.scalalib.Zero
 import play.twirl.api.Html
 
 import lila.user.UserContext
@@ -9,9 +8,6 @@ import lila.user.UserContext
 trait StringHelper { self: NumberHelper =>
 
   def netDomain: String
-
-  val emptyHtml = Html("")
-  implicit val LilaHtmlZero: Zero[Html] = Zero.instance(emptyHtml)
 
   val slugify = lila.common.String.slugify _
 
@@ -31,18 +27,18 @@ trait StringHelper { self: NumberHelper =>
 
   def when(cond: Boolean, str: String) = cond ?? str
 
-  private val NumberFirstRegex = """^(\d+)\s(.+)$""".r
-  private val NumberLastRegex = """^(.+)\s(\d+)$""".r
-  def splitNumber(s: String)(implicit ctx: UserContext): Html = Html {
+  private val NumberFirstRegex = """(\d++)\s(.+)""".r
+  private val NumberLastRegex = """\s(\d++)$""".r.unanchored
+  def splitNumberUnsafe(s: String)(implicit ctx: UserContext): Html = Html {
     s match {
       case NumberFirstRegex(number, text) =>
         s"<strong>${(~parseIntOption(number)).localize}</strong><br />$text"
-      case NumberLastRegex(text, number) =>
-        s"$text<br /><strong>${(~parseIntOption(number)).localize}</strong>"
-      case h => h.replace("\n", "<br />")
+      case NumberLastRegex(n) if s.length > n.length + 1 =>
+        s"${s.dropRight(n.length + 1)}<br /><strong>${(~parseIntOption(n)).localize}</strong>"
+      case h => h.replaceIf('\n', "<br />")
     }
   }
-  def splitNumber(s: Html)(implicit ctx: UserContext): Html = splitNumber(s.body)
+  def splitNumber(s: Html)(implicit ctx: UserContext): Html = splitNumberUnsafe(s.body)
 
   def encodeFen(fen: String) = lila.common.String.base64.encode(fen).reverse
 

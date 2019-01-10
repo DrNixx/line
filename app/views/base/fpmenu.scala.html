@@ -8,7 +8,7 @@
       <div class="perfs">
         @topBarSortedPerfTypes.map { pt =>
         @me.perfs(pt.key).map { perf =>
-        <a href="@routes.User.perfStat(me.id, pt.key)" class="perf@if(perf.nb == 0){ nope}" data-icon="@pt.iconChar">
+        <a href="@routes.User.perfStat(me.username, pt.key)" class="perf@if(perf.nb == 0){ nope}" data-icon="@pt.iconChar">
           <h3>@pt.name</h3>
           @if(perf.nb > 0) {
           <div class="rating">
@@ -23,13 +23,9 @@
     </div>
     }.getOrElse {
     <div class="anon">
-      <section class="login">
+      <section>
         <h2>@trans.signIn()</h2>
-        <form action="@routes.Auth.authenticate" method="POST">
-          <input placeholder="@trans.usernameOrEmail()" type="text" class="username" required="required" name="username" />
-          <input placeholder="@trans.password()" type="password" class="password" required="required" name="password" />
-          <input type="submit" class="submit" value="@trans.signIn()" />
-        </form>
+        <a class="login" href="@routes.Auth.login">@trans.signIn()</a>
         <div class="forgot">
           <a href="@routes.Auth.passwordReset">@trans.forgotPassword()</a>
         </div>
@@ -90,11 +86,11 @@
     <a href="/patron">@trans.donate()</a> ı
     }
     <a href="/contact">@trans.contact()</a> ı
-    <a href="@routes.Page.bookmark("tos")">@trans.termsOfService()</a> ı
-    <a href="@routes.Page.bookmark("privacy")">@trans.privacy()</a>
+    <a href="@routes.Page.tos">@trans.termsOfService()</a> ı
+    <a href="@routes.Page.privacy">@trans.privacy()</a>
     @NotForKids {
-    ı <a href="https://database.chess-online.com/" target="_blank">@trans.database()</a>
-    ı <a href="https://github.com/DrNixx/lila" target="_blank">@trans.sourceCode()</a>
+    ı <a href="https://database.lichess.org/" target="_blank">@trans.database()</a>
+    ı <a href="https://github.com/ornicar/lila" target="_blank">@trans.sourceCode()</a>
     }
   </div>
 </div>

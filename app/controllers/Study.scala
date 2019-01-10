@@ -148,10 +148,19 @@ object Study extends LilaController {
               sVersion <- env.version(sc.study.id)
               streams <- streamsOf(sc.study)
             } yield Ok(html.study.show(sc.study, data, chat, sVersion, streams)),
-            api = _ => Ok(Json.obj(
-              "study" -> data.study,
-              "analysis" -> data.analysis
-            )).fuccess
+            api = _ => chatOf(sc.study).map { chatOpt =>
+              Ok(
+                Json.obj(
+                  "study" -> data.study.add("chat" -> chatOpt.map { c =>
+                    lila.chat.JsonView.mobile(
+                      chat = c.chat,
+                      writeable = ctx.userId.??(sc.study.canChat)
+                    )
+                  }),
+                  "analysis" -> data.analysis
+                )
+              )
+            }
           )
         } yield res
       }
@@ -212,8 +221,10 @@ object Study extends LilaController {
           env.socketHandler.join(
             studyId = id,
             uid = lila.socket.Socket.Uid(uid),
-            user = ctx.me
-          )
+            user = ctx.me,
+            getSocketVersion,
+            apiVersion
+          ) map some
         }
       }
     }
@@ -262,7 +273,7 @@ object Study extends LilaController {
   def importPgn(id: String) = AuthBody { implicit ctx => me =>
     implicit val req = ctx.body
     lila.study.DataForm.importPgn.form.bindFromRequest.fold(
-      err => BadRequest(errorsAsJson(err)).fuccess,
+      jsonFormError,
       data => env.api.importPgns(me, StudyModel.Id(id), data.toChapterDatas, sticky = data.sticky)
     )
   }
@@ -379,10 +390,20 @@ object Study extends LilaController {
     }
   }
 
+  def multiBoard(id: String, page: Int) = Open { implicit ctx =>
+    OptionFuResult(env.api byId id) { study =>
+      CanViewResult(study) {
+        env.multiBoard.json(study, page, getBool("playing")) map { json =>
+          Ok(json) as JSON
+        }
+      }
+    }
+  }
+
   private def CanViewResult(study: StudyModel)(f: => Fu[Result])(implicit ctx: lila.api.Context) =
     if (canView(study)) f
     else negotiate(
-      html = fuccess(Unauthorized(html.study.restricted(study))),
+      html = fuccess(Unauthorized(html.site.message.privateStudy(study.ownerId))),
       api = _ => fuccess(Unauthorized(jsonError("This study is now private")))
     )
 

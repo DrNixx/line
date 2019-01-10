@@ -1,20 +1,12 @@
 @(title: String)(body: Html)(implicit ctx: Context)
 
-@moreCss = {
-@cssTag("flatpickr.css")
-@cssTag("material.form.css")
-@cssTag("relay.css")
-}
-
 @moreJs = {
-@jsAt("vendor/flatpickr/dist/flatpickr.min.js")
-@embedJs {
-$(".flatpickr").flatpickr();
-}
+@flatpickrTag
+@delayFlatpickrStart
 }
 
 @base.layout(
 title = title,
-moreCss = moreCss,
+moreCss = cssTags("flatpickr.css", "form3.css", "relay.css"),
 moreJs = moreJs
-)(body)
+)(body).toHtml

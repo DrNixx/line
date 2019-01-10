@@ -16,7 +16,7 @@ object Report extends LilaController {
   private def api = env.api
 
   def list = Secure(_.SeeReport) { implicit ctx => me =>
-    if (Env.streamer.liveStreamApi.isStreaming(me.id)) fuccess(Forbidden(html.mod.streaming()))
+    if (Env.streamer.liveStreamApi.isStreaming(me.id)) fuccess(Forbidden(html.site.message.streamingMod))
     else renderList(env.modFilters.get(me).fold("all")(_.key))
   }
 
@@ -26,7 +26,7 @@ object Report extends LilaController {
   }
 
   private def renderList(room: String)(implicit ctx: Context) =
-    api.openAndRecentWithFilter(20, Room(room)) zip
+    api.openAndRecentWithFilter(12, Room(room)) zip
       api.countOpenByRooms zip
       Env.streamer.api.approval.countRequests flatMap {
         case reports ~ counts ~ streamers =>
@@ -54,7 +54,7 @@ object Report extends LilaController {
     force: Boolean = false
   )(implicit ctx: BodyContext[_]) = {
     goTo.ifTrue(HTTPRequest isXhr ctx.req) match {
-      case Some(suspect) => User.renderModZone(suspect.user.id, me)
+      case Some(suspect) => User.renderModZoneActions(suspect.user.username)
       case None =>
         def autoNext = ctx.body.body match {
           case AnyContentAsFormUrlEncoded(data) => data.get("next").exists(_.headOption contains "1")
@@ -63,7 +63,7 @@ object Report extends LilaController {
         inquiry match {
           case None =>
             goTo.fold(Redirect(routes.Report.list).fuccess) { s =>
-              User.modZoneOrRedirect(s.user.id, me)
+              User.modZoneOrRedirect(s.user.username, me)
             }
           case Some(prev) =>
             def redirectToList = Redirect(routes.Report.listWithFilter(prev.room.key))
@@ -92,18 +92,18 @@ object Report extends LilaController {
     api.moveToXfiles(id) inject Redirect(routes.Report.list)
   }
 
-  def currentCheatInquiry(userId: String) = Secure(_.Hunter) { implicit ctx => me =>
-    OptionFuResult(UserRepo byId userId) { user =>
+  def currentCheatInquiry(username: String) = Secure(_.Hunter) { implicit ctx => me =>
+    OptionFuResult(UserRepo named username) { user =>
       env.api.currentCheatReport(lila.report.Suspect(user)) flatMap {
         _ ?? { report =>
           env.api.inquiries.toggle(lila.report.Mod(me), report.id)
-        } inject Mod.redirect(userId, true)
+        } inject Mod.redirect(username, true)
       }
     }
   }
 
   def form = Auth { implicit ctx => implicit me =>
-    get("username") ?? UserRepo.byId flatMap { user =>
+    get("username") ?? UserRepo.named flatMap { user =>
       env.forms.createWithCaptcha map {
         case (form, captcha) => Ok(html.report.form(form, user, captcha))
       }
@@ -113,7 +113,7 @@ object Report extends LilaController {
   def create = AuthBody { implicit ctx => implicit me =>
     implicit val req = ctx.body
     env.forms.create.bindFromRequest.fold(
-      err => get("username") ?? UserRepo.byId flatMap { user =>
+      err => get("username") ?? UserRepo.named flatMap { user =>
         env.forms.anyCaptcha map { captcha =>
           BadRequest(html.report.form(err, user, captcha))
         }
@@ -121,7 +121,7 @@ object Report extends LilaController {
       data =>
         if (data.user == me) notFound
         else api.create(data candidate lila.report.Reporter(me)) map { report =>
-          Redirect(routes.Report.thanks(data.user.id))
+          Redirect(routes.Report.thanks(data.user.username))
         }
     )
   }

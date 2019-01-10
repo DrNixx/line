@@ -1,7 +1,10 @@
 package controllers
 
+import play.api.data.Form
+import play.api.libs.iteratee._
 import play.api.libs.json._
 import play.api.mvc._
+import play.twirl.api.Html
 import scala.concurrent.duration._
 
 import lila.api.{ Context, BodyContext }
@@ -26,7 +29,7 @@ object User extends LilaController {
     OptionFuResult(UserRepo byId userId) { user =>
       (GameRepo lastPlayedPlaying user) orElse
         (GameRepo lastPlayed user) flatMap {
-          _.fold(fuccess(Redirect(routes.User.show(user.id)))) { pov =>
+          _.fold(fuccess(Redirect(routes.User.show(userId)))) { pov =>
             Round.watch(pov, userTv = user.some)
           }
         }
@@ -247,42 +250,101 @@ object User extends LilaController {
   }
 
   protected[controllers] def modZoneOrRedirect(userId: UserModel.ID, me: UserModel)(implicit ctx: Context): Fu[Result] =
-    if (HTTPRequest isSynchronousHttp ctx.req) fuccess(Mod.redirect(userId))
-    else if (Env.streamer.liveStreamApi.isStreaming(me.id)) fuccess(Ok("Disabled while streaming"))
-    else renderModZone(userId, me)
+    if (HTTPRequest isEventSource ctx.req) renderModZone(userId, me)
+    else fuccess(Mod.redirect(userId))
 
-  protected[controllers] def renderModZone(userId: UserModel.ID, me: UserModel)(implicit ctx: Context): Fu[Result] =
-    OptionFuOk(UserRepo byId userId) { user =>
-      UserRepo.emails(user.id) zip
-        UserRepo.isErased(user) zip
-        (Env.security userSpy user) zip
-        Env.mod.assessApi.getPlayerAggregateAssessmentWithGames(user.id) zip
-        Env.mod.logApi.userHistory(user.id) zip
-        Env.plan.api.recentChargesOf(user) zip
-        Env.report.api.byAndAbout(user, 20) zip
-        Env.pref.api.getPref(user) zip
-        Env.irwin.api.reports.withPovs(user) flatMap {
-          case emails ~ erased ~ spy ~ assess ~ history ~ charges ~ reports ~ pref ~ irwin =>
-            val familyUserIds = user.id :: spy.otherUserIds.toList
-            Env.playban.api.bans(familyUserIds) zip
-              Env.user.noteApi.forMod(familyUserIds) zip
-              Env.user.lightUserApi.preloadMany {
-                reports.userIds ::: assess.??(_.games).flatMap(_.userIds)
-              } map {
-                case bans ~ notes ~ _ =>
-                  html.user.mod(user, emails, spy, assess, bans, history, charges, reports, pref, irwin, notes, erased)
-              }
+  private def futureToEnumerator[A](fu: Fu[Option[A]]): Enumerator[A] = Enumerator flatten fu.map {
+    _.fold(Enumerator.empty[A]) { Enumerator(_) }
+  }
+
+  protected[controllers] def renderModZone(userId: UserModel.ID, me: UserModel)(implicit ctx: Context): Fu[Result] = {
+    UserRepo withEmails userId flatten s"No such user $userId" map {
+      case UserModel.WithEmails(user, emails) =>
+        val parts =
+          Env.mod.logApi.userHistory(user.id).logTimeIfGt(s"$userId logApi.userHistory", 2 seconds) zip
+            Env.plan.api.recentChargesOf(user).logTimeIfGt(s"$userId plan.recentChargesOf", 2 seconds) zip
+            Env.report.api.byAndAbout(user, 20).logTimeIfGt(s"$userId report.byAndAbout", 2 seconds) zip
+            Env.pref.api.getPref(user).logTimeIfGt(s"$userId pref.getPref", 2 seconds) flatMap {
+              case history ~ charges ~ reports ~ pref =>
+                Env.user.lightUserApi.preloadMany(reports.userIds).logTimeIfGt(s"$userId lightUserApi.preloadMany", 2 seconds) inject
+                  html.user.mod.parts(user, history, charges, reports, pref).some
+            }
+        val actions = UserRepo.isErased(user) map { erased =>
+          html.user.mod.actions(user, emails, erased).some
+        }
+        val spyFu = Env.security.userSpy(user).logTimeIfGt(s"$userId security.userSpy", 2 seconds)
+        val others = spyFu flatMap { spy =>
+          val familyUserIds = user.id :: spy.otherUserIds.toList
+          Env.user.noteApi.forMod(familyUserIds).logTimeIfGt(s"$userId noteApi.forMod", 2 seconds) zip
+            Env.playban.api.bans(familyUserIds).logTimeIfGt(s"$userId playban.bans", 2 seconds) map {
+              case notes ~ bans => html.user.mod.otherUsers(user, spy, notes, bans).some
+            }
+        }
+        val identification = spyFu map { spy =>
+          html.user.mod.identification(user, spy).some
+        }
+        val irwin = Env.irwin.api.reports.withPovs(user) map {
+          _ ?? { reps =>
+            html.irwin.irwinReport(reps).some
+          }
+        }
+        val assess = Env.mod.assessApi.getPlayerAggregateAssessmentWithGames(user.id) flatMap {
+          _ ?? { as =>
+            Env.user.lightUserApi.preloadMany(as.games.flatMap(_.userIds)) inject html.user.mod.assessments(as).some
+          }
+        }
+        import play.api.libs.EventSource
+        implicit val extractor = EventSource.EventDataExtractor[Html](_.toString)
+        Ok.chunked {
+          (Enumerator(html.user.mod.menu(user)) interleave
+            futureToEnumerator(parts.logTimeIfGt(s"$userId parts", 2 seconds)) interleave
+            futureToEnumerator(actions.logTimeIfGt(s"$userId actions", 2 seconds)) interleave
+            futureToEnumerator(others.logTimeIfGt(s"$userId others", 2 seconds)) interleave
+            futureToEnumerator(identification.logTimeIfGt(s"$userId identification", 2 seconds)) interleave
+            futureToEnumerator(irwin.logTimeIfGt(s"$userId irwin", 2 seconds)) interleave
+            futureToEnumerator(assess.logTimeIfGt(s"$userId assess", 2 seconds))) &>
+            EventSource()
+        }.as("text/event-stream")
+    }
+  }
+
+  protected[controllers] def renderModZoneActions(userId: UserModel.ID)(implicit ctx: Context) =
+    UserRepo withEmails userId flatten s"No such user $userId" flatMap {
+      case UserModel.WithEmails(user, emails) =>
+        UserRepo.isErased(user) map { erased =>
+          Ok(html.user.mod.actions(user, emails, erased))
         }
     }
 
   def writeNote(userId: UserModel.ID) = AuthBody { implicit ctx => me =>
-    OptionFuResult(UserRepo byId userId) { user =>
-      implicit val req = ctx.body
-      env.forms.note.bindFromRequest.fold(
-        err => renderShow(user, Results.BadRequest),
-        data => env.noteApi.write(user, data.text, me, data.mod && isGranted(_.ModNote)) inject
-          Redirect(routes.User.show(userId).url + "?note")
-      )
+    doWriteNote(userId, me)(
+      err = _ => user => renderShow(user, Results.BadRequest),
+      suc = Redirect(routes.User.show(userId).url + "?note")
+    )(ctx.body)
+  }
+
+  def apiWriteNote(userId: UserModel.ID) = ScopedBody() { implicit req => me =>
+    doWriteNote(userId, me)(
+      err = err => _ => jsonFormErrorDefaultLang(err),
+      suc = jsonOkResult
+    )
+  }
+
+  private def doWriteNote(userId: UserModel.ID, me: UserModel)(err: Form[_] => UserModel => Fu[Result], suc: => Result)(implicit req: Request[_]) =
+    UserRepo byId userId flatMap {
+      _ ?? { user =>
+        env.forms.note.bindFromRequest.fold(
+          e => err(e)(user),
+          data => env.noteApi.write(user, data.text, me, data.mod && isGranted(_.ModNote, me)) inject suc
+        )
+      }
+    }
+
+  def deleteNote(id: String) = Auth { implicit ctx => me =>
+    OptionFuResult(env.noteApi.byId(id)) { note =>
+      (note.isFrom(me) && !note.mod) ?? {
+        env.noteApi.delete(note._id) inject Redirect(routes.User.show(note.to).url + "?note")
+      }
     }
   }
 
@@ -354,6 +416,6 @@ object User extends LilaController {
   }
 
   def myself = Auth { ctx => me =>
-    fuccess(Redirect(routes.User.show(me.id)))
+    fuccess(Redirect(routes.User.show(me.username)))
   }
 }

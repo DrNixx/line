@@ -36,19 +36,19 @@ object Main extends LilaController {
     }
   }
 
-  def websocket = SocketOption { implicit ctx =>
+  def websocket(apiVersion: Int) = SocketOption { implicit ctx =>
     getSocketUid("sri") ?? { uid =>
-      Env.site.socketHandler(uid, ctx.userId, get("flag")) map some
+      Env.site.socketHandler.human(uid, ctx.userId, apiVersion, get("flag")) map some
     }
   }
 
   def apiWebsocket = WebSocket.tryAccept { req =>
-    Env.site.apiSocketHandler.apply map Right.apply
+    Env.site.socketHandler.api(lila.api.Mobile.Api.currentVersion) map Right.apply
   }
 
   def captchaCheck(id: String) = Open { implicit ctx =>
-    Env.hub.actor.captcher ? ValidCaptcha(id, ~get("solution")) map {
-      case valid: Boolean => Ok(valid fold (1, 0))
+    Env.hub.captcher ? ValidCaptcha(id, ~get("solution")) map {
+      case valid: Boolean => Ok(if (valid) 1 else 0)
     }
   }
 
@@ -130,15 +130,19 @@ object Main extends LilaController {
     }
   }
 
-  val robots = Action {
+  val robots = Action { req =>
     Ok {
-      if (Env.api.Net.Crawlable) """User-agent: *
+      if (Env.api.Net.Crawlable && req.domain == Env.api.Net.Domain) """User-agent: *
 Allow: /
 Disallow: /game/export
 Disallow: /games/export
 """
       else "User-agent: *\nDisallow: /"
     }
+  }
+
+  val freeJs = Open { implicit ctx =>
+    Ok(html.site.freeJs(ctx)).fuccess
   }
 
   def renderNotFound(req: RequestHeader): Fu[Result] =
@@ -156,4 +160,14 @@ Disallow: /games/export
   def getFishnet = Open { implicit ctx =>
     Ok(html.site.getFishnet()).fuccess
   }
+
+  def costs = Open { implicit ctx =>
+    Redirect("https://docs.google.com/spreadsheets/d/1CGgu-7aNxlZkjLl9l-OlL00fch06xp0Q7eCVDDakYEE/preview").fuccess
+  }
+
+  def contact = Open { implicit ctx =>
+    Ok(html.site.contact()).fuccess
+  }
+
+  def versionedAsset(version: String, file: String) = Assets.at(path = "/public", file)
 }
