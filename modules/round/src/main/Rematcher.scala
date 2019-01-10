@@ -75,34 +75,35 @@ private[round] final class Rematcher(
 
   private def returnGame(pov: Pov): Fu[Game] = for {
     initialFen <- GameRepo initialFen pov.game
-    situation = initialFen flatMap Forsyth.<<<
+    situation = initialFen flatMap { fen => Forsyth <<< fen.value }
     pieces = pov.game.variant match {
       case Chess960 =>
-        if (rematch960Cache.get(pov.gameId)) Chess960.pieces
+        if (rematch960Cache get pov.gameId) Chess960.pieces
         else situation.fold(Chess960.pieces)(_.situation.board.pieces)
       case FromPosition => situation.fold(Standard.pieces)(_.situation.board.pieces)
       case variant => variant.pieces
     }
     users <- UserRepo byIds pov.game.userIds
-  } yield Game.make(
-    chess = ChessGame(
-      situation = Situation(
-        board = Board(pieces, variant = pov.game.variant).withCastles {
-          situation.fold(Castles.init)(_.situation.board.history.castles)
-        },
-        color = situation.fold[chess.Color](White)(_.situation.color)
+    game <- Game.make(
+      chess = ChessGame(
+        situation = Situation(
+          board = Board(pieces, variant = pov.game.variant).withCastles {
+            situation.fold(Castles.init)(_.situation.board.history.castles)
+          },
+          color = situation.fold[chess.Color](White)(_.situation.color)
+        ),
+        clock = pov.game.clock map { c => Clock(c.config) },
+        turns = situation ?? (_.turns),
+        startedAtTurn = situation ?? (_.turns)
       ),
-      clock = pov.game.clock map { c => Clock(c.config) },
-      turns = situation ?? (_.turns),
-      startedAtTurn = situation ?? (_.turns)
-    ),
-    whitePlayer = returnPlayer(pov.game, White, users),
-    blackPlayer = returnPlayer(pov.game, Black, users),
-    mode = if (users.exists(_.lame)) chess.Mode.Casual else pov.game.mode,
-    source = pov.game.source | Source.Lobby,
-    daysPerTurn = pov.game.daysPerTurn,
-    pgnImport = None
-  )
+      whitePlayer = returnPlayer(pov.game, White, users),
+      blackPlayer = returnPlayer(pov.game, Black, users),
+      mode = if (users.exists(_.lame)) chess.Mode.Casual else pov.game.mode,
+      source = pov.game.source | Source.Lobby,
+      daysPerTurn = pov.game.daysPerTurn,
+      pgnImport = None
+    ).withUniqueId
+  } yield game
 
   private def returnPlayer(game: Game, color: ChessColor, users: List[User]): lila.game.Player =
     game.opponent(color).aiLevel match {

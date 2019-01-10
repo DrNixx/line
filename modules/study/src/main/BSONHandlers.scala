@@ -10,6 +10,7 @@ import reactivemongo.bson._
 import lila.db.BSON
 import lila.db.BSON.{ Reader, Writer }
 import lila.db.dsl._
+import lila.game.BSONHandlers.FENBSONHandler
 import lila.tree.Eval
 import lila.tree.Eval.Score
 import lila.tree.Node.{ Shape, Shapes, Comment, Comments, Gamebook }
@@ -78,8 +79,6 @@ object BSONHandlers {
   import Uci.WithSan
   private implicit val UciWithSanBSONHandler = Macros.handler[WithSan]
 
-  private implicit val FenBSONHandler = stringAnyValHandler[FEN](_.value, FEN.apply)
-
   implicit val ShapesBSONHandler: BSONHandler[BSONArray, Shapes] =
     isoHandler[Shapes, List[Shape], BSONArray](
       (s: Shapes) => s.value,
@@ -90,7 +89,7 @@ object BSONHandlers {
   private implicit val CommentTextBSONHandler = stringAnyValHandler[Comment.Text](_.value, Comment.Text.apply)
   implicit val CommentAuthorBSONHandler = new BSONHandler[BSONValue, Comment.Author] {
     def read(bsonValue: BSONValue): Comment.Author = bsonValue match {
-      case BSONString("lichess") => Comment.Author.Lichess
+      case BSONString(lila.user.User.lichessId) => Comment.Author.Lichess
       case BSONString(name) => Comment.Author.External(name)
       case doc: Bdoc => {
         for {
@@ -170,7 +169,8 @@ object BSONHandlers {
       score = r.getO[Score]("e"),
       crazyData = r.getO[Crazyhouse.Data]("z"),
       clock = r.getO[Centis]("l"),
-      children = r.get[Node.Children]("n")
+      children = r.get[Node.Children]("n"),
+      forceVariation = r boolD "fv"
     )
     def writes(w: Writer, s: Node) = $doc(
       "i" -> s.id,
@@ -186,11 +186,12 @@ object BSONHandlers {
       "e" -> s.score,
       "l" -> s.clock,
       "z" -> s.crazyData,
-      "n" -> (if (s.ply < Node.MAX_PLIES) s.children else Node.emptyChildren)
+      "n" -> (if (s.ply < Node.MAX_PLIES) s.children else Node.emptyChildren),
+      "fv" -> w.boolO(s.forceVariation)
     )
   }
   import Node.Root
-  private implicit def NodeRootBSONHandler: BSON[Root] = new BSON[Root] {
+  private[study] implicit def NodeRootBSONHandler: BSON[Root] = new BSON[Root] {
     def reads(r: Reader) = Root(
       ply = r int "p",
       fen = r.get[FEN]("f"),

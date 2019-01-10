@@ -32,7 +32,7 @@ final class Env(
   private lazy val notifier = new PlanNotifier(
     notifyApi = notifyApi,
     scheduler = scheduler,
-    timeline = hub.actor.timeline
+    timeline = hub.timeline
   )
 
   private lazy val monthlyGoalApi = new MonthlyGoalApi(
@@ -65,7 +65,12 @@ final class Env(
   def cli = new lila.common.Cli {
     def process = {
       case "patron" :: "lifetime" :: user :: Nil =>
-        lila.user.UserRepo named user flatMap { _ ?? api.setLifetime } inject "ok"
+        lila.user.UserRepo byId user flatMap { _ ?? api.setLifetime } inject "ok"
+      // someone donated while logged off.
+      // we cannot bind the charge to the user so they get their precious wings.
+      // instead, give them a free month.
+      case "patron" :: "month" :: user :: Nil =>
+        lila.user.UserRepo byId user flatMap { _ ?? api.giveMonth } inject "ok"
     }
   }
 }

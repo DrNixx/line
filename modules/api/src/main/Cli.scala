@@ -23,7 +23,7 @@ private[api] final class Cli(bus: lila.common.Bus) extends lila.common.Cli {
       AssetVersion.change
       fuccess(s"Changed to ${AssetVersion.current}")
     case "gdpr" :: "erase" :: username :: "forever" :: Nil =>
-      lila.user.UserRepo named username flatMap {
+      lila.user.UserRepo byId username flatMap {
         case None => fuccess("No such user.")
         case Some(user) if user.enabled => fuccess("That user account is not closed. Can't erase.")
         case Some(user) => lila.user.UserRepo.email(user.id) map {

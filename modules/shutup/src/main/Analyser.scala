@@ -1,5 +1,7 @@
 package lila.shutup
 
+import lila.common.constants.bannedYoutubeIds
+
 object Analyser {
 
   def apply(text: String) = TextAnalysis(
@@ -8,9 +10,11 @@ object Analyser {
   )
 
   private def wordsRegexes =
-    Dictionary.en.map { word => word + "e?[ds]?" } ++
+    Dictionary.en.map { word =>
+      word + (if (word endsWith "e") "" else "e?+") + "[ds]?+"
+    } ++
       Dictionary.ru ++
-      Dictionary.youtubeIds
+      bannedYoutubeIds
 
   private val bigRegex = {
     """(?i)\b""" +

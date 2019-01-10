@@ -17,6 +17,19 @@ case class HookConfig(
     ratingRange: RatingRange
 ) extends HumanConfig {
 
+  def withinLimits(user: Option[User]): HookConfig = (for {
+    pt <- perfType
+    me <- user
+  } yield copy(
+    ratingRange = ratingRange.withinLimits(
+      rating = me.perfs(pt).intRating,
+      delta = 400,
+      multipleOf = 50
+    )
+  )) | this
+
+  private def perfType = lila.game.PerfPicker.perfType(chess.Speed(makeClock), variant, makeDaysPerTurn)
+
   def fixColor = copy(
     color = if (mode == Mode.Rated &&
       lila.game.Game.variantsWhereWhiteIsBetter(variant) &&
@@ -33,7 +46,7 @@ case class HookConfig(
   }
 
   def hook(
-    uid: String,
+    uid: lila.socket.Socket.Uid,
     user: Option[User],
     sid: Option[String],
     blocking: Set[String]
@@ -44,7 +57,7 @@ case class HookConfig(
         uid = uid,
         variant = variant,
         clock = clock,
-        mode = lila.game.Game.allowRated(variant, clock).fold(mode, Mode.Casual),
+        mode = if (lila.game.Game.allowRated(variant, clock.some)) mode else Mode.Casual,
         color = color.name,
         user = user,
         blocking = blocking,

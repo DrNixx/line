@@ -1,5 +1,6 @@
 package lila.setup
 
+import chess.format.FEN
 import lila.game.{ Game, Player, Source, Pov }
 import lila.lobby.Color
 import lila.user.User
@@ -12,12 +13,12 @@ case class AiConfig(
     days: Int,
     level: Int,
     color: Color,
-    fen: Option[String] = None
+    fen: Option[FEN] = None
 ) extends Config with Positional {
 
   val strictFen = true
 
-  def >> = (variant.id, timeMode.id, time, increment, days, level, color.name, fen).some
+  def >> = (variant.id, timeMode.id, time, increment, days, level, color.name, fen.map(_.value)).some
 
   def game(user: Option[User]) = fenGame { chessGame =>
     val perfPicker = lila.game.PerfPicker.mainOrDefault(
@@ -36,13 +37,15 @@ case class AiConfig(
         Player.make(chess.Black, user, perfPicker)
       ),
       mode = chess.Mode.Casual,
-      source = (chessGame.board.variant.fromPosition).fold(Source.Position, Source.Ai),
+      source = if (chessGame.board.variant.fromPosition) Source.Position else Source.Ai,
       daysPerTurn = makeDaysPerTurn,
       pgnImport = None
-    )
+    ).sloppy
   } start
 
   def pov(user: Option[User]) = Pov(game(user), creatorColor)
+
+  def timeControlFromPosition = variant != chess.variant.FromPosition || time >= 1
 }
 
 object AiConfig extends BaseConfig {
@@ -55,7 +58,7 @@ object AiConfig extends BaseConfig {
     days = d,
     level = level,
     color = Color(c) err "Invalid color " + c,
-    fen = fen
+    fen = fen map FEN
   )
 
   val default = AiConfig(
@@ -74,6 +77,7 @@ object AiConfig extends BaseConfig {
 
   import lila.db.BSON
   import lila.db.dsl._
+  import lila.game.BSONHandlers.FENBSONHandler
 
   private[setup] implicit val aiConfigBSONHandler = new BSON[AiConfig] {
 
@@ -87,7 +91,7 @@ object AiConfig extends BaseConfig {
       days = r int "d",
       level = r int "l",
       color = Color.White,
-      fen = r strO "f" filter (_.nonEmpty)
+      fen = r.getO[FEN]("f") filter (_.value.nonEmpty)
     )
 
     def writes(w: BSON.Writer, o: AiConfig) = $doc(

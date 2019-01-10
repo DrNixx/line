@@ -3,14 +3,13 @@ package lila.timeline
 import akka.actor._
 import org.joda.time.DateTime
 
-import lila.hub.actorApi.lobby.NewForumPost
 import lila.hub.actorApi.timeline.propagation._
-import lila.hub.actorApi.timeline.{ Propagate, Atom, ForumPost, ReloadTimeline }
+import lila.hub.actorApi.timeline.{ Propagate, Atom, ForumPost, ReloadTimelines }
 import lila.security.{ Granter, Permission }
 import lila.user.UserRepo
 
 private[timeline] final class Push(
-    lobbySocket: ActorSelection,
+    bus: lila.common.Bus,
     renderer: ActorSelection,
     getFriendIds: String => Fu[Set[String]],
     getFollowerIds: String => Fu[Set[String]],
@@ -21,17 +20,11 @@ private[timeline] final class Push(
   def receive = {
 
     case Propagate(data, propagations) =>
-      data match {
-        case _: ForumPost => lobbySocket ! NewForumPost
-        case _ =>
-      }
       propagate(propagations) flatMap { users =>
         unsubApi.filterUnsub(data.channel, users)
       } foreach { users =>
         if (users.nonEmpty) makeEntry(users, data) >>-
-          (users foreach { u =>
-            lobbySocket ! ReloadTimeline(u)
-          })
+          bus.publish(ReloadTimelines(users), 'lobbySocket)
         lila.mon.timeline.notification(users.size)
       }
   }
@@ -41,9 +34,6 @@ private[timeline] final class Push(
       case Users(ids) => fuccess(ids)
       case Followers(id) => getFollowerIds(id)
       case Friends(id) => getFriendIds(id)
-      case StaffFriends(id) => getFriendIds(id) flatMap UserRepo.byIdsSecondary map {
-        _ filter Granter(_.StaffForum) map (_.id)
-      }
       case ExceptUser(_) => fuccess(Nil)
       case ModsOnly(_) => fuccess(Nil)
     }.sequence flatMap { users =>
@@ -67,10 +57,8 @@ private[timeline] final class Push(
   private def makeEntry(users: List[String], data: Atom): Fu[Entry] = {
     val entry = Entry.make(data)
     entryApi.findRecent(entry.typ, DateTime.now minusMinutes 60, 1000) flatMap { entries =>
-      entries.exists(_ similarTo entry) fold (
-        fufail[Entry]("[timeline] a similar entry already exists"),
-        entryApi insert Entry.ForUsers(entry, users) inject entry
-      )
+      if (entries.exists(_ similarTo entry)) fufail[Entry]("[timeline] a similar entry already exists")
+      else entryApi insert Entry.ForUsers(entry, users) inject entry
     }
   }
 }

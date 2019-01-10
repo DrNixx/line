@@ -1,10 +1,9 @@
 package lila.relay
 
-import akka.actor._
-
-import lila.socket.Socket.Uid
+import lila.common.ApiVersion
+import lila.socket.Socket.{ Uid, SocketVersion }
 import lila.socket.{ Handler, JsSocketHandler }
-import lila.study.{ Study, Socket, SocketHandler => StudyHandler }
+import lila.study.{ Study, StudySocket, SocketHandler => StudyHandler }
 import lila.user.User
 
 private[relay] final class SocketHandler(
@@ -13,10 +12,10 @@ private[relay] final class SocketHandler(
 ) {
 
   private def makeController(
-    socket: ActorRef,
+    socket: StudySocket,
     relayId: Relay.Id,
     uid: Uid,
-    member: Socket.Member,
+    member: StudySocket.Member,
     user: Option[User]
   ): Handler.Controller = ({
     case ("relaySync", o) =>
@@ -33,11 +32,12 @@ private[relay] final class SocketHandler(
   def join(
     relayId: Relay.Id,
     uid: Uid,
-    user: Option[User]
-  ): Fu[Option[JsSocketHandler]] = {
+    user: Option[User],
+    version: Option[SocketVersion],
+    apiVersion: ApiVersion
+  ): Fu[JsSocketHandler] = {
     val studyId = Study.Id(relayId.value)
-    studyHandler.getSocket(studyId) flatMap { socket =>
-      studyHandler.join(studyId, uid, user, socket, member => makeController(socket, relayId, uid, member, user))
-    }
+    val socket = studyHandler.getSocket(studyId)
+    studyHandler.join(studyId, uid, user, socket, member => makeController(socket, relayId, uid, member, user), version, apiVersion)
   }
 }

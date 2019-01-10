@@ -21,6 +21,7 @@ case class Modlog(
     case Modlog.ban => "ban user"
     case Modlog.ipban => "ban IPs"
     case Modlog.ipunban => "unban IPs"
+    case Modlog.disableTwoFactor => "disable 2fa"
     case Modlog.closeAccount => "close account"
     case Modlog.selfCloseAccount => "self close account"
     case Modlog.reopenAccount => "reopen account"
@@ -57,6 +58,9 @@ case class Modlog(
     case Modlog.streamerUnlist => "unlist streamer"
     case Modlog.streamerFeature => "feature streamer"
     case Modlog.streamerUnfeature => "unfeature streamer"
+    case Modlog.teamKick => "kick from team"
+    case Modlog.teamEdit => "edited team"
+    case Modlog.teamMadeOwner => "made team owner"
     case a => a
   }
 
@@ -82,6 +86,7 @@ object Modlog {
   val permissions = "permissions"
   val ban = "ban"
   val ipban = "ipban"
+  val disableTwoFactor = "disableTwoFactor"
   val closeAccount = "closeAccount"
   val selfCloseAccount = "selfCloseAccount"
   val reopenAccount = "reopenAccount"
@@ -117,4 +122,7 @@ object Modlog {
   val streamerUnlist = "streamerunlist"
   val streamerFeature = "streamerFeature"
   val streamerUnfeature = "streamerUnfeature"
+  val teamKick = "teamKick"
+  val teamEdit = "teamEdit"
+  val teamMadeOwner = "teamMadeOwner"
 }

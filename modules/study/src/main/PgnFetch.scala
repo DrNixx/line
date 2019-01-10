@@ -11,7 +11,7 @@ private final class PgnFetch {
   // http://www.chessgames.com/perl/chessgame?gid=1427487
   // http://www.chessgames.com/perl/nph-chesspgn?text=1&gid=1427487
   // http://www.chessgames.com/pgn/boleslavsky_ufimtsev_1944.pgn?gid=1427487
-  private val ChessbaseRegex = """.*chessgames\.com/.*[\?&]gid=(\d+).*""".r
+  private val ChessbaseRegex = """chessgames\.com/.*[\?&]gid=(\d+)""".r.unanchored
 
   // https://www.chess-online.com/ru-ru/7697348
   // https://backend.chess-online.com/ru-ru/arbiter/game/7697348

@@ -2,7 +2,7 @@ package lila.slack
 
 import org.joda.time.DateTime
 
-import lila.common.LightUser
+import lila.common.{ LightUser, IpAddress }
 import lila.hub.actorApi.slack._
 import lila.user.User
 
@@ -23,13 +23,13 @@ final class SlackApi(
     def apply(event: ChargeEvent): Funit =
       if (event.amount < 5000) addToBuffer(event)
       else displayMessage {
-        s"${link(event.username)} donated ${amount(event.amount)}. Monthly progress: ${event.percent}%"
+        s"${userAt(event.username)} donated ${amount(event.amount)}. Monthly progress: ${event.percent}%"
       }
 
     private def addToBuffer(event: ChargeEvent): Funit = {
       buffer = buffer :+ event
       (buffer.head.date isBefore DateTime.now.minusHours(6)) ?? {
-        val patrons = buffer map (_.username) map link mkString ", "
+        val patrons = buffer map (_.username) map userAt mkString ", "
         val amountSum = buffer.map(_.amount).sum
         displayMessage {
           s"$patrons donated ${amount(amountSum)}. Monthly progress: ${buffer.last.percent}%"
@@ -46,7 +46,7 @@ final class SlackApi(
       channel = "team"
     ))
 
-    private def link(username: String) =
+    private def userAt(username: String) =
       if (username == "Anonymous") "Anonymous"
       else s"@$username"
 
@@ -58,6 +58,12 @@ final class SlackApi(
     case Warning(msg) => publishWarning(msg)
     case Info(msg) => publishInfo(msg)
     case Victory(msg) => publishVictory(msg)
+    case TournamentName(userName, tourId, tourName) => client(SlackMessage(
+      username = "Tournament name alert",
+      icon = "children_crossing",
+      text = s"${userLink(userName)} created ${link(s"https://live.chess-online.com/tournament/$tourId", s"$tourName Arena")}",
+      channel = rooms.tavern
+    ))
   }
 
   def commlog(mod: User, user: User, reportBy: Option[User.ID]): Funit = client(SlackMessage(
@@ -72,72 +78,90 @@ final class SlackApi(
     channel = "commlog"
   ))
 
-  def chatPanicLink = "<https://live.chess-online.com/mod/chat-panic|Chat Panic>"
-
   def chatPanic(mod: User, v: Boolean): Funit = client(SlackMessage(
     username = mod.username,
     icon = if (v) "anger" else "information_source",
     text = s"${if (v) "Enabled" else "Disabled"} $chatPanicLink",
-    channel = "tavern"
+    channel = rooms.tavern
   ))
 
   def garbageCollector(message: String): Funit = client(SlackMessage(
-    username = "lichess",
+    username = "Garbage Collector",
     icon = "put_litter_in_its_place",
     text = linkifyUsers(message),
-    channel = "tavern"
+    channel = rooms.tavernBots
+  ))
+
+  def selfReport(typ: String, path: String, user: User, ip: IpAddress): Funit = client(SlackMessage(
+    username = "Self Report",
+    icon = "kms",
+    text = s"[*$typ*] ${userLink(user)}@$ip ${gameLink(path)}",
+    channel = rooms.tavernBots
+  ))
+
+  def broadcastError(id: String, name: String, error: String): Funit = client(SlackMessage(
+    username = "Chess-Online error",
+    icon = "lightning",
+    text = s"${broadcastLink(id, name)}: $error",
+    channel = rooms.broadcast
   ))
 
   def publishError(msg: String): Funit = client(SlackMessage(
-    username = "lichess error",
+    username = "Chess-Online error",
     icon = "lightning",
     text = linkifyUsers(msg),
-    channel = "general"
+    channel = rooms.general
   ))
 
   def publishWarning(msg: String): Funit = client(SlackMessage(
-    username = "lichess warning",
+    username = "Chess-Online warning",
     icon = "thinking_face",
     text = linkifyUsers(msg),
-    channel = "general"
+    channel = rooms.general
   ))
 
   def publishVictory(msg: String): Funit = client(SlackMessage(
-    username = "lichess victory",
+    username = "Chess-Online victory",
     icon = "tada",
     text = linkifyUsers(msg),
-    channel = "general"
+    channel = rooms.general
   ))
 
   def publishInfo(msg: String): Funit = client(SlackMessage(
-    username = "lichess info",
+    username = "Chess-Online info",
     icon = "monkey",
     text = linkifyUsers(msg),
-    channel = "general"
+    channel = rooms.general
   ))
 
   def publishRestart =
-    if (isProd) publishInfo("ChessOnline Live has restarted!")
+    if (isProd) publishInfo("Chess-Online has restarted!")
     else client(SlackMessage(
       username = stage.name,
       icon = stage.icon,
       text = "stage has restarted.",
-      channel = "general"
+      channel = rooms.devNoise
     ))
 
-  private def userLink(name: String) = s"<https://live.chess-online.com/@/$name?mod|$name>"
-  private def userNotesLink(name: String) = s"<https://live.chess-online.com/@/$name?notes|notes>"
+  private def link(url: String, name: String) = s"<$url|$name>"
+  private def userLink(name: String): String = link(s"https://live.chess-online.com/@/$name?mod", name)
+  private def userLink(user: User): String = userLink(user.username)
+  private def userNotesLink(name: String) = link(s"https://live.chess-online.com/@/$name?notes", "notes")
+  private def broadcastLink(id: String, name: String) = link(s"https://live.chess-online.com/broadcast/-/$id", name)
+  private def gameLink(path: String) = link(s"https://live.chess-online.com/$path", path)
+  private val chatPanicLink = link("https://live.chess-online.com/mod/chat-panic", "Chat Panic")
 
-  val userRegex = lila.common.String.atUsernameRegex.pattern
+  private val userRegex = lila.common.String.atUsernameRegex.pattern
+  private val userReplace = link("https://live.chess-online.com/@/$1?mod", "$1")
 
   private def linkifyUsers(msg: String) =
-    userRegex matcher msg replaceAll "<https://live.chess-online.com/@/$1?mod|@$1>"
+    userRegex matcher msg replaceAll userReplace
 
   def userMod(user: User, mod: User): Funit = client(SlackMessage(
     username = mod.username,
     icon = "eyes",
     text = s"Let's have a look at _*${userLink(user.username)}*_",
-    channel = "tavern"
+    channel = rooms.tavern
   ))
 
   def userModNote(modName: String, username: String, note: String): Funit =
@@ -146,42 +170,50 @@ final class SlackApi(
       icon = "spiral_note_pad",
       text = (s"_*${userLink(username)}*_ (${userNotesLink(username)}):\n" +
         linkifyUsers(note take 2000)),
-      channel = "tavern"
+      channel = rooms.tavern
     ))
 
   def deployPre: Funit =
     if (isProd) client(SlackMessage(
       username = "deployment",
       icon = "rocket",
-      text = "ChessOnline Live will be updated in a minute! Fasten your seatbelts.",
-      channel = "general"
+      text = "Chess-Online will be updated in a minute! Fasten your seatbelts.",
+      channel = rooms.general
     ))
     else client(SlackMessage(
       username = stage.name,
       icon = stage.icon,
       text = "stage will be updated in a minute.",
-      channel = "general"
+      channel = rooms.general
     ))
 
   def deployPost: Funit =
     if (isProd) client(SlackMessage(
       username = "deployment",
       icon = "rocket",
-      text = "ChessOnline Live is being updated! Brace for impact.",
-      channel = "general"
+      text = "Chess-Online is being updated! Brace for impact.",
+      channel = rooms.general
     ))
     else client(SlackMessage(
-      username = "stage.lichess.org",
+      username = "stage.chess-online.com",
       icon = "volcano",
       text = "stage has been updated!",
-      channel = "general"
+      channel = rooms.devNoise
     ))
 }
 
 private object SlackApi {
 
+  object rooms {
+    val general = "team"
+    val tavern = "tavern"
+    val tavernBots = "tavern-bots"
+    val broadcast = "broadcast"
+    val devNoise = "dev-noise"
+  }
+
   object stage {
-    val name = "stage.lichess.org"
+    val name = "stage.chess-online.com"
     val icon = "volcano"
   }
 }

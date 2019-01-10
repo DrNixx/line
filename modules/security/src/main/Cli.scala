@@ -7,7 +7,7 @@ private[security] final class Cli extends lila.common.Cli {
   def process = {
 
     case "security" :: "roles" :: uid :: Nil =>
-      UserRepo named uid map {
+      UserRepo byId uid map {
         _.fold("User %s not found" format uid)(_.roles mkString " ")
       }
 
@@ -16,10 +16,10 @@ private[security] final class Cli extends lila.common.Cli {
         UserRepo.setRoles(user.id, roles map (_.toUpperCase)).void)
   }
 
-  private def perform(username: String, op: User => Funit): Fu[String] =
-    UserRepo named username flatMap { userOption =>
-      userOption.fold(fufail[String]("User %s not found" format username)) { u =>
-        op(u) inject "User %s successfully updated".format(username)
+  private def perform(userId: User.ID, op: User => Funit): Fu[String] =
+    UserRepo byId userId flatMap { userOption =>
+      userOption.fold(fufail[String]("User %s not found" format userId)) { u =>
+        op(u) inject "User %s successfully updated".format(u.username)
       }
     }
 }

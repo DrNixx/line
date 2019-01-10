@@ -65,7 +65,7 @@ final class JsonView(
             "player" -> {
               commonPlayerJson(game, player, playerUser, withFlags) ++ Json.obj(
                 "id" -> playerId,
-                "version" -> socket.version
+                "version" -> socket.version.value
               )
             }.add("onGame" -> (player.isAi || socket.onGame(player.color))),
             "opponent" -> {
@@ -83,7 +83,7 @@ final class JsonView(
               "animationDuration" -> animationDuration(pov, pref),
               "coords" -> pref.coords,
               "replay" -> pref.replay,
-              "autoQueen" -> (pov.game.variant == chess.variant.Antichess).fold(Pref.AutoQueen.NEVER, pref.autoQueen),
+              "autoQueen" -> (if (pov.game.variant == chess.variant.Antichess) Pref.AutoQueen.NEVER else pref.autoQueen),
               "clockTenths" -> pref.clockTenths,
               "moveEvent" -> pref.moveEvent
             ).add("is3d" -> pref.is3d)
@@ -111,7 +111,7 @@ final class JsonView(
             .add("correspondence" -> game.correspondenceClock)
             .add("takebackable" -> takebackable)
             .add("crazyhouse" -> pov.game.board.crazyData)
-            .add("possibleMoves" -> possibleMoves(pov))
+            .add("possibleMoves" -> possibleMoves(pov, apiVersion))
             .add("possibleDrops" -> possibleDrops(pov))
             .add("expiration" -> game.expirable.option {
               Json.obj(
@@ -158,14 +158,14 @@ final class JsonView(
             "correspondence" -> game.correspondenceClock,
             "player" -> {
               commonWatcherJson(game, player, playerUser, withFlags) ++ Json.obj(
-                "version" -> socket.version,
+                "version" -> socket.version.value,
                 "spectator" -> true
               )
             },
             "opponent" -> commonWatcherJson(game, opponent, opponentUser, withFlags),
             "orientation" -> pov.color.name,
             "url" -> Json.obj(
-              "socket" -> s"/$gameId/${color.name}/socket",
+              "socket" -> s"/$gameId/${color.name}/socket/v$apiVersion",
               "round" -> s"/$gameId/${color.name}"
             ),
             "pref" -> Json.obj(
@@ -215,7 +215,7 @@ final class JsonView(
         "turns" -> game.turns,
         "player" -> game.turnColor.name,
         "status" -> game.status
-      ).add("division", division),
+      ).add("division", division).add("winner", game.winner.map(_.color.name)),
       "player" -> Json.obj(
         "id" -> owner.option(pov.playerId),
         "color" -> color.name
@@ -254,12 +254,9 @@ final class JsonView(
   private def clockJson(clock: Clock): JsObject =
     clockWriter.writes(clock) + ("moretime" -> JsNumber(moretimeSeconds))
 
-  private def possibleMoves(pov: Pov): Option[Map[String, String]] =
-    (pov.game playableBy pov.player) option {
-      pov.game.situation.destinations map {
-        case (from, dests) => from.key -> dests.mkString
-      }
-    }
+  private def possibleMoves(pov: Pov, apiVersion: ApiVersion): Option[JsValue] =
+    (pov.game playableBy pov.player) option
+      lila.game.Event.PossibleMoves.json(pov.game.situation.destinations, apiVersion)
 
   private def possibleDrops(pov: Pov): Option[JsValue] = (pov.game playableBy pov.player) ?? {
     pov.game.situation.drops map { drops =>
@@ -276,10 +273,10 @@ final class JsonView(
   }
 
   private def animationDuration(pov: Pov, pref: Pref) = math.round {
-    animationFactor(pref) * baseAnimationDuration.toMillis * pov.game.finished.fold(
-      1,
-      math.max(0, math.min(1.2, ((pov.game.estimateTotalTime - 60) / 60) * 0.2))
-    )
+    animationFactor(pref) * baseAnimationDuration.toMillis * {
+      if (pov.game.finished) 1
+      else math.max(0, math.min(1.2, ((pov.game.estimateTotalTime - 60) / 60) * 0.2))
+    }
   }
 }
 

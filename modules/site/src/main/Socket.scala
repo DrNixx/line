@@ -1,8 +1,8 @@
 package lila.site
 
 import scala.concurrent.duration.Duration
+import scala.concurrent.duration._
 
-import akka.actor._
 import play.api.libs.iteratee._
 import play.api.libs.json.JsValue
 
@@ -10,24 +10,26 @@ import actorApi._
 import lila.socket._
 import lila.socket.actorApi.SendToFlag
 
-private[site] final class Socket(timeout: Duration) extends SocketActor[Member](timeout) {
+private[site] final class Socket(
+    system: akka.actor.ActorSystem,
+    uidTtl: Duration
+) extends SocketTrouper[Member](system, uidTtl) with LoneSocket {
 
-  override val startsOnApplicationBoot = true
+  def monitoringName = "site"
+  def broomFrequency = 4159 millis
 
-  type UID = String
-  type Flag = String
+  system.lilaBus.subscribe(this, 'sendToFlag)
 
-  val flags = new lila.socket.MemberGroup[Member](_.flag)
+  private val flags = new lila.socket.MemberGroup[Member](_.flag)
 
   def receiveSpecific = {
 
-    case Join(uid, userId, flag) => {
+    case Join(uid, userId, flag, promise) =>
       val (enumerator, channel) = Concurrent.broadcast[JsValue]
       val member = Member(channel, userId, flag)
-      addMember(uid.value, member)
-      flags.add(uid.value, member)
-      sender ! Connected(enumerator, member)
-    }
+      addMember(uid, member)
+      flags.add(uid, member)
+      promise success Connected(enumerator, member)
 
     case SendToFlag(flag, msg) =>
       flags get flag foreach {
@@ -38,12 +40,12 @@ private[site] final class Socket(timeout: Duration) extends SocketActor[Member](
   // don't eject non-pinging API socket clients
   override def broom: Unit = {
     members foreach {
-      case (uid, member) => if (!aliveUids.get(uid) && !member.isApi) eject(uid)
+      case (uid, member) => if (!aliveUids.get(uid) && !member.isApi) ejectUidString(uid)
     }
+    lila.mon.socket.count.site(members.size)
   }
 
-  override def quit(uid: String): Unit = {
-    members get uid foreach { flags.remove(uid, _) }
-    super.quit(uid)
+  override protected def afterQuit(uid: Socket.Uid, member: Member) = {
+    flags.remove(uid, member)
   }
 }

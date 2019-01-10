@@ -140,14 +140,14 @@ private final class ChapterMaker(
     }
 
   def game2root(game: Game, initialFen: Option[FEN] = None): Fu[Node.Root] =
-    initialFen.fold(GameRepo initialFen game map2 FEN.apply) { fen =>
+    initialFen.fold(GameRepo initialFen game) { fen =>
       fuccess(fen.some)
     } map { GameToRoot(game, _, withClocks = true) }
 
   private val UrlRegex = {
     val escapedDomain = domain.replace(".", "\\.")
-    s""".*$escapedDomain/(\\w{8,12}).*"""
-  }.r
+    s"""$escapedDomain/(\\w{8,12})"""
+  }.r.unanchored
 
   private def parsePov(str: String): Fu[Option[Pov]] = str match {
     case s if s.size == Game.gameIdSize => GameRepo.pov(s, chess.White)

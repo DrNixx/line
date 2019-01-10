@@ -1,9 +1,8 @@
 package lila.security
 
-import play.api.i18n.Lang
 import play.twirl.api.Html
 
-import lila.common.EmailAddress
+import lila.common.{ Lang, EmailAddress }
 import lila.common.String.html.nl2brUnsafe
 import lila.user.{ User, UserRepo }
 
@@ -12,8 +11,8 @@ final class AutomaticEmail(
     baseUrl: String
 ) {
 
-  def onTitleSet(username: String)(implicit lang: Lang): Funit = for {
-    user <- UserRepo named username flatten s"No such user $username"
+  def onTitleSet(userId: String)(implicit lang: Lang): Funit = for {
+    user <- UserRepo byId userId flatten s"No such user $userId"
     emailOption <- UserRepo email user.id
   } yield for {
     title <- user.title

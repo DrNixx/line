@@ -1,6 +1,7 @@
 package lila.tournament
 
 import reactivemongo.api.collections.bson.BSONBatchCommands.AggregationFramework.{ Descending, Group, Match, PushField, Sort, AvgField }
+import reactivemongo.api.{ CursorProducer, Cursor, ReadPreference }
 import reactivemongo.bson._
 
 import BSONHandlers._
@@ -70,14 +71,6 @@ object PlayerRepo {
       coll.update(selectId(player._id), player).void
     }
 
-  def playerInfo(tourId: String, userId: String): Fu[Option[PlayerInfo]] = find(tourId, userId) flatMap {
-    _ ?? { player =>
-      coll.countSel(selectTour(tourId) ++ $doc("m" $gt player.magicScore)) map { n =>
-        PlayerInfo((n + 1), player.withdraw).some
-      }
-    }
-  }
-
   def join(tourId: String, user: User, perfLens: Perfs => Perf) =
     find(tourId, user.id) flatMap {
       case Some(p) if p.withdraw => coll.update(selectId(p._id), $unset("w"))
@@ -91,7 +84,7 @@ object PlayerRepo {
   private[tournament] def withPoints(tourId: String): Fu[List[Player]] =
     coll.find(
       selectTour(tourId) ++ $doc("m" $gt 0)
-    ).cursor[Player]().gather[List]()
+    ).list[Player]()
 
   private[tournament] def userIds(tourId: String): Fu[List[String]] =
     coll.distinct[String, List]("uid", selectTour(tourId).some)
@@ -125,6 +118,9 @@ object PlayerRepo {
         }
       }
     }
+
+  def computeRankOf(player: Player): Fu[Int] =
+    coll.countSel(selectTour(player.tourId) ++ $doc("m" $gt player.magicScore))
 
   // expensive, cache it
   private[tournament] def averageRating(tourId: String): Fu[Int] =
@@ -175,4 +171,15 @@ object PlayerRepo {
         field = "uid"
       )
     }
+
+  private[tournament] def cursor(
+    tournamentId: Tournament.ID,
+    batchSize: Int,
+    readPreference: ReadPreference = ReadPreference.secondaryPreferred
+  )(implicit cp: CursorProducer[Player]): cp.ProducedCursor = {
+    val query = coll
+      .find(selectTour(tournamentId))
+      .sort($sort desc "m")
+    query.copy(options = query.options.batchSize(batchSize)).cursor[Player](readPreference)
+  }
 }

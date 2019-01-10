@@ -5,8 +5,8 @@ import play.api.data.Forms._
 import play.api.data.validation.Constraints
 
 import lila.common.{ LameName, EmailAddress }
-import lila.user.{ User, UserRepo }
-import User.ClearPassword
+import lila.user.{ User, TotpSecret, UserRepo }
+import User.{ ClearPassword, TotpToken }
 
 final class DataForm(
     val captcher: akka.actor.ActorSelection,
@@ -26,14 +26,26 @@ final class DataForm(
 
   def emptyWithCaptcha = withCaptcha(empty)
 
-  private val anyEmail = nonEmptyText.verifying(Constraints.emailAddress)
+  private val anyEmail = trimField(text).verifying(Constraints.emailAddress)
   private val acceptableEmail = anyEmail.verifying(emailValidator.acceptableConstraint)
   private def acceptableUniqueEmail(forUser: Option[User]) =
     acceptableEmail.verifying(emailValidator uniqueConstraint forUser)
 
+  private def withAcceptableDns(m: Mapping[String]) = m verifying emailValidator.withAcceptableDns
+
+  private def trimField(m: Mapping[String]) = m.transform[String](_.trim, identity)
+
+  private val preloadEmailDnsForm = Form(single("email" -> acceptableEmail))
+
+  def preloadEmailDns(implicit req: play.api.mvc.Request[_]): Funit =
+    preloadEmailDnsForm.bindFromRequest.fold(
+      _ => funit,
+      email => emailValidator.preloadDns(EmailAddress(email))
+    )
+
   object signup {
 
-    private val username = nonEmptyText.verifying(
+    private val username = trimField(nonEmptyText).verifying(
       Constraints minLength 2,
       Constraints maxLength 20,
       Constraints.pattern(
@@ -54,7 +66,7 @@ final class DataForm(
     val website = Form(mapping(
       "username" -> username,
       "password" -> text(minLength = 4),
-      "email" -> acceptableUniqueEmail(none),
+      "email" -> withAcceptableDns(acceptableUniqueEmail(none)),
       "fp" -> optional(nonEmptyText),
       "g-recaptcha-response" -> optional(nonEmptyText)
     )(SignupData.apply)(_ => None))
@@ -62,7 +74,7 @@ final class DataForm(
     val mobile = Form(mapping(
       "username" -> username,
       "password" -> text(minLength = 4),
-      "email" -> acceptableUniqueEmail(none)
+      "email" -> withAcceptableDns(acceptableUniqueEmail(none))
     )(MobileSignupData.apply)(_ => None))
   }
 
@@ -93,21 +105,54 @@ final class DataForm(
 
   def changeEmail(u: User, old: Option[EmailAddress]) = authenticator loginCandidate u map { candidate =>
     Form(mapping(
-      "passwd" -> nonEmptyText.verifying("incorrectPassword", p => candidate.check(ClearPassword(p))),
-      "email" -> acceptableUniqueEmail(candidate.user.some).verifying(emailValidator differentConstraint old)
+      "passwd" -> passwordMapping(candidate),
+      "email" -> withAcceptableDns {
+        acceptableUniqueEmail(candidate.user.some).verifying(emailValidator differentConstraint old)
+      }
     )(ChangeEmail.apply)(ChangeEmail.unapply)).fill(ChangeEmail(
       passwd = "",
       email = old.??(_.value)
     ))
   }
 
+  def setupTwoFactor(u: User) = authenticator loginCandidate u map { candidate =>
+    Form(mapping(
+      "secret" -> nonEmptyText,
+      "passwd" -> passwordMapping(candidate),
+      "token" -> nonEmptyText
+    )(TwoFactor.apply)(TwoFactor.unapply).verifying(
+        "invalidAuthenticationCode",
+        _.tokenValid
+      )).fill(TwoFactor(
+      secret = TotpSecret.random.base32,
+      passwd = "",
+      token = ""
+    ))
+  }
+
+  def disableTwoFactor(u: User) = authenticator loginCandidate u map { candidate =>
+    Form(tuple(
+      "passwd" -> passwordMapping(candidate),
+      "token" -> text.verifying("invalidAuthenticationToken", t => u.totpSecret.??(_.verify(TotpToken(t))))
+    ))
+  }
+
   def fixEmail(old: EmailAddress) = Form(
-    single("email" -> acceptableUniqueEmail(none).verifying(emailValidator differentConstraint old.some))
+    single(
+      "email" -> withAcceptableDns {
+        acceptableUniqueEmail(none).verifying(emailValidator differentConstraint old.some)
+      }
+    )
   ).fill(old.value)
 
   def modEmail(user: User) = Form(single("email" -> acceptableUniqueEmail(user.some)))
 
-  val closeAccount = Form(single("passwd" -> nonEmptyText))
+  def closeAccount(u: User) = authenticator loginCandidate u map { candidate =>
+    Form(single("passwd" -> passwordMapping(candidate)))
+  }
+
+  private def passwordMapping(candidate: User.LoginCandidate) =
+    text.verifying("incorrectPassword", p => candidate.check(ClearPassword(p)))
 }
 
 object DataForm {
@@ -144,5 +189,9 @@ object DataForm {
 
   case class ChangeEmail(passwd: String, email: String) {
     def realEmail = EmailAddress(email)
+  }
+
+  case class TwoFactor(secret: String, passwd: String, token: String) {
+    def tokenValid = TotpSecret(secret).verify(User.TotpToken(token))
   }
 }

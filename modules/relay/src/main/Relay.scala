@@ -93,17 +93,14 @@ object Relay {
     def paused = !playing
 
     def addLog(event: SyncLog.Event) = copy(log = log add event)
+    def clearLog = copy(log = SyncLog.empty)
 
     override def toString = upstream.toString
   }
 
   object Sync {
-    sealed abstract class Upstream(val key: String, val url: String, val heavy: Boolean) {
-      override def toString = s"$key $url"
-    }
-    object Upstream {
-      case class DgtOneFile(fileUrl: String) extends Upstream("dgt-one", fileUrl, false)
-      case class DgtManyFiles(dirUrl: String) extends Upstream("dgt-many", dirUrl, true)
+    case class Upstream(url: String) extends AnyVal {
+      def isLocal = url.contains("://127.0.0.1") || url.contains("://localhost")
     }
   }
 

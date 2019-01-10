@@ -6,14 +6,16 @@ import chess.format.{ Forsyth, FEN, Uci }
 import chess.{ MoveMetrics, Centis, Status, Color, MoveOrDrop }
 
 import actorApi.round.{ HumanPlay, DrawNo, TooManyPlies, TakebackNo, ForecastPlay }
-import lila.hub.actorApi.round.BotPlay
 import akka.actor.ActorRef
-import lila.game.{ Game, Progress, Pov, UciMemo }
+import lila.game.actorApi.MoveGameEvent
+import lila.game.{ Game, GameDiff, Progress, Pov, UciMemo }
+import lila.hub.actorApi.round.BotPlay
 
 private[round] final class Player(
     fishnetPlayer: lila.fishnet.Player,
     bus: lila.common.Bus,
     finisher: Finisher,
+    scheduleExpiration: Game => Unit,
     uciMemo: UciMemo
 ) {
 
@@ -21,7 +23,7 @@ private[round] final class Player(
   private case object Flagged extends MoveResult
   private case class MoveApplied(progress: Progress, move: MoveOrDrop) extends MoveResult
 
-  private[round] def human(play: HumanPlay, round: ActorRef)(pov: Pov)(implicit proxy: GameProxy): Fu[Events] = play match {
+  private[round] def human(play: HumanPlay, round: Round)(pov: Pov)(implicit proxy: GameProxy): Fu[Events] = play match {
     case p @ HumanPlay(playerId, uci, blur, lag, promiseOption) => pov match {
       case Pov(game, _) if game.turns > Game.maxPlies =>
         round ! TooManyPlies
@@ -31,8 +33,9 @@ private[round] final class Player(
           .fold(errs => fufail(ClientError(errs.shows)), fuccess).flatMap {
             case Flagged => finisher.outOfTime(game)
             case MoveApplied(progress, moveOrDrop) =>
-              p.trace.segment("save", "db")(proxy save progress) >>
-                proxy.save(progress) >> postHumanOrBotPlay(round, pov, progress, moveOrDrop, promiseOption)
+              val diff = p.trace.segmentSync("gameDiff", "mapping")(GameDiff(progress.origin, progress.game))
+              p.trace.segment("save", "db")(proxy.saveDiff(progress, diff)) >>
+                postHumanOrBotPlay(round, pov, progress, moveOrDrop, promiseOption)
           } addFailureEffect { e =>
             promiseOption.foreach(_ failure e)
           }
@@ -43,7 +46,7 @@ private[round] final class Player(
     }
   }
 
-  private[round] def bot(play: BotPlay, round: ActorRef)(pov: Pov)(implicit proxy: GameProxy): Fu[Events] = play match {
+  private[round] def bot(play: BotPlay, round: Round)(pov: Pov)(implicit proxy: GameProxy): Fu[Events] = play match {
     case p @ BotPlay(playerId, uci, promiseOption) => pov match {
       case Pov(game, _) if game.turns > Game.maxPlies =>
         round ! TooManyPlies
@@ -65,7 +68,7 @@ private[round] final class Player(
   }
 
   private def postHumanOrBotPlay(
-    round: ActorRef,
+    round: Round,
     pov: Pov,
     progress: Progress,
     moveOrDrop: MoveOrDrop,
@@ -73,20 +76,21 @@ private[round] final class Player(
   )(implicit proxy: GameProxy): Fu[Events] = {
     if (pov.game.hasAi) uciMemo.add(pov.game, moveOrDrop)
     notifyMove(moveOrDrop, progress.game)
-    progress.game.finished.fold(
-      moveFinish(progress.game, pov.color) dmap { progress.events ::: _ }, {
-        if (progress.game.playableByAi) requestFishnet(progress.game, round)
-        if (pov.opponent.isOfferingDraw) round ! DrawNo(pov.player.id)
-        if (pov.player.isProposingTakeback) round ! TakebackNo(pov.player.id)
-        if (pov.game.forecastable) moveOrDrop.left.toOption.foreach { move =>
-          round ! ForecastPlay(move)
-        }
-        fuccess(progress.events)
+    val res = if (progress.game.finished) moveFinish(progress.game, pov.color) dmap { progress.events ::: _ }
+    else {
+      if (progress.game.playableByAi) requestFishnet(progress.game, round)
+      if (pov.opponent.isOfferingDraw) round ! DrawNo(pov.player.id)
+      if (pov.player.isProposingTakeback) round ! TakebackNo(pov.player.id)
+      if (progress.game.forecastable) moveOrDrop.left.toOption.foreach { move =>
+        round ! ForecastPlay(move)
       }
-    ) >>- promiseOption.foreach(_.success(()))
+      scheduleExpiration(progress.game)
+      fuccess(progress.events)
+    }
+    res >>- promiseOption.foreach(_.success(()))
   }
 
-  private[round] def fishnet(game: Game, uci: Uci, currentFen: FEN, round: ActorRef)(implicit proxy: GameProxy): Fu[Events] =
+  private[round] def fishnet(game: Game, uci: Uci, currentFen: FEN, round: Round)(implicit proxy: GameProxy): Fu[Events] =
     if (game.playable && game.player.isAi) {
       if (currentFen == FEN(Forsyth >> game.chess))
         applyUci(game, uci, blur = false, metrics = fishnetLag)
@@ -95,22 +99,21 @@ private[round] final class Player(
             case MoveApplied(progress, moveOrDrop) =>
               proxy.save(progress) >>-
                 uciMemo.add(progress.game, moveOrDrop) >>-
-                notifyMove(moveOrDrop, progress.game) >>
-                progress.game.finished.fold(
-                  moveFinish(progress.game, game.turnColor) dmap { progress.events ::: _ },
-                  fuccess(progress.events)
-                )
+                notifyMove(moveOrDrop, progress.game) >> {
+                  if (progress.game.finished) moveFinish(progress.game, game.turnColor) dmap { progress.events ::: _ }
+                  else fuccess(progress.events)
+                }
           }
       else requestFishnet(game, round) >> fufail(FishnetError("Invalid AI move current FEN"))
     } else fufail(FishnetError("Not AI turn"))
 
-  private def requestFishnet(game: Game, round: ActorRef): Funit = game.playableByAi ?? {
+  private def requestFishnet(game: Game, round: Round): Funit = game.playableByAi ?? {
     if (game.turns <= fishnetPlayer.maxPlies) fishnetPlayer(game)
     else fuccess(round ! actorApi.round.ResignAi)
   }
 
   private val fishnetLag = MoveMetrics(clientLag = Centis(5).some)
-  private val botLag = MoveMetrics(clientLag = Centis(50).some)
+  private val botLag = MoveMetrics(clientLag = Centis(10).some)
 
   private def applyUci(game: Game, uci: Uci, blur: Boolean, metrics: MoveMetrics): Valid[MoveResult] =
     (uci match {
@@ -139,9 +142,10 @@ private[round] final class Player(
     // publish all moves
     bus.publish(moveEvent, 'moveEvent)
 
-    // for lila.bot.GameStateStream
-    // is this too expensive? #TODO find a better way (like having a Game.metadata.hasBot flag)
-    bus.publish(game, Symbol(s"moveGame:${game.id}"))
+    // I checked and the bus doesn't do much if there's no subscriber for a classifier,
+    // so we should be good here.
+    // also use for targeted TvBroadcast subscription
+    bus.publish(MoveGameEvent makeBusEvent MoveGameEvent(game, moveEvent.fen, moveEvent.move))
 
     // publish correspondence moves
     if (game.isCorrespondence && game.nonAi) bus.publish(

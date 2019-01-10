@@ -39,8 +39,7 @@ final class ChapterRepo(coll: Coll) {
   def orderedByStudy(studyId: Study.Id): Fu[List[Chapter]] =
     coll.find($studyId(studyId))
       .sort($sort asc "order")
-      .cursor[Chapter](readPreference = ReadPreference.secondaryPreferred)
-      .gather[List]()
+      .list[Chapter](none, readPreference = ReadPreference.secondaryPreferred)
 
   def relaysAndTagsByStudyId(studyId: Study.Id): Fu[List[Chapter.RelayAndTags]] =
     coll.find($doc("studyId" -> studyId), $doc("relay" -> true, "tags" -> true)).list[Bdoc]() map { docs =>
@@ -93,6 +92,9 @@ final class ChapterRepo(coll: Coll) {
 
   def setClock(chapter: Chapter, path: Path, clock: Option[chess.Centis]): Funit =
     setNodeValue(chapter, path, "l", clock)
+
+  def forceVariation(chapter: Chapter, path: Path, force: Boolean): Funit =
+    setNodeValue(chapter, path, "fv", force option true)
 
   def setScore(chapter: Chapter, path: Path, score: Option[lila.tree.Eval.Score]): Funit =
     setNodeValue(chapter, path, "e", score)

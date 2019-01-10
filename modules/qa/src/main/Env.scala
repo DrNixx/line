@@ -1,8 +1,8 @@
 package lila.qa
 
+import akka.actor._
 import com.typesafe.config.Config
 import lila.common.DetectLanguage
-import akka.actor._
 
 final class Env(
     config: Config,
@@ -30,21 +30,18 @@ final class Env(
 
   private lazy val notifier = new Notifier(
     notifyApi = notifyApi,
-    timeline = hub.actor.timeline
+    timeline = hub.timeline
   )
 
   lazy val search = new Search(questionColl)
 
-  lazy val forms = new DataForm(hub.actor.captcher, detectLanguage)
+  lazy val forms = new DataForm(hub.captcher, detectLanguage)
 
-  system.lilaBus.subscribe(system.actorOf(Props(new Actor {
-    def receive = {
-      case lila.user.User.GDPRErase(user) => for {
-        _ <- api.question erase user
-        _ <- api.answer erase user
-      } yield ()
-    }
-  })), 'gdprErase)
+  system.lilaBus.subscribeFun('gdprErase) {
+    case lila.user.User.GDPRErase(user) =>
+      api.question erase user
+      api.answer erase user
+  }
 }
 
 object Env {

@@ -25,7 +25,7 @@ object BSONHandlers {
     def write(x: Schedule.Speed) = BSONString(x.name)
   }
 
-  private implicit val tournamentClockBSONHandler = new BSONHandler[BSONDocument, ClockConfig] {
+  implicit val tournamentClockBSONHandler = new BSONHandler[BSONDocument, ClockConfig] {
     def read(doc: BSONDocument) = ClockConfig(
       doc.getAs[Int]("limit").get,
       doc.getAs[Int]("increment").get
@@ -64,7 +64,6 @@ object BSONHandlers {
         variant = variant,
         position = position,
         mode = r.intO("mode") flatMap Mode.apply getOrElse Mode.Rated,
-        `private` = r boolD "private",
         password = r.strO("password"),
         conditions = conditions,
         noBerserk = r boolD "noBerserk",
@@ -92,7 +91,6 @@ object BSONHandlers {
       "variant" -> o.variant.some.filterNot(_.standard).map(_.id),
       "fen" -> o.position.some.filterNot(_.initial).map(_.fen),
       "mode" -> o.mode.some.filterNot(_.rated).map(_.id),
-      "private" -> w.boolO(o.`private`),
       "password" -> o.password,
       "conditions" -> o.conditions.ifNonEmpty,
       "noBerserk" -> w.boolO(o.noBerserk),
@@ -149,7 +147,10 @@ object BSONHandlers {
         status = chess.Status(r int "s") err "tournament pairing status",
         user1 = user1,
         user2 = user2,
-        winner = r boolO "w" map (_.fold(user1, user2)),
+        winner = r boolO "w" map {
+          case true => user1
+          case _ => user2
+        },
         turns = r intO "t",
         berserk1 = r.intO("b1").fold(r.boolD("b1"))(1 ==), // it used to be int = 0/1
         berserk2 = r.intO("b2").fold(r.boolD("b2"))(1 ==)

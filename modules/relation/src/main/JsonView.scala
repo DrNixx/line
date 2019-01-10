@@ -32,7 +32,7 @@ object JsonView {
     // We use 'd' for backward compatibility with the mobile client
     Json.obj(
       "t" -> "following_enters",
-      "d" -> friendEntering.user.idVsTitleName,
+      "d" -> friendEntering.user.idVsTitleName
     )
       .add("playing" -> friendEntering.isPlaying)
       .add("studying" -> friendEntering.isStudying)

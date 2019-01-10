@@ -8,6 +8,8 @@ final class Env(
     config: Config,
     db: lila.db.Env,
     studyEnv: lila.study.Env,
+    asyncCache: lila.memo.AsyncCache.Builder,
+    slackApi: lila.slack.SlackApi,
     system: ActorSystem
 ) {
 
@@ -24,7 +26,9 @@ final class Env(
   val api = new RelayApi(
     repo = repo,
     studyApi = studyEnv.api,
+    socketMap = studyEnv.socketMap,
     withStudy = withStudy,
+    clearFormatCache = formatApi.refresh,
     system = system
   )
 
@@ -44,9 +48,13 @@ final class Env(
     api = api
   )
 
-  private val fetch = system.actorOf(Props(new RelayFetch(
+  private lazy val formatApi = new RelayFormatApi(asyncCache)
+
+  system.actorOf(Props(new RelayFetch(
     sync = sync,
     api = api,
+    slackApi = slackApi,
+    formatApi = formatApi,
     chapterRepo = studyEnv.chapterRepo
   )))
 
@@ -54,12 +62,10 @@ final class Env(
     api.autoStart >> api.autoFinishNotSyncing
   }
 
-  system.lilaBus.subscribe(system.actorOf(Props(new Actor {
-    def receive = {
-      case lila.study.actorApi.StudyLikes(id, likes) => api.setLikes(Relay.Id(id.value), likes)
-      case lila.hub.actorApi.study.RemoveStudy(studyId, _) => api.onStudyRemove(studyId)
-    }
-  })), 'studyLikes, 'study)
+  system.lilaBus.subscribeFun('studyLikes, 'study) {
+    case lila.study.actorApi.StudyLikes(id, likes) => api.setLikes(Relay.Id(id.value), likes)
+    case lila.hub.actorApi.study.RemoveStudy(studyId, _) => api.onStudyRemove(studyId)
+  }
 }
 
 object Env {
@@ -68,6 +74,8 @@ object Env {
     db = lila.db.Env.current,
     config = lila.common.PlayApp loadConfig "relay",
     studyEnv = lila.study.Env.current,
+    asyncCache = lila.memo.Env.current.asyncCache,
+    slackApi = lila.slack.Env.current.api,
     system = lila.common.PlayApp.system
   )
 }

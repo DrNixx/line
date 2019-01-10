@@ -11,31 +11,26 @@ import lila.user.User
 final class GamesByUsersStream(system: ActorSystem) {
 
   import GamesByUsersStream._
-  import lila.common.HttpStream._
 
-  def apply(userIds: Set[User.ID]): Enumerator[String] = {
+  def apply(userIds: Set[User.ID]): Enumerator[JsObject] = {
 
     def matches(game: Game) = game.userIds match {
       case List(u1, u2) if u1 != u2 => userIds(u1) && userIds(u2)
       case _ => false
     }
-    var stream: Option[ActorRef] = None
+    var subscriber: Option[lila.common.Tellable] = None
 
     val enumerator = Concurrent.unicast[Game](
       onStart = channel => {
-        val actor = system.actorOf(Props(new Actor {
-          def receive = {
-            case StartGame(game) if matches(game) => channel push game
-            case FinishGame(game, _, _) if matches(game) => channel push game
-          }
-        }))
-        system.lilaBus.subscribe(actor, 'startGame, 'finishGame)
-        stream = actor.some
+        subscriber = system.lilaBus.subscribeFun(classifiers: _*) {
+          case StartGame(game) if matches(game) => channel push game
+          case FinishGame(game, _, _) if matches(game) => channel push game
+        } some
       },
-      onComplete = onComplete(stream, system)
+      onComplete = subscriber foreach { system.lilaBus.unsubscribe(_, classifiers) }
     )
 
-    enumerator &> withInitialFen &> toJson &> stringify
+    enumerator &> withInitialFen &> toJson
   }
 
   private val withInitialFen =
@@ -45,7 +40,9 @@ final class GamesByUsersStream(system: ActorSystem) {
     Enumeratee.map[Game.WithInitialFen].apply[JsObject](gameWithInitialFenWriter.writes)
 }
 
-object GamesByUsersStream {
+private object GamesByUsersStream {
+
+  private val classifiers = List('startGame, 'finishGame)
 
   private implicit val fenWriter: Writes[FEN] = Writes[FEN] { f =>
     JsString(f.value)
@@ -55,28 +52,27 @@ object GamesByUsersStream {
     case Game.WithInitialFen(g, initialFen) =>
       Json.obj(
         "id" -> g.id,
-        "initialFen" -> initialFen,
         "rated" -> g.rated,
         "variant" -> g.variant.key,
         "speed" -> g.speed.key,
         "perf" -> PerfPicker.key(g),
         "createdAt" -> g.createdAt,
         "status" -> g.status.id,
-        "clock" -> g.clock.map { clock =>
+        "players" -> JsObject(g.players.zipWithIndex map {
+          case (p, i) => p.color.name -> Json.obj(
+            "userId" -> p.userId,
+            "rating" -> p.rating
+          ).add("provisional" -> p.provisional)
+            .add("name" -> p.name)
+        })
+      ).add("initialFen" -> initialFen)
+        .add("clock" -> g.clock.map { clock =>
           Json.obj(
             "initial" -> clock.limitSeconds,
             "increment" -> clock.incrementSeconds,
             "totalTime" -> clock.estimateTotalSeconds
           )
-        },
-        "daysPerTurn" -> g.daysPerTurn,
-        "players" -> JsObject(g.players.zipWithIndex map {
-          case (p, i) => p.color.name -> Json.obj(
-            "userId" -> p.userId,
-            "name" -> p.name,
-            "rating" -> p.rating
-          ).add("provisional" -> p.provisional)
         })
-      ).noNull
+        .add("daysPerTurn" -> g.daysPerTurn)
   }
 }

@@ -6,12 +6,13 @@ import chess.format.{ Forsyth, FEN }
 import chess.{ Color, Status }
 import org.joda.time.DateTime
 import reactivemongo.api.commands.GetLastError
-import reactivemongo.api.{ CursorProducer, ReadPreference }
+import reactivemongo.api.commands.WriteResult
+import reactivemongo.api.{ CursorProducer, Cursor, ReadPreference }
 import reactivemongo.bson.BSONDocument
 
 import lila.db.BSON.BSONJodaDateTimeHandler
-import lila.db.ByteArray
 import lila.db.dsl._
+import lila.db.{ ByteArray, isDuplicateKey }
 import lila.user.User
 
 object GameRepo {
@@ -120,7 +121,7 @@ object GameRepo {
     sort: Bdoc,
     batchSize: Int = 0,
     readPreference: ReadPreference = ReadPreference.secondaryPreferred
-  )(implicit cp: CursorProducer[Game]) = {
+  )(implicit cp: CursorProducer[Game]): cp.ProducedCursor = {
     val query = coll.find(selector).sort(sort)
     query.copy(options = query.options.batchSize(batchSize)).cursor[Game](readPreference)
   }
@@ -131,13 +132,15 @@ object GameRepo {
     )).void
 
   def save(progress: Progress): Funit =
-    GameDiff(progress.origin, progress.game) match {
-      case (Nil, Nil) => funit
-      case (sets, unsets) => coll.update(
-        $id(progress.origin.id),
-        nonEmptyMod("$set", $doc(sets)) ++ nonEmptyMod("$unset", $doc(unsets))
-      ).void
-    }
+    saveDiff(progress.origin, GameDiff(progress.origin, progress.game))
+
+  def saveDiff(origin: Game, diff: GameDiff.Diff): Funit = diff match {
+    case (Nil, Nil) => funit
+    case (sets, unsets) => coll.update(
+      $id(origin.id),
+      nonEmptyMod("$set", $doc(sets)) ++ nonEmptyMod("$unset", $doc(unsets))
+    ).void
+  }
 
   private def nonEmptyMod(mod: String, doc: Bdoc) =
     if (doc.isEmpty) $empty else $doc(mod -> doc)
@@ -169,11 +172,17 @@ object GameRepo {
 
   // gets last recently played move game in progress
   def lastPlayedPlaying(user: User): Fu[Option[Pov]] =
-    coll.find(Query recentlyPlaying user.id)
+    lastPlayedPlaying(user.id).map { _ flatMap { Pov(_, user) } }
+
+  def lastPlayedPlaying(userId: User.ID): Fu[Option[Game]] =
+    coll.find(Query recentlyPlaying userId)
       .sort(Query.sortMovedAtNoIndex)
       .cursor[Game](readPreference = ReadPreference.secondaryPreferred)
       .uno
-      .map { _ flatMap { Pov(_, user) } }
+
+  def allPlaying(userId: User.ID): Fu[List[Pov]] =
+    coll.find(Query nowPlaying userId).list[Game]()
+      .map { _ flatMap { Pov.ofUserId(_, userId) } }
 
   def lastPlayed(user: User): Fu[Option[Pov]] =
     coll.find(Query user user.id)
@@ -264,22 +273,8 @@ object GameRepo {
     .skip(Random nextInt distribution)
     .uno[Game]
 
-  def findRandomFinished(distribution: Int): Fu[Option[Game]] = coll.find(
-    Query.finished ++ Query.variantStandard ++ Query.turnsGt(20) ++ Query.rated
-  ).sort(Query.sortCreated)
-    .skip(Random nextInt distribution)
-    .uno[Game]
-
-  def randomFinished(distribution: Int): Fu[Option[Game]] = coll.find(
-    Query.finished ++ Query.rated ++
-      Query.variantStandard ++ Query.bothRatingsGreaterThan(1600)
-  ).sort(Query.sortCreated)
-    .skip(Random nextInt distribution)
-    .cursor[Game](ReadPreference.secondary)
-    .uno
-
-  def insertDenormalized(g: Game, ratedCheck: Boolean = true, initialFen: Option[chess.format.FEN] = None): Funit = {
-    val g2 = if (ratedCheck && g.rated && g.userIds.distinct.size != 2)
+  def insertDenormalized(g: Game, initialFen: Option[chess.format.FEN] = None): Funit = {
+    val g2 = if (g.rated && (g.userIds.distinct.size != 2 || !Game.allowRated(g.variant, g.clock.map(_.config))))
       g.copy(mode = chess.Mode.Casual)
     else g
     val userIds = g2.userIds.distinct
@@ -298,7 +293,9 @@ object GameRepo {
       F.checkAt -> checkInHours.map(DateTime.now.plusHours),
       F.playingUids -> (g2.started && userIds.nonEmpty).option(userIds)
     )
-    coll insert bson void
+    coll insert bson addFailureEffect {
+      case wr: WriteResult if isDuplicateKey(wr) => lila.mon.game.idCollision()
+    } void
   } >>- {
     lila.mon.game.create.variant(g.variant.key)()
     lila.mon.game.create.source(g.source.fold("unknown")(_.name))()
@@ -332,12 +329,12 @@ object GameRepo {
       )
   ).void
 
-  def initialFen(gameId: ID): Fu[Option[String]] =
-    coll.primitiveOne[String]($id(gameId), F.initialFen)
+  def initialFen(gameId: ID): Fu[Option[FEN]] =
+    coll.primitiveOne[FEN]($id(gameId), F.initialFen)
 
-  def initialFen(game: Game): Fu[Option[String]] =
+  def initialFen(game: Game): Fu[Option[FEN]] =
     if (game.imported || !game.variant.standardInitialPosition) initialFen(game.id) map {
-      case None if game.variant == chess.variant.Chess960 => Forsyth.initial.some
+      case None if game.variant == chess.variant.Chess960 => FEN(Forsyth.initial).some
       case fen => fen
     }
     else fuccess(none)
@@ -345,31 +342,28 @@ object GameRepo {
   def gameWithInitialFen(gameId: ID): Fu[Option[(Game, Option[FEN])]] = game(gameId) flatMap {
     _ ?? { game =>
       initialFen(game) map { fen =>
-        (game -> fen.map(FEN.apply)).some
+        Option(game -> fen)
       }
     }
   }
 
   def withInitialFen(game: Game): Fu[Game.WithInitialFen] =
-    initialFen(game) map { fen =>
-      Game.WithInitialFen(game, fen.map(FEN.apply))
-    }
+    initialFen(game) map { Game.WithInitialFen(game, _) }
 
   def withInitialFens(games: List[Game]): Fu[List[(Game, Option[FEN])]] = games.map { game =>
-    initialFen(game) map { fen =>
-      game -> fen.map(FEN.apply)
-    }
+    initialFen(game) map { game -> _ }
   }.sequenceFu
 
   def featuredCandidates: Fu[List[Game]] = coll.list[Game](
     Query.playable ++ Query.clock(true) ++ $doc(
-      F.createdAt $gt (DateTime.now minusMinutes 5),
+      F.createdAt $gt (DateTime.now minusMinutes 4),
       F.movedAt $gt (DateTime.now minusSeconds 40)
     ) ++ $or(
         s"${F.whitePlayer}.${Player.BSONFields.rating}" $gt 1200,
         s"${F.blackPlayer}.${Player.BSONFields.rating}" $gt 1200
       )
   )
+  // def featuredCandidates: Fu[List[Game]] = coll.find($empty).skip(util.Random nextInt 10000).list[Game](50)
 
   def count(query: Query.type => Bdoc): Fu[Int] = coll countSel query(Query)
 

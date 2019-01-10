@@ -1,19 +1,23 @@
 package lila.relay
 
 import akka.actor._
+import io.lemonlabs.uri.Url
 import org.joda.time.DateTime
 import ornicar.scalalib.Zero
 import play.api.libs.json._
 import reactivemongo.bson._
 
 import lila.db.dsl._
+import lila.security.Granter
 import lila.study.{ StudyApi, Study, StudyMaker, Settings }
 import lila.user.User
 
 final class RelayApi(
     repo: RelayRepo,
     studyApi: StudyApi,
+    socketMap: lila.study.SocketMap,
     withStudy: RelayWithStudy,
+    clearFormatCache: Url => Unit,
     system: ActorSystem
 ) {
 
@@ -24,7 +28,7 @@ final class RelayApi(
 
   def byIdAndContributor(id: Relay.Id, me: User) = byIdWithStudy(id) map {
     _ collect {
-      case Relay.WithStudy(relay, study) if study canContribute me.id => relay
+      case Relay.WithStudy(relay, study) if study.canContribute(me.id) => relay
     }
   }
 
@@ -63,13 +67,16 @@ final class RelayApi(
   }
 
   def requestPlay(id: Relay.Id, v: Boolean): Funit = WithRelay(id) { relay =>
+    clearFormatCache(Url parse relay.sync.upstream.url)
     update(relay) { r =>
       if (v) r.withSync(_.play) else r.withSync(_.pause)
     } void
   }
 
   def update(from: Relay)(f: Relay => Relay): Fu[Relay] = {
-    val relay = f(from)
+    val relay = f(from) |> { r =>
+      if (r.sync.upstream.url != from.sync.upstream.url) r.withSync(_.clearLog) else r
+    }
     if (relay == from) fuccess(relay)
     else repo.coll.update($id(relay.id), relay).void >> {
       (relay.sync.playing != from.sync.playing) ?? publishRelay(relay)
@@ -100,7 +107,11 @@ final class RelayApi(
     repo.coll.find($doc(
       "sync.until" $exists false,
       "finished" -> false,
-      "startedAt" $lt DateTime.now.minusHours(3)
+      "startedAt" $lt DateTime.now.minusHours(3),
+      $or(
+        "startsAt" $exists false,
+        "startsAt" $lt DateTime.now
+      )
     )).list[Relay]() flatMap {
       _.map { relay =>
         logger.info(s"Automatically finish $relay")
@@ -120,22 +131,14 @@ final class RelayApi(
   private def sendToContributors(id: Relay.Id, t: String, msg: JsObject): Funit =
     studyApi members Study.Id(id.value) map {
       _.map(_.contributorIds).filter(_.nonEmpty) foreach { userIds =>
-        import lila.hub.actorApi.SendTos
+        import lila.hub.actorApi.socket.SendTos
         import JsonView.idWrites
         import lila.socket.Socket.makeMessage
         val payload = makeMessage(t, msg ++ Json.obj("id" -> id))
-        system.lilaBus.publish(SendTos(userIds, payload), 'users)
+        system.lilaBus.publish(SendTos(userIds, payload), 'socketUsers)
       }
     }
 
-  private[relay] def getNbViewers(relay: Relay): Fu[Int] = {
-    import makeTimeout.short
-    import akka.pattern.ask
-    import lila.study.Socket.{ GetNbMembers, NbMembers }
-    studySocketActor(relay.id) ? GetNbMembers mapTo manifest[NbMembers] map (_.value) recover {
-      case _: Exception => 0
-    }
-  }
-
-  private def studySocketActor(id: Relay.Id) = system actorSelection s"/user/study-socket/${id.value}"
+  private[relay] def getNbViewers(relay: Relay): Fu[Int] =
+    socketMap.askIfPresentOrZero[Int](relay.id.value)(lila.socket.SocketTrouper.GetNbMembers)
 }

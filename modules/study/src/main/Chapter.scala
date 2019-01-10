@@ -1,6 +1,7 @@
 package lila.study
 
 import chess.format.pgn.{ Glyph, Tag, Tags }
+import chess.format.FEN
 import chess.variant.Variant
 import chess.{ Color, Centis }
 import org.joda.time.DateTime
@@ -56,6 +57,9 @@ case class Chapter(
 
   def setClock(clock: Option[Centis], path: Path): Option[Chapter] =
     updateRoot(_.setClockAt(clock, path))
+
+  def forceVariation(force: Boolean, path: Path): Option[Chapter] =
+    updateRoot(_.forceVariationAt(force, path))
 
   def opening: Option[FullOpening] =
     if (!Variant.openingSensibleVariants(setup.variant)) none
@@ -139,9 +143,9 @@ object Chapter {
   }
 
   case class Metadata(
-      _id: Chapter.Id,
-      name: Chapter.Name,
-      setup: Chapter.Setup
+      _id: Id,
+      name: Name,
+      setup: Setup
   ) extends Like
 
   case class IdName(id: Id, name: Name)
@@ -152,8 +156,8 @@ object Chapter {
 
   def defaultName(order: Int) = Name(s"Chapter $order")
 
-  private val defaultNamePattern = """^Chapter \d+$""".r.pattern
-  def isDefaultName(n: Name) = n.value.isEmpty || defaultNamePattern.matcher(n.value).matches
+  private val defaultNameRegex = """Chapter \d+""".r
+  def isDefaultName(n: Name) = n.value.isEmpty || defaultNameRegex.matches(n.value)
 
   def fixName(n: Name) = Name(n.value.trim take 80)
 
