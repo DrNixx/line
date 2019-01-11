@@ -604,7 +604,7 @@ i %3$s</string>
   <string name="clock">Klokke</string>
   <string name="unauthorizedError">Uautorisert tilgang.</string>
   <string name="noInternetConnection">Ingen internettilkobling. Du kan fremdeles spille frakoblet fra menyen.</string>
-  <string name="connectedToLichess">Du er nå tilkoblet lichess.org</string>
+  <string name="connectedToLichess">Du er nå tilkoblet Chess-Online.Com</string>
   <string name="signedOut">Du har blitt logget ut.</string>
   <string name="loginSuccessful">Du er nå pålogget</string>
   <string name="playOnTheBoardOffline">Over brettet</string>

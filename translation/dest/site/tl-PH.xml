@@ -587,7 +587,7 @@
   <string name="clock">Orasan</string>
   <string name="unauthorizedError">Ang pagbukas ay hindi pinapayagan.</string>
   <string name="noInternetConnection">Walang koneksyon ng internet. Pwede ka parin maglaro ng offline galing sa menu.</string>
-  <string name="connectedToLichess">Konectado sa lichess.org</string>
+  <string name="connectedToLichess">Konectado sa Chess-Online.Com</string>
   <string name="signedOut">Ikaw ay nasign-out</string>
   <string name="loginSuccessful">Ikaw ay nasign-in ngayon</string>
   <string name="playOnTheBoardOffline">Sa ibabaw ng board</string>

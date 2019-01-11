@@ -1,45 +1,45 @@
-/**
- * based on https://github.com/hustcc/timeago.js
- * Copyright (c) 2016 hustcc
- * License: MIT
- **/
+/** based on https://github.com/hustcc/timeago.js Copyright (c) 2016 hustcc License: MIT **/
 lichess.timeago = (function() {
 
-  // second, minute, hour, day, week, month, year(365 days)
-  var SEC_ARRAY = [60, 60, 24, 7, 365/7/12, 12],
-    SEC_ARRAY_LEN = 6;
+  const TIME_FORMATS = [
+    // Seconds
+    {limit: 60, divider: 1},
+    // Minutes
+    {limit: 60 * 60, divider: 60},
+    // Hours
+    {limit: 60 * 60 * 24 * 2, divider: 60 * 60},
+    // Days
+    {limit: 60 * 60 * 24 * 7, divider: 60 * 60 * 24},
+    // Weeks
+    {limit: 60 * 60 * 2 * 365, divider: 60 * 60 * 24 * 7},
+    // Months
+    {limit: 60 * 60 * 24 * 365, divider: 60 * 60 * 2 * 365},
+  ];
 
   // format Date / string / timestamp to Date instance.
   function toDate(input) {
-    if (input instanceof Date) return input;
-    if (!isNaN(input)) return new Date(parseInt(input));
-    if (/^\d+$/.test(input)) return new Date(parseInt(input));
-    input = (input || '').trim().replace(/\.\d+/, '') // remove milliseconds
-      .replace(/-/, '/').replace(/-/, '/')
-      .replace(/(\d)T(\d)/, '$1 $2').replace(/Z/, ' UTC') // 2017-2-5T3:57:52Z -> 2017-2-5 3:57:52UTC
-      .replace(/([\+\-]\d\d)\:?(\d\d)/, ' $1$2'); // -04:00 -> -0400
-    return new Date(input);
+    return input instanceof Date ? input : (
+      new Date(isNaN(input) ? input : parseInt(input))
+    );
   }
 
   // format the diff second to *** time ago
   function formatDiff(diff) {
-    var i = 0,
-      agoin = diff < 0 ? 1 : 0, // timein or timeago
-        total_sec = diff = Math.abs(diff);
+    var i = 0, agoin = 0;
+    if (diff < 0) {
+      agoin = 1;
+      diff = -diff;
+    }
+    var total_sec = diff;
 
-      for (; diff >= SEC_ARRAY[i] && i < SEC_ARRAY_LEN; i++) {
-        diff /= SEC_ARRAY[i];
-      }
-      diff = parseInt(diff);
+    for (;i < TIME_FORMATS.length - 1 && diff >= TIME_FORMATS[i].limit;) i++;
+    diff /= TIME_FORMATS[i].divider;
+
+    diff = Math.floor(diff);
     i *= 2;
 
     if (diff > (i === 0 ? 9 : 1)) i += 1;
     return lichess.timeagoLocale(diff, i, total_sec)[agoin].replace('%s', diff);
-  }
-
-  // calculate the diff second between date to be formatted now
-  function diffSec(date) {
-    return (Date.now() - toDate(date)) / 1000;
   }
 
   var formatterInst;
@@ -55,38 +55,34 @@ lichess.timeago = (function() {
       }).format : function(d) { return d.toLocaleString(); })
   }
 
-  /**
-  * timeago: the function to get `timeago` instance.
-  *
-  * How to use it?
-  * var timeagoFactory = require('timeago.js');
-  * var timeago = timeagoFactory(); // all use default.
-  * var timeago = timeagoFactory('2016-09-10'); // the relative date is 2016-09-10, so the 2016-09-11 will be 1 day ago.
-  **/
   return {
     render: function(nodes) {
-      if (nodes.length === undefined) nodes = [nodes];
-      for (var i = 0, len = nodes.length; i < len; i++) {
-        var node = nodes[i],
-          abs = node.classList.contains('abs'),
-          set = node.classList.contains('set');
-        if (set && abs) continue;
-        var date = toDate(node.getAttribute('datetime'));
+      var cl, abs, set, str, diff, now = Date.now();
+      nodes.forEach(function(node) {
+        cl = node.classList,
+        abs = cl.contains('abs'),
+        set = cl.contains('set');
+        node.date = node.date || toDate(node.getAttribute('datetime'));
         if (!set) {
-          var str = formatter()(date);
-          if (abs) node.innerHTML = str;
+          str = formatter()(node.date);
+          if (abs) node.textContent = str;
           else node.setAttribute('title', str);
-          node.classList.add('set');
+          cl.add('set');
+          if (abs || cl.contains('once')) cl.remove('timeago');
         }
-        if (!abs) node.innerHTML = formatDiff(diffSec(date));
-      }
+        if (!abs) {
+          diff = (now - node.date) / 1000;
+          node.textContent = formatDiff(diff);
+          if (Math.abs(diff) > 9999) cl.remove('timeago'); // ~3h
+        }
+      });
     },
     // relative
     format: function(date) {
-      return formatDiff(diffSec(date));
+      return formatDiff((Date.now() - toDate(date)) / 1000);
     },
-    absolute: function(d) {
-      return formatter()(toDate(d));
+    absolute: function(date) {
+      return formatter()(toDate(date));
     }
   };
 })();

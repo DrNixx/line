@@ -660,7 +660,7 @@
   <string name="clock">Часы</string>
   <string name="unauthorizedError">Неавторизованный доступ.</string>
   <string name="noInternetConnection">Нет интернет соединения. Вы можете пока играть офлайн из меню.</string>
-  <string name="connectedToLichess">Сейчас вы подключены к lichess.org</string>
+  <string name="connectedToLichess">Сейчас вы подключены к Chess-Online.Com</string>
   <string name="signedOut">Вы вышли</string>
   <string name="loginSuccessful">Вы вошли</string>
   <string name="playOnTheBoardOffline">Вдвоём за доской</string>

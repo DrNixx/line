@@ -22,7 +22,7 @@ final class AutomaticEmail(
     val profileUrl = s"$baseUrl/@/${user.username}"
     val body = s"""Hello,
 
-Thank you for confirming your $title title on lichess.org.
+Thank you for confirming your $title title on Chess-Online Arena.
 It is now visible on your profile page: ${baseUrl}/@/${user.username}.
 
 Regards,
@@ -32,7 +32,7 @@ The lichess team
 
     mailgun send Mailgun.Message(
       to = email,
-      subject = s"$title title confirmed on lichess.org",
+      subject = s"$title title confirmed on Chess-Online Arena",
       text = s"""
 $body
 
@@ -61,7 +61,7 @@ The lichess team
 
         mailgun send Mailgun.Message(
           to = email,
-          subject = "Coach profile unlocked on lichess.org",
+          subject = "Coach profile unlocked on Chess-Online Arena",
           text = s"""
 $body
 

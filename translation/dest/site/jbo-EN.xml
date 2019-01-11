@@ -475,7 +475,7 @@
   <string name="clock">junla</string>
   <string name="unauthorizedError">jonse tolcru</string>
   <string name="noInternetConnection">ka\'e nai kibro jorne .i ku\'i kakne lo ka kelci se cau kei do\'e lo cuxna uidje</string>
-  <string name="connectedToLichess">do ca jorne la\'o zoi. lichess.org .zoi</string>
+  <string name="connectedToLichess">do ca jorne la\'o zoi. Chess-Online.Com .zoi</string>
   <string name="signedOut">do co\'u pilno lo jaspu</string>
   <string name="loginSuccessful">do co\'a pilno lo jaspu</string>
   <string name="playOnTheBoardOffline">pilno lo pa fonxa</string>

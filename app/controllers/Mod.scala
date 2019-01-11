@@ -142,7 +142,7 @@ object Mod extends LilaController {
 
   def setEmail(userId: UserModel.ID) = SecureBody(_.SetEmail) { implicit ctx => me =>
     implicit def req = ctx.body
-    OptionFuResult(UserRepo named userId) { user =>
+    OptionFuResult(UserRepo byId userId) { user =>
       Env.security.forms.modEmail(user).bindFromRequest.fold(
         err => BadRequest(err.toString).fuccess,
         rawEmail => {
@@ -166,7 +166,7 @@ object Mod extends LilaController {
   private def communications(userId: UserModel.ID, priv: Boolean) = Secure {
     perms => if (priv) perms.ViewPrivateComms else perms.MarkTroll
   } { implicit ctx => me =>
-    OptionFuOk(UserRepo named userId) { user =>
+    OptionFuOk(UserRepo byId userId) { user =>
       lila.game.GameRepo.recentPovsByUserFromSecondary(user, 80) flatMap { povs =>
         priv.?? {
           Env.chat.api.playerChat optionsByOrderedIds povs.map(_.gameId).map(Chat.Id.apply)
@@ -208,7 +208,7 @@ object Mod extends LilaController {
 
   def refreshUserAssess(userId: UserModel.ID) = Secure(_.MarkEngine) { implicit ctx => me =>
     OptionFuResult(UserRepo byId userId) { user =>
-      assessApi.refreshAssessByUsername(userId) >>
+      assessApi.refreshAssessById(userId) >>
         Env.irwin.api.requests.fromMod(Suspect(user), AsMod(me)) >>
         User.renderModZoneActions(userId)
     }
@@ -339,5 +339,5 @@ object Mod extends LilaController {
 
   private def actionResult(userId: UserModel.ID)(ctx: Context)(me: UserModel)(res: Any) =
     if (HTTPRequest isSynchronousHttp ctx.req) fuccess(Mod.redirect(userId))
-    else User.renderModZoneActions(username)(ctx)
+    else User.renderModZoneActions(userId)(ctx)
 }

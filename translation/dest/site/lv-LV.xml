@@ -631,7 +631,7 @@
   <string name="clock">Pulkstenis</string>
   <string name="unauthorizedError">Neautorizēta piekļuve.</string>
   <string name="noInternetConnection">Nav interneta pieslēguma. Tu joprojām vari spēlēt bezsaistē.</string>
-  <string name="connectedToLichess">Tu esi pieslēdzies lichess.org</string>
+  <string name="connectedToLichess">Tu esi pieslēdzies Chess-Online.Com</string>
   <string name="signedOut">Tu esi atslēdzies</string>
   <string name="loginSuccessful">Pieslēgšanās veiksmīga</string>
   <string name="playOnTheBoardOffline">Spēlēt bezsaistē, kā pie galda</string>

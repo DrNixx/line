@@ -603,7 +603,7 @@ en %3$s</string>
   <string name="clock">Pendule</string>
   <string name="unauthorizedError">Accès non autorisé.</string>
   <string name="noInternetConnection">Pas de connexion à Internet. Vous pouvez cependant jouer hors ligne à partir du menu.</string>
-  <string name="connectedToLichess">Vous êtes maintenant connecté à lichess.org</string>
+  <string name="connectedToLichess">Vous êtes maintenant connecté à Chess-Online.Com</string>
   <string name="signedOut">Vous vous êtes déconnecté</string>
   <string name="loginSuccessful">Vous êtes connecté</string>
   <string name="playOnTheBoardOffline">Jouer hors ligne, avec un ami</string>

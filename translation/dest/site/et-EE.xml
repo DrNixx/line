@@ -603,7 +603,7 @@ arvutianalüüsi, mängu jututoa ning jagatava URL-i.</string>
   <string name="clock">Kell</string>
   <string name="unauthorizedError">Juurdepääs on keelatud.</string>
   <string name="noInternetConnection">Puudub internetiühendus. Saate siiski mängida ühenduseta olevast menüüst.</string>
-  <string name="connectedToLichess">Oled nüüd ühendatud lichess.org</string>
+  <string name="connectedToLichess">Oled nüüd ühendatud Chess-Online.Com</string>
   <string name="signedOut">Olete välja logitud</string>
   <string name="loginSuccessful">Oled sisse logitud</string>
   <string name="playOnTheBoardOffline">Reaalelumäng</string>

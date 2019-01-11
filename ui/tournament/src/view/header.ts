@@ -17,6 +17,11 @@ function hasFreq(freq, d) {
 
 function clock(d): VNode | undefined {
   if (d.isFinished) return;
+  if (d.secondsToFinish) return h('div.clock', {
+    hook: startClock(d.secondsToFinish)
+  }, [
+    h('div.time')
+  ]);
   if (d.secondsToStart) {
     if (d.secondsToStart > oneDayInSeconds) return h('div.clock', [
       h('time.timeago.shy', {
@@ -38,11 +43,6 @@ function clock(d): VNode | undefined {
       h('span.time.text')
     ]);
   }
-  if (d.secondsToFinish) return h('div.clock', {
-    hook: startClock(d.secondsToFinish)
-  }, [
-    h('div.time')
-  ]);
 }
 
 function image(d): VNode | undefined {
@@ -50,7 +50,7 @@ function image(d): VNode | undefined {
   if (hasFreq('shield', d) || hasFreq('marathon', d)) return;
   const s = d.spotlight;
   if (s && s.iconImg) return h('img.img', {
-    attrs: { src: window.lichess.assetUrl('/assets/images/' + s.iconImg) }
+    attrs: { src: window.lichess.assetUrl('images/' + s.iconImg) }
   });
   return h('i.img', {
     attrs: dataIcon((s && s.iconFont) || 'g')

@@ -134,5 +134,5 @@ object TreeBuilder {
   }
 
   private val logChessError = (id: String) => (err: String) =>
-    logger.warn(s"round.TreeBuilder https://lichess.org/$id ${err.lines.toList.headOption}")
+    logger.warn(s"round.TreeBuilder https://live.chess-online.com/$id ${err.lines.toList.headOption}")
 }

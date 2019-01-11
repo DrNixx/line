@@ -632,7 +632,7 @@
   <string name="clock">Ceas</string>
   <string name="unauthorizedError">Acces neautorizat.</string>
   <string name="noInternetConnection">Nu ai acces la Internet. Poți juca doar offline (din meniu).</string>
-  <string name="connectedToLichess">Acum sunteți conectat la lichess.org</string>
+  <string name="connectedToLichess">Acum sunteți conectat la Chess-Online.Com</string>
   <string name="signedOut">V-ați deconectat</string>
   <string name="loginSuccessful">Ești autentificat</string>
   <string name="playOnTheBoardOffline">Joacă offline folosind tabla</string>

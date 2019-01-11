@@ -542,7 +542,7 @@
   <string name="clock">დრო</string>
   <string name="unauthorizedError">დაკავშირება შეუძლებელია</string>
   <string name="noInternetConnection">ინტერნეტთან წვდომა არ არის. თქვენ შეგიძლიათ ითამაშოთ ოფფლაინში.</string>
-  <string name="connectedToLichess">კავშირი lichess.org-თან დამყარებულია</string>
+  <string name="connectedToLichess">კავშირი Chess-Online.Com-თან დამყარებულია</string>
   <string name="signedOut">თქვენ გამოსული ხართ სისტემიდან</string>
   <string name="loginSuccessful">თქვენი ავტორიზირებული ხართ სისტემაში</string>
   <string name="playOnTheBoardOffline">ადგილობრივი თამაში</string>

@@ -574,7 +574,7 @@
   <string name="clock">นาฬิกา</string>
   <string name="unauthorizedError">สิทธิ์เข้าถึงยังไม่ถูกต้อง</string>
   <string name="noInternetConnection">ไม่มีการเชื่อมต่ออินเตอร์เน็ต แต่คุณสามารถเล่นออฟไลน์ได้จากเมนู</string>
-  <string name="connectedToLichess">ขณะนี้คุณเชื่อมต่ออยู่กับ lichess.org</string>
+  <string name="connectedToLichess">ขณะนี้คุณเชื่อมต่ออยู่กับ Chess-Online.Com</string>
   <string name="signedOut">คุณได้ลงชื่อออกแล้ว</string>
   <string name="loginSuccessful">ตอนนี้คุณลงชื่อเข้าแล้ว</string>
   <string name="playOnTheBoardOffline">เล่นกระดานเดียวกัน</string>

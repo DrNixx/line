@@ -661,7 +661,7 @@ v %3$s</string>
   <string name="clock">Ura</string>
   <string name="unauthorizedError">Dostop ni avtoriziran</string>
   <string name="noInternetConnection">Ni internetne povezave. Še vedno lahko igraš nepovezan preko menija.</string>
-  <string name="connectedToLichess">Povezani ste na lichess.org</string>
+  <string name="connectedToLichess">Povezani ste na Chess-Online.Com</string>
   <string name="signedOut">Odjavili ste se</string>
   <string name="loginSuccessful">Prijava uspešna</string>
   <string name="playOnTheBoardOffline">Proti človeku</string>

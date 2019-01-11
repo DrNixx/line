@@ -462,7 +462,7 @@
   <string name="victory">Победа</string>
   <string name="unauthorizedError">Пристапот е неовластен.</string>
   <string name="noInternetConnection">Нема интернет конекција. Сеуште мошите да играте од менито.</string>
-  <string name="connectedToLichess">Сега сте поврзани на lichess.org</string>
+  <string name="connectedToLichess">Сега сте поврзани на Chess-Online.Com</string>
   <string name="signedOut">Одјавени сте</string>
   <string name="loginSuccessful">Сега сте најавени</string>
   <string name="playOfflineComputer">Компјутер</string>

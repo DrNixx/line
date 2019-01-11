@@ -79,7 +79,7 @@ private[tournament] object PairingSystem extends AbstractPairingSystem {
     case _ => AntmaPairing(data, players)
   }
 
-  private[arena] def url(tourId: String) = s"https://lichess.org/tournament/$tourId"
+  private[arena] def url(tourId: String) = s"https://live.chess-online.com/tournament/$tourId"
 
   /* Was previously static 1000.
    * By increasing the factor for high ranked players,

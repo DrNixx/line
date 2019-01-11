@@ -660,7 +660,7 @@
   <string name="clock">Tempo</string>
   <string name="unauthorizedError">Prístup zamietnutý.</string>
   <string name="noInternetConnection">Žiadny prístup k Internetu. Stále môžete hrať offline z menu.</string>
-  <string name="connectedToLichess">Práve ste sa pripojili k lichess.org</string>
+  <string name="connectedToLichess">Práve ste sa pripojili k Chess-Online.Com</string>
   <string name="signedOut">Práve ste sa úspešne odhlásili</string>
   <string name="loginSuccessful">Teraz ste prihlásený</string>
   <string name="playOnTheBoardOffline">Hrať bez pripojenia</string>

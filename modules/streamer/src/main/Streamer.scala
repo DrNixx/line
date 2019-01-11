@@ -65,7 +65,7 @@ object Streamer {
       requested: Boolean, // user requests a mod to approve
       granted: Boolean, // a mod approved
       ignored: Boolean, // further requests are ignored
-      autoFeatured: Boolean, // on homepage when status contains "lichess.org"
+      autoFeatured: Boolean, // on homepage when status contains "live.chess-online.com"
       chatEnabled: Boolean // embed chat inside lichess
   )
   case class PicturePath(value: String) extends AnyVal with StringValue

@@ -574,7 +574,7 @@
   <string name="clock">시간 제한</string>
   <string name="unauthorizedError">접속이 불허되었습니다.</string>
   <string name="noInternetConnection">인터넷 연결이 없습니다. 메뉴을 통해 오프라인 게임은 할 수 있습니다.</string>
-  <string name="connectedToLichess">lichess.org에 접속했습니다</string>
+  <string name="connectedToLichess">Chess-Online.Com에 접속했습니다</string>
   <string name="signedOut">로그아웃 되었습니다.</string>
   <string name="loginSuccessful">로그인 성공</string>
   <string name="playOnTheBoardOffline">오프라인, 로컬 게임</string>

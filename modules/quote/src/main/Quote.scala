@@ -572,10 +572,10 @@ object Quote {
     new Quote("Chess as a game is too serious; as a serious pursuit too frivolous.", "Moses Mendelssohn"),
 
     // lichess facts
-    new Quote("All features for free; for everyone; forever.", "lichess.org"),
-    new Quote("We will never display ads.", "lichess.org"),
-    new Quote("We do not track you. It's a rare feature, nowadays.", "lichess.org"),
-    new Quote("Every chess player is a premium user.", "lichess.org")
+    new Quote("All features for free; for everyone; forever.", "Chess-Online"),
+    new Quote("We will never display ads.", "Chess-Online"),
+    new Quote("We do not track you. It's a rare feature, nowadays.", "Chess-Online"),
+    new Quote("Every chess player is a premium user.", "Chess-Online")
   )
 
   implicit def quoteWriter: OWrites[Quote] = OWrites { q =>

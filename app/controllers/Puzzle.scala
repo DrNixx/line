@@ -189,7 +189,7 @@ object Puzzle extends LilaController {
       Env.game.recentGoodGameActor ? true mapTo manifest[Option[String]] flatMap {
         _ ?? lila.game.GameRepo.gameWithInitialFen flatMap {
           case Some((game, initialFen)) =>
-            Env.api.pgnDump(game, initialFen.map(_.value), analysis = none, PgnDump.WithFlags(clocks = false)) map { pgn =>
+            Env.api.pgnDump(game, initialFen, analysis = none, PgnDump.WithFlags(clocks = false)) map { pgn =>
               Ok(pgn.render)
             }
           case _ =>

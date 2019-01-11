@@ -484,7 +484,7 @@
   <string name="clock">Horologium</string>
   <string name="unauthorizedError">Admissio non approbata est.</string>
   <string name="noInternetConnection">Nullus conexus. Extra systema ex apparato ludere potes.</string>
-  <string name="connectedToLichess">Conexus ad lichess.org nunc es</string>
+  <string name="connectedToLichess">Conexus ad Chess-Online.Com nunc es</string>
   <string name="signedOut">Nunc existi</string>
   <string name="loginSuccessful">Nunc inisti</string>
   <string name="playOnTheBoardOffline">Trans tabulam</string>

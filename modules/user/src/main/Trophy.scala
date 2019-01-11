@@ -33,7 +33,7 @@ object Trophy {
       key = "zugMiracle",
       name = "Zug miracle",
       icon = none,
-      url = "//lichess.org/qa/259/how-do-you-get-a-zug-miracle-trophy".some,
+      url = "//live.chess-online.com/qa/259/how-do-you-get-a-zug-miracle-trophy".some,
       klass = none,
       order = 1
     )
@@ -42,7 +42,7 @@ object Trophy {
       key = "wayOfBerserk",
       name = "The way of Berserk",
       icon = "`".some,
-      url = "//lichess.org/qa/340/way-of-berserk-trophy".some,
+      url = "//live.chess-online.com/qa/340/way-of-berserk-trophy".some,
       klass = "fire_trophy".some,
       order = 2
     )
@@ -87,7 +87,7 @@ object Trophy {
       key = "marathonSurvivor",
       name = "Marathon #1 survivor",
       icon = ",".some,
-      url = "//lichess.org/blog/VXF45yYAAPQgLH4d/chess-marathon-1".some,
+      url = "//live.chess-online.com/blog/VXF45yYAAPQgLH4d/chess-marathon-1".some,
       klass = "fire_trophy".some,
       order = 7
     )
@@ -96,7 +96,7 @@ object Trophy {
       key = "bongcloudWarrior",
       name = "Bongcloud Warrior",
       icon = "~".some,
-      url = "//lichess.org/forum/lichess-feedback/bongcloud-trophy".some,
+      url = "//live.chess-online.com/forum/lichess-feedback/bongcloud-trophy".some,
       klass = "fire_trophy".some,
       order = 8
     )
@@ -114,7 +114,7 @@ object Trophy {
       key = "moderator",
       name = "Lichess moderator",
       icon = "".some,
-      url = "//lichess.org/report".some,
+      url = "//live.chess-online.com/report".some,
       "icon3d".some,
       order = 101
     )
@@ -132,7 +132,7 @@ object Trophy {
       key = "zhwc17",
       name = "Crazyhouse champion 2017",
       icon = none,
-      url = "//lichess.org/blog/WMnMzSEAAMgA3oAW/crazyhouse-world-championship-the-candidates".some,
+      url = "//live.chess-online.com/blog/WMnMzSEAAMgA3oAW/crazyhouse-world-championship-the-candidates".some,
       klass = none,
       order = 1
     )
@@ -141,7 +141,7 @@ object Trophy {
       key = "zhwc18",
       name = "Crazyhouse champion 2018",
       icon = none,
-      url = "//lichess.org/forum/team-crazyhouse-world-championship/opperwezen-the-2nd-cwc".some,
+      url = "//live.chess-online.com/forum/team-crazyhouse-world-championship/opperwezen-the-2nd-cwc".some,
       klass = none,
       order = 1
     )
@@ -150,7 +150,7 @@ object Trophy {
       key = "atomicwc16",
       name = "Atomic World Champion 2016",
       icon = none,
-      url = "//lichess.org/forum/team-atomic-wc/championship-final".some,
+      url = "//live.chess-online.com/forum/team-atomic-wc/championship-final".some,
       klass = none,
       order = 1
     )
@@ -159,7 +159,7 @@ object Trophy {
       key = "atomicwc17",
       name = "Atomic World Champion 2017",
       icon = none,
-      url = "//lichess.org/forum/team-atomic-wc/awc-2017-its-final-time".some,
+      url = "//live.chess-online.com/forum/team-atomic-wc/awc-2017-its-final-time".some,
       klass = none,
       order = 1
     )
@@ -168,7 +168,7 @@ object Trophy {
       key = "atomicwc18",
       name = "Atomic World Champion 2018",
       icon = none,
-      url = "//lichess.org/forum/team-atomic-wc/announcement-awc-2018".some,
+      url = "//live.chess-online.com/forum/team-atomic-wc/announcement-awc-2018".some,
       klass = none,
       order = 1
     )

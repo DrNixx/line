@@ -602,7 +602,7 @@
   <string name="clock">Ur</string>
   <string name="unauthorizedError">Adgang ikke givet.</string>
   <string name="noInternetConnection">Ingen internetforbindelse. Du kan stadig spille offline fra menuen.</string>
-  <string name="connectedToLichess">Du er nu forbundet til lichess.org</string>
+  <string name="connectedToLichess">Du er nu forbundet til Chess-Online.Com</string>
   <string name="signedOut">Du er blevet logget ud</string>
   <string name="loginSuccessful">Du er nu logget ind</string>
   <string name="playOnTheBoardOffline">Spil offline, brug som bræt</string>

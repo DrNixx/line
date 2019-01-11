@@ -575,7 +575,7 @@
   <string name="clock">時間制限</string>
   <string name="unauthorizedError">アクセス権限がありません。</string>
   <string name="noInternetConnection">インターネット接続なし。メニューからオフラインでプレイできます。</string>
-  <string name="connectedToLichess">lichess.org に接続しています。</string>
+  <string name="connectedToLichess">Chess-Online.Com に接続しています。</string>
   <string name="signedOut">サインアウトしました。</string>
   <string name="loginSuccessful">ログインしました</string>
   <string name="playOnTheBoardOffline">オフライン（2人対戦）</string>

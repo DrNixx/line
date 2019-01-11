@@ -1,6 +1,6 @@
 {
-  "name": "lichess.org",
-  "short_name": "lichess.org",
+  "name": "live.chess-online.com",
+  "short_name": "live.chess-online.com",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#fff",

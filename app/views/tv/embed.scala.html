@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="Content-Security-Policy" content="@basicCsp">
-    <title>lichess.org TV</title>
+    <title>Chess-Online.Com TV</title>
     @if(bg == "dark") {
     @cssAt("stylesheets/dark.css")
     }
@@ -16,7 +16,7 @@
     class="base highlight @bg"
     style="width: 224px; height: 264px; overflow: hidden; background: none!important"
     data-stream-url="@routes.Tv.feed">
-    <div id="featured_game" class="is2d highlight @bg @theme merida" title="lichess.org TV">
+    <div id="featured_game" class="is2d highlight @bg @theme merida" title="Chess-Online TV">
       @gameFenNoCtx(pov, tv = true, blank = true)
       @game.bits.vstext(pov)(none).toHtml
     </div>

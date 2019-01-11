@@ -442,4 +442,18 @@ object GameRepo {
     ).sort(Query.sortCreated)
       .cursor[Game](ReadPreference.secondaryPreferred)
       .list(nb)
+
+  def findRandomFinished(distribution: Int): Fu[Option[Game]] = coll.find(
+    Query.finished ++ Query.variantStandard ++ Query.turnsGt(20) ++ Query.rated
+  ).sort(Query.sortCreated)
+    .skip(Random nextInt distribution)
+    .uno[Game]
+
+  def randomFinished(distribution: Int): Fu[Option[Game]] = coll.find(
+    Query.finished ++ Query.rated ++
+      Query.variantStandard ++ Query.bothRatingsGreaterThan(1600)
+  ).sort(Query.sortCreated)
+    .skip(Random nextInt distribution)
+    .cursor[Game](ReadPreference.secondary)
+    .uno
 }

@@ -605,7 +605,7 @@ in %3$s</string>
   <string name="clock">Horologio</string>
   <string name="unauthorizedError">Le accesso non es autorisate.</string>
   <string name="noInternetConnection">Sin connexion de Internet. Tu ancora pote jocar disconnectite a partir del menu.</string>
-  <string name="connectedToLichess">Tu es ora connectite a lichess.org</string>
+  <string name="connectedToLichess">Tu es ora connectite a Chess-Online.Com</string>
   <string name="signedOut">Tu ha claudite le session</string>
   <string name="loginSuccessful">Tu ha aperite un session</string>
   <string name="playOnTheBoardOffline">Partita local</string>

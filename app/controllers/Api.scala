@@ -289,10 +289,10 @@ object Api extends LilaController {
     key = "user_activity.api.ip"
   )
 
-  def activity(name: String) = ApiRequest { req =>
+  def activity(userId: lila.user.User.ID) = ApiRequest { req =>
     UserActivityRateLimitPerIP(HTTPRequest lastRemoteAddress req, cost = 1) {
       lila.mon.api.activity.cost(1)
-      lila.user.UserRepo named name flatMap {
+      lila.user.UserRepo byId userId flatMap {
         _ ?? { user =>
           Env.activity.read.recent(user) flatMap {
             _.map { Env.activity.jsonView(_, user) }.sequenceFu

@@ -524,7 +524,7 @@
   <string name="clock">Saat</string>
   <string name="unauthorizedError">Kecid qadağan olunmuşdur</string>
   <string name="noInternetConnection">İnternet bağlantısı yoxdur. Sən yenə də menyudan offlayn oynaya bilərsən</string>
-  <string name="connectedToLichess">Sen indi lichess.org bağlandın</string>
+  <string name="connectedToLichess">Sen indi Chess-Online.Com bağlandın</string>
   <string name="signedOut">siz xəttdən ayrıldınız</string>
   <string name="loginSuccessful">siz xəttə bağlandınız</string>
   <string name="playOnTheBoardOffline">Taxta üzərində</string>

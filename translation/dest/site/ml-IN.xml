@@ -600,7 +600,7 @@ in %3$s</string>
   <string name="clock">ഘടികാരം</string>
   <string name="unauthorizedError">പ്രവേശനം വിലക്കിയിരിക്കുന്നു.</string>
   <string name="noInternetConnection">ഇന്റർനെറ്റ് കണക്ഷൻ ഇല്ല. നിങ്ങൾക്ക് ഇപ്പോഴും പട്ടികയുടെ സഹായത്തോടെ ഓഫ്‌ലൈനായി കളിക്കാവുന്നതാണ്.</string>
-  <string name="connectedToLichess">നിങ്ങൾ ഇപ്പോൾ lichess.org ആയി ബന്ധപ്പെട്ടിരിക്കുന്നു</string>
+  <string name="connectedToLichess">നിങ്ങൾ ഇപ്പോൾ Chess-Online.Com ആയി ബന്ധപ്പെട്ടിരിക്കുന്നു</string>
   <string name="signedOut">നിങ്ങൾ സൈൻ ഔട്ട് ചെയ്തിരിക്കുന്നു</string>
   <string name="loginSuccessful">നിങ്ങൾ ഇപ്പോൾ സൈൻ ഇൻ ചെയ്തു</string>
   <string name="playOnTheBoardOffline">ചതുരംഗ പലകയിൽ</string>

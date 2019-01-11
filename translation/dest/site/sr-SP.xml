@@ -633,7 +633,7 @@
   <string name="clock">Сат</string>
   <string name="unauthorizedError">Приступ није одобрен.</string>
   <string name="noInternetConnection">Нема интернет конекције. Можете играти офлајн са менија.</string>
-  <string name="connectedToLichess">Повезани сте на lichess.org</string>
+  <string name="connectedToLichess">Повезани сте на Chess-Online.Com</string>
   <string name="signedOut">Одјављени сте</string>
   <string name="loginSuccessful">Пријављени сте</string>
   <string name="playOnTheBoardOffline">Играј у двоје</string>

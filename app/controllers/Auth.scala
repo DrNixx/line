@@ -1,6 +1,7 @@
 package controllers
 
 import ornicar.scalalib.Zero
+import ornicar.scalalib.Random
 import play.api.data.FormError
 import play.api.libs.json._
 import play.api.mvc._
@@ -307,7 +308,7 @@ object Auth extends LilaController {
       case Result.AlreadyConfirmed(user) if ctx.is(user) =>
         Redirect(routes.User.show(user.username)).fuccess
       case Result.AlreadyConfirmed(user) =>
-        Redirect(routes.Auth.login).fuccess
+        Redirect(routes.Auth.oidcLogin).fuccess
       case Result.JustConfirmed(user) =>
         lila.mon.user.register.confirmEmailResult(true)()
         UserRepo.email(user.id).flatMap {

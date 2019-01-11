@@ -604,7 +604,7 @@
   <string name="clock">Χρόνος</string>
   <string name="unauthorizedError">Άρνηση πρόσβασης.</string>
   <string name="noInternetConnection">Χωρίς σύνδεση. Για να παίξετε χωρίς σύνδεση, ανοίξτε το μενού.</string>
-  <string name="connectedToLichess">Έχετε συνδεθεί στο lichess.org</string>
+  <string name="connectedToLichess">Έχετε συνδεθεί στο Chess-Online.Com</string>
   <string name="signedOut">Έχετε αποσυνδεθεί επιτυχώς</string>
   <string name="loginSuccessful">Είσοδος επιτυχής</string>
   <string name="playOnTheBoardOffline">Τοπικά</string>

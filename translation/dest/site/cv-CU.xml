@@ -443,7 +443,7 @@
   <string name="clock">Сехет</string>
   <string name="unauthorizedError">Сайт ҫине кӗмен.</string>
   <string name="noInternetConnection">Интернет ҫыхӑнӑвӗ ҫук. Ҫапах та менӳрен офлайн та выльама пултаратӑн.</string>
-  <string name="connectedToLichess">Lichess.org сайтпа ҫыхӑнтарнӑ</string>
+  <string name="connectedToLichess">Chess-Online.Com сайтпа ҫыхӑнтарнӑ</string>
   <string name="signedOut">Есӗ аккаунтран тухрӑн</string>
   <string name="loginSuccessful">Есӗ аккаунта кӗтӗн</string>
   <string name="playOnTheBoardOffline">Пӗр хӑма ҫинче</string>

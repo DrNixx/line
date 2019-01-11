@@ -49,7 +49,7 @@ $url
 ${trans.common_orPaste.literalTxtTo(lang)}
 
 ${Mailgun.txt.serviceNote}
-${trans.emailConfirm_ignore.literalTxtTo(lang, List("https://lichess.org"))}
+${trans.emailConfirm_ignore.literalTxtTo(lang, List("https://live.chess-online.com"))}
 """,
       htmlBody = Html(s"""
 <div itemscope itemtype="http://schema.org/EmailMessage">

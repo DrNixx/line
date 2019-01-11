@@ -660,7 +660,7 @@
   <string name="clock">Zegar</string>
   <string name="unauthorizedError">Brak dostępu.</string>
   <string name="noInternetConnection">Brak połączenia. Możesz jednak wybrać z menu opcję gry offline.</string>
-  <string name="connectedToLichess">Zostałeś połączony z lichess.org</string>
+  <string name="connectedToLichess">Zostałeś połączony z Chess-Online.Com</string>
   <string name="signedOut">Wylogowałeś się</string>
   <string name="loginSuccessful">Jesteś zalogowany</string>
   <string name="playOnTheBoardOffline">Graj offline</string>

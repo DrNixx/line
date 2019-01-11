@@ -633,7 +633,7 @@ u %3$s</string>
   <string name="clock">Sat</string>
   <string name="unauthorizedError">Pristup neodobren.</string>
   <string name="noInternetConnection">Nedostupna internetska veza. Možeš i dalje igrati bez internetske veze preko izbornika.</string>
-  <string name="connectedToLichess">Spojen/a si na lichess.org</string>
+  <string name="connectedToLichess">Spojen/a si na Chess-Online.Com</string>
   <string name="signedOut">Odjavljen/a si</string>
   <string name="loginSuccessful">Prijavljen/a si</string>
   <string name="playOnTheBoardOffline">Igraj bez mreže, preko uređaja</string>

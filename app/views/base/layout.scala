@@ -57,7 +57,7 @@ object layout {
   </a>
   <div id="dasher_app" class="dropdown" data-playing="$playing"></div>
 </div>
-<a href="${routes.Auth.login}?referrer=${currentPath}" class="signin button text">${trans.signIn()}</a>""")
+<a href="${routes.Auth.oidcLogin}?referrer=${currentPath}" class="signin button text">${trans.signIn()}</a>""")
 
   private val clinputLink = a(cls := "link")(span(dataIcon := "y"))
 
@@ -113,11 +113,11 @@ object layout {
         ),
         if (isProd) frag(
           wasmxEnabled() option wasmx,
-          titleTag(fullTitle | s"$title • lichess.org"),
+          titleTag(fullTitle | s"$title • Chess-Online Arena"),
           fontStylesheets
         )
         else frag(
-          titleTag(s"[dev] ${fullTitle | s"$title • lichess.org"}"),
+          titleTag(s"[dev] ${fullTitle | s"$title • Chess-Online Arena"}"),
           cssAt("offline/font.noto.css"),
           cssAt("offline/font.roboto.mono.css")
         ),
@@ -181,7 +181,7 @@ object layout {
           ctx.me ifTrue ctx.userContext.impersonatedBy.isDefined map { views.html.mod.impersonate(_) },
           isStage option div(id := "stage")(
             "This is an empty lichess preview website for developers. ",
-            a(href := "https://lichess.org")("Go to lichess.org instead")
+            a(href := "https://live.chess-online.com")("Go to Chess-Online Arena instead")
           ),
           lila.security.EmailConfirm.cookie.get(ctx.req).map(views.html.auth.emailConfirmBanner(_)),
           playing option zenToggle,

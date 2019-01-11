@@ -488,7 +488,7 @@
   <string name="clock">Гадзіньнік</string>
   <string name="unauthorizedError">Няма доступу.</string>
   <string name="noInternetConnection">Няма злучэньня зь сецівам. Ты ўсё яшчэ можаш згуляць у афлайн мэню.</string>
-  <string name="connectedToLichess">Ты цяпер падлучаны да lichess.org</string>
+  <string name="connectedToLichess">Ты цяпер падлучаны да Chess-Online.Com</string>
   <string name="signedOut">Ты выйшаў з свайго акаўту</string>
   <string name="loginSuccessful">Ты ўвайшоў у свой акаўнт</string>
   <string name="playOnTheBoardOffline">Ля дошкі</string>

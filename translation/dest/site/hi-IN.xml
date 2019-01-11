@@ -595,7 +595,7 @@
   <string name="clock">घड़ी</string>
   <string name="unauthorizedError">पहुँच अनधिकृत है।</string>
   <string name="noInternetConnection">कोई इंटरनेट कनेक्शन नहीं। आप अब भी मेनू से ऑफ़लाइन खेल सकते हैं।</string>
-  <string name="connectedToLichess">अब आप lichess.org से जुड़े हैं</string>
+  <string name="connectedToLichess">अब आप Chess-Online.Com से जुड़े हैं</string>
   <string name="signedOut">आप खातें से बहार आ चुके हैं</string>
   <string name="loginSuccessful">अब आप खाते के अंदर हैं</string>
   <string name="playOnTheBoardOffline">बोर्ड पर</string>

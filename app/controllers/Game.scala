@@ -30,7 +30,7 @@ object Game extends LilaController {
 
   def exportOne(id: String) = Open { implicit ctx =>
     OptionFuResult(GameRepo game id) { game =>
-      if (game.playable) BadRequest("Only bots can access their games in progress. See https://lichess.org/api#tag/Chess-Bot").fuccess
+      if (game.playable) BadRequest("Only bots can access their games in progress. See https://live.chess-online.com/api#tag/Chess-Bot").fuccess
       else {
         val config = GameApiV2.OneConfig(
           format = if (HTTPRequest acceptsJson ctx.req) GameApiV2.Format.JSON else GameApiV2.Format.PGN,

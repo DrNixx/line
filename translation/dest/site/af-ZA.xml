@@ -440,7 +440,7 @@
   <string name="clock">Skaakklok</string>
   <string name="unauthorizedError">Toegang is verbode</string>
   <string name="noInternetConnection">Geen internet koppeling. Jy kan steeds vanlyn speel van die kieslys.</string>
-  <string name="connectedToLichess">Jy is nou verbind aan lichess.org</string>
+  <string name="connectedToLichess">Jy is nou verbind aan Chess-Online.Com</string>
   <string name="signedOut">Jy is uitgeteken</string>
   <string name="loginSuccessful">Jy is nou ingeteken</string>
   <string name="playOnTheBoardOffline">Oor die bord</string>

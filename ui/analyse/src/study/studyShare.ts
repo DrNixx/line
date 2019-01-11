@@ -5,7 +5,7 @@ import { prop } from 'common';
 import { renderIndexAndMove } from '../moveView';
 import { StudyData, StudyChapterMeta } from './interfaces';
 
-const baseUrl = 'https://lichess.org/study/';
+const baseUrl = 'https://live.chess-online.com/study/';
 
 function fromPly(ctrl): VNode {
   var node = ctrl.currentNode();
@@ -51,7 +51,7 @@ export function view(ctrl): VNode {
   }
   return h('div.study_share.underboard_form.box', {
     hook: {
-      insert() { window.lichess.loadCss('/assets/stylesheets/material.form.css') }
+      insert() { window.lichess.loadCss('stylesheets/material.form.css') }
     }
   }, [
     h('div.downloads', [

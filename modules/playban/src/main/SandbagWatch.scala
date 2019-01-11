@@ -27,7 +27,7 @@ private final class SandbagWatch(messenger: MessageApi) {
     user <- UserRepo byId userId
   } yield (mod zip user).headOption.?? {
     case (m, u) =>
-      lila.log("sandbag").info(s"https://lichess.org/@/${u.username}")
+      lila.log("sandbag").info(s"https://live.chess-online.com/@/${u.id}")
       messenger.sendPreset(m, u, ModPreset.sandbagAuto).void
   }
 

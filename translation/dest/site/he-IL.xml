@@ -538,7 +538,7 @@
   <string name="clock">שעון</string>
   <string name="unauthorizedError">גישה לא מורשה</string>
   <string name="noInternetConnection">אין חיבור לאינטרנט. ניתן עדיין לשחק דרך התפריט.</string>
-  <string name="connectedToLichess">התחברת ל-lichess.org</string>
+  <string name="connectedToLichess">התחברת ל-Chess-Online.Com</string>
   <string name="signedOut">יצאת</string>
   <string name="loginSuccessful">נכנסת</string>
   <string name="playOnTheBoardOffline">מעל הלוח</string>

@@ -559,7 +559,7 @@ masuk %3$s</string>
   <string name="clock">Jam</string>
   <string name="unauthorizedError">Akses tidak sah.</string>
   <string name="noInternetConnection">Tak ada koneksi internet. Anda masih bisa bermain offline dari menu.</string>
-  <string name="connectedToLichess">Anda telah terhubung ke lichess.org</string>
+  <string name="connectedToLichess">Anda telah terhubung ke Chess-Online.Com</string>
   <string name="signedOut">Anda baru saja keluar</string>
   <string name="loginSuccessful">Anda sudah masuk</string>
   <string name="playOnTheBoardOffline">Di atas papan</string>

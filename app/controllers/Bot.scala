@@ -70,6 +70,6 @@ object Bot extends LilaController {
     }
 
   private def WithBot(me: lila.user.User)(f: => Fu[Result]) =
-    if (!me.isBot) BadRequest(jsonError("This endpoint only works for bot accounts. See https://lichess.org/api#operation/botAccountUpgrade")).fuccess
+    if (!me.isBot) BadRequest(jsonError("This endpoint only works for bot accounts. See https://live.chess-online.com/api#operation/botAccountUpgrade")).fuccess
     else f
 }

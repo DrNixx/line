@@ -29,7 +29,7 @@ object UrlList {
 
     case class StudyId(value: String) extends AnyVal
 
-    private val UrlRegex = """(?:lichess\.org)/study/(\w{8})""".r.unanchored
+    private val UrlRegex = """(?:live\.chess-online\.com)/study/(\w{8})""".r.unanchored
 
     def apply(text: String): List[StudyId] =
       text.lines.toList.map(_.trim).filter(_.nonEmpty) flatMap toId take max

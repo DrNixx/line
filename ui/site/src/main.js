@@ -12,6 +12,35 @@ lichess.topMenuIntent = function() {
   $.ajaxSetup({
     cache: false
   });
+  $.ajaxTransport('script', function(s) {
+    // Monkeypatch jQuery to load scripts with nonce. Upstream patch:
+    // - https://github.com/jquery/jquery/pull/3766
+    // - https://github.com/jquery/jquery/pull/3782
+    // Original transport:
+    // https://github.com/jquery/jquery/blob/master/src/ajax/script.js
+    var script, callback;
+    return {
+      send: function(_, complete) {
+        script = $("<script>").prop({
+          nonce: document.body.getAttribute('data-nonce'), // Add the nonce!
+          charset: s.scriptCharset,
+          src: s.url
+        }).on("load error", callback = function(evt) {
+          script.remove();
+          callback = null;
+          if (evt) {
+            complete(evt.type === "error" ? 404 : 200, evt.type);
+          }
+        });
+        document.head.appendChild(script[0]);
+      },
+      abort: function() {
+        if (callback) {
+          callback();
+        }
+      }
+    };
+  });
   $.userLink = function(u) {
     return $.userLinkLimit(u, false);
   };
@@ -68,7 +97,7 @@ lichess.topMenuIntent = function() {
             '</div>');
           setTimeout(function() {
             $('#deploy_done').fadeOut(1000).remove();
-          }, $('body').hasClass('playing') ? 8000 : 13000);
+          }, $('body').hasClass('playing') ? 9000 : 15000);
         });
       },
       tournamentReminder: function(data) {
@@ -92,7 +121,8 @@ lichess.topMenuIntent = function() {
     params: {},
     options: {
       name: "site",
-      lagTag: null
+      lagTag: null,
+      isAuth: !!$('body').data('user')
     }
   });
 
@@ -102,8 +132,8 @@ lichess.topMenuIntent = function() {
 
   lichess.userAutocomplete = function($input, opts) {
     opts = opts || {};
-    lichess.loadCss('/assets/stylesheets/autocomplete.css');
-    return lichess.loadScript('/assets/javascripts/vendor/typeahead.jquery.min.js', {noVersion:true}).done(function() {
+    lichess.loadCss('stylesheets/autocomplete.css');
+    return lichess.loadScript('javascripts/vendor/typeahead.jquery.min.js', {noVersion:true}).done(function() {
       $input.typeahead(null, {
         minLength: opts.minLength || 3,
         hint: true,
@@ -133,7 +163,7 @@ lichess.topMenuIntent = function() {
           pending: lichess.spinnerHtml,
           suggestion: function(o) {
             var tag = opts.tag || 'a';
-            return '<' + tag + ' class="ulpt user_link' + (o.online ? ' online' : '') + '" ' + (tag === 'a' ? '' : 'data-') + 'href="/@/' + o.id + '">' +
+            return '<' + tag + ' class="ulpt user_link' + (o.online ? ' online' : '') + '" ' + (tag === 'a' ? '' : 'data-') + 'href="/@/' + o.name + '">' +
             '<i class="line' + (o.patron ? ' patron' : '') + '"></i>' + (o.title ? o.title + ' ' : '') + o.name +
             '</' + tag + '>';
           }
@@ -195,6 +225,10 @@ lichess.topMenuIntent = function() {
     // delay so round starts first (just for perceived perf)
     lichess.requestIdleCallback(function() {
 
+      $('#reconnecting').on('click', function() {
+        window.location.reload();
+      });
+
       $('#friend_box').friends();
 
       $('#lichess').on('click', '.autoselect', function() {
@@ -247,14 +281,17 @@ lichess.topMenuIntent = function() {
 
       document.body.addEventListener('mouseover', lichess.powertip.mouseover);
 
-      function setTimeago() {
+      function renderTimeago() {
         lichess.raf(function() {
-          lichess.timeago.render(document.getElementsByClassName('timeago'));
+          lichess.timeago.render([].slice.call(document.getElementsByClassName('timeago'), 0, 99));
         });
       }
-      setTimeago();
-      lichess.pubsub.on('content_loaded', setTimeago);
-      setInterval(setTimeago, 2000);
+      function setTimeago(interval) {
+        renderTimeago();
+        setTimeout(function() { setTimeago(interval * 1.1); }, interval);
+      }
+      setTimeago(1200);
+      lichess.pubsub.on('content_loaded', renderTimeago);
 
       if ($('body').hasClass('blind_mode')) {
         var setBlindMode = function() {
@@ -267,8 +304,10 @@ lichess.topMenuIntent = function() {
       }
 
       if (!window.customWS) setTimeout(function() {
-        if (lichess.socket === null) lichess.socket = lichess.StrongSocket("/socket", false);
+        if (lichess.socket === null) lichess.socket = lichess.StrongSocket("/socket/v4", false);
       }, 300);
+
+      var initiatingHtml = '<div class="initiating">' + lichess.spinnerHtml + '</div>';
 
       lichess.challengeApp = (function() {
         var instance, booted;
@@ -281,8 +320,8 @@ lichess.topMenuIntent = function() {
           booted = true;
           var $el = $('#challenge_app').html(lichess.initiatingHtml);
           var isDev = $('body').data('dev');
-          lichess.loadCss('/assets/stylesheets/challengeApp.css');
-          lichess.loadScript("/assets/compiled/lichess.challenge" + (isDev ? '' : '.min') + '.js').done(function() {
+          lichess.loadCss('stylesheets/challengeApp.css');
+          lichess.loadScript('compiled/lichess.challenge' + (isDev ? '' : '.min') + '.js').done(function() {
             instance = LichessChallenge.default($el[0], {
               data: data,
               show: function() {
@@ -318,10 +357,10 @@ lichess.topMenuIntent = function() {
         var load = function(data, incoming) {
           if (booted) return;
           booted = true;
-          var $el = $('#notify_app').html(lichess.initiatingHtml);
+          var $el = $('#notify_app').html(initiatingHtml);
           var isDev = $('body').data('dev');
-          lichess.loadCss('/assets/stylesheets/notifyApp.css');
-          lichess.loadScript("/assets/compiled/lichess.notify" + (isDev ? '' : '.min') + '.js').done(function() {
+          lichess.loadCss('stylesheets/notifyApp.css');
+          lichess.loadScript('compiled/lichess.notify' + (isDev ? '' : '.min') + '.js').done(function() {
             instance = LichessNotify.default($el.empty()[0], {
               data: data,
               incoming: incoming,
@@ -418,11 +457,11 @@ lichess.topMenuIntent = function() {
         $('#top .dasher .toggle').one('mouseover click', function() {
           if (booted) return;
           booted = true;
-          var $el = $('#dasher_app').html(lichess.initiatingHtml);
+          var $el = $('#dasher_app').html(initiatingHtml);
           var isDev = $('body').data('dev');
           var isPlaying = $('body').hasClass('playing');
-          lichess.loadCss('/assets/stylesheets/dasherApp.css');
-          lichess.loadScript("/assets/compiled/lichess.dasher" + (isDev ? '' : '.min') + '.js').done(function() {
+          lichess.loadCss('stylesheets/dasherApp.css');
+          lichess.loadScript('compiled/lichess.dasher' + (isDev ? '' : '.min') + '.js').done(function() {
             instance = LichessDasher.default($el.empty()[0], {
               setZoom: setZoom,
               playing: isPlaying
@@ -439,8 +478,8 @@ lichess.topMenuIntent = function() {
         var boot = function() {
           if (booted) return;
           booted = true;
-          lichess.loadCss('/assets/stylesheets/cli.css');
-          lichess.loadScript("/assets/compiled/lichess.cli" + ($('body').data('dev') ? '' : '.min') + '.js').done(function() {
+          lichess.loadCss('stylesheets/cli.css');
+          lichess.loadScript('compiled/lichess.cli' + ($('body').data('dev') ? '' : '.min') + '.js').done(function() {
             LichessCli.app($wrap, toggle);
           });
         }
@@ -475,7 +514,7 @@ lichess.topMenuIntent = function() {
           var $scroller = $(this).infinitescroll({
             navSelector: ".pager",
             nextSelector: ".pager a",
-            itemSelector: ".infinitescroll .paginated_element",
+            itemSelector: ".infinitescroll .paginated",
             errorCallback: function() {
               $("#infscr-loading").remove();
             },
@@ -486,7 +525,7 @@ lichess.topMenuIntent = function() {
             $("#infscr-loading").remove();
             lichess.pubsub.emit('content_loaded')();
             var ids = [];
-            $(el).find('.paginated_element[data-dedup]').each(function() {
+            $(el).find('.paginated[data-dedup]').each(function() {
               var id = $(this).data('dedup');
               if (id) {
                 if (lichess.fp.contains(ids, id)) $(this).remove();
@@ -536,8 +575,7 @@ lichess.topMenuIntent = function() {
       });
 
       // minimal touchscreen support for topmenu
-      if ('ontouchstart' in window)
-      $('#topmenu').on('click', 'section > a', function() {
+      if ('ontouchstart' in window) $('#topmenu').on('click', 'section > a', function() {
         return false;
       });
 
@@ -549,7 +587,7 @@ lichess.topMenuIntent = function() {
               .attr('action', '/login?referrer=' + window.location.pathname);
           }));
         }
-        lichess.loadCss('/assets/stylesheets/fpmenu.css');
+        lichess.loadCss('stylesheets/fpmenu.css');
       }).click(function() {
         document.body.classList.toggle('fpmenu');
       });
@@ -634,7 +672,7 @@ lichess.topMenuIntent = function() {
         };
         set = 'standard';
       }
-      var baseUrl = lichess.assetUrl('/assets/sound', {noVersion:true});
+      var baseUrl = lichess.assetUrl('sound', {noVersion: true});
       return new Howl({
         src: ['ogg', 'mp3'].map(function(ext) {
           return [baseUrl, set, names[k] + '.' + ext].join('/');
@@ -709,125 +747,104 @@ lichess.topMenuIntent = function() {
   });
 
   lichess.widget("friends", (function() {
-    var isSameUser = function(userId, user) {
-      return user.id === userId;
+    var getId = function(titleName) {
+      return titleName.toLowerCase().replace(/^\w+\s/, '');
+    };
+    var makeUser = function(titleName) {
+      var split = titleName.split(' ');
+      return {
+        id: split[split.length - 1].toLowerCase(),
+        name: split[split.length - 1],
+        title: (split.length > 1) ? split[0] : undefined,
+        playing: false,
+        studying: false,
+        patron: false
+      };
+    };
+    var renderUser = function(user) {
+      var icon = '<i class="is-green line' + (user.patron ? ' patron' : '') + '"></i>';
+      var titleTag = user.title ? ('<span class="title"' + (user.title === 'BOT' ? ' data-bot' : '') + '>' + user.title + '</span>&nbsp;') : '';
+      var url = '/@/' + user.name;
+      var tvButton = user.playing ? '<a data-icon="1" class="tv is-green ulpt" data-pt-pos="nw" href="' + url + '/tv" data-href="' + url + '"></a>' : '';
+      var studyButton = user.studying ? '<a data-icon="4" class="is-green friend-study" href="' + url + '/studyTv"></a>' : '';
+      var rightButton = tvButton || studyButton;
+      return '<div><a class="user_link ulpt" data-pt-pos="nw" href="' + url + '">' + icon + titleTag + user.name + '</a>' + rightButton + '</div>';
     };
     return {
       _create: function() {
-        var self = this,
-          el = self.element;
+        var self = this;
+        var el = self.element;
+
         var hideStorage = lichess.storage.make('friends-hide');
-        self.$list = el.find("div.list");
-        var $title = el.find('.title').click(function() {
+        var $friendBoxTitle = el.find('.friend_box_title').click(function() {
           var show = hideStorage.get() == 1;
           el.find('.content_wrap').toggleNone(show);
           if (show) hideStorage.remove();
           else hideStorage.set(1);
         });
         if (hideStorage.get() == 1) el.find('.content_wrap').addClass('none');
-        self.$nbOnline = $title.find('.online');
+
+        self.$nbOnline = $friendBoxTitle.find('.online');
         self.$nobody = el.find(".nobody");
 
-        var users = el.data('preload').toString().split(','),
-          playings = el.data('playing').toString().split(','),
-          studyings = el.data('studying').toString().split(','),
-          patrons = el.data('patrons').toString().split(',');
-        self.set(users, playings, studyings, patrons);
-      },
-      _findById: function(id) {
-        return this.users.filter(function(u) {
-          return isSameUser(id, u);
-        })[0];
-      },
-      _makeUser: function(us, playing, studying, patron) {
-        var inp = us.split('/');
-        return {
-          'id': inp[0],
-          'name': inp[1],
-          'playing': !!playing,
-          'studying': !!studying,
-          'patron': !!patron
-        }
-      },
-      _uniqueUsers: function(users) {
-        var usersEncountered = [];
-        return users.filter(function(u) {
-          if (usersEncountered.indexOf(u.id) !== -1) {
-            return false;
-          } else {
-            usersEncountered.push(u.id);
-            return true;
-          }
-        })
+        function dataList(name) { return el.data(name) ? el.data(name).split(',') : []; }
+        self.set(
+          dataList('preload'),
+          dataList('playing'),
+          dataList('studying'),
+          dataList('patrons'));
       },
       repaint: function() {
         lichess.raf(function() {
-          this.users = this._uniqueUsers(this.users.filter(function(u) {
-            return u.id !== '';
-          }));
-          this.$nbOnline.text(this.users.length);
-          this.$nobody.toggleNone(!this.users.length);
-          this.$list.html(this.users.sort(function(a, b) {
-            return a.name.toLowerCase() < b.name.toLowerCase() ? -1 : 1;
-          }).map(this._renderUser).join(""));
+          var ids = Object.keys(this.users).sort();
+          this.$nbOnline.text(ids.length);
+          this.$nobody.toggleNone(!ids.length);
+          this.element.find('div.list').replaceWith(
+            $('<div class="content list"></div>').append(ids.map(function(id) {
+              return renderUser(this.users[id]);
+            }.bind(this)))
+          );
         }.bind(this));
       },
-      set: function(us, playings, studyings, patrons) {
-        this.users = us.map(function(user) {
-          return this._makeUser(user, false, false, false);
-        }.bind(this));
-        for (i in playings) this._setPlaying(playings[i], true);
-        for (i in studyings) this._setStudying(studyings[i], true);
-        for (i in patrons) this._setPatron(patrons[i], true);
+      insert: function(titleName) {
+        var id = getId(titleName);
+        if (!this.users[id]) this.users[id] = makeUser(titleName);
+        return this.users[id];
+      },
+      set: function(online, playing, studying, patrons) {
+        this.users = {};
+        for (i in online) this.insert(online[i]);
+        for (i in playing) this.insert(playing[i]).playing = true;
+        for (i in studying) this.insert(studying[i]).studying = true;
+        for (i in patrons) this.insert(patrons[i]).patron = true;
         this.repaint();
       },
-      enters: function(userName, playing, studying, patron) {
-        var user = this._makeUser(userName, playing, studying, patron);
-        this.users.push(user);
+      enters: function(titleName, playing, studying, patron) {
+        var user = this.insert(titleName);
+        user.playing = playing;
+        user.studying = studying;
+        user.patron = patron;
         this.repaint();
       },
-      leaves: function(userId) {
-        this.users = this.users.filter(function(u) {
-          return u.id != userId
-        });
+      leaves: function(titleName) {
+        delete this.users[getId(titleName)];
         this.repaint();
       },
-      _setPlaying: function(userId, playing) {
-        var user = this._findById(userId);
-        if (user) user.playing = playing;
-      },
-      _setPatron: function(userId, patron) {
-        var user = this._findById(userId);
-        if (user) user.patron = patron;
-      },
-      _setStudying: function(userId, studying) {
-        var user = this._findById(userId);
-        if (user) user.studying = studying;
-      },
-      playing: function(userId) {
-        this._setPlaying(userId, true);
+      playing: function(titleName) {
+        this.insert(titleName).playing = true;
         this.repaint();
       },
-      stopped_playing: function(userId) {
-        this._setPlaying(userId, false);
+      stopped_playing: function(titleName) {
+        this.insert(titleName).playing = false;
         this.repaint();
       },
-      study_join: function(userId) {
-        this._setStudying(userId, true);
+      study_join: function(titleName) {
+        this.insert(titleName).studying = true;
         this.repaint();
       },
-      study_leave: function(userId) {
-        this._setStudying(userId, false);
+      study_leave: function(titleName) {
+        this.insert(titleName).studying = false;
         this.repaint();
-      },
-      _renderUser: function(user) {
-        var icon = '<i class="is-green line' + (user.patron ? ' patron' : '') + '"></i>';
-        var url = '/@/' + user.id;
-        var tvButton = user.playing ? '<a data-icon="1" class="tv is-green ulpt" data-pt-pos="nw" href="' + url + '/tv" data-href="' + url + '"></a>' : '';
-        var studyButton = user.studying ? '<a data-icon="4" class="is-green friend-study" href="' + url + '/studyTv"></a>' : '';
-        var rightButton = tvButton || studyButton;
-
-        return '<div><a class="user_link ulpt" data-pt-pos="nw" href="' + url + '">' + icon + user.name + '</a>' + rightButton + '</div>';
       }
     };
   })());
@@ -891,7 +908,7 @@ lichess.topMenuIntent = function() {
 
     lichess.requestIdleCallback(function() {
       lichess.parseFen();
-      $('div.checkmateCaptcha').each(function() {
+      $('div.captcha').each(function() {
         var $captcha = $(this);
         var $board = $captcha.find('.mini_board');
         var $input = $captcha.find('input').val('');
@@ -949,7 +966,7 @@ lichess.topMenuIntent = function() {
     var $watchers = $("div.watchers").watchers();
     var tournament;
     lichess.socket = lichess.StrongSocket(
-      '/tournament/' + cfg.data.id + '/socket/v2', cfg.data.socketVersion, {
+      '/tournament/' + cfg.data.id + '/socket/v4', cfg.data.socketVersion, {
         receive: function(t, d) {
           return tournament.socketReceive(t, d);
         },
@@ -995,7 +1012,7 @@ lichess.topMenuIntent = function() {
     var $watchers = $("div.watchers").watchers();
     var simul;
     lichess.socket = lichess.StrongSocket(
-      '/simul/' + cfg.data.id + '/socket/v2', cfg.socketVersion, {
+      '/simul/' + cfg.data.id + '/socket/v4', cfg.socketVersion, {
         receive: function(t, d) {
           simul.socketReceive(t, d);
         },
@@ -1022,7 +1039,7 @@ lichess.topMenuIntent = function() {
     cfg.initialPly = 'url';
     cfg.element = element.querySelector('.analyse');
     cfg.trans = lichess.trans(cfg.i18n);
-    lichess.socket = lichess.StrongSocket('/analysis/socket', false, {
+    lichess.socket = lichess.StrongSocket('/analysis/socket/v4', false, {
       options: {
         name: "analyse"
       },
@@ -1079,7 +1096,7 @@ lichess.topMenuIntent = function() {
     cfg.element = element.querySelector('.analyse');
     cfg.sideElement = document.querySelector('#site_header .side_box');
     cfg.trans = lichess.trans(cfg.i18n);
-    lichess.socket = lichess.StrongSocket('/analysis/socket', false, {
+    lichess.socket = lichess.StrongSocket('/analysis/socket/v4', false, {
       options: {
         name: "practice"
       },
@@ -1135,7 +1152,7 @@ lichess.topMenuIntent = function() {
     var puzzle;
     cfg.element = document.querySelector('#puzzle');
     cfg.sideElement = document.querySelector('#site_header .puzzle_side');
-    lichess.socket = lichess.StrongSocket('/socket', false, {
+    lichess.socket = lichess.StrongSocket('/socket/v4', false, {
       options: {
         name: "puzzle"
       },

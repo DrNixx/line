@@ -604,7 +604,7 @@ em %3$s</string>
   <string name="clock">Relógio</string>
   <string name="unauthorizedError">Acesso negado</string>
   <string name="noInternetConnection">Sem conectividade. Você ainda pode jogar offline a partir do menu.</string>
-  <string name="connectedToLichess">Você está conectado a lichess.org</string>
+  <string name="connectedToLichess">Você está conectado a Chess-Online.Com</string>
   <string name="signedOut">Você fez logoff</string>
   <string name="loginSuccessful">Login efetuado</string>
   <string name="playOnTheBoardOffline">Jogar offline contra um amigo</string>
@@ -650,7 +650,7 @@ em %3$s</string>
   <string name="webmasters">Webmasters</string>
   <string name="about">Sobre</string>
   <string name="aboutX">Sobre</string>
-  <string name="xIsAFreeYLibreOpenSourceChessServer">lichess.org é gratuito é realmente livre, sem anúncios, servidor de xadrez de código aberto.</string>
+  <string name="xIsAFreeYLibreOpenSourceChessServer">Chess-Online.Com é gratuito é realmente livre, sem anúncios, servidor de xadrez de código aberto.</string>
   <string name="really">realmente</string>
   <string name="contribute">Contribuir</string>
   <string name="contact">Contato</string>

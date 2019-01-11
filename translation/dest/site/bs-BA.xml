@@ -551,7 +551,7 @@ u %3$s</string>
   <string name="clock">Sat</string>
   <string name="unauthorizedError">Pristup neodozvoljen.</string>
   <string name="noInternetConnection">Nedostupan internet. Možete i dalje igrati vanmrežno preko menija.</string>
-  <string name="connectedToLichess">Spojeni ste na lichess.org</string>
+  <string name="connectedToLichess">Spojeni ste na Chess-Online.Com</string>
   <string name="signedOut">Odjavljeni ste</string>
   <string name="loginSuccessful">Prijavljeni ste</string>
   <string name="playOnTheBoardOffline">Igraj u dvoje</string>

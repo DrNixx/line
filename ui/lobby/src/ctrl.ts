@@ -64,7 +64,9 @@ export default class LobbyController {
 
     this.startWatching();
 
-    if (this.playban) setTimeout(li.reload, this.playban.remainingSeconds * 1000);
+    if (this.playban) {
+      if (this.playban.remainingSecond < 86400) setTimeout(li.reload, this.playban.remainingSeconds * 1000);
+    }
     else {
       setInterval(() => {
         if (this.poolMember) this.poolIn();
@@ -201,15 +203,11 @@ export default class LobbyController {
   };
 
   private startWatching() {
-    const newIds = this.data.nowPlaying.map(function(p) {
-      return p.gameId;
-    }).filter((id: string) => {
-      return this.alreadyWatching.indexOf(id) === -1;
-    });
+    const newIds = this.data.nowPlaying
+      .map(p => p.gameId)
+      .filter(id => this.alreadyWatching.indexOf(id) === -1);
     if (newIds.length) {
-      setTimeout(() => {
-        this.socket.send("startWatching", newIds.join(' '));
-      }, 2000);
+      setTimeout(() => this.socket.send("startWatching", newIds.join(' ')), 2000);
       newIds.forEach(id => this.alreadyWatching.push(id));
     }
   };

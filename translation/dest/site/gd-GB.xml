@@ -356,7 +356,7 @@
   <string name="computer">Coimpiutair</string>
   <string name="side">Taobh</string>
   <string name="clock">Uaireadair</string>
-  <string name="connectedToLichess">Tha thu ceangailte ri lichess.org a-nis</string>
+  <string name="connectedToLichess">Tha thu ceangailte ri Chess-Online.Com a-nis</string>
   <string name="signedOut">Chaidh do chlàradh a-mach</string>
   <string name="loginSuccessful">Chaidh do chlàradh a-steach</string>
   <string name="playOfflineComputer">Coimpiutair</string>

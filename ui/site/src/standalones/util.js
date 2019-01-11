@@ -287,8 +287,8 @@ lichess.desktopNotification = (function() {
     if (document.hasFocus() || now - storage.get() < 1000) return;
     storage.set(now);
     if ($.isFunction(msg)) msg = msg();
-    var notification = new Notification('lichess.org', {
-      icon: '//lichess1.org/assets/images/logo.256.png',
+    var notification = new Notification('live.chess-online.com', {
+      icon: '//live.chess-online.com/assets/images/logo.256.png',
       body: msg
     });
     notification.onclick = function() {

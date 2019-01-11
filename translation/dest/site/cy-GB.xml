@@ -479,7 +479,7 @@
   <string name="clock">Cloc</string>
   <string name="unauthorizedError">Dim mynediad.</string>
   <string name="noInternetConnection">Dim cysylltiad i\'r rhyngrwyd. Gellwch chwarae all-lein o\'r ddewislen.</string>
-  <string name="connectedToLichess">Rydych â chysylltiad â lichess.org rwan</string>
+  <string name="connectedToLichess">Rydych â chysylltiad â Chess-Online.Com rwan</string>
   <string name="signedOut">Allgofnodioch</string>
   <string name="loginSuccessful">Mewngofnodioch</string>
   <string name="playOnTheBoardOffline">Dros y bwrdd</string>

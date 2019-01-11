@@ -77,7 +77,7 @@ object contact {
         Leaf("forgot-username", "I forgot my username", frag(
           p(
             "You can ",
-            a(href := routes.Auth.login)("login"),
+            a(href := routes.Auth.oidcLogin)("login"),
             " with the email address you signed up with."
           )
         )),
@@ -86,8 +86,8 @@ object contact {
           p("If you can't reach lichess, and your browser says something like:"),
           ul(
             li("This site can't be reached."),
-            li(strong("lichess.org"), "’s server IP address could not be found."),
-            li("We can’t connect to the server at lichess.org.")
+            li(strong("Chess-Online"), "’s server IP address could not be found."),
+            li("We can’t connect to the server at live.chess-online.com.")
           ),
           p("Then you have a ", strong("DNS issue"), "."),
           p(

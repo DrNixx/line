@@ -488,7 +488,7 @@ kompiuterinę analizę, partijos pokalbį bei URL dalinimuisi.</string>
   <string name="clock">Laikrodis</string>
   <string name="unauthorizedError">Priėjimas neautorizuotas.</string>
   <string name="noInternetConnection">Nėra interneto ryšio. Pasirinkę per meniu galite žaisti be interneto.</string>
-  <string name="connectedToLichess">Prisijungėte prie lichess.org</string>
+  <string name="connectedToLichess">Prisijungėte prie Chess-Online.Com</string>
   <string name="signedOut">Atsijungėte</string>
   <string name="loginSuccessful">Prisijungėte</string>
   <string name="playOnTheBoardOffline">Dviese</string>

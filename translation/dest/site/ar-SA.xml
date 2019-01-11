@@ -718,7 +718,7 @@
   <string name="clock">الوقت</string>
   <string name="unauthorizedError">الوصول غير مصرح به.</string>
   <string name="noInternetConnection">لايوجد اتصال بالإنترنت. لا يزال يمكنك اللعب دون اتصال من القائمة.</string>
-  <string name="connectedToLichess">أنت الآن متصل بـ lichess.org</string>
+  <string name="connectedToLichess">أنت الآن متصل بـ Chess-Online.Com</string>
   <string name="signedOut">تم تسجيل الخروج.</string>
   <string name="loginSuccessful">تم الدخول بنجاح</string>
   <string name="playOnTheBoardOffline">على الرقعة</string>

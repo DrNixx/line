@@ -37,7 +37,7 @@ final class SelfReport(
       // }
       def doLog = if (name != "ceval") {
         lila.log("cheat").branch("jslog").info(
-          s"$ip https://lichess.org/$fullId ${user.fold("anon")(_.id)} $name"
+          s"$ip https://live.chess-online.com/$fullId ${user.fold("anon")(_.id)} $name"
         )
         user.filter(recent.isNew(_, fullId)) ?? { u =>
           slackApi.selfReport(

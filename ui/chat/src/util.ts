@@ -1,7 +1,8 @@
 import { h } from 'snabbdom'
 import { VNode } from 'snabbdom/vnode'
 
-export function userLink(u: string) {
+export function userLink(u: string, title?: string) {
+  const spaced = u.substring(0, 14) + ' ';
   const split = u.split(' ');
   return h('a', {
     // can't be inlined because of thunks
@@ -12,7 +13,12 @@ export function userLink(u: string) {
     attrs: {
       href: '/@/' + split[split.length === 1 ? 0 : 1]
     }
-  }, u.substring(0, 14) + " ");
+  }, title ? [
+    h(
+      'span.title',
+      title == 'BOT' ? { attrs: {'data-bot': true } } : {},
+      title), spaced
+  ] : [spaced]);
 }
 
 export function spinner() {

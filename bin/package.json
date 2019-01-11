@@ -1,7 +1,7 @@
 {
   "name": "lila",
   "version": "1.0.0",
-  "description": "Maintenance scripts for lichess.org",
+  "description": "Maintenance scripts for live.chess-online.com",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

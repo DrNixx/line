@@ -602,7 +602,7 @@
   <string name="clock">Klok</string>
   <string name="unauthorizedError">Toegang geweigerd</string>
   <string name="noInternetConnection">Geen internetverbinding. U kan nog wel offline spelen vanuit het menu.</string>
-  <string name="connectedToLichess">U bent nu verbonden met lichess.org</string>
+  <string name="connectedToLichess">U bent nu verbonden met Chess-Online.Com</string>
   <string name="signedOut">U bent uitgelogd</string>
   <string name="loginSuccessful">Inloggen succesvol</string>
   <string name="playOnTheBoardOffline">Speel offline</string>

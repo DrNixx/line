@@ -602,7 +602,7 @@
   <string name="clock">Klocka</string>
   <string name="unauthorizedError">Tillgång är oauktoriserad</string>
   <string name="noInternetConnection">Ingen internet förbindelse. Du kan spela offline från menyn.</string>
-  <string name="connectedToLichess">Du är nu ansluten till lichess.org</string>
+  <string name="connectedToLichess">Du är nu ansluten till Chess-Online.Com</string>
   <string name="signedOut">Du har loggat ut</string>
   <string name="loginSuccessful">Lyckad inloggning</string>
   <string name="playOnTheBoardOffline">Spela offline, över bräden</string>

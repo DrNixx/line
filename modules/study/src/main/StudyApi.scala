@@ -125,7 +125,7 @@ final class StudyApi(
             newChapters.map(chapterRepo.insert).sequenceFu >>- {
               chat ! lila.chat.actorApi.SystemTalk(
                 Chat.Id(study.id.value),
-                s"Cloned from lichess.org/study/${prev.id}"
+                s"Cloned from live.chess-online.com/study/${prev.id}"
               )
             } inject study.some
         }

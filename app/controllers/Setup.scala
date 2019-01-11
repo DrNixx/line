@@ -47,7 +47,7 @@ object Setup extends LilaController with TheftPrevention {
     if (HTTPRequest isXhr ctx.req)
       env.forms friendFilled get("fen").map(FEN) flatMap { form =>
         val validFen = form("fen").value flatMap ValidFen(false)
-        userId ?? UserRepo.named flatMap {
+        userId ?? UserRepo.byId flatMap {
           case None => Ok(html.setup.forms.friend(form, none, none, validFen)).fuccess
           case Some(user) => Env.challenge.granter(ctx.me, user, none) map {
             case Some(denied) => BadRequest(lila.challenge.ChallengeDenied.translated(denied))

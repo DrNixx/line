@@ -486,7 +486,7 @@
   <string name="clock">Tími</string>
   <string name="unauthorizedError">Aðgangur óheimill</string>
   <string name="noInternetConnection">Engin tenging. Þú getur enn spilað ótengdur.</string>
-  <string name="connectedToLichess">Þú ert tengd(ur) við lichess.org</string>
+  <string name="connectedToLichess">Þú ert tengd(ur) við Chess-Online.Com</string>
   <string name="signedOut">Þú ert útskráður</string>
   <string name="loginSuccessful">Þú ert innskráður</string>
   <string name="playOnTheBoardOffline">Yfir borðið</string>

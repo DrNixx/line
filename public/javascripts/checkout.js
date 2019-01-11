@@ -90,7 +90,7 @@ lichess.checkout = function(publicKey) {
 
   var stripeHandler = StripeCheckout.configure({
     key: publicKey,
-    name: 'lichess.org',
+    name: 'live.chess-online.com',
     image: 'https://s3.amazonaws.com/stripe-uploads/acct_18J612Fj1uHKxNqMmerchant-icon-1465200826114-logo.512.png',
     locale: 'auto',
     allowRememberMe: false,

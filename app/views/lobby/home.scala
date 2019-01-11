@@ -32,7 +32,7 @@ object home {
     nbRounds: Int
   )(implicit ctx: Context) = views.html.base.layout(
     title = "",
-    fullTitle = Some("lichess.org • " + trans.freeOnlineChess.txt()),
+    fullTitle = Some("Chess-Online Arena • " + trans.freeOnlineChess.txt()),
     baseline = Some(frag(
       a(id := "nb_connected_players", href := routes.User.list)(trans.nbPlayers(nbPlayersPlaceholder)),
       a(id := "nb_games_in_play", href := routes.Tv.games)(
@@ -63,7 +63,7 @@ object home {
         div(cls := "about-side")(
           trans.xIsAFreeYLibreOpenSourceChessServer.frag("Lichess", a(cls := "blue", href := routes.Plan.features)(trans.really.txt())),
           " ",
-          a(cls := "blue", href := "/about")(trans.aboutX("lichess.org"), "...")
+          a(cls := "blue", href := "/about")(trans.aboutX("Chess-Online Arena"), "...")
         )
       }
     )),
@@ -155,7 +155,7 @@ object home {
             span(trans.playChessInStyle())
           )
         ),
-        div(cls := "about-footer")(a(href := "/about")(trans.aboutX("lichess.org")))
+        div(cls := "about-footer")(a(href := "/about")(trans.aboutX("Chess-Online Arena")))
       )
     }
 

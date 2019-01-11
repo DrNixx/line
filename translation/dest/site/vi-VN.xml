@@ -573,7 +573,7 @@ trong %3$s</string>
   <string name="clock">Đồng hồ</string>
   <string name="unauthorizedError">Không được quyền truy cập</string>
   <string name="noInternetConnection">Không có nối mạng. Bạn vẫn có thể chơi ngoại tuyến từ bảng chọn.</string>
-  <string name="connectedToLichess">Bây giờ bạn đã kết nối với lichess.org</string>
+  <string name="connectedToLichess">Bây giờ bạn đã kết nối với Chess-Online.Com</string>
   <string name="signedOut">Bạn đã đăng xuất.</string>
   <string name="loginSuccessful">Bây gió bạn đã đăng nhập thành công</string>
   <string name="playOnTheBoardOffline">Chơi ngoại tuyến, trên bàn cờ.</string>

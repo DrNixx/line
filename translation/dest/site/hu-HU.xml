@@ -602,7 +602,7 @@
   <string name="clock">Óra</string>
   <string name="unauthorizedError">Hozzáférés megtagadva.</string>
   <string name="noInternetConnection">Nincs internetkapcsolat. Offline módban tudsz játszani.</string>
-  <string name="connectedToLichess">Csatlakoztál a lichess.org-hoz</string>
+  <string name="connectedToLichess">Csatlakoztál a Chess-Online.Com-hoz</string>
   <string name="signedOut">Kijelentkeztél</string>
   <string name="loginSuccessful">Bejelentkeztél</string>
   <string name="playOnTheBoardOffline">Játék élőben</string>

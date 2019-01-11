@@ -604,7 +604,7 @@
   <string name="clock">ঘড়ি</string>
   <string name="unauthorizedError">অধিগমন অননুমোদিত করা হয়েছে.</string>
   <string name="noInternetConnection">ইন্টারনেট সংযোগ নেই. অবশ্যই আপনি ইন্টারনেট সংযোগ ছাড়া মেনু থেকে খেলতে পারবেন.</string>
-  <string name="connectedToLichess">এখন আপনি সংযুক্ত হয়েছেন lichess.org</string>
+  <string name="connectedToLichess">এখন আপনি সংযুক্ত হয়েছেন Chess-Online.Com</string>
   <string name="signedOut">আপনি সাইন আউট হয়েছেন</string>
   <string name="loginSuccessful">আপনি এখন সাইন ইন হয়েছেন</string>
   <string name="playOnTheBoardOffline">বোর্ডের উপরে</string>

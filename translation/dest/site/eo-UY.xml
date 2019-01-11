@@ -587,7 +587,7 @@
   <string name="clock">Horloĝo</string>
   <string name="unauthorizedError">Aliro estas malpermesata.</string>
   <string name="noInternetConnection">Neniu interreta konekto. Vi ja povas ludi malkonektite de la menuo.</string>
-  <string name="connectedToLichess">Vi nun estas konektita al lichess.org</string>
+  <string name="connectedToLichess">Vi nun estas konektita al Chess-Online.Com</string>
   <string name="signedOut">Vi elsalutis</string>
   <string name="loginSuccessful">Vi ĵus ensalutis</string>
   <string name="playOnTheBoardOffline">Ludi fizike kun aliulo</string>

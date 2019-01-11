@@ -466,7 +466,7 @@
   <string name="clock">ժամացույց</string>
   <string name="unauthorizedError">Մուտքն արգելված է։</string>
   <string name="noInternetConnection">Չկա ինտերնետ կապ : Դուք կարող եք խաղալ օֆլայն</string>
-  <string name="connectedToLichess">Դուք նորից միացաք lichess.org կայքին</string>
+  <string name="connectedToLichess">Դուք նորից միացաք Chess-Online.Com կայքին</string>
   <string name="signedOut">Դուք հաջողությամբ դուրս եկաք ձեր էջից</string>
   <string name="loginSuccessful">Դուք հաջողությամբ մուտք գործեցիք ձեր էջ</string>
   <string name="playOfflineComputer">Համակարգիչ</string>

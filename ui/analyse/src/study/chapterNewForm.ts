@@ -152,7 +152,7 @@ export function view(ctrl): VNode {
           hook: {
             insert: vnode => {
               $.when(
-                window.lichess.loadScript('/assets/compiled/lichess.editor.min.js'),
+                window.lichess.loadScript('compiled/lichess.editor.min.js'),
                 $.get('/editor.json', {
                   fen: ctrl.root.node.fen
                 })
@@ -178,7 +178,7 @@ export function view(ctrl): VNode {
           }),
           h('label.control-label', {
             attrs: { 'for': 'chapter-game' }
-          }, 'Load a game from lichess.org or chessgames.com'),
+          }, 'Load a game from Chess-Online.Com or chessgames.com'),
           h('i.bar')
         ]) : null,
         activeTab === 'fen' ? h('div.form-group.no-label', [
@@ -192,9 +192,24 @@ export function view(ctrl): VNode {
         ]) : null,
         activeTab === 'pgn' ? h('div.form-group.no-label', [
           h('textarea#chapter-pgn', {
-            attrs: { placeholder: 'Paste your PGN here, up to ' + ctrl.multiPgnMax + ' games' }
+            attrs: { placeholder: 'Paste your PGN text here, up to ' + ctrl.multiPgnMax + ' games' }
           }),
-          h('i.bar')
+          h('i.bar'),
+          window.FileReader ? h('input#chapter-pgn-file', {
+            attrs: {
+              type: 'file',
+              accept: '.pgn'
+            },
+            hook: bind('change', e => {
+              const file = (e.target as HTMLInputElement).files![0];
+              if (!file) return;
+              const reader = new FileReader();
+              reader.onload = function() {
+                (document.getElementById('chapter-pgn') as HTMLTextAreaElement).value = reader.result as string;
+              };
+              reader.readAsText(file);
+            })
+          }) : null
         ]) : null,
         h('div', [
           h('div.form-group.half.little-margin-bottom', [

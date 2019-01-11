@@ -51,7 +51,7 @@ private object DisposableEmailDomain {
   def whitelisted(domain: Domain) = whitelist contains domain.value
 
   private val staticBlacklist = Set(
-    "lichess.org",
+    "chess-online.com",
     "gamil.com",
     "mybx.site", "mywrld.top", "wemel.top", "matra.top", "dripbank.com", "yopmail.xxi2.com",
     "4bi.email-temp.com", "forevernew.in", "sss.pp.ua", "ttempm.com"

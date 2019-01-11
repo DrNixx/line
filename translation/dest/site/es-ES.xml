@@ -602,7 +602,7 @@
   <string name="clock">Reloj</string>
   <string name="unauthorizedError">Acceso no autorizado.</string>
   <string name="noInternetConnection">No hay conexión a Internet. Puede jugar sin conexión desde el menú.</string>
-  <string name="connectedToLichess">Estás conectado a lichess.org</string>
+  <string name="connectedToLichess">Estás conectado a Chess-Online.Com</string>
   <string name="signedOut">Has cerrado la sesión</string>
   <string name="loginSuccessful">Conectado</string>
   <string name="playOnTheBoardOffline">Jugar sin conexión</string>

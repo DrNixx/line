@@ -602,7 +602,7 @@
   <string name="clock">Saat</string>
   <string name="unauthorizedError">Yetkisiz erişim.</string>
   <string name="noInternetConnection">İnternet bağlantısı yok. Hâlâ menüden çevrimdışı oynayabilirsiniz.</string>
-  <string name="connectedToLichess">Şimdi lichess.org\'a bağlandınız</string>
+  <string name="connectedToLichess">Şimdi Chess-Online.Com\'a bağlandınız</string>
   <string name="signedOut">Zaten çıkmışsınız.</string>
   <string name="loginSuccessful">Giriş başarılı</string>
   <string name="playOnTheBoardOffline">Tahta üzerinde çevrimdışı oyna</string>

@@ -59,18 +59,18 @@ object Mailgun {
   object txt {
 
     def serviceNote(implicit lang: Lang) = s"""
-${trans.common_note.literalHtmlTo(lang, List("https://lichess.org"))}
+${trans.common_note.literalHtmlTo(lang, List("https://live.chess-online.com"))}
 
-${trans.common_contact.literalHtmlTo(lang, List("https://lichess.org/contact"))}"""
+${trans.common_contact.literalHtmlTo(lang, List("https://live.chess-online.com/contact"))}"""
   }
 
   object html {
 
     val noteLink = Html {
-      """<a itemprop="url" href="https://lichess.org/"><span itemprop="name">lichess.org</span></a>"""
+      """<a itemprop="url" href="https://live.chess-online.com/"><span itemprop="name">Chess-Online.Com</span></a>"""
     }
     val noteContact = Html {
-      """<a itemprop="url" href="https://lichess.org/contact"><span itemprop="name">lichess.org/contact</span></a>"""
+      """<a itemprop="url" href="https://live.chess-online.com/contact"><span itemprop="name">live.chess-online.com/contact</span></a>"""
     }
 
     def serviceNote(implicit lang: Lang) = s"""

@@ -661,7 +661,7 @@ v %3$s</string>
   <string name="clock">Čas</string>
   <string name="unauthorizedError">Přístup není autorizovaný.</string>
   <string name="noInternetConnection">Bez internetového připojení. Je možné hrát offline z menu.</string>
-  <string name="connectedToLichess">Nyní jste připojeni do lichess.org</string>
+  <string name="connectedToLichess">Nyní jste připojeni do Chess-Online.Com</string>
   <string name="signedOut">Byli jste odhlášeni.</string>
   <string name="loginSuccessful">Přihlášení úspěšné</string>
   <string name="playOnTheBoardOffline">Hrej offline, na šachovnici počítače.</string>

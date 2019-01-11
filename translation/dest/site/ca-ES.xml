@@ -577,7 +577,7 @@ en %3$s</string>
   <string name="clock">Rellotge</string>
   <string name="unauthorizedError">Accés no autoritzat.</string>
   <string name="noInternetConnection">Sense connexió a internet. Pots seguir jugar offline des del menú.</string>
-  <string name="connectedToLichess">Ara estàs connectat a lichess.org</string>
+  <string name="connectedToLichess">Ara estàs connectat a Chess-Online.Com</string>
   <string name="signedOut">Has tancat la sessió</string>
   <string name="loginSuccessful">Ara ja estàs registrat</string>
   <string name="playOnTheBoardOffline">Juga offline, sobre el tauler</string>

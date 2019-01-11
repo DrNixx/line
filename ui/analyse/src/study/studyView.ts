@@ -10,6 +10,7 @@ import * as glyphForm from './studyGlyph';
 import { view as inviteFormView } from './inviteForm';
 import { view as studyFormView } from './studyForm';
 import { view as studyShareView } from './studyShare';
+import { view as multiBoardView } from './multiBoard';
 import { view as notifView } from './notif';
 import { view as tagsView } from './studyTags';
 import { view as serverEvalView } from './serverEval';
@@ -96,9 +97,15 @@ function buttons(root: AnalyseCtrl): VNode {
       }),
       toolButton({
         ctrl,
+        tab: 'multiBoard',
+        hint: 'Multiboard',
+        icon: iconTag('')
+      }),
+      toolButton({
+        ctrl,
         tab: 'share',
         hint: 'Share & export',
-        icon: iconTag('z')
+        icon: iconTag('$')
       })
     ]),
     gbOverrideButton(ctrl) || helpButton(ctrl)
@@ -221,6 +228,9 @@ export function underboard(ctrl: AnalyseCtrl): MaybeVNodes {
       break;
     case 'share':
       panel = studyShareView(study.share);
+      break;
+    case 'multiBoard':
+      panel = multiBoardView(study.multiBoard, study);
       break;
   }
   return [

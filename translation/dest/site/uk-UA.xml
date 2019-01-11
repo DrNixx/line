@@ -554,7 +554,7 @@
   <string name="clock">Годинник</string>
   <string name="unauthorizedError">Доступ не надано.</string>
   <string name="noInternetConnection">Немає зв\'язку з Інтернетом. Ви можете грати оффлайн через меню.</string>
-  <string name="connectedToLichess">Ви з\'єднані з lichess.org</string>
+  <string name="connectedToLichess">Ви з\'єднані з Chess-Online.Com</string>
   <string name="signedOut">Ви вийшли.</string>
   <string name="loginSuccessful">Вхід у систему успішно здійснений</string>
   <string name="playOnTheBoardOffline">Грайте оффлайн на ґаджеті</string>
