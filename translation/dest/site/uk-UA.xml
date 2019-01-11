@@ -76,6 +76,18 @@
   <string name="recentGames">Останні ігри</string>
   <string name="topGames">Кращі ігри</string>
   <string name="masterDbExplanation">Два мільйони OTB ігор %1$s+ FIDE гравців рейтингу від %2$s до %3$s</string>
+  <plurals name="mateInXHalfMoves">
+    <item quantity="one">Мат в %s полуходів</item>
+    <item quantity="few">Мат в %s полуходів</item>
+    <item quantity="many">Мат в %s полуходів</item>
+    <item quantity="other">Мат у %s напівходів</item>
+  </plurals>
+  <plurals name="nextCaptureOrPawnMoveInXHalfMoves">
+    <item quantity="one">Наступне взяття або хід пішаком у %s напівуход (Відстань до обнулення лічильника 50 ходів)</item>
+    <item quantity="few">Наступне взяття або хід пішаком у %s напівходів (Відстань до обнулення лічильника 50 ходів)</item>
+    <item quantity="many">Наступне взяття або хід пішаком у %s півход. (Відстань до обнулення лічильн. 50 ходів)</item>
+    <item quantity="other">Наступне взяття або хід пішаком у %s півход. (Відстань до обнулення лічильн. 50 ходів)</item>
+  </plurals>
   <string name="noGameFound">Ігор не знайдено</string>
   <string name="maybeIncludeMoreGamesFromThePreferencesMenu">Може, варто включити більше ігор з вкладки переваг?</string>
   <string name="openingExplorer">Перегляд дебютів</string>
@@ -110,11 +122,29 @@
   <string name="claimADraw">Оголосити нічию</string>
   <string name="offerDraw">Запропонувати нічию</string>
   <string name="draw">Нічия</string>
+  <plurals name="nbPlayers">
+    <item quantity="one">%s гравців</item>
+    <item quantity="few">%s гравців</item>
+    <item quantity="many">%s гравців</item>
+    <item quantity="other">%s гравців</item>
+  </plurals>
   <string name="currentGames">Поточні партії</string>
+  <plurals name="nbGames">
+    <item quantity="one">%s ігра</item>
+    <item quantity="few">%s ігра</item>
+    <item quantity="many">%s гра</item>
+    <item quantity="other">%s гра</item>
+  </plurals>
+  <plurals name="nbBookmarks">
+    <item quantity="one">%s Закладка</item>
+    <item quantity="few">%s Закладка</item>
+    <item quantity="many">%s Закладка</item>
+    <item quantity="other">%s Закладка</item>
+  </plurals>
   <string name="viewInFullSize">Дивитися в повний розмір</string>
   <string name="logOut">Вийти</string>
   <string name="signIn">Увійти</string>
-  <string name="newToLichess">Уперше на Chess-Online?</string>
+  <string name="newToLichess">Уперше на Lichess?</string>
   <string name="youNeedAnAccountToDoThat">Для цього вам потрібен обліковий запис</string>
   <string name="signUp">Зареєструватися</string>
   <string name="computersAreNotAllowedToPlay">Заборонено грати, користуючись підказками шахових програм та безпосередньо програмами. Будь ласка, не послуговуйтеся під час гри допомогою програм (\"рушіїв\"), баз даних або інших гравців. Також зверніть увагу, що створення декількох облікових записів не заохочується і використання надмірної кількості облікових записів призведе до блокування.</string>
@@ -131,6 +161,18 @@
   <string name="correspondence">Переписка</string>
   <string name="daysPerTurn">Днів на хід</string>
   <string name="oneDay">Один день</string>
+  <plurals name="nbDays">
+    <item quantity="one">%s день</item>
+    <item quantity="few">%s день</item>
+    <item quantity="many">%s день</item>
+    <item quantity="other">%s день</item>
+  </plurals>
+  <plurals name="nbHours">
+    <item quantity="one">%s година</item>
+    <item quantity="few">%s година</item>
+    <item quantity="many">%s година</item>
+    <item quantity="other">%s година</item>
+  </plurals>
   <string name="time">Час</string>
   <string name="rating">Рейтинґ</string>
   <string name="ratingStats">Розподіл за рейтинґом</string>
@@ -146,7 +188,19 @@
   <string name="rank">Ранг</string>
   <string name="rankX">Рейтинг: %s</string>
   <string name="rankIsUpdatedEveryXMinutes">Рейтинг оновлюється кожні %s хвилин</string>
+  <plurals name="nbPuzzles">
+    <item quantity="one">%s пазл</item>
+    <item quantity="few">%s пазлів</item>
+    <item quantity="many">%s пазлів</item>
+    <item quantity="other">%s пазлів</item>
+  </plurals>
   <string name="gamesPlayed">Партій зіграно</string>
+  <plurals name="nbGamesWithYou">
+    <item quantity="one">%s партія з вами</item>
+    <item quantity="few">%s партія з вами</item>
+    <item quantity="many">%s партія з вами</item>
+    <item quantity="other">%s партія з вами</item>
+  </plurals>
   <string name="cancel">Скасувати</string>
   <string name="timeOut">Збіг час</string>
   <string name="drawOfferSent">Запит на нічию надіслано</string>
@@ -196,6 +250,18 @@
   <string name="incrementInSeconds">Приріст на хід у секундах</string>
   <string name="freeOnlineChess">Безкоштовні Інтернет-шахи</string>
   <string name="spectators">Глядачі:</string>
+  <plurals name="nbRated">
+    <item quantity="one">%s рейтингова</item>
+    <item quantity="few">%s рейтингова</item>
+    <item quantity="many">%s рейтингова</item>
+    <item quantity="other">%s за рейтингом</item>
+  </plurals>
+  <plurals name="nbWins">
+    <item quantity="one">%s перемога</item>
+    <item quantity="few">%s перемога</item>
+    <item quantity="many">%s перемога</item>
+    <item quantity="other">%s виграно</item>
+  </plurals>
   <string name="exportGames">Експорт ігор</string>
   <string name="ratingRange">Діапазон рейтинґу</string>
   <string name="giveMoreTime">Додати часу</string>
@@ -224,6 +290,8 @@
   <string name="yourPerfRatingIsTooLow">Ваш рейтинг %1$s (%2$s) дуже низький</string>
   <string name="ratedMoreThanInPerf">Рейтинг ≥ %1$s в %2$s</string>
   <string name="ratedLessThanInPerf">Рейтинг ≤ %1$s в %2$s</string>
+  <string name="mustBeInTeam">Ви повинні бути членом клубу %s</string>
+  <string name="youAreNotInTeam">Ви не є членом клубу %s</string>
   <string name="backToGame">Повернутися до гри</string>
   <string name="siteDescription">Безкоштовні Інтернет-шахи. Грайте в шахи зараз із чистим інтерфейсом. Без реєстрації, без реклами, без додаткових програм. Грайте в шахи з комп\'ютером, друзями або випадковими суперниками.</string>
   <string name="teams">Команди</string>
@@ -340,8 +408,8 @@
   <string name="country">Країна</string>
   <string name="preferences">Налаштування</string>
   <string name="inlineNotation">Вбудована нотація</string>
-  <string name="watchLichessTV">Дивитися Chess-Online ТБ</string>
-  <string name="previouslyOnLichessTV">Попередні трансляції на Chess-Online ТБ</string>
+  <string name="watchLichessTV">Дивитися Lichess ТБ</string>
+  <string name="previouslyOnLichessTV">Попередні трансляції на Lichess ТБ</string>
   <string name="onlinePlayers">Гравці онлайн</string>
   <string name="activeToday">Активність сьогодні</string>
   <string name="activePlayers">Активні гравці</string>
@@ -351,7 +419,7 @@
   <string name="findTheBestMoveForWhite">Знайдіть найкращий хід за білих.</string>
   <string name="findTheBestMoveForBlack">Знайдіть найкращий хід за чорних.</string>
   <string name="toTrackYourProgress">Стежити за своїм прогресом:</string>
-  <string name="trainingSignupExplanation">Chess-Online буде пропонувати вам задачі, відповідні до вашого рівня, для кращого тренування.</string>
+  <string name="trainingSignupExplanation">Lichess буде пропонувати вам задачі, відповідні до вашого рівня, для кращого тренування.</string>
   <string name="puzzleId">Задача %s</string>
   <string name="puzzleOfTheDay">Задача дня</string>
   <string name="clickToSolve">Натисніть, щоби розпочати</string>
@@ -363,7 +431,7 @@
   <string name="butYouCanKeepTrying">Але ви можете продовжувати</string>
   <string name="success">Успіх</string>
   <string name="wasThisPuzzleAnyGood">Чи сподобалася вам ця задача?</string>
-  <string name="pleaseVotePuzzle">Допоможіть Chess-Online зробитися кращими, натиснувши на одну зі стрілок:</string>
+  <string name="pleaseVotePuzzle">Допоможіть Lichess зробитися кращими, натиснувши на одну зі стрілок:</string>
   <string name="thankYou">Дякуємо!</string>
   <string name="ratingX">Рівень: %s</string>
   <string name="fromGameLink">Вилучено з гри %s</string>
@@ -400,6 +468,7 @@
   <string name="troll">Надокучливість</string>
   <string name="other">Інше</string>
   <string name="reportDescriptionHelp">Вставте посилання на гру (ігри) та поясніть, що не так із поведінкою цього користувача.</string>
+  <string name="error.provideOneCheatedGameLink">Будь ласка, додайте посилання хоча б на одну гру, де на вашу думку були порушені правила.</string>
   <string name="by">від %s</string>
   <string name="thisTopicIsNowClosed">Наразі цю тему завершено.</string>
   <string name="theming">Вигляд</string>
@@ -417,6 +486,7 @@
   <string name="thisAccountIsClosed">Цей обліковий запис закрито.</string>
   <string name="invalidUsernameOrPassword">Недійсне ім\'я користувача або пароль</string>
   <string name="incorrectPassword">Невірний пароль</string>
+  <string name="invalidAuthenticationCode">Недійсний код автентифікації</string>
   <string name="emailMeALink">Надішліть мені посилання</string>
   <string name="currentPassword">Поточний пароль</string>
   <string name="newPassword">Новий пароль</string>
@@ -473,7 +543,6 @@
   <string name="xVsYinZ">%1$s проти %2$s
 в %3$s</string>
   <string name="timeline">Смуга подій</string>
-  <string name="seeAllTournaments">Дивитися усі турніри</string>
   <string name="starting">Початок:</string>
   <string name="allInformationIsPublicAndOptional">Уся інформація публічна та необов\'язкова.</string>
   <string name="yourCityRegionOrDepartment">Ваше місто, область або район.</string>
@@ -485,7 +554,7 @@
   <string name="clock">Годинник</string>
   <string name="unauthorizedError">Доступ не надано.</string>
   <string name="noInternetConnection">Немає зв\'язку з Інтернетом. Ви можете грати оффлайн через меню.</string>
-  <string name="connectedToLichess">Ви з\'єднані з live.chess-online.com</string>
+  <string name="connectedToLichess">Ви з\'єднані з lichess.org</string>
   <string name="signedOut">Ви вийшли.</string>
   <string name="loginSuccessful">Вхід у систему успішно здійснений</string>
   <string name="playOnTheBoardOffline">Грайте оффлайн на ґаджеті</string>
@@ -526,6 +595,9 @@
   <string name="mobileApp">Мобільний додаток</string>
   <string name="webmasters">Розробникам</string>
   <string name="about">Про сайт</string>
+  <string name="aboutX">Про %s</string>
+  <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s є безкоштовним (%2$s), шаховим сервером з відкритим кодом без реклами.</string>
+  <string name="really">дійсно</string>
   <string name="contribute">Допомога проекту</string>
   <string name="contact">Контакти</string>
   <string name="termsOfService">Умови користування</string>
@@ -549,7 +621,7 @@
   <string name="simulClockHint">Налаштування Фішера. Більша кількість учасників – більше часу для сеансера.</string>
   <string name="simulAddExtraTime">Ви можете додати собі час, щоб упоратися з сеансом.</string>
   <string name="simulHostExtraTime">Додатковий час для сеансера</string>
-  <string name="lichessTournaments">Турніри Chess-Online</string>
+  <string name="lichessTournaments">Турніри Lichess</string>
   <string name="tournamentFAQ">FAQ сторінки турнірів</string>
   <string name="tournamentOfficial">Офіційні</string>
   <string name="timeBeforeTournamentStarts">Час до початку турніру</string>
@@ -605,7 +677,7 @@
   <string name="alternativelyYouCanX">Крім того, Ви можете %s.</string>
   <string name="revokeAllSessions">завершити усі сеанси</string>
   <string name="playChessEverywhere">Грайте в шахи будь-де</string>
-  <string name="asFreeAsLichess">Вільний як Chess-Online</string>
+  <string name="asFreeAsLichess">Вільний як Lichess</string>
   <string name="builtForTheLoveOfChessNotMoney">Створений з любов\'ю до шахів, не до грошей</string>
   <string name="everybodyGetsAllFeaturesForFree">Повна функціональність безкоштовно</string>
   <string name="zeroAdvertisement">Без реклами</string>
@@ -641,7 +713,7 @@
   <string name="usernameSuffixInvalid">Ім\'я користувача має закінчуватися буквою або цифрою.</string>
   <string name="usernameCharsInvalid">Ім\'я користувача має містити тільки літери, цифри, символи підкреслення і тире.</string>
   <string name="usernameUnacceptable">Неприйнятне ім\'я користувача.</string>
-  <string name="directlySupportLichess">Підтримує Chess-Online</string>
+  <string name="directlySupportLichess">Підтримує Lichess</string>
   <string name="playChessInStyle">В шаховому стилі</string>
   <string name="chessBasics">Шахові основи</string>
   <string name="coaches">Тренери</string>

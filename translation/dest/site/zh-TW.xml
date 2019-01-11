@@ -405,7 +405,6 @@
   <string name="xCommentedY">%1$s 评论 %2$s</string>
   <string name="victory">成功！</string>
   <string name="timeline">时间线</string>
-  <string name="seeAllTournaments">显示所有比赛</string>
   <string name="starting">开始时间：</string>
   <string name="allInformationIsPublicAndOptional">所有资料公开选填。</string>
   <string name="yourCityRegionOrDepartment">您的城市、区域或省份。</string>
@@ -422,7 +421,7 @@
   <string name="clock">钟</string>
   <string name="unauthorizedError">无权访问。</string>
   <string name="noInternetConnection">无网络。您仍然可以从菜单栏离线对弈。</string>
-  <string name="connectedToLichess">您已接入live.chess-online.com</string>
+  <string name="connectedToLichess">您已接入lichess.org</string>
   <string name="signedOut">您已登出</string>
   <string name="loginSuccessful">您已登录</string>
   <string name="playOnTheBoardOffline">面对面</string>

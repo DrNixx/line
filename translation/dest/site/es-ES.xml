@@ -56,8 +56,8 @@
   <string name="showThreat">Mostrar amenaza</string>
   <string name="inLocalBrowser">en el navegador local</string>
   <string name="toggleLocalEvaluation">Evaluación local</string>
-  <string name="promoteVariation">Promover variante</string>
-  <string name="makeMainLine">Hacer la línea principal</string>
+  <string name="promoteVariation">Promocionar variante</string>
+  <string name="makeMainLine">Convertir en línea principal</string>
   <string name="deleteFromHere">Borrar a partir de aquí</string>
   <string name="move">Movimiento</string>
   <string name="variantLoss">Variante perdedora</string>
@@ -134,7 +134,7 @@
   <string name="viewInFullSize">Ver en tamaño completo</string>
   <string name="logOut">Cerrar sesión</string>
   <string name="signIn">Iniciar sesión</string>
-  <string name="newToLichess">¿Nuevo en Chess-Online?</string>
+  <string name="newToLichess">¿Nuevo en Lichess?</string>
   <string name="youNeedAnAccountToDoThat">Necesitas crear una cuenta para hacer eso</string>
   <string name="signUp">Registrarse</string>
   <string name="computersAreNotAllowedToPlay">No está permitido jugar a ordenadores ni a jugadores ayudados por un ordenador o por otras personas. Por favor, no te ayudes de motores de ajedrez, bases de datos o de otros jugadores durante la partida. Además, ten en cuenta que no se aconseja la utilización de varias cuentas de usuario y que el uso de un excesivo número de cuentas resultará en la cancelación de las mismas.</string>
@@ -197,7 +197,7 @@
   <string name="accept">Aceptar</string>
   <string name="decline">Rechazar</string>
   <string name="playingRightNow">Jugando ahora</string>
-  <string name="eventInProgress">Jugando ahora</string>
+  <string name="eventInProgress">Se está jugando ahora</string>
   <string name="finished">Terminado</string>
   <string name="abortGame">Cancelar partida</string>
   <string name="gameAborted">Partida cancelada</string>
@@ -206,7 +206,7 @@
   <string name="mode">Modo</string>
   <string name="casual">Amistosa</string>
   <string name="rated">Por puntos</string>
-  <string name="casualTournament">Amistoso</string>
+  <string name="casualTournament">Amistosa</string>
   <string name="ratedTournament">Por puntos</string>
   <string name="thisGameIsRated">Esta partida es por puntos</string>
   <string name="rematch">Revancha</string>
@@ -304,6 +304,8 @@
   <string name="yourPerfRatingIsTooLow">Tu puntuación de %1$s (%2$s) es demasiado baja</string>
   <string name="ratedMoreThanInPerf">Puntuación ≥ %1$s en %2$s</string>
   <string name="ratedLessThanInPerf">Puntuación ≤ %1$s en %2$s</string>
+  <string name="mustBeInTeam">Debes ser del equipo %s</string>
+  <string name="youAreNotInTeam">No estás en el equipo %s</string>
   <string name="backToGame">Volver a la partida</string>
   <string name="siteDescription">Servidor de ajedrez en línea gratuito. Juega al ajedrez en una interfaz simple. Sin registro, sin publicidad, sin necesidad de complementos. Juega contra el ordenador, amigos u oponentes desconocidos.</string>
   <string name="teams">Equipos</string>
@@ -386,14 +388,14 @@
   <string name="winner">Ganador</string>
   <string name="standing">Posición</string>
   <string name="createANewTournament">Crear un nuevo torneo</string>
-  <string name="tournamentCalendar">Calendario del torneo</string>
-  <string name="conditionOfEntry">Condiciones de entrada:</string>
+  <string name="tournamentCalendar">Calendario de torneos</string>
+  <string name="conditionOfEntry">Requisito de entrada:</string>
   <string name="advancedSettings">Configuración avanzada</string>
   <string name="safeTournamentName">Escoge un nombre muy seguro para el torneo.</string>
-  <string name="inappropriateNameWarning">Cualquier comportamiento inapropiado podría conllevar al cierre de su cuenta.</string>
-  <string name="emptyTournamentName">Deje en blanco para nombrar el torneo con un Gran Maestro al azar.</string>
+  <string name="inappropriateNameWarning">Cualquier comportamiento mínimamente inapropiado podría conllevar al cierre de tu cuenta.</string>
+  <string name="emptyTournamentName">Déjalo en blanco para poner al torneo el nombre de un Gran Maestro al azar.</string>
   <string name="recommendNotTouching">Se recomienda dejar como está.</string>
-  <string name="fewerPlayers">Si establece condiciones de entrada, el torneo tendrá menos jugadores.</string>
+  <string name="fewerPlayers">Si impones condiciones de entrada, el torneo tendrá menos jugadores.</string>
   <string name="showAdvancedSettings">Mostrar configuración avanzada</string>
   <string name="join">Unirse</string>
   <string name="withdraw">Abandonar</string>
@@ -439,8 +441,8 @@
   <string name="country">País</string>
   <string name="preferences">Preferencias</string>
   <string name="inlineNotation">Notación compacta</string>
-  <string name="watchLichessTV">Ver Chess TV</string>
-  <string name="previouslyOnLichessTV">Anteriormente en Chess TV</string>
+  <string name="watchLichessTV">Ver Lichess TV</string>
+  <string name="previouslyOnLichessTV">Anteriormente en Lichess TV</string>
   <string name="onlinePlayers">Jugadores en línea</string>
   <string name="activeToday">Activos hoy</string>
   <string name="activePlayers">Jugadores activos</string>
@@ -450,7 +452,7 @@
   <string name="findTheBestMoveForWhite">Encuentra el mejor movimiento para las blancas.</string>
   <string name="findTheBestMoveForBlack">Encuentra el mejor movimiento para las negras.</string>
   <string name="toTrackYourProgress">Para hacer un seguimiento de tu progreso:</string>
-  <string name="trainingSignupExplanation">Chess-Online te proporcionará ejercicios adaptados a tu habilidad para optimizar tus sesiones de entrenamiento.</string>
+  <string name="trainingSignupExplanation">Lichess te proporcionará ejercicios adaptados a tu habilidad para optimizar tus sesiones de entrenamiento.</string>
   <string name="puzzleId">Ejercicio %s</string>
   <string name="puzzleOfTheDay">Ejercicio del día</string>
   <string name="clickToSolve">Clic para resolver</string>
@@ -507,6 +509,7 @@
   <string name="troll">Acoso</string>
   <string name="other">Otro</string>
   <string name="reportDescriptionHelp">Pega el enlace a la(s) partida(s) y explícanos qué hay de malo en el comportamiento de este usuario. No digas simplemente \"hace trampa\"; explícanos cómo has llegado a esta conclusión. Tu informe será procesado más rápido si está escrito en inglés.</string>
+  <string name="error.provideOneCheatedGameLink">Por favor, proporciona al menos un enlace a una partida en la que se hicieron trampas.</string>
   <string name="by">por %s</string>
   <string name="thisTopicIsNowClosed">Este tema está cerrado.</string>
   <string name="theming">Apariencia</string>
@@ -524,6 +527,7 @@
   <string name="thisAccountIsClosed">Esta cuenta está cerrada.</string>
   <string name="invalidUsernameOrPassword">Nombre de usuario o contraseña erróneo</string>
   <string name="incorrectPassword">Contraseña incorrecta</string>
+  <string name="invalidAuthenticationCode">Código de autenticación inválido</string>
   <string name="emailMeALink">Envíame un enlace por correo electrónico</string>
   <string name="currentPassword">Contraseña actual</string>
   <string name="newPassword">Nueva contraseña</string>
@@ -579,7 +583,6 @@
   <string name="defeat">Derrota</string>
   <string name="xVsYinZ">%1$s contra %2$s en %3$s</string>
   <string name="timeline">Cronología</string>
-  <string name="seeAllTournaments">Ver todos los torneos</string>
   <string name="starting">Comienzo:</string>
   <string name="allInformationIsPublicAndOptional">Toda la información es pública y opcional.</string>
   <string name="yourCityRegionOrDepartment">Tu ciudad, región o provincia.</string>
@@ -599,7 +602,7 @@
   <string name="clock">Reloj</string>
   <string name="unauthorizedError">Acceso no autorizado.</string>
   <string name="noInternetConnection">No hay conexión a Internet. Puede jugar sin conexión desde el menú.</string>
-  <string name="connectedToLichess">Estás conectado a live.chess-online.com</string>
+  <string name="connectedToLichess">Estás conectado a lichess.org</string>
   <string name="signedOut">Has cerrado la sesión</string>
   <string name="loginSuccessful">Conectado</string>
   <string name="playOnTheBoardOffline">Jugar sin conexión</string>
@@ -644,6 +647,9 @@
   <string name="mobileApp">Aplicación para móviles</string>
   <string name="webmasters">Webmaster</string>
   <string name="about">Acerca de</string>
+  <string name="aboutX">Acerca de %s</string>
+  <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s es un servidor de ajedrez totalmente gratuito creado con código abierto, libre, sin publicidad.</string>
+  <string name="really">realmente</string>
   <string name="contribute">Contribuir</string>
   <string name="contact">Contacto</string>
   <string name="termsOfService">Condiciones de servicio</string>
@@ -658,7 +664,7 @@
   <string name="returnToSimulHomepage">Volver a la página de simultáneas</string>
   <string name="aboutSimul">En las simultáneas, un jugador se enfrenta a varios oponentes al mismo tiempo.</string>
   <string name="aboutSimulImage">De 50 oponentes, Fischer ganó 47 partidas, empató 2 y perdió 1.</string>
-  <string name="aboutSimulRealLife">El concepto de simultáneas en Chess-Online se toma de la vida real, donde el anfitrión va de mesa en mesa para hacer sus movimientos.</string>
+  <string name="aboutSimulRealLife">El concepto de simultáneas en Lichess se toma de la vida real, donde el anfitrión va de mesa en mesa para hacer sus movimientos.</string>
   <string name="aboutSimulRules">Cuando la simultánea empieza, cada jugador comienza una partida con el anfitrión, que juega con blancas. La simultánea termina cuando terminan todas las partidas.</string>
   <string name="aboutSimulSettings">Las simultáneas son siempre partidas amistosas. Las opciones de petición de revancha, deshacer jugada y agregar tiempo están deshabilitadas.</string>
   <string name="create">Crear</string>
@@ -667,7 +673,7 @@
   <string name="simulClockHint">Configuración de reloj Fischer. Cuantos más oponentes, más tiempo se necesita.</string>
   <string name="simulAddExtraTime">Puedes añadir tiempo adicional a tu reloj para ayudarte en la simultánea.</string>
   <string name="simulHostExtraTime">Tiempo extra del anfitrión</string>
-  <string name="lichessTournaments">Torneos de Chess-Online</string>
+  <string name="lichessTournaments">Torneos de Lichess</string>
   <string name="tournamentFAQ">Preguntas frecuentes de los torneos</string>
   <string name="tournamentOfficial">Oficial</string>
   <string name="timeBeforeTournamentStarts">El torneo comenzará dentro de</string>
@@ -698,7 +704,7 @@
   <string name="weHaveSentYouAnEmailTo">Te hemos enviado un correo a %s. Restablece tu contraseña haciendo clic en el enlace.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Al registrarte, aceptas las %s.</string>
   <string name="networkLagBetweenYouAndLichess">Retardo de conexión entre tú y lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Tiempo para procesar un movimiento en el servidor de Chess-Online</string>
+  <string name="timeToProcessAMoveOnLichessServer">Tiempo para procesar un movimiento en el servidor de Lichess</string>
   <string name="downloadAnnotated">Descargar la partida anotada</string>
   <string name="downloadRaw">Descargar la partida sin anotar</string>
   <string name="downloadImported">Descargar la partida importada</string>
@@ -767,7 +773,7 @@
   <string name="usernameSuffixInvalid">El nombre de usuario debe finalizar con una letra o un número.</string>
   <string name="usernameCharsInvalid">El nombre de usuario debe contener sólo letras, números, guiones bajos y guiones.</string>
   <string name="usernameUnacceptable">Este nombre de usuario no es válido.</string>
-  <string name="directlySupportLichess">Apoyar económicamente a Chess-Online</string>
+  <string name="directlySupportLichess">Apoyar económicamente a Lichess</string>
   <string name="playChessInStyle">Jugar al ajedrez con estilo</string>
   <string name="chessBasics">Fundamentos de ajedrez</string>
   <string name="coaches">Entrenadores</string>
@@ -831,15 +837,15 @@
   <string name="youCannotChallengeX">No puedes desafiar a %s.</string>
   <string name="xDoesNotAcceptChallenges">%s no acepta desafíos.</string>
   <string name="yourXRatingIsTooFarFromY">Tu puntuación de %1$s está demasiado lejos de la de %2$s.</string>
-  <string name="cannotChallengeDueToProvisionalXRating">No puedes desafiar debido a tu elo provisional de %s.</string>
+  <string name="cannotChallengeDueToProvisionalXRating">No puedes desafiar debido a tu puntuación temporal de %s.</string>
   <string name="xOnlyAcceptsChallengesFromFriends">%s sólo acepta desafíos de sus amigos.</string>
   <string name="conditionalPremoves">Premovimientos condicionales</string>
   <string name="addCurrentVariation">Añadir la variante actual</string>
-  <string name="playVariationToCreateConditionalPremoves">Juega una variación para crear premovimientos condicionales</string>
+  <string name="playVariationToCreateConditionalPremoves">Juega una variante para crear movimientos condicionales</string>
   <string name="noConditionalPremoves">Sin movimientos anticipados condicionales</string>
   <string name="playX">Jugar %s</string>
   <plurals name="andSaveNbPremoveLines">
-    <item quantity="one">y almacene %s líneas de premovimientos</item>
-    <item quantity="other">y ahorra %s variantes de premovimientos</item>
+    <item quantity="one">y ahorra %s línea de premovimiento</item>
+    <item quantity="other">y ahorra %s líneas de premovimiento</item>
   </plurals>
 </resources>

@@ -324,6 +324,8 @@
   <string name="yourPerfRatingIsTooLow">Vaš %1$s rejting (%2$s) je prenizak</string>
   <string name="ratedMoreThanInPerf">%2$s rejting ≥ %1$s</string>
   <string name="ratedLessThanInPerf">Rangirano %1$s u %2$s</string>
+  <string name="mustBeInTeam">Moraš biti u timu %s</string>
+  <string name="youAreNotInTeam">Nisi u timu %s</string>
   <string name="backToGame">Natrag na partiju</string>
   <string name="siteDescription">Besplatni internetski šah. Igrajte odmah, u čistom sučelju. Bez registriranja, bez reklama, bez dodatnih preuzimanja. Igrajte šah protiv računala, prijatelja ili nasumičnih protivnika.</string>
   <string name="teams">Ekipe</string>
@@ -465,8 +467,8 @@ računalnu analizu, pričaonicu partije i URL za dijeljenje.</string>
   <string name="country">Zemlja</string>
   <string name="preferences">Postavke</string>
   <string name="inlineNotation">Kompaktnija notacija</string>
-  <string name="watchLichessTV">Gledaj Chess TV</string>
-  <string name="previouslyOnLichessTV">Prethodno na Chess TV-u</string>
+  <string name="watchLichessTV">Gledaj Lichess TV</string>
+  <string name="previouslyOnLichessTV">Prethodno na Lichess TV-u</string>
   <string name="onlinePlayers">Online igrači</string>
   <string name="activeToday">Danas aktivni</string>
   <string name="activePlayers">Aktivni igrači</string>
@@ -476,7 +478,7 @@ računalnu analizu, pričaonicu partije i URL za dijeljenje.</string>
   <string name="findTheBestMoveForWhite">Nađi najbolji potez za bijelog</string>
   <string name="findTheBestMoveForBlack">Nađi najbolji potez za crnog</string>
   <string name="toTrackYourProgress">Za praćenje napretka:</string>
-  <string name="trainingSignupExplanation">Chess-Online će pronaći probleme prema tvojim mogućnostima, radi boljeg treninga.</string>
+  <string name="trainingSignupExplanation">Lichess će pronaći probleme prema tvojim mogućnostima, radi boljeg treninga.</string>
   <string name="puzzleId">Problem %s</string>
   <string name="puzzleOfTheDay">Problem dana</string>
   <string name="clickToSolve">Klikni za rješavanje</string>
@@ -535,6 +537,7 @@ računalnu analizu, pričaonicu partije i URL za dijeljenje.</string>
   <string name="troll">Provokacija</string>
   <string name="other">Ostalo</string>
   <string name="reportDescriptionHelp">Zalijepi poveznicu na partiju/e u pitanju i objasni što nije u redu s ponašanjem korisnika. Nemoj samo reći \"varao je\", nego reci kako si došao/la do tog zaključka. Tvoja prijava bit će obrađena brže ako ju napišeš na engleskom jeziku.</string>
+  <string name="error.provideOneCheatedGameLink">Molimo navedite barem jedan link igre u kojoj je igrač varao.</string>
   <string name="by">od %s</string>
   <string name="thisTopicIsNowClosed">Ova tema je zatvorena.</string>
   <string name="theming">Izgled</string>
@@ -552,6 +555,7 @@ računalnu analizu, pričaonicu partije i URL za dijeljenje.</string>
   <string name="thisAccountIsClosed">Račun je zatvoren.</string>
   <string name="invalidUsernameOrPassword">Pogrešno korisničko ime ili lozinka</string>
   <string name="incorrectPassword">Netočna lozinka</string>
+  <string name="invalidAuthenticationCode">Nevažeći kod autentičnosti</string>
   <string name="emailMeALink">Pošalji mi email</string>
   <string name="currentPassword">Trenutna lozinka</string>
   <string name="newPassword">Nova lozinka</string>
@@ -608,7 +612,6 @@ računalnu analizu, pričaonicu partije i URL za dijeljenje.</string>
   <string name="xVsYinZ">%1$s protiv %2$s
 u %3$s</string>
   <string name="timeline">Vremenska crta</string>
-  <string name="seeAllTournaments">Vidi sve turnire</string>
   <string name="starting">Počinje:</string>
   <string name="allInformationIsPublicAndOptional">Sve informacije su javne i neobavezne.</string>
   <string name="yourCityRegionOrDepartment">Tvoj grad, regija ili pokrajina.</string>
@@ -630,7 +633,7 @@ u %3$s</string>
   <string name="clock">Sat</string>
   <string name="unauthorizedError">Pristup neodobren.</string>
   <string name="noInternetConnection">Nedostupna internetska veza. Možeš i dalje igrati bez internetske veze preko izbornika.</string>
-  <string name="connectedToLichess">Spojen/a si na live.chess-online.com</string>
+  <string name="connectedToLichess">Spojen/a si na lichess.org</string>
   <string name="signedOut">Odjavljen/a si</string>
   <string name="loginSuccessful">Prijavljen/a si</string>
   <string name="playOnTheBoardOffline">Igraj bez mreže, preko uređaja</string>
@@ -676,6 +679,9 @@ u %3$s</string>
   <string name="mobileApp">Mobilna aplikacija</string>
   <string name="webmasters">Webmasteri</string>
   <string name="about">O</string>
+  <string name="aboutX">Više o %s</string>
+  <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s je besplatni (%2$s) šah poslužitelj otvorenog koda i bez oglasa.</string>
+  <string name="really">više</string>
   <string name="contribute">Doprinesi</string>
   <string name="contact">Kontaktiraj</string>
   <string name="termsOfService">Uvjeti pružanja usluge</string>
@@ -699,7 +705,7 @@ u %3$s</string>
   <string name="simulClockHint">Fischer podešavanje sata. Što više igrača primiš, više vremena bit će ti potrebno.</string>
   <string name="simulAddExtraTime">Možeš dodati dodatno vrijeme na svoj sat da ti pomogne savladati simultanku.</string>
   <string name="simulHostExtraTime">Dodatno vrijeme domaćina</string>
-  <string name="lichessTournaments">Chess-Online turniri</string>
+  <string name="lichessTournaments">Lichess turniri</string>
   <string name="tournamentFAQ">Najčešće postavljana pitanja o Arena turnirima</string>
   <string name="tournamentOfficial">Službeno</string>
   <string name="timeBeforeTournamentStarts">Vrijeme prije nego turnir započne</string>
@@ -745,7 +751,7 @@ u %3$s</string>
   <string name="castleByMovingTheKingTwoSquaresOrOntoTheRook">Način igranja rokade</string>
   <string name="castleByMovingTwoSquares">Pomicanjem kralja za dva polja</string>
   <string name="castleByMovingOntoTheRook">Pomicanjem kralja na topa</string>
-  <string name="shareYourInsightsData">dijeli vaše osobne podatke</string>
+  <string name="shareYourInsightsData">Dijeli vaše osobne podatke</string>
   <string name="withNobody">Ni sa kime</string>
   <string name="withFriends">S prijateljima</string>
   <string name="withEverybody">Sa svima</string>
@@ -801,7 +807,7 @@ u %3$s</string>
   <string name="usernameSuffixInvalid">Korisničko ime mora završiti sa slovom ili brojem.</string>
   <string name="usernameCharsInvalid">Korisničko ime može sadržavati samo slova, brojeve, podvlake i crtice.</string>
   <string name="usernameUnacceptable">Ovo korisničko ime nije prihvatljivo.</string>
-  <string name="directlySupportLichess">Direktno podrži Chess-Online</string>
+  <string name="directlySupportLichess">Direktno podrži Lichess</string>
   <string name="playChessInStyle">Igraj šah u stilu</string>
   <string name="chessBasics">Šahovske osnove</string>
   <string name="coaches">Treneri</string>
@@ -857,7 +863,7 @@ u %3$s</string>
   <string name="advantage">Prednost</string>
   <plurals name="nbSeconds">
     <item quantity="one">%s sekundi</item>
-    <item quantity="few">%s sekunda</item>
+    <item quantity="few">%s sekundi</item>
     <item quantity="other">%s sekundi</item>
   </plurals>
   <string name="opening">Otvaranje</string>
@@ -871,7 +877,7 @@ u %3$s</string>
   <string name="xOnlyAcceptsChallengesFromFriends">%s samo prihvaća izazove od prijatelja.</string>
   <string name="conditionalPremoves">Uvjetni predpotezi</string>
   <string name="addCurrentVariation">Dodajte trenutnu varijantu</string>
-  <string name="playVariationToCreateConditionalPremoves">Odigraj varijantu da stvoriš predpotez</string>
+  <string name="playVariationToCreateConditionalPremoves">Odigraj varijantu da stvoriš uvjetni predpotez</string>
   <string name="noConditionalPremoves">Nema uvjetnih predpoteza</string>
   <string name="playX">Igraj %s</string>
   <plurals name="andSaveNbPremoveLines">

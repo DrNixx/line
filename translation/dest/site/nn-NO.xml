@@ -120,7 +120,7 @@
   <string name="draw">Remis</string>
   <plurals name="nbPlayers">
     <item quantity="one">Spelarar: %s</item>
-    <item quantity="other">Spelarar: %s</item>
+    <item quantity="other">%s spelarar</item>
   </plurals>
   <string name="currentGames">Parti som blir spelt nett no</string>
   <plurals name="nbGames">
@@ -134,7 +134,7 @@
   <string name="viewInFullSize">Sjå i full storleik</string>
   <string name="logOut">Logg ut</string>
   <string name="signIn">Logg inn</string>
-  <string name="newToLichess">Er du ny på Chess-Online?</string>
+  <string name="newToLichess">Er du ny på Lichess?</string>
   <string name="youNeedAnAccountToDoThat">For å gjera det treng du ein konto</string>
   <string name="signUp">Registrer deg</string>
   <string name="computersAreNotAllowedToPlay">Datamaskinar og spelarar som brukar sjakkprogram har ikkje lov til å spela. Ver venleg å ikkje ta i bruk hjelp frå sjakkprogram, databasar eller andre spelarar så lenge partiet er i gang. Merk at det vert sterkt frårådd å oppretta fleire kontoar. Oppretting av svært mange kontoar vil føra til utestenging.</string>
@@ -304,6 +304,8 @@
   <string name="yourPerfRatingIsTooLow">Ratinga di i %1$s (%2$s) er for låg</string>
   <string name="ratedMoreThanInPerf">Rata ≥ %1$s i %2$s</string>
   <string name="ratedLessThanInPerf">Rata ≤ %1$s i %2$s</string>
+  <string name="mustBeInTeam">Du må væra medlem av lag %s</string>
+  <string name="youAreNotInTeam">Du er ikkje med i lag %s</string>
   <string name="backToGame">Tilbake til partiet</string>
   <string name="siteDescription">Fritt tilgjengeleg nettsjakk. Spel sjakk på ei rein nettside utan registrering, reklame eller programtillegg. Spel sjakk mot datamaskin, vener eller tilfeldige motspelarar.</string>
   <string name="teams">Lag</string>
@@ -440,8 +442,8 @@ få en computeranalyse, chatte eller dele ein URL.</string>
   <string name="country">Land</string>
   <string name="preferences">Preferansar</string>
   <string name="inlineNotation">Innbygd notasjon</string>
-  <string name="watchLichessTV">Sjå på Chess TV</string>
-  <string name="previouslyOnLichessTV">Tidlegare på Chess TV</string>
+  <string name="watchLichessTV">Sjå på Lichess TV</string>
+  <string name="previouslyOnLichessTV">Tidlegare på Lichess TV</string>
   <string name="onlinePlayers">Innlogga spelarar</string>
   <string name="activeToday">Aktive i dag</string>
   <string name="activePlayers">Aktive spelarar</string>
@@ -451,7 +453,7 @@ få en computeranalyse, chatte eller dele ein URL.</string>
   <string name="findTheBestMoveForWhite">Finn beste trekket for kvit.</string>
   <string name="findTheBestMoveForBlack">Finn beste trekket for svart.</string>
   <string name="toTrackYourProgress">Finn ut kor stor framgong du har:</string>
-  <string name="trainingSignupExplanation">Chess-Online gjev deg oppgåver som er tilpassa ditt nivå, og dette gjev betre treningsøkter.</string>
+  <string name="trainingSignupExplanation">Lichess gjev deg oppgåver som er tilpassa ditt nivå, og dette gjev betre treningsøkter.</string>
   <string name="puzzleId">Oppgåve %s</string>
   <string name="puzzleOfTheDay">Dagens oppgåve</string>
   <string name="clickToSolve">Trykk for å løysa oppgåva</string>
@@ -508,6 +510,7 @@ få en computeranalyse, chatte eller dele ein URL.</string>
   <string name="troll">Troll</string>
   <string name="other">Anna</string>
   <string name="reportDescriptionHelp">Lim inn link til partiet/partia og forklar kva som er gale med åtferda til denne brukaren.</string>
+  <string name="error.provideOneCheatedGameLink">Oppgje minst ei lenke til eit jukseparti.</string>
   <string name="by">av %s</string>
   <string name="thisTopicIsNowClosed">Dette emnet er no lukka.</string>
   <string name="theming">Tema</string>
@@ -525,6 +528,7 @@ få en computeranalyse, chatte eller dele ein URL.</string>
   <string name="thisAccountIsClosed">Denne kontoen er stengd.</string>
   <string name="invalidUsernameOrPassword">Feil brukarnamn eller passord</string>
   <string name="incorrectPassword">Feil passord</string>
+  <string name="invalidAuthenticationCode">Ugyldig godkjenningskode</string>
   <string name="emailMeALink">Send lekkje til meg på epost</string>
   <string name="currentPassword">Gjeldande passord</string>
   <string name="newPassword">Nytt passord</string>
@@ -581,7 +585,6 @@ få en computeranalyse, chatte eller dele ein URL.</string>
   <string name="xVsYinZ">%1$s mot %2$s 
 i %3$s</string>
   <string name="timeline">Tidslinje</string>
-  <string name="seeAllTournaments">Sjå alle turneringar</string>
   <string name="starting">Startar:</string>
   <string name="allInformationIsPublicAndOptional">All informasjon er offentleg og valfri.</string>
   <string name="yourCityRegionOrDepartment">Din by eller region</string>
@@ -601,7 +604,7 @@ i %3$s</string>
   <string name="clock">Klokke</string>
   <string name="unauthorizedError">Ikkje tilgjenge.</string>
   <string name="noInternetConnection">Ingen internettforbindelse. Du kan framleis spele offline frå denne menyen.</string>
-  <string name="connectedToLichess">Du er no tilkopla live.chess-online.com</string>
+  <string name="connectedToLichess">Du er no tilkopla lichess.org</string>
   <string name="signedOut">Du er logga ut</string>
   <string name="loginSuccessful">Du er no logga inn</string>
   <string name="playOnTheBoardOffline">Spel offline, over brettet.</string>
@@ -646,6 +649,9 @@ i %3$s</string>
   <string name="mobileApp">Mobilapp</string>
   <string name="webmasters">Webadministratorar</string>
   <string name="about">Om</string>
+  <string name="aboutX">Omlag %s</string>
+  <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s er ein fritt tilgjengeleg (%2$s), libre, annonsefri, open kjeldekode sjakk-server.</string>
+  <string name="really">verkeleg</string>
   <string name="contribute">Bidra</string>
   <string name="contact">Kontakt</string>
   <string name="termsOfService">Brukarvilkår</string>
@@ -669,7 +675,7 @@ i %3$s</string>
   <string name="simulClockHint">Fischer klokkesett. Jo fleire spelarar du tar med, jo meir tid kan du trengje.</string>
   <string name="simulAddExtraTime">Du kan legge til ekstra tid på di eiga klokka for å makte simultanframsyninga.</string>
   <string name="simulHostExtraTime">Ekstra tid for simultanoppvisaren</string>
-  <string name="lichessTournaments">Chess-Online-turnering</string>
+  <string name="lichessTournaments">Lichess-turnering</string>
   <string name="tournamentFAQ">Spørsmål og svar knytta til arenaturnering</string>
   <string name="tournamentOfficial">Offisiell</string>
   <string name="timeBeforeTournamentStarts">Tid til turneringa startar</string>
@@ -691,7 +697,7 @@ i %3$s</string>
     <item quantity="one">%1$s %2$s spelar denne veka.</item>
     <item quantity="other">%1$s %2$s spelarar denne veka.</item>
   </plurals>
-  <string name="yourPerfTypeRatingIsRating">Di rating i %1$s er %2$s.</string>
+  <string name="yourPerfTypeRatingIsRating">Ratinga di i %1$s er %2$s.</string>
   <string name="youAreBetterThanPercentOfPerfTypePlayers">Du er betre enn %1$s av %2$s-spelarane.</string>
   <string name="youDoNotHaveAnEstablishedPerfTypeRating">Du har ikkje etablert ein %s rating.</string>
   <string name="checkYourEmail">Sjekk e-posten din</string>
@@ -714,7 +720,7 @@ i %3$s</string>
   <string name="castleByMovingTheKingTwoSquaresOrOntoTheRook">Metode for å rokere</string>
   <string name="castleByMovingTwoSquares">Flytt kongen to felt</string>
   <string name="castleByMovingOntoTheRook">Sett kongen på tårnet, eller to felt</string>
-  <string name="shareYourInsightsData">Del din personlege spelarstatistikk</string>
+  <string name="shareYourInsightsData">Del den personlege spelarstatistikken din</string>
   <string name="withNobody">Med ingen</string>
   <string name="withFriends">Med vener</string>
   <string name="withEverybody">Med alle</string>
@@ -769,7 +775,7 @@ i %3$s</string>
   <string name="usernameSuffixInvalid">Det siste teiknet i brukarnamnet må vera ein bokstav eller eit tal.</string>
   <string name="usernameCharsInvalid">Brukarnamnet kan berre innehalde bokstavar, tal, understrekingsteikn og bindestrekar.</string>
   <string name="usernameUnacceptable">Dette brukarnamnet er ikkje akseptabelt.</string>
-  <string name="directlySupportLichess">Støtt Chess-Online direkte</string>
+  <string name="directlySupportLichess">Støtt Lichess direkte</string>
   <string name="playChessInStyle">Spel sjakk med stil</string>
   <string name="chessBasics">Grunnleggande sjakk</string>
   <string name="coaches">Sjakklærarar</string>

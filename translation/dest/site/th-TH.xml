@@ -129,7 +129,7 @@
   <string name="viewInFullSize">ดูแบบเต็มขนาด</string>
   <string name="logOut">ลงชื่อออก</string>
   <string name="signIn">ลงชื่อเข้า</string>
-  <string name="newToLichess">มา Chess-Online ครั้งแรก?</string>
+  <string name="newToLichess">มา Lichess ครั้งแรก?</string>
   <string name="youNeedAnAccountToDoThat">คุณต้องมีบัญชีผู้ใช้เพื่อทำสิ่งนั้น</string>
   <string name="signUp">ลงทะเบียน</string>
   <string name="computersAreNotAllowedToPlay">ผู้เล่นที่เป็นคอมพิวเตอร์หรือใช้คอมพิวเตอร์ช่วย จะไม่ได้รับอนุญาตให้เล่น  โปรดอย่าใช้การช่วยเหลือจากตัวช่วยเล่นหมากรุก, ฐานข้อมูล หรือบุคคลอื่น ในขณะเล่น</string>
@@ -200,13 +200,15 @@
   <string name="casualTournament">ธรรมดา</string>
   <string name="ratedTournament">คิดคะแนน</string>
   <string name="thisGameIsRated">เกมนี้ถูกคิดคะแนน</string>
-  <string name="rematch">เล่นอีกครั้ง</string>
-  <string name="rematchOfferSent">ข้อเสนอเพื่อเล่นอีกครั้ง ถูกส่ง</string>
-  <string name="rematchOfferAccepted">ข้อเสนอเพื่อเล่นอีกครั้ง ถูกยอมรับ</string>
-  <string name="rematchOfferCanceled">ข้อเสนอเพื่อเล่นอีกครั้ง ถูกยกเลิก</string>
-  <string name="rematchOfferDeclined">ข้อเสนอเพื่อเล่นอีกครั้ง ถูกปฎิเสธ</string>
-  <string name="cancelRematchOffer">ยกเลิกการขอเล่นอีกครั้ง</string>
-  <string name="viewRematch">ดูการเล่นอีกครั้ง</string>
+  <string name="rematch">แข่งอีกครั้ง</string>
+  <string name="rematchOfferSent">ข้อเสนอเพื่อแข่งอีกครั้ง ถูกส่ง</string>
+  <string name="rematchOfferSentWhite">ขาวขอแข่งอีกครั้ง</string>
+  <string name="rematchOfferSentBlack">ดำขอแข่งอีกครั้ง</string>
+  <string name="rematchOfferAccepted">ข้อเสนอเพื่อแข่งอีกครั้ง ถูกยอมรับ</string>
+  <string name="rematchOfferCanceled">ข้อเสนอเพื่อแข่งอีกครั้ง ถูกยกเลิก</string>
+  <string name="rematchOfferDeclined">ข้อเสนอเพื่อแข่งอีกครั้ง ถูกปฎิเสธ</string>
+  <string name="cancelRematchOffer">ยกเลิกการขอแข่งอีกครั้ง</string>
+  <string name="viewRematch">ดูการแข่งอีกครั้ง</string>
   <string name="play">เล่น</string>
   <string name="inbox">กล่องเข้า</string>
   <string name="chatRoom">กรอบแชท</string>
@@ -282,6 +284,8 @@
   <string name="yourPerfRatingIsTooLow">ระดับคะแนน %1$s ของคุณ (%2$s) ต่ำเกินไป</string>
   <string name="ratedMoreThanInPerf">ระดับคะแนน ≥ %1$s สำหรับ %2$s</string>
   <string name="ratedLessThanInPerf">ระดับคะแนน ≤ %1$s สำหรับ %2$s</string>
+  <string name="mustBeInTeam">ต้องอยู่ในทีม %s</string>
+  <string name="youAreNotInTeam">คุณไม่ได้อยู่ในทีม %s</string>
   <string name="backToGame">กลับสู่เกม</string>
   <string name="siteDescription">เกมหมากรุกสากลออนไลน์ฟรี เล่นได้ทันทีในรูปลักษณ์ที่สะอาดตา โดยไม่จำเป็นต้องลงทะเบียน, ไม่มีโฆษณา, ไม่ต้องการปลั๊กอิน, เล่นหมากรุกกับคอมพิวเตอร์หรือเพื่อน หรือสุ่มคู่แข่งก็ได้</string>
   <string name="teams">ทีม</string>
@@ -360,6 +364,14 @@
   <string name="standing">อันดับ</string>
   <string name="createANewTournament">สร้างทัวร์นาเมนต์ใหม่</string>
   <string name="tournamentCalendar">ปฏิทินทัวร์นาเมนต์</string>
+  <string name="conditionOfEntry">เงื่อนไขการเข้าร่วม:</string>
+  <string name="advancedSettings">การตั้งค่าขั้นสูง</string>
+  <string name="safeTournamentName">เลือกชื่อที่ปลอดภัยสุดสำหรับทัวร์นาเมนต์</string>
+  <string name="inappropriateNameWarning">อะไรที่ไม่เหมาะสมแม้เพียงเล็กน้อย ก็สามารถทำให้บัญชีของคุณถูกปิดได้</string>
+  <string name="emptyTournamentName">ปล่อยว่างไว้เพื่อตั้งชื่อทัวร์นาเมนต์หลังจากสุ่มแกรนด์มาสเตอร์</string>
+  <string name="recommendNotTouching">เราแนะนำว่าอย่าแตะต้องสิ่งเหล่านี้</string>
+  <string name="fewerPlayers">ถ้าคุณตั้งค่าเงื่อนไขการเข้าร่วม ทัวร์นาเมนต์ของคุณจะมีผู้เข้าเล่นได้น้อยลง</string>
+  <string name="showAdvancedSettings">แสดงการตั้งค่าขั้นสูง</string>
   <string name="join">เข้าร่วม</string>
   <string name="withdraw">ถอนตัว</string>
   <string name="points">แต้ม</string>
@@ -404,8 +416,8 @@
   <string name="country">ประเทศ</string>
   <string name="preferences">การตั้งค่า</string>
   <string name="inlineNotation">สัญกรณ์ในบรรทัด</string>
-  <string name="watchLichessTV">ดู Chess TV</string>
-  <string name="previouslyOnLichessTV">Chess TV ก่อนหน้า</string>
+  <string name="watchLichessTV">ดู Lichess TV</string>
+  <string name="previouslyOnLichessTV">Lichess TV ก่อนหน้า</string>
   <string name="onlinePlayers">ผู้เล่นออนไลน์</string>
   <string name="activeToday">ขยันในวันนี้</string>
   <string name="activePlayers">ผู้เล่นที่ขยัน</string>
@@ -415,7 +427,7 @@
   <string name="findTheBestMoveForWhite">หาการเดินที่ดีที่สุดสำหรับฝ่ายขาว</string>
   <string name="findTheBestMoveForBlack">หาการเดินที่ดีที่สุดสำหรับฝ่ายดำ</string>
   <string name="toTrackYourProgress">เพื่อติดตามความก้าวหน้าของคุณ:</string>
-  <string name="trainingSignupExplanation">Chess-Online จะสรรหาปริศนาที่เหมาะสมกับความสามารถของคุณ, เพื่อสร้างโจทย์ฝึกที่ดียิ่งขึ้น</string>
+  <string name="trainingSignupExplanation">Lichess จะสรรหาปริศนาที่เหมาะสมกับความสามารถของคุณ, เพื่อสร้างโจทย์ฝึกที่ดียิ่งขึ้น</string>
   <string name="puzzleId">ปริศนา %s</string>
   <string name="puzzleOfTheDay">ปริศนาประจำวัน</string>
   <string name="clickToSolve">คลิกเพื่อแก้ปริศนา</string>
@@ -470,6 +482,7 @@
   <string name="troll">ป่วน</string>
   <string name="other">อื่นๆ</string>
   <string name="reportDescriptionHelp">วางลิงค์ที่ไปสู่เกม และอธิบายว่าผู้ใช้นี้มีพฤติกรรมที่ผิดอะไร อย่าบอกเพียงว่า \"พวกเขาโกง\" แต่บอกเราว่าคุณสรุปแบบนี้เพราะอะไร การรายงานของคุณจะเร็วขึ้นถ้าเขียนด้วยภาษาอังกฤษ</string>
+  <string name="error.provideOneCheatedGameLink">โปรดระบุอย่างน้อยหนึ่งลิงก์ เพื่อเชื่อมโยงไปยังเกมที่มีการโกง</string>
   <string name="by">โดย %s</string>
   <string name="thisTopicIsNowClosed">หัวข้อนี้ถูกปิดแล้ว</string>
   <string name="theming">รูปลักษณ์</string>
@@ -487,6 +500,7 @@
   <string name="thisAccountIsClosed">บัญชีนี้ถูกปิดแล้ว</string>
   <string name="invalidUsernameOrPassword">ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง</string>
   <string name="incorrectPassword">รหัสผ่านไม่ถูกต้อง</string>
+  <string name="invalidAuthenticationCode">โค้ดยืนยันตัวตนไม่ถูกต้อง</string>
   <string name="emailMeALink">ส่งลิงค์ให้ฉันทางอีเมล</string>
   <string name="currentPassword">รหัสผ่านปัจจุบัน</string>
   <string name="newPassword">รหัสผ่านใหม่</string>
@@ -543,7 +557,6 @@
   <string name="xVsYinZ">%1$s ต่อ %2$s
 ใน %3$s</string>
   <string name="timeline">ไทม์ไลน์</string>
-  <string name="seeAllTournaments">ดูทัวร์นาเมนต์ทั้งหมด</string>
   <string name="starting">กำลังเริ่ม:</string>
   <string name="allInformationIsPublicAndOptional">ข้อมูลทั้งหมดเป็นสาธารณะ และไม่บังคับกรอก</string>
   <string name="yourCityRegionOrDepartment">เมือง, ภูมิภาค, หรือจังหวัดของคุณ</string>
@@ -561,7 +574,7 @@
   <string name="clock">นาฬิกา</string>
   <string name="unauthorizedError">สิทธิ์เข้าถึงยังไม่ถูกต้อง</string>
   <string name="noInternetConnection">ไม่มีการเชื่อมต่ออินเตอร์เน็ต แต่คุณสามารถเล่นออฟไลน์ได้จากเมนู</string>
-  <string name="connectedToLichess">ขณะนี้คุณเชื่อมต่ออยู่กับ live.chess-online.com</string>
+  <string name="connectedToLichess">ขณะนี้คุณเชื่อมต่ออยู่กับ lichess.org</string>
   <string name="signedOut">คุณได้ลงชื่อออกแล้ว</string>
   <string name="loginSuccessful">ตอนนี้คุณลงชื่อเข้าแล้ว</string>
   <string name="playOnTheBoardOffline">เล่นกระดานเดียวกัน</string>
@@ -605,6 +618,9 @@
   <string name="mobileApp">แอปมือถือ</string>
   <string name="webmasters">เว็บมาสเตอร์</string>
   <string name="about">เกี่ยวกับ</string>
+  <string name="aboutX">เกี่ยวกับ %s</string>
+  <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s เป็นเซิร์ฟเวอร์หมากรุกระบบเปิด ซึ่งอิสระ ไม่มีโฆษณา และฟรี (%2$s)</string>
+  <string name="really">จริง ๆ</string>
   <string name="contribute">เอื้อเฟื้อ</string>
   <string name="contact">ติดต่อ</string>
   <string name="termsOfService">ข้อกำหนดการใช้</string>
@@ -628,7 +644,7 @@
   <string name="simulClockHint">การตั้งนาฬิกาฟิสเชอร์ ยิ่งคุณเล่นกับผู้เล่นหลายคน คุณยิ่งต้องการเวลามากขึ้น</string>
   <string name="simulAddExtraTime">คุณอาจบวกเวลาพิเศษให้นาฬิกาของคุณ เพื่อช่วยคุณรับมือกับไซมัล</string>
   <string name="simulHostExtraTime">เวลานาฬิกาพิเศษโฮสต์</string>
-  <string name="lichessTournaments">ทัวร์นาเมนต์ Chess-Online</string>
+  <string name="lichessTournaments">ทัวร์นาเมนต์ Lichess</string>
   <string name="tournamentFAQ">ถามตอบสนามทัวร์นาเมนต์</string>
   <string name="tournamentOfficial">เป็นทางการ</string>
   <string name="timeBeforeTournamentStarts">เวลาก่อนทัวร์นาเมนต์จะเริ่ม</string>
@@ -726,7 +742,7 @@
   <string name="usernameSuffixInvalid">ชื่อผู้ใช้ที่ต้องลงท้ายด้วยตัวอักษรหรือตัวเลข</string>
   <string name="usernameCharsInvalid">ชื่อผู้ใช้ประกอบด้วยตัวอักษร, ตัวเลข, ขีดล่าง และเครื่องหมายขีด เท่านั้น</string>
   <string name="usernameUnacceptable">ไม่ยอมรับชื่อผู้ใช้นี้</string>
-  <string name="directlySupportLichess">สนับสนุน Chess-Online โดยตรง</string>
+  <string name="directlySupportLichess">สนับสนุน Lichess โดยตรง</string>
   <string name="playChessInStyle">เล่นหมากรุกแบบมีสไตล์</string>
   <string name="chessBasics">พื้นฐานหมากรุก</string>
   <string name="coaches">ผู้ฝึกสอน</string>

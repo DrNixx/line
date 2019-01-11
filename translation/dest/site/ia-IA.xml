@@ -134,7 +134,7 @@
   <string name="viewInFullSize">Vider in plen dimension</string>
   <string name="logOut">Clauder session</string>
   <string name="signIn">Aperir session</string>
-  <string name="newToLichess">Es tu nove in Chess-Online?</string>
+  <string name="newToLichess">Es tu nove in Lichess?</string>
   <string name="youNeedAnAccountToDoThat">Tu necessita un conto pro facer isto</string>
   <string name="signUp">Crear conto</string>
   <string name="computersAreNotAllowedToPlay">Le uso de computatores e programmas non es permittite. Per favor, non prende assistentia de motores de chacos, bases de datos o de altere jocatores durante que joca. De plus, nota que crear multiple contos es fortemente discoragiate e iste practica excessive conduce a interdiction de uso.</string>
@@ -211,6 +211,8 @@
   <string name="thisGameIsRated">Iste partita vale punctos classificatori</string>
   <string name="rematch">Vindicar</string>
   <string name="rematchOfferSent">Proposition de vindicantia inviate</string>
+  <string name="rematchOfferSentWhite">Le blanco offere le vindicantia</string>
+  <string name="rematchOfferSentBlack">Le nigre offere le vindicantia</string>
   <string name="rematchOfferAccepted">Proposition de vindicantia acceptate</string>
   <string name="rematchOfferCanceled">Proposition de vindicantia cancellate</string>
   <string name="rematchOfferDeclined">Proposition de vindicantia declinate</string>
@@ -302,6 +304,8 @@
   <string name="yourPerfRatingIsTooLow">Tu classification (%2$s) de %1$s es troppo basse</string>
   <string name="ratedMoreThanInPerf">Classification ≥ %1$s in %2$s</string>
   <string name="ratedLessThanInPerf">Classification ≤ %1$s in %2$s</string>
+  <string name="mustBeInTeam">Tu debe esser in le equipa %s</string>
+  <string name="youAreNotInTeam">Tu non es in le equipa %s</string>
   <string name="backToGame">Retro al partite</string>
   <string name="siteDescription">Servitor de chacos gratis in linea. Joca al chacos ora in un interfacie simple. Nulle registration, nulle annuncios, nulle plugin requirite. Joca al chacos con le computator, con amicos o con adversarios aleatori.</string>
   <string name="teams">Equipas</string>
@@ -384,6 +388,15 @@
   <string name="winner">Vincitor</string>
   <string name="standing">Position</string>
   <string name="createANewTournament">Crear un nove torneo</string>
+  <string name="tournamentCalendar">Calendario del torneo</string>
+  <string name="conditionOfEntry">Condition de entrata:</string>
+  <string name="advancedSettings">Configurationes avantiate</string>
+  <string name="safeTournamentName">Selige un nomine assatis secur pro le torneo.</string>
+  <string name="inappropriateNameWarning">Mesmo alco levemente inappropriate pote causar que tu conto sia terminate.</string>
+  <string name="emptyTournamentName">Lassa iste campo vacue pro que le torneo ha un nomine de un Grande Maestro al hasardo.</string>
+  <string name="recommendNotTouching">Nos recommenda non modificar isto.</string>
+  <string name="fewerPlayers">Si tu impone conditiones de entrata, tu torneo habera minus jocatores.</string>
+  <string name="showAdvancedSettings">Monstrar le configurationes avantiate</string>
   <string name="join">Participar</string>
   <string name="withdraw">Retirar se</string>
   <string name="points">Punctos</string>
@@ -428,8 +441,8 @@
   <string name="country">Pais</string>
   <string name="preferences">Preferentias</string>
   <string name="inlineNotation">Notation in lineas</string>
-  <string name="watchLichessTV">Spectar Chess TV</string>
-  <string name="previouslyOnLichessTV">Previemente in Chess TV</string>
+  <string name="watchLichessTV">Spectar Lichess TV</string>
+  <string name="previouslyOnLichessTV">Previemente in Lichess TV</string>
   <string name="onlinePlayers">Jocatores in linea</string>
   <string name="activeToday">Active hodie</string>
   <string name="activePlayers">Jocatores active</string>
@@ -441,7 +454,7 @@ pro le blanco.</string>
   <string name="findTheBestMoveForBlack">Trova le melior movimento 
 pro le nigro.</string>
   <string name="toTrackYourProgress">Pro traciar tu progresso:</string>
-  <string name="trainingSignupExplanation">Chess-Online fornira enigmas que corresponde a tu habilitates, pro facer melior sessiones de exercitio.</string>
+  <string name="trainingSignupExplanation">Lichess fornira enigmas que corresponde a tu habilitates, pro facer melior sessiones de exercitio.</string>
   <string name="puzzleId">Enigma %s</string>
   <string name="puzzleOfTheDay">Enigma del die</string>
   <string name="clickToSolve">Clicca pro resolver</string>
@@ -453,7 +466,7 @@ pro le nigro.</string>
   <string name="butYouCanKeepTrying">Ma tu pote continuar a tentar.</string>
   <string name="success">Successo</string>
   <string name="wasThisPuzzleAnyGood">Esque iste enigma esseva bon?</string>
-  <string name="pleaseVotePuzzle">Adjuta Chess-Online a meliorar per tu voto, usante le sagitta a alto o a basso:</string>
+  <string name="pleaseVotePuzzle">Adjuta Lichess a meliorar per tu voto, usante le sagitta a alto o a basso:</string>
   <string name="thankYou">Gratias!</string>
   <string name="ratingX">Classification: %s</string>
   <plurals name="playedXTimes">
@@ -498,6 +511,7 @@ pro le nigro.</string>
   <string name="troll">Troll</string>
   <string name="other">Altere</string>
   <string name="reportDescriptionHelp">Colla le ligamine al joco(s) e explica lo que es improprie re le conducto del usator. Non dice solmente \"ille frauda\", ma informa como tu arrivava a iste conclusion. Tu reporto essera processate plus rapidemente si tu scribe in anglese.</string>
+  <string name="error.provideOneCheatedGameLink">Per favor, provide al minus un ligamine de un partita fraudate.</string>
   <string name="by">per %s</string>
   <string name="thisTopicIsNowClosed">Iste topico es ora claudite.</string>
   <string name="theming">Apparentia</string>
@@ -515,6 +529,7 @@ pro le nigro.</string>
   <string name="thisAccountIsClosed">Iste conto ha essite claudite.</string>
   <string name="invalidUsernameOrPassword">Nomine de usator o contrasigno invalide</string>
   <string name="incorrectPassword">Contrasigno incorrecte</string>
+  <string name="invalidAuthenticationCode">Codice de authentication invalide</string>
   <string name="emailMeALink">Inviar me un ligamine per e-posta</string>
   <string name="currentPassword">Contrasigno actual</string>
   <string name="newPassword">Nove contrasigno</string>
@@ -571,7 +586,6 @@ pro le nigro.</string>
   <string name="xVsYinZ">%1$s contra %2$s
 in %3$s</string>
   <string name="timeline">Chronologia</string>
-  <string name="seeAllTournaments">Vider tote le torneos</string>
   <string name="starting">Initio:</string>
   <string name="allInformationIsPublicAndOptional">Tote information es public e optional.</string>
   <string name="yourCityRegionOrDepartment">Tu citate, region o provincia.</string>
@@ -591,7 +605,7 @@ in %3$s</string>
   <string name="clock">Horologio</string>
   <string name="unauthorizedError">Le accesso non es autorisate.</string>
   <string name="noInternetConnection">Sin connexion de Internet. Tu ancora pote jocar disconnectite a partir del menu.</string>
-  <string name="connectedToLichess">Tu es ora connectite a live.chess-online.com</string>
+  <string name="connectedToLichess">Tu es ora connectite a lichess.org</string>
   <string name="signedOut">Tu ha claudite le session</string>
   <string name="loginSuccessful">Tu ha aperite un session</string>
   <string name="playOnTheBoardOffline">Partita local</string>
@@ -629,13 +643,16 @@ in %3$s</string>
   </plurals>
   <string name="tpTimeSpentPlaying">Tempore jocante: %s</string>
   <string name="watchGames">Spectar jocos</string>
-  <string name="tpTimeSpentOnTV">Tempore spectante Chess TV: %s</string>
+  <string name="tpTimeSpentOnTV">Tempore spectante Lichess TV: %s</string>
   <string name="watch">Spectar</string>
   <string name="internationalEvents">Eventos international</string>
   <string name="videoLibrary">Videotheca</string>
   <string name="mobileApp">Application mobile</string>
   <string name="webmasters">Webmasters</string>
   <string name="about">A proposito de</string>
+  <string name="aboutX">A proposito de %s</string>
+  <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s es un servitor de chacos (%2$s) gratuite, sin annuncios, libere e de codice aperte.</string>
+  <string name="really">vermente</string>
   <string name="contribute">Contribuer</string>
   <string name="contact">Contacto</string>
   <string name="termsOfService">Terminos de servicio</string>
@@ -659,7 +676,7 @@ in %3$s</string>
   <string name="simulClockHint">Configuration de Horologio Fischer. Quanto plus jocatores tu accepta, tanto plus tempore tu pote requirer.</string>
   <string name="simulAddExtraTime">Tu pote adder tempore additional a tu horologio pro adjutar a arrangiar te con le exhibition simultanee.</string>
   <string name="simulHostExtraTime">Tempore additional al hospite</string>
-  <string name="lichessTournaments">Torneos official de Chess-Online</string>
+  <string name="lichessTournaments">Torneos official de Lichess</string>
   <string name="tournamentFAQ">Questiones frequente sur le torneos Arena</string>
   <string name="tournamentOfficial">Official</string>
   <string name="timeBeforeTournamentStarts">Tempore ante le initio del torneo</string>
@@ -689,8 +706,8 @@ in %3$s</string>
   <string name="ifYouDoNotSeeTheEmailCheckOtherPlaces">Si tu non trova le message in tu e-posta, verifica in altere locos ubi illo pote esser, como tu cassa de posta indesirate, spam, corbe a papiro, o altere dossiers.</string>
   <string name="weHaveSentYouAnEmailTo">Nos ha inviate un message de e-posta a %s. Clicca sur le ligamine in le message pro restaurar tu contrasigno.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Per registrar, tu accepta nostre %s.</string>
-  <string name="networkLagBetweenYouAndLichess">Retardo in le rete inter te e Chess-Online</string>
-  <string name="timeToProcessAMoveOnLichessServer">Tempore pro processar un movimento sur le servitor de Chess-Online</string>
+  <string name="networkLagBetweenYouAndLichess">Retardo in le rete inter te e Lichess</string>
+  <string name="timeToProcessAMoveOnLichessServer">Tempore pro processar un movimento sur le servitor de Lichess</string>
   <string name="downloadAnnotated">Discargar joco annotate</string>
   <string name="downloadRaw">Discargar in formato crude</string>
   <string name="downloadImported">Discargar joco importate</string>
@@ -711,7 +728,7 @@ in %3$s</string>
   <string name="youHaveAlreadyRegisteredTheEmail">Tu jam ha registrate le e-posta: %s</string>
   <string name="kidMode">Modo infantil</string>
   <string name="kidModeExplanation">Isto concerne la securitate. In le modo infantil, tote le communicationes del sito es disactivate. Activa isto pro tu infantes e alumnos scholar, pro proteger los de altere usatores.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">In le modo infantil, le logo de Chess-Online ha un icone %s, pro que tu sape que tu infantes es secur.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">In le modo infantil, le logo de Lichess ha un icone %s, pro que tu sape que tu infantes es secur.</string>
   <string name="enableKidMode">Activar modo infantil</string>
   <string name="disableKidMode">Disactivar modo infantil</string>
   <string name="security">Securitate</string>
@@ -719,7 +736,7 @@ in %3$s</string>
   <string name="alternativelyYouCanX">Alternativemente tu pote %s.</string>
   <string name="revokeAllSessions">revocar tote sessiones</string>
   <string name="playChessEverywhere">Joca chacos ubique!</string>
-  <string name="asFreeAsLichess">Tanto gratis como Chess-Online</string>
+  <string name="asFreeAsLichess">Tanto gratis como Lichess</string>
   <string name="builtForTheLoveOfChessNotMoney">Disveloppate pro le amor al chacos, e non pro le moneta</string>
   <string name="everybodyGetsAllFeaturesForFree">Totes recipe gratuitemente tote le functionalitates</string>
   <string name="zeroAdvertisement">Sin annuncios</string>
@@ -757,8 +774,9 @@ in %3$s</string>
   <string name="usernameAlreadyUsed">Iste nomine de usator ja es usate, per favor, selectiona un altere.</string>
   <string name="usernamePrefixInvalid">Le nomine de usator debe initiar con un littera.</string>
   <string name="usernameSuffixInvalid">Le nomine de usator debe finir con un littera o un numero.</string>
+  <string name="usernameCharsInvalid">Le nomine de usator debe continer solmente litteras, numeros, sublineas ( _ ) e lineettas ( - ).</string>
   <string name="usernameUnacceptable">Iste nomine de usator non es acceptabile.</string>
-  <string name="directlySupportLichess">Appoia directemente Chess-Online</string>
+  <string name="directlySupportLichess">Appoia directemente Lichess</string>
   <string name="playChessInStyle">Joca chacos con stilo</string>
   <string name="chessBasics">Fundamentos</string>
   <string name="coaches">Tutores</string>
@@ -780,17 +798,36 @@ in %3$s</string>
   <string name="practiceWithComputer">Practicar con le computator</string>
   <string name="anotherWasX">Un alternativa esserea %s</string>
   <string name="bestWasX">Melior esserea %s</string>
+  <string name="youBrowsedAway">Tu navigava ultra le revision</string>
+  <string name="resumePractice">Retornar al practica</string>
   <string name="theGameIsADraw">Le partita es nulle.</string>
+  <string name="computerThinking">Le computator es calculante ...</string>
   <string name="seeBestMove">Vider le melior movimento</string>
   <string name="hideBestMove">Celar le melior movimento</string>
+  <string name="getAHint">Obtener un suggestion</string>
   <string name="evaluatingYourMove">Evalutante tu movimento ...</string>
   <string name="whiteWinsGame">Le blanco vince</string>
   <string name="blackWinsGame">Le nigro vince</string>
   <string name="learnFromYourMistakes">Apprende ab tu errores</string>
   <string name="learnFromThisMistake">Apprende ab iste error</string>
+  <string name="skipThisMove">Omitte iste movimento</string>
   <string name="next">Sequente</string>
+  <string name="xWasPlayed">%s esseva jocate</string>
+  <string name="findBetterMoveForWhite">Trova un movimento melior pro le blanco</string>
+  <string name="findBetterMoveForBlack">Trova un movimento melior pro le nigro</string>
+  <string name="resumeLearning">Retorna al apprentissage</string>
   <string name="youCanDoBetter">Tu pote facer melio</string>
+  <string name="tryAnotherMoveForWhite">Tenta un altere movimento pro le blanco</string>
+  <string name="tryAnotherMoveForBlack">Tenta un altere movimento pro le nigro</string>
   <string name="solution">Solution</string>
+  <string name="waitingForAnalysis">Attendente le analyse</string>
+  <string name="noMistakesFoundForWhite">Nulle errores trovate pro le blanco</string>
+  <string name="noMistakesFoundForBlack">Nulle errores trovate pro le nigro</string>
+  <string name="doneReviewingWhiteMistakes">Le revision del errores del blanco ha concludite</string>
+  <string name="doneReviewingBlackMistakes">Le revision del errores del nigro ha concludite</string>
+  <string name="doItAgain">Facer de novo</string>
+  <string name="reviewWhiteMistakes">Revider le errores del blanco</string>
+  <string name="reviewBlackMistakes">Revider le errores del nigro</string>
   <string name="advantage">Avantage</string>
   <plurals name="nbSeconds">
     <item quantity="one">%s secunda</item>
@@ -799,8 +836,19 @@ in %3$s</string>
   <string name="opening">Initio de joco</string>
   <string name="middlegame">Medio del joco</string>
   <string name="endgame">Fin del joco</string>
+  <string name="registerToSendChallenges">Per favor, registra un conto pro inviar defias.</string>
   <string name="youCannotChallengeX">Tu non pote defiar %s.</string>
   <string name="xDoesNotAcceptChallenges">%s non accepta defias.</string>
+  <string name="yourXRatingIsTooFarFromY">Tu classification de %1$s es troppo distante de %2$s.</string>
+  <string name="cannotChallengeDueToProvisionalXRating">Defias non es permittite a causa de tu classification provisori %s.</string>
   <string name="xOnlyAcceptsChallengesFromFriends">%s solmente accepta defias de amicos.</string>
+  <string name="conditionalPremoves">Preselectiones conditional</string>
+  <string name="addCurrentVariation">Adder variation currente</string>
+  <string name="playVariationToCreateConditionalPremoves">Joca un movimento variante pro crear preselectiones conditional</string>
+  <string name="noConditionalPremoves">Nulle preselectiones conditional</string>
   <string name="playX">Joca %s</string>
+  <plurals name="andSaveNbPremoveLines">
+    <item quantity="one">e salveguarda %s linea de preselection</item>
+    <item quantity="other">e salveguarda %s lineas de preselection</item>
+  </plurals>
 </resources>

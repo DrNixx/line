@@ -86,7 +86,7 @@
   </plurals>
   <string name="noGameFound">No game found</string>
   <string name="maybeIncludeMoreGamesFromThePreferencesMenu">Maybe include more games from the preferences menu?</string>
-  <string name="openingExplorer">Opening explorer &amp; tablebase</string>
+  <string name="openingExplorer">Opening explorer</string>
   <string name="xOpeningExplorer">%s opening explorer</string>
   <string name="winPreventedBy50MoveRule">Win prevented by 50-move rule</string>
   <string name="lossSavedBy50MoveRule">Loss saved by 50-move rule</string>
@@ -134,7 +134,7 @@
   <string name="viewInFullSize">View in full size</string>
   <string name="logOut">Sign out</string>
   <string name="signIn">Sign in</string>
-  <string name="newToLichess">New to Chess-Online?</string>
+  <string name="newToLichess">New to Lichess?</string>
   <string name="youNeedAnAccountToDoThat">You need an account to do that</string>
   <string name="signUp">Register</string>
   <string name="computersAreNotAllowedToPlay">Computers and computer-assisted players are not allowed to play. Please do not get assistance from chess engines, databases, or from other players while playing. Also note that making multiple accounts is strongly discouraged and excessive multi-accounting will lead to being banned.</string>
@@ -287,8 +287,8 @@
     <item quantity="other">≥ %s rated games</item>
   </plurals>
   <plurals name="moreThanNbPerfRatedGames">
-    <item quantity="one">≥ %1$s %2%s rated game</item>
-    <item quantity="other">≥ %1$s %2%s rated games</item>
+    <item quantity="one">≥ %1$s %2$s rated game</item>
+    <item quantity="other">≥ %1$s %2$s rated games</item>
   </plurals>
   <plurals name="needNbMorePerfGames">
     <item quantity="one">You need to play %1$s more %2$s rated game</item>
@@ -304,6 +304,8 @@
   <string name="yourPerfRatingIsTooLow">Your %1$s rating (%2$s) is too low</string>
   <string name="ratedMoreThanInPerf">Rated ≥ %1$s in %2$s</string>
   <string name="ratedLessThanInPerf">Rated ≤ %1$s in %2$s</string>
+  <string name="mustBeInTeam">Must be in team %s</string>
+  <string name="youAreNotInTeam">You are not in the team %s</string>
   <string name="backToGame">Back to game</string>
   <string name="siteDescription">Free online Chess server. Play Chess now in a clean interface. No registration, no ads, no plugin required. Play Chess with the computer, friends or random opponents.</string>
   <string name="teams">Teams</string>
@@ -440,8 +442,8 @@ a computer analysis, a game chat and a shareable URL.</string>
   <string name="country">Country</string>
   <string name="preferences">Preferences</string>
   <string name="inlineNotation">Inline notation</string>
-  <string name="watchLichessTV">Watch Chess TV</string>
-  <string name="previouslyOnLichessTV">Previously on Chess TV</string>
+  <string name="watchLichessTV">Watch Lichess TV</string>
+  <string name="previouslyOnLichessTV">Previously on Lichess TV</string>
   <string name="onlinePlayers">Online players</string>
   <string name="activeToday">Active today</string>
   <string name="activePlayers">Active players</string>
@@ -451,7 +453,7 @@ a computer analysis, a game chat and a shareable URL.</string>
   <string name="findTheBestMoveForWhite">Find the best move for white.</string>
   <string name="findTheBestMoveForBlack">Find the best move for black.</string>
   <string name="toTrackYourProgress">To track your progress:</string>
-  <string name="trainingSignupExplanation">Chess-Online will provide puzzles that match your ability, making for better training sessions.</string>
+  <string name="trainingSignupExplanation">Lichess will provide puzzles that match your ability, making for better training sessions.</string>
   <string name="puzzleId">Puzzle %s</string>
   <string name="puzzleOfTheDay">Puzzle of the day</string>
   <string name="clickToSolve">Click to solve</string>
@@ -508,6 +510,7 @@ a computer analysis, a game chat and a shareable URL.</string>
   <string name="troll">Troll</string>
   <string name="other">Other</string>
   <string name="reportDescriptionHelp">Paste the link to the game(s) and explain what is wrong about this user behavior. Don\'t just say \"they cheat\", but tell us how you came to this conclusion. Your report will be processed faster if written in English.</string>
+  <string name="error.provideOneCheatedGameLink">Please provide at least one link to a cheated game.</string>
   <string name="by">by %s</string>
   <string name="thisTopicIsNowClosed">This topic is now closed.</string>
   <string name="theming">Theming</string>
@@ -525,6 +528,7 @@ a computer analysis, a game chat and a shareable URL.</string>
   <string name="thisAccountIsClosed">This account is closed.</string>
   <string name="invalidUsernameOrPassword">Invalid username or password</string>
   <string name="incorrectPassword">Incorrect password</string>
+  <string name="invalidAuthenticationCode">Invalid authentication code</string>
   <string name="emailMeALink">Email me a link</string>
   <string name="currentPassword">Current password</string>
   <string name="newPassword">New password</string>
@@ -581,7 +585,6 @@ a computer analysis, a game chat and a shareable URL.</string>
   <string name="xVsYinZ">%1$s vs %2$s
 in %3$s</string>
   <string name="timeline">Timeline</string>
-  <string name="seeAllTournaments">See all tournaments</string>
   <string name="starting">Starting:</string>
   <string name="allInformationIsPublicAndOptional">All information is public and optional.</string>
   <string name="yourCityRegionOrDepartment">Your city, region, or province.</string>
@@ -601,7 +604,7 @@ in %3$s</string>
   <string name="clock">Clock</string>
   <string name="unauthorizedError">Access is unauthorized.</string>
   <string name="noInternetConnection">No internet connection. You can still play offline from the menu.</string>
-  <string name="connectedToLichess">You are now connected to live.chess-online.com</string>
+  <string name="connectedToLichess">You are now connected to lichess.org</string>
   <string name="signedOut">You have been signed out</string>
   <string name="loginSuccessful">You are now signed in</string>
   <string name="playOnTheBoardOffline">Over the board</string>
@@ -646,6 +649,9 @@ in %3$s</string>
   <string name="mobileApp">Mobile App</string>
   <string name="webmasters">Webmasters</string>
   <string name="about">About</string>
+  <string name="aboutX">About %s</string>
+  <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s is a free (%2$s), libre, no-ads, open source chess server.</string>
+  <string name="really">really</string>
   <string name="contribute">Contribute</string>
   <string name="contact">Contact</string>
   <string name="termsOfService">Terms of Service</string>
@@ -669,7 +675,7 @@ in %3$s</string>
   <string name="simulClockHint">Fischer Clock setup. The more players you take on, the more time you may need.</string>
   <string name="simulAddExtraTime">You may add extra time to your clock to help cope with the simul.</string>
   <string name="simulHostExtraTime">Host extra clock time</string>
-  <string name="lichessTournaments">Chess-Online tournaments</string>
+  <string name="lichessTournaments">Lichess tournaments</string>
   <string name="tournamentFAQ">Arena tournament FAQ</string>
   <string name="tournamentOfficial">Official</string>
   <string name="timeBeforeTournamentStarts">Time before tournament starts</string>
@@ -769,7 +775,7 @@ in %3$s</string>
   <string name="usernameSuffixInvalid">The username must end with a letter or a number.</string>
   <string name="usernameCharsInvalid">The username must only contain letters, numbers, underscores, and hyphens.</string>
   <string name="usernameUnacceptable">This username is not acceptable.</string>
-  <string name="directlySupportLichess">Directly support Chess-Online</string>
+  <string name="directlySupportLichess">Directly support Lichess</string>
   <string name="playChessInStyle">Play chess in style</string>
   <string name="chessBasics">Chess basics</string>
   <string name="coaches">Coaches</string>

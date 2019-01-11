@@ -22,7 +22,7 @@
   <string name="createAGame">नया खेल</string>
   <string name="whiteIsVictorious">सफेद की जय</string>
   <string name="blackIsVictorious">काले की जय</string>
-  <string name="kingInTheCenter">राजा बीच में</string>
+  <string name="kingInTheCenter">राजा मध्य में</string>
   <string name="threeChecks">तीन शह</string>
   <string name="raceFinished">दौड़ समाप्त</string>
   <string name="variantEnding">प्रकार का अंत</string>
@@ -33,8 +33,8 @@
   <string name="blackPlays">काले की चाल</string>
   <string name="opponentLeftChoices">आपका प्रतिद्वंदी ये खेल छोड़ कर चला गया है। आप चाहे तो जीत का दावा कर सकते हैं , खेल रद्द कर सकते हैं, या फिर अपने प्रतिद्वंद्वी के लौटने की प्रतीक्षा कर सकते हैं|</string>
   <string name="makeYourOpponentResign">अपने प्रतिद्वंदी को हारने पे मजबूर करें</string>
-  <string name="forceResignation">जीत का दवा करें</string>
-  <string name="forceDraw">बराबरी पे खेल समाप्त करें</string>
+  <string name="forceResignation">जीत का दावा करें</string>
+  <string name="forceDraw">बराबरी पर खेल समाप्त करें</string>
   <string name="talkInChat">कृपया सज्जनतापूर्ण बातचीत करें!</string>
   <string name="theFirstPersonToComeOnThisUrlWillPlayWithYou">इस पते पर क्लिक करने वाला पहला आदमी आपके साथ खेलेगा.</string>
   <string name="whiteResigned">सफेद ने हार मान ली</string>
@@ -211,6 +211,8 @@
   <string name="thisGameIsRated">यह खेल मूल्यांकित है</string>
   <string name="rematch">फिर से खेलें</string>
   <string name="rematchOfferSent">फिर से खेलने का प्रस्ताव भेजा गया है</string>
+  <string name="rematchOfferSentWhite">सफेद ने वापिस खेलने का प्रस्ताव भेजा</string>
+  <string name="rematchOfferSentBlack">काले ने वापिस खेलने का प्रस्ताव भेजा</string>
   <string name="rematchOfferAccepted">फिर से खेलने का प्रस्ताव स्वीकार कर लिया गया है</string>
   <string name="rematchOfferCanceled">फिर से खेलने का प्रस्ताव रद्द कर दिया गया है</string>
   <string name="rematchOfferDeclined">फिर से खेलने का प्रस्ताव अस्वीकार कर दिया गया है</string>
@@ -230,6 +232,10 @@
   <string name="incrementInSeconds">हर चाल पर सेकंड्स की वृद्धि</string>
   <string name="freeOnlineChess">मुफ्त ऑनलाइन शतरंज</string>
   <string name="spectators">दर्शक</string>
+  <plurals name="nbRated">
+    <item quantity="one">%s रेटेड खेल</item>
+    <item quantity="other">%s रेटेड खेल</item>
+  </plurals>
   <plurals name="nbWins">
     <item quantity="one">%s जीत</item>
     <item quantity="other">%s जीत</item>
@@ -269,9 +275,25 @@
   <string name="tournament">प्रतियोगिता</string>
   <string name="tournaments">प्रतियोगिताएँ</string>
   <string name="tournamentPoints">प्रतियोगिता के अंक</string>
+  <plurals name="nbTournamentPoints">
+    <item quantity="one">%s टूर्नामेंट अंक</item>
+    <item quantity="other">%s टूर्नामेंट अंक</item>
+  </plurals>
   <string name="viewTournament">प्रतियोगिता देखें</string>
   <string name="backToTournament">प्रतियोगिता पर वापिस जाएँ</string>
   <string name="thematic">कथ्यपरक</string>
+  <plurals name="moreThanNbRatedGames">
+    <item quantity="one">≥ %s रेटेड खेल</item>
+    <item quantity="other">≥ %s रेटेड खेल</item>
+  </plurals>
+  <plurals name="moreThanNbPerfRatedGames">
+    <item quantity="one">≥ %1$s %2$s रेटेड खेल</item>
+    <item quantity="other">≥ %1$s %2$s रेटेड खेल</item>
+  </plurals>
+  <plurals name="needNbMoreGames">
+    <item quantity="one">आपको %s और खेल में भाग लेने की आवश्यकता है</item>
+    <item quantity="other">आपको %s और खेल में भाग लेने की आवश्यकता है</item>
+  </plurals>
   <string name="yourPerfRatingIsProvisional">आपके %s रेटिंग अनंतिम है</string>
   <string name="yourPerfRatingIsTooHigh">आपके %1$s रेटिंग (%2$s) बहुत अधिक है</string>
   <string name="yourTopWeeklyPerfRatingIsTooHigh">अपने शीर्ष साप्ताहिक %1$s रेटिंग (%2$s) बहुत अधिक है</string>
@@ -360,6 +382,14 @@
   <string name="winner">विजयी</string>
   <string name="standing">पद</string>
   <string name="createANewTournament">नयी प्रतियोगिता आरम्भ करें</string>
+  <string name="tournamentCalendar">टूर्नामेंट कैलेंडर</string>
+  <string name="conditionOfEntry">प्रवेश की शर्त:</string>
+  <string name="advancedSettings">एडव्हान्स सेटिंग्ज</string>
+  <string name="safeTournamentName">टूर्नामेंट के लिए उचित नाम चुनिए ।</string>
+  <string name="inappropriateNameWarning">थोड़ा सा भी अनुचित नाम चुनने से आपका ख़ाता बंद हो सकता है।</string>
+  <string name="emptyTournamentName">खाली रखने पर बेतरतीब ढंग से कोई एक सर्वश्रेष्ठ शतरंज के खिलाड़ी के बाद टूर्नामेंट का नाम चुना जाएगा।</string>
+  <string name="fewerPlayers">यदि अत्यधिक एवं अनुचित शर्ते रखे तो आपके टूर्नामेंट में कम खिलाड़ियों होंगे।</string>
+  <string name="showAdvancedSettings">एडवांस्ड सेटिंग्स दिखाएं</string>
   <string name="join">हिस्सा लें</string>
   <string name="withdraw">छोड़ के जाएं</string>
   <string name="points">अंक</string>
@@ -404,8 +434,8 @@
   <string name="country">देश</string>
   <string name="preferences">प्राथमिकताएं</string>
   <string name="inlineNotation">इनलाइन नोटेशन</string>
-  <string name="watchLichessTV">Chess TV देखें</string>
-  <string name="previouslyOnLichessTV">इससे पहले Chess TV पर</string>
+  <string name="watchLichessTV">Lichess TV देखें</string>
+  <string name="previouslyOnLichessTV">इससे पहले Lichess TV पर</string>
   <string name="onlinePlayers">ऑनलाइन खिलाड़ियों</string>
   <string name="activeToday">आज सक्रिय</string>
   <string name="activePlayers">सक्रिय  खिलाडी</string>
@@ -489,6 +519,7 @@
   <string name="thisAccountIsClosed">यह ख़ाता बंद है|</string>
   <string name="invalidUsernameOrPassword">अमान्य यूज़र का नाम या पासवर्ड</string>
   <string name="incorrectPassword">गलत पासवर्ड</string>
+  <string name="invalidAuthenticationCode">अवैध प्रमाणीकरण कोड</string>
   <string name="emailMeALink">मुझे एक लिंक ईमेल करें</string>
   <string name="currentPassword">वर्तमान पासवर्ड</string>
   <string name="newPassword">नया पासवर्ड</string>
@@ -545,7 +576,6 @@
   <string name="xVsYinZ">%1$s बनाम %2$s
 %3$s में</string>
   <string name="timeline">समयरेखा</string>
-  <string name="seeAllTournaments">सभी टूर्नामेंट देखें</string>
   <string name="starting">शुरू हो रहा है:</string>
   <string name="allInformationIsPublicAndOptional">सभी जानकारी सार्वजनिक और वैकल्पिक है।</string>
   <string name="yourCityRegionOrDepartment">आपका शहर, क्षेत्र, या प्रांत।</string>
@@ -565,7 +595,7 @@
   <string name="clock">घड़ी</string>
   <string name="unauthorizedError">पहुँच अनधिकृत है।</string>
   <string name="noInternetConnection">कोई इंटरनेट कनेक्शन नहीं। आप अब भी मेनू से ऑफ़लाइन खेल सकते हैं।</string>
-  <string name="connectedToLichess">अब आप live.chess-online.com से जुड़े हैं</string>
+  <string name="connectedToLichess">अब आप lichess.org से जुड़े हैं</string>
   <string name="signedOut">आप खातें से बहार आ चुके हैं</string>
   <string name="loginSuccessful">अब आप खाते के अंदर हैं</string>
   <string name="playOnTheBoardOffline">बोर्ड पर</string>
@@ -650,6 +680,10 @@
   <string name="tournamentMayHaveBeenCanceled">टूर्नमेंट रद्द् हो गया होगा, अगर सभी खिलाड़ी टूर्नमेंट शुरू होने से पहले चले तौंरमेंट छोड़ चुके है</string>
   <string name="returnToTournamentsHomepage">वापिस लौटें</string>
   <string name="weeklyPerfTypeRatingDistribution">इस हफ्ते का %s रेटिंग वितरण</string>
+  <plurals name="nbPerfTypePlayersThisWeek">
+    <item quantity="one">%1$s %2$s खिलाड़ी इस सप्ताह।</item>
+    <item quantity="other">%1$s %2$s खिलाड़ियों इस सप्ताह।</item>
+  </plurals>
   <string name="yourPerfTypeRatingIsRating">आपकी %1$s रेटिंग %2$s है</string>
   <string name="youAreBetterThanPercentOfPerfTypePlayers">आप %1$s खेलने वालो से बेहतर हो, %2$s मे</string>
   <string name="youDoNotHaveAnEstablishedPerfTypeRating">आपके पास स्थापित %s रेटिंग नहीं है</string>
@@ -659,11 +693,12 @@
   <string name="weHaveSentYouAnEmailTo">हम%s के लिए एक ईमेल भेज दिया है। अपना पासवर्ड रीसेट करने के लिए ईमेल में लिंक पर क्लिक करें।</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">दर्ज करके, आप हमारे %s द्वारा बाध्य होने के लिए सहमत हैं।</string>
   <string name="networkLagBetweenYouAndLichess">आप और lichess के बीच नेटवर्क के अंतराल</string>
-  <string name="timeToProcessAMoveOnLichessServer">Chess-Online सर्वर पर एक कदम प्रक्रिया के लिए समय</string>
+  <string name="timeToProcessAMoveOnLichessServer">Lichess सर्वर पर एक कदम प्रक्रिया के लिए समय</string>
   <string name="downloadAnnotated">एनोटेट डाउनलोड करें</string>
   <string name="downloadRaw">कच्चा डाउनलोड करें</string>
   <string name="downloadImported">डाउनलोड आयातित</string>
   <string name="printFriendlyPDF">प्रिंट-अनुकूल PDF</string>
+  <string name="crosstable">विजय और पराजय का अभिलेख</string>
   <string name="youCanAlsoScrollOverTheBoardToMoveInTheGame">आप खेल में जाने के लिए बोर्ड पर भी स्क्रॉल कर सकते हैं।</string>
   <string name="analysisShapesHowTo">बोर्ड पर मंडलियां और तीरों को आकर्षित करने के लिए shift + click या right-click दबाएं</string>
   <string name="confirmResignationAndDrawOffers">इस्तीफे की पुष्टि करें और ड्रा ऑफर करें</string>
@@ -687,7 +722,7 @@
   <string name="alternativelyYouCanX">वैकल्पिक रूप से आप %s कर सकते हैं।</string>
   <string name="revokeAllSessions">सभी सत्र रद्द</string>
   <string name="playChessEverywhere">हर जगह शतरंज खेलें</string>
-  <string name="asFreeAsLichess">Chess-Online जैसा मुक्त</string>
+  <string name="asFreeAsLichess">Lichess जैसा मुक्त</string>
   <string name="builtForTheLoveOfChessNotMoney">शतरंज के प्यार के लिए निर्मित, धन के लिए नहीं</string>
   <string name="everybodyGetsAllFeaturesForFree">हर कोई मुफ्त में सभी सुविधाओं प्राप्त करता है</string>
   <string name="zeroAdvertisement">शून्य विज्ञापन</string>
@@ -727,7 +762,7 @@
   <string name="usernameSuffixInvalid">जो नाम आप उपयोग करते, वह किसी अक्षर या संख्या के साथ समाप्त होना चाहिए ।</string>
   <string name="usernameCharsInvalid">जो नाम आप उपयोग करते, उनमें सिर्फ पत्र, संख्या, अंडरस्कोर और हाइफ़न होना चाहिए ।</string>
   <string name="usernameUnacceptable">यह उपयोगकर्ता नाम स्वीकार्य नहीं है।</string>
-  <string name="directlySupportLichess">Chess-Online का समर्थन करें</string>
+  <string name="directlySupportLichess">Lichess का समर्थन करें</string>
   <string name="playChessInStyle">शैली में शतरंज खेलें</string>
   <string name="chessBasics">शतरंज मूल बातें</string>
   <string name="coaches">कोच</string>
@@ -780,6 +815,10 @@
   <string name="reviewWhiteMistakes">सफ़ेद पहलू के गलती को देखें</string>
   <string name="reviewBlackMistakes">काला पहलू के गलती को देखें</string>
   <string name="advantage">लाभ</string>
+  <plurals name="nbSeconds">
+    <item quantity="one">%s सेकंड</item>
+    <item quantity="other">%s सेकंड</item>
+  </plurals>
   <string name="opening">ओपनिंग</string>
   <string name="middlegame">मिडलगेम</string>
   <string name="endgame">एंडगेम</string>
@@ -794,4 +833,8 @@
   <string name="playVariationToCreateConditionalPremoves">आपके सक्रिय कदमों का अनुक्रम करो, जैसे आप खेल में प्रयोग करेंगे</string>
   <string name="noConditionalPremoves">सक्रिय कदम का अवश्य नहीं है</string>
   <string name="playX">%s खेलें</string>
+  <plurals name="andSaveNbPremoveLines">
+    <item quantity="one">बाद में %s सक्रिय कदम को बचाओ</item>
+    <item quantity="other">बाद में %s सक्रिय कदम को बचाओ</item>
+  </plurals>
 </resources>

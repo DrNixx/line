@@ -224,6 +224,8 @@
   <string name="yourPerfRatingIsTooLow">Jūsų „%1$s“ reitingas (%2$s) yra per žemas</string>
   <string name="ratedMoreThanInPerf">≥ %1$s %2$s reitingas</string>
   <string name="ratedLessThanInPerf">≤ %1$s %2$s reitingas</string>
+  <string name="mustBeInTeam">Turite būti komandos „%s“ nariu</string>
+  <string name="youAreNotInTeam">Jūs nesate komandos „%s“ narys</string>
   <string name="backToGame">Grįžti į partiją</string>
   <string name="siteDescription">Nemokamas šachmatų žaidimas internete. Žaiskite šachmatais patrauklioje sąsajoje. Nebūtina registracija, nėra reklamų, nereikia jokių priedų. Žaiskite šachmatais prieš kompiuterį, draugus arba atsitiktinius varžovus.</string>
   <string name="teams">Komandos</string>
@@ -400,6 +402,7 @@ kompiuterinę analizę, partijos pokalbį bei URL dalinimuisi.</string>
   <string name="troll">„Troll\'ino“</string>
   <string name="other">Kita</string>
   <string name="reportDescriptionHelp">Įdėkite nuorodą į žaidimą(-us) ir paaiškinkite, kas netinkamo yra šio vartotojo elgsenoje.</string>
+  <string name="error.provideOneCheatedGameLink">Pateikite bent vieną nuorodą į sukčiautą partiją.</string>
   <string name="by">nuo %s</string>
   <string name="thisTopicIsNowClosed">Ši tema yra uždaryta.</string>
   <string name="theming">Išvaizda</string>
@@ -417,6 +420,7 @@ kompiuterinę analizę, partijos pokalbį bei URL dalinimuisi.</string>
   <string name="thisAccountIsClosed">Ši paskyra uždaryta.</string>
   <string name="invalidUsernameOrPassword">Neteisingas prisijungimo vardas arba slaptažodis</string>
   <string name="incorrectPassword">Neteisingas slaptažodis</string>
+  <string name="invalidAuthenticationCode">Neteisingas patvirtinimo kodas</string>
   <string name="emailMeALink">Atsiųsti nuorodą el. paštu</string>
   <string name="currentPassword">Esamas slaptažodis</string>
   <string name="newPassword">Naujas slaptažodis</string>
@@ -473,7 +477,6 @@ kompiuterinę analizę, partijos pokalbį bei URL dalinimuisi.</string>
   <string name="xVsYinZ">%1$s prieš %2$s
 (%3$s)</string>
   <string name="timeline">Veikla</string>
-  <string name="seeAllTournaments">Pamatyti visus turnyrus</string>
   <string name="starting">Prasideda:</string>
   <string name="allInformationIsPublicAndOptional">Visa informacija yra vieša ir neprivaloma.</string>
   <string name="yourCityRegionOrDepartment">Jūsų miestas, regionas ar provincija.</string>
@@ -485,7 +488,7 @@ kompiuterinę analizę, partijos pokalbį bei URL dalinimuisi.</string>
   <string name="clock">Laikrodis</string>
   <string name="unauthorizedError">Priėjimas neautorizuotas.</string>
   <string name="noInternetConnection">Nėra interneto ryšio. Pasirinkę per meniu galite žaisti be interneto.</string>
-  <string name="connectedToLichess">Prisijungėte prie live.chess-online.com</string>
+  <string name="connectedToLichess">Prisijungėte prie lichess.org</string>
   <string name="signedOut">Atsijungėte</string>
   <string name="loginSuccessful">Prisijungėte</string>
   <string name="playOnTheBoardOffline">Dviese</string>
@@ -526,6 +529,9 @@ kompiuterinę analizę, partijos pokalbį bei URL dalinimuisi.</string>
   <string name="mobileApp">Mobilioji programėlė</string>
   <string name="webmasters">Svetainių kūrėjams</string>
   <string name="about">Apie</string>
+  <string name="aboutX">Apie %s</string>
+  <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s yra nemokamas (%2$s), laisvas, neturintis reklamų, atviro kodo šachmatų serveris.</string>
+  <string name="really">tikrai</string>
   <string name="contribute">Prisidėkite</string>
   <string name="contact">Susisiekite</string>
   <string name="termsOfService">Naudojimosi sąlygos</string>

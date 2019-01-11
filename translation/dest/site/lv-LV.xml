@@ -139,9 +139,9 @@
   <string name="viewInFullSize">Skatīt pilnā izmērā</string>
   <string name="logOut">Izrakstīties</string>
   <string name="signIn">Ierakstīties</string>
-  <string name="newToLichess">Jauns Chess-Online lietotājs?</string>
+  <string name="newToLichess">Jauns Lichess lietotājs?</string>
   <string name="youNeedAnAccountToDoThat">Lai veiktu šo darbību, nepieciešams konts</string>
-  <string name="signUp">Izveidod kontu</string>
+  <string name="signUp">Reģistrēties</string>
   <string name="computersAreNotAllowedToPlay">Datoriem un spēlētājiem, kuri izmanto datoru palīdzību, nav atļauts spēlēt. Lūdzu, spēlējot neizmantojiet šaha programmu, datubāžu vai citu spēlētāju palīdzību. Aicinām neizmantot vairākus kontus - tas var novest pie piekļuves pārtraukšanas.</string>
   <string name="games">Spēles</string>
   <string name="forum">Forums</string>
@@ -324,6 +324,8 @@
   <string name="yourPerfRatingIsTooLow">Tavs %1$s reitings (%2$s) ir pārāk zems</string>
   <string name="ratedMoreThanInPerf">%2$s reitings ≥ %1$s</string>
   <string name="ratedLessThanInPerf">%2$s reitings ≤ %1$s</string>
+  <string name="mustBeInTeam">Jābūt komandas %s dalībniekam</string>
+  <string name="youAreNotInTeam">Tu neesi komandas %s dalībnieks</string>
   <string name="backToGame">Atpakaļ pie spēles</string>
   <string name="siteDescription">Bezmaksas Šahs tiešsaistē. Spēlē Šahu tīrā saskarnē. Bez reģistrācijas, bez reklāmām, bez papildus programmatūras. Spēlē Šahu pret datoru, draugiem vai nejaušiem pretiniekiem.</string>
   <string name="teams">Komandas</string>
@@ -464,8 +466,8 @@
   <string name="country">Valsts</string>
   <string name="preferences">Uzstādījumi</string>
   <string name="inlineNotation">Inline notācija</string>
-  <string name="watchLichessTV">Skaties Chess TV</string>
-  <string name="previouslyOnLichessTV">Iepriekš Chess TV</string>
+  <string name="watchLichessTV">Skaties Lichess TV</string>
+  <string name="previouslyOnLichessTV">Iepriekš Lichess TV</string>
   <string name="onlinePlayers">Spēlētāji tiešsaistē</string>
   <string name="activeToday">Aktīvākie šodien</string>
   <string name="activePlayers">Aktīvākie spēlētāji</string>
@@ -475,7 +477,7 @@
   <string name="findTheBestMoveForWhite">Atrodi vislabāko gājienu baltajiem</string>
   <string name="findTheBestMoveForBlack">Atrodi vislabāko gājienu melnajiem</string>
   <string name="toTrackYourProgress">Izsekot jūsu progresu:</string>
-  <string name="trainingSignupExplanation">Lai nodrošinātu vislabāko treniņu, Chess-Online piemeklēs uzdevumus, kas atbilst jūsu spējām.</string>
+  <string name="trainingSignupExplanation">Lai nodrošinātu vislabāko treniņu, Lichess piemeklēs uzdevumus, kas atbilst jūsu spējām.</string>
   <string name="puzzleId">Uzdevums %s</string>
   <string name="puzzleOfTheDay">Dienas uzdevums</string>
   <string name="clickToSolve">Uzklikšķini lai atrisinātu</string>
@@ -534,6 +536,7 @@
   <string name="troll">Troļļošana</string>
   <string name="other">Cits</string>
   <string name="reportDescriptionHelp">Iekopē saiti uz spēli un paskaidro, kas nav kārtībā ar lietotāja uzvedību.</string>
+  <string name="error.provideOneCheatedGameLink">Lūdzu, norādiet vismaz vienu saiti uz spēli, kurā pretinieks ir krāpies.</string>
   <string name="by">No %s</string>
   <string name="thisTopicIsNowClosed">Šis temats tagad ir slēgts.</string>
   <string name="theming">Tēmas</string>
@@ -551,6 +554,7 @@
   <string name="thisAccountIsClosed">Konts slēgts.</string>
   <string name="invalidUsernameOrPassword">Nepareizs lietotājvārds vai parole</string>
   <string name="incorrectPassword">Nepareiza parole</string>
+  <string name="invalidAuthenticationCode">Nederīgs autentifikācijas kods</string>
   <string name="emailMeALink">Atsūtīt saiti uz epastu</string>
   <string name="currentPassword">Esošā parole</string>
   <string name="newPassword">Jaunā parole</string>
@@ -606,7 +610,6 @@
   <string name="defeat">Zaudējums</string>
   <string name="xVsYinZ">%1$s pret %2$s %3$s</string>
   <string name="timeline">Laika grafiks</string>
-  <string name="seeAllTournaments">Skatīt visus turnīrus</string>
   <string name="starting">Sāksies:</string>
   <string name="allInformationIsPublicAndOptional">Visa informācija ir publiska un nav obligāta.</string>
   <string name="yourCityRegionOrDepartment">Tava pilsēta, novads vai province.</string>
@@ -628,7 +631,7 @@
   <string name="clock">Pulkstenis</string>
   <string name="unauthorizedError">Neautorizēta piekļuve.</string>
   <string name="noInternetConnection">Nav interneta pieslēguma. Tu joprojām vari spēlēt bezsaistē.</string>
-  <string name="connectedToLichess">Tu esi pieslēdzies live.chess-online.com</string>
+  <string name="connectedToLichess">Tu esi pieslēdzies lichess.org</string>
   <string name="signedOut">Tu esi atslēdzies</string>
   <string name="loginSuccessful">Pieslēgšanās veiksmīga</string>
   <string name="playOnTheBoardOffline">Spēlēt bezsaistē, kā pie galda</string>
@@ -674,6 +677,9 @@
   <string name="mobileApp">Mobilā aplikācija</string>
   <string name="webmasters">Tīmekļa pārziņi</string>
   <string name="about">Par</string>
+  <string name="aboutX">Par %s</string>
+  <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s ir bezmaksas (%2$s), bez reklāmu, atvērta koda šaha serveris.</string>
+  <string name="really">patiešām</string>
   <string name="contribute">Dot ieguldījumu</string>
   <string name="contact">Kontakti</string>
   <string name="termsOfService">Noteikumi</string>
@@ -697,7 +703,7 @@
   <string name="simulClockHint">Fišera pulksteņa uzstādīšana. Jo vairāk spēlētāji ir pretiniekos, jo vairāk laika tev varētu vajadzēt.</string>
   <string name="simulAddExtraTime">Tu vari pievienot papildus laiku savam pulkstenim lai vieglāk tiktu galā ar simultānseansu.</string>
   <string name="simulHostExtraTime">Vadītāja papildus pulksteņa laiks</string>
-  <string name="lichessTournaments">Chess-Online turnīri</string>
+  <string name="lichessTournaments">Lichess turnīri</string>
   <string name="tournamentFAQ">Arena turnīru BUJ</string>
   <string name="tournamentOfficial">Oficiāli</string>
   <string name="timeBeforeTournamentStarts">Laiks līdz turnīra sākumam</string>
@@ -799,7 +805,7 @@
   <string name="usernameSuffixInvalid">Lietotājvārdam jābeidzas ar burtu vai ciparu.</string>
   <string name="usernameCharsInvalid">Lietotājvārds drīkst saturēt tikai burtus, ciparus, pasvītras un defises.</string>
   <string name="usernameUnacceptable">Šāds lietotājvārds nav pieņemams.</string>
-  <string name="directlySupportLichess">Tiešais Chess-Online atbalsts</string>
+  <string name="directlySupportLichess">Tiešais Lichess atbalsts</string>
   <string name="playChessInStyle">Spēlē šahu stilīgi</string>
   <string name="chessBasics">Šaha pamati</string>
   <string name="coaches">Treneri</string>

@@ -63,7 +63,7 @@
   <string name="variantLoss">Wariant przegrany</string>
   <string name="variantWin">Wariant wygrany</string>
   <string name="insufficientMaterial">Niewystarczający materiał</string>
-  <string name="pawnMove">Ruch pionkiem</string>
+  <string name="pawnMove">Ruch pionem</string>
   <string name="capture">Bicie</string>
   <string name="close">Zamknij</string>
   <string name="winning">Wygrywa</string>
@@ -144,7 +144,7 @@
   <string name="viewInFullSize">Zobacz w pełnym rozmiarze</string>
   <string name="logOut">Wyloguj</string>
   <string name="signIn">Zaloguj się</string>
-  <string name="newToLichess">Nowy na Chess-Online?</string>
+  <string name="newToLichess">Nowy na Lichess?</string>
   <string name="youNeedAnAccountToDoThat">Musisz mieć konto, aby to zrobić</string>
   <string name="signUp">Zarejestruj się</string>
   <string name="computersAreNotAllowedToPlay">Podczas gry niedozwolone jest korzystanie z pomocy programów szachowych, baz danych oraz pomocy innych graczy. Zakładanie wielu kont jest zabronione i prowadzi do zablokowania użytkownika.</string>
@@ -344,6 +344,8 @@
   <string name="yourPerfRatingIsTooLow">Twój ranking %2$s (%1$s) jest zbyt niski</string>
   <string name="ratedMoreThanInPerf">Ranking ≥ %1$s (%2$s)</string>
   <string name="ratedLessThanInPerf">Ranking ≤ %1$s (%2$s)</string>
+  <string name="mustBeInTeam">Musisz należeć do klubu %s</string>
+  <string name="youAreNotInTeam">Nie należysz do klubu %s</string>
   <string name="backToGame">Wróć do partii</string>
   <string name="siteDescription">Darmowe szachy online. Zagraj teraz w szachy o przyjaznym interfejsie. Bez rejestracji, bez reklam, bez instalowania wtyczek. Zagraj w szachy z komputerem, znajomymi lub losowo wybranymi przeciwnikami.</string>
   <string name="teams">Kluby</string>
@@ -373,7 +375,7 @@
   <string name="filterGames">Filtruj partie</string>
   <string name="reset">Przywróć domyślne</string>
   <string name="apply">Zastosuj</string>
-  <string name="leaderboard">Najlepsi gracze</string>
+  <string name="leaderboard">Tablica wyników</string>
   <string name="pasteTheFenStringHere">Wklej tutaj pozycję w formacie FEN</string>
   <string name="pasteThePgnStringHere">Poniżej wklej partię w formacie PGN</string>
   <string name="fromPosition">Z pozycji</string>
@@ -489,8 +491,8 @@
   <string name="country">Kraj</string>
   <string name="preferences">Ustawienia</string>
   <string name="inlineNotation">Notacja inline</string>
-  <string name="watchLichessTV">Oglądaj Chess TV</string>
-  <string name="previouslyOnLichessTV">Poprzednio w Chess TV</string>
+  <string name="watchLichessTV">Oglądaj Lichess TV</string>
+  <string name="previouslyOnLichessTV">Poprzednio w Lichess TV</string>
   <string name="onlinePlayers">Gracze online</string>
   <string name="activeToday">Aktywni dzisiaj</string>
   <string name="activePlayers">Aktywni gracze</string>
@@ -500,7 +502,7 @@
   <string name="findTheBestMoveForWhite">Znajdź najlepszy ruch dla białych.</string>
   <string name="findTheBestMoveForBlack">Znajdź najlepszy ruch dla czarnych.</string>
   <string name="toTrackYourProgress">Zarejestruj się aby śledzić swoje postępy</string>
-  <string name="trainingSignupExplanation">Chess-Online będzie dodawał zadania dostosowane do twoich umiejętności.</string>
+  <string name="trainingSignupExplanation">Lichess będzie dodawał zadania dostosowane do twoich umiejętności.</string>
   <string name="puzzleId">Zadanie %s</string>
   <string name="puzzleOfTheDay">Zadanie dnia</string>
   <string name="clickToSolve">Kliknij, aby rozwiązać</string>
@@ -555,12 +557,13 @@
   <string name="reportAUser">Zgłoś użytkownika</string>
   <string name="user">Użytkownik</string>
   <string name="reason">Powód</string>
-  <string name="whatIsIheMatter">Co się stało?</string>
+  <string name="whatIsIheMatter">Jakie to ma znaczenie?</string>
   <string name="cheat">Oszust</string>
-  <string name="insult">Wyzwiska</string>
+  <string name="insult">Znieważenie</string>
   <string name="troll">Natręt (troll)</string>
   <string name="other">Inne</string>
   <string name="reportDescriptionHelp">Wklej link do gry i wyjaśnij, dlaczego zachowanie użytkownika jest nieprawidłowe. Nie wystarczy napisać \"oszukuje\", powiedz nam na jakiej podstawie doszedłeś do takiego wniosku. Twoje zgłoszenie będzie zweryfikowane szybciej jeżeli napiszesz je w języku angielskim.</string>
+  <string name="error.provideOneCheatedGameLink">Proszę podać przynajmniej jeden link do podejrzanej o oszustwo gry.</string>
   <string name="by">autor %s</string>
   <string name="thisTopicIsNowClosed">Ten temat został zamknięty.</string>
   <string name="theming">Wygląd</string>
@@ -578,6 +581,7 @@
   <string name="thisAccountIsClosed">Konto zostało zamknięte.</string>
   <string name="invalidUsernameOrPassword">Niepoprawna nazwa użytkownika lub niepoprawne hasło</string>
   <string name="incorrectPassword">Nieprawidłowe hasło</string>
+  <string name="invalidAuthenticationCode">Nieprawidłowy kod uwierzytelniający</string>
   <string name="emailMeALink">Wyślij mi link</string>
   <string name="currentPassword">Aktualne hasło</string>
   <string name="newPassword">Nowe hasło</string>
@@ -633,7 +637,6 @@
   <string name="defeat">Przegrana</string>
   <string name="xVsYinZ">%1$s vs %2$s w %3$s</string>
   <string name="timeline">Historia</string>
-  <string name="seeAllTournaments">Zobacz wszystkie turnieje</string>
   <string name="starting">Zaczynają się:</string>
   <string name="allInformationIsPublicAndOptional">Poniższe informacje będą publicznie dostępne. Nie musisz ich podawać.</string>
   <string name="yourCityRegionOrDepartment">Twoje miasto, region lub województwo</string>
@@ -657,7 +660,7 @@
   <string name="clock">Zegar</string>
   <string name="unauthorizedError">Brak dostępu.</string>
   <string name="noInternetConnection">Brak połączenia. Możesz jednak wybrać z menu opcję gry offline.</string>
-  <string name="connectedToLichess">Zostałeś połączony z live.chess-online.com</string>
+  <string name="connectedToLichess">Zostałeś połączony z lichess.org</string>
   <string name="signedOut">Wylogowałeś się</string>
   <string name="loginSuccessful">Jesteś zalogowany</string>
   <string name="playOnTheBoardOffline">Graj offline</string>
@@ -704,6 +707,9 @@
   <string name="mobileApp">Aplikacja mobilna</string>
   <string name="webmasters">Webmasterzy</string>
   <string name="about">Informacje o</string>
+  <string name="aboutX">Informacje o %s</string>
+  <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s jest darmowym (%2$s), bez reklam, o otwartym kodzie źródłowym serwerem szachowym.</string>
+  <string name="really">naprawdę</string>
   <string name="contribute">Wsparcie</string>
   <string name="contact">Kontakt</string>
   <string name="termsOfService">Zasady</string>
@@ -727,7 +733,7 @@
   <string name="simulClockHint">Ustawienie zegara Fischera. Przy większej ilości przeciwników możesz potrzebować więcej czasu.</string>
   <string name="simulAddExtraTime">Aby ułatwić sobie rozegranie symultany możesz ustawić dodatkowy czas dla siebie.</string>
   <string name="simulHostExtraTime">Dodatkowy czas dla symultanisty</string>
-  <string name="lichessTournaments">Turnieje Chess-Online</string>
+  <string name="lichessTournaments">Turnieje Lichess</string>
   <string name="tournamentFAQ">Turnieje typu Arena FAQ</string>
   <string name="tournamentOfficial">Oficjalny</string>
   <string name="timeBeforeTournamentStarts">Czas do rozpoczęcia turnieju</string>
@@ -831,7 +837,7 @@
   <string name="usernameSuffixInvalid">Nazwa użytkownika musi kończyć się literą lub liczbą.</string>
   <string name="usernameCharsInvalid">Nazwa użytkownika może zawierać tylko litery, cyfry, znaki podkreślenia i myślniki.</string>
   <string name="usernameUnacceptable">Ta nazwa użytkownika jest niedozwolona.</string>
-  <string name="directlySupportLichess">Wspomóż Chess-Online</string>
+  <string name="directlySupportLichess">Wspomóż Lichess</string>
   <string name="playChessInStyle">Graj w szachy z klasą</string>
   <string name="chessBasics">Podstawy gry</string>
   <string name="coaches">Trenerzy</string>

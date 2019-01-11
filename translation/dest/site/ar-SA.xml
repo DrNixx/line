@@ -36,7 +36,7 @@
   <string name="forceResignation">إعلن فوزك</string>
   <string name="forceDraw">إعلن التعادل</string>
   <string name="talkInChat">كن حسن الخلق في الدردشة!</string>
-  <string name="theFirstPersonToComeOnThisUrlWillPlayWithYou">أول من يأتي لهذا الرابط سيكون خصمك</string>
+  <string name="theFirstPersonToComeOnThisUrlWillPlayWithYou">أول من يأتي لهذا الرابط. سيلعب معك.</string>
   <string name="whiteResigned">الأبيض استسلم</string>
   <string name="blackResigned">الأسود استسلم</string>
   <string name="whiteLeftTheGame">الأبيض ترك المباراة</string>
@@ -210,7 +210,7 @@
     <item quantity="many">%s لغز</item>
     <item quantity="other">%s لغز</item>
   </plurals>
-  <string name="gamesPlayed">عدد المباريات</string>
+  <string name="gamesPlayed">المباريات الملعوبة</string>
   <plurals name="nbGamesWithYou">
     <item quantity="zero">%s مباراة معك</item>
     <item quantity="one">%s مباراة معك</item>
@@ -384,6 +384,8 @@
   <string name="yourPerfRatingIsTooLow">تقييمك في %1$s وقدره %2$s منخفض جدًا</string>
   <string name="ratedMoreThanInPerf">تقييم %1$s على الأقل %2$s</string>
   <string name="ratedLessThanInPerf">تقييم %1$s فأقل %2$s</string>
+  <string name="mustBeInTeam">يجب أن تكون في فريق %s</string>
+  <string name="youAreNotInTeam">عذراََ, أنت لست عضو في فريق %s</string>
   <string name="backToGame">العودة للمباراة</string>
   <string name="siteDescription">موقع شطرنج مجاني. العب الشطرنج الآن بتصميم نظيف، دون تسجيل او دعايات أو إضافات برمجية. العب الشطرنج مع الحاسب، الأصدقاء أو خصوما من حول الكرة الأرضية</string>
   <string name="teams">الفِرق</string>
@@ -489,6 +491,12 @@
   <string name="tournamentCalendar">جدول البطولات</string>
   <string name="conditionOfEntry">شروط الدخول:</string>
   <string name="advancedSettings">إعدادات متقدمة</string>
+  <string name="safeTournamentName">اختر اسماً ملائماً لهذه البطولة.</string>
+  <string name="inappropriateNameWarning">أي شيء غير مناسب ولو حتى قليلاً يمكن أن يعرّض حسابك للإغلاق.</string>
+  <string name="emptyTournamentName">أترك الحقل فارغاً وسيتم تسمية البطولة باسم غراند ماستر عشوائي.</string>
+  <string name="recommendNotTouching">نوصي بعدم تغيير هذه الخيارات.</string>
+  <string name="fewerPlayers">إذا قمت بتعيين شروط دخول للبطولة فقد يكون لديك عدد لاعبين أقل.</string>
+  <string name="showAdvancedSettings">إظهار الإعدادات المتقدمة</string>
   <string name="join">إشترك</string>
   <string name="withdraw">انسحاب</string>
   <string name="points">النقاط</string>
@@ -609,6 +617,7 @@
   <string name="troll">إزعاج</string>
   <string name="other">أخرى</string>
   <string name="reportDescriptionHelp">الصق رابط المباراة (المباريات) واشرح بالتفصيل المشكلة في تصرف هذا المستحدم. لا تقل فقط \"انهم يغشون\"، ولكن اشرح لنا سبب استنتاجك. سيكون الرد أسرع إن كتبت بالإنكليزية.</string>
+  <string name="error.provideOneCheatedGameLink">برجاء تقديم رابط واحد علي الأقل لمباراة حدث فيها غش.</string>
   <string name="by">كتبها %s</string>
   <string name="thisTopicIsNowClosed">هذا الموضوع مغلق الآن.</string>
   <string name="theming">السمات</string>
@@ -626,6 +635,7 @@
   <string name="thisAccountIsClosed">تم إغلاق هذا الحساب.</string>
   <string name="invalidUsernameOrPassword">اسم المستخدم خطأ أو كلمة المرور غير صحيحة</string>
   <string name="incorrectPassword">كلمة المرور غير صحيحة</string>
+  <string name="invalidAuthenticationCode">رمز مصادقة غير صحيح</string>
   <string name="emailMeALink">أرسل لي الرابط بالبريد الإلكتروني</string>
   <string name="currentPassword">كلمة المرور الحالية</string>
   <string name="newPassword">كلمة المرور الجديدة</string>
@@ -681,7 +691,6 @@
   <string name="defeat">هزيمة</string>
   <string name="xVsYinZ">%1$s ضد %2$s في %3$s</string>
   <string name="timeline">الجدول الزمني</string>
-  <string name="seeAllTournaments">شاهد كل المسابقات</string>
   <string name="starting">تبدأ في:</string>
   <string name="allInformationIsPublicAndOptional">كل المعلومات متاحة للجميع وهي اختيارية.</string>
   <string name="yourCityRegionOrDepartment">المدينة والمنطقة</string>
@@ -709,7 +718,7 @@
   <string name="clock">الوقت</string>
   <string name="unauthorizedError">الوصول غير مصرح به.</string>
   <string name="noInternetConnection">لايوجد اتصال بالإنترنت. لا يزال يمكنك اللعب دون اتصال من القائمة.</string>
-  <string name="connectedToLichess">أنت الآن متصل بـ live.chess-online.com</string>
+  <string name="connectedToLichess">أنت الآن متصل بـ lichess.org</string>
   <string name="signedOut">تم تسجيل الخروج.</string>
   <string name="loginSuccessful">تم الدخول بنجاح</string>
   <string name="playOnTheBoardOffline">على الرقعة</string>
@@ -808,7 +817,7 @@
     <item quantity="other">%2$s %1$s لاعب هذا الإسبوع.</item>
   </plurals>
   <string name="yourPerfTypeRatingIsRating">تقييمك في %1$s هو %2$s.</string>
-  <string name="youAreBetterThanPercentOfPerfTypePlayers">أنت أفضل من %1$s من %2$s من اللاعبين.</string>
+  <string name="youAreBetterThanPercentOfPerfTypePlayers">أنت أفضل من %1$s من %2$s لاعب.</string>
   <string name="youDoNotHaveAnEstablishedPerfTypeRating">ليس لديك تقييم ثابت في %s.</string>
   <string name="checkYourEmail">تحقق من بريدك الإلكتروني</string>
   <string name="weHaveSentYouAnEmailClickTheLink">أرسلنا رسالة لبريدك الإلكتروني. فضلا اضغط الرابط فيها لتفعيل حسابك</string>
@@ -960,7 +969,7 @@
   <string name="registerToSendChallenges">الرجاء التسجيل لإرسال التحديات.</string>
   <string name="youCannotChallengeX">لا يمكنك تحدي %s.</string>
   <string name="xDoesNotAcceptChallenges">%s لا يقبل التحديات.</string>
-  <string name="yourXRatingIsTooFarFromY">تقييمك %1$s بعيد جداً عن %2$s.</string>
+  <string name="yourXRatingIsTooFarFromY">تقييمك %1$s لا يؤهلك لمنافسة %2$s.</string>
   <string name="cannotChallengeDueToProvisionalXRating">لا يمكن اتمام التحدي بسبب التقييم %s المؤقت.</string>
   <string name="xOnlyAcceptsChallengesFromFriends">%s يقبل التحديات من الأصدقاء فقط.</string>
   <string name="conditionalPremoves">تحريكات شرطية</string>

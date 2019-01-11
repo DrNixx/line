@@ -258,7 +258,7 @@
   <string name="puzzleFailed">sina pakala e musi</string>
   <string name="butYouCanKeepTrying">taso la sina ken awen oko pali</string>
   <string name="wasThisPuzzleAnyGood">musi ni li pona ala pona?</string>
-  <string name="pleaseVotePuzzle">o pona e Chess-Online. o pana e pilin sina kepeken nena sewi anu nena anpa.</string>
+  <string name="pleaseVotePuzzle">o pona e Lichess. o pana e pilin sina kepeken nena sewi anu nena anpa.</string>
   <string name="thankYou">pona tawa sina!</string>
   <string name="fromGameLink">tan musi nanpa %s</string>
   <string name="continueTraining">o awen kama sona</string>
@@ -326,7 +326,6 @@
   <string name="xAnsweredY">jan %1$s li toki e ni: %2$s</string>
   <string name="xCommentedY">jan %1$s li toki e ni: %2$s</string>
   <string name="victory">pini pona!</string>
-  <string name="seeAllTournaments">o lukin e musi pi musi mute</string>
   <string name="starting">o open:</string>
   <string name="allInformationIsPublicAndOptional">sona ale li open. sina wile pana sona ala.</string>
   <string name="yourCityRegionOrDepartment">ma sina</string>

@@ -4,9 +4,9 @@
   <string name="playWithAFriend">Tefla við vin</string>
   <string name="playWithTheMachine">Tefla við tölvuna</string>
   <string name="toInviteSomeoneToPlayGiveThisUrl">Til að bjóða einhverjum að tefla, gefðu vefslóðina</string>
-  <string name="gameOver">Taflið búið</string>
+  <string name="gameOver">Leik lokið</string>
   <string name="waitingForOpponent">Bið eftir andstæðingi</string>
-  <string name="waiting">Bið</string>
+  <string name="waiting">Biður</string>
   <string name="yourTurn">Þú átt leik</string>
   <string name="aiNameLevelAiLevel">%1$s erfiðleiki %2$s</string>
   <string name="level">Stig</string>
@@ -58,10 +58,22 @@
   <string name="toggleLocalEvaluation">Kveikja á greiningu</string>
   <string name="deleteFromHere">Eyða héðan</string>
   <string name="move">Færa</string>
+  <string name="close">Loka</string>
+  <string name="winning">Vinnur</string>
+  <string name="losing">Tapar</string>
+  <string name="drawn">Jafntefli</string>
   <string name="unknown">Óþekktur</string>
+  <string name="whiteDrawBlack">Hvitur / Jafntefli / Svartur</string>
+  <string name="topGames">Bestir leikir</string>
+  <plurals name="mateInXHalfMoves">
+    <item quantity="one">Mát eftir %s hálfleik</item>
+    <item quantity="other">Mát eftir %s hálfleikum</item>
+  </plurals>
+  <string name="noGameFound">Enginn leikur fundinn</string>
   <string name="openingExplorer">Skoða opnanir</string>
   <string name="winPreventedBy50MoveRule">Enginn sigur vegna 50 leikja reglu</string>
   <string name="lossSavedBy50MoveRule">Bjargað frá tapi með 50 leikja reglu</string>
+  <string name="allSet">Allt tilbúið!</string>
   <string name="importPgn">Hlaða inn PGN</string>
   <string name="delete">Eyða</string>
   <string name="deleteThisImportedGame">Eyða þessum innhlaðna leik?</string>
@@ -95,7 +107,7 @@
   <string name="viewInFullSize">Skoða í fullri mynd</string>
   <string name="logOut">Skrá út</string>
   <string name="signIn">Skrá inn</string>
-  <string name="newToLichess">Nýr á Chess-Online?</string>
+  <string name="newToLichess">Nýr á Lichess?</string>
   <string name="youNeedAnAccountToDoThat">Þú þarft aðgang til að geta þetta</string>
   <string name="signUp">Sækja um</string>
   <string name="computersAreNotAllowedToPlay">Skákforrit eða skákmenn sem nota aðstoð skákforrita mega ekki tefla. Vinsamlegast ekki fá hjá frá tölvuforritum, gagnagrunnum eða öðrum spilurum meðan þú teflir</string>
@@ -164,6 +176,8 @@
   <string name="thisGameIsRated">Þetta er stigaleikur</string>
   <string name="rematch">Endurleikur</string>
   <string name="rematchOfferSent">Boð um endurtekinn leik sent</string>
+  <string name="rematchOfferSentWhite">Hvítur býður jafntefli</string>
+  <string name="rematchOfferSentBlack">Svartur býður jafntefli</string>
   <string name="rematchOfferAccepted">Boði um endurtekinn leik samþykkt</string>
   <string name="rematchOfferCanceled">Hætt við endurleik</string>
   <string name="rematchOfferDeclined">Endurleik hafnað</string>
@@ -336,7 +350,7 @@
   <string name="findTheBestMoveForWhite">Finndu besta leikinn fyrir hvítan.</string>
   <string name="findTheBestMoveForBlack">Finndu besta leikinn fyrir svartan</string>
   <string name="toTrackYourProgress">Til að fylgjast með bætingu:</string>
-  <string name="trainingSignupExplanation">Chess-Online lætur yður fá þrautir sem hæfa getu yðar sem gerir þjálfunina betri</string>
+  <string name="trainingSignupExplanation">Lichess lætur yður fá þrautir sem hæfa getu yðar sem gerir þjálfunina betri</string>
   <string name="puzzleId">Þraut %s</string>
   <string name="puzzleOfTheDay">Þraut dagsins</string>
   <string name="clickToSolve">Smelltu til að leysa</string>
@@ -454,7 +468,6 @@
   <string name="victory">Sigur!</string>
   <string name="defeat">Ósigur</string>
   <string name="timeline">Tímalína</string>
-  <string name="seeAllTournaments">Sjá öll skákmót</string>
   <string name="starting">Hefst:</string>
   <string name="allInformationIsPublicAndOptional">Allar upplýsingar hér eru aðgengilegar öllum.</string>
   <string name="yourCityRegionOrDepartment">Staður og land.</string>
@@ -473,7 +486,7 @@
   <string name="clock">Tími</string>
   <string name="unauthorizedError">Aðgangur óheimill</string>
   <string name="noInternetConnection">Engin tenging. Þú getur enn spilað ótengdur.</string>
-  <string name="connectedToLichess">Þú ert tengd(ur) við live.chess-online.com</string>
+  <string name="connectedToLichess">Þú ert tengd(ur) við lichess.org</string>
   <string name="signedOut">Þú ert útskráður</string>
   <string name="loginSuccessful">Þú ert innskráður</string>
   <string name="playOnTheBoardOffline">Yfir borðið</string>
@@ -537,7 +550,7 @@
   <string name="simulClockHint">Uppsetning á Fischer-klukku. Því fleiri andstæðinga sem þú teflir við, því meiri tíma gætirðu þurft.</string>
   <string name="simulAddExtraTime">Þú getur bætt við tíma til að hjálpa þér að ráða við hópskákina.</string>
   <string name="simulHostExtraTime">Aukatími á klukku þess sem hýsir.</string>
-  <string name="lichessTournaments">Chess-Online mót</string>
+  <string name="lichessTournaments">Lichess mót</string>
   <string name="tournamentFAQ">Leikvangsmót - Algengar spurningar</string>
   <string name="tournamentOfficial">Opinbert</string>
   <string name="timeBeforeTournamentStarts">Tími áður en mót hefst</string>

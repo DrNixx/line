@@ -207,6 +207,8 @@
   <string name="thisGameIsRated">این بازی رسمی است</string>
   <string name="rematch">بازی دوباره</string>
   <string name="rematchOfferSent">درخواست بازی دوباره فرستاده شد</string>
+  <string name="rematchOfferSentWhite">سفید درخواست بازی دوباره را می دهد</string>
+  <string name="rematchOfferSentBlack">سیاه درخواست بازی دوباره را می دهد</string>
   <string name="rematchOfferAccepted">درخواست بازی دوباره پذیرفته شد</string>
   <string name="rematchOfferCanceled">پیشنهاد بازی دوباره لغو شد</string>
   <string name="rematchOfferDeclined">پیشنهاد بازی دوباره رد شد</string>
@@ -298,6 +300,8 @@
   <string name="yourPerfRatingIsTooLow">امتیاز%1$s شما(%2$s) کمتر از حد مجاز است :/</string>
   <string name="ratedMoreThanInPerf">امتیاز %2$s بالاتر از %1$s لازم است.</string>
   <string name="ratedLessThanInPerf">برای ورود،امتیاز%2$s شما باید کمتر از%1$s باشد.</string>
+  <string name="mustBeInTeam">باید در تیمه %s باشید</string>
+  <string name="youAreNotInTeam">شما در تیمه %s نیستید</string>
   <string name="backToGame">بازگشت به بازی</string>
   <string name="siteDescription">شطرنج آنلاین رایگان. همین حالا شطرنج بازی کنید. بدون نیاز به ثبت نام، بدون تبلیغات، بدون نیاز به افزونه. بازی با کامپیوتر، دوستان و یا حریفان تصادفی.</string>
   <string name="teams">تیم‌ ها</string>
@@ -381,6 +385,14 @@
   <string name="standing">رتبه بندی</string>
   <string name="createANewTournament">درست کردن یک مسابقه ی جدید</string>
   <string name="tournamentCalendar">برنامه ی مسابقات</string>
+  <string name="conditionOfEntry">شرایط ورود:</string>
+  <string name="advancedSettings">تنظیمات پیشرفته</string>
+  <string name="safeTournamentName">یک نام بسیار امن برای مسابقات انتخاب کنید.</string>
+  <string name="inappropriateNameWarning">هرچیز حتی کمی نامناسب ممکن است باعث بسته شدن حساب کاربری شما بشود.</string>
+  <string name="emptyTournamentName">این مکان را خالی بگذارید تا به صورت تصادفی اسم یک استاد بزرگ برای مسابقات انتخاب شود.</string>
+  <string name="recommendNotTouching">توصیه میکنیم که تنظیمات پیشرفته را تغییر ندهید.</string>
+  <string name="fewerPlayers">اگر برای مسابقات شرایط ورود تعیین کنید بازیکنان کمتری وارد می شوند.</string>
+  <string name="showAdvancedSettings">نمایش تنظیمات پیشرفته</string>
   <string name="join">وارد شدن</string>
   <string name="withdraw">منصرف شدن</string>
   <string name="points">امتیازها</string>
@@ -424,6 +436,7 @@
   <string name="biography">زندگی نامه</string>
   <string name="country">کشور</string>
   <string name="preferences">تنظیمات عملکرد</string>
+  <string name="inlineNotation">نمایش اطلاعات درون خطها</string>
   <string name="watchLichessTV">تلویزیون لیچس را ببین</string>
   <string name="previouslyOnLichessTV">بازی قبلی در لیچس</string>
   <string name="onlinePlayers">بازکنان آنلاین</string>
@@ -492,6 +505,7 @@
   <string name="troll">ترول</string>
   <string name="other">موضوعات دیگر</string>
   <string name="reportDescriptionHelp">لینک بازی های این کاربر را قرار دهید و توضیع دهید خطای رفتار این بازیکن چه بوده است</string>
+  <string name="error.provideOneCheatedGameLink">لطفآ حداقل یک نمونه تقلب در بازی را مطرح کنید.</string>
   <string name="by">توسط %s</string>
   <string name="thisTopicIsNowClosed">این موضوع بسته شده است</string>
   <string name="theming">قالب</string>
@@ -509,6 +523,7 @@
   <string name="thisAccountIsClosed">این حساب بسته شده است</string>
   <string name="invalidUsernameOrPassword">نام کاربری یا رمز عبور نادرست است</string>
   <string name="incorrectPassword">رمزعبور اشتباه</string>
+  <string name="invalidAuthenticationCode">کد اصالت سنجی نامعتبر</string>
   <string name="emailMeALink">یک لینک به من ایمیل کنید</string>
   <string name="currentPassword">رمز جاری</string>
   <string name="newPassword">رمز جدید</string>
@@ -564,7 +579,6 @@
   <string name="defeat">شکست!</string>
   <string name="xVsYinZ">%1$s %3$s در مقابل %2$s</string>
   <string name="timeline">جدول زمانی</string>
-  <string name="seeAllTournaments">دیدن تمام مسابقات</string>
   <string name="starting">شروع</string>
   <string name="allInformationIsPublicAndOptional">تمامی اطلاعات عمومی و اختیاری است.</string>
   <string name="yourCityRegionOrDepartment">شهر شما، منطقه، و یا استان.</string>
@@ -584,7 +598,7 @@
   <string name="clock">ساعت</string>
   <string name="unauthorizedError">دسترسی مقدور نیست</string>
   <string name="noInternetConnection">ارتباط اینترنتی قطع است. همچنان می‌توانید از طریق منو به صورت آفلاین بازی کنید.</string>
-  <string name="connectedToLichess">اکنون به live.chess-online.com وصل شده‌اید.</string>
+  <string name="connectedToLichess">اکنون به lichess.org وصل شده‌اید.</string>
   <string name="signedOut">شما بیرون رفتید</string>
   <string name="loginSuccessful">شما وارد شدید</string>
   <string name="playOnTheBoardOffline">آفلاین روی تخته بازی کنید</string>
@@ -629,6 +643,9 @@
   <string name="mobileApp">برنامه ی موبایل</string>
   <string name="webmasters">وب مستر ها</string>
   <string name="about">درباره ما</string>
+  <string name="aboutX">درباره %s</string>
+  <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s یک سایت شطرنج (کاملا) رایگان، بدون تبلیغات و منبع باز است.</string>
+  <string name="really">واقعاً</string>
   <string name="contribute">مشارکت</string>
   <string name="contact">تماس</string>
   <string name="termsOfService">قوانین</string>
@@ -709,6 +726,7 @@
   <string name="disableKidMode">غیر فعال کردن حالت کودکانه</string>
   <string name="security">امنیت</string>
   <string name="thisIsAListOfDevicesThatHaveLoggedIntoYourAccount">این لیستی از تمامی دستگاه هایی است که وارد حساب کاربری شما شده اند.مواردی را که نمی شناسید،باطل کنید.</string>
+  <string name="alternativelyYouCanX">همچنین شما می توانید %s.</string>
   <string name="revokeAllSessions">باطل کردن تمامی موارد</string>
   <string name="playChessEverywhere">همه جا شطرنج بازی کنید</string>
   <string name="asFreeAsLichess">رایگان به مانند لیچس</string>
@@ -728,6 +746,9 @@
     <item quantity="other">در %s  زبان‌ها موجود است</item>
   </plurals>
   <string name="gameAnalysis">تجزیه و تحلیلِ بازی</string>
+  <string name="xHostsY">%1$s میزبان ها %2$s</string>
+  <string name="xJoinsY">%1$s وارد می شود %2$s</string>
+  <string name="xLikesY">%1$s می پسندد %2$s</string>
   <string name="quickPairing">رویارویی سریع</string>
   <string name="lobby">لابی</string>
   <string name="anonymous">ناشناس</string>
@@ -753,8 +774,7 @@
   <string name="chessBasics">اصول شطرنج</string>
   <string name="coaches">مربی ها</string>
   <string name="invalidPgn">فایل PGN نامعتبر است</string>
-  <string name="invalidFen">
-پوزیشن وارد شده نامعتبر است</string>
+  <string name="invalidFen">پوزیشن وارد شده نامعتبر است</string>
   <string name="error.minLength">حداقل تعداد حروف وارد شده %s است</string>
   <string name="error.maxLength">حداکثر تعداد حروف وارد شده %s است</string>
   <string name="error.min">باید بزرگتر یا مساوی باشه با %s</string>
@@ -815,5 +835,13 @@
   <string name="yourXRatingIsTooFarFromY">امتیاز %1$s شما فاصله زیادی با %2$s دارد؛بنابراین نمی توانید در خواست بازی بدهید.</string>
   <string name="cannotChallengeDueToProvisionalXRating">به علت امتیاز %s غیر قطعی،امکان ارسال درخواست بازی وجود ندارد.</string>
   <string name="xOnlyAcceptsChallengesFromFriends">%s فقط درخواست بازی دوستان را می پذیرد.</string>
+  <string name="conditionalPremoves">پیش حرکت های شرطی</string>
+  <string name="addCurrentVariation">اضافه کردن این نوع حرکات</string>
+  <string name="playVariationToCreateConditionalPremoves">یک نوع حرکات را بازی کنید تا پیش حرکت های شرطی را بسازید</string>
+  <string name="noConditionalPremoves">فاقد پیش حرکت های شرطی</string>
   <string name="playX">%s را انجام دهید</string>
+  <plurals name="andSaveNbPremoveLines">
+    <item quantity="one">و پیش حرکت %s را حفظ کنید</item>
+    <item quantity="other">و پیش حرکت های %s را حفظ کنید</item>
+  </plurals>
 </resources>
