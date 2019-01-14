@@ -61,7 +61,7 @@ object home {
         )
       } getOrElse {
         div(cls := "about-side")(
-          trans.xIsAFreeYLibreOpenSourceChessServer.frag("Lichess", a(cls := "blue", href := routes.Plan.features)(trans.really.txt())),
+          trans.xIsAFreeYLibreOpenSourceChessServer.frag("Chess-Online", a(cls := "blue", href := routes.Plan.features)(trans.really.txt())),
           " ",
           a(cls := "blue", href := "/about")(trans.aboutX("Chess-Online Arena"), "...")
         )
@@ -146,7 +146,7 @@ object home {
         div(cls := "donation undertable")(
           a(href := routes.Plan.index)(
             iconTag(patronIconChar),
-            strong("Lichess Patron"),
+            strong("Chess-Online Patron"),
             span(trans.directlySupportLichess())
           ),
           a(href := routes.Page.swag)(
@@ -155,7 +155,7 @@ object home {
             span(trans.playChessInStyle())
           )
         ),
-        div(cls := "about-footer")(a(href := "/about")(trans.aboutX("Chess-Online Arena")))
+        div(cls := "about-footer")(a(href := "https://github.com/ornicar/lila")(trans.aboutX("Based on open source Lila chess server")))
       )
     }
 
