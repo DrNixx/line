@@ -260,7 +260,7 @@ object Auth extends LilaController {
 
   def checkYourEmail = Open { implicit ctx =>
     ctx.me match {
-      case Some(me) => Redirect(routes.User.show(me.username)).fuccess
+      case Some(me) => Redirect(routes.User.show(me.id)).fuccess
       case None => lila.security.EmailConfirm.cookie get ctx.req match {
         case None => Ok(Account.renderCheckYourEmail).fuccess
         case Some(userEmail) =>
@@ -306,7 +306,7 @@ object Auth extends LilaController {
         lila.mon.user.register.confirmEmailResult(false)()
         notFound
       case Result.AlreadyConfirmed(user) if ctx.is(user) =>
-        Redirect(routes.User.show(user.username)).fuccess
+        Redirect(routes.User.show(user.id)).fuccess
       case Result.AlreadyConfirmed(user) =>
         Redirect(routes.Auth.oidcLogin).fuccess
       case Result.JustConfirmed(user) =>

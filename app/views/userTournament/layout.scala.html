@@ -1,13 +1,13 @@
 @(u: User, title: String, path: String, moreJs: Html = emptyHtml)(body: Html)(implicit ctx: Context)
 
 @menu = {
-<a class="@path.active("recent")" href="@routes.UserTournament.path(u.username, "recent")">
+<a class="@path.active("recent")" href="@routes.UserTournament.path(u.id, "recent")">
   Recently played
 </a>
-<a class="@path.active("best")" href="@routes.UserTournament.path(u.username, "best")">
+<a class="@path.active("best")" href="@routes.UserTournament.path(u.id, "best")">
   Best results
 </a>
-<a class="@path.active("chart")" href="@routes.UserTournament.path(u.username, "chart")">
+<a class="@path.active("chart")" href="@routes.UserTournament.path(u.id, "chart")">
   Stats
 </a>
 }

@@ -25,9 +25,9 @@ side = side.some) {
     <div class="actions">
       @if(isGranted(_.ViewPrivateComms)) {
       @if(priv) {
-      <a class="priv button active" href="@routes.Mod.communicationPublic(u.username)">PMs</a>
+      <a class="priv button active" href="@routes.Mod.communicationPublic(u.id)">PMs</a>
       } else {
-      <a class="priv button" href="@routes.Mod.communicationPrivate(u.username)" title="View private messages. This will be logged in #commlog">PMs</a>
+      <a class="priv button" href="@routes.Mod.communicationPrivate(u.id)" title="View private messages. This will be logged in #commlog">PMs</a>
       }
       }
     </div>

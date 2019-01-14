@@ -3,7 +3,7 @@
 @title = @{ if (requests) "Streamer approval requests" else "Lichess streamers" }
 
 @widget(s: lila.streamer.Streamer.WithUser, stream: Option[lila.streamer.Stream]) = {
-<a class="overlay" href="@if(requests){@routes.Streamer.edit?u=@s.user.username}else{@routes.Streamer.show(s.user.username)}"></a>
+<a class="overlay" href="@if(requests){@routes.Streamer.edit?u=@s.user.id}else{@routes.Streamer.show(s.user.id)}"></a>
 @if(stream.isDefined) {
 <span class="ribbon">
   <span>LIVE!</span>

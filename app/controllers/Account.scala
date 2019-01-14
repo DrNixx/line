@@ -169,7 +169,7 @@ object Account extends LilaController {
     import lila.security.EmailConfirm.Help._
     ctx.me match {
       case Some(me) =>
-        Redirect(routes.User.show(me.username)).fuccess
+        Redirect(routes.User.show(me.id)).fuccess
       case None if get("username").isEmpty =>
         Ok(html.account.emailConfirmHelp(helpForm, none)).fuccess
       case None =>
@@ -236,7 +236,7 @@ object Account extends LilaController {
         fuccess(html.account.close(me, err))
       } { _ =>
         Env.current.closeAccount(me.id, self = true) inject {
-          Redirect(routes.User show me.username) withCookies LilaCookie.newSession
+          Redirect(routes.User show me.id) withCookies LilaCookie.newSession
         }
       }
     }

@@ -26,7 +26,7 @@
         <td class="i">
           @defining(notes.filter(_.to == o.id)) { ns =>
           @if(ns.nonEmpty) {
-          <a href="@routes.User.show(o.username)?notes"><i title="Notes from @ns.map(_.from).map(usernameOrId).mkString(", ")" data-icon="m" class="is-green"></i>@ns.size</a>
+          <a href="@routes.User.show(o.id)?notes"><i title="Notes from @ns.map(_.from).map(usernameOrId).mkString(", ")" data-icon="m" class="is-green"></i>@ns.size</a>
           }
           }
           @userMarks(o, bans.get(o.id))

@@ -10,7 +10,7 @@
       <div class="form-group">@trans.closeAccountExplanation()</div>
       @form3.password(form("passwd"), trans.password.frag())
       @form3.actions {
-      <a href="@routes.User.show(u.username)">@trans.changedMindDoNotCloseAccount()</a>
+      <a href="@routes.User.show(u.id)">@trans.changedMindDoNotCloseAccount()</a>
       @form3.submit(trans.closeAccount.frag(), icon = "j".some)
       }
     </form>

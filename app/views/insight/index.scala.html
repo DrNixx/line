@@ -21,8 +21,8 @@ nbGames: @cache.count,
 stale: @stale,
 shareId: @prefId
 },
-pageUrl: "@routes.Insight.index(u.username)",
-postUrl: "@routes.Insight.json(u.username)"
+pageUrl: "@routes.Insight.index(u.id)",
+postUrl: "@routes.Insight.json(u.id)"
 });
 });
 }

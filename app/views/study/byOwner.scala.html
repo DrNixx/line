@@ -5,7 +5,7 @@ title = s"Studies created by ${owner.titleUsername}",
 active = "owner",
 order = order,
 pag = pag,
-searchFilter = s"owner:${owner.username}",
-url = o => routes.Study.byOwner(owner.username, o)) {
+searchFilter = s"owner:${owner.id}",
+url = o => routes.Study.byOwner(owner.id, o)) {
 @userLink(owner)'s studies
 }

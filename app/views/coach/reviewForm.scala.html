@@ -14,7 +14,7 @@
   }
   }
 
-  <form action="@routes.Coach.review(c.user.username)" method="POST">
+  <form action="@routes.Coach.review(c.user.id)" method="POST">
     @barRating(selected = mine.map(_.score), enabled = true)
     <textarea name="text"
       required minlength=3 maxlength=2000

@@ -120,11 +120,11 @@ object Mod extends LilaController {
   def impersonate(userId: UserModel.ID) = Auth { implicit ctx => me =>
     if (userId == "-" && lila.mod.Impersonate.isImpersonated(me)) fuccess {
       lila.mod.Impersonate.stop(me)
-      Redirect(routes.User.show(me.username))
+      Redirect(routes.User.show(me.id))
     }
     else if (isGranted(_.Impersonate)) OptionFuRedirect(UserRepo byId userId) { user =>
       lila.mod.Impersonate.start(me, user)
-      fuccess(routes.User.show(user.username))
+      fuccess(routes.User.show(user.id))
     }
     else notFound
   }

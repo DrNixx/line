@@ -14,7 +14,7 @@ title = trans.composeMessage.txt()) {
     <p>Sorry, you cannot start conversations yet.</p>
     } else {
     <div class="center form">
-      <form action="@routes.Message.create()@reqUser.map(u => "?username=" + u.username)" method="post">
+      <form action="@routes.Message.create()@reqUser.map(u => "?username=" + u.id)" method="post">
         <div class="field_to">
           <label for="@form("username").id">@trans.recipient():</label>
           @reqUser.map { user =>

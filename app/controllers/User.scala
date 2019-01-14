@@ -416,6 +416,6 @@ object User extends LilaController {
   }
 
   def myself = Auth { ctx => me =>
-    fuccess(Redirect(routes.User.show(me.username)))
+    fuccess(Redirect(routes.User.show(me.id)))
   }
 }

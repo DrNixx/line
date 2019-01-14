@@ -6,7 +6,7 @@
 @base.layout(title = title, moreCss = cssTags("report.css", "form3.css")) {
 <div class="content_box small_box" id="report">
   <h1>@title</h1>
-  <form class="create form3" action="@routes.Report.create()@reqUser.map(u => "?username=" + u.username)" method="post">
+  <form class="create form3" action="@routes.Report.create()@reqUser.map(u => "?username=" + u.id)" method="post">
     @form3.globalError(form)
     @form3.group(form("username"), trans.user.frag(), klass = "field_to") { f =>
     @reqUser.map { user =>

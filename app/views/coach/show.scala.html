@@ -23,7 +23,7 @@ $('.review-form form').show();
 @side = {
 <div class="coach-side">
   <div class="profile">
-    <a class="blue" href="@routes.User.show(c.user.username)">View @c.user.username lichess profile</a>
+    <a class="blue" href="@routes.User.show(c.user.id)">View @c.user.username Arena profile</a>
   </div>
   @if(ctx.me.exists(_.id != c.user.id)) {
   @reviewForm(c, myReview)
@@ -51,7 +51,7 @@ moreCss = moreCss,
 openGraph = lila.app.ui.OpenGraph(
 title = title,
 description = shorten(~(c.coach.profile.headline), 152),
-url = s"$netBaseUrl${routes.Coach.show(c.user.username)}",
+url = s"$netBaseUrl${routes.Coach.show(c.user.id)}",
 `type` = "profile",
 image = c.coach.picturePath.map(p => dbImageUrl(p.value))).some) {
 <div class="content_box no_padding coach">
@@ -90,7 +90,7 @@ image = c.coach.picturePath.map(p => dbImageUrl(p.value))).some) {
               @profile.officialRating.map { r =>
               @r.name.toUpperCase: @r.rating,
               }
-              <a href="@routes.User.show(c.user.username)">
+              <a href="@routes.User.show(c.user.id)">
                 @c.user.best8Perfs.take(6).filter(c.user.hasEstablishedRating).map { pt =>
                 @showPerfRating(c.user, pt)
                 }
@@ -131,7 +131,7 @@ image = c.coach.picturePath.map(p => dbImageUrl(p.value))).some) {
           <tr class="contact">
             <th>Contact</th>
             <td>
-              <a class="text" data-icon="c" href="@routes.Message.form?user=@c.user.username">Send a private message</a>
+              <a class="text" data-icon="c" href="@routes.Message.form?user=@c.user.id">Send a private message</a>
             </td>
           </tr>
           }

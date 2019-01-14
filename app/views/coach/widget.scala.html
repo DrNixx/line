@@ -1,5 +1,5 @@
 @(c: lila.coach.Coach.WithUser)(implicit ctx: Context)
-<a class="overlay" href="@routes.Coach.show(c.user.username)"></a>
+<a class="overlay" href="@routes.Coach.show(c.user.id)"></a>
 @pic(c, 250)
 @defining(c.user.profileOrDefault) { profile =>
 <div class="overview">
@@ -34,7 +34,7 @@
           @profile.fideRating.map { r =>
           FIDE: @r,
           }
-          <a href="@routes.User.show(c.user.username)">
+          <a href="@routes.User.show(c.user.id)">
             @c.user.best8Perfs.take(6).filter(c.user.hasEstablishedRating).map { pt =>
             @showPerfRating(c.user, pt)
             }

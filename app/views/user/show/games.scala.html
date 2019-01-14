@@ -22,7 +22,7 @@ evenMoreJs = evenMoreJs,
 openGraph = lila.app.ui.OpenGraph(
 image = staticUrl("images/large_tile.png").some,
 title = u.titleUsernameWithBestRating,
-url = s"$netBaseUrl${routes.User.show(u.username).url}",
+url = s"$netBaseUrl${routes.User.show(u.id).url}",
 description = describeUser(u)).some) {
 <div data-username="@u.username" class="content_box no_padding user_show">
   @header(u, info, Angle.Games(searchForm), social)

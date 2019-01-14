@@ -43,14 +43,14 @@ object mini {
     ctx.userId map { myId =>
       frag(
         (myId != u.id && u.enabled) option div(cls := "actions")(
-          a(cls := "button hint--bottom", dataHint := trans.watchGames.txt(), href := routes.User.tv(u.username))(
+          a(cls := "button hint--bottom", dataHint := trans.watchGames.txt(), href := routes.User.tv(u.id))(
             iconTag("1")
           ),
           !blocked option frag(
-            a(cls := "button hint--bottom", dataHint := trans.chat.txt(), href := s"${routes.Message.form()}?user=${u.username}")(
+            a(cls := "button hint--bottom", dataHint := trans.chat.txt(), href := s"${routes.Message.form()}?user=${u.id}")(
               iconTag("c")
             ),
-            a(cls := "button hint--bottom", dataHint := trans.challengeToPlay.txt(), href := s"${routes.Lobby.home()}?user=${u.username}#friend")(
+            a(cls := "button hint--bottom", dataHint := trans.challengeToPlay.txt(), href := s"${routes.Lobby.home()}?user=${u.id}#friend")(
               iconTag("U")
             )
           ),
@@ -59,7 +59,7 @@ object mini {
         crosstable.flatMap(_.nonEmpty) map { cross =>
           a(
             cls := "score hint--bottom",
-            href := s"${routes.User.games(u.username, "me")}#games",
+            href := s"${routes.User.games(u.id, "me")}#games",
             dataHint := trans.nbGames.pluralTxt(cross.nbGames, cross.nbGames.localize)
           )(trans.yourScore(Html(s"""<strong>${cross.showScore(myId)}</strong> - <strong>${~cross.showOpponentScore(myId)}</strong>""")))
         }
