@@ -838,7 +838,7 @@ v %3$s</string>
   <string name="usernameSuffixInvalid">Uporabniško ime se mora končati s črko ali s številko.</string>
   <string name="usernameCharsInvalid">Uporabniško ime sme vsebovati le črke, številke, podčrtaje in vezaje.</string>
   <string name="usernameUnacceptable">To uporabniško ime ni sprejemljivo.</string>
-  <string name="directlySupportLichess">Direktno pomagaj Lichess-u</string>
+  <string name="directlySupportLichess">Direktno pomagaj Chess-Online-u</string>
   <string name="playChessInStyle">Šahirajte v slogu</string>
   <string name="chessBasics">Šahovske osnove</string>
   <string name="coaches">Trenerji</string>

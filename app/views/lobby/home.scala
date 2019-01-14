@@ -90,7 +90,7 @@ object home {
     chessground = false,
     openGraph = lila.app.ui.OpenGraph(
       image = staticUrl("images/large_tile.png").some,
-      title = "The best free, adless Chess server",
+      title = "The best free Chess server",
       url = netBaseUrl,
       description = trans.siteDescription.txt()
     ).some,
@@ -148,14 +148,9 @@ object home {
             iconTag(patronIconChar),
             strong("Chess-Online Patron"),
             span(trans.directlySupportLichess())
-          ),
-          a(href := routes.Page.swag)(
-            iconTag(""),
-            strong("Swag Store"),
-            span(trans.playChessInStyle())
           )
         ),
-        div(cls := "about-footer")(a(href := "https://github.com/ornicar/lila")(trans.aboutX("Based on open source Lila chess server")))
+        div(cls := "about-footer")(a(href := "https://github.com/ornicar/lila")("Based on open source Lila chess server"))
       )
     }
 

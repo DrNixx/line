@@ -734,7 +734,7 @@ trong %3$s</string>
   <string name="usernameSuffixInvalid">Username phải kết thúc bằng một chữ hay số.</string>
   <string name="usernameCharsInvalid">Username chỉ được chứa ký tự, số, dấu gạch chân và dấu gạch dưới.</string>
   <string name="usernameUnacceptable">Username này không được chấp nhận.</string>
-  <string name="directlySupportLichess">Ủng hộ trực tiếp Lichess</string>
+  <string name="directlySupportLichess">Ủng hộ trực tiếp Chess-Online</string>
   <string name="playChessInStyle">Chơi cờ phong cách</string>
   <string name="chessBasics">Cờ cơ bản</string>
   <string name="coaches">Huấn luyện viên</string>

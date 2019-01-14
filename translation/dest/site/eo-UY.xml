@@ -753,7 +753,7 @@
   <string name="usernameAlreadyUsed">Ĉi tiu uzantnomo estas jam uzanta, bonvolu provi aliun.</string>
   <string name="usernameSuffixInvalid">La salutnomo devas finanta kun letero aux numero.</string>
   <string name="usernameUnacceptable">Ĉi tiu uzantnomo estas malakceptata.</string>
-  <string name="directlySupportLichess">Rekte subteni Lichess</string>
+  <string name="directlySupportLichess">Rekte subteni Chess-Online</string>
   <string name="playChessInStyle">Ludu ŝakon elegante</string>
   <string name="chessBasics">Ŝaka aboco</string>
   <string name="coaches">Trejnistoj</string>

@@ -700,7 +700,7 @@
   <string name="usernameSuffixInvalid">שם המשתמש חייב להסתיים באות או מספר.</string>
   <string name="usernameCharsInvalid">שם המשתמש חייב להכיל רק אותיות, מספרים, מקפים תחתונים ומקפים.</string>
   <string name="usernameUnacceptable">שם המשתמש הזה לא מקובל.</string>
-  <string name="directlySupportLichess">תמוך ישירות ב-Lichess</string>
+  <string name="directlySupportLichess">תמוך ישירות ב-Chess-Online</string>
   <string name="playChessInStyle">שחק שחמט בסגנון</string>
   <string name="chessBasics">יסודות השחמט</string>
   <string name="coaches">מאמנים</string>

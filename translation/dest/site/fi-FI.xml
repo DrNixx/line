@@ -771,7 +771,7 @@
   <string name="usernameSuffixInvalid">Käyttäjänimen täytyy loppua kirjaimeen tai numeroon.</string>
   <string name="usernameCharsInvalid">Käyttäjänimi voi sisältää vain kirjaimia, numeroita, alaviivoja ja väliviivoja.</string>
   <string name="usernameUnacceptable">Käyttäjänimi ei kelpaa.</string>
-  <string name="directlySupportLichess">Lahjoita Lichessille</string>
+  <string name="directlySupportLichess">Lahjoita Chess-Onlineille</string>
   <string name="playChessInStyle">Tyylikästä shakinpeluuta</string>
   <string name="chessBasics">Shakin perusteet</string>
   <string name="coaches">Valmentajat</string>

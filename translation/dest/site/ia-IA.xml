@@ -776,7 +776,7 @@ in %3$s</string>
   <string name="usernameSuffixInvalid">Le nomine de usator debe finir con un littera o un numero.</string>
   <string name="usernameCharsInvalid">Le nomine de usator debe continer solmente litteras, numeros, sublineas ( _ ) e lineettas ( - ).</string>
   <string name="usernameUnacceptable">Iste nomine de usator non es acceptabile.</string>
-  <string name="directlySupportLichess">Appoia directemente Lichess</string>
+  <string name="directlySupportLichess">Appoia directemente Chess-Online</string>
   <string name="playChessInStyle">Joca chacos con stilo</string>
   <string name="chessBasics">Fundamentos</string>
   <string name="coaches">Tutores</string>

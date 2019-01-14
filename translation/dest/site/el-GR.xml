@@ -775,7 +775,7 @@
   <string name="usernameSuffixInvalid">Το όνομα χρήστη πρέπει να τελειώνει με ένα γράμμα ή έναν αριθμό.</string>
   <string name="usernameCharsInvalid">Το όνομα χρήστη πρέπει να περιέχει μόνο γράμματα, αριθμούς, κάτω παύλες και ενωτικά.</string>
   <string name="usernameUnacceptable">Αυτό το όνομα χρήστη δεν είναι αποδεκτό.</string>
-  <string name="directlySupportLichess">Υποστηρίξτε άμεσα το Lichess</string>
+  <string name="directlySupportLichess">Υποστηρίξτε άμεσα το Chess-Online</string>
   <string name="playChessInStyle">Παίξτε σκάκι με στυλ</string>
   <string name="chessBasics">Τα βασικά στο σκάκι</string>
   <string name="coaches">Προπονητές</string>

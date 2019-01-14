@@ -647,7 +647,7 @@ kompiuterinę analizę, partijos pokalbį bei URL dalinimuisi.</string>
   <string name="usernameSuffixInvalid">Vartotojo vardas turi baigtis raide arba skaičiumi.</string>
   <string name="usernameCharsInvalid">Vartotojo vardui naudokite tik raides, skaičius, pabraukimo brūkšnius ir brūkšnelius.</string>
   <string name="usernameUnacceptable">Šis vartotojo vardas yra netinkamas.</string>
-  <string name="directlySupportLichess">Paremkite „lichess“ tiesiogiai</string>
+  <string name="directlySupportLichess">Paremkite „Chess-Online“ tiesiogiai</string>
   <string name="playChessInStyle">Žaiskite šachmatais stilingai</string>
   <string name="chessBasics">Šachmatų pagrindai</string>
   <string name="coaches">Treneriai</string>

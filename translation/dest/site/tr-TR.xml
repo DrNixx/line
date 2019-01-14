@@ -773,7 +773,7 @@
   <string name="usernameSuffixInvalid">Kullanıcı adı bir harf veya sayı ile bitmelidir.</string>
   <string name="usernameCharsInvalid">Kullanıcı adı yalnızca harf, sayı, alt çizgi ve çizgi içerebilir.</string>
   <string name="usernameUnacceptable">Bu kullanıcı adı uygun değil.</string>
-  <string name="directlySupportLichess">Lichess\'i destekleyin</string>
+  <string name="directlySupportLichess">Chess-Online\'i destekleyin</string>
   <string name="playChessInStyle">Satrancı tarz ile oynayın</string>
   <string name="chessBasics">Satrancın temel prensipleri</string>
   <string name="coaches">Eğitmenler</string>

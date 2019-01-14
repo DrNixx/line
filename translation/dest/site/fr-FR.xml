@@ -774,7 +774,7 @@ en %3$s</string>
   <string name="usernameSuffixInvalid">Le nom d’utilisateur doit se terminer par une lettre ou un chiffre.</string>
   <string name="usernameCharsInvalid">Le nom d\'utilisateur doit contenir uniquement des lettres, des chiffres, des tirets.</string>
   <string name="usernameUnacceptable">Ce nom d\'utilisateur existe déjà ou est insultant.</string>
-  <string name="directlySupportLichess">Financer Lichess</string>
+  <string name="directlySupportLichess">Financer Chess-Online</string>
   <string name="playChessInStyle">Jouez aux échecs avec classe</string>
   <string name="chessBasics">Bases des échecs</string>
   <string name="coaches">Entraîneurs</string>

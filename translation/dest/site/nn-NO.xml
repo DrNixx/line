@@ -775,7 +775,7 @@ i %3$s</string>
   <string name="usernameSuffixInvalid">Det siste teiknet i brukarnamnet må vera ein bokstav eller eit tal.</string>
   <string name="usernameCharsInvalid">Brukarnamnet kan berre innehalde bokstavar, tal, understrekingsteikn og bindestrekar.</string>
   <string name="usernameUnacceptable">Dette brukarnamnet er ikkje akseptabelt.</string>
-  <string name="directlySupportLichess">Støtt Lichess direkte</string>
+  <string name="directlySupportLichess">Støtt Chess-Online direkte</string>
   <string name="playChessInStyle">Spel sjakk med stil</string>
   <string name="chessBasics">Grunnleggande sjakk</string>
   <string name="coaches">Sjakklærarar</string>

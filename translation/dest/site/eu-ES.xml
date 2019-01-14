@@ -770,7 +770,7 @@
   <string name="usernameSuffixInvalid">Erabiltzaile izena hizki edo zenbaki batekin bukatu behar da.</string>
   <string name="usernameCharsInvalid">Erabiltzaile izenak hizkiak, zenbakiak, azpiko marrak eta gidoiak bakarrik izan ditzake.</string>
   <string name="usernameUnacceptable">Erabiltzaile hori ezin da erabili.</string>
-  <string name="directlySupportLichess">Lichess zuzenean lagundu</string>
+  <string name="directlySupportLichess">Chess-Online zuzenean lagundu</string>
   <string name="playChessInStyle">Xakean estiloarekin jokatu</string>
   <string name="chessBasics">Oinarrizko xakea</string>
   <string name="coaches">Entrenatzaileak</string>

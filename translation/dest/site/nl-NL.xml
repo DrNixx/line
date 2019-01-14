@@ -773,7 +773,7 @@
   <string name="usernameSuffixInvalid">De gebruikersnaam moet eindigen met een letter of een cijfer.</string>
   <string name="usernameCharsInvalid">De gebruikersnaam mag alleen letters, cijfers, underscores, en koppeltekens bevatten.</string>
   <string name="usernameUnacceptable">Deze gebruikersnaam is niet acceptabel.</string>
-  <string name="directlySupportLichess">Lichess direct ondersteunen</string>
+  <string name="directlySupportLichess">Chess-Online direct ondersteunen</string>
   <string name="playChessInStyle">Speel schaken in stijl</string>
   <string name="chessBasics">Basis schaken</string>
   <string name="coaches">Coaches</string>

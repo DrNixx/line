@@ -773,7 +773,7 @@
   <string name="usernameSuffixInvalid">Brugernavnet skal afsluttes med et bogstav eller et tal.</string>
   <string name="usernameCharsInvalid">Brugernavnet må kun indeholde bogstaver, tal, underscore og bindestreger.</string>
   <string name="usernameUnacceptable">Dette brugernavn er ikke acceptabelt.</string>
-  <string name="directlySupportLichess">Støt Lichess direkte</string>
+  <string name="directlySupportLichess">Støt Chess-Online direkte</string>
   <string name="playChessInStyle">Spil skak med stil</string>
   <string name="chessBasics">Skak basics</string>
   <string name="coaches">Trænere</string>

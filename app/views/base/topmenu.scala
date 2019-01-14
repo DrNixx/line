@@ -23,6 +23,13 @@ object topmenu {
       )
     ),
     section(
+      a(href := "https://www.chess-online.com")("Chess-Online"),
+      div(
+        a(href := "https://www.chess-online.com")("Chess-Online site"),
+        a(href := "http://old.chess-online.com")("Old Chess-Online site")
+      )
+    ),
+    section(
       a(href := routes.Puzzle.home)(trans.learnMenu()),
       div(
         ctx.noBot option frag(
@@ -38,7 +45,7 @@ object topmenu {
     section(
       a(href := routes.Tv.index)(trans.watch()),
       div(
-        a(href := routes.Tv.index)("Lichess TV"),
+        a(href := routes.Tv.index)("Chess-Online TV"),
         a(href := routes.Tv.games)(trans.currentGames()),
         a(href := routes.Streamer.index())("Streamers"),
         a(href := routes.Relay.index())("Broadcasts (beta)"),

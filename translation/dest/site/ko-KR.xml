@@ -742,7 +742,7 @@
   <string name="usernameSuffixInvalid">유저 이름의 끝 글자는 알파벳이나 숫자여야 합니다.</string>
   <string name="usernameCharsInvalid">유저 이름에는 알파벳, 숫자, 언더스코어 ( _ ), 하이픈 ( - ) 만을 사용할 수 있습니다.</string>
   <string name="usernameUnacceptable">사용자 이름을 사용할 수 없습니다.</string>
-  <string name="directlySupportLichess">Lichess 후원하기</string>
+  <string name="directlySupportLichess">Chess-Online 후원하기</string>
   <string name="playChessInStyle">스타일리시하게 체스하기</string>
   <string name="chessBasics">체스 기본</string>
   <string name="coaches">코치</string>

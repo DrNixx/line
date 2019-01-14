@@ -717,7 +717,7 @@
   <string name="embedInYourWebsite">Вэб сайтадаа оруулах</string>
   <string name="usernameAlreadyUsed">Ийм нэртэй хэрэглэгч байна, өөр нэр ашиглана уу.</string>
   <string name="usernameUnacceptable">Ийм нэртэй хэрэглэгч үүсгэж болохгүй.</string>
-  <string name="directlySupportLichess">Личессд дэмжлэг үзүүлэх</string>
+  <string name="directlySupportLichess">Chess-Online дэмжлэг үзүүлэх</string>
   <string name="playChessInStyle">Загварлаг тоглоцгооё</string>
   <string name="chessBasics">Суурь мэдлэг</string>
   <string name="coaches">Шатрын багш</string>

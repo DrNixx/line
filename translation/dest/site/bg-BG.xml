@@ -775,7 +775,7 @@
   <string name="usernameSuffixInvalid">Потребителското име трябва да завършва с буква или число.</string>
   <string name="usernameCharsInvalid">Потребителското име трябва да съдържа само букви, цифри, долни черти и тирета.</string>
   <string name="usernameUnacceptable">Това потребителско име не е приемливо.</string>
-  <string name="directlySupportLichess">Подкрепи директно Lichess</string>
+  <string name="directlySupportLichess">Подкрепи директно Chess-Online</string>
   <string name="playChessInStyle">Играй шах в стил</string>
   <string name="chessBasics">Основи на шаха</string>
   <string name="coaches">Треньори</string>

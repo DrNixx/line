@@ -837,7 +837,7 @@
   <string name="usernameSuffixInvalid">Užívateľské meno musí končiť písmenom alebo číslom.</string>
   <string name="usernameCharsInvalid">Užívateľské meno musí obsahovať iba písmená, čísla, podčiarkovník a pomlčku.</string>
   <string name="usernameUnacceptable">Toto užívateľské meno nie je prijateľné.</string>
-  <string name="directlySupportLichess">Podporte Lichess priamo</string>
+  <string name="directlySupportLichess">Podporte Chess-Online priamo</string>
   <string name="playChessInStyle">Hrajte šach štýlovo</string>
   <string name="chessBasics">Základy šachu</string>
   <string name="coaches">Tréneri</string>

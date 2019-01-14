@@ -773,7 +773,7 @@
   <string name="usernameSuffixInvalid">Användarnamnet måste sluta med en bokstav eller ett nummer.</string>
   <string name="usernameCharsInvalid">Användarnamnet får bara innehålla bokstäver, siffror, understrykningstecken och bindestreck.</string>
   <string name="usernameUnacceptable">Detta användarnamn är inte acceptabelt.</string>
-  <string name="directlySupportLichess">Stöd Lichess</string>
+  <string name="directlySupportLichess">Stöd Chess-Online</string>
   <string name="playChessInStyle">Spela schack med stil</string>
   <string name="chessBasics">Grunderna i schack</string>
   <string name="coaches">Schackcoacher</string>

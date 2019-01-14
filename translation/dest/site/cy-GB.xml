@@ -630,7 +630,7 @@
   <string name="usernameAlreadyUsed">Ymddiheuriadau, mae\'r enw defnyddiwr yna wedi ei fachu\'n barod, defnyddiwch un arall.</string>
   <string name="usernamePrefixInvalid">Rhaid i enw defnyddiwr dechrau gyda llythyren.</string>
   <string name="usernameUnacceptable">Nid yw enw defnyddiwr hwn yn dderbyniol.</string>
-  <string name="directlySupportLichess">Cefnogwch Lichess yn uniongyrchol</string>
+  <string name="directlySupportLichess">Cefnogwch Chess-Online yn uniongyrchol</string>
   <string name="playChessInStyle">Edrychwch yn swanc efo Lichess</string>
   <string name="chessBasics">Hanfodion gwyddbwyll</string>
   <string name="coaches">Hyfforddwyr</string>

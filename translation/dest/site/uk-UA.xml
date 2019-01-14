@@ -713,7 +713,7 @@
   <string name="usernameSuffixInvalid">Ім\'я користувача має закінчуватися буквою або цифрою.</string>
   <string name="usernameCharsInvalid">Ім\'я користувача має містити тільки літери, цифри, символи підкреслення і тире.</string>
   <string name="usernameUnacceptable">Неприйнятне ім\'я користувача.</string>
-  <string name="directlySupportLichess">Підтримує Lichess</string>
+  <string name="directlySupportLichess">Підтримує Chess-Online</string>
   <string name="playChessInStyle">В шаховому стилі</string>
   <string name="chessBasics">Шахові основи</string>
   <string name="coaches">Тренери</string>

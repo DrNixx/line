@@ -713,7 +713,7 @@ u %3$s</string>
   <string name="embedInYourWebsite">Ugradi u svoju stranicu</string>
   <string name="usernameAlreadyUsed">Ovo korisničko ime je već u uporabi, molimo probaj s drugim.</string>
   <string name="usernameUnacceptable">Ovo korisničko ime nije prihvatljivo.</string>
-  <string name="directlySupportLichess">Direktno podrži Lichess</string>
+  <string name="directlySupportLichess">Direktno podrži Chess-Online</string>
   <string name="playChessInStyle">Igraj šah u stilu</string>
   <string name="chessBasics">Šahovske osnove</string>
   <string name="middlegame">Središnjica</string>

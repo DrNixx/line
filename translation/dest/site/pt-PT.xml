@@ -773,7 +773,7 @@
   <string name="usernameSuffixInvalid">O nome do usuário deve acabar numa letra ou número.</string>
   <string name="usernameCharsInvalid">O nome do usuário deve conter apenas letras, números, barra baixa y hifens.</string>
   <string name="usernameUnacceptable">O nome de usuário não é aceitável.</string>
-  <string name="directlySupportLichess">Apoie o Lichess</string>
+  <string name="directlySupportLichess">Apoie o Chess-Online</string>
   <string name="playChessInStyle">Xadrez com estilo</string>
   <string name="chessBasics">O básico do xadrez</string>
   <string name="coaches">Treinadores</string>

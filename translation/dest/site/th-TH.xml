@@ -742,7 +742,7 @@
   <string name="usernameSuffixInvalid">ชื่อผู้ใช้ที่ต้องลงท้ายด้วยตัวอักษรหรือตัวเลข</string>
   <string name="usernameCharsInvalid">ชื่อผู้ใช้ประกอบด้วยตัวอักษร, ตัวเลข, ขีดล่าง และเครื่องหมายขีด เท่านั้น</string>
   <string name="usernameUnacceptable">ไม่ยอมรับชื่อผู้ใช้นี้</string>
-  <string name="directlySupportLichess">สนับสนุน Lichess โดยตรง</string>
+  <string name="directlySupportLichess">สนับสนุน Chess-Online โดยตรง</string>
   <string name="playChessInStyle">เล่นหมากรุกแบบมีสไตล์</string>
   <string name="chessBasics">พื้นฐานหมากรุก</string>
   <string name="coaches">ผู้ฝึกสอน</string>

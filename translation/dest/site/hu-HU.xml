@@ -773,7 +773,7 @@
   <string name="usernameSuffixInvalid">A felhasználói névnek betűvel vagy számmal kell végződnie.</string>
   <string name="usernameCharsInvalid">A felhasználói névben nem szerepelhet más mint betűk, számok, aláhúzás- és kötőjel.</string>
   <string name="usernameUnacceptable">A felhasználói név nem megfelelő.</string>
-  <string name="directlySupportLichess">Támogasd a Lichesst</string>
+  <string name="directlySupportLichess">Támogasd a Chess-Online</string>
   <string name="playChessInStyle">Sakkozz stílusosan</string>
   <string name="chessBasics">A sakk alapjai</string>
   <string name="coaches">Oktatók</string>

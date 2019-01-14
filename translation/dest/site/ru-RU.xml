@@ -837,7 +837,7 @@
   <string name="usernameSuffixInvalid">Имя пользователя должно заканчиваться буквой или цифрой.</string>
   <string name="usernameCharsInvalid">Имя пользователя должно состоять только из букв, цифр, подчёркиваний и дефисов.</string>
   <string name="usernameUnacceptable">Это имя пользователя уже занято или недопустимо.</string>
-  <string name="directlySupportLichess">Поддержать Lichess</string>
+  <string name="directlySupportLichess">Поддержать Chess-Online</string>
   <string name="playChessInStyle">В шахматном стиле</string>
   <string name="chessBasics">Основы шахмат</string>
   <string name="coaches">Тренеры</string>

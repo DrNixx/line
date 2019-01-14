@@ -805,7 +805,7 @@
   <string name="usernameSuffixInvalid">Lietotājvārdam jābeidzas ar burtu vai ciparu.</string>
   <string name="usernameCharsInvalid">Lietotājvārds drīkst saturēt tikai burtus, ciparus, pasvītras un defises.</string>
   <string name="usernameUnacceptable">Šāds lietotājvārds nav pieņemams.</string>
-  <string name="directlySupportLichess">Tiešais Lichess atbalsts</string>
+  <string name="directlySupportLichess">Tiešais Chess-Online atbalsts</string>
   <string name="playChessInStyle">Spēlē šahu stilīgi</string>
   <string name="chessBasics">Šaha pamati</string>
   <string name="coaches">Treneri</string>

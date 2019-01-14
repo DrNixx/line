@@ -807,7 +807,7 @@
   <string name="usernameSuffixInvalid">Корисничко име мора да заврши са словом или бројем.</string>
   <string name="usernameCharsInvalid">Корисничко име може само да садржи слова, бројеве, доње црте и цртице.</string>
   <string name="usernameUnacceptable">Ово корисничко име није прихватљиво.</string>
-  <string name="directlySupportLichess">Директно подржите Личес</string>
+  <string name="directlySupportLichess">Директно подржите Chess-Online</string>
   <string name="playChessInStyle">Играјте шах у стилу</string>
   <string name="chessBasics">Основе шаха</string>
   <string name="coaches">Тренери</string>

@@ -743,7 +743,7 @@
   <string name="usernameSuffixInvalid">ユーザー名の最後は英字か数字でなくてはなりません。</string>
   <string name="usernameCharsInvalid">ユーザー名に使えるのは英字、数字、アンダースコア、ハイフンだけです。</string>
   <string name="usernameUnacceptable">このユーザー名は認められません。</string>
-  <string name="directlySupportLichess">Lichess を支援（寄付）</string>
+  <string name="directlySupportLichess">Chess-Online を支援（寄付）</string>
   <string name="playChessInStyle">グッズ購入</string>
   <string name="chessBasics">チェスの基本</string>
   <string name="coaches">コーチ</string>
