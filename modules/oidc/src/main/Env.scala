@@ -19,8 +19,6 @@ final class Env(
     val OidcScopes = config getString "issuer.scopes"
     val OidcJwsAlgorithm = config getString "issuer.jws_alg"
     val NetBaseUrl = config getString "net.base_url"
-    val NetDomain = config getString "net.domain"
-    val NetEmail = config getString "net.email"
   }
   import settings._
 
