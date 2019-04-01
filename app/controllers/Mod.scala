@@ -147,7 +147,7 @@ object Mod extends LilaController {
         err => BadRequest(err.toString).fuccess,
         rawEmail => {
           val email = Env.security.emailAddressValidator.validate(EmailAddress(rawEmail)) err s"Invalid email ${rawEmail}"
-          modApi.setEmail(me.id, user.id, email) inject redirect(user.username, mod = true)
+          modApi.setEmail(me.id, user.id, email) inject redirect(user.id, mod = true)
         }
       )
     }
@@ -216,7 +216,7 @@ object Mod extends LilaController {
 
   def spontaneousInquiry(userId: UserModel.ID) = Secure(_.SeeReport) { implicit ctx => me =>
     OptionFuResult(UserRepo byId userId) { user =>
-      Env.report.api.inquiries.spontaneous(AsMod(me), Suspect(user)) inject redirect(user.username, true)
+      Env.report.api.inquiries.spontaneous(AsMod(me), Suspect(user)) inject redirect(user.id, true)
     }
   }
 
@@ -265,12 +265,12 @@ object Mod extends LilaController {
       )).bindFromRequest.fold(
         err => BadRequest(html.mod.permissions(user)).fuccess,
         permissions =>
-          modApi.setPermissions(me.id, user.username, Permission(permissions)) >> {
+          modApi.setPermissions(me.id, user.id, Permission(permissions)) >> {
             (Permission(permissions) diff Permission(user.roles) contains Permission.Coach) ??
               Env.security.automaticEmail.onBecomeCoach(user)
           } >> {
             Permission(permissions).exists(_ is Permission.SeeReport) ?? Env.plan.api.setLifetime(user)
-          } inject redirect(user.username, true)
+          } inject redirect(user.id, true)
       )
     }
   }
