@@ -345,8 +345,9 @@ GET   /video/:id                       controllers.Video.show(id: String)
 POST  /translation/select              controllers.I18n.select
 
 # Authentication
+GET   /signin-pwd                      controllers.Auth.login
+POST  /signin-pwd                      controllers.Auth.authenticate
 GET   /login                           controllers.Auth.oidcLogin
-POST  /login                           controllers.Auth.authenticate
 GET   /signin-oidc                     controllers.Auth.oidcCallback
 POST  /signin-oidc                     controllers.Auth.oidcCallback
 GET   /logout                          controllers.Auth.logoutGet
