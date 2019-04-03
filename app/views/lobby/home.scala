@@ -61,8 +61,6 @@ object home {
         )
       } getOrElse {
         div(cls := "about-side")(
-          trans.xIsAFreeYLibreOpenSourceChessServer.frag("Chess-Online", a(cls := "blue", href := routes.Plan.features)(trans.really.txt())),
-          " ",
           a(cls := "blue", href := "/about")(trans.aboutX("Chess-Online Arena"), "...")
         )
       }

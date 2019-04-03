@@ -58,7 +58,7 @@ object topmenu {
         a(href := routes.User.list)(trans.players()),
         NotForKids(frag(
           a(href := routes.Team.home())(trans.teams()),
-          a(href := routes.ForumCateg.index)(trans.forum())
+          a(href := "https://www.chess-online.com/forums")(trans.forum())
         )),
         a(href := routes.QaQuestion.index())(trans.questionsAndAnswers())
       )
