@@ -254,6 +254,7 @@ final class JsonView(
       val light = lightUserApi sync rp.player.userId
       Json.obj(
         "rank" -> rp.rank,
+        "id" -> rp.player.userId,
         "name" -> light.fold(rp.player.userId)(_.name),
         "rating" -> rp.player.rating
       ).add("title" -> light.flatMap(_.title))
@@ -309,6 +310,7 @@ final class JsonView(
     val p = rankedPlayer.player
     lightUserApi async p.userId map { light =>
       Json.obj(
+        "id" -> p.userId,
         "name" -> light.fold(p.userId)(_.name),
         "rank" -> rankedPlayer.rank,
         "rating" -> p.rating,
@@ -377,6 +379,7 @@ object JsonView {
       "rank" -> rank,
       "score" -> player.score,
       "rating" -> player.rating,
+      "id" -> user.id,
       "username" -> user.name
     ).add("title" -> user.title)
       .add("performance" -> player.performanceOption)
