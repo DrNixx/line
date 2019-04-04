@@ -14,18 +14,19 @@ object Plan extends LilaController {
   private val logger = lila.log("plan")
 
   def index = Open { implicit ctx =>
-    pageHit
-    ctx.me.fold(indexAnon) { me =>
-      import lila.plan.PlanApi.SyncResult._
-      Env.plan.api.sync(me) flatMap {
-        case ReloadUser => Redirect(routes.Plan.index).fuccess
-        case Synced(Some(patron), None) => UserRepo email me.id flatMap { email =>
-          renderIndex(email, patron.some)
-        }
-        case Synced(Some(patron), Some(customer)) => indexPatron(me, patron, customer)
-        case Synced(_, _) => indexFreeUser(me)
-      }
-    }
+    Redirect("https://www.chess-online.com/membership").fuccess
+    //pageHit
+    //ctx.me.fold(indexAnon) { me =>
+    //  import lila.plan.PlanApi.SyncResult._
+    //  Env.plan.api.sync(me) flatMap {
+    //    case ReloadUser => Redirect(routes.Plan.index).fuccess
+    //    case Synced(Some(patron), None) => UserRepo email me.id flatMap { email =>
+    //      renderIndex(email, patron.some)
+    //    }
+    //    case Synced(Some(patron), Some(customer)) => indexPatron(me, patron, customer)
+    //    case Synced(_, _) => indexFreeUser(me)
+    //  }
+    // }
   }
 
   def list = Open { implicit ctx =>
