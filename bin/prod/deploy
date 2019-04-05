@@ -8,6 +8,8 @@ if [ -z $mode ]; then
 elif [ $mode = "main" ]; then
   REMOTE="benko"
   REMOTE_DIR="/home/lichess-deploy"
+  FRONT_REMOTE="benko"
+  FRONT_REMOTE_DIR="/home/lichess-deploy"
   CLI="bin/cli-prod"
 elif [ $mode = "stage" ]; then
   REMOTE="khiaw"
