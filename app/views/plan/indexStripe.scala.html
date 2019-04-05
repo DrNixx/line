@@ -8,9 +8,9 @@ moreJs = jsTag("plan.js")) {
 <div class="content_box plan">
   <h1>@userLink(me) •
     @if(patron.isLifetime) {
-    <strong>Lifetime Lichess Patron</strong>
+    <strong>Lifetime Chess-Online Patron</strong>
     } else {
-    Lichess Patron for @pluralize("month", me.plan.months)
+    Chess-Online Patron for @pluralize("month", me.plan.months)
     }
   </h1>
   <table class="all">
@@ -77,7 +77,7 @@ moreJs = jsTag("plan.js")) {
       <tr>
         <th></th>
         <td>
-          <a href="@routes.Plan.list">View other Lichess Patrons</a>
+          <a href="@routes.Plan.list">View other Chess-Online</a>
         </td>
       </tr>
     </tbody>

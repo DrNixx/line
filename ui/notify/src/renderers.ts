@@ -149,9 +149,9 @@ export const renderers: Renderers = {
         h('strong', 'Thank you!'),
         drawTime(n)
       ]),
-      h('span', 'You just became a lichess Patron.')
+      h('span', 'You just became a Chess-Online Patron.')
     ]),
-    text: _ => 'You just became a lichess Patron.'
+    text: _ => 'You just became a Chess-Online Patron.'
   },
   planExpire: {
     html: n => generic(n, '/patron', '', [
