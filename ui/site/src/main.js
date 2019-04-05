@@ -787,7 +787,7 @@ lichess.topMenuIntent = function() {
         self.$nbOnline = $friendBoxTitle.find('.online');
         self.$nobody = el.find(".nobody");
 
-        function dataList(name) { return el.data(name) ? el.data(name).split(',') : []; }
+        function dataList(name) { return el.data(name) ? String(el.data(name)).split(',') : []; }
         self.set(
           dataList('preload'),
           dataList('playing'),
