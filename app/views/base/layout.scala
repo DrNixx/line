@@ -232,7 +232,7 @@ object layout {
           ctx.me.map { me =>
             div(
               id := "friend_box",
-              dataPreload := ctx.onlineFriends.users.map(_.titleName).mkString(","),
+              dataPreload := ctx.onlineFriends.users.map(_.idVsTitleName).mkString(","),
               dataPlaying := ctx.onlineFriends.playing.mkString(","),
               dataPatrons := ctx.onlineFriends.patrons.mkString(","),
               dataStudying := ctx.onlineFriends.studying.mkString(",")
