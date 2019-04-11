@@ -439,8 +439,8 @@
   <string name="country">Shteti</string>
   <string name="preferences">Personifikimet</string>
   <string name="inlineNotation">Shenimet ne rresht</string>
-  <string name="watchLichessTV">Shiko Lichess TV</string>
-  <string name="previouslyOnLichessTV">Herën e fundit në Lichess TV</string>
+  <string name="watchLichessTV">Shiko Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Herën e fundit në Chess-Online TV</string>
   <string name="onlinePlayers">Lojtarët në linjë</string>
   <string name="activeToday">Aktiv sot</string>
   <string name="activePlayers">Lojëtarët aktivë</string>

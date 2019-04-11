@@ -491,8 +491,8 @@
   <string name="country">Država</string>
   <string name="preferences">Nastavitve</string>
   <string name="inlineNotation">Dodatna notacijja</string>
-  <string name="watchLichessTV">Glej Lichess TV</string>
-  <string name="previouslyOnLichessTV">Nazadnje na Lichess TV</string>
+  <string name="watchLichessTV">Glej Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Nazadnje na Chess-Online TV</string>
   <string name="onlinePlayers">Prijavljeni igralci</string>
   <string name="activeToday">Danes aktivni</string>
   <string name="activePlayers">Aktivni igralci</string>

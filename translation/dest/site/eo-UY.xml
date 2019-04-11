@@ -428,8 +428,8 @@
   <string name="country">Lando</string>
   <string name="preferences">Preferoj</string>
   <string name="inlineNotation">Enlineaj markoj</string>
-  <string name="watchLichessTV">Spekti Lichess-TV</string>
-  <string name="previouslyOnLichessTV">Antaŭe ĉe Lichess-TV</string>
+  <string name="watchLichessTV">Spekti Chess-Online-TV</string>
+  <string name="previouslyOnLichessTV">Antaŭe ĉe Chess-Online-TV</string>
   <string name="onlinePlayers">Konektitaj ludantoj</string>
   <string name="activeToday">Aktivaj hodiaŭ</string>
   <string name="activePlayers">Aktivaj ludantoj</string>

@@ -441,8 +441,8 @@
   <string name="country">Land</string>
   <string name="preferences">Inställningar</string>
   <string name="inlineNotation">Visa notation</string>
-  <string name="watchLichessTV">Titta på Lichess TV</string>
-  <string name="previouslyOnLichessTV">Föregående Lichess TV</string>
+  <string name="watchLichessTV">Titta på Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Föregående Chess-Online TV</string>
   <string name="onlinePlayers">Spelare online</string>
   <string name="activeToday">Aktivast i dag</string>
   <string name="activePlayers">Aktiva spelare</string>

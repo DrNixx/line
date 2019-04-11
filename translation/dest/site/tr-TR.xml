@@ -441,8 +441,8 @@
   <string name="country">Ülke</string>
   <string name="preferences">Seçenekler</string>
   <string name="inlineNotation">Notasyonu aynı satırda göster</string>
-  <string name="watchLichessTV">Lichess TV İzle</string>
-  <string name="previouslyOnLichessTV">Daha Önce Lichess TV\'de</string>
+  <string name="watchLichessTV">Chess-Online TV İzle</string>
+  <string name="previouslyOnLichessTV">Daha Önce Chess-Online TV\'de</string>
   <string name="onlinePlayers">Çevrimiçi oyuncular</string>
   <string name="activeToday">Bugün aktif</string>
   <string name="activePlayers">Aktif oyuncular</string>

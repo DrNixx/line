@@ -441,8 +441,8 @@
   <string name="country">Herrialdea</string>
   <string name="preferences">Lehentasunak</string>
   <string name="inlineNotation">Lerroarteko oharrak</string>
-  <string name="watchLichessTV">Lichess TV Ikusi</string>
-  <string name="previouslyOnLichessTV">Aurreko Lichess TV saioak</string>
+  <string name="watchLichessTV">Chess-Online TV Ikusi</string>
+  <string name="previouslyOnLichessTV">Aurreko Chess-Online TV saioak</string>
   <string name="onlinePlayers">Konektatutako jokalariak</string>
   <string name="activeToday">Gaurko aktiboak</string>
   <string name="activePlayers">Jokalari aktiboak</string>

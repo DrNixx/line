@@ -342,8 +342,8 @@
   <string name="country">Краіна</string>
   <string name="preferences">Перавагі</string>
   <string name="inlineNotation">Убудаваная натацыя</string>
-  <string name="watchLichessTV">Глядзець Lichess TV</string>
-  <string name="previouslyOnLichessTV">Раней на Lichess TV</string>
+  <string name="watchLichessTV">Глядзець Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Раней на Chess-Online TV</string>
   <string name="onlinePlayers">Гульцы он-лайн</string>
   <string name="activeToday">Актыўныя сёньня</string>
   <string name="activePlayers">Актыўныя гульцы</string>

@@ -428,8 +428,8 @@
   <string name="country">Bansa</string>
   <string name="preferences">Mga Kagustuhan</string>
   <string name="inlineNotation">Nakalinyang notasyon</string>
-  <string name="watchLichessTV">Tumingin sa Lichess TV</string>
-  <string name="previouslyOnLichessTV">Ang Nakaraan sa Lichess TV</string>
+  <string name="watchLichessTV">Tumingin sa Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Ang Nakaraan sa Chess-Online TV</string>
   <string name="onlinePlayers">Mga online na manlalaro</string>
   <string name="activeToday">Aktibo ngayon</string>
   <string name="activePlayers">Aktibong manlalaro</string>

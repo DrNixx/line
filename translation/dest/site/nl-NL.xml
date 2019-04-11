@@ -441,8 +441,8 @@
   <string name="country">Land</string>
   <string name="preferences">Voorkeuren</string>
   <string name="inlineNotation">Geïntegreerde notatie</string>
-  <string name="watchLichessTV">Kijk Lichess TV</string>
-  <string name="previouslyOnLichessTV">Voorheen op Lichess TV</string>
+  <string name="watchLichessTV">Kijk Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Voorheen op Chess-Online TV</string>
   <string name="onlinePlayers">Online spelers</string>
   <string name="activeToday">Vandaag actief</string>
   <string name="activePlayers">Actieve spelers</string>

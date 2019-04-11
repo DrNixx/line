@@ -19,9 +19,9 @@ object side {
   )(implicit ctx: Context) =
     div(cls := "side")(
       div(cls := "side_box padded")(
-        povOption.fold[Frag](titleTag("Lichess games")) { pov =>
+        povOption.fold[Frag](titleTag("Chess-Online games")) { pov =>
           frag(
-            titleTag("Lichess TV"),
+            titleTag("Chess TV"),
             br,
             div(cls := "confrontation")(
               playerLink(pov.game.whitePlayer, withRating = false, withOnline = false, withDiff = false),

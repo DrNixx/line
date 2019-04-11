@@ -491,8 +491,8 @@
   <string name="country">Страна</string>
   <string name="preferences">Настройки</string>
   <string name="inlineNotation">Строчная нотация</string>
-  <string name="watchLichessTV">Смотреть Lichess TV</string>
-  <string name="previouslyOnLichessTV">Ранее на Lichess TV</string>
+  <string name="watchLichessTV">Смотреть Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Ранее на Chess-Online TV</string>
   <string name="onlinePlayers">Игроки в сети</string>
   <string name="activeToday">Активные сегодня</string>
   <string name="activePlayers">Активные игроки</string>

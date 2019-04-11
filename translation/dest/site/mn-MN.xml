@@ -398,7 +398,7 @@
   <string name="country">Улс</string>
   <string name="preferences">Тохиргоо</string>
   <string name="inlineNotation">Мөрийн тэмдэглэгээ</string>
-  <string name="watchLichessTV">Личессийн суваг үзэх</string>
+  <string name="watchLichessTV">Чессийн суваг үзэх</string>
   <string name="previouslyOnLichessTV">Өмнөхөн цацагдсан өргийн бичлэгүүд</string>
   <string name="onlinePlayers">Сүлжээнд байгаа гишүүд</string>
   <string name="activeToday">Өнөөдөр хамгийн их идэвхтэй байсан гишүүдийн жагсаалт</string>

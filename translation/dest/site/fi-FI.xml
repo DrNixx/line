@@ -441,8 +441,8 @@
   <string name="country">Maa</string>
   <string name="preferences">Asetukset</string>
   <string name="inlineNotation">Rivinsisäinen kommentointi</string>
-  <string name="watchLichessTV">Katso Lichess TV:tä</string>
-  <string name="previouslyOnLichessTV">Viimeksi Lichess TV:ssä</string>
+  <string name="watchLichessTV">Katso Chess-Online TV:tä</string>
+  <string name="previouslyOnLichessTV">Viimeksi Chess-Online TV:ssä</string>
   <string name="onlinePlayers">Paikalla olevat pelaajat</string>
   <string name="activeToday">Aktiivisena tänään</string>
   <string name="activePlayers">Aktiiviset pelaajat</string>

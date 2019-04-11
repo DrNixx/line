@@ -416,8 +416,8 @@
   <string name="country">国家</string>
   <string name="preferences">偏好设置</string>
   <string name="inlineNotation">棋谱无格式</string>
-  <string name="watchLichessTV">观看Lichess直播</string>
-  <string name="previouslyOnLichessTV">过去的Lichess直播</string>
+  <string name="watchLichessTV">观看Chess-Online直播</string>
+  <string name="previouslyOnLichessTV">过去的Chess-Online直播</string>
   <string name="onlinePlayers">在线棋手</string>
   <string name="activeToday">本日活跃棋手</string>
   <string name="activePlayers">活跃棋手</string>

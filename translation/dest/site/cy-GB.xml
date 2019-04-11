@@ -339,8 +339,8 @@
   <string name="biography">Cofiant</string>
   <string name="country">Gwlad</string>
   <string name="preferences">Hoffterau</string>
-  <string name="watchLichessTV">Gwylio ar lichess TV</string>
-  <string name="previouslyOnLichessTV">Ar Lichess TV yn barod</string>
+  <string name="watchLichessTV">Gwylio ar chessonline TV</string>
+  <string name="previouslyOnLichessTV">Ar Chess-Online TV yn barod</string>
   <string name="onlinePlayers">Chwarewyr ar-lein</string>
   <string name="activeToday">Gweithredol heddiw</string>
   <string name="activePlayers">Chwaraewyr gweithredol</string>

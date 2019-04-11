@@ -337,8 +337,8 @@
   <string name="biography">Biographia</string>
   <string name="country">Patria</string>
   <string name="preferences">Praepositiones</string>
-  <string name="watchLichessTV">Videre Lichess TV</string>
-  <string name="previouslyOnLichessTV">Prius in Lichess TV</string>
+  <string name="watchLichessTV">Videre Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Prius in Chess-Online TV</string>
   <string name="onlinePlayers">Lusores presentes</string>
   <string name="activeToday">Frequentes hodie</string>
   <string name="activePlayers">Lusores frequentes</string>

@@ -238,8 +238,8 @@
   <string name="biography">Eachdraidh-beatha</string>
   <string name="country">Dùthaich</string>
   <string name="preferences">Roghainnean</string>
-  <string name="watchLichessTV">Coimhead air tbh Lichess</string>
-  <string name="previouslyOnLichessTV">Air tbh Lichess roimhe</string>
+  <string name="watchLichessTV">Coimhead air tbh Chess-Online</string>
+  <string name="previouslyOnLichessTV">Air tbh Chess-Online roimhe</string>
   <string name="onlinePlayers">Cluicheadairean air loidhne</string>
   <string name="activeToday">Gnìomhach an-diugh</string>
   <string name="activePlayers">Cluicheadairean gnìomhach</string>

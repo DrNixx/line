@@ -417,8 +417,8 @@
   <string name="country">国</string>
   <string name="preferences">設定</string>
   <string name="inlineNotation">棋譜を行書き</string>
-  <string name="watchLichessTV">Lichess TV を観戦</string>
-  <string name="previouslyOnLichessTV">過去の Lichess TV 対局</string>
+  <string name="watchLichessTV">Chess-Online TV を観戦</string>
+  <string name="previouslyOnLichessTV">過去の Chess-Online TV 対局</string>
   <string name="onlinePlayers">接続中のプレイヤー</string>
   <string name="activeToday">今日の対局数上位</string>
   <string name="activePlayers">総対局数上位</string>

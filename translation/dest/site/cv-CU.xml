@@ -301,8 +301,8 @@
   <string name="biography">Биографи</string>
   <string name="country">Ҫӗр-шыв</string>
   <string name="preferences">Ӗнерлев</string>
-  <string name="watchLichessTV">Lichess TV кур</string>
-  <string name="previouslyOnLichessTV">Lichess TV паҫӑр кӑтартни</string>
+  <string name="watchLichessTV">Chess-Online TV кур</string>
+  <string name="previouslyOnLichessTV">Chess-Online TV паҫӑр кӑтартни</string>
   <string name="onlinePlayers">Тетелти вӑйӑҫӑ</string>
   <string name="activeToday">Пайан тимлисем</string>
   <string name="activePlayers">Тимлӗ вӑйӑҫӑ</string>

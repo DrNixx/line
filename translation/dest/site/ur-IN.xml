@@ -295,8 +295,8 @@
   <string name="biography">سوانح حیات</string>
   <string name="country">ملک</string>
   <string name="preferences">ترجیحات</string>
-  <string name="watchLichessTV">Lichess نشریات</string>
-  <string name="previouslyOnLichessTV">Lichess گذشتہ نشریات</string>
+  <string name="watchLichessTV">Chess-Online نشریات</string>
+  <string name="previouslyOnLichessTV">Chess-Online گذشتہ نشریات</string>
   <string name="onlinePlayers">آن لائن کھلاڑی</string>
   <string name="activeToday">آج سب سے فعال</string>
   <string name="activePlayers">فعال کھلاڑی</string>

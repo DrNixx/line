@@ -466,8 +466,8 @@
   <string name="country">Valsts</string>
   <string name="preferences">Uzstādījumi</string>
   <string name="inlineNotation">Inline notācija</string>
-  <string name="watchLichessTV">Skaties Lichess TV</string>
-  <string name="previouslyOnLichessTV">Iepriekš Lichess TV</string>
+  <string name="watchLichessTV">Skaties Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Iepriekš Chess-Online TV</string>
   <string name="onlinePlayers">Spēlētāji tiešsaistē</string>
   <string name="activeToday">Aktīvākie šodien</string>
   <string name="activePlayers">Aktīvākie spēlētāji</string>

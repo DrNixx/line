@@ -442,8 +442,8 @@ arvutianalüüsi, mängu jututoa ning jagatava URL-i.</string>
   <string name="country">Maa</string>
   <string name="preferences">Sätted</string>
   <string name="inlineNotation">Tekstisisene märge</string>
-  <string name="watchLichessTV">Vaata Lichess TV-d</string>
-  <string name="previouslyOnLichessTV">Eelnevalt Lichess TV-s</string>
+  <string name="watchLichessTV">Vaata Chess-Online TV-d</string>
+  <string name="previouslyOnLichessTV">Eelnevalt Chess-Online TV-s</string>
   <string name="onlinePlayers">Online -s mängijad</string>
   <string name="activeToday">aktiivne täna</string>
   <string name="activePlayers">aktiivsed mängijad</string>

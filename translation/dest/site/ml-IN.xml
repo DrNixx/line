@@ -439,8 +439,8 @@
   <string name="country">രാജ്യം</string>
   <string name="preferences">പരിഗണനകൾ</string>
   <string name="inlineNotation">ഇൻഫയൽ നോട്ടെഷൻ</string>
-  <string name="watchLichessTV">കാണാം Lichess TV</string>
-  <string name="previouslyOnLichessTV">Lichess TV യിൽ നേരെത്തെയുള്ളത്</string>
+  <string name="watchLichessTV">കാണാം Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Chess-Online TV യിൽ നേരെത്തെയുള്ളത്</string>
   <string name="onlinePlayers">ഓൺലൈൻ കളിക്കാർ</string>
   <string name="activeToday">ഇന്ന് സജീവമായ</string>
   <string name="activePlayers">സജീവ കളിക്കാർ</string>

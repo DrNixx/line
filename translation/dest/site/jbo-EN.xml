@@ -330,8 +330,8 @@
   <string name="biography">velski do fo do</string>
   <string name="country">lo gugde</string>
   <string name="preferences">lo se nelrai</string>
-  <string name="watchLichessTV">mencti la\'o gy. Lichess TV .gy</string>
-  <string name="previouslyOnLichessTV">lo purci nunkei pe lo la .litces. se tivni</string>
+  <string name="watchLichessTV">mencti la\'o gy. Chess-Online TV .gy</string>
+  <string name="previouslyOnLichessTV">lo purci nunkei pe lo la .chess-online. se tivni</string>
   <string name="onlinePlayers">lo cabna jvikei</string>
   <string name="activeToday">keicfu ca lo cabdei</string>
   <string name="activePlayers">keicfu</string>

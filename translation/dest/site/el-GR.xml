@@ -442,8 +442,8 @@
   <string name="country">Χώρα</string>
   <string name="preferences">Προτιμήσεις</string>
   <string name="inlineNotation">Ενσωματωμένη σημειογραφία</string>
-  <string name="watchLichessTV">Παρακολουθήστε Lichess TV</string>
-  <string name="previouslyOnLichessTV">Νωρίτερα στη Tηλεόραση Lichess</string>
+  <string name="watchLichessTV">Παρακολουθήστε Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Νωρίτερα στη Tηλεόραση Chess-Online</string>
   <string name="onlinePlayers">Συνδεδεμένοι παίκτες</string>
   <string name="activeToday">Ενεργοί σήμερα</string>
   <string name="activePlayers">Ενεργοί παίκτες</string>

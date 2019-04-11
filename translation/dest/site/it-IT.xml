@@ -442,8 +442,8 @@ analizzarla con il computer, commentarla in chat, e condividerla tramire indiriz
   <string name="country">Paese</string>
   <string name="preferences">Preferenze</string>
   <string name="inlineNotation">Notazione in linea</string>
-  <string name="watchLichessTV">Guarda la TV di Lichess</string>
-  <string name="previouslyOnLichessTV">Già visti sulla TV di Lichess</string>
+  <string name="watchLichessTV">Guarda la TV di Chess-Online</string>
+  <string name="previouslyOnLichessTV">Già visti sulla TV di Chess-Online</string>
   <string name="onlinePlayers">Giocatori online</string>
   <string name="activeToday">Attivi oggi</string>
   <string name="activePlayers">Giocatori attivi</string>

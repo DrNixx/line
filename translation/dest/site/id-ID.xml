@@ -403,8 +403,8 @@
   <string name="country">Negara</string>
   <string name="preferences">Preferensi</string>
   <string name="inlineNotation">Notasi inline</string>
-  <string name="watchLichessTV">Nonton Lichess TV</string>
-  <string name="previouslyOnLichessTV">Sebelumnya di Lichess TV</string>
+  <string name="watchLichessTV">Nonton Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Sebelumnya di Chess-Online TV</string>
   <string name="onlinePlayers">Pemain online</string>
   <string name="activeToday">Aktif hari ini</string>
   <string name="activePlayers">Pemain aktif</string>

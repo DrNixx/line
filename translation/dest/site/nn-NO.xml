@@ -442,8 +442,8 @@ få en computeranalyse, chatte eller dele ein URL.</string>
   <string name="country">Land</string>
   <string name="preferences">Preferansar</string>
   <string name="inlineNotation">Innbygd notasjon</string>
-  <string name="watchLichessTV">Sjå på Lichess TV</string>
-  <string name="previouslyOnLichessTV">Tidlegare på Lichess TV</string>
+  <string name="watchLichessTV">Sjå på Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Tidlegare på Chess-Online TV</string>
   <string name="onlinePlayers">Innlogga spelarar</string>
   <string name="activeToday">Aktive i dag</string>
   <string name="activePlayers">Aktive spelarar</string>

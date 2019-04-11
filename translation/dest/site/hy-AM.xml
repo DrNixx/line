@@ -336,8 +336,8 @@
   <string name="biography">Կենսագրություն</string>
   <string name="country">Երկիր</string>
   <string name="preferences">Նախընտրություններ</string>
-  <string name="watchLichessTV">Դիտել Lichess TV</string>
-  <string name="previouslyOnLichessTV">Նախորդները Lichess TV-ով</string>
+  <string name="watchLichessTV">Դիտել Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Նախորդները Chess-Online TV-ով</string>
   <string name="onlinePlayers">առցանց խաղացողներ</string>
   <string name="activeToday">Ակտիվ այսօր</string>
   <string name="activePlayers">Ակտիվ խաղացողներ</string>

@@ -441,8 +441,8 @@
   <string name="country">Pais</string>
   <string name="preferences">Preferentias</string>
   <string name="inlineNotation">Notation in lineas</string>
-  <string name="watchLichessTV">Spectar Lichess TV</string>
-  <string name="previouslyOnLichessTV">Previemente in Lichess TV</string>
+  <string name="watchLichessTV">Spectar Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Previemente in Chess-Online TV</string>
   <string name="onlinePlayers">Jocatores in linea</string>
   <string name="activeToday">Active hodie</string>
   <string name="activePlayers">Jocatores active</string>

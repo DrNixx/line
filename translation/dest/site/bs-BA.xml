@@ -397,8 +397,8 @@
   <string name="biography">Biografija</string>
   <string name="country">Država</string>
   <string name="preferences">Postavke</string>
-  <string name="watchLichessTV">Gledajte Lichess TV</string>
-  <string name="previouslyOnLichessTV">Prethodno na Lichess TV-u</string>
+  <string name="watchLichessTV">Gledajte Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Prethodno na Chess-Online TV-u</string>
   <string name="onlinePlayers">Prisutni igrači</string>
   <string name="activeToday">Aktivni danas</string>
   <string name="activePlayers">Aktivni igrači</string>

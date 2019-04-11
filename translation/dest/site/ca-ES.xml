@@ -419,8 +419,8 @@
   <string name="biography">Biografia</string>
   <string name="country">País</string>
   <string name="preferences">Preferències</string>
-  <string name="watchLichessTV">Mira Lichess TV</string>
-  <string name="previouslyOnLichessTV">Prèviament a Lichess TV</string>
+  <string name="watchLichessTV">Mira Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Prèviament a Chess-Online TV</string>
   <string name="onlinePlayers">Jugadors connectats</string>
   <string name="activeToday">Actius avui</string>
   <string name="activePlayers">Jugadors actius</string>

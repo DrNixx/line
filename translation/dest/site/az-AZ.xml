@@ -373,8 +373,8 @@
   <string name="biography">Özü haqqında</string>
   <string name="country">Ölkə</string>
   <string name="preferences">Seçimlər</string>
-  <string name="watchLichessTV">Lichess TV izlə</string>
-  <string name="previouslyOnLichessTV">Daha öncə Lichess TV-də</string>
+  <string name="watchLichessTV">Chess-Online TV izlə</string>
+  <string name="previouslyOnLichessTV">Daha öncə Chess-Online TV-də</string>
   <string name="onlinePlayers">Onlayn oyunçular</string>
   <string name="activeToday">Bu gün aktiv olanlar</string>
   <string name="activePlayers">Aktiv oyunçular</string>

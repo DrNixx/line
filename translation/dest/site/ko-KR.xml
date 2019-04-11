@@ -416,7 +416,7 @@
   <string name="country">국가</string>
   <string name="preferences">설정</string>
   <string name="inlineNotation">기보를 가로쓰기</string>
-  <string name="watchLichessTV">Lichess TV 보기</string>
+  <string name="watchLichessTV">Chess-Online TV 보기</string>
   <string name="previouslyOnLichessTV">이전 방송</string>
   <string name="onlinePlayers">접속한 플레이어</string>
   <string name="activeToday">오늘의 활동적인 플레이어</string>

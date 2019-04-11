@@ -339,8 +339,8 @@
   <string name="biography">Lífssaga</string>
   <string name="country">Land</string>
   <string name="preferences">Stillingar</string>
-  <string name="watchLichessTV">Horfðu á Lichessvarpið</string>
-  <string name="previouslyOnLichessTV">Áður á Lichessvarpinu</string>
+  <string name="watchLichessTV">Horfðu á Chessonlinevarpið</string>
+  <string name="previouslyOnLichessTV">Áður á Chessonlinevarpinu</string>
   <string name="onlinePlayers">Tengdir notendur</string>
   <string name="activeToday">Virkir í dag</string>
   <string name="activePlayers">Virkir notendur</string>

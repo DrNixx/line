@@ -408,8 +408,8 @@
   <string name="country">Країна</string>
   <string name="preferences">Налаштування</string>
   <string name="inlineNotation">Вбудована нотація</string>
-  <string name="watchLichessTV">Дивитися Lichess ТБ</string>
-  <string name="previouslyOnLichessTV">Попередні трансляції на Lichess ТБ</string>
+  <string name="watchLichessTV">Дивитися Chess-Online ТБ</string>
+  <string name="previouslyOnLichessTV">Попередні трансляції на Chess-Online ТБ</string>
   <string name="onlinePlayers">Гравці онлайн</string>
   <string name="activeToday">Активність сьогодні</string>
   <string name="activePlayers">Активні гравці</string>

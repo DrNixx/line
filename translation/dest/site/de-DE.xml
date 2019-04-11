@@ -441,8 +441,8 @@
   <string name="country">Land</string>
   <string name="preferences">Einstellungen</string>
   <string name="inlineNotation">Inline-Notation</string>
-  <string name="watchLichessTV">Lichess-TV anschauen</string>
-  <string name="previouslyOnLichessTV">Zuletzt auf Lichess TV</string>
+  <string name="watchLichessTV">Chess-Online-TV anschauen</string>
+  <string name="previouslyOnLichessTV">Zuletzt auf Chess-Online TV</string>
   <string name="onlinePlayers">Spieler online</string>
   <string name="activeToday">Heute aktiv</string>
   <string name="activePlayers">Aktive Spieler</string>

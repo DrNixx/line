@@ -442,8 +442,8 @@
   <string name="country">দেশ</string>
   <string name="preferences">পছন্দসমূহ</string>
   <string name="inlineNotation">রেখা চিহ্ন</string>
-  <string name="watchLichessTV">Lichess TV দেখুন</string>
-  <string name="previouslyOnLichessTV">এর আগে Lichess TV- তে যা হয়েছে</string>
+  <string name="watchLichessTV">Chess-Online TV দেখুন</string>
+  <string name="previouslyOnLichessTV">এর আগে Chess-Online TV- তে যা হয়েছে</string>
   <string name="onlinePlayers">যে সমস্ত  খেলোয়ার অনলাইন আছে</string>
   <string name="activeToday">যারা আজকে সক্রিয় রয়েছে</string>
   <string name="activePlayers">সক্রিয় খেলোয়াড়গণ</string>

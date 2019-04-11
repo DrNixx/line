@@ -295,8 +295,8 @@
   <string name="biography">Biografie</string>
   <string name="country">Land</string>
   <string name="preferences">Voorkeure</string>
-  <string name="watchLichessTV">Kyk Lichess TV</string>
-  <string name="previouslyOnLichessTV">Voorigekeer op Lichess TV</string>
+  <string name="watchLichessTV">Kyk Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Voorigekeer op Chess-Online TV</string>
   <string name="onlinePlayers">Online Speelers</string>
   <string name="activeToday">Aktief vandag</string>
   <string name="activePlayers">Actiewe spelers</string>
