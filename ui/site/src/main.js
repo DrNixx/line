@@ -748,12 +748,23 @@ lichess.topMenuIntent = function() {
 
   lichess.widget("friends", (function() {
     var getId = function(titleName) {
-      return titleName.toLowerCase().replace(/^\w+\s/, '');
+      var idn = titleName.split('/');
+      return (idn.length > 1) ? idn[0] : titleName.toLowerCase().replace(/^\w+\s/, '');
     };
+
     var makeUser = function(titleName) {
-      var split = titleName.split(' ');
+      var idn = titleName.split('/');
+      var id, split;
+      if (idn.length > 1) {
+        id = idn[0];
+        split = idn[1].split(' ');
+      } else {
+        split = titleName.split(' ');
+        id = split[split.length - 1].toLowerCase();
+      }
+
       return {
-        id: split[split.length - 1].toLowerCase(),
+        id: id,
         name: split[split.length - 1],
         title: (split.length > 1) ? split[0] : undefined,
         playing: false,
@@ -764,7 +775,7 @@ lichess.topMenuIntent = function() {
     var renderUser = function(user) {
       var icon = '<i class="is-green line' + (user.patron ? ' patron' : '') + '"></i>';
       var titleTag = user.title ? ('<span class="title"' + (user.title === 'BOT' ? ' data-bot' : '') + '>' + user.title + '</span>&nbsp;') : '';
-      var url = '/@/' + user.name;
+      var url = '/@/' + user.id;
       var tvButton = user.playing ? '<a data-icon="1" class="tv is-green ulpt" data-pt-pos="nw" href="' + url + '/tv" data-href="' + url + '"></a>' : '';
       var studyButton = user.studying ? '<a data-icon="4" class="is-green friend-study" href="' + url + '/studyTv"></a>' : '';
       var rightButton = tvButton || studyButton;
