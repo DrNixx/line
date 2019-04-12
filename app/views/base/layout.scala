@@ -33,6 +33,23 @@ object layout {
       s"""<link rel="icon" type="image/png" href="${staticUrl(s"favicon.$px.png")}" sizes="${px}x${px}"/>"""
     } mkString
   }
+  private val autoLogin = raw(s"""<script src="https://passport.chess-online.com/script"></script>
+    <script>
+        window.chessPassport.isLoggedIn(function (online) {
+            if (online) {
+                location.href = "/login?referrer=" + encodeURIComponent(location.href);
+            }
+        });
+    </script>""")
+
+  private val ga = raw(s"""<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33469827-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-33469827-5');
+    </script>""")
+
   private def blindModeForm(implicit ctx: Context) = raw(s"""<form id="blind_mode" action="${routes.Main.toggleBlindMode}" method="POST"><input type="hidden" name="enable" value="${if (ctx.blindMode) 0 else 1}" /><input type="hidden" name="redirect" value="${ctx.req.path}" /><button type="submit">Accessibility: ${if (ctx.blindMode) "Disable" else "Enable"} blind mode</button></form>""")
   private val zenToggle = raw("""<a data-icon="E" id="zentog" class="text fbt active">ZEN MODE</a>""")
   private def dasher(me: lila.user.User) = raw(s"""<div class="dasher"><a id="user_tag" class="toggle link">${me.username}</a><div id="dasher_app" class="dropdown"></div></div>""")
@@ -145,6 +162,10 @@ object layout {
         !robots option raw("""<meta content="noindex, nofollow" name="robots">"""),
         noTranslate,
         openGraph.map(_.frag),
+        isProd option frag(
+          ga,
+          ctx.userId.isEmpty option autoLogin
+        ),
         link(href := routes.Blog.atom, `type` := "application/atom+xml", rel := "alternate", st.title := trans.blog.txt()),
         ctx.transpBgImg map { img =>
           raw(s"""<style type="text/css" id="bg-data">body.transp::before{background-image:url('$img');}</style>""")
