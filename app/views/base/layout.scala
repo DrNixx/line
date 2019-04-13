@@ -166,10 +166,6 @@ object layout {
           ga,
           ctx.userId.isEmpty option autoLogin
         ),
-        isProd option frag(
-          ga,
-          ctx.userId.isEmpty option autoLogin
-        ),
         link(href := routes.Blog.atom, `type` := "application/atom+xml", rel := "alternate", st.title := trans.blog.txt()),
         ctx.transpBgImg map { img =>
           raw(s"""<style type="text/css" id="bg-data">body.transp::before{background-image:url('$img');}</style>""")
