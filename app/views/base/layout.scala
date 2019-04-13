@@ -33,22 +33,22 @@ object layout {
       s"""<link rel="icon" type="image/png" href="${staticUrl(s"favicon.$px.png")}" sizes="${px}x${px}"/>"""
     } mkString
   }
-  private def autoLogin(implicit ctx: Context) = raw(s"""<script src="https://passport.chess-online.com/script"></script>
-    <script nonce="${ctx.nonce.map(_.value)}">
-        window.chessPassport.isLoggedIn(function (online) {
+  private def autoLogin(implicit ctx: Context) = raw(List(
+    s"""<script src="https://passport.chess-online.com/script"></script>""",
+    embedJs(s"""window.chessPassport.isLoggedIn(function (online) {
             if (online) {
                 location.href = "/login?referrer=" + encodeURIComponent(location.href);
             }
-        });
-    </script>""")
+        });""")
+  ).mkString)
 
-  private def ga(implicit ctx: Context) = raw(s"""<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33469827-5"></script>
-    <script nonce="${ctx.nonce.map(_.value)}">
-      window.dataLayer = window.dataLayer || [];
+  private def ga(implicit ctx: Context) = raw(List(
+    s"""<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33469827-5"></script>""",
+    embedJs(s"""window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'UA-33469827-5');
-    </script>""")
+      gtag('config', 'UA-33469827-5');""")
+  ).mkString)
 
   private def blindModeForm(implicit ctx: Context) = raw(s"""<form id="blind_mode" action="${routes.Main.toggleBlindMode}" method="POST"><input type="hidden" name="enable" value="${if (ctx.blindMode) 0 else 1}" /><input type="hidden" name="redirect" value="${ctx.req.path}" /><button type="submit">Accessibility: ${if (ctx.blindMode) "Disable" else "Enable"} blind mode</button></form>""")
   private val zenToggle = raw("""<a data-icon="E" id="zentog" class="text fbt active">ZEN MODE</a>""")
@@ -162,6 +162,10 @@ object layout {
         !robots option raw("""<meta content="noindex, nofollow" name="robots">"""),
         noTranslate,
         openGraph.map(_.frag),
+        isProd option frag(
+          ga,
+          ctx.userId.isEmpty option autoLogin
+        ),
         isProd option frag(
           ga,
           ctx.userId.isEmpty option autoLogin
