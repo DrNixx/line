@@ -33,8 +33,8 @@ object layout {
       s"""<link rel="icon" type="image/png" href="${staticUrl(s"favicon.$px.png")}" sizes="${px}x${px}"/>"""
     } mkString
   }
-  private val autoLogin = raw(s"""<script src="https://passport.chess-online.com/script"></script>
-    <script>
+  private def autoLogin(implicit ctx: Context) = raw(s"""<script src="https://passport.chess-online.com/script"></script>
+    <script nonce="${ctx.nonce.map(_.value)}">
         window.chessPassport.isLoggedIn(function (online) {
             if (online) {
                 location.href = "/login?referrer=" + encodeURIComponent(location.href);
@@ -42,8 +42,8 @@ object layout {
         });
     </script>""")
 
-  private val ga = raw(s"""<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33469827-5"></script>
-    <script>
+  private def ga(implicit ctx: Context) = raw(s"""<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33469827-5"></script>
+    <script nonce="${ctx.nonce.map(_.value)}">
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
