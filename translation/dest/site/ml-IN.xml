@@ -668,7 +668,7 @@ in %3$s</string>
   <string name="simulClockHint">ഫിഷെറിന്റെ ക്ലോക്ക് ക്രമീകരണം. കൂടുതൽ കളിക്കാരെ നേരിടുമ്പോൾ കൂടുതൽ സമയം ആവശ്യമായി വരും.</string>
   <string name="simulAddExtraTime">Simul-മായി പൊരുത്തപ്പെടാൻ കുറച്ച് അധികം സമയം നിങ്ങൾക്ക് ചേർക്കാം.</string>
   <string name="simulHostExtraTime">ഹോസ്റ്റിന്റെ കൂടുതൽ ക്ലോക്ക് സമയം</string>
-  <string name="lichessTournaments">Lichess പരമ്പരകൾ</string>
+  <string name="lichessTournaments">Arena പരമ്പരകൾ</string>
   <string name="tournamentFAQ">അറീന പരമ്പര</string>
   <string name="tournamentOfficial">ഔദ്യോഗികമായ</string>
   <string name="timeBeforeTournamentStarts">പരമ്പര തുടങ്ങുന്നതിനു മുൻപുള്ള സമയം</string>

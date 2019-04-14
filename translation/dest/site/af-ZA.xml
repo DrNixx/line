@@ -503,7 +503,7 @@
   <string name="simulClockHint">Fischer klok opstel. Hoe meer spelers wat jy op te neem, hoe meer tyd jy mag nodig wees.</string>
   <string name="simulAddExtraTime">Jy kan ekstra tyd by jou horlosie te help cope met die simul.</string>
   <string name="simulHostExtraTime">Host ekstra klok tyd</string>
-  <string name="lichessTournaments">Lichess toernooie</string>
+  <string name="lichessTournaments">Arena toernooie</string>
   <string name="tournamentFAQ">Arena toernooi Vrae</string>
   <string name="tournamentOfficial">Amptelik</string>
   <string name="timeBeforeTournamentStarts">Tydsduur tot aanvang van toernooi</string>

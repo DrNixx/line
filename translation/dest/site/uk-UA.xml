@@ -621,7 +621,7 @@
   <string name="simulClockHint">Налаштування Фішера. Більша кількість учасників – більше часу для сеансера.</string>
   <string name="simulAddExtraTime">Ви можете додати собі час, щоб упоратися з сеансом.</string>
   <string name="simulHostExtraTime">Додатковий час для сеансера</string>
-  <string name="lichessTournaments">Турніри Lichess</string>
+  <string name="lichessTournaments">Турніри Arena</string>
   <string name="tournamentFAQ">FAQ сторінки турнірів</string>
   <string name="tournamentOfficial">Офіційні</string>
   <string name="timeBeforeTournamentStarts">Час до початку турніру</string>

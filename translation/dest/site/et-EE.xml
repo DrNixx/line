@@ -671,7 +671,7 @@ arvutianalüüsi, mängu jututoa ning jagatava URL-i.</string>
   <string name="simulClockHint">Fischeri ajakontroll. Mida enamate vastastega mängid, seda enam aega võib vaja minna.</string>
   <string name="simulAddExtraTime">Võid enda kellale lisaaega anda, et simultaaniga paremini hakkama saada.</string>
   <string name="simulHostExtraTime">Sinultaani andja lisaaeg</string>
-  <string name="lichessTournaments">lichess turniirid</string>
+  <string name="lichessTournaments">arena turniirid</string>
   <string name="tournamentFAQ">Korduma kippuvad küsimused</string>
   <string name="tournamentOfficial">Ametlik</string>
   <string name="timeBeforeTournamentStarts">Aega turniiri alguseni</string>

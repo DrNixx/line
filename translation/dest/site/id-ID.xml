@@ -625,7 +625,7 @@ masuk %3$s</string>
   <string name="simulClockHint">Aturan Jam Fischer: Semakin banyak peserta yang ikut, semakin banyak waktu diperlukan.</string>
   <string name="simulAddExtraTime">Anda bisa menambah waktu pada jam anda untuk membantu simultan anda</string>
   <string name="simulHostExtraTime">Penyedia waktu tambahan</string>
-  <string name="lichessTournaments">Turnamen Lichess</string>
+  <string name="lichessTournaments">Turnamen Arena</string>
   <string name="tournamentFAQ">Arena Turnamen FAQ</string>
   <string name="tournamentOfficial">Resmi</string>
   <string name="timeBeforeTournamentStarts">Waktu sebelum turnamen dimulai</string>

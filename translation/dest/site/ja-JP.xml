@@ -645,7 +645,7 @@
   <string name="simulClockHint">フィッシャーモードの設定。相手が多いほど追加時間は長めに。</string>
   <string name="simulAddExtraTime">同時対局の手間を考え、自分に持時間をさらに追加できます。</string>
   <string name="simulHostExtraTime">ホスト延長時間</string>
-  <string name="lichessTournaments">Lichess トーナメント</string>
+  <string name="lichessTournaments">Arena トーナメント</string>
   <string name="tournamentFAQ">アリーナ・トーナメントFAQ</string>
   <string name="tournamentOfficial">公式</string>
   <string name="timeBeforeTournamentStarts">開始までの時間</string>

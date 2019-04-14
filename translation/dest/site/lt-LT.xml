@@ -555,7 +555,7 @@ kompiuterinę analizę, partijos pokalbį bei URL dalinimuisi.</string>
   <string name="simulClockHint">Fišerio laikrodžio nustatymas. Prieš kuo daugiau žaidėjų rungsitės, tuo daugiau laiko jums gali prireikti.</string>
   <string name="simulAddExtraTime">Galite pridėti papildomo laiko savo laikrodžiui, kad būtų lengviau žaisti simule.</string>
   <string name="simulHostExtraTime">Papildomas laikas šeimininkui</string>
-  <string name="lichessTournaments">„lichess“ turnyrai</string>
+  <string name="lichessTournaments">„arena“ turnyrai</string>
   <string name="tournamentFAQ">Arenos turnyrų DUK</string>
   <string name="tournamentOfficial">Oficialūs</string>
   <string name="timeBeforeTournamentStarts">Laikas iki turnyro pradžios</string>

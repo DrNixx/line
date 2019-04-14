@@ -545,7 +545,7 @@
   <string name="simulClockHint">Cloc Fischer. Os dach chi\'n chwarae yn fwy o chwaraewyr, bydd angen mwy o amser gennoch.</string>
   <string name="simulAddExtraTime">Gellwch ychwanegu amser at dy gloc i\'ch helpu ymdopi â\'r cystadleuaeth simul.</string>
   <string name="simulHostExtraTime">Amser ychwanegol i gloc y gweinydd</string>
-  <string name="lichessTournaments">Cystadleuaethau lichess</string>
+  <string name="lichessTournaments">Cystadleuaethau arena</string>
   <string name="tournamentFAQ">C&amp;A am gystadleuaethau</string>
   <string name="tournamentOfficial">Swyddogol</string>
   <string name="timeBeforeTournamentStarts">Amser cyn i\'r cystadleuaeth gychwyn</string>

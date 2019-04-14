@@ -555,7 +555,7 @@
   <string name="simulClockHint">Усталяваць гадзіньнік Фішэра. Чым больш гульцоў бярэш, тым больш часу табе спатрэбіцца.</string>
   <string name="simulAddExtraTime">Ты можаш дадаць дадатковы час  да свайго гадзіньніка каб памагчы даць рады з САГ</string>
   <string name="simulHostExtraTime">Дадатковы час гаспадара</string>
-  <string name="lichessTournaments">Турніры Lichess</string>
+  <string name="lichessTournaments">Турніры Arena</string>
   <string name="tournamentFAQ">FAQ турніру</string>
   <string name="tournamentOfficial">Афіцыйна</string>
   <string name="timeBeforeTournamentStarts">Час перад пачаткам турніру</string>

@@ -703,7 +703,7 @@
   <string name="simulClockHint">Fišera pulksteņa uzstādīšana. Jo vairāk spēlētāji ir pretiniekos, jo vairāk laika tev varētu vajadzēt.</string>
   <string name="simulAddExtraTime">Tu vari pievienot papildus laiku savam pulkstenim lai vieglāk tiktu galā ar simultānseansu.</string>
   <string name="simulHostExtraTime">Vadītāja papildus pulksteņa laiks</string>
-  <string name="lichessTournaments">Lichess turnīri</string>
+  <string name="lichessTournaments">Arena turnīri</string>
   <string name="tournamentFAQ">Arena turnīru BUJ</string>
   <string name="tournamentOfficial">Oficiāli</string>
   <string name="timeBeforeTournamentStarts">Laiks līdz turnīra sākumam</string>

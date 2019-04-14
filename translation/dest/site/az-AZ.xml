@@ -587,7 +587,7 @@
   <string name="simulClockHint">Fişer Saatını quraşdırma. Çoxlu sayda oyunçları qəbul etdikdə, daha çox zamana ehtiyacın olacaq.</string>
   <string name="simulAddExtraTime">Simulla başa çıxmaq üçün öz saatına əlavə vaxtlar artıra bilərsən.</string>
   <string name="simulHostExtraTime">Dəvət edənin əlavə vaxtı</string>
-  <string name="lichessTournaments">Lichess turnirləri</string>
+  <string name="lichessTournaments">Arena turnirləri</string>
   <string name="tournamentFAQ">Arena turnirinin TSS</string>
   <string name="tournamentOfficial">Rəsmi</string>
   <string name="timeBeforeTournamentStarts">Turnir başlamadan öncəki zaman</string>

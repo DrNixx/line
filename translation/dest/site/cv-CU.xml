@@ -501,7 +501,7 @@
   <string name="aboutSimulSettings">Пӗр вӑхӑтри вӑйӑ йаланах ахаль вӑйӑ. Рематч выльама, тавӑрма тата \"ытлаши вӑхӑт\" илме ҫук.</string>
   <string name="create">Йӗркелес</string>
   <string name="whenCreateSimul">Пӗр вӑхӑтри вӑйӑ йӗрекелесен, санӑн темиҫе ӑмӑртуҫпа пӗр вӑхӑтра выльамалла.</string>
-  <string name="lichessTournaments">Lichess турнирӗсем</string>
+  <string name="lichessTournaments">Arena турнирӗсем</string>
   <string name="tournamentFAQ">Аренӑ турнирӗн ТЛЫӗ</string>
   <string name="tournamentOfficial">Офиссаллӑ</string>
   <string name="timeBeforeTournamentStarts">Турнир пуҫланиччен хушши</string>

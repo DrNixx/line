@@ -654,7 +654,7 @@
   <string name="simulClockHint">Fischer na Orasan ng pagaayos. Mas maraming manlalaro na iyong nilaro, mas maraming oras ang iyong maaring kailanganin.</string>
   <string name="simulAddExtraTime">Maaring magdadag ng sobrang oras sa iyong orasan upang tumulong na makaya ang simul.</string>
   <string name="simulHostExtraTime">Maghost ng sobrang oras sa orasan</string>
-  <string name="lichessTournaments">Mga Paligsahan ng Lichess</string>
+  <string name="lichessTournaments">Mga Paligsahan ng Arena</string>
   <string name="tournamentFAQ">Lugar ng paligsahan na FAQ</string>
   <string name="tournamentOfficial">Opisyal</string>
   <string name="timeBeforeTournamentStarts">Oras bago magsimula ang paligsahan</string>

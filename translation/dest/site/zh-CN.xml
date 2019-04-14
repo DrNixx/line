@@ -643,7 +643,7 @@
   <string name="simulClockHint">菲舍尔时钟设置。棋手越多，您需要的時间可能就越多。</string>
   <string name="simulAddExtraTime">您可以给您的时钟多加点时间以帮助您应对车轮战。</string>
   <string name="simulHostExtraTime">主持人的额外时间</string>
-  <string name="lichessTournaments">Lichess锦标赛</string>
+  <string name="lichessTournaments">Arena锦标赛</string>
   <string name="tournamentFAQ">锦标赛常见问题</string>
   <string name="tournamentOfficial">Lichess官方锦标赛</string>
   <string name="timeBeforeTournamentStarts">锦标赛开始前的时间</string>

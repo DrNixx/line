@@ -734,7 +734,7 @@ v %3$s</string>
   <string name="simulClockHint">Fischerjeva nastavitev ure. Več igralcev kot sprejmeš, več časa potrebuješ.</string>
   <string name="simulAddExtraTime">Morda boš potreboval več časa, kot pomoč pri igranju simultanke.</string>
   <string name="simulHostExtraTime">Gostuj dodaten čas igranja.</string>
-  <string name="lichessTournaments">Lichess turnirji</string>
+  <string name="lichessTournaments">Arena turnirji</string>
   <string name="tournamentFAQ">Turnirji - pogosta vprašanja</string>
   <string name="tournamentOfficial">Uradno</string>
   <string name="timeBeforeTournamentStarts">Čas do začetka turnirja</string>

@@ -671,7 +671,7 @@
   <string name="simulClockHint">Fischer-kellon asetukset. Mitä enemmän pelaajia on, sitä enemmän aikaa saatat tarvita.</string>
   <string name="simulAddExtraTime">Voit lisätä aikaa kelloosi selviytyäksesi simultaanista.</string>
   <string name="simulHostExtraTime">Isännän ylimääräinen aika</string>
-  <string name="lichessTournaments">Lichessin turnaukset</string>
+  <string name="lichessTournaments">Arenain turnaukset</string>
   <string name="tournamentFAQ">Areenaturnausten UKK</string>
   <string name="tournamentOfficial">Virallinen</string>
   <string name="timeBeforeTournamentStarts">Aika ennen turnauksen alkua</string>

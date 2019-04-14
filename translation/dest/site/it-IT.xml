@@ -675,7 +675,7 @@ in %3$s</string>
   <string name="simulClockHint">Modello Fischer Clock. Più giocatori sfidi, più tempo ti potrebbe servire.</string>
   <string name="simulAddExtraTime">Puoi aggiungere più tempo al tuo orologio per far fronte alla simultanea.</string>
   <string name="simulHostExtraTime">Tempo aggiuntivo del simultaneista</string>
-  <string name="lichessTournaments">Tornei Lichess</string>
+  <string name="lichessTournaments">Tornei Arena</string>
   <string name="tournamentFAQ">Domande frequenti sui tornei</string>
   <string name="tournamentOfficial">Ufficiale</string>
   <string name="timeBeforeTournamentStarts">Tempo prima dell\'inizio del torneo</string>

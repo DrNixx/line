@@ -655,7 +655,7 @@
   <string name="simulClockHint">Ŝakhorloĝo. Ju pli da ludantoj kiujn vi defios, des pli da tempo kiun vi eble bezonos.</string>
   <string name="simulAddExtraTime">Vi povas aldoni plian tempon al via ŝakhorloĝo por helpi vian ludadon.</string>
   <string name="simulHostExtraTime">Plia tempo por la gastiganto</string>
-  <string name="lichessTournaments">Turniroj de Lichess</string>
+  <string name="lichessTournaments">Turniroj de Arena</string>
   <string name="tournamentFAQ">Oftaj demandoj pri la turnira areno</string>
   <string name="tournamentOfficial">Oficiala</string>
   <string name="timeBeforeTournamentStarts">Tempo ĝis la turniro komenciĝas</string>

@@ -676,7 +676,7 @@ in %3$s</string>
   <string name="simulClockHint">Configuration de Horologio Fischer. Quanto plus jocatores tu accepta, tanto plus tempore tu pote requirer.</string>
   <string name="simulAddExtraTime">Tu pote adder tempore additional a tu horologio pro adjutar a arrangiar te con le exhibition simultanee.</string>
   <string name="simulHostExtraTime">Tempore additional al hospite</string>
-  <string name="lichessTournaments">Torneos official de Lichess</string>
+  <string name="lichessTournaments">Torneos official de Arena</string>
   <string name="tournamentFAQ">Questiones frequente sur le torneos Arena</string>
   <string name="tournamentOfficial">Official</string>
   <string name="timeBeforeTournamentStarts">Tempore ante le initio del torneo</string>
