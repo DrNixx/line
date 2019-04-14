@@ -65,7 +65,7 @@ final class TournamentApi(
         }
       }
     if (tour.name != me.titleUsername && lila.common.LameName.anyNameButLichessIsOk(tour.name))
-      bus.publish(lila.hub.actorApi.slack.TournamentName(me.username, tour.id, tour.name), 'slack)
+      bus.publish(lila.hub.actorApi.slack.TournamentName(me.id, me.username, tour.id, tour.name), 'slack)
     logger.info(s"Create $tour")
     TournamentRepo.insert(tour) >>- join(tour.id, me, tour.password, getUserTeamIds, none) inject tour
   }

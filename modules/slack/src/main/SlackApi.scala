@@ -58,10 +58,10 @@ final class SlackApi(
     case Warning(msg) => publishWarning(msg)
     case Info(msg) => publishInfo(msg)
     case Victory(msg) => publishVictory(msg)
-    case TournamentName(userName, tourId, tourName) => client(SlackMessage(
+    case TournamentName(userId, userName, tourId, tourName) => client(SlackMessage(
       username = "Tournament name alert",
       icon = "children_crossing",
-      text = s"${userLink(userName)} created ${link(s"https://live.chess-online.com/tournament/$tourId", s"$tourName Arena")}",
+      text = s"${userLink(userId, userName)} created ${link(s"https://live.chess-online.com/tournament/$tourId", s"$tourName Arena")}",
       channel = rooms.tavern
     ))
   }
@@ -71,9 +71,9 @@ final class SlackApi(
     icon = "eye",
     text = {
       val finalS = if (user.username endsWith "s") "" else "s"
-      s"checked out _*${userLink(user.username)}*_'$finalS communications "
+      s"checked out _*${userLink(user)}*_'$finalS communications "
     } + reportBy.filter(mod.id !=).fold("spontaneously") { by =>
-      s"while investigating a report created by ${userLink(by)}"
+      s"while investigating a report created by ${userLink(by, by)}"
     },
     channel = "commlog"
   ))
@@ -144,8 +144,8 @@ final class SlackApi(
     ))
 
   private def link(url: String, name: String) = s"<$url|$name>"
-  private def userLink(name: String): String = link(s"https://live.chess-online.com/@/$name?mod", name)
-  private def userLink(user: User): String = userLink(user.username)
+  private def userLink(id: User.ID, name: String): String = link(s"https://live.chess-online.com/@/$id?mod", name)
+  private def userLink(user: User): String = userLink(user.id, user.username)
   private def userNotesLink(name: String) = link(s"https://live.chess-online.com/@/$name?notes", "notes")
   private def broadcastLink(id: String, name: String) = link(s"https://live.chess-online.com/broadcast/-/$id", name)
   private def gameLink(path: String) = link(s"https://live.chess-online.com/$path", path)
@@ -160,7 +160,7 @@ final class SlackApi(
   def userMod(user: User, mod: User): Funit = client(SlackMessage(
     username = mod.username,
     icon = "eyes",
-    text = s"Let's have a look at _*${userLink(user.username)}*_",
+    text = s"Let's have a look at _*${userLink(user)}*_",
     channel = rooms.tavern
   ))
 
@@ -168,7 +168,7 @@ final class SlackApi(
     client(SlackMessage(
       username = modName,
       icon = "spiral_note_pad",
-      text = (s"_*${userLink(username)}*_ (${userNotesLink(username)}):\n" +
+      text = (s"_*${userLink(username, username)}*_ (${userNotesLink(username)}):\n" +
         linkifyUsers(note take 2000)),
       channel = rooms.tavern
     ))
