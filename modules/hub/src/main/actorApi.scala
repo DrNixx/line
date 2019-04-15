@@ -215,7 +215,7 @@ package fishnet {
 }
 
 package user {
-  case class Note(from: String, to: String, text: String, mod: Boolean)
+  case class Note(fromid: String, fromname: String, toid: String, toname: String, text: String, mod: Boolean)
 }
 
 package round {

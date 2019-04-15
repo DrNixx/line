@@ -146,7 +146,7 @@ final class SlackApi(
   private def link(url: String, name: String) = s"<$url|$name>"
   private def userLink(id: User.ID, name: String): String = link(s"https://live.chess-online.com/@/$id?mod", name)
   private def userLink(user: User): String = userLink(user.id, user.username)
-  private def userNotesLink(name: String) = link(s"https://live.chess-online.com/@/$name?notes", "notes")
+  private def userNotesLink(id: User.ID, name: String) = link(s"https://live.chess-online.com/@/$id?notes", "notes")
   private def broadcastLink(id: String, name: String) = link(s"https://live.chess-online.com/broadcast/-/$id", name)
   private def gameLink(path: String) = link(s"https://live.chess-online.com/$path", path)
   private val chatPanicLink = link("https://live.chess-online.com/mod/chat-panic", "Chat Panic")
@@ -164,11 +164,11 @@ final class SlackApi(
     channel = rooms.tavern
   ))
 
-  def userModNote(modName: String, username: String, note: String): Funit =
+  def userModNote(modId: User.ID, modName: String, id: User.ID, username: String, note: String): Funit =
     client(SlackMessage(
       username = modName,
       icon = "spiral_note_pad",
-      text = (s"_*${userLink(username, username)}*_ (${userNotesLink(username)}):\n" +
+      text = (s"_*${userLink(id, username)}*_ (${userNotesLink(id, username)}):\n" +
         linkifyUsers(note take 2000)),
       channel = rooms.tavern
     ))

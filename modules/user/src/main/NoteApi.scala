@@ -72,8 +72,10 @@ final class NoteApi(
         Propagate(NoteCreate(note.from, note.to)) toFriendsOf from.id exceptUser note.to modsOnly note.mod
       }
       bus.publish(lila.hub.actorApi.user.Note(
-        from = from.username,
-        to = to.username,
+        fromid = from.id,
+        fromname = from.username,
+        toid = to.id,
+        toname = to.username,
         text = note.text,
         mod = modOnly
       ), 'userNote)
