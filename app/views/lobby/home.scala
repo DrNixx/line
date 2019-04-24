@@ -148,7 +148,7 @@ object home {
             span(trans.directlySupportLichess())
           )
         ),
-        div(cls := "about-footer")(a(href := "https://github.com/ornicar/lila")("Based on open source Lila chess server"))
+        div(cls := "about-footer")(a(href := "https://github.com/DrNixx/line/tree/chess-online")("Based on open source Lila chess server"))
       )
     }
 
