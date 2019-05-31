@@ -24,7 +24,7 @@ case class Question(
   def id = _id
 
   def slug = {
-    val s = lila.common.String slugify title
+    val s = lila.common.Slugify apply title
     if (s.isEmpty) "-" else s
   }
 

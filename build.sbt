@@ -35,7 +35,8 @@ libraryDependencies ++= Seq(
   maxmind, prismic, netty, guava,
   kamon.core, kamon.influxdb, scalatags,
   nimbusds.jwt, nimbusds.oidc,
-  java8compat, semver, scrimage, scalaConfigs, scaffeine
+  java8compat, semver, scrimage, scalaConfigs, scaffeine,
+  icu4j
 )
 TwirlKeys.templateImports ++= Seq(
   "lila.game.{ Game, Player, Pov }",
@@ -133,7 +134,7 @@ lazy val evaluation = module("evaluation", Seq(
 // )
 
 lazy val common = module("common", Seq()).settings(
-  libraryDependencies ++= provided(play.api, play.test, reactivemongo.driver, kamon.core, scalatags) ++ Seq(scaffeine)
+  libraryDependencies ++= provided(play.api, play.test, reactivemongo.driver, kamon.core, scalatags, icu4j) ++ Seq(scaffeine)
 )
 
 lazy val rating = module("rating", Seq(common, db)).settings(

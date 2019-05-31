@@ -6,7 +6,6 @@ import chess.format.{ pgn => chessPgn }
 import org.joda.time.format.DateTimeFormat
 
 import lila.common.LightUser
-import lila.common.String.slugify
 import lila.tree.Node.{ Shape, Shapes, Comment }
 
 final class PgnDump(
@@ -17,6 +16,8 @@ final class PgnDump(
 ) {
 
   import PgnDump._
+
+  val slugify = lila.common.Slugify.apply _
 
   def apply(study: Study): Fu[List[Pgn]] =
     chapterRepo.orderedByStudy(study.id).map {

@@ -9,7 +9,7 @@ trait StringHelper { self: NumberHelper =>
 
   def netDomain: String
 
-  val slugify = lila.common.String.slugify _
+  val slugify = lila.common.Slugify.apply _
 
   def shorten(text: String, length: Int, sep: String = "…") = lila.common.String.shorten(text, length, sep)
 

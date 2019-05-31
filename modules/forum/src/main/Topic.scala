@@ -50,7 +50,7 @@ case class Topic(
 
 object Topic {
 
-  def nameToId(name: String) = (lila.common.String slugify name) |> { slug =>
+  def nameToId(name: String) = (lila.common.Slugify apply name) |> { slug =>
     // if most chars are not latin, go for random slug
     if (slug.size > (name.size / 2)) slug else Random nextString 8
   }
