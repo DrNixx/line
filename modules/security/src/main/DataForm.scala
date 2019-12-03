@@ -63,16 +63,26 @@ final class DataForm(
     ).verifying("usernameUnacceptable", u => !LameName.username(u))
       .verifying("usernameAlreadyUsed", u => !UserRepo.nameExists(u).awaitSeconds(4))
 
+    private val agreementBool = boolean.verifying(b => b)
+
+    private val agreement = mapping(
+      "assistance" -> agreementBool,
+      "nice" -> agreementBool,
+      "account" -> agreementBool,
+      "policy" -> agreementBool
+    )(AgreementData.apply)(AgreementData.unapply)
+
     val website = Form(mapping(
-      "username" -> username,
+      "username" -> trimField(username),
       "password" -> text(minLength = 4),
       "email" -> withAcceptableDns(acceptableUniqueEmail(none)),
+      "agreement" -> agreement,
       "fp" -> optional(nonEmptyText),
       "g-recaptcha-response" -> optional(nonEmptyText)
     )(SignupData.apply)(_ => None))
 
     val mobile = Form(mapping(
-      "username" -> username,
+      "username" -> trimField(username),
       "password" -> text(minLength = 4),
       "email" -> withAcceptableDns(acceptableUniqueEmail(none))
     )(MobileSignupData.apply)(_ => None))
@@ -102,6 +112,15 @@ final class DataForm(
       "the new passwords don't match",
       _.samePasswords
     ))
+
+  val magicLink = Form(mapping(
+    "email" -> anyEmail, // allow unacceptable emails for BC
+    "gameId" -> text,
+    "move" -> text
+  )(MagicLink.apply)(_ => None)
+    .verifying(captchaFailMessage, validateCaptcha _))
+
+  def magicLinkWithCaptcha = withCaptcha(magicLink)
 
   def changeEmail(u: User, old: Option[EmailAddress]) = authenticator loginCandidate u map { candidate =>
     Form(mapping(
@@ -133,7 +152,7 @@ final class DataForm(
   def disableTwoFactor(u: User) = authenticator loginCandidate u map { candidate =>
     Form(tuple(
       "passwd" -> passwordMapping(candidate),
-      "token" -> text.verifying("invalidAuthenticationToken", t => u.totpSecret.??(_.verify(TotpToken(t))))
+      "token" -> text.verifying("invalidAuthenticationCode", t => u.totpSecret.??(_.verify(TotpToken(t))))
     ))
   }
 
@@ -157,10 +176,18 @@ final class DataForm(
 
 object DataForm {
 
+  case class AgreementData(
+      assistance: Boolean,
+      nice: Boolean,
+      account: Boolean,
+      policy: Boolean
+  )
+
   case class SignupData(
       username: String,
       password: String,
       email: String,
+      agreement: AgreementData,
       fp: Option[String],
       `g-recaptcha-response`: Option[String]
   ) {
@@ -180,6 +207,14 @@ object DataForm {
   }
 
   case class PasswordReset(
+      email: String,
+      gameId: String,
+      move: String
+  ) {
+    def realEmail = EmailAddress(email)
+  }
+
+  case class MagicLink(
       email: String,
       gameId: String,
       move: String

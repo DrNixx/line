@@ -143,6 +143,7 @@ final class GameApiV2(
           .add("ratingDiff", p.ratingDiff)
           .add("name", p.name)
           .add("provisional" -> p.provisional)
+          .add("aiLevel" -> p.aiLevel)
           .add("analysis" -> analysisOption.flatMap(analysisJson.player(g pov p.color)))
         // .add("moveCentis" -> withFlags.moveTimes ?? g.moveTimes(p.color).map(_.map(_.centis)))
       })
@@ -152,6 +153,7 @@ final class GameApiV2(
       .add("moves" -> withFlags.moves.option(g.pgnMoves mkString " "))
       .add("daysPerTurn" -> g.daysPerTurn)
       .add("analysis" -> analysisOption.ifTrue(withFlags.evals).map(analysisJson.moves(_, withGlyph = false)))
+      .add("tournament" -> g.tournamentId)
       .add("clock" -> g.clock.map { clock =>
         Json.obj(
           "initial" -> clock.limitSeconds,

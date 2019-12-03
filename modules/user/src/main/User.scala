@@ -2,7 +2,7 @@ package lila.user
 
 import scala.concurrent.duration._
 
-import lila.common.{ LightUser, EmailAddress }
+import lila.common.{ LightUser, EmailAddress, NormalizedEmailAddress }
 
 import lila.rating.PerfType
 import org.joda.time.DateTime
@@ -37,6 +37,8 @@ case class User(
     case _ => false
   }
 
+  override def hashCode: Int = id.hashCode
+
   override def toString =
     s"User $username(${perfs.bestRating}) games:${count.game}${troll ?? " troll"}${engine ?? " engine"}"
 
@@ -46,13 +48,15 @@ case class User(
 
   def langs = ("en" :: lang.toList).distinct.sorted
 
-  def compare(other: User) = id compare other.id
+  def compare(other: User) = id compareTo other.id
 
   def noTroll = !troll
 
   def canTeam = true
 
   def disabled = !enabled
+
+  def canPalantir = !kid && !troll
 
   def usernameWithBestRating = s"$username (${perfs.bestRating})"
 
@@ -68,7 +72,7 @@ case class User(
 
   def hasTitle = title.isDefined
 
-  lazy val seenRecently: Boolean = timeNoSee < 2.minutes
+  lazy val seenRecently: Boolean = timeNoSee < User.seenRecently
 
   def timeNoSee: Duration = seenAt.fold[Duration](Duration.Inf) { s =>
     (nowMillis - s.getMillis).millis
@@ -91,12 +95,9 @@ case class User(
       -(perfs(pt).nb * PerfType.totalTimeRoughEstimation.get(pt).fold(0)(_.roundSeconds))
     } take nb
 
-  private val firstRow: List[PerfType] = List(PerfType.Bullet, PerfType.Blitz, PerfType.Rapid, PerfType.Classical, PerfType.Correspondence)
-  private val secondRow: List[PerfType] = List(PerfType.UltraBullet, PerfType.Crazyhouse, PerfType.Chess960, PerfType.KingOfTheHill, PerfType.ThreeCheck, PerfType.Antichess, PerfType.Atomic, PerfType.Horde, PerfType.RacingKings)
+  def best8Perfs: List[PerfType] = bestOf(User.firstRow, 4) ::: bestOf(User.secondRow, 4)
 
-  def best8Perfs: List[PerfType] = bestOf(firstRow, 4) ::: bestOf(secondRow, 4)
-
-  def best6Perfs: List[PerfType] = bestOf(firstRow ::: secondRow, 6)
+  def best6Perfs: List[PerfType] = bestOf(User.firstRow ::: User.secondRow, 6)
 
   def hasEstablishedRating(pt: PerfType) = perfs(pt).established
 
@@ -153,15 +154,17 @@ object User {
   val broadcasterId = "broadcaster"
   def isOfficial(userId: ID) = userId == lichessId || userId == broadcasterId
 
+  val seenRecently = 2.minutes
+
   case class GDPRErase(user: User) extends AnyVal
   case class Erased(value: Boolean) extends AnyVal
 
   case class LightPerf(user: LightUser, perfKey: String, rating: Int, progress: Int)
   case class LightCount(user: LightUser, count: Int)
 
-  case class Active(user: User)
-
-  case class Emails(current: Option[EmailAddress], previous: Option[EmailAddress])
+  case class Emails(current: Option[EmailAddress], previous: Option[NormalizedEmailAddress]) {
+    def list = current.toList ::: previous.toList
+  }
   case class WithEmails(user: User, emails: Emails)
 
   case class ClearPassword(value: String) extends AnyVal {
@@ -220,6 +223,7 @@ object User {
     val title = "title"
     def glicko(perf: String) = s"$perfs.$perf.gl"
     val email = "email"
+    val verbatimEmail = "verbatimEmail"
     val mustConfirmEmail = "mustConfirmEmail"
     val prevEmail = "prevEmail"
     val colorIt = "colorIt"
@@ -230,6 +234,7 @@ object User {
     val bpass = "bpass"
     val sha512 = "sha512"
     val totpSecret = "totp"
+    val changedCase = "changedCase"
   }
 
   import lila.db.BSON
@@ -298,4 +303,7 @@ object User {
   }
 
   implicit val speakerHandler = reactivemongo.bson.Macros.handler[Speaker]
+
+  private val firstRow: List[PerfType] = List(PerfType.Bullet, PerfType.Blitz, PerfType.Rapid, PerfType.Classical, PerfType.Correspondence)
+  private val secondRow: List[PerfType] = List(PerfType.UltraBullet, PerfType.Crazyhouse, PerfType.Chess960, PerfType.KingOfTheHill, PerfType.ThreeCheck, PerfType.Antichess, PerfType.Atomic, PerfType.Horde, PerfType.RacingKings)
 }

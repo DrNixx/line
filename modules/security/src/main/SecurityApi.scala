@@ -54,7 +54,7 @@ final class SecurityApi(
 
   def loadLoginForm(str: String): Fu[Form[LoginCandidate.Result]] = {
     emailValidator.validate(EmailAddress(str)) match {
-      case Some(email) => authenticator.loginCandidateByEmail(email)
+      case Some(EmailAddressValidator.Acceptable(email)) => authenticator.loginCandidateByEmail(email.normalize)
       case None if User.couldBeUsername(str) => authenticator.loginCandidateById(User normalize str)
       case _ => fuccess(none)
     }
@@ -72,26 +72,22 @@ final class SecurityApi(
     UserRepo mustConfirmEmail userId flatMap {
       case true => fufail(SecurityApi MustConfirmEmail userId)
       case false =>
-        val sessionId = Random secureString 12
+        val sessionId = Random secureString 22
         Store.save(sessionId, userId, req, apiVersion, up = true, fp = none) inject sessionId
     }
 
   def saveSignup(userId: User.ID, apiVersion: Option[ApiVersion], fp: Option[FingerPrint])(implicit req: RequestHeader): Funit = {
-    val sessionId = Random secureString 8
+    val sessionId = Random secureString 22
     Store.save(s"SIG-$sessionId", userId, req, apiVersion, up = false, fp = fp)
   }
 
-  def restoreUser(req: RequestHeader): Fu[Option[FingerprintedUser]] =
+  def restoreUser(req: RequestHeader): Fu[Option[FingerPrintedUser]] =
     firewall.accepts(req) ?? {
-      reqSessionId(req).?? { sessionId =>
+      reqSessionId(req) ?? { sessionId =>
         Store userIdAndFingerprint sessionId flatMap {
           _ ?? { d =>
             if (d.isOld) Store.setDateToNow(sessionId)
-            UserRepo.byId(d.user) map {
-              _ map {
-                FingerprintedUser(_, d.fp.isDefined)
-              }
-            }
+            UserRepo byId d.user map { _ map { FingerPrintedUser(_, d.fp) } }
           }
         }
       }
@@ -120,16 +116,10 @@ final class SecurityApi(
   def setFingerPrint(req: RequestHeader, fp: FingerPrint): Fu[Option[FingerHash]] =
     reqSessionId(req) ?? { Store.setFingerPrint(_, fp) map some }
 
-  private val sessionIdKey = "sessionId"
-
-  private def isMobileAppWS(req: RequestHeader) =
-    HTTPRequest.isSocket(req) && HTTPRequest.origin(req).fold(true)("file://" ==)
+  val sessionIdKey = "sessionId"
 
   def reqSessionId(req: RequestHeader): Option[String] =
-    req.session.get(sessionIdKey) orElse
-      req.headers.get(sessionIdKey) orElse {
-        isMobileAppWS(req) ?? req.queryString.get(sessionIdKey).flatMap(_.headOption)
-      }
+    req.session.get(sessionIdKey) orElse req.headers.get(sessionIdKey)
 
   def userIdsSharingIp = userIdsSharingField("ip") _
 
@@ -169,6 +159,9 @@ final class SecurityApi(
         }
       }
     }
+
+  def printUas(fh: FingerHash): Fu[List[String]] =
+    coll.distinct[String, List]("ua", $doc("fp" -> fh.value).some)
 
   private def recentUserIdsByField(field: String)(value: String): Fu[List[User.ID]] =
     coll.distinct[User.ID, List](

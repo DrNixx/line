@@ -2,10 +2,11 @@ package lila.hub
 
 import java.util.concurrent.atomic.AtomicReference
 import java.util.function.UnaryOperator
-import lila.hub.actorApi.Shutdown
 import scala.collection.immutable.Queue
 import scala.concurrent.duration._
 import scala.concurrent.{ Future, Promise }
+
+import lila.hub.actorApi.Shutdown
 
 /*
  * Like an actor, but not an actor.
@@ -21,6 +22,8 @@ trait Trouper extends lila.common.Tellable {
   protected val process: Receive
 
   protected var isAlive = true
+
+  def getIsAlive = isAlive
 
   def stop(): Unit = {
     isAlive = false
@@ -59,8 +62,6 @@ trait Trouper extends lila.common.Tellable {
     case Shutdown => stop()
     case msg => lila.log("trouper").warn(s"unhandled msg: $msg")
   }
-
-  lazy val uniqueId = Integer.toHexString(hashCode)
 }
 
 object Trouper {
@@ -74,5 +75,11 @@ object Trouper {
       state flatMap { q =>
         if (q.isEmpty) None else Some(q.tail)
       }
+  }
+
+  def stub = new Trouper {
+    val process: Receive = {
+      case msg => lila.log("trouper").warn(s"stub trouper received: $msg")
+    }
   }
 }

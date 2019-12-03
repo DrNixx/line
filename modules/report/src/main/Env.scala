@@ -10,6 +10,9 @@ final class Env(
     isOnline: lila.user.User.ID => Boolean,
     noteApi: lila.user.NoteApi,
     securityApi: lila.security.SecurityApi,
+    userSpyApi: lila.security.UserSpyApi,
+    playbanApi: lila.playban.PlaybanApi,
+    slackApi: lila.slack.SlackApi,
     system: ActorSystem,
     hub: lila.hub.Env,
     settingStore: lila.memo.SettingStore.Builder,
@@ -27,6 +30,12 @@ final class Env(
     text = "Report score threshold. Reports with lower scores are concealed to moderators".some
   )
 
+  val slackScoreThresholdSetting = settingStore[Int](
+    "slackScoreThreshold",
+    default = 80,
+    text = "Slack score threshold. Comm reports with higher scores are notified in slack".some
+  )
+
   lazy val forms = new DataForm(hub.captcher, NetDomain)
 
   private lazy val autoAnalysis = new AutoAnalysis(
@@ -39,9 +48,13 @@ final class Env(
     autoAnalysis,
     noteApi,
     securityApi,
+    userSpyApi,
+    playbanApi,
+    slackApi,
     isOnline,
     asyncCache,
-    scoreThreshold = scoreThresholdSetting.get
+    scoreThreshold = scoreThresholdSetting.get,
+    slackScoreThreshold = slackScoreThresholdSetting.get
   )
 
   lazy val modFilters = new ModReportFilter
@@ -51,12 +64,16 @@ final class Env(
     def receive = {
       case lila.hub.actorApi.report.Cheater(userId, text) =>
         api.autoCheatReport(userId, text)
-      case lila.hub.actorApi.report.Shutup(userId, text) =>
-        api.autoInsultReport(userId, text)
+      case lila.hub.actorApi.report.Shutup(userId, text, major) =>
+        api.autoInsultReport(userId, text, major)
       case lila.hub.actorApi.report.Booster(winnerId, loserId) =>
         api.autoBoostReport(winnerId, loserId)
     }
   }), name = ActorName)
+
+  lila.common.Bus.subscribeFun('playban) {
+    case lila.hub.actorApi.playban.Playban(userId, _) => api.maybeAutoPlaybanReport(userId)
+  }
 
   system.scheduler.schedule(1 minute, 1 minute) { api.inquiries.expire }
 
@@ -68,9 +85,12 @@ object Env {
   lazy val current = "report" boot new Env(
     config = lila.common.PlayApp loadConfig "report",
     db = lila.db.Env.current,
-    isOnline = lila.user.Env.current.isOnline,
+    isOnline = lila.socket.Env.current.isOnline,
     noteApi = lila.user.Env.current.noteApi,
     securityApi = lila.security.Env.current.api,
+    userSpyApi = lila.security.Env.current.userSpyApi,
+    playbanApi = lila.playban.Env.current.api,
+    slackApi = lila.slack.Env.current.api,
     system = lila.common.PlayApp.system,
     hub = lila.hub.Env.current,
     settingStore = lila.memo.Env.current.settingStore,

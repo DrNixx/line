@@ -2,7 +2,7 @@ package lila.slack
 
 import org.joda.time.DateTime
 
-import lila.common.{ LightUser, IpAddress }
+import lila.common.{ LightUser, IpAddress, EmailAddress }
 import lila.hub.actorApi.slack._
 import lila.user.User
 
@@ -99,6 +99,13 @@ final class SlackApi(
     channel = rooms.tavernBots
   ))
 
+  def commReportBurst(user: User): Funit = client(SlackMessage(
+    username = "Comm alert",
+    icon = "anger",
+    text = linkifyUsers(s"Burst of comm reports about @${user.username}"),
+    channel = rooms.tavern
+  ))
+
   def broadcastError(id: String, name: String, error: String): Funit = client(SlackMessage(
     username = "Chess-Online error",
     icon = "lightning",
@@ -144,12 +151,13 @@ final class SlackApi(
     ))
 
   private def link(url: String, name: String) = s"<$url|$name>"
-  private def userLink(id: User.ID, name: String): String = link(s"https://live.chess-online.com/@/$id?mod", name)
+  private def lichessLink(path: String, name: String) = s"<https://live.chess-online.com$path|$name>"
+  private def userLink(id: User.ID, name: String): String = lichessLink(s"/@/$id?mod", name)
   private def userLink(user: User): String = userLink(user.id, user.username)
-  private def userNotesLink(id: User.ID, name: String) = link(s"https://live.chess-online.com/@/$id?notes", "notes")
-  private def broadcastLink(id: String, name: String) = link(s"https://live.chess-online.com/broadcast/-/$id", name)
-  private def gameLink(path: String) = link(s"https://live.chess-online.com/$path", path)
-  private val chatPanicLink = link("https://live.chess-online.com/mod/chat-panic", "Chat Panic")
+  private def gameLink(id: String) = lichessLink(s"/$id", s"#$id")
+  private def userNotesLink(id: User.ID, name: String) = lichessLink(s"/@/$id?notes", "notes")
+  private def broadcastLink(id: String, name: String) = lichessLink(s"/broadcast/-/$id", name)
+  private val chatPanicLink = lichessLink("/mod/chat-panic", "Chat Panic")
 
   private val userRegex = lila.common.String.atUsernameRegex.pattern
   private val userReplace = link("https://live.chess-online.com/@/$1?mod", "$1")
@@ -200,6 +208,18 @@ final class SlackApi(
       text = "stage has been updated!",
       channel = rooms.devNoise
     ))
+
+  def signup(user: User, email: EmailAddress, ip: IpAddress, fp: Option[String], susp: Boolean) = client(SlackMessage(
+    username = "lichess",
+    icon = "musical_note",
+    text = {
+      val emailLink = lichessLink(s"/mod/search?q=${email.value}", email.value)
+      val ipLink = lichessLink(s"/mod/search?q=$ip", ip.value)
+      val fpLink = fp.fold("none")(print => lichessLink(s"/mod/print/$print", print))
+      s"${userLink(user)} EMAIL: $emailLink IP: $ipLink FP: $fpLink${susp ?? " *proxy*"}"
+    },
+    channel = rooms.signups
+  ))
 }
 
 private object SlackApi {
@@ -208,6 +228,7 @@ private object SlackApi {
     val general = "team"
     val tavern = "tavern"
     val tavernBots = "tavern-bots"
+    val signups = "signups"
     val broadcast = "broadcast"
     val devNoise = "dev-noise"
   }

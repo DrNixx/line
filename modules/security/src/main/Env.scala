@@ -8,6 +8,7 @@ import lila.oauth.OAuthServer
 import akka.actor._
 import com.typesafe.config.Config
 import scala.concurrent.duration._
+import lila.common.Bus
 
 final class Env(
     config: Config,
@@ -17,6 +18,7 @@ final class Env(
     asyncCache: lila.memo.AsyncCache.Builder,
     settingStore: lila.memo.SettingStore.Builder,
     tryOAuthServer: OAuthServer.Try,
+    mongoCache: lila.memo.MongoCache.Builder,
     system: ActorSystem,
     scheduler: lila.common.Scheduler,
     db: lila.db.Env,
@@ -28,7 +30,7 @@ final class Env(
   private val MailgunSender = config getString "mailgun.sender"
   private val MailgunReplyTo = config getString "mailgun.reply_to"
   private val CollectionSecurity = config getString "collection.security"
-  private val FirewallEnabled = config getBoolean "firewall.enabled"
+  private val CollectionPrintBan = config getString "collection.print_ban"
   private val FirewallCookieName = config getString "firewall.cookie.name"
   private val FirewallCookieEnabled = config getBoolean "firewall.cookie.enabled"
   private val FirewallCollectionFirewall = config getString "firewall.collection.firewall"
@@ -51,6 +53,8 @@ final class Env(
   private val IpIntelEmail = EmailAddress(config getString "ipintel.email")
   private val DnsApiUrl = config getString "dns_api.url"
   private val DnsApiTimeout = config duration "dns_api.timeout"
+  private val CheckMailUrl = config getString "check_mail_api.url"
+  private val CheckMailKey = config getString "check_mail_api.key"
 
   val recaptchaPublicConfig = RecaptchaPublicConfig(
     key = config getString "recaptcha.public_key",
@@ -60,7 +64,6 @@ final class Env(
   lazy val firewall = new Firewall(
     coll = firewallColl,
     cookieName = FirewallCookieName.some filter (_ => FirewallCookieEnabled),
-    enabled = FirewallEnabled,
     system = system
   )
 
@@ -98,9 +101,12 @@ final class Env(
     text = "Enable the user garbage collector".some
   )
 
+  lazy val printBan = new PrintBan(printBanColl)
+
   lazy val garbageCollector = new GarbageCollector(
     userSpyApi,
     ipTrust,
+    printBan,
     slack,
     ugcArmedSetting.get,
     system
@@ -128,6 +134,12 @@ final class Env(
     tokenerSecret = PasswordResetSecret
   )
 
+  lazy val magicLink = new MagicLink(
+    mailgun = mailgun,
+    baseUrl = NetBaseUrl,
+    tokenerSecret = PasswordResetSecret
+  )
+
   lazy val emailChange = new EmailChange(
     mailgun = mailgun,
     baseUrl = NetBaseUrl,
@@ -138,11 +150,6 @@ final class Env(
     secret = LoginTokenSecret
   )
 
-  lazy val welcomeEmail = new WelcomeEmail(
-    mailgun = mailgun,
-    baseUrl = NetBaseUrl
-  )
-
   lazy val automaticEmail = new AutomaticEmail(
     mailgun = mailgun,
     baseUrl = NetBaseUrl
@@ -150,18 +157,13 @@ final class Env(
 
   private lazy val dnsApi = new DnsApi(DnsApiUrl, DnsApiTimeout)(system)
 
-  lazy val emailAddressValidator = new EmailAddressValidator(disposableEmailDomain, dnsApi)
+  private lazy val checkMail = new CheckMail(CheckMailUrl, CheckMailKey, mongoCache)(system)
 
-  lazy val emailBlacklistSetting = settingStore[Strings](
-    "emailBlacklist",
-    default = Strings(Nil),
-    text = "Blacklisted email domains separated by a comma".some
-  )
+  lazy val emailAddressValidator = new EmailAddressValidator(disposableEmailDomain, dnsApi, checkMail)
 
   private lazy val disposableEmailDomain = new DisposableEmailDomain(
     providerUrl = DisposableEmailProviderUrl,
-    blacklistStr = emailBlacklistSetting.get,
-    bus = system.lilaBus
+    checkMailBlocked = () => checkMail.fetchAllBlocked
   )
 
   import reactivemongo.bson._
@@ -190,12 +192,13 @@ final class Env(
 
   def cli = new Cli
 
-  system.lilaBus.subscribeFun('fishnet) {
+  Bus.subscribeFun('fishnet) {
     case lila.hub.actorApi.fishnet.NewKey(userId, key) =>
       automaticEmail.onFishnetKey(userId, key)(lila.i18n.defaultLang)
   }
 
   private[security] lazy val storeColl = db(CollectionSecurity)
+  private[security] lazy val printBanColl = db(CollectionPrintBan)
   private[security] lazy val firewallColl = db(FirewallCollectionFirewall)
 }
 
@@ -217,6 +220,7 @@ object Env {
         lila.log("security").warn("oauth", e)
         none
     },
+    mongoCache = lila.memo.Env.current.mongoCache,
     system = system,
     scheduler = lila.common.PlayApp.scheduler,
     captcher = lila.hub.Env.current.captcher,
