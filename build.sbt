@@ -33,7 +33,7 @@ libraryDependencies ++= Seq(
   reactivemongo.driver, reactivemongo.iteratees, akka.actor, akka.slf4j,
   maxmind, prismic, netty, guava, markdown,
   kamon.core, kamon.influxdb, scalatags,
-  nimbusds.jwt, nimbusds.oidc,
+  nimbusds.jwt, nimbusds.oidc, icu4j,
   java8compat, semver, scrimage, scalaConfigs, scaffeine, lettuce, epoll
 )
 resourceDirectory in Assets := (sourceDirectory in Compile).value / "assets"
@@ -114,7 +114,7 @@ lazy val evaluation = module("evaluation", Seq(
 )
 
 lazy val common = module("common", Seq()).settings(
-  libraryDependencies ++= provided(play.api, play.test, reactivemongo.driver, kamon.core, scalatags) ++ Seq(scaffeine)
+  libraryDependencies ++= provided(play.api, play.test, reactivemongo.driver, kamon.core, scalatags, icu4j) ++ Seq(scaffeine)
 )
 
 lazy val rating = module("rating", Seq(common, db, memo)).settings(
