@@ -38,10 +38,16 @@ object Theme extends ThemeObject {
   )
 
   val all = List(
-    "blue", "blue2", "blue3", "canvas",
-    "wood", "wood2", "wood3", "maple",
-    "green", "marble", "brown", "leather",
-    "grey", "metal", "olive", "purple"
+    "blue", "blue2",
+    "blue3", "canvas",
+    "wood", "wood2",
+    "wood3", "maple",
+    "brown", "leather",
+    "green", "marble",
+    "green-plastic", "green-glass",
+    "grey", "metal",
+    "olive", "newspaper",
+    "purple", "pink"
   ) map { name =>
       new Theme(name, colors.getOrElse(name, defaultHexColors))
     }

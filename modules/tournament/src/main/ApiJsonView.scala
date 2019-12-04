@@ -5,19 +5,23 @@ import play.api.libs.json._
 import lila.common.LightUser
 import lila.rating.PerfType
 
-final class ScheduleJsonView(lightUser: LightUser.Getter) {
+final class ApiJsonView(lightUser: LightUser.Getter) {
 
   import JsonView._
 
   def apply(tournaments: VisibleTournaments): Fu[JsObject] = for {
-    created <- tournaments.created.map(fullJson).sequenceFu
-    started <- tournaments.started.map(fullJson).sequenceFu
-    finished <- tournaments.finished.map(fullJson).sequenceFu
+    created <- tournaments.created.collect(visibleJson).sequenceFu
+    started <- tournaments.started.collect(visibleJson).sequenceFu
+    finished <- tournaments.finished.collect(visibleJson).sequenceFu
   } yield Json.obj(
     "created" -> created,
     "started" -> started,
     "finished" -> finished
   )
+
+  private def visibleJson: PartialFunction[Tournament, Fu[JsObject]] = {
+    case tour if tour.teamBattle.fold(true)(_.hasEnoughTeams) => fullJson(tour)
+  }
 
   def featured(tournaments: List[Tournament]): Fu[JsObject] =
     tournaments.map(fullJson).sequenceFu map { objs =>
@@ -53,8 +57,9 @@ final class ScheduleJsonView(lightUser: LightUser.Getter) {
     .add("private", tour.isPrivate)
     .add("position", tour.position.some.filterNot(_.initial) map positionJson)
     .add("schedule", tour.schedule map scheduleJson)
+    .add("battle", tour.teamBattle map teamBattleJson)
 
-  private def fullJson(tour: Tournament): Fu[JsObject] = for {
+  def fullJson(tour: Tournament): Fu[JsObject] = for {
     owner <- tour.nonLichessCreatedBy ?? lightUser
     winner <- tour.winnerId ?? lightUser
   } yield baseJson(tour) ++ Json.obj(
@@ -65,6 +70,10 @@ final class ScheduleJsonView(lightUser: LightUser.Getter) {
     "id" -> u.id,
     "name" -> u.name,
     "title" -> u.title
+  )
+
+  private def teamBattleJson(battle: TeamBattle) = Json.obj( // "nbTeams" -> battle.teams.size,
+  // "nbLeaders" -> battle.nbLeaders
   )
 
   private val perfPositions: Map[PerfType, Int] = {

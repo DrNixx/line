@@ -4,8 +4,9 @@ import play.api.data._
 import play.api.data.Forms._
 
 import lila.common.Form._
+import lila.hub.lightTeam._
 
-final class DataForm {
+object SimulForm {
 
   val clockTimes = (5 to 15 by 5) ++ (20 to 90 by 10) ++ (120 to 180 by 20)
   val clockTimeDefault = 20
@@ -36,20 +37,28 @@ final class DataForm {
         chess.variant.KingOfTheHill.id, chess.variant.ThreeCheck.id,
         chess.variant.Antichess.id, chess.variant.Atomic.id, chess.variant.Horde.id, chess.variant.RacingKings.id, chess.variant.Crazyhouse.id) contains _)
     }.verifying("At least one variant", _.nonEmpty),
-    "color" -> stringIn(colorChoices)
-  )(SimulSetup.apply)(SimulSetup.unapply)) fill SimulSetup(
+    "color" -> stringIn(colorChoices),
+    "text" -> text,
+    "team" -> optional(nonEmptyText)
+  )(Setup.apply)(Setup.unapply)) fill Setup(
     clockTime = clockTimeDefault,
     clockIncrement = clockIncrementDefault,
     clockExtra = clockExtraDefault,
     variants = List(chess.variant.Standard.id),
-    color = colorDefault
+    color = colorDefault,
+    text = "",
+    team = none
+  )
+
+  def setText = Form(single("text" -> text))
+
+  case class Setup(
+      clockTime: Int,
+      clockIncrement: Int,
+      clockExtra: Int,
+      variants: List[Int],
+      color: String,
+      text: String,
+      team: Option[String]
   )
 }
-
-case class SimulSetup(
-    clockTime: Int,
-    clockIncrement: Int,
-    clockExtra: Int,
-    variants: List[Int],
-    color: String
-)

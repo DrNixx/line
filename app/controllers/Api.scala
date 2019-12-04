@@ -47,8 +47,8 @@ object Api extends LilaController {
     Ok(views.html.site.bits.api)
   }
 
-  def user(name: String) = CookieBasedApiRequest { ctx =>
-    userApi.extended(name, ctx.me) map toApiResult
+  def user(id: lila.user.User.ID) = CookieBasedApiRequest { ctx =>
+    userApi.extended(id, ctx.me) map toApiResult
   }
 
   private[controllers] val UsersRateLimitGlobal = new lila.memo.RateLimit[String](

@@ -60,7 +60,7 @@ private[api] final class UserApi(
   //       }
   //     }
 
-  def extended(username: String, as: Option[User]): Fu[Option[JsObject]] = UserRepo named username flatMap {
+  def extended(id: User.ID, as: Option[User]): Fu[Option[JsObject]] = UserRepo byId id flatMap {
     _ ?? { extended(_, as) map some }
   }
 

@@ -29,7 +29,6 @@ final class Env(
     ctx.me.fold(anonConfigRepo filter ctx.req)(userConfigRepo.filter)
 
   lazy val processor = new Processor(
-    bus = system.lilaBus,
     gameCache = gameCache,
     maxPlaying = MaxPlaying,
     fishnetPlayer = fishnetPlayer,
@@ -45,7 +44,7 @@ object Env {
     config = lila.common.PlayApp loadConfig "setup",
     db = lila.db.Env.current,
     fishnetPlayer = lila.fishnet.Env.current.player,
-    onStart = lila.game.Env.current.onStart,
+    onStart = lila.round.Env.current.onStart,
     prefApi = lila.pref.Env.current.api,
     relationApi = lila.relation.Env.current.api,
     gameCache = lila.game.Env.current.cached,

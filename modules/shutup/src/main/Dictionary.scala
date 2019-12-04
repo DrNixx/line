@@ -15,6 +15,7 @@ private object Dictionary {
 fck(er|r|u|k|ed|d|t|ing?|ign|tard?|face|off?|)
 abortion
 adol(f|ph)
+afraid
 anal(plug|sex|)
 anus
 arse(hole|wipe|)
@@ -23,6 +24,7 @@ ass?(hole|fag)
 aus?c?hwitz
 ball
 bastard?
+be[ea]+ch
 bewb
 bimbo
 bit?ch
@@ -39,6 +41,7 @@ cancer
 cawk
 cheat(er|)
 chess(|-|_)bot(.?com)?
+chicken
 chink
 choad
 clit
@@ -87,6 +90,7 @@ kaffir
 kike
 kys
 labia
+lamer?
 lesbo
 masturbat(e|ion|ing)
 milf
@@ -103,6 +107,7 @@ nutsac?k
 pa?edo
 pa?edo(f|ph)ile
 paki
+pathetic
 pecker
 pederast
 pen(1|i)s
@@ -126,6 +131,8 @@ rapist
 rect(al|um)
 retard
 rimjob
+run
+scare
 schlong
 screw
 scrotum
@@ -135,6 +142,7 @@ sex
 shag
 shemale
 shit(z|e|y|ty|bag|)
+sissy
 sister
 slag
 slave
@@ -155,6 +163,7 @@ tart
 terrorist
 tit(|t?ies|ty)(fuc?k)
 tosser
+trash
 turd
 twat
 vag
@@ -162,6 +171,7 @@ vagin(a|al|)
 vibrator
 vulva
 wanc?k(er|)
+weak
 wetback
 w?hore?
 wog
@@ -172,9 +182,24 @@ wog
 пизда
 пидор
 пидераст
-pid(a|o)r
+pid(a|o|)r
 Лох
 Сосать
+Лопух
+Соси
+анус
+бля(|дь|ди|дина|дство)
+дерьмо
+(|отъ|вы|до|за|у)еба(л|ла|ли|лся|льник|ть|н|нул|нула|нулся)
+у(ё|е)бище
+(|от)муд(охать|охал|охала|охали|ак)
+(|от|с)пизд(ить|ил|ила|или|ошить|ошил|ошила|ошили|охать|охал|охала|охали|юлить|юлил|юлила|юлили|ярить|ярил|ярила|ярили|яхать|яхал|яхала|яхали|ячить|ячил|ячила|ячили|якать|якал|якала|якали|ец|ецкий|абол|атый)
+(|от)хер(|ачить|ово|ня)
+охуе(л|ла|ли|ть)
+поебень
+ху(ё|е)(во|сос)
+хуй(|ня)
+чмо
 """)
 
   private def dict(words: String) = words.lines.filter(_.nonEmpty)

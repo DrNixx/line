@@ -6,16 +6,17 @@ import reactivemongo.api._
 import reactivemongo.play.iteratees.cursorProducer
 import scala.concurrent.duration._
 
-import lila.common.Tellable
+import lila.common.{ Bus, Tellable }
 import lila.db.dsl._
-import lila.game.{ GameRepo, Pov }
+import lila.game.{ Game, Pov }
 import lila.hub.actorApi.round.IsOnGame
 import makeTimeout.short
 
 private final class CorresAlarm(
     system: akka.actor.ActorSystem,
     coll: Coll,
-    socketMap: SocketMap
+    hasUserId: (Game, lila.user.User.ID) => Fu[Boolean],
+    proxyGame: Game.ID => Fu[Option[Game]]
 ) {
 
   private case class Alarm(
@@ -30,14 +31,14 @@ private final class CorresAlarm(
 
   system.scheduler.scheduleOnce(10 seconds)(scheduleNext)
 
-  system.lilaBus.subscribeFun('finishGame) {
+  Bus.subscribeFun('finishGame) {
     case lila.game.actorApi.FinishGame(game, _, _) =>
       if (game.hasCorrespondenceClock && !game.hasAi) coll.remove($id(game.id))
   }
 
-  system.lilaBus.subscribeFun('moveEventCorres) {
+  Bus.subscribeFun('moveEventCorres) {
     case lila.hub.actorApi.round.CorresMoveEvent(move, _, _, alarmable, _) if alarmable =>
-      GameRepo game move.gameId flatMap {
+      proxyGame(move.gameId) flatMap {
         _ ?? { game =>
           game.bothPlayersHaveMoved ?? {
             game.playableCorrespondenceClock ?? { clock =>
@@ -63,12 +64,12 @@ private final class CorresAlarm(
   )).cursor[Alarm](ReadPreference.secondaryPreferred)
     .enumerator(100, Cursor.ContOnError())
     .|>>>(Iteratee.foldM[Alarm, Int](0) {
-      case (count, alarm) => GameRepo.game(alarm._id).flatMap {
+      case (count, alarm) => proxyGame(alarm._id).flatMap {
         _ ?? { game =>
           val pov = Pov(game, game.turnColor)
-          socketMap.ask[Boolean](pov.gameId)(IsOnGame(pov.color, _)) addEffect {
+          pov.player.userId.fold(fuccess(true))(u => hasUserId(pov.game, u)) addEffect {
             case true => // already looking at the game
-            case false => system.lilaBus.publish(
+            case false => Bus.publish(
               lila.game.actorApi.CorresAlarmEvent(pov),
               'corresAlarm
             )

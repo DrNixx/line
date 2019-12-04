@@ -44,6 +44,8 @@ final class Env(
 
   lazy val logApi = new ModlogApi(logColl)
 
+  lazy val impersonate = new ImpersonateApi
+
   private lazy val notifier = new ModNotifier(notifyApi, reportApi)
 
   private lazy val ratingRefund = new RatingRefund(
@@ -65,8 +67,7 @@ final class Env(
     reportApi = reportApi,
     lightUserApi = lightUserApi,
     notifier = notifier,
-    refunder = ratingRefund,
-    lilaBus = system.lilaBus
+    refunder = ratingRefund
   )
 
   private lazy val boosting = new BoostingApi(
@@ -91,17 +92,20 @@ final class Env(
     historyColl = db(CollectionGamingHistory)
   )
 
-  lazy val search = new UserSearch(
-    securityApi = securityApi,
-    emailValidator = emailValidator
-  )
+  lazy val search = lila.user.UserRepo.withColl { userColl =>
+    new UserSearch(
+      securityApi = securityApi,
+      emailValidator = emailValidator,
+      userColl = userColl
+    )
+  }
 
   lazy val inquiryApi = new InquiryApi(reportApi, noteApi, logApi)
 
   lazy val stream = new ModStream(system)
 
   // api actor
-  system.lilaBus.subscribe(system.actorOf(Props(new Actor {
+  lila.common.Bus.subscribe(system.actorOf(Props(new Actor {
     def receive = {
       case lila.analyse.actorApi.AnalysisReady(game, analysis) =>
         assessApi.onAnalysisReady(game, analysis)
@@ -123,8 +127,10 @@ final class Env(
         reportApi getSuspect userId flatten s"No such suspect $userId" flatMap { sus =>
           api.garbageCollect(sus, ipBan) >> publicChat.delete(sus)
         }
+      case lila.hub.actorApi.mod.AutoWarning(userId, subject) =>
+        logApi.modMessage(User.lichessId, userId, subject)
     }
-  }), name = ActorName), 'finishGame, 'analysisReady, 'garbageCollect)
+  }), name = ActorName), 'finishGame, 'analysisReady, 'garbageCollect, 'playban, 'autoWarning)
 }
 
 object Env {

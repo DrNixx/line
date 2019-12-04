@@ -21,9 +21,10 @@ case class Simul(
     startedAt: Option[DateTime],
     finishedAt: Option[DateTime],
     hostSeenAt: Option[DateTime],
-    color: Option[String]
+    color: Option[String],
+    text: String,
+    team: Option[String]
 ) {
-
   def id = _id
 
   def fullName = s"$name simul"
@@ -87,7 +88,7 @@ case class Simul(
     hasUser(userId) option removeApplicant(userId).removePairing(userId)
 
   private def finishIfDone =
-    if (pairings.forall(_.finished))
+    if (isStarted && pairings.forall(_.finished))
       copy(
         status = SimulStatus.Finished,
         finishedAt = DateTime.now.some,
@@ -124,8 +125,8 @@ case class Simul(
   private def Created(s: => Simul): Simul = if (isCreated) s else this
 
   def spotlightable =
-    isCreated &&
-      (hostRating >= 2400 || hostTitle.isDefined) &&
+    (hostRating >= 2400 || hostTitle.isDefined) &&
+      isCreated &&
       applicants.size < 80
 
   def wins = pairings.count(p => p.finished && p.wins.has(false))
@@ -148,7 +149,9 @@ object Simul {
     host: User,
     clock: SimulClock,
     variants: List[Variant],
-    color: String
+    color: String,
+    text: String,
+    team: Option[String]
   ): Simul = Simul(
     _id = Random nextString 8,
     name = makeName(host),
@@ -173,6 +176,8 @@ object Simul {
     startedAt = none,
     finishedAt = none,
     hostSeenAt = DateTime.now.some,
-    color = color.some
+    color = color.some,
+    text = text,
+    team = team
   )
 }

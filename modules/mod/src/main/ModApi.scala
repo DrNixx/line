@@ -1,8 +1,8 @@
 package lila.mod
 
-import lila.common.{ IpAddress, EmailAddress }
+import lila.common.{ Bus, IpAddress, EmailAddress }
 import lila.report.{ Mod, ModId, Suspect, SuspectId, Room }
-import lila.security.Permission
+import lila.security.{ Permission, Granter }
 import lila.security.{ Firewall, UserSpy, Store => SecurityStore }
 import lila.user.{ User, UserRepo, Title, LightUserApi }
 
@@ -14,8 +14,7 @@ final class ModApi(
     reportApi: lila.report.ReportApi,
     notifier: ModNotifier,
     lightUserApi: LightUserApi,
-    refunder: RatingRefund,
-    lilaBus: lila.common.Bus
+    refunder: RatingRefund
 ) {
 
   def setEngine(mod: Mod, prev: Suspect, v: Boolean): Funit = (prev.user.engine != v) ?? {
@@ -25,7 +24,7 @@ final class ModApi(
       _ <- reportApi.process(mod, sus, Set(Room.Cheat, Room.Print))
       _ <- logApi.engine(mod, sus, v)
     } yield {
-      lilaBus.publish(lila.hub.actorApi.mod.MarkCheater(sus.user.id, v), 'adjustCheater)
+      Bus.publish(lila.hub.actorApi.mod.MarkCheater(sus.user.id, v), 'adjustCheater)
       if (v) {
         notifier.reporters(mod, sus)
         refunder schedule sus
@@ -55,7 +54,7 @@ final class ModApi(
       _ <- logApi.booster(mod, sus, v)
     } yield {
       if (v) {
-        lilaBus.publish(lila.hub.actorApi.mod.MarkBooster(sus.user.id), 'adjustBooster)
+        Bus.publish(lila.hub.actorApi.mod.MarkBooster(sus.user.id), 'adjustBooster)
         notifier.reporters(mod, sus)
       }
       sus
@@ -73,10 +72,10 @@ final class ModApi(
     changed ?? {
       UserRepo.updateTroll(sus.user).void >>- {
         logApi.troll(mod, sus)
-        lilaBus.publish(lila.hub.actorApi.mod.Shadowban(sus.user.id, value), 'shadowban)
+        Bus.publish(lila.hub.actorApi.mod.Shadowban(sus.user.id, value), 'shadowban)
       }
     } >>
-      reportApi.process(mod, sus, Set(Room.Coms)) >>- {
+      reportApi.process(mod, sus, Set(Room.Comm)) >>- {
         if (value) notifier.reporters(mod, sus)
       } inject sus
   }
@@ -98,12 +97,6 @@ final class ModApi(
 
   def disableTwoFactor(mod: String, userId: User.ID): Funit = withUser(userId) { user =>
     (UserRepo disableTwoFactor user.id) >> logApi.disableTwoFactor(mod, user.id)
-  }
-
-  def closeAccount(mod: String, userId: User.ID): Fu[Option[User]] = withUser(userId) { user =>
-    user.enabled ?? {
-      logApi.closeAccount(mod, user.id) inject user.some
-    }
   }
 
   def reopenAccount(mod: String, userId: User.ID): Funit = withUser(userId) { user =>
@@ -128,14 +121,22 @@ final class ModApi(
   }
 
   def setEmail(mod: String, userId: User.ID, email: EmailAddress): Funit = withUser(userId) { user =>
-    UserRepo.email(user.id, email) >>
+    UserRepo.setEmail(user.id, email) >>
       UserRepo.setEmailConfirmed(user.id) >>
       logApi.setEmail(mod, user.id)
   }
 
-  def setPermissions(mod: String, userId: User.ID, permissions: List[Permission]): Funit = withUser(userId) { user =>
-    UserRepo.setRoles(user.id, permissions.map(_.name)) >>
-      logApi.setPermissions(mod, user.id, permissions)
+  def setPermissions(mod: Mod, userId: User.ID, permissions: Set[Permission]): Funit = withUser(userId) { user =>
+    val finalPermissions = Permission(user.roles).filter { p =>
+      // only remove permissions the mod can actually grant
+      permissions.contains(p) || !Granter.canGrant(mod.user, p)
+    } ++
+      // only add permissions the mod can actually grant
+      permissions.filter(Granter.canGrant(mod.user, _))
+    UserRepo.setRoles(user.id, finalPermissions.map(_.name).toList) >> {
+      Bus.publish(lila.hub.actorApi.mod.SetPermissions(user.id, finalPermissions.map(_.name).toList), 'setPermissions)
+      logApi.setPermissions(mod, user.id, permissions.toList)
+    }
   }
 
   def setReportban(mod: Mod, sus: Suspect, v: Boolean): Funit = (sus.user.reportban != v) ?? {
@@ -143,7 +144,7 @@ final class ModApi(
   }
 
   def setRankban(mod: Mod, sus: Suspect, v: Boolean): Funit = (sus.user.rankban != v) ?? {
-    if (v) lilaBus.publish(lila.hub.actorApi.mod.KickFromRankings(sus.user.id), 'kickFromRankings)
+    if (v) Bus.publish(lila.hub.actorApi.mod.KickFromRankings(sus.user.id), 'kickFromRankings)
     UserRepo.setRankban(sus.user.id, v) >>- logApi.rankban(mod, sus, v)
   }
 

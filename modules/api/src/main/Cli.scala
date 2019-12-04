@@ -5,7 +5,7 @@ import akka.actor.ActorSelection
 import lila.common.Bus
 import lila.hub.actorApi.Deploy
 
-private[api] final class Cli(bus: lila.common.Bus) extends lila.common.Cli {
+private[api] final class Cli extends lila.common.Cli {
 
   private val logger = lila.log("cli")
 
