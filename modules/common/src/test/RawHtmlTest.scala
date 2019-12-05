@@ -76,49 +76,49 @@ class RawHtmlTest extends Specification {
     }
 
     "internal links" in {
-      addLinks("lichess.org/@/foo/games") must_==
-        """<a href="/@/foo/games">lichess.org/@/foo/games</a>"""
-      addLinks("lichess.org/@/foo") must_== """<a href="/@/foo">@foo</a>"""
-      addLinks("http://lichess.org/") must_== """<a href="/">lichess.org/</a>"""
-      addLinks("http://lichess.org") must_== """<a href="/">lichess.org</a>"""
+      addLinks("live.chess-online.com/@/foo/games") must_==
+        """<a href="/@/foo/games">live.chess-online.com/@/foo/games</a>"""
+      addLinks("live.chess-online.com/@/foo") must_== """<a href="/@/foo">@foo</a>"""
+      addLinks("http://live.chess-online.com/") must_== """<a href="/">live.chess-online.com/</a>"""
+      addLinks("http://live.chess-online.com") must_== """<a href="/">live.chess-online.com</a>"""
       addLinks("@foo") must_== """<a href="/@/foo">@foo</a>"""
     }
 
     "handle weird characters" in {
-      addLinks("lichess.org/-–%20") must_== """<a href="/-–%20">lichess.org/-–%20</a>"""
+      addLinks("live.chess-online.com/-–%20") must_== """<a href="/-–%20">live.chess-online.com/-–%20</a>"""
     }
 
     "handle multiple links" in {
-      addLinks("@foo blah lichess.org") must_== """<a href="/@/foo">@foo</a> blah <a href="/">lichess.org</a>"""
-      addLinks("b foo.com blah lichess.org") must_==
-        """b <a rel="nofollow" href="https://foo.com" target="_blank">foo.com</a> blah <a href="/">lichess.org</a>"""
+      addLinks("@foo blah live.chess-online.com") must_== """<a href="/@/foo">@foo</a> blah <a href="/">live.chess-online.com</a>"""
+      addLinks("b foo.com blah live.chess-online.com") must_==
+        """b <a rel="nofollow" href="https://foo.com" target="_blank">foo.com</a> blah <a href="/">live.chess-online.com</a>"""
     }
 
     "handle trailing punctuation" in {
-      addLinks("lichess.org.") must_== """<a href="/">lichess.org</a>."""
-      addLinks("lichess.org)") must_== """<a href="/">lichess.org</a>)"""
-      addLinks("lichess.org/()") must_== """<a href="/()">lichess.org/()</a>"""
+      addLinks("live.chess-online.com.") must_== """<a href="/">live.chess-online.com</a>."""
+      addLinks("live.chess-online.com)") must_== """<a href="/">live.chess-online.com</a>)"""
+      addLinks("live.chess-online.com/()") must_== """<a href="/()">live.chess-online.com/()</a>"""
 
-      addLinks("lichess.org/())") must_== """<a href="/()">lichess.org/()</a>)"""
-      addLinks("lichess.org/(2)-)?") must_== """<a href="/(2)-">lichess.org/(2)-</a>)?"""
+      addLinks("live.chess-online.com/())") must_== """<a href="/()">live.chess-online.com/()</a>)"""
+      addLinks("live.chess-online.com/(2)-)?") must_== """<a href="/(2)-">live.chess-online.com/(2)-</a>)?"""
 
-      addLinks("lichess.org.-") must_== """<a href="/">lichess.org</a>.-"""
+      addLinks("live.chess-online.com.-") must_== """<a href="/">live.chess-online.com</a>.-"""
 
-      addLinks("lichess.org/foo:bar") must_== """<a href="/foo:bar">lichess.org/foo:bar</a>"""
-      addLinks("lichess.org/foo:bar:") must_== """<a href="/foo:bar">lichess.org/foo:bar</a>:"""
+      addLinks("live.chess-online.com/foo:bar") must_== """<a href="/foo:bar">live.chess-online.com/foo:bar</a>"""
+      addLinks("live.chess-online.com/foo:bar:") must_== """<a href="/foo:bar">live.chess-online.com/foo:bar</a>:"""
     }
 
     "handle embedded links" in {
-      addLinks(".lichess.org") must_== """.lichess.org"""
-      addLinks("/lichess.org") must_== """/lichess.org"""
-      addLinks(".http://lichess.org") must_== """.<a href="/">lichess.org</a>"""
+      addLinks(".live.chess-online.com") must_== """.live.chess-online.com"""
+      addLinks("/live.chess-online.com") must_== """/live.chess-online.com"""
+      addLinks(".http://live.chess-online.com") must_== """.<a href="/">live.chess-online.com</a>"""
 
-      addLinks("/http://lichess.org") must_== """/<a href="/">lichess.org</a>"""
+      addLinks("/http://live.chess-online.com") must_== """/<a href="/">live.chess-online.com</a>"""
     }
 
     "handle ambig path separator" in {
-      addLinks("lichess.org#f") must_== """<a href="/#f">lichess.org/#f</a>"""
-      addLinks("lichess.org?f") must_== """<a href="/?f">lichess.org/?f</a>"""
+      addLinks("live.chess-online.com#f") must_== """<a href="/#f">live.chess-online.com/#f</a>"""
+      addLinks("live.chess-online.com?f") must_== """<a href="/?f">live.chess-online.com/?f</a>"""
     }
 
     "pass through plain text (fast case)" in {
@@ -149,13 +149,13 @@ class RawHtmlTest extends Specification {
 
   "atUser" should {
     "expand valid" in {
-      expandAtUser("@foo") must_== List("lichess.org/@/foo")
-      expandAtUser("@2foo") must_== List("lichess.org/@/2foo")
-      expandAtUser("@foo.") must_== List("lichess.org/@/foo", ".")
+      expandAtUser("@foo") must_== List("live.chess-online.com/@/foo")
+      expandAtUser("@2foo") must_== List("live.chess-online.com/@/2foo")
+      expandAtUser("@foo.") must_== List("live.chess-online.com/@/foo", ".")
       expandAtUser("@foo.com") must_== List("@foo.com")
 
-      expandAtUser("@foo./") must_== List("lichess.org/@/foo", "./")
-      expandAtUser("@foo/games") must_== List("lichess.org/@/foo", "/games")
+      expandAtUser("@foo./") must_== List("live.chess-online.com/@/foo", "./")
+      expandAtUser("@foo/games") must_== List("live.chess-online.com/@/foo", "/games")
     }
   }
 
@@ -163,8 +163,8 @@ class RawHtmlTest extends Specification {
     "at user links" in {
       copyLinkConsistency("http://example.com")
       copyLinkConsistency("https://example.com/@foo")
-      copyLinkConsistency("lichess.org/@/foo")
-      copyLinkConsistency("lichess.org/@/foo/games")
+      copyLinkConsistency("live.chess-online.com/@/foo")
+      copyLinkConsistency("live.chess-online.com/@/foo/games")
       copyLinkConsistency("@foo/games")
       copyLinkConsistency("@foo")
     }
