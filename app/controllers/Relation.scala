@@ -38,7 +38,7 @@ object Relation extends LilaController {
     env.api.reachedMaxFollowing(me.id) flatMap {
       case true => Env.message.api.sendPresetFromLichess(
         me,
-        lila.message.ModPreset.maxFollow(me.username, Env.relation.MaxFollow)
+        lila.message.ModPreset.maxFollow(me.id, Env.relation.MaxFollow)
       ).void
       case _ => env.api.follow(me.id, UserModel normalize userId).nevermind >> renderActions(userId, getBool("mini"))
     }
