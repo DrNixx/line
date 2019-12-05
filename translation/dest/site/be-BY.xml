@@ -114,7 +114,7 @@
   <string name="viewInFullSize">Глядзець у поўным памеры</string>
   <string name="logOut">Выйсьці</string>
   <string name="signIn">Увайсьці</string>
-  <string name="newToLichess">Упершыню на Lichess?</string>
+  <string name="newToLichess">Упершыню на Chess-Online?</string>
   <string name="youNeedAnAccountToDoThat">Патрэбны акаўнт каб зрабіць гэта</string>
   <string name="signUp">Зарэгістравацца</string>
   <string name="computersAreNotAllowedToPlay">Камп\'ютары і гульцы якія карыстаюцца дапамогай камп\'ютару не дапускаюцца да гульні. Калі ласка, не карыстайцеся шахматнымі рухавікамі, базамі, або гульнямі іншых гульцоў.</string>
@@ -353,7 +353,7 @@
   <string name="findTheBestMoveForWhite">Знайдзіце лепшы ход за белых.</string>
   <string name="findTheBestMoveForBlack">Знайдзіце лепшы ход за чорных.</string>
   <string name="toTrackYourProgress">Каб адсочваць твой прагрэс</string>
-  <string name="trainingSignupExplanation">Lichess забясьпечыць галаваломкамі якія адпавядаюць тваім здольнасьцям, што паляпшае трэнаваньне</string>
+  <string name="trainingSignupExplanation">Chess-Online забясьпечыць галаваломкамі якія адпавядаюць тваім здольнасьцям, што паляпшае трэнаваньне</string>
   <string name="puzzleId">Галаваломка %s</string>
   <string name="puzzleOfTheDay">Галаваломка дня</string>
   <string name="clickToSolve">Націсніце, каб вырашыць</string>
@@ -365,7 +365,7 @@
   <string name="butYouCanKeepTrying">Але можаш спрабаваць яшчэ.</string>
   <string name="success">Поспех</string>
   <string name="wasThisPuzzleAnyGood">Галаваломка была добрай?</string>
-  <string name="pleaseVotePuzzle">Памажы lichess палепшыць галасаваньнем, карыстаючыся стрэлкамі ўгору й удол</string>
+  <string name="pleaseVotePuzzle">Памажы Chess-Online палепшыць галасаваньнем, карыстаючыся стрэлкамі ўгору й удол</string>
   <string name="thankYou">Дзякуй!</string>
   <string name="ratingX">Рэйтынг: %s</string>
   <string name="fromGameLink">З гульні %s</string>
@@ -581,7 +581,7 @@
   <string name="ifYouDoNotSeeTheEmailCheckOtherPlaces">Калі ліст не прыходзіць, праверце тэчку для спаму і іншыя месцы, куды яно магло трапіць.</string>
   <string name="weHaveSentYouAnEmailTo">Мы адправілі ліст па адрасе %s. Націсніце на спасылку ў ім для скіду пароля.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Рэгіструючыся, вы бераце на сябе абавязак выконваць наша %s</string>
-  <string name="networkLagBetweenYouAndLichess">Затрымка сеткі паміж вамі і Lichess</string>
+  <string name="networkLagBetweenYouAndLichess">Затрымка сеткі паміж вамі і Chess-Online</string>
   <string name="timeToProcessAMoveOnLichessServer">Час апрацоўкі ходу на серверы</string>
   <string name="downloadAnnotated">Спампаваць з анатацыямі</string>
   <string name="downloadRaw">Спампаваць без анатацый</string>
@@ -603,7 +603,7 @@
   <string name="youHaveAlreadyRegisteredTheEmail">Вы ўжо рэгістравалі гэты адрас: %s</string>
   <string name="kidMode">Дзіцячы рэжым</string>
   <string name="kidModeExplanation">Гэта для бяспекі. У дзіцячым рэжыме адключаны ўсе камунікацыі на сайце. Уключыце гэта для вашых дзяцей і школьнікаў, каб абараніць іх ад іншых карыстачоў Інтэрнэту.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">У дзіцячым рэжыме лагатып lichess атрымвае значок у выглядзе %s, так што вы ведаеце, што вашы дзеці знаходзяцца ў бяспецы.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">У дзіцячым рэжыме лагатып Chess-Online атрымвае значок у выглядзе %s, так што вы ведаеце, што вашы дзеці знаходзяцца ў бяспецы.</string>
   <string name="enableKidMode">Уключыць дзіцячы рэжым</string>
   <string name="disableKidMode">Адключыць дзіцячы рэжым</string>
   <string name="security">Бяспека</string>
@@ -611,7 +611,7 @@
   <string name="alternativelyYouCanX">У якасці альтэрнатывы вы можаце %s.</string>
   <string name="revokeAllSessions">скасаваць усе сесіі</string>
   <string name="playChessEverywhere">Гуляй у шахматы паўсюль</string>
-  <string name="asFreeAsLichess">Задарма, як і Lichess</string>
+  <string name="asFreeAsLichess">Задарма, як і Chess-Online</string>
   <string name="builtForTheLoveOfChessNotMoney">Створана ад любові да шахматаў, ня грошай</string>
   <string name="everybodyGetsAllFeaturesForFree">Кожны атрымвае ўсе магчымасьці бясплатны</string>
   <string name="zeroAdvertisement">Без рэклямы</string>
