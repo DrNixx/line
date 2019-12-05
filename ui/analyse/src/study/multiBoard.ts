@@ -14,7 +14,7 @@ export class MultiBoardCtrl {
   pager?: Paginator<ChapterPreview>;
   playing: boolean = false;
 
-  constructor(readonly studyId: string, readonly redraw: () => void) {}
+  constructor(readonly studyId: string, readonly redraw: () => void, readonly trans: Trans) {}
 
   addNode(pos, node) {
     const cp = this.pager && this.pager.currentPageResults.find(cp => cp.id == pos.chapterId);
@@ -59,10 +59,10 @@ export class MultiBoardCtrl {
 
 export function view(ctrl: MultiBoardCtrl, study: StudyCtrl): VNode | undefined {
 
-  return h('div.multi_board', {
-    class: { loading: ctrl.loading },
+  return h('div.study__multiboard', {
+    class: { loading: ctrl.loading, nopager: !ctrl.pager },
     hook: {
-      insert() { ctrl.reload(true); }
+      insert() { ctrl.reload(true) }
     }
   }, ctrl.pager ? renderPager(ctrl.pager, study) : [spinner()]);
 }
@@ -74,21 +74,19 @@ function renderPager(pager: Paginator<ChapterPreview>, study: StudyCtrl): MaybeV
       renderPagerNav(pager, ctrl),
       renderPlayingToggle(ctrl)
     ]),
-    h('div#now_playing', pager.currentPageResults.map(makePreview(study)))
+    h('div.now-playing', pager.currentPageResults.map(makePreview(study)))
   ];
 }
 
 function renderPlayingToggle(ctrl: MultiBoardCtrl): VNode {
-  return h('label.playing', {
-    attrs: { title: 'Only ongoing games' }
-  }, [
+  return h('label.playing', [
     h('input', {
       attrs: { type: 'checkbox' },
       hook: bind('change', e => {
         ctrl.setPlaying((e.target as HTMLInputElement).checked);
       })
     }),
-    'Playing'
+    ctrl.trans.noarg('playing')
   ]);
 }
 
@@ -97,16 +95,16 @@ function renderPagerNav(pager: Paginator<ChapterPreview>, ctrl: MultiBoardCtrl):
   from = Math.min(pager.nbResults, (page - 1) * pager.maxPerPage + 1),
   to = Math.min(pager.nbResults, page * pager.maxPerPage);
   return h('div.pager', [
-    pagerButton('First', 'W', () => ctrl.setPage(1), page > 1, ctrl),
-    pagerButton('Prev', 'Y', ctrl.prevPage, page > 1, ctrl),
+    pagerButton(ctrl.trans.noarg('first'), 'W', () => ctrl.setPage(1), page > 1, ctrl),
+    pagerButton(ctrl.trans.noarg('previous'), 'Y', ctrl.prevPage, page > 1, ctrl),
     h('span.page', `${from}-${to} / ${pager.nbResults}`),
-    pagerButton('Next', 'X', ctrl.nextPage, page < pager.nbPages, ctrl),
-    pagerButton('Last', 'V', ctrl.lastPage, page < pager.nbPages, ctrl)
+    pagerButton(ctrl.trans.noarg('next'), 'X', ctrl.nextPage, page < pager.nbPages, ctrl),
+    pagerButton(ctrl.trans.noarg('last'), 'V', ctrl.lastPage, page < pager.nbPages, ctrl)
   ]);
 }
 
 function pagerButton(text: string, icon: string, click: () => void, enable: boolean, ctrl: MultiBoardCtrl): VNode {
-  return h('button.fbt.is', {
+  return h('button.fbt', {
     attrs: {
       'data-icon': icon,
       disabled: !enable,
@@ -126,9 +124,9 @@ function makePreview(study: StudyCtrl) {
       h('div.name', preview.name),
       makeCg(preview)
     ];
-    return h('a.mini_board.' + preview.id, {
+    return h('a.' + preview.id, {
       attrs: { title: preview.name },
-      class: { active: !study.multiBoard.loading && study.vm.chapterId == preview.id },
+      class: { active: !study.multiBoard.loading && study.vm.chapterId == preview.id && (!study.relay || !study.relay.intro.active) },
       hook: bind('mousedown', _ => study.setChapter(preview.id))
     }, contents);
   };
@@ -146,7 +144,7 @@ function uciToLastMove(lm?: string): Key[] | undefined {
 }
 
 function makeCg(preview: ChapterPreview): VNode {
-  return h('div.cg-board-wrap', {
+  return h('div.mini-board.cg-wrap.is2d', {
     hook: {
       insert(vnode) {
         const cg = Chessground(vnode.elm as HTMLElement, {
@@ -171,5 +169,5 @@ function makeCg(preview: ChapterPreview): VNode {
         vnode.data!.cp = old.data!.cp;
       }
     }
-  }, [h('div.cg-board')])
+  })
 }

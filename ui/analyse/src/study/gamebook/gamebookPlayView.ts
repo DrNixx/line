@@ -1,8 +1,7 @@
 import { h } from 'snabbdom'
 import { VNode } from 'snabbdom/vnode'
-import { Hooks } from 'snabbdom/hooks'
 import GamebookPlayCtrl from './gamebookPlayCtrl';
-import { bind, dataIcon, iconTag, enrichText, innerHTML } from '../../util';
+import { bind, dataIcon, iconTag, richHTML } from '../../util';
 import { State } from './gamebookPlayCtrl';
 
 const defaultComments = {
@@ -16,7 +15,7 @@ export function render(ctrl: GamebookPlayCtrl): VNode {
   comment = state.comment || defaultComments[state.feedback];
 
   return h('div.gamebook', {
-    hook: { insert: _ => window.lichess.loadCss('stylesheets/gamebook.play.css') }
+    hook: { insert: _ => window.lichess.loadCssPath('analyse.gamebook.play') }
   }, [
     comment ? h('div.comment', {
       class: { hinted: state.showHint }
@@ -92,8 +91,4 @@ function renderEnd(ctrl: GamebookPlayCtrl) {
       hook: bind('click', () => study.setGamebookOverride('analyse'), ctrl.redraw)
     }, 'Analyse')
   ]);
-}
-
-function richHTML(text: string): Hooks {
-  return innerHTML(text, text => enrichText(text, true));
 }
