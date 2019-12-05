@@ -9,6 +9,8 @@ case class Relay(
     _id: Relay.Id,
     name: String,
     description: String,
+    markup: Option[String] = None,
+    credit: Option[String] = None,
     sync: Relay.Sync,
     ownerId: User.ID,
     likes: Study.Likes,
@@ -101,7 +103,13 @@ object Relay {
   object Sync {
     case class Upstream(url: String) extends AnyVal {
       def isLocal = url.contains("://127.0.0.1") || url.contains("://localhost")
+      def withRound = url.split(" ", 2) match {
+        case Array(u, round) => UpstreamWithRound(u, parseIntOption(round))
+        case _ => UpstreamWithRound(url, none)
+      }
     }
+    case class UpstreamWithRound(url: String, round: Option[Int])
+    val LccRegex = """.*view\.livechesscloud\.com/([0-9a-f\-]+)""".r
   }
 
   case class WithStudy(relay: Relay, study: Study)

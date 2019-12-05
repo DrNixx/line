@@ -31,7 +31,7 @@ final class SelfReport(
     fullId: Game.FullId,
     name: String
   ): Funit = !userId.exists(whitelist.contains) ?? {
-    userId.??(UserRepo.named) flatMap { user =>
+    userId.??(UserRepo.byId) flatMap { user =>
       val known = user.??(_.engine)
       lila.mon.cheat.cssBot()
       // user.ifTrue(!known && name != "ceval") ?? { u =>

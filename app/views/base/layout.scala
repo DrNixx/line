@@ -1,167 +1,167 @@
 package views.html.base
 
-import play.twirl.api.Html
+import play.api.libs.json.Json
 
-import lila.api.Context
+import lila.api.{ Context, AnnounceStore }
 import lila.app.templating.Environment._
 import lila.app.ui.ScalatagsTemplate._
-import scalatags.Text.tags2.{ title => titleTag }
+import lila.common.String.html.safeJsonValue
+import lila.common.{ Lang, ContentSecurityPolicy }
+import lila.pref.Pref
 
 import controllers.routes
 
 object layout {
 
-  private val fontVersion = 82
+  object bits {
+    val doctype = raw("<!doctype html>")
+    def htmlTag(implicit lang: Lang) = html(st.lang := lang.code)
+    val topComment = raw("""<!-- Lichess is open source! See https://github.com/ornicar/lila -->""")
+    val charset = raw("""<meta charset="utf-8">""")
+    val viewport = raw("""<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">""")
+    def metaCsp(csp: ContentSecurityPolicy): Frag = raw {
+      s"""<meta http-equiv="Content-Security-Policy" content="$csp">"""
+    }
+    def metaCsp(csp: Option[ContentSecurityPolicy])(implicit ctx: Context): Frag = metaCsp(csp getOrElse defaultCsp)
+    def metaThemeColor(implicit ctx: Context): Frag = raw {
+      s"""<meta name="theme-color" content="${ctx.pref.themeColor}">"""
+    }
+    def pieceSprite(implicit ctx: Context): Frag = pieceSprite(ctx.currentPieceSet)
+    def pieceSprite(ps: lila.pref.PieceSet): Frag =
+      link(id := "piece-sprite", href := assetUrl(s"piece-css/$ps.css"), tpe := "text/css", rel := "stylesheet")
+  }
+  import bits._
 
-  private val doctype = raw("<!doctype html>")
-  private val topComment = raw("""<!-- Lichess is open source! See https://github.com/ornicar/lila -->""")
-  private val charset = raw("""<meta charset="utf-8">""")
-  private val fontStylesheets = raw(List(
-    """<link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:300" rel="stylesheet">""",
-    """<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:500&text=0123456789:." rel="stylesheet">"""
-  ).mkString)
-  private val noTranslate = raw("""<meta name="google" content="notranslate" />""")
-  private val fontPreload = raw(s"""<link rel="preload" href="${staticUrl(s"font$fontVersion/fonts/lichess.woff")}" as="font" type="font/woff" crossorigin/>""")
-  private val wasmx = raw("""<meta http-equiv="origin-trial" data-feature="WebAssembly Threads" data-expires="2018-12-12" content="AvQS5g8cLXUfw7Vu3lmQ6B55HURS0KMuY6blwOUmAPYX3Jph8GXMSO4/jTx3el3BxG8SyJRlQTbsRRsjOHwiCAMAAABXeyJvcmlnaW4iOiJodHRwczovL2xpY2hlc3Mub3JnOjQ0MyIsImZlYXR1cmUiOiJXZWJBc3NlbWJseVRocmVhZHMiLCJleHBpcnkiOjE1NDQ2MzY2MzN9">""")
-  private val manifests = raw(List(
-    """<link rel="manifest" href="/manifest.json" />""",
-    """<meta name="twitter:site" content="@playchess" />"""
-  ).mkString)
+  private val noTranslate = raw("""<meta name="google" content="notranslate">""")
+  private def fontPreload(implicit ctx: Context) = raw {
+    s"""<link rel="preload" href="${assetUrl(s"font/lichess.woff2")}" as="font" type="font/woff2" crossorigin>""" +
+      !ctx.pref.pieceNotationIsLetter ??
+      s"""<link rel="preload" href="${assetUrl(s"font/lichess.chess.woff2")}" as="font" type="font/woff2" crossorigin>"""
+  }
+  private val manifests = raw("""<link rel="manifest" href="/manifest.json"><meta name="twitter:site" content="@playchess">""")
+
+  private val jsLicense = raw("""<link rel="jslicense" href="/source">""")
 
   private val favicons = raw {
-    List(256, 128, 64) map { px =>
-      s"""<link rel="icon" type="image/png" href="${staticUrl(s"favicon.$px.png")}" sizes="${px}x${px}"/>"""
-    } mkString
+    List(512, 256, 192, 128, 64) map { px =>
+      s"""<link rel="icon" type="image/png" href="${staticUrl(s"logo/lichess-favicon-$px.png")}" sizes="${px}x${px}">"""
+    } mkString ("", "", s"""<link id="favicon" rel="icon" type="image/png" href="${staticUrl("logo/lichess-favicon-32.png")}" sizes="32x32">""")
   }
-  private def autoLogin(implicit ctx: Context) = raw(List(
-    s"""<script src="https://passport.chess-online.com/script"></script>""",
-    embedJs(s"""window.chessPassport.isLoggedIn(function (online) {
-            if (online) {
-                location.href = "/login?referrer=" + encodeURIComponent(location.href);
-            }
-        });""")
-  ).mkString)
 
-  private def ga(implicit ctx: Context) = raw(List(
-    s"""<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33469827-5"></script>""",
-    embedJs(s"""window.dataLayer = window.dataLayer || [];
+  private def autoLogin(implicit ctx: Context) = raw {
+    List(
+      s"""<script src="https://passport.chess-online.com/script"></script>""",
+      embedJsUnsafe(s"""window.chessPassport.isLoggedIn(function (online) {
+              if (online) {
+                  location.href = "${routes.Auth.oidcLogin}?referrer=" + encodeURIComponent(location.href);
+              }
+          });""")
+    ).mkString
+  }
+
+  private def ga(implicit ctx: Context) = raw {
+    List(
+      s"""<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33469827-5"></script>""",
+      embedJsUnsafe(s"""window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-33469827-5');""")
-  ).mkString)
+    ).mkString
+  }
 
-  private def blindModeForm(implicit ctx: Context) = raw(s"""<form id="blind_mode" action="${routes.Main.toggleBlindMode}" method="POST"><input type="hidden" name="enable" value="${if (ctx.blindMode) 0 else 1}" /><input type="hidden" name="redirect" value="${ctx.req.path}" /><button type="submit">Accessibility: ${if (ctx.blindMode) "Disable" else "Enable"} blind mode</button></form>""")
+  private def blindModeForm(implicit ctx: Context) = raw(s"""<form id="blind-mode" action="${routes.Main.toggleBlindMode}" method="POST"><input type="hidden" name="enable" value="${if (ctx.blind) 0 else 1}"><input type="hidden" name="redirect" value="${ctx.req.path}"><button type="submit">Accessibility: ${if (ctx.blind) "Disable" else "Enable"} blind mode</button></form>""")
   private val zenToggle = raw("""<a data-icon="E" id="zentog" class="text fbt active">ZEN MODE</a>""")
   private def dasher(me: lila.user.User) = raw(s"""<div class="dasher"><a id="user_tag" class="toggle link">${me.username}</a><div id="dasher_app" class="dropdown"></div></div>""")
 
-  private def challenges(implicit ctx: Context) = spaceless(s"""<div class="challenge_notifications">
-  <a id="challenge_notifications_tag" class="toggle link data-count" data-count="${ctx.nbChallenges}">
-    <span class="hint--bottom-left" data-hint="${trans.challenges()}"><span data-icon="U"></span></span>
+  private def allNotifications(implicit ctx: Context) = spaceless(s"""<div>
+  <a id="challenge-toggle" class="toggle link">
+    <span title="${trans.challenges().render}" class="data-count" data-count="${ctx.nbChallenges}" data-icon="U"></span>
   </a>
-  <div id="challenge_app" class="dropdown"></div>
-</div>""")
-
-  private def notifications(implicit ctx: Context) = spaceless(s"""<div class="site_notifications">
-  <a id="site_notifications_tag" class="toggle link data-count" data-count="${ctx.nbNotifications}">
-    <span class="hint--bottom-left" data-hint="${trans.notifications()}"><span data-icon=""></span></span>
+  <div id="challenge-app" class="dropdown"></div>
+</div>
+<div>
+  <a id="notify-toggle" class="toggle link">
+    <span title="${trans.notifications().render}" class="data-count" data-count="${ctx.nbNotifications}" data-icon=""></span>
   </a>
-  <div id="notify_app" class="dropdown"></div>
+  <div id="notify-app" class="dropdown"></div>
 </div>""")
 
   private def anonDasher(playing: Boolean)(implicit ctx: Context) = spaceless(s"""<div class="dasher">
-  <a class="toggle anon">
-    <span class="hint--bottom-left" data-hint="${trans.preferences()}"><span data-icon="%"></span></span>
+  <a class="toggle link anon">
+    <span title="${trans.preferences().render}" data-icon="%"></span>
   </a>
   <div id="dasher_app" class="dropdown" data-playing="$playing"></div>
 </div>
-<a href="${routes.Auth.oidcLogin}?referrer=${currentPath}" class="signin button text">${trans.signIn()}</a>""")
+<a href="${routes.Auth.oidcLogin}?referrer=${ctx.req.path}" class="signin button button-empty">${trans.signIn().render}</a>""")
 
   private val clinputLink = a(cls := "link")(span(dataIcon := "y"))
 
   private def clinput(implicit ctx: Context) =
     div(id := "clinput")(
       clinputLink,
-      input(spellcheck := "false", placeholder := trans.search.txt())
+      input(
+        spellcheck := "false",
+        autocomplete := ctx.blind.toString,
+        aria.label := trans.search.txt(),
+        placeholder := trans.search.txt()
+      )
     )
 
-  private lazy val botImage = img(src := staticUrl("images/icons/bot.png"), title := "Robot chess", style := "display:inline;width:34px;height:34px;vertical-align:top;margin-right:5px;")
+  private lazy val botImage = img(src := staticUrl("images/icons/bot.png"), title := "Robot chess", style :=
+    "display:inline;width:34px;height:34px;vertical-align:top;margin-right:5px;vertical-align:text-top")
 
   private val spaceRegex = """\s{2,}+""".r
   private def spaceless(html: String) = raw(spaceRegex.replaceAllIn(html.replace("\\n", ""), ""))
 
-  private val dataDev = attr("data-dev")
+  private val dataVapid = attr("data-vapid")
   private val dataUser = attr("data-user")
   private val dataSoundSet = attr("data-sound-set")
   private val dataSocketDomain = attr("data-socket-domain")
-  private val dataAssetUrl = attr("data-asset-url")
-  private val dataAssetVersion = attr("data-asset-version")
-  private val dataNonce = attr("data-nonce")
   private val dataZoom = attr("data-zoom")
   private val dataPreload = attr("data-preload")
-  private val dataPlaying = attr("data-playing")
-  private val dataPatrons = attr("data-patrons")
-  private val dataStudying = attr("data-studying")
+  private val dataNonce = attr("data-nonce")
+  private val dataAnnounce = attr("data-announce")
 
   def apply(
     title: String,
     fullTitle: Option[String] = None,
-    baseline: Option[Html] = None,
-    side: Option[Html] = None,
-    menu: Option[Html] = None,
-    chat: Option[Html] = None,
-    underchat: Option[Html] = None,
     robots: Boolean = isGloballyCrawlable,
-    moreCss: Html = emptyHtml,
-    moreJs: Html = emptyHtml,
+    moreCss: Frag = emptyFrag,
+    moreJs: Frag = emptyFrag,
     playing: Boolean = false,
     openGraph: Option[lila.app.ui.OpenGraph] = None,
     chessground: Boolean = true,
     zoomable: Boolean = false,
-    asyncJs: Boolean = false,
-    csp: Option[lila.common.ContentSecurityPolicy] = None
-  )(body: Html)(implicit ctx: Context) = frag(
+    deferJs: Boolean = false,
+    csp: Option[ContentSecurityPolicy] = None,
+    wrapClass: String = ""
+  )(body: Frag)(implicit ctx: Context) = frag(
     doctype,
-    html(st.lang := ctx.lang.language)(
+    htmlTag(ctx.lang)(
       topComment,
       head(
         charset,
-        cspEnabled() option raw(
-          s"""<meta http-equiv="Content-Security-Policy" content="${csp.getOrElse(defaultCsp)}">"""
-        ),
-        if (isProd) frag(
-          wasmxEnabled() option wasmx,
-          titleTag(fullTitle | s"$title • Chess-Online Arena"),
-          fontStylesheets
-        )
-        else frag(
-          titleTag(s"[dev] ${fullTitle | s"$title • Chess-Online Arena"}"),
-          cssAt("offline/font.noto.css"),
-          cssAt("offline/font.roboto.mono.css")
-        ),
-        ctx.currentBg match {
-          case "dark" => cssTag("dark.css")
-          case "transp" => cssTags("dark.css", "transp.css")
-          case _ => emptyHtml
+        viewport,
+        metaCsp(csp),
+        metaThemeColor,
+        st.headTitle {
+          if (ctx.blind) "Chess-Online Arena"
+          else if (isProd && !isStage) fullTitle | s"$title • Chess-Online Arena"
+          else s"[dev] ${fullTitle | s"$title • Chess-Online Arena"}"
         },
-        cssTag("common.css"),
-        cssTag("board.css"),
-        ctx.zoom ifTrue zoomable map { z =>
-          zoomStyle(z / 100f, ctx.pref.is3d)
-        },
-        ctx.pref.is3d option cssTag("board-3d.css"),
-        ctx.pref.coords == 1 option cssTag("board.coords.inner.css"),
-        ctx.pageData.inquiry.isDefined option cssTag("inquiry.css"),
-        ctx.userContext.impersonatedBy.isDefined option cssTag("impersonate.css"),
-        isStage option cssTag("stage.css"),
+        cssTag("site"),
+        ctx.pref.is3d option cssTag("board-3d"),
+        ctx.pageData.inquiry.isDefined option cssTagNoTheme("mod.inquiry"),
+        ctx.userContext.impersonatedBy.isDefined option cssTagNoTheme("mod.impersonate"),
+        ctx.blind option cssTagNoTheme("blind"),
         moreCss,
-        link(id := "piece-sprite", href := assetUrl(s"stylesheets/piece/${ctx.currentPieceSet}.css"), `type` := "text/css", rel := "stylesheet"),
+        pieceSprite,
         meta(content := openGraph.fold(trans.siteDescription.txt())(o => o.description), name := "description"),
-        link(id := "favicon", rel := "shortcut icon", href := staticUrl("images/favicon-32-white.png"), `type` := "image/x-icon"),
-        link(rel := "mask-icon", href := staticUrl("favicon.svg"), color := "black"),
+        link(rel := "mask-icon", href := staticUrl("logo/lichess.svg"), color := "black"),
         favicons,
         !robots option raw("""<meta content="noindex, nofollow" name="robots">"""),
         noTranslate,
-        openGraph.map(_.frag),
+        openGraph.map(_.frags),
         isProd option frag(
           ga,
           ctx.userId.isEmpty option autoLogin
@@ -171,98 +171,61 @@ object layout {
           raw(s"""<style type="text/css" id="bg-data">body.transp::before{background-image:url('$img');}</style>""")
         },
         fontPreload,
-        manifests
+        manifests,
+        jsLicense
       ),
       st.body(
         cls := List(
-          "preload base" -> true,
-          ctx.currentTheme.cssClass -> true,
-          ctx.currentTheme3d.cssClass -> true,
-          (if (ctx.currentBg == "transp") "dark transp" else ctx.currentBg) -> true,
-          ctx.currentPieceSet3d.toString -> true,
-          "piece_letter" -> ctx.pref.pieceNotationIsLetter,
+          s"${ctx.currentBg} ${ctx.currentTheme.cssClass} ${ctx.currentTheme3d.cssClass} ${ctx.currentPieceSet3d.toString} coords-${ctx.pref.coordsClass}" -> true,
+          "piece-letter" -> ctx.pref.pieceNotationIsLetter,
           "zen" -> ctx.pref.isZen,
-          "blind_mode" -> ctx.blindMode,
+          "blind-mode" -> ctx.blind,
           "kid" -> ctx.kid,
           "mobile" -> ctx.isMobileBrowser,
-          "playing fixed-scroll" -> playing
+          "playing fixed-scroll" -> playing,
+          "coords-out" -> (ctx.pref.coords == Pref.Coords.OUTSIDE)
         ),
         dataDev := (!isProd).option("true"),
+        dataVapid := vapidPublicKey,
         dataUser := ctx.userId,
         dataSoundSet := ctx.currentSoundSet.toString,
         dataSocketDomain := socketDomain,
         dataAssetUrl := assetBaseUrl,
         dataAssetVersion := assetVersion.value,
-        dataNonce := ctx.nonce.map(_.value),
-        dataZoom := ctx.zoom.map(_.toString)
+        dataNonce := ctx.nonce.ifTrue(sameAssetDomain).map(_.value),
+        dataTheme := ctx.currentBg,
+        dataAnnounce := AnnounceStore.get.map(a => safeJsonValue(a.json)),
+        style := zoomable option s"--zoom:${ctx.zoom}"
       )(
           blindModeForm,
-          div(id := "site_description")(trans.siteDescription()),
           ctx.pageData.inquiry map { views.html.mod.inquiry(_) },
           ctx.me ifTrue ctx.userContext.impersonatedBy.isDefined map { views.html.mod.impersonate(_) },
-          isStage option div(id := "stage")(
-            "This is an empty lichess preview website for developers. ",
-            a(href := "https://live.chess-online.com")("Go to Chess-Online Arena instead")
-          ),
-          lila.security.EmailConfirm.cookie.get(ctx.req).map(views.html.auth.emailConfirmBanner(_)),
+          isStage option views.html.base.bits.stage,
+          lila.security.EmailConfirm.cookie.get(ctx.req).map(views.html.auth.bits.checkYourEmailBanner(_)),
           playing option zenToggle,
-          div(id := "top", cls := (if (ctx.pref.is3d) "is3d" else "is2d"))(
-            topmenu(),
-            div(id := "ham-plate", cls := "link hint--bottom", dataHint := trans.menu.txt())(
-              div(id := "hamburger", dataIcon := "[")
-            ),
-            ctx.me map { me =>
-              frag(dasher(me), challenges, notifications)
-            } getOrElse {
-              !ctx.pageData.error option anonDasher(playing)
-            },
-            ctx.teamNbRequests > 0 option
-              a(cls := "link data-count", href := routes.Team.requests, dataCount := ctx.teamNbRequests)(
-                span(cls := "hint--bottom-left", dataHint := trans.teams.txt())(span(dataIcon := "f"))
-              ),
-            isGranted(_.SeeReport) option
-              a(cls := "link text data-count", href := routes.Report.list, dataCount := reportNbOpen, dataIcon := ""),
-            clinput,
-            a(id := "reconnecting", cls := "link text", dataIcon := "B")(trans.reconnecting())
-          ),
-          div(cls := s"content ${if (ctx.pref.is3d) "is3d" else "is2d"}")(
-            div(id := "site_header")(
-              div(id := "notifications"),
-              div(cls := "board_left")(
-                h1(
-                  a(id := "site_title", href := routes.Lobby.home)(
-                    if (ctx.kid) span(st.title := trans.kidMode.txt(), cls := "kiddo")("😊")
-                    else ctx.isBot option botImage,
-                    "Chess",
-                    span(cls := "extension")(if (isProd) "-Online" else "-Online*")
-                  )
-                ),
-                baseline,
-                menu map { sideMenu =>
-                  div(cls := "side_menu")(sideMenu)
-                },
-                side,
-                chat
-              ),
-              underchat map { g =>
-                div(cls := "under_chat")(g)
-              }
-            ),
-            div(id := "lichess")(body)
-          ),
+          siteHeader(playing),
+          div(id := "main-wrap", cls := List(
+            wrapClass -> wrapClass.nonEmpty,
+            "is2d" -> ctx.pref.is2d,
+            "is3d" -> ctx.pref.is3d
+          ))(body),
           ctx.me.map { me =>
             div(
               id := "friend_box",
-              dataPreload := ctx.onlineFriends.users.map(_.idVsTitleName).mkString(","),
-              dataPlaying := ctx.onlineFriends.playing.mkString(","),
-              dataPatrons := ctx.onlineFriends.patrons.mkString(","),
-              dataStudying := ctx.onlineFriends.studying.mkString(",")
+              dataPreload := safeJsonValue(Json.obj(
+                "users" -> ctx.onlineFriends.users.map(_.titleName),
+                "playing" -> ctx.onlineFriends.playing,
+                "patrons" -> ctx.onlineFriends.patrons,
+                "studying" -> ctx.onlineFriends.studying,
+                "i18n" -> i18nJsObject(List(
+                  trans.nbFriendsOnline
+                ))
+              ))
             )(
-                div(cls := "friend_box_title")(
-                  strong(cls := "online")(" "),
-                  " ",
-                  trans.onlineFriends()
-                ),
+                div(cls := "friend_box_title") {
+                  val count = ctx.onlineFriends.users.size
+                  trans.nbFriendsOnline.plural(count, strong(count))
+                },
                 div(cls := "content_wrap")(
                   div(cls := "content list"),
                   div(cls := List(
@@ -277,13 +240,58 @@ object layout {
                 )
               )
           },
+          a(id := "reconnecting", cls := "link text", dataIcon := "B")(trans.reconnecting()),
           chessground option jsTag("vendor/chessground.min.js"),
           ctx.requiresFingerprint option fingerprintTag,
-          jsAt(s"compiled/lichess.site${isProd ?? ".min"}.js", async = asyncJs),
+          if (isProd)
+            jsAt(s"compiled/lichess.site.min.js", defer = deferJs)
+          else frag(
+            jsAt(s"compiled/lichess.deps.js", defer = deferJs),
+            jsAt(s"compiled/lichess.site.js", defer = deferJs)
+          ),
           moreJs,
-          embedJs(s"""lichess.quantity=${lila.i18n.JsQuantity(ctx.lang)};$timeagoLocaleScript;"""),
-          ctx.pageData.inquiry.isDefined option jsTag("inquiry.js", async = asyncJs)
+          embedJsUnsafe(s"""lichess.quantity=${lila.i18n.JsQuantity(ctx.lang)};$timeagoLocaleScript"""),
+          ctx.pageData.inquiry.isDefined option jsTag("inquiry.js", defer = deferJs)
         )
     )
   )
+
+  object siteHeader {
+
+    private val topnavToggle = spaceless("""
+<input type="checkbox" id="tn-tg" class="topnav-toggle fullscreen-toggle" aria-label="Navigation">
+<label for="tn-tg" class="fullscreen-mask"></label>
+<label for="tn-tg" class="hbg"><span class="hbg__in"></span></label>""")
+
+    private def reports(implicit ctx: Context) = isGranted(_.SeeReport) option
+      a(cls := "link data-count link-center", title := "Moderation", href := routes.Report.list, dataCount := reportNbOpen, dataIcon := "")
+
+    private def teamRequests(implicit ctx: Context) = ctx.teamNbRequests > 0 option
+      a(cls := "link data-count link-center", href := routes.Team.requests, dataCount := ctx.teamNbRequests, dataIcon := "f", title := trans.teams.txt())
+
+    def apply(playing: Boolean)(implicit ctx: Context) =
+      header(id := "top")(
+        div(cls := "site-title-nav")(
+          topnavToggle,
+          h1(cls := "site-title")(
+            if (ctx.kid) span(title := trans.kidMode.txt(), cls := "kiddo")(":)")
+            else ctx.isBot option botImage,
+            a(href := "/")(
+              "Chess",
+              span(if (isProd && !isStage) "-Online" else "-Online*")
+            )
+          ),
+          ctx.blind option h2("Navigation"),
+          topnav()
+        ),
+        div(cls := "site-buttons")(
+          clinput,
+          reports,
+          teamRequests,
+          ctx.me map { me =>
+            frag(allNotifications, dasher(me))
+          } getOrElse { !ctx.pageData.error option anonDasher(playing) }
+        )
+      )
+  }
 }

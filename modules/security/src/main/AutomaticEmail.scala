@@ -88,7 +88,7 @@ ${Mailgun.txt.serviceNote}
     }
 
   def onFishnetKey(userId: User.ID, key: String)(implicit lang: Lang): Funit = for {
-    user <- UserRepo named userId flatten s"No such user $userId"
+    user <- UserRepo byId userId flatten s"No such user $userId"
     emailOption <- UserRepo email user.id
   } yield emailOption ?? { email =>
 

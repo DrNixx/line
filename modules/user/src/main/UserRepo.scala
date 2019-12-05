@@ -316,6 +316,8 @@ object UserRepo {
         }
     }
 
+  def setUsername(id: ID, username: String): Funit = coll.updateField($id(id), "username", username).void
+
   def toggleEngine(id: ID): Funit =
     coll.fetchUpdate[User]($id(id)) { u =>
       $set(F.engine -> !u.engine)

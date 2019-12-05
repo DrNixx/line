@@ -6,44 +6,32 @@ import play.api.http._
 import play.api.libs.json.{ Json, JsObject, JsArray, JsString, Writes }
 import play.api.mvc._
 import play.api.mvc.BodyParsers.parse
-import play.twirl.api.Html
-import scalatags.Text.{ TypedTag, Frag }
+import scalatags.Text.Frag
 
 import lila.api.{ PageData, Context, HeaderContext, BodyContext }
 import lila.app._
 import lila.common.{ LilaCookie, HTTPRequest, ApiVersion, Nonce, Lang }
 import lila.notify.Notification.Notifies
 import lila.oauth.{ OAuthScope, OAuthServer }
-import lila.security.{ Permission, Granter, FingerprintedUser }
+import lila.security.{ Permission, Granter, FingerPrintedUser, FingerHash }
 import lila.user.{ UserContext, User => UserModel }
 
 private[controllers] trait LilaController
   extends Controller
   with ContentTypes
   with RequestGetter
-  with ResponseWriter
-  with LilaSocket {
+  with ResponseWriter {
 
   protected val controllerLogger = lila.log("controller")
+  protected val authLogger = lila.log("auth")
 
   protected implicit val LilaResultZero = Zero.instance[Result](Results.NotFound)
-
-  protected implicit val LilaHtmlMonoid = lila.app.templating.Environment.LilaHtmlMonoid
 
   protected implicit final class LilaPimpedResult(result: Result) {
     def fuccess = scala.concurrent.Future successful result
   }
 
-  protected implicit def LilaHtmlToResult(content: Html): Result = Ok(content)
-
-  protected implicit def contentTypeOfFrag(implicit codec: Codec): ContentTypeOf[Frag] =
-    ContentTypeOf[Frag](Some(ContentTypes.HTML))
-  protected implicit def writeableOfFrag(implicit codec: Codec): Writeable[Frag] =
-    Writeable(frag => codec.encode(frag.render))
-
-  protected implicit def LilaScalatagsToHtml(tags: scalatags.Text.TypedTag[String]): Html = Html(tags.render)
-
-  protected implicit def LilaFragToResult(content: Frag): Result = Ok(content)
+  protected implicit def LilaFragToResult(frag: Frag): Result = Ok(frag)
 
   protected implicit def makeApiVersion(v: Int) = ApiVersion(v)
 
@@ -56,13 +44,12 @@ private[controllers] trait LilaController
       api = _ => fuccess(jsonOkResult)
     )
 
-  implicit def lang(implicit ctx: Context) = ctx.lang
+  implicit def ctxLang(implicit ctx: Context) = ctx.lang
+  implicit def ctxReq(implicit ctx: Context) = ctx.req
+  implicit def reqConfig(implicit req: RequestHeader) = ui.EmbedConfig(req)
 
   protected def NoCache(res: Result): Result = res.withHeaders(
     CACHE_CONTROL -> "no-cache, no-store, must-revalidate", EXPIRES -> "0"
-  )
-  protected def NoIframe(res: Result): Result = res.withHeaders(
-    "X-Frame-Options" -> "SAMEORIGIN"
   )
 
   protected def Open(f: Context => Fu[Result]): Action[Unit] =
@@ -100,6 +87,14 @@ private[controllers] trait LilaController
   ): Action[Unit] = Action.async(parse.empty) { req =>
     if (HTTPRequest isOAuth req) handleScoped(selectors)(scoped)(req)
     else anon(req)
+  }
+
+  protected def AuthOrScoped(selectors: OAuthScope.Selector*)(
+    auth: Context => UserModel => Fu[Result],
+    scoped: RequestHeader => UserModel => Fu[Result]
+  ): Action[Unit] = Action.async(parse.empty) { req =>
+    if (HTTPRequest isOAuth req) handleScoped(selectors)(scoped)(req)
+    else handleAuth(auth, req)
   }
 
   protected def Auth(f: Context => UserModel => Fu[Result]): Action[Unit] =
@@ -209,11 +204,15 @@ private[controllers] trait LilaController
     a: => Fu[A],
     or: => Fu[Result] = fuccess(Redirect(routes.Lobby.home()))
   )(implicit ctx: Context): Fu[Result] =
-    if (Env.security.firewall accepts ctx.req) a else or
+    if (Env.security.firewall accepts ctx.req) a
+    else {
+      authLogger.info(s"Firewall blocked ${ctx.req}")
+      or
+    }
 
   protected def NoTor(res: => Fu[Result])(implicit ctx: Context) =
     if (Env.security.tor isExitNode HTTPRequest.lastRemoteAddress(ctx.req))
-      Unauthorized(views.html.auth.tor()).fuccess
+      Unauthorized(views.html.auth.bits.tor()).fuccess
     else res
 
   protected def NoEngine[A <: Result](a: => Fu[A])(implicit ctx: Context): Fu[Result] =
@@ -249,7 +248,7 @@ private[controllers] trait LilaController
     }
 
   protected def NoCurrentGame(a: => Fu[Result])(implicit ctx: Context): Fu[Result] =
-    ctx.me.??(mashup.Preload.currentGameMyTurn(Env.user.lightUserSync)) flatMap {
+    ctx.me.??(Env.current.preloader.currentGameMyTurn) flatMap {
       _.fold(a) { current =>
         negotiate(
           html = Lobby.renderHome(Results.Forbidden),
@@ -347,8 +346,7 @@ private[controllers] trait LilaController
   protected def authenticationFailed(implicit ctx: Context): Fu[Result] =
     negotiate(
       html = fuccess {
-        implicit val req = ctx.req
-        Redirect(routes.Auth.signup) withCookies LilaCookie.session(Env.security.api.AccessUri, req.uri)
+        Redirect(routes.Auth.signup) withCookies LilaCookie.session(Env.security.api.AccessUri, ctx.req.uri)
       },
       api = _ => ensureSessionId(ctx.req) {
         Unauthorized(jsonError("Login required"))
@@ -361,7 +359,7 @@ private[controllers] trait LilaController
     html =
       if (HTTPRequest isSynchronousHttp ctx.req) fuccess {
         lila.mon.http.response.code403()
-        Forbidden(views.html.base.authFailed())
+        Forbidden(views.html.site.message.authFailed)
       }
       else fuccess(Results.Forbidden("Authorization failed")),
     api = _ => fuccess(forbiddenJsonResult)
@@ -371,25 +369,25 @@ private[controllers] trait LilaController
     if (req.session.data.contains(LilaCookie.sessionId)) res
     else res withCookies LilaCookie.makeSessionId(req)
 
-  protected def negotiate(html: => Fu[Result], api: ApiVersion => Fu[Result])(implicit ctx: Context): Fu[Result] =
-    lila.api.Mobile.Api.requestVersion(ctx.req).fold(html) { v =>
+  protected def negotiate(html: => Fu[Result], api: ApiVersion => Fu[Result])(implicit req: RequestHeader): Fu[Result] =
+    lila.api.Mobile.Api.requestVersion(req).fold(html) { v =>
       api(v) dmap (_ as JSON)
     }.dmap(_.withHeaders("Vary" -> "Accept"))
 
   protected def reqToCtx(req: RequestHeader): Fu[HeaderContext] = restoreUser(req) flatMap {
     case (d, impersonatedBy) =>
       val ctx = UserContext(req, d.map(_.user), impersonatedBy, lila.i18n.I18nLangPicker(req, d.map(_.user)))
-      pageDataBuilder(ctx, d.exists(_.hasFingerprint)) dmap { Context(ctx, _) }
+      pageDataBuilder(ctx, d.exists(_.hasFingerPrint)) dmap { Context(ctx, _) }
   }
 
   protected def reqToCtx[A](req: Request[A]): Fu[BodyContext[A]] =
     restoreUser(req) flatMap {
       case (d, impersonatedBy) =>
         val ctx = UserContext(req, d.map(_.user), impersonatedBy, lila.i18n.I18nLangPicker(req, d.map(_.user)))
-        pageDataBuilder(ctx, d.exists(_.hasFingerprint)) dmap { Context(ctx, _) }
+        pageDataBuilder(ctx, d.exists(_.hasFingerPrint)) dmap { Context(ctx, _) }
     }
 
-  private def pageDataBuilder(ctx: UserContext, hasFingerprint: Boolean): Fu[PageData] = {
+  private def pageDataBuilder(ctx: UserContext, hasFingerPrint: Boolean): Fu[PageData] = {
     val isPage = HTTPRequest isSynchronousHttp ctx.req
     val nonce = isPage option Nonce.random
     ctx.me.fold(fuccess(PageData.anon(ctx.req, nonce, blindMode(ctx)))) { me =>
@@ -409,7 +407,7 @@ private[controllers] trait LilaController
         case (pref, (onlineFriends ~ teamNbRequests ~ nbChallenges ~ nbNotifications ~ inquiry)) =>
           PageData(onlineFriends, teamNbRequests, nbChallenges, nbNotifications, pref,
             blindMode = blindMode(ctx),
-            hasFingerprint = hasFingerprint,
+            hasFingerprint = hasFingerPrint,
             inquiry = inquiry,
             nonce = nonce)
       }
@@ -422,21 +420,19 @@ private[controllers] trait LilaController
     }
 
   // user, impersonatedBy
-  type RestoredUser = (Option[FingerprintedUser], Option[UserModel])
+  type RestoredUser = (Option[FingerPrintedUser], Option[UserModel])
   private def restoreUser(req: RequestHeader): Fu[RestoredUser] =
-    Env.security.api restoreUser req addEffect {
-      _ ifTrue (HTTPRequest isSynchronousHttp req) foreach { d =>
-        Env.current.system.lilaBus.publish(lila.user.User.Active(d.user), 'userActive)
-      }
-    } dmap {
+    Env.security.api restoreUser req dmap {
       case Some(d) if !lila.common.PlayApp.isProd =>
-        Some(d.copy(user = d.user.addRole(lila.security.Permission.Beta.name)))
+        d.copy(user = d.user
+          .addRole(lila.security.Permission.Beta.name)
+          .addRole(lila.security.Permission.Prismic.name)).some
       case d => d
     } flatMap {
       case None => fuccess(None -> None)
-      case Some(d) => lila.mod.Impersonate.impersonating(d.user) map {
+      case Some(d) => Env.mod.impersonate.impersonating(d.user) map {
         _.fold[RestoredUser](d.some -> None) { impersonated =>
-          FingerprintedUser(impersonated, true).some -> d.user.some
+          FingerPrintedUser(impersonated, FingerHash.impersonate.some).some -> d.user.some
         }
       }
     }
@@ -500,6 +496,9 @@ private[controllers] trait LilaController
 
   protected def pageHit(implicit ctx: lila.api.Context) =
     if (HTTPRequest isHuman ctx.req) lila.mon.http.request.path(ctx.req.path)()
+
+  protected val noProxyBufferHeader = "X-Accel-Buffering" -> "no"
+  protected val noProxyBuffer = (res: Result) => res.withHeaders(noProxyBufferHeader)
 
   protected val pgnContentType = "application/x-chess-pgn"
   protected val ndJsonContentType = "application/x-ndjson"

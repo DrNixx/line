@@ -25,7 +25,7 @@ private final class EvalCacheTruster(asyncCache: lila.memo.AsyncCache.Builder) {
 
   private val userIdCache = asyncCache.multi[User.ID, Option[TrustedUser]](
     name = "evalCache.userIdTrustCache  ",
-    f = userId => UserRepo named userId map2 makeTrusted,
+    f = userId => UserRepo byId userId map2 makeTrusted,
     expireAfter = _.ExpireAfterWrite(10 minutes),
     resultTimeout = 10 seconds
   )

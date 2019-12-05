@@ -47,8 +47,8 @@ object Api extends LilaController {
     Ok(views.html.site.bits.api)
   }
 
-  def user(id: lila.user.User.ID) = CookieBasedApiRequest { ctx =>
-    userApi.extended(id, ctx.me) map toApiResult
+  def user(userId: lila.user.User.ID) = CookieBasedApiRequest { ctx =>
+    userApi.extended(userId, ctx.me) map toApiResult
   }
 
   private[controllers] val UsersRateLimitGlobal = new lila.memo.RateLimit[String](
@@ -83,13 +83,12 @@ object Api extends LilaController {
     val ids = get("ids", req).??(_.split(',').take(50).toList map lila.user.User.normalize)
     Env.user.lightUserApi asyncMany ids dmap (_.flatten) map { users =>
       val actualIds = users.map(_.id)
-      val onlineIds = Env.user.onlineUserIdMemo intersect actualIds
       val playingIds = Env.relation.online.playing intersect actualIds
       val streamingIds = Env.streamer.liveStreamApi.userIds
       toApiResult {
         users.map { u =>
           lila.common.LightUser.lightUserWrites.writes(u)
-            .add("online" -> onlineIds(u.id))
+            .add("online" -> Env.socket.isOnline(u.id))
             .add("playing" -> playingIds(u.id))
             .add("streaming" -> streamingIds(u.id))
         }
@@ -156,7 +155,7 @@ object Api extends LilaController {
     )
 
   // for mobile app
-  def userGames(userId: String) = ApiRequest { req =>
+  def userGames(userId: String) = MobileApiRequest { req =>
     val page = (getInt("page", req) | 1) atLeast 1 atMost 200
     val nb = (getInt("nb", req) | 10) atLeast 1 atMost 100
     val cost = page * nb + 10
@@ -261,6 +260,19 @@ object Api extends LilaController {
           val nb = getInt("nb", req) | Int.MaxValue
           val enumerator = Env.tournament.api.resultStream(tour, MaxPerSecond(50), nb) &>
             Enumeratee.map(playerResultWrites.writes)
+          jsonStream(enumerator).fuccess
+        }
+      }
+    }
+  }
+
+  def tournamentsByOwner(userId: String) = Action.async { req =>
+    (userId != "lichess") ?? UserRepo.byId(userId) flatMap {
+      _ ?? { user =>
+        GlobalLinearLimitPerIP(HTTPRequest lastRemoteAddress req) {
+          val nb = getInt("nb", req) | Int.MaxValue
+          val enumerator = Env.tournament.api.byOwnerStream(user, MaxPerSecond(20), nb) &>
+            Enumeratee.mapM(Env.tournament.apiJsonView.fullJson)
           jsonStream(enumerator).fuccess
         }
       }

@@ -43,10 +43,8 @@ object Auth extends LilaController {
         (!referrer.contains("//") && refRegex.matches(referrer)) ||
           referrer.startsWith(Env.oAuth.baseUrl)
       }
-  }
 
   def authenticateUser(u: UserModel, result: Option[String => Result] = None)(implicit ctx: Context): Fu[Result] = {
-    implicit val req = ctx.req
     if (u.ipBan) fuccess(Redirect(routes.Lobby.home))
     else api.saveAuthentication(u.id, ctx.mobileApiVersion) flatMap { sessionId =>
       negotiate(
@@ -184,7 +182,8 @@ object Auth extends LilaController {
     }
   }
 
-  private def authLog(user: String, msg: String) = lila.log("auth").info(s"$user $msg")
+  private def authLog(user: String, email: String, msg: String) =
+    lila.log("auth").info(s"$user $email $msg")
 
   private def signupErrLog(err: Form[_])(implicit ctx: Context) = for {
     username <- err("username").value
@@ -578,10 +577,10 @@ object Auth extends LilaController {
     UserRepo.create2(userInfo.getSubject.toString, userInfo.getPreferredUsername, pwd, email, blind, none, confirmEmail)
   }
 
-  private implicit val limitedDefault = Zero.instance[Result](TooManyRequest)
-
   private[controllers] def HasherRateLimit =
     PasswordHasher.rateLimit[Result](enforce = Env.api.Net.RateLimit) _
 
   private[controllers] def EmailConfirmRateLimit = lila.security.EmailConfirm.rateLimit[Result] _
+
+  private[controllers] def MagicLinkRateLimit = lila.security.MagicLink.rateLimit[Result] _
 }

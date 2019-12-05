@@ -21,12 +21,15 @@ final class UserSearch(
       EmailAddress.from(query.q).map(searchEmail) orElse
         IpAddress.from(query.q).map(searchIp) getOrElse
         searchUsername(query.q)
+    //searchId(query.q)
   }) flatMap UserRepo.withEmailsU
 
   private def searchIp(ip: IpAddress) =
     securityApi recentUserIdsByIp ip map (_.reverse) flatMap UserRepo.usersFromSecondary
 
   private def searchUsername(username: String) = UserRepo named username map (_.toList)
+
+  private def searchId(userId: String) = UserRepo byId userId map (_.toList)
 
   private def searchEmail(email: EmailAddress): Fu[List[User]] = {
     val normalized = email.normalize

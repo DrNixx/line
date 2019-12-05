@@ -12,7 +12,7 @@ object side {
 
   def apply(
     u: User,
-    rankMap: Option[lila.rating.UserRankMap],
+    rankMap: lila.rating.UserRankMap,
     active: Option[lila.rating.PerfType]
   )(implicit ctx: Context) = {
 
@@ -29,31 +29,31 @@ object side {
           "game" -> isGame,
           "active" -> active.has(perfType)
         ),
-        href := isGame option routes.User.perfStat(u.id, perfType.key).url,
-        h3(name.getOrElse(perfType.name).toUpperCase),
-        span(cls := "rating")(
-          strong(
-            perf.glicko.intRating,
-            perf.provisional option "?"
+        href := isGame option routes.User.perfStat(u.username, perfType.key).url,
+        span(
+          h3(name.getOrElse(perfType.name).toUpperCase),
+          st.rating(
+            strong(
+              perf.glicko.intRating,
+              perf.provisional option "?"
+            ),
+            " ",
+            ratingProgress(perf.progress),
+            " ",
+            span(
+              if (perfType.key == "puzzle") trans.nbPuzzles(perf.nb, perf.nb.localize)
+              else trans.nbGames(perf.nb, perf.nb.localize)
+            )
           ),
-          " ",
-          span(
-            if (perfType.key == "puzzle") trans.nbPuzzles(perf.nb, perf.nb.localize)
-            else trans.nbGames(perf.nb, perf.nb.localize)
-          ),
-          " ",
-          showProgress(perf.progress, withTitle = false)
-        ),
-        rankMap.fold(rankUnavailable) { ranks =>
-          ranks.get(perfType.key) map { rank =>
-            span(cls := "rank", title := trans.rankIsUpdatedEveryXMinutes.txt(15))(trans.rankX(rank.localize))
+          rankMap get perfType map { rank =>
+            span(cls := "rank", title := trans.rankIsUpdatedEveryNbMinutes.pluralSameTxt(15))(trans.rankX(rank.localize))
           }
-        },
+        ),
         isGame option iconTag("G")
       )
     }
 
-    div(cls := "side sub_ratings")(
+    div(cls := "side sub-ratings")(
       (!u.lame || ctx.is(u) || isGranted(_.UserSpy)) option frag(
         showNonEmptyPerf(u.perfs.ultraBullet, PerfType.UltraBullet),
         showPerf(u.perfs.bullet, PerfType.Bullet),
@@ -75,6 +75,4 @@ object side {
       )
     )
   }
-
-  private lazy val rankUnavailable: Frag = span(cls := "rank shy")("Rank unavailable, try again soon")
 }
