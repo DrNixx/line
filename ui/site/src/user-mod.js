@@ -16,15 +16,16 @@ function streamLoad(opts) {
   source.onerror = function() { source.close(); };
 }
 
-var $toggle = $('div.user_show .mod_zone_toggle');
-var $zone = $('div.user_show .mod_zone');
+var $toggle = $('.user-show .mod-zone-toggle');
+var $zone = $('.user-show .mod-zone');
 
 function loadZone() {
+  $('.user-show').css('overflow', 'visible'); // required for mz_menu to be displayed
   $zone.html(lichess.spinnerHtml).removeClass('none');
   streamLoad({
     node: $zone[0],
     url: $toggle.attr('href'),
-    callback: lichess.fp.debounce(function() {
+    callback: lichess.debounce(function() {
       userMod($zone);
     }, 300)
   });
@@ -35,24 +36,23 @@ $toggle.click(function() {
   else $zone.addClass('none');
   return false;
 });
-if (location.search.indexOf('mod') === 1) $toggle.click();
+if (location.search.startsWith('?mod')) $toggle.click();
 
 function userMod($zone) {
 
-  lichess.pubsub.emit('content_loaded')();
+  lichess.pubsub.emit('content_loaded');
 
   $('#mz_menu .mz_plan').toggleClass('disabled', !$('#mz_plan').length);
 
   $zone.find('form.xhr').submit(function() {
     $(this).find('input').attr('disabled', true);
     $.ajax({
-      url: $(this).attr('action'),
-      method: $(this).attr('method'),
+      ...lichess.formAjax($(this)),
       success: function(html) {
         $('#mz_actions').replaceWith(html);
         userMod($zone);
       }
-    })
+    });
     return false;
   });
 
@@ -100,9 +100,9 @@ function userMod($zone) {
     };
 
     tablesort.extend('number', function(item) {
-      return item.match(/^-?[£\x24Û¢´€]?\d+\s*([,\.]\d{0,2})/) || // Prefixed currency
-      item.match(/^-?\d+\s*([,\.]\d{0,2})?[£\x24Û¢´€]/) || // Suffixed currency
-      item.match(/^-?(\d)*-?([,\.]){0,1}-?(\d)+([E,e][\-+][\d]+)?%?$/); // Number
+      return item.match(/^-?[£\x24Û¢´€]?\d+\s*([,.]\d{0,2})/) || // Prefixed currency
+      item.match(/^-?\d+\s*([,.]\d{0,2})?[£\x24Û¢´€]/) || // Suffixed currency
+      item.match(/^-?(\d)*-?([,.]){0,1}-?(\d)+([E,e][-+][\d]+)?%?$/); // Number
     }, function(a, b) {
       a = cleanNumber(a);
       b = cleanNumber(b);
@@ -112,6 +112,8 @@ function userMod($zone) {
   }());
 
   $zone.find('#mz_others table').each(function() {
-    tablesort(this);
+    tablesort(this, {
+      descending: true
+    });
   });
 }
