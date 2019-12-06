@@ -33,6 +33,7 @@ export interface RankedTeam {
 
 export interface TeamPlayer {
   user: {
+    id: string,
     name: string
   };
   score: number

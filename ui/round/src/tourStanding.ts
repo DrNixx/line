@@ -8,6 +8,7 @@ export interface TourStandingCtrl extends ChatPlugin {
 }
 
 export interface TourPlayer {
+  i: string; // id
   n: string; // name
   s: number; // score
   t?: string; // title
@@ -33,7 +34,7 @@ export function tourStandingCtrl(data: TourPlayer[], name: string): TourStanding
             h('td.name', [
               h('span.rank', '' + (i + 1)),
               h('a.user-link.ulpt', {
-                attrs: { href: `/@/${p.n}` }
+                attrs: { href: `/@/${p.i}` }
               }, (p.t ? p.t + ' ' : '') + p.n)
             ]),
             h('td.total', p.f ? {

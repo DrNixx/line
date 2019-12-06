@@ -438,6 +438,7 @@ final class JsonView(
               "topPlayers" -> info.topPlayers.flatMap { p =>
                 lightUserApi.sync(p.userId) map { user =>
                   Json.obj(
+                    "id" -> user.id,
                     "name" -> user.name,
                     "rating" -> p.rating,
                     "score" -> p.score
@@ -465,6 +466,7 @@ object JsonView {
     t.value.map { p =>
       val light = getLightUser(p.userId)
       Json.obj(
+        "i" -> p.userId,
         "n" -> light.fold(p.userId)(_.name),
         "s" -> p.score
       ).add("t" -> light.flatMap(_.title))
