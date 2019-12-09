@@ -23,7 +23,7 @@ object opponents {
               td(showBestPerf(r.user)),
               td(
                 r.nbGames.filter(_ > 0).map { nbGames =>
-                  a(href := s"${routes.User.games(u.username, "search")}?players.b=${r.user.username}", title := "Games count over your last 1000 games")(
+                  a(href := s"${routes.User.games(u.id, "search")}?players.b=${r.user.id}", title := "Games count over your last 1000 games")(
                     trans.nbGames.pluralSame(nbGames)
                   )
                 }

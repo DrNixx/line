@@ -86,7 +86,7 @@ object inquiry {
             "Notes"
           ),
           div(
-            postForm(cls := "note", action := s"${routes.User.writeNote(in.user.username)}?note")(
+            postForm(cls := "note", action := s"${routes.User.writeNote(in.user.id)}?note")(
               textarea(name := "text", placeholder := "Write a mod note"),
               input(tpe := "hidden", name := "mod", value := "true"),
               div(cls := "submission")(
@@ -113,7 +113,7 @@ object inquiry {
           iconTag("e"),
           div(
             lila.message.ModPreset.all.map { preset =>
-              postForm(action := routes.Mod.warn(in.user.username, preset.subject))(
+              postForm(action := routes.Mod.warn(in.user.id, preset.subject))(
                 submitButton(cls := "fbt")(preset.subject),
                 autoNextInput
               )
@@ -126,7 +126,7 @@ object inquiry {
           )
         ),
         isGranted(_.MarkEngine) option {
-          val url = routes.Mod.engine(in.user.username, !in.user.engine).url
+          val url = routes.Mod.engine(in.user.id, !in.user.engine).url
           def button(active: Boolean) = submitButton(cls := List(
             "fbt icon" -> true,
             "active" -> active
@@ -140,7 +140,7 @@ object inquiry {
           )
         },
         isGranted(_.MarkBooster) option {
-          val url = routes.Mod.booster(in.user.username, !in.user.booster).url
+          val url = routes.Mod.booster(in.user.id, !in.user.booster).url
           def button(active: Boolean) = submitButton(cls := List(
             "fbt icon" -> true,
             "active" -> active
@@ -154,7 +154,7 @@ object inquiry {
           )
         },
         isGranted(_.Shadowban) option {
-          val url = routes.Mod.troll(in.user.username, !in.user.troll).url
+          val url = routes.Mod.troll(in.user.id, !in.user.troll).url
           def button(active: Boolean) = submitButton(cls := List(
             "fbt icon" -> true,
             "active" -> active

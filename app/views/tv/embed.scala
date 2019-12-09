@@ -19,7 +19,7 @@ object embed {
         layout.charset,
         layout.viewport,
         layout.metaCsp(basicCsp(config.req)),
-        st.headTitle("lichess.org chess TV"),
+        st.headTitle("Chess TV"),
         layout.pieceSprite(lila.pref.PieceSet.default),
         cssTagWithTheme("tv.embed", config.bg)
       ),
@@ -27,7 +27,7 @@ object embed {
         cls := s"base ${config.board}",
         dataStreamUrl := routes.Tv.feed
       )(
-          div(id := "featured-game", cls := "embedded", title := "lichess.org TV")(
+          div(id := "featured-game", cls := "embedded", title := "Chess TV")(
             gameFenNoCtx(pov, tv = true, blank = true),
             views.html.game.bits.vstext(pov)(none)
           ),

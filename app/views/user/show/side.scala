@@ -29,7 +29,7 @@ object side {
           "game" -> isGame,
           "active" -> active.has(perfType)
         ),
-        href := isGame option routes.User.perfStat(u.username, perfType.key).url,
+        href := isGame option routes.User.perfStat(u.id, perfType.key).url,
         span(
           h3(name.getOrElse(perfType.name).toUpperCase),
           st.rating(

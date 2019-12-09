@@ -35,18 +35,6 @@ object layout {
           ),
           isGranted(_.Coach) option a(activeCls("coach"), href := routes.Coach.edit)("Coach profile"),
           div(cls := "sep"),
-          a(activeCls("password"), href := routes.Account.passwd())(
-            trans.changePassword()
-          ),
-          a(activeCls("email"), href := routes.Account.email())(
-            trans.changeEmail()
-          ),
-          a(activeCls("username"), href := routes.Account.username())(
-            trans.changeUsername()
-          ),
-          a(activeCls("twofactor"), href := routes.Account.twoFactor())(
-            "Two-factor authentication"
-          ),
           a(activeCls("security"), href := routes.Account.security())(
             trans.security()
           ),

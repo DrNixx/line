@@ -42,20 +42,20 @@ $('.coach-review-form form').show();
       openGraph = lila.app.ui.OpenGraph(
         title = title,
         description = shorten(~(c.coach.profile.headline), 152),
-        url = s"$netBaseUrl${routes.Coach.show(c.user.username)}",
+        url = s"$netBaseUrl${routes.Coach.show(c.user.id)}",
         `type` = "profile",
         image = c.coach.picturePath.map(p => dbImageUrl(p.value))
       ).some
     ) {
         main(cls := "coach-show coach-full-page")(
           st.aside(cls := "coach-show__side coach-side")(
-            a(cls := "button button-empty", href := routes.User.show(c.user.username))("View ", c.user.username, " lichess profile"),
+            a(cls := "button button-empty", href := routes.User.show(c.user.id))("View ", c.user.username, " lichess profile"),
             if (ctx.me.exists(c.coach.is)) frag(
               if (c.coach.isListed) p("This page is now public.")
               else "This page is not public yet. ",
               a(href := routes.Coach.edit, cls := "text", dataIcon := "m")("Edit my coach profile")
             )
-            else a(cls := "text button button-empty", dataIcon := "c", href := s"${routes.Message.form}?user=${c.user.username}")(
+            else a(cls := "text button button-empty", dataIcon := "c", href := s"${routes.Message.form}?user=${c.user.id}")(
               "Send a private message"
             ),
             ctx.me.exists(_.id != c.user.id) option review.form(c, myReview),

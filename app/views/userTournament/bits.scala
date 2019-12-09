@@ -39,13 +39,13 @@ object bits {
     ) {
         main(cls := "page-menu")(
           st.nav(cls := "page-menu__menu subnav")(
-            a(cls := path.active("recent"), href := routes.UserTournament.path(u.username, "recent"))(
+            a(cls := path.active("recent"), href := routes.UserTournament.path(u.id, "recent"))(
               "Recently played"
             ),
-            a(cls := path.active("best"), href := routes.UserTournament.path(u.username, "best"))(
+            a(cls := path.active("best"), href := routes.UserTournament.path(u.id, "best"))(
               "Best results"
             ),
-            a(cls := path.active("chart"), href := routes.UserTournament.path(u.username, "chart"))(
+            a(cls := path.active("chart"), href := routes.UserTournament.path(u.id, "chart"))(
               "Stats"
             )
           ),

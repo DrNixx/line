@@ -44,7 +44,7 @@ object edit {
                 ul
               ),
               div(
-                a(href := routes.Coach.show(c.user.username), cls := "button button-empty text", dataIcon := "v")("Preview coach page")
+                a(href := routes.Coach.show(c.user.id), cls := "button button-empty text", dataIcon := "v")("Preview coach page")
               )
             )
           ),

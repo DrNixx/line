@@ -20,7 +20,7 @@ object close {
         div(cls := "form-group")("You will not be allowed to open a new account with the same name, even if the case if different."),
         form3.passwordModified(form("passwd"), trans.password())(autocomplete := "off"),
         form3.actions(frag(
-          a(href := routes.User.show(u.username))(trans.changedMindDoNotCloseAccount()),
+          a(href := routes.User.show(u.id))(trans.changedMindDoNotCloseAccount()),
           form3.submit(
             trans.closeAccount(),
             icon = "j".some,

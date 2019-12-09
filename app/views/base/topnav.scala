@@ -15,7 +15,7 @@ object topnav {
     st.section(
       linkTitle("/", frag(
         span(cls := "play")(trans.play()),
-        span(cls := "home")("lichess.org")
+        span(cls := "home")("live.chess-online.com")
       )),
       div(role := "group")(
         if (ctx.noBot) a(href := "/?any#hook")(trans.createAGame())
@@ -24,6 +24,13 @@ object topnav {
           a(href := routes.Tournament.home())(trans.tournaments()),
           a(href := routes.Simul.home)(trans.simultaneousExhibitions())
         )
+      )
+    ),
+    st.section(
+      a(href := "https://www.chess-online.com")("Chess-Online"),
+      div(
+        a(href := "http://old.chess-online.com")("Old Chess-Online site"),
+        a(href := "https://www.chess-online.com")("Chess-Online site")
       )
     ),
     st.section(
@@ -42,7 +49,7 @@ object topnav {
     st.section(
       linkTitle(routes.Tv.index.toString, trans.watch()),
       div(role := "group")(
-        a(href := routes.Tv.index)("Lichess TV"),
+        a(href := routes.Tv.index)("Chess-Online TV"),
         a(href := routes.Tv.games)(trans.currentGames()),
         a(href := routes.Streamer.index())(trans.streamersMenu()),
         a(href := routes.Relay.index())(trans.broadcastsMenu()),
@@ -54,7 +61,7 @@ object topnav {
       div(role := "group")(
         a(href := routes.User.list)(trans.players()),
         a(href := routes.Team.home())(trans.teams()),
-        NotForKids(a(href := routes.ForumCateg.index)(trans.forum()))
+        NotForKids(a(href := "https://www.chess-online.com/forums")(trans.forum()))
       )
     ),
     st.section(

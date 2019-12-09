@@ -25,7 +25,7 @@ object page {
     openGraph = lila.app.ui.OpenGraph(
       image = staticUrl("images/large_tile.png").some,
       title = u.titleUsernameWithBestRating,
-      url = s"$netBaseUrl${routes.User.show(u.username).url}",
+      url = s"$netBaseUrl${routes.User.show(u.id).url}",
       description = describeUser(u)
     ).some,
     moreJs = moreJs(info),

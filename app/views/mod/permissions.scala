@@ -25,7 +25,7 @@ $('button.clear').on('click', function() {
         main(id := "permissions", cls := "page-small box box-pad")(
           h1(userLink(u), " permissions"),
           p("Use Ctrl+click to select multiple permissions"),
-          postForm(cls := "form3", action := routes.Mod.permissions(u.username))(
+          postForm(cls := "form3", action := routes.Mod.permissions(u.id))(
             select(name := "permissions[]", multiple)(
               lila.security.Permission.allButSuperAdmin.sortBy(_.name).flatMap { p =>
                 ctx.me.exists(canGrant(_, p)) option option(

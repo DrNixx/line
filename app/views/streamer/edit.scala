@@ -136,7 +136,7 @@ object edit {
                   form3.group(form("headline"), raw("Headline"), help = raw("In one sentence, tell us about your stream").some)(form3.input(_)),
                   form3.group(form("description"), raw("Long description"))(form3.textarea(_)(rows := 10)),
                   form3.actions(
-                    a(href := routes.Streamer.show(s.user.username))("Cancel"),
+                    a(href := routes.Streamer.show(s.user.id))("Cancel"),
                     form3.submit(trans.apply())
                   )
                 )

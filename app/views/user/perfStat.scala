@@ -38,14 +38,14 @@ object perfStat {
         div(cls := s"page-menu__content box perf-stat ${perfType.key}")(
           div(cls := "box__top")(
             h1(
-              a(href := routes.User.show(u.username))(u.username),
+              a(href := routes.User.show(u.id))(u.username),
               span(perfType.name, " stats")
             ),
             div(cls := "box__top__actions")(
               u.perfs(perfType).nb > 0 option a(
                 cls := "button button-empty text",
                 dataIcon := perfType.iconChar,
-                href := s"${routes.User.games(u.username, "search")}?perf=${perfType.id}"
+                href := s"${routes.User.games(u.id, "search")}?perf=${perfType.id}"
               )("View the games"),
               bits.perfTrophies(u, rankMap.filterKeys(perfType==))
             )

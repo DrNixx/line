@@ -30,10 +30,10 @@ object communication {
             div(cls := "title")(userLink(u), " communications"),
             div(cls := "actions")(
               isGranted(_.ViewPrivateComms) option {
-                if (priv) a(cls := "priv button active", href := routes.Mod.communicationPublic(u.username))("PMs")
+                if (priv) a(cls := "priv button active", href := routes.Mod.communicationPublic(u.id))("PMs")
                 else a(
                   cls := "priv button",
-                  href := routes.Mod.communicationPrivate(u.username),
+                  href := routes.Mod.communicationPrivate(u.id),
                   title := "View private messages. This will be logged in #commlog"
                 )("PMs")
               }

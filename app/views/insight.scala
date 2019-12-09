@@ -44,8 +44,8 @@ lichess.insight = LichessInsight(document.getElementById('insight'), ${
               "stale" -> stale,
               "shareId" -> prefId
             ),
-            "pageUrl" -> routes.Insight.index(u.username).url,
-            "postUrl" -> routes.Insight.json(u.username).url
+            "pageUrl" -> routes.Insight.index(u.id).url,
+            "postUrl" -> routes.Insight.json(u.id).url
           ))
         });
 });""")
@@ -88,7 +88,7 @@ lichess.insight = LichessInsight(document.getElementById('insight'), ${
     )
 
   def refreshForm(u: User, action: String)(implicit ctx: Context) =
-    postForm(cls := "insight-refresh", st.action := routes.Insight.refresh(u.username))(
+    postForm(cls := "insight-refresh", st.action := routes.Insight.refresh(u.id))(
       button(dataIcon := "E", cls := "button text")(action),
       div(cls := "crunching none")(
         spinner,

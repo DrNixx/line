@@ -18,7 +18,7 @@ object user {
     st.form(
       rel := "nofollow",
       cls := "search__form",
-      action := routes.User.games(u.username, "search"),
+      action := routes.User.games(u.id, "search"),
       method := "GET"
     )(dataReqs)(
         table(

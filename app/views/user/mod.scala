@@ -31,10 +31,10 @@ object mod {
   def actions(u: User, emails: User.Emails, erased: User.Erased)(implicit ctx: Context): Frag =
     div(id := "mz_actions")(
       isGranted(_.UserEvaluate) option div(cls := "btn-rack")(
-        postForm(action := routes.Mod.spontaneousInquiry(u.username), title := "Start an inquiry")(
+        postForm(action := routes.Mod.spontaneousInquiry(u.id), title := "Start an inquiry")(
           submitButton(cls := "btn-rack__btn inquiry")(i)
         ),
-        postForm(action := routes.Mod.refreshUserAssess(u.username), title := "Collect data and ask irwin", cls := "xhr")(
+        postForm(action := routes.Mod.refreshUserAssess(u.id), title := "Collect data and ask irwin", cls := "xhr")(
           submitButton(cls := "btn-rack__btn")("Evaluate")
         ),
         isGranted(_.Shadowban) option {
@@ -46,45 +46,45 @@ object mod {
       ),
       div(cls := "btn-rack")(
         isGranted(_.MarkEngine) option {
-          postForm(action := routes.Mod.engine(u.username, !u.engine), title := "This user is clearly cheating.", cls := "xhr")(
+          postForm(action := routes.Mod.engine(u.id, !u.engine), title := "This user is clearly cheating.", cls := "xhr")(
             submitButton(cls := List("btn-rack__btn" -> true, "active" -> u.engine))("Engine")
           )
         },
         isGranted(_.MarkBooster) option {
-          postForm(action := routes.Mod.booster(u.username, !u.booster), title := "Marks the user as a booster or sandbagger.", cls := "xhr")(
+          postForm(action := routes.Mod.booster(u.id, !u.booster), title := "Marks the user as a booster or sandbagger.", cls := "xhr")(
             submitButton(cls := List("btn-rack__btn" -> true, "active" -> u.booster))("Booster")
           )
         },
         isGranted(_.Shadowban) option {
-          postForm(action := routes.Mod.troll(u.username, !u.troll), title := "Enable/disable communication features for this user.", cls := "xhr")(
+          postForm(action := routes.Mod.troll(u.id, !u.troll), title := "Enable/disable communication features for this user.", cls := "xhr")(
             submitButton(cls := List("btn-rack__btn" -> true, "active" -> u.troll))("Shadowban")
           )
         },
         u.troll option {
-          postForm(action := routes.Mod.deletePmsAndChats(u.username), title := "Delete all PMs and public chat messages", cls := "xhr")(
+          postForm(action := routes.Mod.deletePmsAndChats(u.id), title := "Delete all PMs and public chat messages", cls := "xhr")(
             submitButton(cls := "btn-rack__btn confirm")("Clear PMs & chats")
           )
         },
         isGranted(_.RemoveRanking) option {
-          postForm(action := routes.Mod.rankban(u.username, !u.rankban), title := "Include/exclude this user from the rankings.", cls := "xhr")(
+          postForm(action := routes.Mod.rankban(u.id, !u.rankban), title := "Include/exclude this user from the rankings.", cls := "xhr")(
             submitButton(cls := List("btn-rack__btn" -> true, "active" -> u.rankban))("Rankban")
           )
         },
         isGranted(_.ReportBan) option {
-          postForm(action := routes.Mod.reportban(u.username, !u.reportban), title := "Enable/disable the report feature for this user.", cls := "xhr")(
+          postForm(action := routes.Mod.reportban(u.id, !u.reportban), title := "Enable/disable the report feature for this user.", cls := "xhr")(
             submitButton(cls := List("btn-rack__btn" -> true, "active" -> u.reportban))("Reportban")
           )
         }
       ),
       div(cls := "btn-rack")(
         isGranted(_.IpBan) option {
-          postForm(action := routes.Mod.ipBan(u.username, !u.ipBan), cls := "xhr")(
+          postForm(action := routes.Mod.ipBan(u.id, !u.ipBan), cls := "xhr")(
             submitButton(cls := List("btn-rack__btn" -> true, "active" -> u.ipBan))("IP ban")
           )
         },
         if (u.enabled) {
           isGranted(_.CloseAccount) option {
-            postForm(action := routes.Mod.closeAccount(u.username), title := "Disables this account.", cls := "xhr")(
+            postForm(action := routes.Mod.closeAccount(u.id), title := "Disables this account.", cls := "xhr")(
               submitButton(cls := "btn-rack__btn")("Close")
             )
           }
@@ -92,7 +92,7 @@ object mod {
           "Erased"
         } else {
           isGranted(_.ReopenAccount) option {
-            postForm(action := routes.Mod.reopenAccount(u.username), title := "Re-activates this account.", cls := "xhr")(
+            postForm(action := routes.Mod.reopenAccount(u.id), title := "Re-activates this account.", cls := "xhr")(
               submitButton(cls := "btn-rack__btn active")("Closed")
             )
           }
@@ -100,23 +100,23 @@ object mod {
       ),
       div(cls := "btn-rack")(
         (u.totpSecret.isDefined && isGranted(_.DisableTwoFactor)) option {
-          postForm(action := routes.Mod.disableTwoFactor(u.username), title := "Disables two-factor authentication for this account.", cls := "xhr")(
+          postForm(action := routes.Mod.disableTwoFactor(u.id), title := "Disables two-factor authentication for this account.", cls := "xhr")(
             submitButton(cls := "btn-rack__btn confirm")("Disable 2FA")
           )
         },
         isGranted(_.Impersonate) option {
-          postForm(action := routes.Mod.impersonate(u.username))(
+          postForm(action := routes.Mod.impersonate(u.id))(
             submitButton(cls := "btn-rack__btn")("Impersonate")
           )
         }
       ),
       isGranted(_.SetTitle) option {
-        postForm(cls := "fide_title", action := routes.Mod.setTitle(u.username))(
+        postForm(cls := "fide_title", action := routes.Mod.setTitle(u.id))(
           form3.select(lila.user.DataForm.title.fill(u.title.map(_.value))("title"), lila.user.Title.all, "No title".some)
         )
       },
       isGranted(_.SetEmail) ?? frag(
-        postForm(cls := "email", action := routes.Mod.setEmail(u.username))(
+        postForm(cls := "email", action := routes.Mod.setEmail(u.id))(
           st.input(tpe := "email", value := emails.current.??(_.value), name := "email", placeholder := "Email address"),
           submitButton(cls := "button", dataIcon := "E")
         ),
@@ -136,7 +136,7 @@ object mod {
   )
 
   def roles(u: User)(implicit ctx: Context) = canViewRoles(u) option div(cls := "mz_roles")(
-    (if (isGranted(_.ChangePermission)) a(href := routes.Mod.permissions(u.username)) else span)(
+    (if (isGranted(_.ChangePermission)) a(href := routes.Mod.permissions(u.id)) else span)(
       strong(cls := "text inline", dataIcon := " ")("Mod permissions: "),
       if (u.roles.isEmpty) "Add some" else u.roles.mkString(", ")
     )
@@ -374,7 +374,7 @@ object mod {
                 markTd(o.reportban ?? 1, reportban),
                 myNotes.nonEmpty option {
                   td(dataSort := myNotes.size)(
-                    a(href := s"${routes.User.show(o.username)}?notes")(notesText(title := s"Notes from ${myNotes.map(_.from).map(usernameOrId).mkString(", ")}", cls := "is-green"), myNotes.size)
+                    a(href := s"${routes.User.show(o.id)}?notes")(notesText(title := s"Notes from ${myNotes.map(_.from).map(usernameOrId).mkString(", ")}", cls := "is-green"), myNotes.size)
                   )
                 } getOrElse td(dataSort := 0),
                 td(dataSort := o.createdAt.getMillis)(momentFromNowOnce(o.createdAt)),

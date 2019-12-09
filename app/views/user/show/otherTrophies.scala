@@ -80,13 +80,13 @@ object otherTrophies {
     },
     info.isCoach option
       a(
-        href := routes.Coach.show(u.username),
+        href := routes.Coach.show(u.id),
         cls := "trophy award icon3d coach",
         ariaTitle("Lichess Coach")
       )(":"),
     info.isStreamer option
       a(
-        href := routes.Streamer.show(u.username),
+        href := routes.Streamer.show(u.id),
         cls := List(
           "trophy award icon3d streamer" -> true,
           "streaming" -> isStreaming(u.id)

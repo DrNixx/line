@@ -30,7 +30,7 @@ method:'post'
     openGraph = lila.app.ui.OpenGraph(
       title = s"${s.titleName} streams chess",
       description = shorten(~(s.streamer.headline.map(_.value) orElse s.streamer.description.map(_.value)), 152),
-      url = s"$netBaseUrl${routes.Streamer.show(s.user.username)}",
+      url = s"$netBaseUrl${routes.Streamer.show(s.user.id)}",
       `type` = "video",
       image = s.streamer.picturePath.map(p => dbImageUrl(p.value))
     ).some,
@@ -85,7 +85,7 @@ method:'post'
           div(cls := "box streamer")(
             header(s, following.some),
             div(cls := "description")(richText(s.streamer.description.fold("")(_.value))),
-            a(cls := "ratings", href := routes.User.show(s.user.username))(
+            a(cls := "ratings", href := routes.User.show(s.user.id))(
               s.user.best6Perfs.map { showPerfRating(s.user, _) }
             ),
             views.html.activity(s.user, activities)

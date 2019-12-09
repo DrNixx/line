@@ -25,7 +25,7 @@ object gamesContent {
       filters.list.map { f =>
         a(
           cls := s"nm-item to-${f.name}${(filters.current == f) ?? " active"}",
-          href := routes.User.games(u.username, f.name)
+          href := routes.User.games(u.id, f.name)
         )(userGameFilterTitle(u, nbs, f))
       }
     ),
@@ -34,7 +34,7 @@ object gamesContent {
     },
     div(cls := "search__result")(
       if (filterName == "search") {
-        val permalink = a(rel := "nofollow", href := routes.User.games(u.username, filterName))("Permalink")
+        val permalink = a(rel := "nofollow", href := routes.User.games(u.id, filterName))("Permalink")
         if (pager.nbResults > 0) frag(
           div(cls := "search__status")(
             strong(pager.nbResults.localize, " games found"),
@@ -42,7 +42,7 @@ object gamesContent {
             permalink
           ),
           div(cls := "search__rows")(
-            pagerNext(pager, np => routes.User.games(u.username, filterName, np).url) | div(cls := "none"),
+            pagerNext(pager, np => routes.User.games(u.id, filterName, np).url) | div(cls := "none"),
             views.html.game.widgets(pager.currentPageResults, user = u.some, ownerLink = ctx is u)
           )
         )
@@ -52,7 +52,7 @@ object gamesContent {
           "games infinitescroll" -> true,
           "now-playing center" -> (filterName == "playing" && pager.nbResults > 2)
         ))(
-          pagerNext(pager, np => routes.User.games(u.username, filterName, np).url) | div(cls := "none"),
+          pagerNext(pager, np => routes.User.games(u.id, filterName, np).url) | div(cls := "none"),
           if (filterName == "playing" && pager.nbResults > 2)
             pager.currentPageResults.flatMap { Pov(_, u) }.map { p =>
             a(href := gameLink(p), cls := "paginated")(

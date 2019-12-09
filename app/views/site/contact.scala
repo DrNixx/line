@@ -77,7 +77,7 @@ object contact {
         Leaf("forgot-username", "I forgot my username", frag(
           p(
             "You can ",
-            a(href := routes.Auth.login)("login"),
+            a(href := routes.Auth.oidcLogin)("login"),
             " with the email address you signed up with."
           )
         )),

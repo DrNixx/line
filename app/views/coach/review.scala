@@ -35,8 +35,8 @@ object review {
         p(c.user.realNameOrUsername, " will approve it very soon, or a moderator will have a look at it.")
       )
       else if (ctx.isAuth) a(cls := "button button-empty toggle")("Write a review")
-      else a(href := s"${routes.Auth.login}?referrer=${ctx.req.path}", cls := "button")("Review this coach"),
-      postForm(action := routes.Coach.review(c.user.username))(
+      else a(href := s"${routes.Auth.oidcLogin}?referrer=${ctx.req.path}", cls := "button")("Review this coach"),
+      postForm(action := routes.Coach.review(c.user.id))(
         barRating(selected = mine.map(_.score), enabled = true),
         textarea(
           name := "text",

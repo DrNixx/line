@@ -43,20 +43,20 @@ object header {
     ),
     div(cls := "user-show__social")(
       div(cls := "number-menu")(
-        a(cls := "nm-item", href := routes.Relation.followers(u.username))(
+        a(cls := "nm-item", href := routes.Relation.followers(u.id))(
           splitNumber(trans.nbFollowers.pluralSame(info.nbFollowers))
         ),
         info.nbBlockers.map { nb =>
           a(cls := "nm-item")(splitNumber(nb + " Blockers"))
         },
         u.noBot option a(
-          href := routes.UserTournament.path(u.username, "recent"),
+          href := routes.UserTournament.path(u.id, "recent"),
           cls := "nm-item tournament_stats",
           dataToints := u.toints
         )(
             splitNumber(trans.nbTournamentPoints.pluralSame(u.toints))
           ),
-        a(href := routes.Study.byOwnerDefault(u.username), cls := "nm-item")(
+        a(href := routes.Study.byOwnerDefault(u.id), cls := "nm-item")(
           splitNumber(info.nbStudies + " studies")
         ),
         a(
@@ -74,26 +74,26 @@ object header {
           a(cls := "btn-rack__btn", href := routes.Relation.blocks(), titleOrText(trans.listBlockedPlayers.txt()), dataIcon := "k")
         ),
         isGranted(_.UserSpy) option
-          a(cls := "btn-rack__btn mod-zone-toggle", href := routes.User.mod(u.username), titleOrText("Mod zone"), dataIcon := ""),
-        a(cls := "btn-rack__btn", href := routes.User.tv(u.username), titleOrText(trans.watchGames.txt()), dataIcon := "1"),
+          a(cls := "btn-rack__btn mod-zone-toggle", href := routes.User.mod(u.id), titleOrText("Mod zone"), dataIcon := ""),
+        a(cls := "btn-rack__btn", href := routes.User.tv(u.id), titleOrText(trans.watchGames.txt()), dataIcon := "1"),
         (ctx.isAuth && !ctx.is(u)) option
           views.html.relation.actions(u.id, relation = social.relation, followable = social.followable, blocked = social.blocked),
         if (ctx is u) a(
           cls := "btn-rack__btn",
-          href := routes.Game.exportByUser(u.username),
+          href := routes.Game.exportByUser(u.id),
           titleOrText(trans.exportGames.txt()),
           dataIcon := "x"
         )
         else (ctx.isAuth && ctx.noKid) option a(
           titleOrText(trans.reportXToModerators.txt(u.username)),
           cls := "btn-rack__btn",
-          href := s"${routes.Report.form}?username=${u.username}",
+          href := s"${routes.Report.form}?id=${u.id}",
           dataIcon := "!"
         )
       )
     ),
     (ctx.noKid && !ctx.is(u)) option div(cls := "note-zone")(
-      postForm(action := s"${routes.User.writeNote(u.username)}?note")(
+      postForm(action := s"${routes.User.writeNote(u.id)}?note")(
         textarea(name := "text", placeholder := "Write a note about this user only you and your friends can read"),
         submitButton(cls := "button")(trans.send()),
         if (isGranted(_.ModNote)) label(style := "margin-left: 1em;")(
@@ -205,7 +205,7 @@ It's useful against spambots. These marks are not visible to the public."""
               )
             ),
             info.insightVisible option
-              a(cls := "insight", href := routes.Insight.index(u.username), dataIcon := "7")(
+              a(cls := "insight", href := routes.Insight.index(u.id), dataIcon := "7")(
                 span(
                   strong("Chess Insights"),
                   em("Analytics from ", if (ctx.is(u)) "your" else s"${u.username}'s", " games")
@@ -221,7 +221,7 @@ It's useful against spambots. These marks are not visible to the public."""
           "nm-item to-activity" -> true,
           "active" -> (angle == Angle.Activity)
         ),
-        href := routes.User.show(u.username)
+        href := routes.User.show(u.id)
       )(trans.activity.activity()),
       a(
         dataTab := "games",
@@ -229,7 +229,7 @@ It's useful against spambots. These marks are not visible to the public."""
           "nm-item to-games" -> true,
           "active" -> (angle.key == "games")
         ),
-        href := routes.User.gamesAll(u.username)
+        href := routes.User.gamesAll(u.id)
       )(
           trans.nbGames.plural(info.user.count.game, info.user.count.game.localize),
           info.nbs.playing > 0 option

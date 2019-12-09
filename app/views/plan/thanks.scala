@@ -27,7 +27,7 @@ object thanks {
               if (pat.payPal.??(_.renew)) p(
                 "You now have a permanent Patron account.", br,
                 ctx.me.map { me =>
-                  frag("Check out your ", a(href := routes.User.show(me.username))("profile page"), "!")
+                  frag("Check out your ", a(href := routes.User.show(me.id))("profile page"), "!")
                 }
               )
               else {
@@ -42,14 +42,14 @@ object thanks {
                   if (pat.isLifetime) p(
                     "You are now a lifetime Lichess Patron!", br,
                     ctx.me.map { me =>
-                      frag("Check out your ", a(href := routes.User.show(me.username))("profile page"), ".")
+                      frag("Check out your ", a(href := routes.User.show(me.id))("profile page"), ".")
                     }
                   )
                   else frag(
                     p(
                       "You are now a Lichess Patron for one month!", br,
                       ctx.me.map { me =>
-                        frag("Check out your ", a(href := routes.User.show(me.username))("profile page"), ".")
+                        frag("Check out your ", a(href := routes.User.show(me.id))("profile page"), ".")
                       }
                     ),
                     p(

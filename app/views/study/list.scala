@@ -30,7 +30,7 @@ object list {
     order = order,
     pag = pag,
     searchFilter = s"owner:${owner.username}",
-    url = o => routes.Study.byOwner(owner.username, o)
+    url = o => routes.Study.byOwner(owner.id, o)
   )(trans.study.studiesCreatedByX(userLink(owner)))
 
   def mine(pag: Paginator[WithChaptersAndLiked], order: Order, me: User)(implicit ctx: Context) = layout(

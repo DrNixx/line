@@ -128,7 +128,7 @@ object Auth extends LilaController {
     lila.security.Store.delete(currentSessionId) >>
       Env.push.webSubscriptionApi.unsubscribeBySession(currentSessionId) >>
       negotiate(
-        html = Redirect(routes.Auth.login).fuccess,
+        html = Redirect(routes.Lobby.home).fuccess,
         api = _ => Ok(Json.obj("ok" -> true)).fuccess
       ).dmap(_.withCookies(LilaCookie.newSession))
   }

@@ -22,8 +22,8 @@ object index {
       a(
         cls := "overlay",
         href := {
-          if (requests) s"${routes.Streamer.edit}?u=${s.user.username}"
-          else routes.Streamer.show(s.user.username).url
+          if (requests) s"${routes.Streamer.edit}?u=${s.user.id}"
+          else routes.Streamer.show(s.user.id).url
         }
       ),
       stream.isDefined option span(cls := "ribbon")(span("LIVE!")),

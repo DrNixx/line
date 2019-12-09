@@ -20,10 +20,10 @@ object bits {
         div(cls := "actions")(
           trans.nbFollowers.pluralSame(pag.nbResults),
           " ", amp, " ",
-          a(href := routes.Relation.following(u.username))(trans.nbFollowing.pluralSame(nbFollowing))
+          a(href := routes.Relation.following(u.id))(trans.nbFollowing.pluralSame(nbFollowing))
         )
       ),
-      pagTable(pag, routes.Relation.followers(u.username))
+      pagTable(pag, routes.Relation.followers(u.id))
     )
 
   def following(u: User, pag: Paginator[Related], nbFollowers: Int)(implicit ctx: Context) =
@@ -33,10 +33,10 @@ object bits {
         div(cls := "actions")(
           trans.nbFollowing.pluralSame(pag.nbResults),
           " ", amp, " ",
-          a(href := routes.Relation.followers(u.username))(trans.nbFollowers.pluralSame(nbFollowers))
+          a(href := routes.Relation.followers(u.id))(trans.nbFollowers.pluralSame(nbFollowers))
         )
       ),
-      pagTable(pag, routes.Relation.following(u.username))
+      pagTable(pag, routes.Relation.following(u.id))
     )
 
   def blocks(u: User, pag: Paginator[Related])(implicit ctx: Context) =

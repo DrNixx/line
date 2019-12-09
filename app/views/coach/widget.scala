@@ -25,7 +25,7 @@ object widget {
   def apply(c: lila.coach.Coach.WithUser, link: Boolean)(implicit ctx: Context) = {
     val profile = c.user.profileOrDefault
     frag(
-      link option a(cls := "overlay", href := routes.Coach.show(c.user.username)),
+      link option a(cls := "overlay", href := routes.Coach.show(c.user.id)),
       pic(c, if (link) 300 else 350),
       div(cls := "overview")(
         (if (link) h2 else h1)(cls := "coach-name")(titleName(c)),
@@ -62,7 +62,7 @@ object widget {
                 profile.fideRating.map { r =>
                   frag("FIDE: ", r)
                 },
-                a(href := routes.User.show(c.user.username))(
+                a(href := routes.User.show(c.user.id))(
                   c.user.best8Perfs.take(6).filter(c.user.hasEstablishedRating).map {
                     showPerfRating(c.user, _)
                   }

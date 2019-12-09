@@ -32,7 +32,7 @@ object home {
   )(implicit ctx: Context) = views.html.base.layout(
     title = "",
     fullTitle = Some {
-      s"lichess.${if (isProd && !isStage) "org" else "dev"} • ${trans.freeOnlineChess.txt()}"
+      s"Chess-Online Arena • ${trans.freeOnlineChess.txt()}"
     },
     moreJs = frag(
       jsAt(s"compiled/lichess.lobby${isProd ?? (".min")}.js", defer = true),
@@ -115,9 +115,7 @@ object home {
             )
           } getOrElse div(cls := "about-side")(
             ctx.blind option h2("About"),
-            trans.xIsAFreeYLibreOpenSourceChessServer("Lichess", a(cls := "blue", href := routes.Plan.features)(trans.really.txt())),
-            " ",
-            a(href := "/about")(trans.aboutX("Lichess"), "...")
+            a(href := "/about")(trans.aboutX("Chess-Online Arena"), "...")
           )
         ),
         featured map { g =>
@@ -151,27 +149,19 @@ object home {
           a(href := routes.Plan.index)(
             iconTag(patronIconChar),
             span(cls := "lobby__support__text")(
-              strong("Lichess Patron"),
+              strong("Chess-Online Patron"),
               span(trans.directlySupportLichess())
-            )
-          ),
-          a(href := "https://shop.spreadshirt.com/lichess-org")(
-            iconTag(""),
-            span(cls := "lobby__support__text")(
-              strong("Swag Store"),
-              span(trans.playChessInStyle())
             )
           )
         ),
         div(cls := "lobby__about")(
           ctx.blind option h2("About"),
-          a(href := "/about")(trans.aboutX("Lichess")),
+          a(href := "/about")(trans.aboutX("Chess-Online Arena")),
           a(href := "/faq")("FAQ"),
           a(href := "/contact")(trans.contact()),
-          a(href := "/mobile")(trans.mobileApp()),
-          a(href := routes.Page.tos)(trans.termsOfService()),
-          a(href := routes.Page.privacy)(trans.privacy()),
-          a(href := routes.Page.source)(trans.sourceCode())
+          a(href := "https://passport.chess-online.com/ru-ru/rules/legal")(trans.termsOfService()),
+          a(href := "https://passport.chess-online.com/ru-ru/rules/privacy")(trans.privacy()),
+          a(href := "https://github.com/DrNixx/line/tree/chess-online")(trans.sourceCode())
         )
       )
     }

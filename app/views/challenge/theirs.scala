@@ -45,7 +45,7 @@ object theirs {
                   p("This game is rated"),
                   p(
                     "You must ",
-                    a(cls := "button", href := s"${routes.Auth.login}?referrer=${routes.Round.watcher(c.id, "white")}")(trans.signIn()),
+                    a(cls := "button", href := s"${routes.Auth.oidcLogin}?referrer=${routes.Round.watcher(c.id, "white")}")(trans.signIn()),
                     " to join it."
                   )
                 )
