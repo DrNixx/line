@@ -3,10 +3,10 @@
 <resources>
   <string name="activity">Активность</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">Поддержал lichess.org как %2$s в течение %1$s месяца</item>
-    <item quantity="few">Стал покровителем (%2$s), поддержал lichess.org на %1$s месяца</item>
-    <item quantity="many">Стал покровителем (%2$s), поддержал lichess.org на %1$s месяцев</item>
-    <item quantity="other">Стал покровителем (%2$s), поддержал lichess.org на %1$s месяцев</item>
+    <item quantity="one">Поддержал Chess-Online.Com как %2$s в течение %1$s месяца</item>
+    <item quantity="few">Стал покровителем (%2$s), поддержал Chess-Online.Com на %1$s месяца</item>
+    <item quantity="many">Стал покровителем (%2$s), поддержал Chess-Online.Com на %1$s месяцев</item>
+    <item quantity="other">Стал покровителем (%2$s), поддержал Chess-Online.Com на %1$s месяцев</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">Выполнил %1$s упражнение в %2$s</item>

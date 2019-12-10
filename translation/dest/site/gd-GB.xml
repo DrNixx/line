@@ -65,7 +65,6 @@
   <string name="viewInFullSize">Seall sa mheud iomlan</string>
   <string name="logOut">Log a-mach</string>
   <string name="signIn">Log a-steach</string>
-  <string name="newToLichess">Ùr air Lichess?</string>
   <string name="youNeedAnAccountToDoThat">Tha feum agad air cunntas gus sin a dhèanamh</string>
   <string name="signUp">Clàraich</string>
   <string name="games">Geamannan</string>
@@ -87,7 +86,6 @@
   <string name="username">Ainm-cleachdaidh</string>
   <string name="usernameOrEmail">Far-ainm</string>
   <string name="password">Facal-faire</string>
-  <string name="haveAnAccount">A bheil cunntas agad?</string>
   <string name="changePassword">Atharraich am facal-faire</string>
   <string name="changeEmail">Atharraich am post-d</string>
   <string name="email">Post-d</string>
@@ -188,10 +186,8 @@
   <string name="thisIsAChessCaptcha">Seo CAPTCHA tàileisg.</string>
   <string name="clickOnTheBoardToMakeYourMove">Briog air a’ bhòrd airson gluasad ’s dearbhaich gur e duine a th’ annad.</string>
   <string name="notACheckmate">Chan e tul-chasg a th’ ann</string>
-  <string name="colorPlaysCheckmateInOne">Tha %s a’ cluich; tul-chasg an ceann gluasaid</string>
   <string name="retry">Feuch ris a-rithist</string>
   <string name="reconnecting">Ag ath-cheangal</string>
-  <string name="onlineFriends">Caraidean air loidhne</string>
   <string name="noFriendsOnline">Chan eil caraid air loidhne</string>
   <string name="findFriends">Lorg caraidean</string>
   <string name="follow">Lean</string>
@@ -249,7 +245,7 @@
   <string name="findTheBestMoveForWhite">Lorg an gluasad as fhearr airson geal.</string>
   <string name="findTheBestMoveForBlack">Lorg an gluasad as fhearr airson dubh.</string>
   <string name="toTrackYourProgress">Gus sùil a chumail air d’ adhartas:</string>
-  <string name="trainingSignupExplanation">Bheir Lichess tòimhseachain dhut a bhios freagarrach dhan chomas agad ach am faigh thu trèanadh as iomchaidh.</string>
+  <string name="trainingSignupExplanation">Bheir Arena TV tòimhseachain dhut a bhios freagarrach dhan chomas agad ach am faigh thu trèanadh as iomchaidh.</string>
   <string name="puzzleId">Tòimhseachan %s</string>
   <string name="puzzleOfTheDay">Tòimhseachan an latha</string>
   <string name="clickToSolve">Briog an-seo airson fhuasgladh</string>
@@ -260,7 +256,7 @@
   <string name="puzzleFailed">Cha deach leat</string>
   <string name="butYouCanKeepTrying">Ach faodaidh tu feuchainn a-rithist.</string>
   <string name="wasThisPuzzleAnyGood">An robh an tòimhseachan seo math?</string>
-  <string name="pleaseVotePuzzle">Cuidich lichess ’s cuir bhòt ann leis an t-saighead suas no sìos:</string>
+  <string name="pleaseVotePuzzle">Cuidich Arena TV ’s cuir bhòt ann leis an t-saighead suas no sìos:</string>
   <string name="thankYou">Mòran taing!</string>
   <string name="ratingX">Rangachadh: %s</string>
   <string name="fromGameLink">On gheama %s</string>
@@ -356,7 +352,7 @@
   <string name="computer">Coimpiutair</string>
   <string name="side">Taobh</string>
   <string name="clock">Uaireadair</string>
-  <string name="connectedToLichess">Tha thu ceangailte ri Chess-Online.Com a-nis</string>
+  <string name="connectedToLichess">Tha thu ceangailte ri Chess-Online a-nis</string>
   <string name="signedOut">Chaidh do chlàradh a-mach</string>
   <string name="loginSuccessful">Chaidh do chlàradh a-steach</string>
   <string name="playOfflineComputer">Coimpiutair</string>
@@ -378,14 +374,11 @@
   <string name="onlyFriends">Caraidean a-mhàin</string>
   <string name="menu">Clàr-taice</string>
   <string name="whiteCastlingKingside">Geal O-O</string>
-  <string name="whiteCastlingQueenside">Geal O-O-O</string>
   <string name="blackCastlingKingside">Dubh O-O</string>
-  <string name="blackCastlingQueenside">Dubh O-O-O</string>
   <string name="tpTimeSpentPlaying">Ùine a\' cluich: %s</string>
   <string name="watchGames">Coimhead geamannan</string>
   <string name="tpTimeSpentOnTV">Ùine air tbh: %s</string>
   <string name="watch">Coimhead</string>
-  <string name="internationalEvents">Tachartasan eadar-nàiseanta</string>
   <string name="videoLibrary">Cruinneachadh bhidiothan</string>
   <string name="mobileApp">Aplacaid mobile</string>
   <string name="webmasters">Maighstirean-lìn</string>
@@ -395,7 +388,7 @@
   <string name="sourceCode">Bun-tùs</string>
   <string name="host">Òstair</string>
   <string name="create">Cruthaich</string>
-  <string name="lichessTournaments">Féillean-chluich Arena</string>
+  <string name="lichessTournaments">Féillean-chluich Arena TV</string>
   <string name="tournamentOfficial">Oifigeil</string>
   <string name="timeBeforeTournamentStarts">Ùine mus tòisich an fhéill-chluich</string>
   <string name="keyboardShortcuts">Ath-ghoiridean a\' mheur-chlàir</string>
@@ -410,5 +403,5 @@
   <string name="byRegisteringYouAgreeToBeBoundByOur">Nuair a chlàraicheas tu, aontaichidh tu gum bi thu fo bhuaidh %s.</string>
   <string name="kidMode">Modh cloinne</string>
   <string name="playChessEverywhere">Cluich tàileasg àite sam bith</string>
-  <string name="asFreeAsLichess">Ch saor \'s a tha lichess</string>
+  <string name="asFreeAsLichess">Ch saor \'s a tha Arena TV</string>
 </resources>

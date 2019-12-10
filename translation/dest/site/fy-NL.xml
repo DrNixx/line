@@ -50,7 +50,6 @@
     <item quantity="other">%s spilers</item>
   </plurals>
   <string name="signIn">Oanmelde</string>
-  <string name="newToLichess">Nij by Lichess?</string>
   <string name="signUp">Registrearje</string>
   <string name="games">Spullen</string>
   <string name="players">Spilers</string>
@@ -108,7 +107,7 @@
   <string name="tournamentDoesNotExist">Dizze toernoai bestiet net.</string>
   <string name="kidMode">Bern mode</string>
   <string name="playChessEverywhere">Oeral skaken spyljen</string>
-  <string name="asFreeAsLichess">As fergees as lichess</string>
+  <string name="asFreeAsLichess">As fergees as Chess-Online</string>
   <string name="builtForTheLoveOfChessNotMoney">Boud út de leafde foar skaken, net jild</string>
   <string name="zeroAdvertisement">Gjin advertinsjes</string>
   <string name="phoneAndTablet">Telefoan en tablet</string>

@@ -59,6 +59,7 @@
   <string name="promoteVariation">Variante aufwerten</string>
   <string name="makeMainLine">Zur Hauptvariante machen</string>
   <string name="deleteFromHere">Ab hier löschen</string>
+  <string name="forceVariation">Variante erzwingen</string>
   <string name="move">Zug</string>
   <string name="variantLoss">Variante verloren</string>
   <string name="variantWin">Variante gewonnen</string>
@@ -134,7 +135,6 @@
   <string name="viewInFullSize">In voller Größe anzeigen</string>
   <string name="logOut">Abmelden</string>
   <string name="signIn">Einloggen</string>
-  <string name="newToLichess">Neu bei Lichess?</string>
   <string name="youNeedAnAccountToDoThat">Dazu brauchst du ein Benutzerkonto</string>
   <string name="signUp">Registrieren</string>
   <string name="computersAreNotAllowedToPlay">Unterstützung von Schachprogrammen, Datenbanken oder anderen Spielern ist während einer Partie nicht erlaubt. Bitte beachte auch, dass die Erstellung mehrerer Benutzerkonten ungern gesehen ist und die Missachtung dieser Regel, bis auf Kulanz von Seiten des Teams, zum Ausschluss aller betroffenen Konten führt.</string>
@@ -164,8 +164,10 @@
   <string name="ratingStats">Wertungsstatistiken</string>
   <string name="username">Benutzername</string>
   <string name="usernameOrEmail">Benutzername oder E-Mail</string>
+  <string name="changeUsername">Benutzernamen ändern</string>
+  <string name="changeUsernameNotSame">Nur die Groß-/Kleinschreibung kann geändert werden, z.B. \"jondoe\" zu \"JonDoe\".</string>
+  <string name="changeUsernameDescription">Ändere deinen Benutzernamen. Dies ist nur einmalig möglich und bezieht sich lediglich auf Anpassungen der Groß- und Kleinschreibung deines Benutzernamens.</string>
   <string name="password">Passwort</string>
-  <string name="haveAnAccount">Hast du schon ein Benutzerkonto?</string>
   <string name="changePassword">Passwort ändern</string>
   <string name="changeEmail">E-Mail-Adresse ändern</string>
   <string name="email">E-Mail</string>
@@ -173,7 +175,10 @@
   <string name="forgotPassword">Passwort vergessen?</string>
   <string name="rank">Rang</string>
   <string name="rankX">Platz: %s</string>
-  <string name="rankIsUpdatedEveryXMinutes">Platzierung wird alle %s Minuten aktualisiert</string>
+  <plurals name="rankIsUpdatedEveryNbMinutes">
+    <item quantity="one">Platzierung wird minütlich aktualisiert</item>
+    <item quantity="other">Platzierung wird alle %s Minuten aktualisiert</item>
+  </plurals>
   <plurals name="nbPuzzles">
     <item quantity="one">%s Aufgabe</item>
     <item quantity="other">%s Aufgaben</item>
@@ -199,6 +204,7 @@
   <string name="playingRightNow">Partie läuft</string>
   <string name="eventInProgress">Laufende Partien</string>
   <string name="finished">Beendet</string>
+  <string name="finishesX">endet %s</string>
   <string name="abortGame">Partie abbrechen</string>
   <string name="gameAborted">Partie abgebrochen</string>
   <string name="standard">Standard</string>
@@ -338,6 +344,7 @@
   <string name="pasteThePgnStringHere">Füge den PGN-Text hier ein</string>
   <string name="fromPosition">Von Stellung</string>
   <string name="continueFromHere">Von hier aus weiterspielen</string>
+  <string name="toStudy">Studie</string>
   <string name="importGame">Partie importieren</string>
   <string name="importGameExplanation">Wenn du ein PGN einfügst, hast du Zugriff auf eine Spielwiederholung, eine Computeranalyse, einen Spielchat und eine teilbare URL.</string>
   <plurals name="nbImportedGames">
@@ -348,10 +355,14 @@
   <string name="clickOnTheBoardToMakeYourMove">Mach einen Zug, um zu beweisen, dass du ein Mensch bist.</string>
   <string name="captcha.fail">Bitte löse die Schachaufgabe.</string>
   <string name="notACheckmate">Kein Matt</string>
-  <string name="colorPlaysCheckmateInOne">%s setzt Matt in einem Zug</string>
+  <string name="whiteCheckmatesInOneMove">Weiß setzt in einem Zug Matt</string>
+  <string name="blackCheckmatesInOneMove">Schwarz setzt in einem Zug Matt</string>
   <string name="retry">Erneut versuchen</string>
   <string name="reconnecting">Wiederverbinden</string>
-  <string name="onlineFriends">Freunde online</string>
+  <plurals name="nbFriendsOnline">
+    <item quantity="one">%s Freund online</item>
+    <item quantity="other">%s Freunde online</item>
+  </plurals>
   <string name="noFriendsOnline">Keine Freunde online</string>
   <string name="findFriends">Freunde finden</string>
   <string name="favoriteOpponents">Häufigste Gegner</string>
@@ -441,8 +452,8 @@
   <string name="country">Land</string>
   <string name="preferences">Einstellungen</string>
   <string name="inlineNotation">Inline-Notation</string>
-  <string name="watchLichessTV">Chess-Online-TV anschauen</string>
-  <string name="previouslyOnLichessTV">Zuletzt auf Chess-Online TV</string>
+  <string name="watchLichessTV">Arena-TV anschauen</string>
+  <string name="previouslyOnLichessTV">Zuletzt auf Arena TV</string>
   <string name="onlinePlayers">Spieler online</string>
   <string name="activeToday">Heute aktiv</string>
   <string name="activePlayers">Aktive Spieler</string>
@@ -452,7 +463,7 @@
   <string name="findTheBestMoveForWhite">Finde den besten Zug für Weiß.</string>
   <string name="findTheBestMoveForBlack">Finde den besten Zug für Schwarz.</string>
   <string name="toTrackYourProgress">Verfolge deinen Fortschritt:</string>
-  <string name="trainingSignupExplanation">Lichess wird dir Aufgaben geben, die zu deiner Spielstärke passen, um dir besseres Training zu ermöglichen.</string>
+  <string name="trainingSignupExplanation">Chess-Online wird dir Aufgaben geben, die zu deiner Spielstärke passen, um dir besseres Training zu ermöglichen.</string>
   <string name="puzzleId">Aufgabe %s</string>
   <string name="puzzleOfTheDay">Aufgabe des Tages</string>
   <string name="clickToSolve">Zum Lösen klicken</string>
@@ -464,9 +475,10 @@
   <string name="butYouCanKeepTrying">Aber du kannst es trotzdem weiterversuchen.</string>
   <string name="success">Korrekt</string>
   <string name="wasThisPuzzleAnyGood">Wie fandest du diese Aufgabe?</string>
-  <string name="pleaseVotePuzzle">Verbessere Lichess, indem du mit den Pfeilen abstimmst:</string>
+  <string name="pleaseVotePuzzle">Verbessere Chess-Online, indem du mit den Pfeilen abstimmst:</string>
   <string name="thankYou">Vielen Dank!</string>
   <string name="ratingX">Schwierigkeitsgrad: %s</string>
+  <string name="hidden">ausgeblendet</string>
   <plurals name="playedXTimes">
     <item quantity="one">%s mal gespielt</item>
     <item quantity="other">%s mal gespielt</item>
@@ -581,7 +593,9 @@
   <string name="xCommentedY">%1$s kommentierte %2$s</string>
   <string name="victory">Sieg</string>
   <string name="defeat">Niederlage</string>
-  <string name="xVsYinZ">%1$s gegen %2$s in %3$s</string>
+  <string name="victoryVsYInZ">%1$s gegen %2$s in %3$s</string>
+  <string name="defeatVsYInZ">%1$s gegen %2$s in %3$s</string>
+  <string name="drawVsYInZ">%1$s gegen %2$s in %3$s</string>
   <string name="timeline">Verlauf</string>
   <string name="starting">Beginnt:</string>
   <string name="allInformationIsPublicAndOptional">Alle Informationen sind öffentlich und freiwillig.</string>
@@ -609,6 +623,8 @@
   <string name="playOfflineComputer">Spiele offline gegen Computer</string>
   <string name="opponent">Gegner</string>
   <string name="learnMenu">Lernen</string>
+  <string name="studyMenu">Studie</string>
+  <string name="practice">Übungen</string>
   <string name="community">Gemeinschaft</string>
   <string name="tools">Werkzeuge</string>
   <string name="increment">Inkrement</string>
@@ -628,12 +644,12 @@
   <string name="inCorrespondenceGames">Im Fernschach</string>
   <string name="ifRatingIsPlusMinusX">Nur, wenn die Wertungszahl ± %s ist</string>
   <string name="onlyFriends">Nur Freunde</string>
+  <string name="displayBoardResizeHandle">Anfasser zum Ändern der Brettgröße anzeigen</string>
+  <string name="onlyOnInitialPosition">Nur in der Anfangsstellung</string>
   <string name="menu">Menü</string>
   <string name="castling">Rochade</string>
   <string name="whiteCastlingKingside">Weiß O-O</string>
-  <string name="whiteCastlingQueenside">Weiß O-O-O</string>
   <string name="blackCastlingKingside">Schwarz O-O</string>
-  <string name="blackCastlingQueenside">Schwarz O-O-O</string>
   <plurals name="nbForumPosts">
     <item quantity="one">%s Forenbeitrag</item>
     <item quantity="other">%s Forenbeiträge</item>
@@ -642,8 +658,9 @@
   <string name="watchGames">Partien ansehen</string>
   <string name="tpTimeSpentOnTV">Gesamtzeit TV: %s</string>
   <string name="watch">Zuschauen</string>
-  <string name="internationalEvents">Internationale Events</string>
   <string name="videoLibrary">Video-Bibliothek</string>
+  <string name="streamersMenu">Streamer</string>
+  <string name="broadcastsMenu">Broadcasts</string>
   <string name="mobileApp">Mobile App</string>
   <string name="webmasters">Webmaster</string>
   <string name="about">Über</string>
@@ -673,7 +690,7 @@
   <string name="simulClockHint">Fischer Bedenkzeit. Je mehr Gegner du hast, desto mehr Zeit wirst du benötigen.</string>
   <string name="simulAddExtraTime">Du kannst dir selbst zusätzliche Zeit hinzufügen, um mit dem Simultan zurechtzukommen.</string>
   <string name="simulHostExtraTime">Extra Bedenkzeit des Ausrichters</string>
-  <string name="lichessTournaments">Arena Turniere</string>
+  <string name="lichessTournaments">Chess-Online Turniere</string>
   <string name="tournamentFAQ">Arena FAQ</string>
   <string name="tournamentOfficial">Offiziell</string>
   <string name="timeBeforeTournamentStarts">Zeit bis zum Start des Turniers</string>
@@ -692,19 +709,22 @@
   <string name="returnToTournamentsHomepage">Zurück zur Turnier-Homepage</string>
   <string name="weeklyPerfTypeRatingDistribution">Wöchentliche %s-Wertungsverteilung</string>
   <plurals name="nbPerfTypePlayersThisWeek">
-    <item quantity="one">Ein %2$s Spieler diese Woche.</item>
+    <item quantity="one">%1$s %2$s Spieler diese Woche.</item>
     <item quantity="other">%1$s %2$s Spieler diese Woche.</item>
   </plurals>
   <string name="yourPerfTypeRatingIsRating">Deine %1$s-Wertungszahl ist %2$s.</string>
   <string name="youAreBetterThanPercentOfPerfTypePlayers">Du bist besser als %1$s aller %2$s-Spieler.</string>
   <string name="youDoNotHaveAnEstablishedPerfTypeRating">Du hast keine feststehende %s-Wertung.</string>
+  <string name="yourRating">Deine Wertungszahl</string>
+  <string name="cumulative">Summiert</string>
+  <string name="glicko2Rating">Glicko-2 Wertung</string>
   <string name="checkYourEmail">Prüfe deine E-Mails</string>
   <string name="weHaveSentYouAnEmailClickTheLink">Wir haben dir eine E-Mail gesendet. Klicke den Link in der Email, um deinen Account zu aktivieren.</string>
   <string name="ifYouDoNotSeeTheEmailCheckOtherPlaces">Wenn du die E-Mail nicht findest, prüfe in deinem E-Mail-Konto, ob sie in einem anderen Ordner wie z.B. dem Spamordner oder dem Papierkorb ist.</string>
   <string name="weHaveSentYouAnEmailTo">Wir haben dir eine Email an %s gesendet. Klicke auf den Link in der E-Mail, um dein Passwort zurück zu setzen.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Durch die Anmeldung wird den %s zugestimmt.</string>
-  <string name="networkLagBetweenYouAndLichess">Netzwerkverzögerung zwischen dir und Lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Zeit, um einen Zug auf dem Lichess-Server zu verarbeiten</string>
+  <string name="networkLagBetweenYouAndLichess">Netzwerkverzögerung zwischen dir und Chess-Online</string>
+  <string name="timeToProcessAMoveOnLichessServer">Zeit, um einen Zug auf dem Chess-Online-Server zu verarbeiten</string>
   <string name="downloadAnnotated">Download kommentiert</string>
   <string name="downloadRaw">Download unkommentiert</string>
   <string name="downloadImported">Importiertes Spiel herunterladen</string>
@@ -725,7 +745,7 @@
   <string name="youHaveAlreadyRegisteredTheEmail">Du hast die folgende Emailadresse schon registriert: %s</string>
   <string name="kidMode">Kindermodus</string>
   <string name="kidModeExplanation">Dies ist eine Sicherheitseinstellung. Im Kindermodus sind alle Kommunikationsmöglichkeiten deaktiviert. Aktiviere diese Option, um Kinder und Schüler vor anderen Internetbenutzern zu schützen.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">Im Kindermodus erhält das Lichess-Logo ein %s-Icon, an dem erkennen kannst, dass deine Kinder geschützt sind.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">Im Kindermodus erhält das Chess-Online-Logo ein %s-Icon, an dem erkennen kannst, dass deine Kinder geschützt sind.</string>
   <string name="enableKidMode">Kindermodus aktivieren</string>
   <string name="disableKidMode">Kindermodus deaktivieren</string>
   <string name="security">Sicherheit</string>
@@ -733,7 +753,7 @@
   <string name="alternativelyYouCanX">Alternativ kannst du %s.</string>
   <string name="revokeAllSessions">alle Sitzungen beenden</string>
   <string name="playChessEverywhere">Spiele Schach überall</string>
-  <string name="asFreeAsLichess">Frei wie Lichess</string>
+  <string name="asFreeAsLichess">Frei wie Chess-Online</string>
   <string name="builtForTheLoveOfChessNotMoney">Aus Liebe zum Schach</string>
   <string name="everybodyGetsAllFeaturesForFree">Jeder erhält alle Funktionen völlig kostenlos</string>
   <string name="zeroAdvertisement">Keine Werbung</string>
@@ -746,13 +766,14 @@
   <string name="viewTheSolution">Lösung ansehen</string>
   <string name="followAndChallengeFriends">Folge deinen Freunden und fordere sie heraus</string>
   <plurals name="availableInNbLanguages">
-    <item quantity="one">Verfügbar in einer Sprache!</item>
+    <item quantity="one">Verfügbar in %s Sprache!</item>
     <item quantity="other">Verfügbar in %s Sprachen!</item>
   </plurals>
   <string name="gameAnalysis">Spielanalyse</string>
   <string name="xHostsY">%1$s hat %2$s erstellt</string>
   <string name="xJoinsY">%1$s ist %2$s beigetreten</string>
   <string name="xLikesY">%1$s gefällt %2$s</string>
+  <string name="xCreatesStudyY">%1$s erstellt Studie %2$s</string>
   <string name="quickPairing">Schnelles Spiel</string>
   <string name="lobby">Lobby</string>
   <string name="anonymous">Anonym</string>
@@ -820,9 +841,9 @@
   <string name="waitingForAnalysis">Warte auf Analyse</string>
   <string name="noMistakesFoundForWhite">Keine Fehler bei Weiß gefunden</string>
   <string name="noMistakesFoundForBlack">Keine Fehler bei Schwarz gefunden</string>
-  <string name="doneReviewingWhiteMistakes">Überprüfung der Fehler von Weiß abgeschlossen</string>
-  <string name="doneReviewingBlackMistakes">Überprüfung der Fehler von Schwarz abgeschlossen</string>
-  <string name="doItAgain">Versuche es nochmal</string>
+  <string name="doneReviewingWhiteMistakes">Überprüfen der Fehler von Weiß abgeschlossen</string>
+  <string name="doneReviewingBlackMistakes">Überprüfen der Fehler von Schwarz abgeschlossen</string>
+  <string name="doItAgain">Wiederholen</string>
   <string name="reviewWhiteMistakes">Fehler von Weiß überprüfen</string>
   <string name="reviewBlackMistakes">Fehler von Schwarz überprüfen</string>
   <string name="advantage">Vorteil</string>
@@ -848,4 +869,24 @@
     <item quantity="one">und speichere %s Variante im Voraus</item>
     <item quantity="other">und speichere %s Varianten im Voraus</item>
   </plurals>
+  <string name="sorry">Entschuldigung :(</string>
+  <string name="weHadToTimeYouOutForAWhile">Wir haben dich mit einer vorübergehenden Spielsperre belegt.</string>
+  <string name="timeoutExpires">Die Sperre endet in %s.</string>
+  <string name="why">Warum?</string>
+  <string name="pleasantChessExperience">Wir möchten allen eine möglichst gute Schach-Erfahrung bieten.</string>
+  <string name="goodPractice">Um dies zu erreichen, müssen wir sicherstellen, dass sich alle Spieler korrekt verhalten.</string>
+  <string name="potentialProblem">Wir zeigen diese Nachricht an, wenn ein mögliches Problem erkannt wurde.</string>
+  <string name="howToAvoidThis">Wie kann das verhindert werden?</string>
+  <string name="playEveryGame">Spiele jedes Spiel, das du beginnst.</string>
+  <string name="tryToWin">Versuche, jedes Spiel zu gewinnen (oder zumindest ein Remis zu erreichen).</string>
+  <string name="resignLostGames">Gib verlorene Spiele auf (lasse die Uhr nicht herunterlaufen).</string>
+  <string name="temporaryInconvenience">Wir entschuldigen uns für die vorübergehenden Unannehmlichkeiten,</string>
+  <string name="wishYouGreatGames">und wünschen Dir tolle Spiele auf Arena TV.</string>
+  <string name="thankYouForReading">Vielen Dank für’s Lesen!</string>
+  <string name="lifetimeScore">Ewiger Spielstand</string>
+  <string name="currentMatchScore">Aktueller Spielstand</string>
+  <string name="agreementAssistance">Ich stimme zu, dass ich zu keiner Zeit während meiner Partien Hilfe in Anspruch nehmen werde (durch einen Schachcomputer, Buch, Datenbank oder eine andere Person).</string>
+  <string name="agreementNice">Ich stimme zu, dass ich anderen Spielern immer respektvoll gegenübertreten werde.</string>
+  <string name="agreementAccount">Ich stimme zu, dass ich nicht mehrere Konten erstellen werde.</string>
+  <string name="agreementPolicy">Ich stimme zu, dass ich allen Chess-Online-Richtlinien folgen werde.</string>
 </resources>

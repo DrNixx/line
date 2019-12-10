@@ -129,7 +129,6 @@
   <string name="viewInFullSize">크게 보기</string>
   <string name="logOut">로그아웃</string>
   <string name="signIn">로그인</string>
-  <string name="newToLichess">Lichess에 처음 오셨나요?</string>
   <string name="youNeedAnAccountToDoThat">회원만이 접근할 수 있습니다.</string>
   <string name="signUp">회원 가입</string>
   <string name="computersAreNotAllowedToPlay">컴퓨터나 컴퓨터의 도움을 받는 플레이어는 대국이 금지되어 있습니다. 대국할 때 체스 엔진이나 관련 자료, 또는 주변 플레이어로부터 도움을 받지 마십시오. 또한, 다중 계정 사용은 권장하지 않으며 지나치게 많은 다중 계정을 사용할 시 계정이 차단될 수 있습니다.</string>
@@ -157,8 +156,8 @@
   <string name="ratingStats">레이팅 상태</string>
   <string name="username">아이디</string>
   <string name="usernameOrEmail">사용자 이름이나 이메일 주소</string>
+  <string name="changeUsername">사용자명 변경</string>
   <string name="password">비밀번호</string>
-  <string name="haveAnAccount">계정이 있습니까?</string>
   <string name="changePassword">비밀번호 변경</string>
   <string name="changeEmail">메일 주소 변경</string>
   <string name="email">메일</string>
@@ -166,7 +165,6 @@
   <string name="forgotPassword">비밀번호를 잊어버리셨나요?</string>
   <string name="rank">순위</string>
   <string name="rankX">랭킹: %s</string>
-  <string name="rankIsUpdatedEveryXMinutes">랭킹은 %s분마다 업데이트 됩니다.</string>
   <plurals name="nbPuzzles">
     <item quantity="other">퍼즐 %s개</item>
   </plurals>
@@ -326,10 +324,8 @@
   <string name="clickOnTheBoardToMakeYourMove">보드를 클릭해서 체스 퍼즐을 풀고 당신이 사람임을 알려주세요.</string>
   <string name="captcha.fail">문제를 풀어 인간임을 증명해주세요.</string>
   <string name="notACheckmate">체크메이트가 아닙니다.</string>
-  <string name="colorPlaysCheckmateInOne">%s의 차례입니다. 한 수 만에 체크메이트하세요.</string>
   <string name="retry">재시도</string>
   <string name="reconnecting">연결 재시도 중</string>
-  <string name="onlineFriends">접속 중인 친구</string>
   <string name="noFriendsOnline">접속 중인 친구가 없습니다</string>
   <string name="findFriends">친구 찾기</string>
   <string name="favoriteOpponents">관심있는 상대</string>
@@ -416,7 +412,7 @@
   <string name="country">국가</string>
   <string name="preferences">설정</string>
   <string name="inlineNotation">기보를 가로쓰기</string>
-  <string name="watchLichessTV">Chess-Online TV 보기</string>
+  <string name="watchLichessTV">Arena TV 보기</string>
   <string name="previouslyOnLichessTV">이전 방송</string>
   <string name="onlinePlayers">접속한 플레이어</string>
   <string name="activeToday">오늘의 활동적인 플레이어</string>
@@ -427,7 +423,7 @@
   <string name="findTheBestMoveForWhite">흰색을 위한 최고의 수를 찾아보세요.</string>
   <string name="findTheBestMoveForBlack">검은색을 위한 최고의 수를 찾아보세요.</string>
   <string name="toTrackYourProgress">기록을 저장하려면:</string>
-  <string name="trainingSignupExplanation">Lichess는 실력에 맞는 퍼즐을 제공하여 더 좋은 연습 환경을 만듭니다.</string>
+  <string name="trainingSignupExplanation">Chess-Online는 실력에 맞는 퍼즐을 제공하여 더 좋은 연습 환경을 만듭니다.</string>
   <string name="puzzleId">퍼즐 %s</string>
   <string name="puzzleOfTheDay">오늘의 퍼즐</string>
   <string name="clickToSolve">퍼즐 풀기</string>
@@ -439,7 +435,7 @@
   <string name="butYouCanKeepTrying">하지만 계속 플레이할 수 있습니다.</string>
   <string name="success">성공!</string>
   <string name="wasThisPuzzleAnyGood">이 퍼즐이 괜찮았나요?</string>
-  <string name="pleaseVotePuzzle">위 또는 아래 화살표를 눌러 Lichess를 향상시켜 주세요</string>
+  <string name="pleaseVotePuzzle">위 또는 아래 화살표를 눌러 Chess-Online를 향상시켜 주세요</string>
   <string name="thankYou">감사합니다!</string>
   <string name="ratingX">레이팅: %s</string>
   <plurals name="playedXTimes">
@@ -554,8 +550,6 @@
   <string name="xCommentedY">%1$s가 댓글을 남겼습니다: %2$s</string>
   <string name="victory">승리!</string>
   <string name="defeat">패배</string>
-  <string name="xVsYinZ">%3$s에서
-%1$s 대 %2$s</string>
   <string name="timeline">타임라인</string>
   <string name="starting">시작합니다:</string>
   <string name="allInformationIsPublicAndOptional">모든 정보는 공개되며 선택 사항입니다.</string>
@@ -574,7 +568,7 @@
   <string name="clock">시간 제한</string>
   <string name="unauthorizedError">접속이 불허되었습니다.</string>
   <string name="noInternetConnection">인터넷 연결이 없습니다. 메뉴을 통해 오프라인 게임은 할 수 있습니다.</string>
-  <string name="connectedToLichess">Chess-Online.Com에 접속했습니다</string>
+  <string name="connectedToLichess">Chess-Online에 접속했습니다</string>
   <string name="signedOut">로그아웃 되었습니다.</string>
   <string name="loginSuccessful">로그인 성공</string>
   <string name="playOnTheBoardOffline">오프라인, 로컬 게임</string>
@@ -603,21 +597,18 @@
   <string name="menu">메뉴</string>
   <string name="castling">캐슬링</string>
   <string name="whiteCastlingKingside">흰색 킹 사이드</string>
-  <string name="whiteCastlingQueenside">흰색 퀸 사이드</string>
   <string name="blackCastlingKingside">검은색 킹 사이드</string>
-  <string name="blackCastlingQueenside">검은색 퀸 사이드</string>
   <plurals name="nbForumPosts">
     <item quantity="other">%s 포럼 글</item>
   </plurals>
   <string name="tpTimeSpentPlaying">플레이한 시간 : %s</string>
   <string name="watchGames">관람</string>
-  <string name="tpTimeSpentOnTV">Lichess TV에 나온 시간 : %s</string>
+  <string name="tpTimeSpentOnTV">Arena TV에 나온 시간 : %s</string>
   <string name="watch">중계</string>
-  <string name="internationalEvents">국제 이벤트</string>
   <string name="videoLibrary">비디오 라이브러리</string>
   <string name="mobileApp">모바일 앱</string>
   <string name="webmasters">웹마스터</string>
-  <string name="about">Lichess 개요</string>
+  <string name="about">Chess-Online 개요</string>
   <string name="aboutX">%s에 대해</string>
   <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s는 무료(%2$s)이고, 자유로우며, 광고가 없는 오픈 소스 체스 서버입니다.</string>
   <string name="really">정말입니다!</string>
@@ -644,7 +635,7 @@
   <string name="simulClockHint">피셔 방식 제한시간 설정: 여러 명의 사람들과 둔다면 더 많은 시간이 필요할 것입니다.</string>
   <string name="simulAddExtraTime">동시대국을 위하여 당신에게만 여분의 시간을 더할 수 있습니다.</string>
   <string name="simulHostExtraTime">호스트 연장 시간</string>
-  <string name="lichessTournaments">Arena 토너먼트</string>
+  <string name="lichessTournaments">Chess-Online 토너먼트</string>
   <string name="tournamentFAQ">아레나 토너먼트 FAQ</string>
   <string name="tournamentOfficial">공식</string>
   <string name="timeBeforeTournamentStarts">토너먼트 시작까지 시간</string>
@@ -673,8 +664,8 @@
   <string name="ifYouDoNotSeeTheEmailCheckOtherPlaces">메일을 확인할 수 없다면, 스팸 메일함이나 다른 폴더에 메일이 있지 않은지 확인해 주세요.</string>
   <string name="weHaveSentYouAnEmailTo">%s 주소로 메일을 보냈습니다. 메일을 확인하고 비밀번호를 재설정하세요.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">이곳에 등록하면 당신은 이곳의 %s 약관에 동의하시는 것입니다.</string>
-  <string name="networkLagBetweenYouAndLichess">당신과 lichess 서버 간의 네트워크 지연 시간</string>
-  <string name="timeToProcessAMoveOnLichessServer">lichess 서버에서 한 수를 계산하는 데 걸리는 시간</string>
+  <string name="networkLagBetweenYouAndLichess">당신과 Chess-Online 서버 간의 네트워크 지연 시간</string>
+  <string name="timeToProcessAMoveOnLichessServer">Arena TV 서버에서 한 수를 계산하는 데 걸리는 시간</string>
   <string name="downloadAnnotated">주석이 달린 기보 다운로드</string>
   <string name="downloadRaw">기보 다운로드</string>
   <string name="downloadImported">불러온 기보 다운로드</string>
@@ -695,7 +686,7 @@
   <string name="youHaveAlreadyRegisteredTheEmail">이 계정은 이미 해당 주소로 연결 되어 있습니다: %s</string>
   <string name="kidMode">어린이 모드</string>
   <string name="kidModeExplanation">안전을 위해 그런것입니다. 아이 모드에서는 모든 통신이 비활성화됩니다. 당신의 아이들이나 학생들을 다른 인터넷 사용자들에서 보호하게 이 모드를 키십시오.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">아이 모드에서sms lichess 로고가 %s 아이콘이 뜨기 때문에 안심하셔도 됩니다.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">아이 모드에서sms Arena TV 로고가 %s 아이콘이 뜨기 때문에 안심하셔도 됩니다.</string>
   <string name="enableKidMode">아이 모드 활성화하기</string>
   <string name="disableKidMode">아이 모드 비활성화하기</string>
   <string name="security">보안</string>
@@ -703,7 +694,7 @@
   <string name="alternativelyYouCanX">%s를 하셔도 됩니다.</string>
   <string name="revokeAllSessions">모든 세션 비활성화</string>
   <string name="playChessEverywhere">어디에서나 체스를 즐기세요</string>
-  <string name="asFreeAsLichess">lichess처럼 무료입니다</string>
+  <string name="asFreeAsLichess">Chess-Online처럼 무료입니다</string>
   <string name="builtForTheLoveOfChessNotMoney">오직 체스에 대한 열정으로 만들어졌습니다</string>
   <string name="everybodyGetsAllFeaturesForFree">모두가 모든 기능을 무료로 이용할 수 있습니다</string>
   <string name="zeroAdvertisement">광고가 없습니다</string>
@@ -742,7 +733,7 @@
   <string name="usernameSuffixInvalid">유저 이름의 끝 글자는 알파벳이나 숫자여야 합니다.</string>
   <string name="usernameCharsInvalid">유저 이름에는 알파벳, 숫자, 언더스코어 ( _ ), 하이픈 ( - ) 만을 사용할 수 있습니다.</string>
   <string name="usernameUnacceptable">사용자 이름을 사용할 수 없습니다.</string>
-  <string name="directlySupportLichess">Chess-Online 후원하기</string>
+  <string name="directlySupportLichess">Arena TV 후원하기</string>
   <string name="playChessInStyle">스타일리시하게 체스하기</string>
   <string name="chessBasics">체스 기본</string>
   <string name="coaches">코치</string>

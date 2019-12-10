@@ -451,8 +451,8 @@
   <string name="country">Welat</string>
   <string name="preferences">Tercîh</string>
   <string name="inlineNotation">Notasyona navrêzî</string>
-  <string name="watchLichessTV">Li Lichess TVyê temaşe bike</string>
-  <string name="previouslyOnLichessTV">Berê ser Lichess TVyê</string>
+  <string name="watchLichessTV">Li Arena TVyê temaşe bike</string>
+  <string name="previouslyOnLichessTV">Berê ser Arena TVyê</string>
   <string name="onlinePlayers">Lîzerên serhêl</string>
   <string name="activeToday">Yên îro çalak bûn</string>
   <string name="activePlayers">Lîzerên aktîv</string>
@@ -462,7 +462,7 @@
   <string name="findTheBestMoveForWhite">Hemleya çêtirîn bibîne ji bo spî.</string>
   <string name="findTheBestMoveForBlack">Hemleya çêtirîn bibîne ji bo reş.</string>
   <string name="toTrackYourProgress">Ji bo şopandina pêşveçûna xwe:</string>
-  <string name="trainingSignupExplanation">Wê Lichess gorî qabilîyeta te ji bo te pazilan pêşniyar bike, bo perwerdeyeke çêtir.</string>
+  <string name="trainingSignupExplanation">Wê Arena TV gorî qabilîyeta te ji bo te pazilan pêşniyar bike, bo perwerdeyeke çêtir.</string>
   <string name="puzzleId">Pazil %s</string>
   <string name="puzzleOfTheDay">Pazila rojê</string>
   <string name="clickToSolve">Bo çareserkirinê bitikîne</string>
@@ -474,7 +474,7 @@
   <string name="butYouCanKeepTrying">Lê tu dikarî dewam bikî ceribandinên xwe.</string>
   <string name="success">Çêbû</string>
   <string name="wasThisPuzzleAnyGood">Ev pazil çawa bû?</string>
-  <string name="pleaseVotePuzzle">Bi dengdanê alî Lichessê bike da ku bi pêş bikeve, bo dengdanê tîrên jêrî û jorî bi kar bîne:</string>
+  <string name="pleaseVotePuzzle">Bi dengdanê alî Chess-Onlineê bike da ku bi pêş bikeve, bo dengdanê tîrên jêrî û jorî bi kar bîne:</string>
   <string name="thankYou">Spas!</string>
   <string name="ratingX">Reytîng: %s</string>
   <string name="hidden">veşartî</string>
@@ -615,7 +615,7 @@
   <string name="clock">Saet</string>
   <string name="unauthorizedError">Gihaştin bêdestûr e.</string>
   <string name="noInternetConnection">Girêdana înternetê tine. Tu hê jî dikarî derhêl bilîzî ji menuyê.</string>
-  <string name="connectedToLichess">Te vêga hatî girêdan li Lichess.org-ê</string>
+  <string name="connectedToLichess">Te vêga hatî girêdan li Chess-Online-ê</string>
   <string name="signedOut">Te jê derketiye</string>
   <string name="loginSuccessful">Tı vêga têketî yî</string>
   <string name="playOnTheBoardOffline">Ji ser texteyê</string>
@@ -685,7 +685,7 @@
   <string name="simulClockHint">Formata Saeta Fischer. Çiqas lîzeran bigirî wê ew qasî wext lazim be bo te.</string>
   <string name="simulAddExtraTime">Belkî bixwazî zêdetir wext tevlî demjimêra xwe bikî, qene ku karibî pêşangeha hevdemî temam bikî.</string>
   <string name="simulHostExtraTime">Wextê ekstra yê ji bo mêvandarê</string>
-  <string name="lichessTournaments">Pêşbirkên lichess-ê</string>
+  <string name="lichessTournaments">Pêşbirkên Arena TV-ê</string>
   <string name="tournamentFAQ">PPPya pêşbirka Arenayê</string>
   <string name="tournamentOfficial">Fermî</string>
   <string name="timeBeforeTournamentStarts">Wextê berî destpêkirina pêşbirkê</string>
@@ -718,8 +718,8 @@
   <string name="ifYouDoNotSeeTheEmailCheckOtherPlaces">Ger te epeyamê nedîtibe, cihên din ên ku dibe ku lê be kontrol bike, wek negirîng, spam, civakî, an pekdankên din.</string>
   <string name="weHaveSentYouAnEmailTo">Em epeyamekê şandin %s. Bitikîne lînka di epeyamê de ji bo nûkirina pêborîna xwe.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Bi qeydbûnê, tu qebûl dikî ku girêdayî %s ya me bibî.</string>
-  <string name="networkLagBetweenYouAndLichess">Derengmayîna torê yê di navbera te û lichessê de</string>
-  <string name="timeToProcessAMoveOnLichessServer">Dema te ya bicihanîna hemleyekê, li ser rajekarê lichessê</string>
+  <string name="networkLagBetweenYouAndLichess">Derengmayîna torê yê di navbera te û Chess-Onlineê de</string>
+  <string name="timeToProcessAMoveOnLichessServer">Dema te ya bicihanîna hemleyekê, li ser rajekarê Chess-Onlineê</string>
   <string name="downloadAnnotated">Awayê notgirtî daxîne</string>
   <string name="downloadRaw">Awayê sade daxîne</string>
   <string name="downloadImported">Yê têxistî daxîne</string>
@@ -740,7 +740,7 @@
   <string name="youHaveAlreadyRegisteredTheEmail">Te jixwe xwe bi vê epeyamê qeyd kiriye: %s</string>
   <string name="kidMode">Moda zarokan</string>
   <string name="kidModeExplanation">Ev derbarê ewlehiyê de ye. Di moda zarokan de, hemû komunîkasyonên malperê neçalak in. Ji bo ku zarokên xwe û xwendekarên dibistanan ji bikarhênerên din ên înternetê biparêzî, vê çalak bike.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">Di moda zarokan de, logoya lichessê îkona %s digire, bi vî awayî haya te jê çêdibe ku zarok ewle ne.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">Di moda zarokan de, logoya Chess-Onlineê îkona %s digire, bi vî awayî haya te jê çêdibe ku zarok ewle ne.</string>
   <string name="enableKidMode">Moda zarokan aktîv bike</string>
   <string name="disableKidMode">Moda zarokan neçalak bike</string>
   <string name="security">Ewlehî</string>
@@ -748,7 +748,7 @@
   <string name="alternativelyYouCanX">Alternatîven tu dikarî %s.</string>
   <string name="revokeAllSessions">hemû danişînan betal bikî</string>
   <string name="playChessEverywhere">Kişikê bilîze li her derî</string>
-  <string name="asFreeAsLichess">Bi qasî lichessê azad</string>
+  <string name="asFreeAsLichess">Bi qasî Chess-Onlineê azad</string>
   <string name="builtForTheLoveOfChessNotMoney">Bi evîna kişikê hatiye avakirin, ne bi pereyê</string>
   <string name="everybodyGetsAllFeaturesForFree">Herkes dikare temamiya taybetmendiyan bi belaşî bi dest bixe</string>
   <string name="zeroAdvertisement">Sifir reklam</string>
@@ -789,7 +789,7 @@
   <string name="usernameSuffixInvalid">Divê navê bikarhêneriyê bi tîpekê an bi hejmarekê xelas bibe.</string>
   <string name="usernameCharsInvalid">Divê navê bikarhêneriyê tenê tîpan, hejmaran, jêrexêzan, û bendikan bihewîne.</string>
   <string name="usernameUnacceptable">Navê bikarhêneriyê neqebûlbar e.</string>
-  <string name="directlySupportLichess">Piştevaniya Chess-Online Bike</string>
+  <string name="directlySupportLichess">Piştevaniya Chess-Onlineê Bike</string>
   <string name="playChessInStyle">Kişikê bi stîleke bilîze</string>
   <string name="chessBasics">Esasatê kişikê</string>
   <string name="coaches">Mamoste</string>
@@ -876,12 +876,12 @@
   <string name="tryToWin">Biceribîne ku bi ser bikevî (an jî qenebe wekheviyê bi dest bixe) di her lîstikê ku tu lîstî de.</string>
   <string name="resignLostGames">Ji lîstikên ku tu mexlûb bûyî vekişe (nehêle ku dema te tijî bibe).</string>
   <string name="temporaryInconvenience">Em lêborîna xwe dixwazin ji ber aciziya demkî,</string>
-  <string name="wishYouGreatGames">û em lîstikêm xweş hêvî dikin ji bo te li ser lichess.org-ê.</string>
+  <string name="wishYouGreatGames">û em lîstikêm xweş hêvî dikin ji bo te li ser Arena TV-ê.</string>
   <string name="thankYouForReading">Spas ji bo xwendinê!</string>
   <string name="lifetimeScore">Yekûna skorê</string>
   <string name="currentMatchScore">Skora lîstika berdest</string>
   <string name="agreementAssistance">Ez qebûl dikim ku gava lîstinê ez ê ti carî alîkariyê wernegirim ji derve (ji kombers, kitêb, danegeh an kesek din).</string>
   <string name="agreementNice">Ez qebûl dikim ku ez ê hertim rêzdar bim bo lîzerên din.</string>
   <string name="agreementAccount">Ez qebûl dikim ku ez ê ji yekî zêdetir hesaban venekim.</string>
-  <string name="agreementPolicy">Ez qebûl dikim ku ez ê riayetê polîtîkayên Lichessê bikim.</string>
+  <string name="agreementPolicy">Ez qebûl dikim ku ez ê riayetê polîtîkayên Chess-Onlineê bikim.</string>
 </resources>

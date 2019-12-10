@@ -130,7 +130,6 @@
   <string name="viewInFullSize">Tam görünüşlə bax</string>
   <string name="logOut">Xətdən çıx</string>
   <string name="signIn">Xəttə bağlan</string>
-  <string name="newToLichess">Lichess-ə yeni gəlmisiniz?</string>
   <string name="youNeedAnAccountToDoThat">Bunun üçün siz qeydiyyatdan keçməlisiniz</string>
   <string name="signUp">Üzv ol</string>
   <string name="computersAreNotAllowedToPlay">Bilgisayarlar və bilgisayardan yararlan oyunçulara oynamaq qadağandır. Oyun zamanı şahmat programlarından, məlumat bazalarından və ya digər oyunçulardan yardım alınmaması xahiş olunur.</string>
@@ -161,7 +160,6 @@
   <string name="username">İstifadəçi adı</string>
   <string name="usernameOrEmail">İstifadəçi adı</string>
   <string name="password">Şifrə</string>
-  <string name="haveAnAccount">Üzvlüyünüz varmı?</string>
   <string name="changePassword">Parolu dəyiş</string>
   <string name="changeEmail">Emaili dəyiş</string>
   <string name="email">Email</string>
@@ -169,7 +167,6 @@
   <string name="forgotPassword">Parolu unutdun?</string>
   <string name="rank">Təsnifat</string>
   <string name="rankX">Sıralama: %s</string>
-  <string name="rankIsUpdatedEveryXMinutes">Sıralama hər %s dəqiqədən bir güncəlləşir</string>
   <plurals name="nbPuzzles">
     <item quantity="one">%s məsələ</item>
     <item quantity="other">%s məsələ</item>
@@ -311,10 +308,8 @@
   <string name="thisIsAChessCaptcha">Bu, şahmaq KAPÇA-sıdır</string>
   <string name="clickOnTheBoardToMakeYourMove">Taxtada gediş edin və robot olmadığınızı təsdiq edin</string>
   <string name="notACheckmate">Mat deyil</string>
-  <string name="colorPlaysCheckmateInOne">%s başlayır və bir gedişə mat edir</string>
   <string name="retry">Yenidən cəhd edin</string>
   <string name="reconnecting">Yenidən birləşməyə cəhd edilir</string>
-  <string name="onlineFriends">Onlayn dostlar</string>
   <string name="noFriendsOnline">Onlaynda dost yoxdur</string>
   <string name="findFriends">Dostlarınızı tapın</string>
   <string name="follow">İzlə</string>
@@ -373,8 +368,8 @@
   <string name="biography">Özü haqqında</string>
   <string name="country">Ölkə</string>
   <string name="preferences">Seçimlər</string>
-  <string name="watchLichessTV">Chess-Online TV izlə</string>
-  <string name="previouslyOnLichessTV">Daha öncə Chess-Online TV-də</string>
+  <string name="watchLichessTV">Arena TV izlə</string>
+  <string name="previouslyOnLichessTV">Daha öncə Arena TV-də</string>
   <string name="onlinePlayers">Onlayn oyunçular</string>
   <string name="activeToday">Bu gün aktiv olanlar</string>
   <string name="activePlayers">Aktiv oyunçular</string>
@@ -384,7 +379,7 @@
   <string name="findTheBestMoveForWhite">Ağlar üçün ən yaxşı gedişi tapın</string>
   <string name="findTheBestMoveForBlack">Qaralar üçün ən yaxşı gedişi tapın</string>
   <string name="toTrackYourProgress">Progresinizi izləmək üçün</string>
-  <string name="trainingSignupExplanation">Lichess təliminizdə daha uğurlu olmağınız üçün sizin səviyyənizə uyğun tapmacalar təklif edəcək.</string>
+  <string name="trainingSignupExplanation">Chess-Online təliminizdə daha uğurlu olmağınız üçün sizin səviyyənizə uyğun tapmacalar təklif edəcək.</string>
   <string name="puzzleId">Tapmaca %s</string>
   <string name="puzzleOfTheDay">Günün tapmacası</string>
   <string name="clickToSolve">Həll edin</string>
@@ -396,7 +391,7 @@
   <string name="butYouCanKeepTrying">Bəxtinizi bir daha sınayın</string>
   <string name="success">Müvəffəqiyyət</string>
   <string name="wasThisPuzzleAnyGood">Bu tapmaca sizə yararlı oldu?</string>
-  <string name="pleaseVotePuzzle">Lichess inkişafına tövhə vermək üçün səs verin, yuxarı və aşağı oxlardan istifadə edin.</string>
+  <string name="pleaseVotePuzzle">Chess-Online inkişafına tövhə vermək üçün səs verin, yuxarı və aşağı oxlardan istifadə edin.</string>
   <string name="thankYou">Təşşəkkür edirik!</string>
   <string name="ratingX">Reyting: %s</string>
   <plurals name="playedXTimes">
@@ -504,7 +499,7 @@
   <string name="xAskedY">%1$s soruşdu %2$s</string>
   <string name="xAnsweredY">%1$s cavablandırdı %2$s</string>
   <string name="xCommentedY">%1$s şərh %2$s</string>
-  <string name="victory">Qələbə!</string>
+  <string name="victory">Qələbə</string>
   <string name="timeline">Zaman cədvəli</string>
   <string name="starting">Başlanğıc</string>
   <string name="allInformationIsPublicAndOptional">Bütün məlumatlar hər kəsə açıq və seçkiyə bağlıdır.</string>
@@ -524,7 +519,7 @@
   <string name="clock">Saat</string>
   <string name="unauthorizedError">Kecid qadağan olunmuşdur</string>
   <string name="noInternetConnection">İnternet bağlantısı yoxdur. Sən yenə də menyudan offlayn oynaya bilərsən</string>
-  <string name="connectedToLichess">Sen indi Chess-Online.Com bağlandın</string>
+  <string name="connectedToLichess">Sen indi Chess-Online bağlandın</string>
   <string name="signedOut">siz xəttdən ayrıldınız</string>
   <string name="loginSuccessful">siz xəttə bağlandınız</string>
   <string name="playOnTheBoardOffline">Taxta üzərində</string>
@@ -550,9 +545,7 @@
   <string name="menu">Menu</string>
   <string name="castling">Qalaqurma</string>
   <string name="whiteCastlingKingside">Ağlar O-O</string>
-  <string name="whiteCastlingQueenside">Ağlar O-O-O</string>
   <string name="blackCastlingKingside">Qaralar O-O</string>
-  <string name="blackCastlingQueenside">Qaralar O-O-O</string>
   <plurals name="nbForumPosts">
     <item quantity="one">%s Forum Mesajları</item>
     <item quantity="other">%s Forum Mesajları</item>
@@ -561,7 +554,6 @@
   <string name="watchGames">Oyunları izlə</string>
   <string name="tpTimeSpentOnTV">TV-də keçirilimiş zaman: %s</string>
   <string name="watch">Bax</string>
-  <string name="internationalEvents">Beynəlxalq hadisələr</string>
   <string name="videoLibrary">Video kitabxana</string>
   <string name="mobileApp">Mobil proqram</string>
   <string name="webmasters">Web-ustalar</string>
@@ -587,7 +579,7 @@
   <string name="simulClockHint">Fişer Saatını quraşdırma. Çoxlu sayda oyunçları qəbul etdikdə, daha çox zamana ehtiyacın olacaq.</string>
   <string name="simulAddExtraTime">Simulla başa çıxmaq üçün öz saatına əlavə vaxtlar artıra bilərsən.</string>
   <string name="simulHostExtraTime">Dəvət edənin əlavə vaxtı</string>
-  <string name="lichessTournaments">Arena turnirləri</string>
+  <string name="lichessTournaments">Chess-Online turnirləri</string>
   <string name="tournamentFAQ">Arena turnirinin TSS</string>
   <string name="tournamentOfficial">Rəsmi</string>
   <string name="timeBeforeTournamentStarts">Turnir başlamadan öncəki zaman</string>
@@ -613,8 +605,8 @@
   <string name="ifYouDoNotSeeTheEmailCheckOtherPlaces">Əgər e-poçtu görmürsünzsə, onun ola biləçəyi digər yerləri, məsələn, zibil qutusu, spam, sosial və digər qovluqları nəzərdən keçirin.</string>
   <string name="weHaveSentYouAnEmailTo">Biz %s-ə e-poçt göndərdik. Şifrəni yeniləmək üçün e-poçtundakı linki kliklə.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Qeydiyyatdan keçməklə sən, bizim %s-la razılaşırsan.</string>
-  <string name="networkLagBetweenYouAndLichess">Sən və lichess arasında şəbəkə geçikməsi</string>
-  <string name="timeToProcessAMoveOnLichessServer">Lichess serverində gedişi icra etmə zamanı</string>
+  <string name="networkLagBetweenYouAndLichess">Sən və Chess-Online arasında şəbəkə geçikməsi</string>
+  <string name="timeToProcessAMoveOnLichessServer">Chess-Online serverində gedişi icra etmə zamanı</string>
   <string name="downloadAnnotated">Annotasiyanı endir.</string>
   <string name="downloadRaw">İşlənməmişi ednir</string>
   <string name="downloadImported">Çıxarılşı endir</string>
@@ -627,7 +619,7 @@
   <string name="youHaveAlreadyRegisteredTheEmail">Sən e-poçtu artıq qeydiyyatdan keçirmisən: %s</string>
   <string name="kidMode">Uşaq tərzi</string>
   <string name="playChessEverywhere">Şahmatı hər yerdə oyna</string>
-  <string name="asFreeAsLichess">Lichess kimi azad</string>
+  <string name="asFreeAsLichess">Chess-Online kimi azad</string>
   <string name="builtForTheLoveOfChessNotMoney">Pula görə deyil, şahamat sevgisinə görə yarat</string>
   <string name="everybodyGetsAllFeaturesForFree">Hər kəs bütün özəllikləri pulsuz əldə edir</string>
   <string name="zeroAdvertisement">Sıfır reklam</string>

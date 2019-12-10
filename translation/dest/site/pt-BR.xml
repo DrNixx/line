@@ -59,6 +59,7 @@
   <string name="promoteVariation">Promover variante</string>
   <string name="makeMainLine">Transformar em linha principal</string>
   <string name="deleteFromHere">Excluir a partir daqui</string>
+  <string name="forceVariation">Variante forçada</string>
   <string name="move">Movimentos</string>
   <string name="variantLoss">Derrota por variante</string>
   <string name="variantWin">Vitória por variante</string>
@@ -134,7 +135,6 @@
   <string name="viewInFullSize">Ver em tela cheia</string>
   <string name="logOut">Sair</string>
   <string name="signIn">Entrar</string>
-  <string name="newToLichess">Novo no Lichess?</string>
   <string name="youNeedAnAccountToDoThat">Você precisa de uma conta para fazer isso</string>
   <string name="signUp">Registrar</string>
   <string name="computersAreNotAllowedToPlay">O uso de engine não é permitido. Por favor, não utilize programas de xadrez, bancos de dados ou o auxilio de outros jogadores durante a partida. Além disso, a criação de múltiplas contas é fortemente desaconselhada e sua prática excessiva acarretará banimento.</string>
@@ -164,8 +164,10 @@
   <string name="ratingStats">Estatísticas de classificação</string>
   <string name="username">Nome de usuário</string>
   <string name="usernameOrEmail">Nome ou email do usuário</string>
+  <string name="changeUsername">Alterar nome de usuário</string>
+  <string name="changeUsernameNotSame">Pode-se apenas trocar as letras de minúscula para maiúscula e vice-versa. Por exemplo, \"johndoe\" para \"JohnDoe\".</string>
+  <string name="changeUsernameDescription">Altere seu nome de usuário. Isso só pode ser feito uma vez e você poderá apenas trocar as letras de minúscula para maiúscula e vice-versa.</string>
   <string name="password">Senha</string>
-  <string name="haveAnAccount">Tem uma conta?</string>
   <string name="changePassword">Alterar senha</string>
   <string name="changeEmail">Alterar email</string>
   <string name="email">E-mail</string>
@@ -173,7 +175,10 @@
   <string name="forgotPassword">Esqueceu sua senha?</string>
   <string name="rank">Rank</string>
   <string name="rankX">Classificação: %s</string>
-  <string name="rankIsUpdatedEveryXMinutes">A classificação é atualizada a cada %s minutos</string>
+  <plurals name="rankIsUpdatedEveryNbMinutes">
+    <item quantity="one">O ranking é atualizado a cada %s minutos</item>
+    <item quantity="other">O ranking é atualizado a cada %s minutos</item>
+  </plurals>
   <plurals name="nbPuzzles">
     <item quantity="one">%s quebra-cabeça</item>
     <item quantity="other">%s problemas</item>
@@ -199,6 +204,7 @@
   <string name="playingRightNow">Jogando agora</string>
   <string name="eventInProgress">Jogando agora</string>
   <string name="finished">Terminado</string>
+  <string name="finishesX">termina %s</string>
   <string name="abortGame">Cancelar partida</string>
   <string name="gameAborted">Partida cancelada</string>
   <string name="standard">Padrão</string>
@@ -287,8 +293,8 @@
     <item quantity="other">≥ %s jogos valendo pontos</item>
   </plurals>
   <plurals name="moreThanNbPerfRatedGames">
-    <item quantity="one">≥ %1$s partida %2%s valendo pontos</item>
-    <item quantity="other">≥ %1$s %2%s partidas valendo pontos</item>
+    <item quantity="one">≥ %1$s partida %2$s valendo pontos</item>
+    <item quantity="other">≥ %1$s %2$s partidas valendo pontos</item>
   </plurals>
   <plurals name="needNbMorePerfGames">
     <item quantity="one">Você precisa jogar %1$s mais %2$s partidas valendo pontos</item>
@@ -349,10 +355,14 @@
   <string name="captcha.fail">Falha no captchar
 Aparece quando o usuário tenta enviar o formulário sem resolver preciamente o problema de xadrez proposto. O aviso informa ao usuário que ele deve resolver o problema proponto antes de prosseguir.</string>
   <string name="notACheckmate">Não é xeque-mate.</string>
-  <string name="colorPlaysCheckmateInOne">%s joga; mate em um</string>
+  <string name="whiteCheckmatesInOneMove">Xeque-mate em um lance para as brancas</string>
+  <string name="blackCheckmatesInOneMove">Xeque-mate em um lance para as pretas</string>
   <string name="retry">Tentar novamente</string>
-  <string name="reconnecting">Reconetando</string>
-  <string name="onlineFriends">Amigos online</string>
+  <string name="reconnecting">Reconectando</string>
+  <plurals name="nbFriendsOnline">
+    <item quantity="one">%s amigo disponível</item>
+    <item quantity="other">%s amigos disponíveis</item>
+  </plurals>
   <string name="noFriendsOnline">Não há amigos online</string>
   <string name="findFriends">Encontrar amigos</string>
   <string name="favoriteOpponents">Oponentes favoritos</string>
@@ -442,8 +452,8 @@ Aparece quando o usuário tenta enviar o formulário sem resolver preciamente o 
   <string name="country">País</string>
   <string name="preferences">Preferências</string>
   <string name="inlineNotation">Notação em linha</string>
-  <string name="watchLichessTV">Assistir Chess-Online TV</string>
-  <string name="previouslyOnLichessTV">Anteriormente em Chess-Online TV</string>
+  <string name="watchLichessTV">Assistir Arena TV</string>
+  <string name="previouslyOnLichessTV">Anteriormente em Arena TV</string>
   <string name="onlinePlayers">Jogadores online</string>
   <string name="activeToday">Ativos hoje</string>
   <string name="activePlayers">Jogadores ativos</string>
@@ -453,7 +463,7 @@ Aparece quando o usuário tenta enviar o formulário sem resolver preciamente o 
   <string name="findTheBestMoveForWhite">Procure o melhor lance para as brancas.</string>
   <string name="findTheBestMoveForBlack">Procure a melhor jogada para as pretas.</string>
   <string name="toTrackYourProgress">Acompanhe seu progresso:</string>
-  <string name="trainingSignupExplanation">O Lichess fornecerá quebra-cabeças que correspondem a sua habilidade, para fazer melhores sessões de treino.</string>
+  <string name="trainingSignupExplanation">O Arena TV fornecerá quebra-cabeças que correspondem a sua habilidade, para fazer melhores sessões de treino.</string>
   <string name="puzzleId">Quebra-cabeça %s</string>
   <string name="puzzleOfTheDay">Quebra-cabeça do dia</string>
   <string name="clickToSolve">Clique para resolver</string>
@@ -465,9 +475,10 @@ Aparece quando o usuário tenta enviar o formulário sem resolver preciamente o 
   <string name="butYouCanKeepTrying">Mas você pode continuar a tentar.</string>
   <string name="success">Sucesso</string>
   <string name="wasThisPuzzleAnyGood">Este quebra-cabeça foi bom?</string>
-  <string name="pleaseVotePuzzle">Ajude o Lichess a melhorar através do seu voto, usando a seta para cima ou para baixo:</string>
+  <string name="pleaseVotePuzzle">Ajude o Arena TV a melhorar através do seu voto, usando a seta para cima ou para baixo:</string>
   <string name="thankYou">Obrigado!</string>
   <string name="ratingX">Classificação: %s</string>
+  <string name="hidden">oculto</string>
   <plurals name="playedXTimes">
     <item quantity="one">Jogado %s vezes</item>
     <item quantity="other">Jogado %s vezes</item>
@@ -580,10 +591,11 @@ Aparece quando o usuário tenta enviar o formulário sem resolver preciamente o 
   <string name="xAskedY">%1$s perguntou %2$s</string>
   <string name="xAnsweredY">%1$s respondeu %2$s</string>
   <string name="xCommentedY">%1$s comentou %2$s</string>
-  <string name="victory">Vitória!</string>
+  <string name="victory">Vitória</string>
   <string name="defeat">Derrota</string>
-  <string name="xVsYinZ">%1$s contra %2$s
-em %3$s</string>
+  <string name="victoryVsYInZ">%1$s vs %2$s em %3$s</string>
+  <string name="defeatVsYInZ">%1$s vs %2$s em %3$s</string>
+  <string name="drawVsYInZ">%1$s vs %2$s em %3$s</string>
   <string name="timeline">Linha do tempo</string>
   <string name="starting">Iniciando:</string>
   <string name="allInformationIsPublicAndOptional">Todas as informações são públicas e opcionais.</string>
@@ -604,7 +616,7 @@ em %3$s</string>
   <string name="clock">Relógio</string>
   <string name="unauthorizedError">Acesso negado</string>
   <string name="noInternetConnection">Sem conectividade. Você ainda pode jogar offline a partir do menu.</string>
-  <string name="connectedToLichess">Você está conectado a Chess-Online.Com</string>
+  <string name="connectedToLichess">Você está conectado a Chess-Online</string>
   <string name="signedOut">Você fez logoff</string>
   <string name="loginSuccessful">Login efetuado</string>
   <string name="playOnTheBoardOffline">Jogar offline contra um amigo</string>
@@ -630,12 +642,12 @@ em %3$s</string>
   <string name="inCorrespondenceGames">Jogos por correspondência</string>
   <string name="ifRatingIsPlusMinusX">Se a classificação for ± %s</string>
   <string name="onlyFriends">Apenas amigos</string>
+  <string name="displayBoardResizeHandle">Exibir ajustador de tabuleiro</string>
+  <string name="onlyOnInitialPosition">Apenas na posição inicial</string>
   <string name="menu">Menu</string>
   <string name="castling">Roque</string>
   <string name="whiteCastlingKingside">Roque curto das Brancas</string>
-  <string name="whiteCastlingQueenside">Roque longo das Brancas</string>
   <string name="blackCastlingKingside">Roque curto das Pretas</string>
-  <string name="blackCastlingQueenside">Roque longo das Pretas</string>
   <plurals name="nbForumPosts">
     <item quantity="one">%s Postagens no Forum</item>
     <item quantity="other">%s Postagens no Forum</item>
@@ -644,13 +656,12 @@ em %3$s</string>
   <string name="watchGames">Observar jogos</string>
   <string name="tpTimeSpentOnTV">Tempo na TV: %s</string>
   <string name="watch">Observar</string>
-  <string name="internationalEvents">Eventos Internacionais</string>
   <string name="videoLibrary">Videoteca</string>
   <string name="mobileApp">Aplicativo Móvel</string>
   <string name="webmasters">Webmasters</string>
   <string name="about">Sobre</string>
-  <string name="aboutX">Sobre</string>
-  <string name="xIsAFreeYLibreOpenSourceChessServer">Chess-Online.Com é gratuito é realmente livre, sem anúncios, servidor de xadrez de código aberto.</string>
+  <string name="aboutX">Sobre %s</string>
+  <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s é um servidor de xadrez gratuito (%2$s), livre, sem anúncios e código aberto.</string>
   <string name="really">realmente</string>
   <string name="contribute">Contribuir</string>
   <string name="contact">Contato</string>
@@ -675,7 +686,7 @@ em %3$s</string>
   <string name="simulClockHint">Configuração de acréscimos no relógio. Quanto mais jogadores admitir, mais tempo pode necessitar.</string>
   <string name="simulAddExtraTime">Você pode acrescentar tempo adicional a seu relógio, para ajudá-lo a lidar com a simultânea.</string>
   <string name="simulHostExtraTime">Tempo adicional do simultanista</string>
-  <string name="lichessTournaments">Arena do Lichess</string>
+  <string name="lichessTournaments">Torneios do Arena TV</string>
   <string name="tournamentFAQ">Perguntas Frequentes sobre torneios no estilo Arena</string>
   <string name="tournamentOfficial">Oficial</string>
   <string name="timeBeforeTournamentStarts">Contagem regressiva para início do torneio</string>
@@ -700,13 +711,16 @@ em %3$s</string>
   <string name="yourPerfTypeRatingIsRating">Sua classificação em %1$s é %2$s.</string>
   <string name="youAreBetterThanPercentOfPerfTypePlayers">Você é melhor que %1$s entre os jogadores de %2$s.</string>
   <string name="youDoNotHaveAnEstablishedPerfTypeRating">Você não tem uma classificação definida em %s.</string>
+  <string name="yourRating">Sua avaliação</string>
+  <string name="cumulative">Cumulativo</string>
+  <string name="glicko2Rating">Classificação Glicko-2</string>
   <string name="checkYourEmail">Verifique seu e-mail</string>
   <string name="weHaveSentYouAnEmailClickTheLink">Enviamos um e-mail. Clique no link do e-mail para ativar sua conta.</string>
   <string name="ifYouDoNotSeeTheEmailCheckOtherPlaces">Se você não vir o e-mail, verifique outros locais onde possa estar, como lixeira, spam ou outras pastas.</string>
   <string name="weHaveSentYouAnEmailTo">Enviamos um e-mail para %s. Clique no link do e-mail para redefinir sua senha.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Ao registrar, você concorda em se comprometer com nossa %s.</string>
   <string name="networkLagBetweenYouAndLichess">Atraso na rede</string>
-  <string name="timeToProcessAMoveOnLichessServer">Tempo para processar um movimento no servidor do Lichess</string>
+  <string name="timeToProcessAMoveOnLichessServer">Tempo para processar um movimento no servidor do Arena TV</string>
   <string name="downloadAnnotated">Baixar anotação</string>
   <string name="downloadRaw">Baixar texto</string>
   <string name="downloadImported">Baixar partida importada</string>
@@ -727,7 +741,7 @@ em %3$s</string>
   <string name="youHaveAlreadyRegisteredTheEmail">Você já registrou o e-mail: %s</string>
   <string name="kidMode">Modo infantil</string>
   <string name="kidModeExplanation">Isto diz respeito à segurança. No modo infantil, todas as comunicações do site são desabilitadas. Habilite isso para seus filhos e alunos, para protegê-los de outros usuários da Internet.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">No modo infantil, a logo do lichess tem um ícone %s, para que você saiba que suas crianças estão seguras.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">No modo infantil, a logo do Arena TV tem um ícone %s, para que você saiba que suas crianças estão seguras.</string>
   <string name="enableKidMode">Habilitar o modo infantil</string>
   <string name="disableKidMode">Desabilitar o modo infantil</string>
   <string name="security">Segurança</string>
@@ -735,7 +749,7 @@ em %3$s</string>
   <string name="alternativelyYouCanX">Como alternativa, você pode %s.</string>
   <string name="revokeAllSessions">revogar todas as sessões</string>
   <string name="playChessEverywhere">Jogue xadrez em qualquer lugar!</string>
-  <string name="asFreeAsLichess">Tão gratuito quanto o Lichess</string>
+  <string name="asFreeAsLichess">Tão gratuito quanto o Arena TV</string>
   <string name="builtForTheLoveOfChessNotMoney">Desenvolvido pelo amor ao xadrez, não pelo dinheiro</string>
   <string name="everybodyGetsAllFeaturesForFree">Todos usam grátis todos os recursos</string>
   <string name="zeroAdvertisement">Zero anúncios</string>
@@ -755,6 +769,7 @@ em %3$s</string>
   <string name="xHostsY">%1$s criou %2$s</string>
   <string name="xJoinsY">%1$s entrou em %2$s</string>
   <string name="xLikesY">%1$s curtiu %2$s</string>
+  <string name="xCreatesStudyY">%1$s Cria o Estudo %2$s</string>
   <string name="quickPairing">Partida rápida</string>
   <string name="lobby">Salão</string>
   <string name="anonymous">Anônimo</string>
@@ -775,7 +790,7 @@ em %3$s</string>
   <string name="usernameSuffixInvalid">O nome de usuário deve terminar com uma letra ou um número.</string>
   <string name="usernameCharsInvalid">Nomes de usuário só podem conter letras, números, sublinhados e hífens.</string>
   <string name="usernameUnacceptable">Este nome de usuário não é aceitável.</string>
-  <string name="directlySupportLichess">Ajude Chess-Online diretamente</string>
+  <string name="directlySupportLichess">Ajude Arena TV diretamente</string>
   <string name="playChessInStyle">Jogue com estilo</string>
   <string name="chessBasics">Básicos do xadrez</string>
   <string name="coaches">Tutores</string>
@@ -850,4 +865,24 @@ em %3$s</string>
     <item quantity="one">e salvar a linha de pré-lance de %s</item>
     <item quantity="other">e salvar as linhas de pré-lance de %s</item>
   </plurals>
+  <string name="sorry">Desculpa :(</string>
+  <string name="weHadToTimeYouOutForAWhile">Tivemos de bloqueá-lo por um tempo.</string>
+  <string name="timeoutExpires">O tempo expirará %s.</string>
+  <string name="why">Por quê?</string>
+  <string name="pleasantChessExperience">Buscamos oferecer uma experiência agradável de xadrez para todos.</string>
+  <string name="goodPractice">Para isso, precisamos assegurar que nossos jogadores sigam boas práticas.</string>
+  <string name="potentialProblem">Quando um problema em potencial é detectado, nós mostramos esta mensagem.</string>
+  <string name="howToAvoidThis">Como evitar isso?</string>
+  <string name="playEveryGame">Jogue todos os jogos que inicia.</string>
+  <string name="tryToWin">Tente vencer (ou pelo menos empatar) todos os jogos que jogar.</string>
+  <string name="resignLostGames">Conceda partidas perdidas (não deixe o relógio ir até ao fim).</string>
+  <string name="temporaryInconvenience">Pedimos desculpa pelo incômodo temporário,</string>
+  <string name="wishYouGreatGames">e desejamos-lhe grandes jogos em Chess-Online.Com.</string>
+  <string name="thankYouForReading">Obrigado pela leitura!</string>
+  <string name="lifetimeScore">Pontuação de todo o período</string>
+  <string name="currentMatchScore">Pontuação da partida atual</string>
+  <string name="agreementAssistance">Eu concordo que em momento algum receberei assistência durante os meus jogos (seja de um computador, livro, banco de dados ou outra pessoa).</string>
+  <string name="agreementNice">Eu concordo que serei sempre cortês com outros jogadores.</string>
+  <string name="agreementAccount">Eu concordo que não criarei várias contas.</string>
+  <string name="agreementPolicy">Eu concordo que seguirei todas as normas do Arena TV.</string>
 </resources>

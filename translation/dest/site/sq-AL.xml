@@ -48,7 +48,7 @@
   <string name="computerAnalysis">Analizë kompjuterike</string>
   <string name="computerAnalysisAvailable">Perdor analizen e kopmjuterit</string>
   <string name="analysis">Analiza</string>
-  <string name="depthX">Thellesia%s </string>
+  <string name="depthX">Thellesia %s</string>
   <string name="usingServerAnalysis">Analiza me server</string>
   <string name="loadingEngine">Duke ngarkuar...</string>
   <string name="cloudAnalysis">Analiza cloud</string>
@@ -134,7 +134,6 @@
   <string name="viewInFullSize">Shihe në madhësi të plotë</string>
   <string name="logOut">Dilni</string>
   <string name="signIn">Hyni</string>
-  <string name="newToLichess">I ri në Lichess?</string>
   <string name="youNeedAnAccountToDoThat">Ju nevojitet një llogari për të kryer këtë veprim</string>
   <string name="signUp">Regjistrohuni</string>
   <string name="computersAreNotAllowedToPlay">Kompjuterit dhe programit -ndihmës për lojtarin nuk ju lejohet të luajnë. Ju lutem mos merrni ndihmë nga motorët e shahut, bazat e të dhënave, apo nga lojtarët e tjerë duke luajtur. Gjithashtu vini re se bërja e llogarive të shumëfishta është e dekurajuar fuqimisht dhe i tepruar multi-kontabilitetit do të çojë në duke u ndaluar.</string>
@@ -165,7 +164,6 @@
   <string name="username">Emri i përdoruesit</string>
   <string name="usernameOrEmail">Emri i përdoruesit ose email</string>
   <string name="password">Fjalëkalimi</string>
-  <string name="haveAnAccount">Keni një llogari?</string>
   <string name="changePassword">Ndrysho fjalëkalimin</string>
   <string name="changeEmail">Ndrysho emailin</string>
   <string name="email">Email</string>
@@ -173,7 +171,6 @@
   <string name="forgotPassword">Harruat fjalëkalimin?</string>
   <string name="rank">Renditja</string>
   <string name="rankX">Klasifikimi: %s</string>
-  <string name="rankIsUpdatedEveryXMinutes">Klasifikimi azhornohet cdo %s minuta</string>
   <plurals name="nbPuzzles">
     <item quantity="one">%s ushtrimi</item>
     <item quantity="other">%s ushtrime</item>
@@ -346,10 +343,8 @@
   <string name="clickOnTheBoardToMakeYourMove">Klikoni mbi fushë për të bërë lëvizjen tuaj dhe të vërtetoni që jeni qenie njerëzore</string>
   <string name="captcha.fail">Ju lutem zgjidheni ushtrimin.</string>
   <string name="notACheckmate">Nuk është shahmat</string>
-  <string name="colorPlaysCheckmateInOne">Lëviz %s; shahmat në një lëvizje</string>
   <string name="retry">Provo përsëri</string>
   <string name="reconnecting">Duke u rilidhur</string>
-  <string name="onlineFriends">Miq në linjë</string>
   <string name="noFriendsOnline">Asnjë mik në linje</string>
   <string name="findFriends">Gjej miq</string>
   <string name="favoriteOpponents">Kundërshtarët e preferuar</string>
@@ -439,8 +434,8 @@
   <string name="country">Shteti</string>
   <string name="preferences">Personifikimet</string>
   <string name="inlineNotation">Shenimet ne rresht</string>
-  <string name="watchLichessTV">Shiko Chess-Online TV</string>
-  <string name="previouslyOnLichessTV">Herën e fundit në Chess-Online TV</string>
+  <string name="watchLichessTV">Shiko Arena TV</string>
+  <string name="previouslyOnLichessTV">Herën e fundit në Arena TV</string>
   <string name="onlinePlayers">Lojtarët në linjë</string>
   <string name="activeToday">Aktiv sot</string>
   <string name="activePlayers">Lojëtarët aktivë</string>
@@ -450,7 +445,7 @@
   <string name="findTheBestMoveForWhite">Gjej lëvizjen më të mirë për të bardhin.</string>
   <string name="findTheBestMoveForBlack">Gjej lëvizjen më të mirë për të ziun.</string>
   <string name="toTrackYourProgress">Për të ndjekur progresin:</string>
-  <string name="trainingSignupExplanation">Lichess do të sigurojë ushtrime që përputhen me aftësinë tuaj, për një trajnim më të mirë.</string>
+  <string name="trainingSignupExplanation">Chess-Online do të sigurojë ushtrime që përputhen me aftësinë tuaj, për një trajnim më të mirë.</string>
   <string name="puzzleId">Ushtrimi %s</string>
   <string name="puzzleOfTheDay">Ushtrimi i ditës</string>
   <string name="clickToSolve">Kliko për t\'a zgjidhur</string>
@@ -462,7 +457,7 @@
   <string name="butYouCanKeepTrying">Por mundesh të provosh përsëri.</string>
   <string name="success">Sukses</string>
   <string name="wasThisPuzzleAnyGood">A ishte ky ushtrimi i mirë?</string>
-  <string name="pleaseVotePuzzle">Ndihmo lichess të përmirësohet duke votuar, me shigjetat poshtë ose lartë:</string>
+  <string name="pleaseVotePuzzle">Ndihmo Chess-Online të përmirësohet duke votuar, me shigjetat poshtë ose lartë:</string>
   <string name="thankYou">Faleminderit!</string>
   <string name="ratingX">Vlerësimi: %s</string>
   <plurals name="playedXTimes">
@@ -576,10 +571,8 @@
   <string name="xAskedY">%1$s pyeti %2$s</string>
   <string name="xAnsweredY">%1$s u përgjigj %2$s</string>
   <string name="xCommentedY">s%1$s komentoi %2$s</string>
-  <string name="victory">Fitore!</string>
+  <string name="victory">Fitore</string>
   <string name="defeat">Humbje</string>
-  <string name="xVsYinZ">%1$s kunder %2$s
-ne %3$s</string>
   <string name="timeline">Vija kohore</string>
   <string name="starting">Fillon:</string>
   <string name="allInformationIsPublicAndOptional">Të gjitha informacionet janë publike dhe jo të detyrueshme</string>
@@ -600,7 +593,7 @@ ne %3$s</string>
   <string name="clock">Koha</string>
   <string name="unauthorizedError">Hyrje e paautorizuar.</string>
   <string name="noInternetConnection">Nuk ka lidhje interneti. Gjithsesi, ju mund të luani të shkëputur nga interneti nëpërmjet menusë.</string>
-  <string name="connectedToLichess">Tani jeni të lidhur me Chess-Online.Com</string>
+  <string name="connectedToLichess">Tani jeni të lidhur me Chess-Online</string>
   <string name="signedOut">Ju keni dalë nga faqja.</string>
   <string name="loginSuccessful">Hyrje me sukses</string>
   <string name="playOnTheBoardOffline">Luaj i shkëputur, në ekran.</string>
@@ -629,9 +622,7 @@ ne %3$s</string>
   <string name="menu">Menu</string>
   <string name="castling">Rrokada</string>
   <string name="whiteCastlingKingside">I bardhi O-O</string>
-  <string name="whiteCastlingQueenside">I bardhi O-O-O</string>
   <string name="blackCastlingKingside">I ziu O-O</string>
-  <string name="blackCastlingQueenside">I ziu O-O-O</string>
   <plurals name="nbForumPosts">
     <item quantity="one">%s Postime në Forum</item>
     <item quantity="other">%s Postime në Forum</item>
@@ -640,7 +631,6 @@ ne %3$s</string>
   <string name="watchGames">Shiko lojërat</string>
   <string name="tpTimeSpentOnTV">Koha në TV: %s</string>
   <string name="watch">Shiko</string>
-  <string name="internationalEvents">Ngjarje ndërkombëtare</string>
   <string name="videoLibrary">Videoteka</string>
   <string name="mobileApp">Mobile App</string>
   <string name="webmasters">Webmaster</string>
@@ -668,7 +658,7 @@ ne %3$s</string>
   <string name="simulClockHint">Koha Fisher. Kundër sa më shumë lojtarëve luani, aq më shumë kohë mund t\'ju nevojitet.</string>
   <string name="simulAddExtraTime">Ju mund të shtoni kohë shtesë për t\'i bërë ballë simultanes.</string>
   <string name="simulHostExtraTime">Kohë shtesë për pritësin</string>
-  <string name="lichessTournaments">Turnetë në Arena</string>
+  <string name="lichessTournaments">Turnetë në Chess-Online</string>
   <string name="tournamentFAQ">Pyetjet e turneve</string>
   <string name="tournamentOfficial">Zyrtar</string>
   <string name="timeBeforeTournamentStarts">Koha deri sa të fillojë turneu</string>
@@ -698,8 +688,8 @@ ne %3$s</string>
   <string name="ifYouDoNotSeeTheEmailCheckOtherPlaces">Nëse nuk e shini letrën elektronike, kontrolloni në vendet e tjera ku mund të jetë, si junk, spam, social ose dosje të tjera.</string>
   <string name="weHaveSentYouAnEmailTo">Kemi dërguar një e-letër te %s. Klikoni lidhjen brenda në e-letër për të rivendosur fjalëkalimin tuaj.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Duke u regjistruar, ju pranoni të jeni të lidhur me %s.</string>
-  <string name="networkLagBetweenYouAndLichess">Vonesë rrjeti ndërmjet juve dhe lichess.</string>
-  <string name="timeToProcessAMoveOnLichessServer">Koha për të përpunuar një lëvizje në serverin e lichess</string>
+  <string name="networkLagBetweenYouAndLichess">Vonesë rrjeti ndërmjet juve dhe Chess-Online.</string>
+  <string name="timeToProcessAMoveOnLichessServer">Koha për të përpunuar një lëvizje në serverin e Chess-Online</string>
   <string name="downloadAnnotated">Shkarko bashkë me shënimet.</string>
   <string name="downloadRaw">Shkarko pa shënimet.</string>
   <string name="downloadImported">Shkarko importin</string>
@@ -720,7 +710,7 @@ ne %3$s</string>
   <string name="youHaveAlreadyRegisteredTheEmail">Ju e keni regjistruar tashmë postën elektronike: %s</string>
   <string name="kidMode">Formati për fëmijë</string>
   <string name="kidModeExplanation">Kjo eshte per sigurine. Ne modalitetin per femije, te gjitha komunikimet ne faqe jane te ndaluara. Aktivizoje ket per femijet dhe studentet e shkolles, ti mbrosh ata nga perdoruesit e tjere te internetit.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">Ne modalitetin per femije, logoja e lichess merr nje ikone %s , qe ta dini se femijet tuaj jane te sigurte.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">Ne modalitetin per femije, logoja e Chess-Online merr nje ikone %s , qe ta dini se femijet tuaj jane te sigurte.</string>
   <string name="enableKidMode">Aktivizo modalitetin per femije</string>
   <string name="disableKidMode">Çaktivizo modalitetin per femije</string>
   <string name="security">Siguria</string>
@@ -728,7 +718,7 @@ ne %3$s</string>
   <string name="alternativelyYouCanX">Ose mund te %s.</string>
   <string name="revokeAllSessions">terhiq te gjitha seksionet</string>
   <string name="playChessEverywhere">Luaj shah kudo</string>
-  <string name="asFreeAsLichess">Pa pagesë si vetë lichess</string>
+  <string name="asFreeAsLichess">Pa pagesë si vetë Chess-Online</string>
   <string name="builtForTheLoveOfChessNotMoney">Ndërtuar nga dashuria për shahun, jo për parane</string>
   <string name="everybodyGetsAllFeaturesForFree">Gjithkush merr të gjitha karakteristikat pa pagesë</string>
   <string name="zeroAdvertisement">Zero reklama</string>

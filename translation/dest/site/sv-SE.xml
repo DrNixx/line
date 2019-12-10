@@ -59,6 +59,7 @@
   <string name="promoteVariation">Höj upp variation</string>
   <string name="makeMainLine">Gör till huvudvariation</string>
   <string name="deleteFromHere">Radera härifrån</string>
+  <string name="forceVariation">Visa som variant</string>
   <string name="move">Drag</string>
   <string name="variantLoss">Variantförlust</string>
   <string name="variantWin">Variantvinst</string>
@@ -90,7 +91,7 @@
   <string name="xOpeningExplorer">%s öppningsutforskare</string>
   <string name="winPreventedBy50MoveRule">Vinst förhindrad genom 50-dragsregeln</string>
   <string name="lossSavedBy50MoveRule">Förlust förhindrad genom 50-dragsregeln</string>
-  <string name="allSet">OK</string>
+  <string name="allSet">Klart!</string>
   <string name="importPgn">Importera PGN</string>
   <string name="delete">Ta bort</string>
   <string name="deleteThisImportedGame">Ta bort detta importerade parti?</string>
@@ -101,11 +102,11 @@
   <string name="enable">Aktivera</string>
   <string name="bestMoveArrow">Pil som anger bästa drag</string>
   <string name="evaluationGauge">Visa evaluering</string>
-  <string name="multipleLines">Multipla varianter</string>
+  <string name="multipleLines">Flera linjer</string>
   <string name="cpus">CPUs</string>
   <string name="memory">Minne</string>
   <string name="infiniteAnalysis">Oändlig analys</string>
-  <string name="removesTheDepthLimit">Tar bort sökdjupsbegränsningen, och håller datorn varm</string>
+  <string name="removesTheDepthLimit">Tar bort sökdjupsbegränsningen och håller datorn varm</string>
   <string name="blunder">Blunder</string>
   <string name="blunders">Blundrar</string>
   <string name="mistake">Misstag</string>
@@ -134,7 +135,6 @@
   <string name="viewInFullSize">Visa i full storlek</string>
   <string name="logOut">Logga ut</string>
   <string name="signIn">Logga in</string>
-  <string name="newToLichess">Ny användare?</string>
   <string name="youNeedAnAccountToDoThat">Du behöver ett konto för att göra detta</string>
   <string name="signUp">Registrera dig</string>
   <string name="computersAreNotAllowedToPlay">Datorer och datorhjälp är inte tillåtet att spela med. Vänligen, ta inte hjälp ifrån schackmotorer, databaser eller från andra spelare när du spelar. Notera även att skapande av flera konton avrådes och överdrivet skapande leder till avstängning.</string>
@@ -164,8 +164,10 @@
   <string name="ratingStats">Ratingstatistik</string>
   <string name="username">Användarnamn</string>
   <string name="usernameOrEmail">Användarnamn eller email</string>
+  <string name="changeUsername">Byt användarnamn</string>
+  <string name="changeUsernameNotSame">Bara storleken på bokstäver kan ändras. Till exempel \"anderssvensson\" till \"AndersSvenson\".</string>
+  <string name="changeUsernameDescription">Ändra ditt användarnamn. Detta kan bara göras en gång och det är endast tillåtet att ändra skiftläget för bokstäverna i ditt användarnamn.</string>
   <string name="password">Lösenord</string>
-  <string name="haveAnAccount">Har du ett konto?</string>
   <string name="changePassword">Ändra lösenord</string>
   <string name="changeEmail">Ändra E-post</string>
   <string name="email">E-post</string>
@@ -173,7 +175,10 @@
   <string name="forgotPassword">Glömt lösenord?</string>
   <string name="rank">Rankning</string>
   <string name="rankX">Placering: %s</string>
-  <string name="rankIsUpdatedEveryXMinutes">Placeringen uppdateras varje %s minuter</string>
+  <plurals name="rankIsUpdatedEveryNbMinutes">
+    <item quantity="one">Placering uppdateras varje minut</item>
+    <item quantity="other">Placering uppdateras efter %s minuter</item>
+  </plurals>
   <plurals name="nbPuzzles">
     <item quantity="one">%s schackproblem</item>
     <item quantity="other">%s schackproblem</item>
@@ -287,8 +292,8 @@
     <item quantity="other">≥ %s rankade partier</item>
   </plurals>
   <plurals name="moreThanNbPerfRatedGames">
-    <item quantity="one">≥ %1$s rankade %2$spartier</item>
-    <item quantity="other">≥ %1$s %2%s rankade partier</item>
+    <item quantity="one">≥ %1$s rankat %2$s parti</item>
+    <item quantity="other">≥ %1$s rankade %2$s partier</item>
   </plurals>
   <plurals name="needNbMorePerfGames">
     <item quantity="one">Du behöver spela ytterligare %1$s rankat %2$sparti</item>
@@ -348,10 +353,10 @@
   <string name="clickOnTheBoardToMakeYourMove">Bevisa att du är en människa genom att klicka på brädet och göra ditt drag.</string>
   <string name="captcha.fail">Vänligen lös schack-captchan.</string>
   <string name="notACheckmate">Inte schackmatt</string>
-  <string name="colorPlaysCheckmateInOne">%s tur; Schackmatt i ett drag</string>
+  <string name="whiteCheckmatesInOneMove">Vit gör schackmatt i ett drag</string>
+  <string name="blackCheckmatesInOneMove">Svart gör schackmatt om ett drag</string>
   <string name="retry">Försök igen</string>
   <string name="reconnecting">Återansluter</string>
-  <string name="onlineFriends">Vänner online</string>
   <string name="noFriendsOnline">Inga vänner online</string>
   <string name="findFriends">Hitta vänner</string>
   <string name="favoriteOpponents">Favoritmotståndare</string>
@@ -441,8 +446,8 @@
   <string name="country">Land</string>
   <string name="preferences">Inställningar</string>
   <string name="inlineNotation">Visa notation</string>
-  <string name="watchLichessTV">Titta på Chess-Online TV</string>
-  <string name="previouslyOnLichessTV">Föregående Chess-Online TV</string>
+  <string name="watchLichessTV">Titta på Arena TV</string>
+  <string name="previouslyOnLichessTV">Föregående Arena TV</string>
   <string name="onlinePlayers">Spelare online</string>
   <string name="activeToday">Aktivast i dag</string>
   <string name="activePlayers">Aktiva spelare</string>
@@ -452,7 +457,7 @@
   <string name="findTheBestMoveForWhite">Hitta bästa draget för vit.</string>
   <string name="findTheBestMoveForBlack">Hitta bästa draget för svart.</string>
   <string name="toTrackYourProgress">För att följa din utveckling:</string>
-  <string name="trainingSignupExplanation">Lichess kommer att erbjuda schackproblem som matchar din förmåga, vilket ger dig bättre träning.</string>
+  <string name="trainingSignupExplanation">Arena TV kommer att erbjuda schackproblem som matchar din förmåga, vilket ger dig bättre träning.</string>
   <string name="puzzleId">Schackproblem %s</string>
   <string name="puzzleOfTheDay">Dagens schackproblem</string>
   <string name="clickToSolve">Klicka för att lösa</string>
@@ -464,9 +469,10 @@
   <string name="butYouCanKeepTrying">Men du kan fortsätta försöka.</string>
   <string name="success">Rätt</string>
   <string name="wasThisPuzzleAnyGood">Var det här schackproblemet bra?</string>
-  <string name="pleaseVotePuzzle">Hjälp lichess att bli bättre genom att rösta (använd pil upp eller pil ner):</string>
+  <string name="pleaseVotePuzzle">Hjälp Arena TV att bli bättre genom att rösta (använd pil upp eller pil ner):</string>
   <string name="thankYou">Tack!</string>
   <string name="ratingX">Rating: %s</string>
+  <string name="hidden">dold</string>
   <plurals name="playedXTimes">
     <item quantity="one">Spelat %s gånger</item>
     <item quantity="other">Spelat %s gånger</item>
@@ -581,7 +587,6 @@
   <string name="xCommentedY">%1$s kommenterade %2$s</string>
   <string name="victory">Vinst</string>
   <string name="defeat">Förlust</string>
-  <string name="xVsYinZ">%1$s mot %2$s i %3$s</string>
   <string name="timeline">Tidslinje</string>
   <string name="starting">Startar:</string>
   <string name="allInformationIsPublicAndOptional">All information är allmän och frivillig.</string>
@@ -602,7 +607,7 @@
   <string name="clock">Klocka</string>
   <string name="unauthorizedError">Tillgång är oauktoriserad</string>
   <string name="noInternetConnection">Ingen internet förbindelse. Du kan spela offline från menyn.</string>
-  <string name="connectedToLichess">Du är nu ansluten till Chess-Online.Com</string>
+  <string name="connectedToLichess">Du är nu ansluten till Chess-Online</string>
   <string name="signedOut">Du har loggat ut</string>
   <string name="loginSuccessful">Lyckad inloggning</string>
   <string name="playOnTheBoardOffline">Spela offline, över bräden</string>
@@ -628,12 +633,12 @@
   <string name="inCorrespondenceGames">I korrespondenspartier</string>
   <string name="ifRatingIsPlusMinusX">Om rating är ± %s</string>
   <string name="onlyFriends">Bara vänner</string>
+  <string name="displayBoardResizeHandle">Visa handtag för att ändra brädets storlek</string>
+  <string name="onlyOnInitialPosition">Endast vid ursprunglig position</string>
   <string name="menu">Meny</string>
   <string name="castling">Rockad</string>
   <string name="whiteCastlingKingside">Vit O-O</string>
-  <string name="whiteCastlingQueenside">Vit O-O-O</string>
   <string name="blackCastlingKingside">Svart O-O</string>
-  <string name="blackCastlingQueenside">Svart O-O-O</string>
   <plurals name="nbForumPosts">
     <item quantity="one">%s Foruminlägg</item>
     <item quantity="other">%s Foruminlägg</item>
@@ -642,11 +647,10 @@
   <string name="watchGames">Titta på spel</string>
   <string name="tpTimeSpentOnTV">Total TV-tid: %s</string>
   <string name="watch">Titta</string>
-  <string name="internationalEvents">Internationella evenemang</string>
   <string name="videoLibrary">Videobibliotek</string>
   <string name="mobileApp">Mobilapp</string>
   <string name="webmasters">Webbmasters</string>
-  <string name="about">Om Lichess</string>
+  <string name="about">Om Arena TV</string>
   <string name="aboutX">Om %s</string>
   <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s är en fri (%2$s), libre, inga annonser, öppen källkod schackserver.</string>
   <string name="really">på riktigt</string>
@@ -673,7 +677,7 @@
   <string name="simulClockHint">Inställningar för fischerklocka. Ju fler spelare du tar dig an, desto mer tid kan du behöva.</string>
   <string name="simulAddExtraTime">Du kan lägga till extra tid för att klara av simultanspelet.</string>
   <string name="simulHostExtraTime">Värdens extratid</string>
-  <string name="lichessTournaments">Arena-turneringar</string>
+  <string name="lichessTournaments">Arena TV-turneringar</string>
   <string name="tournamentFAQ">Turnering FAQ</string>
   <string name="tournamentOfficial">Officiell</string>
   <string name="timeBeforeTournamentStarts">Tid tills turneringen börjar</string>
@@ -698,13 +702,16 @@
   <string name="yourPerfTypeRatingIsRating">Din %1$srating är %2$s.</string>
   <string name="youAreBetterThanPercentOfPerfTypePlayers">Du är bättre än %1$s av alla som spelar %2$s.</string>
   <string name="youDoNotHaveAnEstablishedPerfTypeRating">Du har inte en etablerad %srating.</string>
+  <string name="yourRating">Din rating</string>
+  <string name="cumulative">Kumulativ</string>
+  <string name="glicko2Rating">Glicko-2-rating</string>
   <string name="checkYourEmail">Kolla din email</string>
   <string name="weHaveSentYouAnEmailClickTheLink">Vi har skickat ett e-postmeddelande. Klicka på länken i meddelandet för att aktivera ditt konto.</string>
   <string name="ifYouDoNotSeeTheEmailCheckOtherPlaces">Om du inte ser e-postmeddelandet, kontrollera andra ställen där det kan vara, som din skräppost, spam, sociala eller andra mappar.</string>
   <string name="weHaveSentYouAnEmailTo">Vi har skickat ett e-postmeddelande till %s.Tryck på länken i eposten för att återställa ditt lösenord.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Genom att registrera samtycker du till att vara bunden av våra %s.</string>
-  <string name="networkLagBetweenYouAndLichess">Nätverksfördröjning mellan dig och lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Tid att bearbeta ett drag på lichess server</string>
+  <string name="networkLagBetweenYouAndLichess">Nätverksfördröjning mellan dig och Arena TV</string>
+  <string name="timeToProcessAMoveOnLichessServer">Tid att bearbeta ett drag på Arena TV server</string>
   <string name="downloadAnnotated">Hämta kommenterad</string>
   <string name="downloadRaw">Hämta rå</string>
   <string name="downloadImported">Hämta importerad</string>
@@ -725,7 +732,7 @@
   <string name="youHaveAlreadyRegisteredTheEmail">Du har redan registrerat en emailadress: %s</string>
   <string name="kidMode">Barnsäkert läge</string>
   <string name="kidModeExplanation">Detta är en säkerhetsinställning. I barnsäkert läge är all site kommunikation avaktiverad. Aktivera detta för dina barn och skolelever för att skydda dessa från andra internetanvändare.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">I barnsäkert läge får lichess-logotypen en %s ikon, så att du vet att dina barn är säkra.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">I barnsäkert läge får Arena TV-logotypen en %s ikon, så att du vet att dina barn är säkra.</string>
   <string name="enableKidMode">Aktivera barnsäkert läge</string>
   <string name="disableKidMode">Avaktivera barnsäkert läge</string>
   <string name="security">Säkerhet</string>
@@ -733,7 +740,7 @@
   <string name="alternativelyYouCanX">Alternativt kan du %s.</string>
   <string name="revokeAllSessions">återkalla alla sessioner</string>
   <string name="playChessEverywhere">Spela schack var du vill</string>
-  <string name="asFreeAsLichess">Lika gratis som lichess</string>
+  <string name="asFreeAsLichess">Lika gratis som Arena TV</string>
   <string name="builtForTheLoveOfChessNotMoney">Byggt med kärlek till schacket, inte pengar</string>
   <string name="everybodyGetsAllFeaturesForFree">Alla får alla funktioner gratis</string>
   <string name="zeroAdvertisement">Ingen reklam</string>
@@ -753,6 +760,7 @@
   <string name="xHostsY">%1$s är värd för %2$s</string>
   <string name="xJoinsY">%1$s deltar i %2$s</string>
   <string name="xLikesY">%1$s gillar %2$s</string>
+  <string name="xCreatesStudyY">%1$s skapar studiet %2$s</string>
   <string name="quickPairing">Snabb parning</string>
   <string name="lobby">Lobby</string>
   <string name="anonymous">Anonym</string>
@@ -773,7 +781,7 @@
   <string name="usernameSuffixInvalid">Användarnamnet måste sluta med en bokstav eller ett nummer.</string>
   <string name="usernameCharsInvalid">Användarnamnet får bara innehålla bokstäver, siffror, understrykningstecken och bindestreck.</string>
   <string name="usernameUnacceptable">Detta användarnamn är inte acceptabelt.</string>
-  <string name="directlySupportLichess">Stöd Chess-Online</string>
+  <string name="directlySupportLichess">Stöd Arena TV</string>
   <string name="playChessInStyle">Spela schack med stil</string>
   <string name="chessBasics">Grunderna i schack</string>
   <string name="coaches">Schackcoacher</string>
@@ -848,4 +856,15 @@
     <item quantity="one">och spara %s linje av förhandsdrag</item>
     <item quantity="other">och spara %s linje av förhandsdrag</item>
   </plurals>
+  <string name="sorry">Beklagar :(</string>
+  <string name="weHadToTimeYouOutForAWhile">Vi är tvugna att stänga av dig en stund.</string>
+  <string name="timeoutExpires">Avstängningen upphör om %s.</string>
+  <string name="why">Varför?</string>
+  <string name="pleasantChessExperience">Vårt mål är att tillhandahålla alla en behaglig schackupplevelse.</string>
+  <string name="goodPractice">Därför måste vi försäkra att alla spelare följer god sed.</string>
+  <string name="potentialProblem">När ett möjligt problem upptäcks visar vi detta meddelande.</string>
+  <string name="howToAvoidThis">Hur undviker jag det här?</string>
+  <string name="playEveryGame">Spela varje parti som du påbörjar.</string>
+  <string name="tryToWin">Försök vinna (eller åtminstone nå remi i) varje parti som du spelar.</string>
+  <string name="resignLostGames">Ge upp förlorade partier (i stället för att låta tiden rinna ut).</string>
 </resources>

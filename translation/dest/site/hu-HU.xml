@@ -134,7 +134,6 @@
   <string name="viewInFullSize">Teljes méret</string>
   <string name="logOut">Kijelentkezés</string>
   <string name="signIn">Bejelentkezés</string>
-  <string name="newToLichess">Új vagy a Lichessen?</string>
   <string name="youNeedAnAccountToDoThat">Ehhez szükséged van egy fiókra</string>
   <string name="signUp">Regisztráció</string>
   <string name="computersAreNotAllowedToPlay">Számítógépek és számítógép segítségét igénybe vevő játékosok nem játszhatnak. Kérünk játék közben ne vegyél igénybe segítséget sakk programoktól, adatbázisoktól, vagy más játékosoktól. Több fiók készítése és használata egyszerre az oldalról való kitiltást vonja maga után.</string>
@@ -165,7 +164,6 @@
   <string name="username">Felhasználónév</string>
   <string name="usernameOrEmail">Felhasználónév vagy email</string>
   <string name="password">Jelszó</string>
-  <string name="haveAnAccount">Van már fiókod?</string>
   <string name="changePassword">Jelszó megváltoztatása</string>
   <string name="changeEmail">E-mail cím megváltoztatása</string>
   <string name="email">E-mail cím</string>
@@ -173,7 +171,6 @@
   <string name="forgotPassword">Elfelejtetted a jelszavad?</string>
   <string name="rank">Rang</string>
   <string name="rankX">Helyezés: %s.</string>
-  <string name="rankIsUpdatedEveryXMinutes">A rang %s percenként frissül</string>
   <plurals name="nbPuzzles">
     <item quantity="one">%s feladvány</item>
     <item quantity="other">%s feladvány</item>
@@ -348,10 +345,8 @@
   <string name="clickOnTheBoardToMakeYourMove">Kattints a táblára és lépj - innen tudjuk, hogy ember vagy.</string>
   <string name="captcha.fail">Kérünk, oldd meg a sakk captchát.</string>
   <string name="notACheckmate">Ez nem matt</string>
-  <string name="colorPlaysCheckmateInOne">%s lép; matt egy lépésben</string>
   <string name="retry">Újra</string>
   <string name="reconnecting">Újrakapcsolódás</string>
-  <string name="onlineFriends">Barátok online</string>
   <string name="noFriendsOnline">Nincs ismerős online</string>
   <string name="findFriends">Barát keresése</string>
   <string name="favoriteOpponents">Kedvenc ellenfelek</string>
@@ -441,8 +436,8 @@
   <string name="country">Ország</string>
   <string name="preferences">Testreszabás</string>
   <string name="inlineNotation">Megjegyzések beszúrása</string>
-  <string name="watchLichessTV">Chess-Online TV</string>
-  <string name="previouslyOnLichessTV">A Chess-Online TV korábbi műsorai</string>
+  <string name="watchLichessTV">Arena TV</string>
+  <string name="previouslyOnLichessTV">A Arena TV korábbi műsorai</string>
   <string name="onlinePlayers">Online játékosok</string>
   <string name="activeToday">Ma aktívak</string>
   <string name="activePlayers">Aktív játékosok</string>
@@ -452,7 +447,7 @@
   <string name="findTheBestMoveForWhite">Találd meg világos legjobb lépését!</string>
   <string name="findTheBestMoveForBlack">Találd meg sötét legjobb lépését!</string>
   <string name="toTrackYourProgress">Kövesd nyomon a fejlődésed:</string>
-  <string name="trainingSignupExplanation">Lichess a szintednek megfelelő feladványokat ad, hogy a gyakorlás minél jobb legyen.</string>
+  <string name="trainingSignupExplanation">Chess-Online a szintednek megfelelő feladványokat ad, hogy a gyakorlás minél jobb legyen.</string>
   <string name="puzzleId">%s. feladvány</string>
   <string name="puzzleOfTheDay">Napi feladvány</string>
   <string name="clickToSolve">Katt a megoldáshoz</string>
@@ -464,7 +459,7 @@
   <string name="butYouCanKeepTrying">De még próbálkozhatsz.</string>
   <string name="success">Sikerült!</string>
   <string name="wasThisPuzzleAnyGood">Tetszett a feladvány?</string>
-  <string name="pleaseVotePuzzle">Segíts a lichess fejlődésében azzal, hogy szavazol a le-föl nyilakkal:</string>
+  <string name="pleaseVotePuzzle">Segíts a Chess-Online fejlődésében azzal, hogy szavazol a le-föl nyilakkal:</string>
   <string name="thankYou">Köszönjük!</string>
   <string name="ratingX">Pontszám: %s</string>
   <plurals name="playedXTimes">
@@ -579,9 +574,8 @@
   <string name="xAskedY">%1$s kérdést tett fel %2$s címmel</string>
   <string name="xAnsweredY">%1$s megválaszolta a %2$s című témát</string>
   <string name="xCommentedY">%1$s hozzászólt a %2$s című témához</string>
-  <string name="victory">Helyes megoldás!</string>
+  <string name="victory">Helyes megoldás</string>
   <string name="defeat">Vereség</string>
-  <string name="xVsYinZ">%1$s %2$s ellen %3$s-ban</string>
   <string name="timeline">Idővonal</string>
   <string name="starting">Kezdés:</string>
   <string name="allInformationIsPublicAndOptional">Minden adat nyilvános, megadása nem kötelező.</string>
@@ -602,7 +596,7 @@
   <string name="clock">Óra</string>
   <string name="unauthorizedError">Hozzáférés megtagadva.</string>
   <string name="noInternetConnection">Nincs internetkapcsolat. Offline módban tudsz játszani.</string>
-  <string name="connectedToLichess">Csatlakoztál a Chess-Online.Com-hoz</string>
+  <string name="connectedToLichess">Csatlakoztál a Chess-Online-hoz</string>
   <string name="signedOut">Kijelentkeztél</string>
   <string name="loginSuccessful">Bejelentkeztél</string>
   <string name="playOnTheBoardOffline">Játék élőben</string>
@@ -631,9 +625,7 @@
   <string name="menu">Menü</string>
   <string name="castling">Sáncolás</string>
   <string name="whiteCastlingKingside">Világos rövidre sáncolhat</string>
-  <string name="whiteCastlingQueenside">Világos hosszúra sáncolhat</string>
   <string name="blackCastlingKingside">Sötét rövidre sáncolhat</string>
-  <string name="blackCastlingQueenside">Sötét hosszúra sáncolhat</string>
   <plurals name="nbForumPosts">
     <item quantity="one">%s fórumbejegyzés</item>
     <item quantity="other">%s fórumbejegyzés</item>
@@ -642,7 +634,6 @@
   <string name="watchGames">Játszmák nézése</string>
   <string name="tpTimeSpentOnTV">TV-n töltött idő: %s</string>
   <string name="watch">Néznivaló</string>
-  <string name="internationalEvents">Nemzetközi események</string>
   <string name="videoLibrary">Videó könyvtár</string>
   <string name="mobileApp">Mobil alkalmazás</string>
   <string name="webmasters">Webmester</string>
@@ -673,7 +664,7 @@
   <string name="simulClockHint">Fisher óra beállítás. Minél több játékossal játszol, annál több időre lesz szükség</string>
   <string name="simulAddExtraTime">Plusz időt adhatsz az órához, hogy a szimultán könnyebb legyen.</string>
   <string name="simulHostExtraTime">Időbónusz</string>
-  <string name="lichessTournaments">Arena versenyek</string>
+  <string name="lichessTournaments">Chess-Online versenyek</string>
   <string name="tournamentFAQ">Aréna verseny GYIK</string>
   <string name="tournamentOfficial">Hivatalos</string>
   <string name="timeBeforeTournamentStarts">Kezdés ennyi perc múlva</string>
@@ -703,8 +694,8 @@
   <string name="ifYouDoNotSeeTheEmailCheckOtherPlaces">Ha nem látod az email-t, ellenőrizd, hogy nincs-e a szemetes, a spam vagy a közösségi mappában, vagy egyéb mappákban.</string>
   <string name="weHaveSentYouAnEmailTo">Küldtünk egy üzenetet a %s email címre. A jelszavad megváltoztatásához kattints az üzenetben lévő linkre.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">A regisztrációval elfogadod a %s-t</string>
-  <string name="networkLagBetweenYouAndLichess">Hálózati késleltetés a számítógéped és a lichess között</string>
-  <string name="timeToProcessAMoveOnLichessServer">Az az idő, amíg a lichess szerver egy lépést feldolgoz</string>
+  <string name="networkLagBetweenYouAndLichess">Hálózati késleltetés a számítógéped és a Chess-Online között</string>
+  <string name="timeToProcessAMoveOnLichessServer">Az az idő, amíg a Chess-Online szerver egy lépést feldolgoz</string>
   <string name="downloadAnnotated">Letöltés elemzéssel</string>
   <string name="downloadRaw">Letöltés elemzés nélkül</string>
   <string name="downloadImported">Importált PGN letöltése</string>
@@ -725,7 +716,7 @@
   <string name="youHaveAlreadyRegisteredTheEmail">Már regisztrált ezzel az email címmel: %s</string>
   <string name="kidMode">Gyereküzemmód</string>
   <string name="kidModeExplanation">A Gyereküzemmód a biztonságról szól. A mód bekapcsolásával az összes kommunikáció megszűnik a többi játékossal, így megvédheted a gyermekeid vagy a diákjaid a többi felhasználó elől.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">Gyereküzemmódban kap a lichess egy %s ikont, így tudhatsz gyermekeid biztonságáról.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">Gyereküzemmódban kap a Chess-Online egy %s ikont, így tudhatsz gyermekeid biztonságáról.</string>
   <string name="enableKidMode">Gyereküzemmód bekapcsolása</string>
   <string name="disableKidMode">Gyereküzemmód kikapcsolása</string>
   <string name="security">Biztonság</string>
@@ -733,7 +724,7 @@
   <string name="alternativelyYouCanX">Ha úgy gondolod %s.</string>
   <string name="revokeAllSessions">eltávolíthatod az összes eszközt</string>
   <string name="playChessEverywhere">Sakkozz bárhol!</string>
-  <string name="asFreeAsLichess">Olyannyira ingyenes mint a lichess</string>
+  <string name="asFreeAsLichess">Olyannyira ingyenes mint a Chess-Online</string>
   <string name="builtForTheLoveOfChessNotMoney">A sakk szeretetéért építettük, nem a pénzért</string>
   <string name="everybodyGetsAllFeaturesForFree">Az összes funkció ingyenes, mindenki számára</string>
   <string name="zeroAdvertisement">Nulla hírdetés</string>
@@ -773,7 +764,7 @@
   <string name="usernameSuffixInvalid">A felhasználói névnek betűvel vagy számmal kell végződnie.</string>
   <string name="usernameCharsInvalid">A felhasználói névben nem szerepelhet más mint betűk, számok, aláhúzás- és kötőjel.</string>
   <string name="usernameUnacceptable">A felhasználói név nem megfelelő.</string>
-  <string name="directlySupportLichess">Támogasd a Chess-Online</string>
+  <string name="directlySupportLichess">Támogasd a Chess-Onlinet</string>
   <string name="playChessInStyle">Sakkozz stílusosan</string>
   <string name="chessBasics">A sakk alapjai</string>
   <string name="coaches">Oktatók</string>

@@ -678,7 +678,7 @@
   <string name="clock">Часы</string>
   <string name="unauthorizedError">Неавторизованный доступ.</string>
   <string name="noInternetConnection">Нет интернет соединения. Вы можете пока играть офлайн из меню.</string>
-  <string name="connectedToLichess">Сейчас вы подключены к Chess-Online.Com</string>
+  <string name="connectedToLichess">Сейчас вы подключены к Chess-Online</string>
   <string name="signedOut">Вы вышли</string>
   <string name="loginSuccessful">Вы вошли</string>
   <string name="playOnTheBoardOffline">Вдвоём за доской</string>
@@ -815,8 +815,8 @@
   <string name="alternativelyYouCanX">Также вы можете %s.</string>
   <string name="revokeAllSessions">закрыть все сессии</string>
   <string name="playChessEverywhere">Играйте в шахматы везде</string>
-  <string name="asFreeAsLichess">Бесплатен, как воздух</string>
-  <string name="builtForTheLoveOfChessNotMoney">С любовью к шахматам и к шахматистам</string>
+  <string name="asFreeAsLichess">Бесплатен, как Arena TV</string>
+  <string name="builtForTheLoveOfChessNotMoney">С любовью к шахматам, а не к деньгам</string>
   <string name="everybodyGetsAllFeaturesForFree">Все возможности для всех бесплатно</string>
   <string name="zeroAdvertisement">Никакой рекламы</string>
   <string name="fullFeatured">Максимальная функциональность</string>

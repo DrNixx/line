@@ -10,7 +10,7 @@
   <string name="yourTurn">तपाइको पालो</string>
   <string name="aiNameLevelAiLevel">%1$s तह %2$s</string>
   <string name="level">तह</string>
-  <string name="toggleTheChat">बार्तालाप खोल्ने/बन्द गर्ने </string>
+  <string name="toggleTheChat">बार्तालाप खोल्ने/बन्द गर्ने</string>
   <string name="toggleSound">ध्वनी खोल्ने/बन्द गर्ने</string>
   <string name="chat">बार्तालाप</string>
   <string name="resign">छाेड्नुहाेस्</string>
@@ -204,7 +204,7 @@
   <string name="playingRightNow">खेल चालु छ</string>
   <string name="eventInProgress">खेल चालु छ</string>
   <string name="finished">समाप्त भयो</string>
-  <string name="finishesX">समापन हुदैं %s </string>
+  <string name="finishesX">समापन हुदैं %s</string>
   <string name="abortGame">खेल रद्द गरौ</string>
   <string name="gameAborted">खेल रद्द गरियो</string>
   <string name="standard">सामान्य</string>
@@ -615,7 +615,7 @@
   <string name="clock">घडी</string>
   <string name="unauthorizedError">प्रवेश निषेध गरिएको छ।</string>
   <string name="noInternetConnection">इंटरनेट कनेक्शन छैन। तर अझै पनि तपाईं अफलाइन खेल खेल्न सक्नुहुन्छ।</string>
-  <string name="connectedToLichess">अब तपाइ lichess.org मा जोडिइनु भएको छ</string>
+  <string name="connectedToLichess">अब तपाइ Chess-Online मा जोडिइनु भएको छ</string>
   <string name="signedOut">तपाइलाई साइन आउट गरिएको छ</string>
   <string name="loginSuccessful">तपाइ अब साइन इन हुनुभएको छ</string>
   <string name="playOnTheBoardOffline">वास्तविक बोर्डमा</string>
@@ -876,7 +876,7 @@
   <string name="tryToWin">खेलेको सबै खेल जित्ने वा बराबर गर्ने प्रयास गर्नुहोस्।</string>
   <string name="resignLostGames">हारेको खेल परित्याग गर्नुहोस् ( घडी त्यसै चल्न नदिनुहोस्।)</string>
   <string name="temporaryInconvenience">अस्थायी असुबिधाको लागि क्षमाप्रार्थी छौं,</string>
-  <string name="wishYouGreatGames">तपाइलाई lichess.org मा राम्रो खेल्न शुभकामना छ।</string>
+  <string name="wishYouGreatGames">तपाइलाई Chess-Online.Com मा राम्रो खेल्न शुभकामना छ।</string>
   <string name="thankYouForReading">पढ्नुभएको मा धन्यवाद</string>
   <string name="lifetimeScore">आजिवन अंक</string>
   <string name="currentMatchScore">हालका खेलहरुकोको अंक</string>
