@@ -1,7 +1,10 @@
 #!/bin/sh -e
 . bin/lilarc
 
+export PATH="/usr/lib/jvm/java-8-openjdk/jre/bin/:$PATH"
+
 mode=$1
+
 if [ -z $mode ]; then
   echo "Empty deploy target"
   exit 1
@@ -74,6 +77,7 @@ RSYNC_OPTIONS=" \
   --exclude '*.psd' \
   --exclude '*.h' \
   --exclude '*.cpp' \
+  --exclude '*.xcf' \
   --exclude '.git/' \
   --exclude node_modules"
 
@@ -95,7 +99,7 @@ fi
 
 if [ $FRONT_REMOTE ] && [ $FRONT_REMOTE_DIR ]; then
   lilalog "Deploy assets to $mode frontend server $FRONT_REMOTE:$FRONT_REMOTE_DIR"
-  rsync --archive --no-o --no-g --progress public $FRONT_REMOTE:$FRONT_REMOTE_DIR
+  rsync --archive --no-o --no-g --progress --exclude '*.dev.css' public $FRONT_REMOTE:$FRONT_REMOTE_DIR
 fi
 
 read -n 1 -p "Press [Enter] to complete deployment to $mode server $REMOTE:$REMOTE_DIR"
@@ -107,8 +111,8 @@ if [ $mode = "main" ]; then
 fi
 
 # start dropping packets. Run `bin/prod/iptables-drop 0` on the server to resume normal traffic.
-START_DROPPING="$REMOTE_DIR/bin/prod/iptables-drop 0.9"
-STOP_DROPPING="sleep 7 && $REMOTE_DIR/bin/prod/iptables-drop 0.75 && sleep 6 && $REMOTE_DIR/bin/prod/iptables-drop 0"
+# START_DROPPING="$REMOTE_DIR/bin/prod/iptables-drop 0.9"
+# STOP_DROPPING="sleep 7 && $REMOTE_DIR/bin/prod/iptables-drop 0.75 && sleep 6 && $REMOTE_DIR/bin/prod/iptables-drop 0"
 # STOP_DROPPING="echo \"not resuming traffic\""
 
 if [ $mode = "main" ]; then
@@ -133,8 +137,3 @@ if [ $mode = "stress" ]; then
 fi
 
 lilalog "Deploy complete"
-
-if [ $mode != "local" ]; then
-  sleep 2
-  curl_prod
-fi

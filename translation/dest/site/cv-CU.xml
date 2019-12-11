@@ -80,7 +80,6 @@
   <string name="viewInFullSize">Тулли калӑпӑшла пӑх</string>
   <string name="logOut">Тух</string>
   <string name="signIn">Кӗр</string>
-  <string name="newToLichess">Lichess пӗрремӗш хут?</string>
   <string name="youNeedAnAccountToDoThat">Куна унӑ тумашкӑн аккаунт кирлӗ</string>
   <string name="signUp">Регистратсилес</string>
   <string name="games">Вӑйӑсем</string>
@@ -108,7 +107,6 @@
   <string name="username">Усӑҫ йачӗ</string>
   <string name="usernameOrEmail">Усӑҫ йачӗ йе ел. пушти</string>
   <string name="password">Кӗме сӑмах</string>
-  <string name="haveAnAccount">Аккаунт пур-и?</string>
   <string name="changePassword">Кӗме сӑмах улӑштарни</string>
   <string name="changeEmail">Ел. пуштӑ улӑштарни</string>
   <string name="email">Ел. пуштӑ</string>
@@ -116,7 +114,6 @@
   <string name="forgotPassword">Кӗме сӑмаха мансан</string>
   <string name="rank">Хаклав</string>
   <string name="rankX">Рейтинг: %s</string>
-  <string name="rankIsUpdatedEveryXMinutes">Рейтинг %s минут сиктерсе ҫӗнелет</string>
   <string name="gamesPlayed">вӑйӑ выљанӑ</string>
   <plurals name="nbGamesWithYou">
     <item quantity="other">Санпа %s вӑйӑ выљанӑ</item>
@@ -237,10 +234,8 @@
   <string name="thisIsAChessCaptcha">Ку вӑл CAPTCHA шахматла.</string>
   <string name="clickOnTheBoardToMakeYourMove">Етем пулнине ҫирӗплетес тесе, тата куҫас тесе хӑма ҫине пус.</string>
   <string name="notACheckmate">Мат туни мар</string>
-  <string name="colorPlaysCheckmateInOne">%s ҫӳреҫҫӗ; пӗрре ҫӳресе мат ту</string>
   <string name="retry">Тепӗр хут</string>
   <string name="reconnecting">Ҫӗнӗрен ҫыхӑнасси</string>
-  <string name="onlineFriends">Тетелти тус</string>
   <string name="noFriendsOnline">Тетелти тус ҫук</string>
   <string name="findFriends">Тус тупар</string>
   <string name="follow">Ҫырӑн</string>
@@ -301,8 +296,8 @@
   <string name="biography">Биографи</string>
   <string name="country">Ҫӗр-шыв</string>
   <string name="preferences">Ӗнерлев</string>
-  <string name="watchLichessTV">Chess-Online TV кур</string>
-  <string name="previouslyOnLichessTV">Chess-Online TV паҫӑр кӑтартни</string>
+  <string name="watchLichessTV">Arena TV кур</string>
+  <string name="previouslyOnLichessTV">Arena TV паҫӑр кӑтартни</string>
   <string name="onlinePlayers">Тетелти вӑйӑҫӑ</string>
   <string name="activeToday">Пайан тимлисем</string>
   <string name="activePlayers">Тимлӗ вӑйӑҫӑ</string>
@@ -323,7 +318,7 @@
   <string name="butYouCanKeepTrying">Ҫапах та малалла хӑтланма пултаратӑн.</string>
   <string name="success">Ӑнӑҫуллӑ</string>
   <string name="wasThisPuzzleAnyGood">Ку лартӑм лайӑх пулнӑ-и мӗн?</string>
-  <string name="pleaseVotePuzzle">Lichess лайӑхлатас тесен, ҫи йе ай йӗппипе усӑ курса хак пар:</string>
+  <string name="pleaseVotePuzzle">Chess-Online лайӑхлатас тесен, ҫи йе ай йӗппипе усӑ курса хак пар:</string>
   <string name="thankYou">Тавах!</string>
   <string name="ratingX">Рейтинг: %s</string>
   <plurals name="playedXTimes">
@@ -443,7 +438,7 @@
   <string name="clock">Сехет</string>
   <string name="unauthorizedError">Сайт ҫине кӗмен.</string>
   <string name="noInternetConnection">Интернет ҫыхӑнӑвӗ ҫук. Ҫапах та менӳрен офлайн та выльама пултаратӑн.</string>
-  <string name="connectedToLichess">Chess-Online.Com сайтпа ҫыхӑнтарнӑ</string>
+  <string name="connectedToLichess">Chess-Online сайтпа ҫыхӑнтарнӑ</string>
   <string name="signedOut">Есӗ аккаунтран тухрӑн</string>
   <string name="loginSuccessful">Есӗ аккаунта кӗтӗн</string>
   <string name="playOnTheBoardOffline">Пӗр хӑма ҫинче</string>
@@ -471,9 +466,7 @@
   <string name="menu">Менӳ</string>
   <string name="castling">Роклани</string>
   <string name="whiteCastlingKingside">Шурӑ O-O</string>
-  <string name="whiteCastlingQueenside">Шурӑ O-O-O</string>
   <string name="blackCastlingKingside">Хура O-O</string>
-  <string name="blackCastlingQueenside">Хура O-O-O</string>
   <plurals name="nbForumPosts">
     <item quantity="other">%s Форумра ҫырни</item>
   </plurals>
@@ -481,7 +474,6 @@
   <string name="watchGames">Вӑййисене тишкер</string>
   <string name="tpTimeSpentOnTV">TV курнӑ вӑхӑт: %s</string>
   <string name="watch">Тишкерӳ</string>
-  <string name="internationalEvents">Халӑх хушшинчи пулӑмсем</string>
   <string name="videoLibrary">Курма пуххи</string>
   <string name="mobileApp">Мобиллӗ хушӑм</string>
   <string name="webmasters">Веб маҫтӑрсем</string>
@@ -501,7 +493,7 @@
   <string name="aboutSimulSettings">Пӗр вӑхӑтри вӑйӑ йаланах ахаль вӑйӑ. Рематч выльама, тавӑрма тата \"ытлаши вӑхӑт\" илме ҫук.</string>
   <string name="create">Йӗркелес</string>
   <string name="whenCreateSimul">Пӗр вӑхӑтри вӑйӑ йӗрекелесен, санӑн темиҫе ӑмӑртуҫпа пӗр вӑхӑтра выльамалла.</string>
-  <string name="lichessTournaments">Arena турнирӗсем</string>
+  <string name="lichessTournaments">Chess-Online турнирӗсем</string>
   <string name="tournamentFAQ">Аренӑ турнирӗн ТЛЫӗ</string>
   <string name="tournamentOfficial">Офиссаллӑ</string>
   <string name="timeBeforeTournamentStarts">Турнир пуҫланиччен хушши</string>
@@ -524,8 +516,8 @@
   <string name="ifYouDoNotSeeTheEmailCheckOtherPlaces">Ҫырӑвӗ курӑнмасть пулсан, вӑл пурри-ҫуккине спам папкинче йе ытти папкӑра тӗрӗсле.</string>
   <string name="weHaveSentYouAnEmailTo">Епир %s ҫине ҫыру йатӑмӑр. Вӑрттӑн сӑмахна улӑштарас тесе ҫырури каҫӑ ҫине пус.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Регистратсилесси пирӗн %s килӗшессине пӗлтерет.</string>
-  <string name="networkLagBetweenYouAndLichess">Санпа Lichess хушшинче тетел чӑрмантарса тӑни пур</string>
-  <string name="timeToProcessAMoveOnLichessServer">Lichess сервӗрӗ пӗр куҫӑм ӗҫлесе илмелли вӑхӑт</string>
+  <string name="networkLagBetweenYouAndLichess">Санпа Chess-Online хушшинче тетел чӑрмантарса тӑни пур</string>
+  <string name="timeToProcessAMoveOnLichessServer">Chess-Online сервӗрӗ пӗр куҫӑм ӗҫлесе илмелли вӑхӑт</string>
   <string name="downloadAnnotated">Ӑнлантаруллă</string>
   <string name="downloadRaw">Ӑнлантарусӑр</string>
   <string name="downloadImported">Оригиналлӑ</string>
@@ -537,7 +529,7 @@
   <string name="youHaveAlreadyRegisteredTheEmail">Есӗ ҫак пуштӑпа регистратсиленнӗ-ха: %s</string>
   <string name="kidMode">Ача-пӑча решимӗ</string>
   <string name="playChessEverywhere">Шахматла пур ҫӗрте выљасси</string>
-  <string name="asFreeAsLichess">Lichess пекех тӳлевсӗр</string>
+  <string name="asFreeAsLichess">Chess-Online пекех тӳлевсӗр</string>
   <string name="builtForTheLoveOfChessNotMoney">Укҫашӑн мар, шахматшӑн хайланӑ</string>
   <string name="everybodyGetsAllFeaturesForFree">Мӗнпур мехел пуриншӗн те тӳлевсӗр</string>
   <string name="zeroAdvertisement">Пӗр рекламӑ та ҫукки</string>

@@ -9,7 +9,10 @@ import lila.user.User
 
 case class LiveStreams(streams: List[Stream]) {
 
-  def has(streamer: Streamer) = streams.exists(_ is streamer)
+  private lazy val streamerIds: Set[Streamer.Id] = streams.map(_.streamer.id)(scala.collection.breakOut)
+
+  def has(id: Streamer.Id): Boolean = streamerIds(id)
+  def has(streamer: Streamer): Boolean = has(streamer.id)
 
   def get(streamer: Streamer) = streams.find(_ is streamer)
 
@@ -23,11 +26,18 @@ case class LiveStreams(streams: List[Stream]) {
       lightUser.sync(userId).flatMap(_.title) map (userId ->)
     }.toMap
   )
+
+  def excludeUsers(userIds: List[User.ID]) = copy(
+    streams = streams.filterNot(s => userIds contains s.streamer.userId)
+  )
 }
 
 object LiveStreams {
   case class WithTitles(live: LiveStreams, titles: Map[User.ID, String]) {
     def titleName(s: Stream) = s"${titles.get(s.streamer.userId).fold("")(_ + " ")}${s.streamer.name}"
+    def excludeUsers(userIds: List[User.ID]) = copy(
+      live = live excludeUsers userIds
+    )
   }
 }
 
@@ -55,7 +65,7 @@ final class LiveStreamApi(
   //       requested = false,
   //       granted = true,
   //       ignored = false,
-  //       autoFeatured = false,
+  //       autoFeatured = true,
   //       chatEnabled = true
   //     ),
   //     picturePath = none,
@@ -70,6 +80,7 @@ final class LiveStreamApi(
   //     updatedAt = DateTime.now
   //   ))
   // )))
+
   def of(s: Streamer.WithUser): Fu[Streamer.WithUserAndStream] = all.map { live =>
     Streamer.WithUserAndStream(s.streamer, s.user, live get s.streamer)
   }

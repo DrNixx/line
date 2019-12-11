@@ -96,7 +96,6 @@
   <string name="viewInFullSize">viska fau lo nu nilbra fa lo cnano</string>
   <string name="logOut">co\'u pilno lo jaspu</string>
   <string name="signIn">co\'a pilno lo jaspu</string>
-  <string name="newToLichess">xu la .litces. do cnino</string>
   <string name="youNeedAnAccountToDoThat">sarcu fa lo nu do pilno su\'o jaspu</string>
   <string name="signUp">co\'a se jaspu</string>
   <string name="computersAreNotAllowedToPlay">.e\'a nai lo proga ja lo voi lo proga ke\'a sidju cu jivna .i .e\'o do ca lo nu do jivna na se sidju su\'o caxmati jivna bo zmiku ja datnysro ja su\'o drata caxmati jivna .i ji\'a ko sanji lo nu tu\'e lo nu se jaspu za\'u da na se nelci .i je lo nu pilno du\'e jaspu cu se jalge lo nu to\'e .e\'ande fi lo ka pagzu\'e tu\'u</string>
@@ -125,7 +124,6 @@
   <string name="username">lo japycme</string>
   <string name="usernameOrEmail">lo japcme jo nai lo samymrijudri</string>
   <string name="password">lo kikyvla</string>
-  <string name="haveAnAccount">xu do se jaspu .i</string>
   <string name="changePassword">cenba lo ka ma kau kikyvla</string>
   <string name="changeEmail">cenba lo ka pilno mo\'oi kau samymrijudri</string>
   <string name="email">samymri judri</string>
@@ -217,7 +215,6 @@
   <plurals name="moreThanNbRatedGames">
     <item quantity="other">su\'o %s nunjvi je ke nilcre cnegau</item>
   </plurals>
-  <string name="yourPerfRatingIsProvisional">lo nilcre be do cu tolsatci</string>
   <string name="mustBeInTeam">.i sarcu fa lo nu cmima la\'o zoi. %s .zoi noi bende</string>
   <string name="youAreNotInTeam">.i do na cmima la\'o zoi. %s .zoi noi bende</string>
   <string name="backToGame">xruti tu\'a lo nunjvi</string>
@@ -258,10 +255,8 @@
   <string name="thisIsAChessCaptcha">←ti caxmati ciprkaptca</string>
   <string name="clickOnTheBoardToMakeYourMove">.i ko te zu\'e gi jarco lo ka remna gi ta\'i gi .iklki lo foldi gi zukte tu\'a lo kelka\'u</string>
   <string name="notACheckmate">na caxmata</string>
-  <string name="colorPlaysCheckmateInOne">%s pu\'o zukte</string>
   <string name="retry">troci xoi krefu</string>
   <string name="reconnecting">troci lo ka di\'a jorne</string>
-  <string name="onlineFriends">lo pendo poi ca kibzva</string>
   <string name="noFriendsOnline">no lo do pendo ca\'o kibzva</string>
   <string name="findFriends">sispe\'i lo pendo</string>
   <string name="favoriteOpponents">lo cafrai be lo\'i se jivna</string>
@@ -330,8 +325,8 @@
   <string name="biography">velski do fo do</string>
   <string name="country">lo gugde</string>
   <string name="preferences">lo se nelrai</string>
-  <string name="watchLichessTV">mencti la\'o gy. Chess-Online TV .gy</string>
-  <string name="previouslyOnLichessTV">lo purci nunkei pe lo la .chess-online. se tivni</string>
+  <string name="watchLichessTV">mencti la\'o gy. Arena TV .gy</string>
+  <string name="previouslyOnLichessTV">lo purci nunkei pe lo la .litces. se tivni</string>
   <string name="onlinePlayers">lo cabna jvikei</string>
   <string name="activeToday">keicfu ca lo cabdei</string>
   <string name="activePlayers">keicfu</string>
@@ -475,7 +470,7 @@
   <string name="clock">junla</string>
   <string name="unauthorizedError">jonse tolcru</string>
   <string name="noInternetConnection">ka\'e nai kibro jorne .i ku\'i kakne lo ka kelci se cau kei do\'e lo cuxna uidje</string>
-  <string name="connectedToLichess">do ca jorne la\'o zoi. Chess-Online.Com .zoi</string>
+  <string name="connectedToLichess">do ca jorne la\'o zoi. Chess-Online .zoi</string>
   <string name="signedOut">do co\'u pilno lo jaspu</string>
   <string name="loginSuccessful">do co\'a pilno lo jaspu</string>
   <string name="playOnTheBoardOffline">pilno lo pa fonxa</string>
@@ -503,14 +498,11 @@
   <string name="menu">cuxna uidje</string>
   <string name="castling">nolraitru joi sonci kelka\'u</string>
   <string name="whiteCastlingKingside">lo blabi ka\'e pei nolraitru joi sonci cmalu bo kelka\'u muvgau</string>
-  <string name="whiteCastlingQueenside">lo blabi ka\'e pei nolraitru joi sonci barda bo kelka\'u muvgau</string>
   <string name="blackCastlingKingside">lo xekri ka\'e pei nolraitru joi sonci cmalu bo kelka\'u muvgau</string>
-  <string name="blackCastlingQueenside">lo xekri ka\'e pei nolraitru joi sonci cmalu bo kelka\'u muvgau</string>
   <string name="tpTimeSpentPlaying">jvikei ze\'a la\'o temci. %s .temci</string>
   <string name="watchGames">zgana lo selkei</string>
   <string name="tpTimeSpentOnTV">jai se tivni ze\'a la\'o temci. %s .temci</string>
   <string name="watch">zgana</string>
-  <string name="internationalEvents">lo gugykruca fasnu</string>
   <string name="videoLibrary">kinsro</string>
   <string name="webmasters">lo kibystuja\'a</string>
   <string name="about">srana la .litces.</string>
@@ -519,7 +511,7 @@
   <string name="hostColorX">lo ralkei cu skari lo ka %s</string>
   <string name="noSimulExplanation">ti noi cabysi\'u nuntigni cu na zasti</string>
   <string name="create">finti</string>
-  <string name="lichessTournaments">lo grinunjvi be bu\'u la .arena.</string>
+  <string name="lichessTournaments">lo grinunjvi be bu\'u la .litces.</string>
   <string name="tournamentFAQ">lo cafne se reisku preti be lo kelcrxarena zei grinunjvi</string>
   <string name="tournamentOfficial">ca\'iselzau</string>
   <string name="newTournament">cnino grinunjvi</string>
@@ -548,7 +540,7 @@
   <string name="quickPairing">selsutra jivna</string>
   <string name="lobby">lo depstu</string>
   <string name="anonymous">cmecau</string>
-  <string name="yourScore">veljvilai do fa li %S</string>
+  <string name="yourScore">veljvilai do fa li %s</string>
   <string name="language">lo bangu</string>
   <string name="background">lo vinti\'e</string>
   <string name="light">tolmanku</string>
@@ -559,7 +551,7 @@
   <string name="usernamePrefixInvalid">sarcu fa lo nu lo japcme cu se tolfa\'o lo vlale\'u</string>
   <string name="usernameSuffixInvalid">sarcu fa lo nu lo japcme cu se fanmo lo vlale\'u .a lo nacle\'u</string>
   <string name="usernameUnacceptable">ti noi japcme cu se tolzau</string>
-  <string name="directlySupportLichess">sarji la .Chess-Online.</string>
+  <string name="directlySupportLichess">sarji la .litces.</string>
   <string name="playChessInStyle">selja\'i kelci lo caxmati</string>
   <string name="chessBasics">lo jicmu be lo caxmati</string>
   <string name="coaches">lo te\'ictu</string>

@@ -7,54 +7,47 @@ import lila.common.Domain
 
 final class DisposableEmailDomain(
     providerUrl: String,
-    blacklistStr: () => lila.common.Strings,
-    bus: lila.common.Bus
+    checkMailBlocked: () => Fu[List[String]]
 ) {
 
-  private var domains = Set.empty[String]
-  private var failed = false
+  private val staticRegex = toRegexStr(DisposableEmailDomain.staticBlacklist.iterator)
 
-  private[security] def refresh: Unit = {
-    WS.url(providerUrl).get() map { res =>
-      domains = res.body.lines.toSet
-      failed = domains.size < 10000
-      lila.mon.email.disposableDomain(domains.size)
-    } recover {
-      case _: java.net.ConnectException => // ignore network errors
-      case e: Exception => onError(e)
+  private var regex = finalizeRegex(staticRegex)
+
+  private[security] def refresh: Unit = for {
+    blacklist <- WS.url(providerUrl).get().map(_.body.lines) recover {
+      case e: Exception =>
+        logger.warn("DisposableEmailDomain.refresh", e)
+        Iterator.empty
     }
+    checked <- checkMailBlocked()
+  } {
+    val regexStr = s"${toRegexStr(blacklist)}|${toRegexStr(checked.toIterator)}"
+    val nbDomains = regexStr.count('|' ==)
+    lila.mon.email.disposableDomain(nbDomains)
+    regex = finalizeRegex(s"$staticRegex|$regexStr")
   }
 
-  private def onError(e: Exception): Unit = {
-    logger.error("Can't update disposable emails", e)
-    if (!failed) {
-      failed = true
-      bus.publish(
-        lila.hub.actorApi.slack.Error(s"Disposable emails list: ${e.getMessage}\nPlease fix $providerUrl"),
-        'slack
-      )
-    }
+  private def toRegexStr(domains: Iterator[String]) = domains.map(l => l.replace(".", "\\.")).mkString("|")
+
+  private def finalizeRegex(regexStr: String) = s"(^|\\.)($regexStr)$$".r
+
+  def apply(domain: Domain): Boolean = {
+    val lower = domain.lower
+    !DisposableEmailDomain.whitelisted(lower) && regex.find(lower.value)
   }
 
-  def apply(domain: Domain): Boolean =
-    !DisposableEmailDomain.whitelisted(domain) && {
-      domains.contains(domain.value) ||
-        DisposableEmailDomain.staticBlacklist.contains(domain.value) ||
-        blacklistStr().value.contains(domain.value)
-    }
+  def isOk(domain: Domain) = !apply(domain)
 
   def fromDomain(mixedCase: String): Boolean = apply(Domain(mixedCase.toLowerCase))
 }
 
 private object DisposableEmailDomain {
 
-  def whitelisted(domain: Domain) = whitelist contains domain.value
+  def whitelisted(domain: Domain.Lower) = whitelist contains domain.value
 
   private val staticBlacklist = Set(
-    "chess-online.com",
-    "gamil.com",
-    "mybx.site", "mywrld.top", "wemel.top", "matra.top", "dripbank.com", "yopmail.xxi2.com",
-    "4bi.email-temp.com", "forevernew.in", "sss.pp.ua", "ttempm.com"
+    "lichess.org", "gamil.com", "gmali.com"
   )
 
   private val whitelist = Set(
@@ -66,8 +59,8 @@ private object DisposableEmailDomain {
     /* Other global domains */
     "email.com", "games.com" /* AOL */ , "gmx.net", "hush.com", "hushmail.com", "icloud.com", "inbox.com",
     "lavabit.com", "love.com" /* AOL */ , "outlook.com", "pobox.com", "rocketmail.com" /* Yahoo */ ,
-    "safe-mail.net", "wow.com" /* AOL */ , "ygm.com" /* AOL */ , "ymail.com" /* Yahoo */ , "zoho.com", "fastmail.fm",
-    "yandex.com",
+    "safe-mail.net", "wow.com" /* AOL */ , "ygm.com" /* AOL */ , "ymail.com" /* Yahoo */ , "zoho.com",
+    "fastmail.com", "fastmail.fm", "yandex.com",
 
     /* United States ISP domains */
     "bellsouth.net", "charter.net", "comcast.net", "cox.net", "earthlink.net", "juno.com",
@@ -102,6 +95,6 @@ private object DisposableEmailDomain {
     "yahoo.com.br", "hotmail.com.br", "outlook.com.br", "uol.com.br", "bol.com.br", "terra.com.br", "ig.com.br", "itelefonica.com.br", "r7.com", "zipmail.com.br", "globo.com", "globomail.com", "oi.com.br",
 
     /* Domains without an A record */
-    "cabletv.on.ca"
+    "cabletv.on.ca", "live.ca", "unitybox.de", "volki.at"
   )
 }

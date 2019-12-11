@@ -26,7 +26,6 @@ final class Env(
   )
 
   system.actorOf(Props(new Push(
-    bus = system.lilaBus,
     renderer = renderer,
     getFriendIds = getFriendIds,
     getFollowerIds = getFollowerIds,
@@ -47,6 +46,10 @@ final class Env(
         case false => None // not applicable
       }
     }
+
+  lila.common.Bus.subscribeFun('shadowban) {
+    case lila.hub.actorApi.mod.Shadowban(userId, true) => entryApi removeRecentFollowsBy userId
+  }
 
   private[timeline] lazy val entryColl = db(CollectionEntry)
   private[timeline] lazy val unsubColl = db(CollectionUnsub)

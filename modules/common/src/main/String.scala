@@ -2,19 +2,17 @@ package lila.common
 
 import java.text.Normalizer
 import play.api.libs.json._
-import play.twirl.api.Html
-import scalatags.Text.RawFrag
+import scalatags.Text.all._
 
 import lila.base.RawHtml
-import lila.common.base.StringUtils.{ safeJsonString, escapeHtml => escapeHtmlRaw }
+import lila.common.base.StringUtils.{ safeJsonString, escapeHtmlRaw }
 
 final object String {
 
-  val erased = "<deleted>"
-  val erasedHtml = Html("&lt;deleted&gt;")
-
   private[this] val slugR = """[^\w-]""".r
   private[this] val slugMultiDashRegex = """-{2,}""".r
+
+  def lcfirst(str: String) = str(0).toLower + str.drop(1)
 
   def slugify(input: String) = {
     val nowhitespace = input.trim.replace(' ', '-')
@@ -53,22 +51,22 @@ final object String {
   val atUsernameRegex = RawHtml.atUsernameRegex
 
   object html {
-    def richText(rawText: String, nl2br: Boolean = true) = Html {
+    def richText(rawText: String, nl2br: Boolean = true): Frag = raw {
       val withLinks = RawHtml.addLinks(rawText)
       if (nl2br) RawHtml.nl2br(withLinks) else withLinks
     }
 
-    def nl2brUnsafe(text: String) = Html {
-      RawHtml.nl2br(text)
+    def nl2brUnsafe(text: String): Frag = raw {
+      RawHtml nl2br text
     }
 
-    def nl2br(text: String): Html = nl2brUnsafe(escapeHtmlRaw(text))
+    def nl2br(text: String): Frag = nl2brUnsafe(escapeHtmlRaw(text))
 
-    def escapeHtml(s: String) = Html {
+    def escapeHtml(s: String): RawFrag = raw {
       escapeHtmlRaw(s)
     }
 
-    def markdownLinks(text: String) = Html {
+    def markdownLinks(text: String): Frag = raw {
       RawHtml.markdownLinks(text)
     }
 
@@ -88,16 +86,5 @@ final object String {
         }
       }
     }
-
-    def safeJson(jsValue: JsValue) = Html {
-      safeJsonValue(jsValue)
-    }
   }
-
-  object frag {
-    def escapeHtml(s: String) = RawFrag {
-      escapeHtmlRaw(s)
-    }
-  }
-
 }

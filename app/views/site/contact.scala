@@ -36,21 +36,16 @@ object contact {
     ul(
       li(
         "In the ",
-        a(href := routes.ForumCateg.show("lichess-feedback"))("Lichess Feedback Forum")
+        a(href := routes.ForumCateg.show("arena-feedback"))("Chess-Online Feedback Forum")
       ),
       li(
         "As a ",
-        a(href := "https://github.com/ornicar/lila/issues")("Lichess website issue"),
-        " on GitHub"
-      ),
-      li(
-        "As a ",
-        a(href := "https://github.com/veloce/lichobile/issues")("Lichess mobile app issue"),
+        a(href := "https://github.com/DrNixx/line/issues")("Chess-Online Arena website issue"),
         " on GitHub"
       ),
       li(
         "In the ",
-        a(href := "https://discord.gg/hy5jqSs")("Lichess discord server")
+        a(href := "https://discord.gg/Rfw6C2C")("Chess-Online discord server")
       )
     ),
     p("Please describe what the bug looks like, what you expected to happen instead, and the steps to reproduce the bug.")
@@ -81,12 +76,19 @@ object contact {
             " with the email address you signed up with."
           )
         )),
+        Leaf("lost-2fa", "I lost access to my two-factor authentication codes", frag(
+          p(
+            "Do a ",
+            a(href := routes.Auth.passwordReset)("password reset"),
+            " to remove your second factor."
+          )
+        )),
         reopenLeaf("login"),
         Leaf("dns", "\"This site can’t be reached\"", frag(
-          p("If you can't reach lichess, and your browser says something like:"),
+          p("If you can't reach Chess-Online Arena, and your browser says something like:"),
           ul(
             li("This site can't be reached."),
-            li(strong("Chess-Online"), "’s server IP address could not be found."),
+            li(strong("Chess-Online.Com"), "’s server IP address could not be found."),
             li("We can’t connect to the server at live.chess-online.com.")
           ),
           p("Then you have a ", strong("DNS issue"), "."),
@@ -98,9 +100,9 @@ object contact {
         ))
       )),
       Branch("account", "I need account support", List(
-        Leaf("title", "I want my title displayed on lichess", frag(
+        Leaf("title", "I want my title displayed on Chess-Online Arena", frag(
           p(
-            "To show your title on your lichess profile, and participate to Titled Arenas, ",
+            "To show your title on your Chess-Online Arena profile, and participate to Titled Arenas, ",
             a(href := routes.Page.master)(
               "visit the title confirmation page"
             ),
@@ -172,13 +174,13 @@ object contact {
         Leaf("insufficient", "Insufficient mating material", frag(
           p(
             "According to the ",
-            a(href := "https://www.fide.com/fide/handbook.html?id=171&view=article")(
-              "FIDE Laws of Chess"
+            a(href := "https://www.fide.com/FIDE/handbook/LawsOfChess.pdf")(
+              "FIDE Laws of Chess §6.9 (pdf)"
             ),
             ", if a checkmate is possible with any legal sequence of moves, then the game is not a draw."
           ),
           p(
-            "It is possible to checkmate with only a knight or a bishop, if the opponent has more than a king on the board."
+            "It can be possible to checkmate with only a knight or a bishop, if the opponent has more than a king on the board."
           )
         )),
         Leaf("casual", "No rating points were awarded", frag(
@@ -189,6 +191,29 @@ object contact {
           p("If you faced an error page, you may report it:"),
           howToReportBugs
         )),
+        Leaf("security", "Security vulnerability", frag(
+          p(s"Please report security issues to $contactEmail."),
+          p(
+            "Like all contributions to Chess-Online Arena, security reviews and pentesting are appreciated. ",
+            "Note that Chess-Online Arena is built by volunteers and we currently do not have a bug bounty program. ",
+            "At your option, we're happy to publicly thank you for any findings."
+          ),
+          p(
+            "Vulnerabilities are relevant even when they are not directly exploitable, ",
+            "for example XSS mitigated by CSP."
+          ),
+          p(
+            "When doing your research, please minimize negative impact for other users. ",
+            "As long as you keep this in mind, testing should not require prior coordination. ",
+            "Avoid spamming, DDoS and volumetric attacks."
+          ),
+          p(
+            "We believe transport encryption should be sufficient for all reports. ",
+            "If you insist on using PGP, please clarify the nature of the message ",
+            "in the plain-text subject and encrypt for ",
+            a(href := "/.well-known/gpg.asc")("multiple recipients"), "."
+          )
+        )),
         Leaf("other-bug", "Other bug", frag(
           p("If you found a new bug, you may report it:"),
           howToReportBugs
@@ -198,7 +223,7 @@ object contact {
         Leaf("appeal-cheat", "Engine or cheat mark", frag(
           p(s"If you have been marked as an engine, you may send an appeal to $contactEmail."),
           p(
-            "False positives do happen sometimes, and we're sorry about that.",
+            "False positives do happen sometimes, and we're sorry about that.", br,
             "If your appeal is legit, we will lift the ban ASAP."
           ),
           p(
@@ -212,27 +237,22 @@ object contact {
         Leaf("appeal-other", "None of the above", frag(
           p(s"You may send an appeal to $contactEmail."),
           p(
-            "False positives do happen sometimes, and we're sorry about that.",
+            "False positives do happen sometimes, and we're sorry about that.", br,
             "If your appeal is legit, we will lift the ban or restriction ASAP."
           )
         ))
       )),
       Branch("collab", "Collaboration, legal, commercial", List(
-        Leaf("monetize", "Monetizing lichess", frag(
-          p("We are not interested in any way of monetizing lichess."),
-          p("We will never display any kind of ads, we won't track our players, and we won't sell or buy traffic or users."),
-          p("Please do not email us about marketing, tracking, or advertising.")
-        )),
-        Leaf("buy", "Buying lichess", frag(
+        Leaf("buy", "Buying Chess-Online Arena", frag(
           p("We are not selling, to anyone, for any price. Ever.")
         )),
-        Leaf("authorize", "Authorization to use lichess", frag(
-          p("You are welcome to use lichess for your activity, even commercial."),
-          p("You can show it in your videos, and you can print screenshots of lichess in your books."),
+        Leaf("authorize", "Authorization to use Chess-Online Arena", frag(
+          p("You are welcome to use Chess-Online Arena for your activity, even commercial."),
+          p("You can show it in your videos, and you can print screenshots of Chess-Online Arena in your books."),
           p("Credit is appreciated but not required.")
         )),
         Leaf("gdpr", "GDPR", frag(
-          p("If you are a European citizen, you may request the deletion of your lichess account."),
+          p("If you are a European citizen, you may request the deletion of your Chess-Online Arena account."),
           p(
             "First, ",
             a(href := routes.Account.close)("close your account"),
@@ -243,7 +263,10 @@ object contact {
         )),
         Leaf("contact-other", "None of the above", frag(
           p(s"Please send us an email at $contactEmail."),
-          p("Please explain your request clearly and thoroughly.")
+          p(
+            "Please explain your request clearly and thoroughly. ",
+            "State your Chess-Online Arena username, and any information that could help us help you."
+          )
         ))
       ))
     ))
@@ -276,16 +299,16 @@ object contact {
   private def goBack(parent: Node): Frag =
     a(makeLink(parent.id), cls := "back", dataIcon := "I", title := "Go back")
 
-  def apply()(implicit ctx: Context) = views.html.base.layout(
+  def apply()(implicit ctx: Context) = help.layout(
     title = "Contact",
-    moreCss = cssTags("contact.css"),
-    moreJs = embedJs("""location=location.hash||"#help-root"""")
-  )(
-      div(cls := "content_box small_box")(
-        h1(cls := "lichess_title")("Contact lichess"),
-        div(cls := "contact")(
-          renderedMenu
-        )
+    active = "contact",
+    moreCss = cssTag("contact"),
+    moreJs = embedJsUnsafe("""location=location.hash||"#help-root""""),
+    contentCls = "page box box-pad"
+  )(frag(
+      h1("Contact Chess-Online Arena"),
+      div(cls := "contact")(
+        renderedMenu
       )
-    )
+    ))
 }

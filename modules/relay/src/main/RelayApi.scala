@@ -15,9 +15,9 @@ import lila.user.User
 final class RelayApi(
     repo: RelayRepo,
     studyApi: StudyApi,
-    socketMap: lila.study.SocketMap,
     withStudy: RelayWithStudy,
-    clearFormatCache: Url => Unit,
+    jsonView: JsonView,
+    clearFormatCache: Relay.Sync.UpstreamWithRound => Unit,
     system: ActorSystem
 ) {
 
@@ -67,7 +67,7 @@ final class RelayApi(
   }
 
   def requestPlay(id: Relay.Id, v: Boolean): Funit = WithRelay(id) { relay =>
-    clearFormatCache(Url parse relay.sync.upstream.url)
+    clearFormatCache(relay.sync.upstream.withRound)
     update(relay) { r =>
       if (v) r.withSync(_.play) else r.withSync(_.pause)
     } void
@@ -86,6 +86,10 @@ final class RelayApi(
       }
     } inject relay
   }
+
+  def reset(relay: Relay, by: User): Funit =
+    studyApi.deleteAllChapters(relay.studyId, by) >>
+      requestPlay(relay.id, true)
 
   def getOngoing(id: Relay.Id): Fu[Option[Relay]] =
     repo.coll.find($doc("_id" -> id, "finished" -> false)).uno[Relay]
@@ -126,7 +130,7 @@ final class RelayApi(
     repo.coll.remove($id(Relay.Id(studyId))).void
 
   private[relay] def publishRelay(relay: Relay): Funit =
-    sendToContributors(relay.id, "relayData", JsonView.relayWrites writes relay)
+    sendToContributors(relay.id, "relayData", jsonView.relayWrites writes relay)
 
   private def sendToContributors(id: Relay.Id, t: String, msg: JsObject): Funit =
     studyApi members Study.Id(id.value) map {
@@ -135,10 +139,7 @@ final class RelayApi(
         import JsonView.idWrites
         import lila.socket.Socket.makeMessage
         val payload = makeMessage(t, msg ++ Json.obj("id" -> id))
-        system.lilaBus.publish(SendTos(userIds, payload), 'socketUsers)
+        lila.common.Bus.publish(SendTos(userIds, payload), 'socketUsers)
       }
     }
-
-  private[relay] def getNbViewers(relay: Relay): Fu[Int] =
-    socketMap.askIfPresentOrZero[Int](relay.id.value)(lila.socket.SocketTrouper.GetNbMembers)
 }

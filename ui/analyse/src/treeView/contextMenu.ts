@@ -49,7 +49,7 @@ function positionMenu(menu: HTMLElement, coords: Coords): void {
 }
 
 function action(icon: string, text: string, handler: () => void): VNode {
-  return h('a.action', {
+  return h('a', {
     attrs: { 'data-icon': icon },
     hook: bind('click', handler)
   }, text);
@@ -74,7 +74,7 @@ function view(opts: Opts, coords: Coords): VNode {
     ctrl.study ? studyView.contextMenu(ctrl.study, opts.path, node) : []
   ).concat([
     onMainline ?
-    action('F', 'Force variation', () => ctrl.forceVariation(opts.path, true)) :
+    action('F', trans('forceVariation'), () => ctrl.forceVariation(opts.path, true)) :
     null
   ]));
 }

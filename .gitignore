@@ -10,6 +10,7 @@ public/vendor/stockfish.wasm
 public/vendor/stockfish-mv.wasm
 public/vendor/stockfish.pexe
 public/vendor/stockfish.js
+public/css/
 target
 bin/.translate_version
 data/
@@ -18,6 +19,7 @@ node_modules/
 local/
 ui/*/npm-debug.log
 hs_*.log
+yarn-error.log
 
 RUNNING_PID
 

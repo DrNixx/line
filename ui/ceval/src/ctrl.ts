@@ -1,18 +1,19 @@
-import { CevalCtrl, CevalOpts, Work, Step, Hovering, Started } from './types';
+import { CevalCtrl, CevalOpts, CevalTechnology, Work, Step, Hovering, Started } from './types';
 
 import { Pool, makeWatchdog } from './pool';
-import { median } from './math';
-import { prop, storedProp, throttle } from 'common';
+import { prop } from 'common';
+import { storedProp } from 'common/storage';
+import throttle from 'common/throttle';
 import { povChances } from './winningChances';
 
 const li = window.lichess;
 
 function sanIrreversible(variant: VariantKey, san: string): boolean {
-  if (san.indexOf('O-O') === 0) return true;
+  if (san.startsWith('O-O')) return true;
   if (variant === 'crazyhouse') return false;
-  if (san.indexOf('x') > 0) return true; // capture
+  if (san.includes('x')) return true; // capture
   if (san.toLowerCase() === san) return true; // pawn move
-  return variant === 'threeCheck' && san.indexOf('+') > 0;
+  return variant === 'threeCheck' && san.includes('+');
 }
 
 function officialStockfish(variant: VariantKey): boolean {
@@ -21,7 +22,7 @@ function officialStockfish(variant: VariantKey): boolean {
 
 function is64Bit(): boolean {
   const x64 = ['x86_64', 'x86-64', 'Win64','x64', 'amd64', 'AMD64'];
-  for (const substr of x64) if (navigator.userAgent.indexOf(substr) >= 0) return true;
+  for (const substr of x64) if (navigator.userAgent.includes(substr)) return true;
   return navigator.platform === 'Linux x86_64' || navigator.platform === 'MacIntel';
 }
 
@@ -42,10 +43,12 @@ function wasmThreadsSupported() {
   if (typeof Atomics !== 'object') return false;
 
   // Shared memory
-  if (!(new WebAssembly!.Memory({shared: true, initial: 8, maximum: 8}).buffer instanceof SharedArrayBuffer)) return false;
+  const mem = new WebAssembly.Memory({shared: true, initial: 8, maximum: 8} as WebAssembly.MemoryDescriptor);
+  if (!(mem.buffer instanceof SharedArrayBuffer)) return false;
 
   // Structured cloning
   try {
+    window.postMessage(mem, '*');
     window.postMessage(new WebAssembly.Module(source), '*');
   } catch (e) {
     return false;
@@ -54,41 +57,55 @@ function wasmThreadsSupported() {
   return true;
 }
 
-export default function(opts: CevalOpts): CevalCtrl {
+function median(values: number[]): number {
+  values.sort((a, b) => a - b);
+  const half = Math.floor(values.length / 2);
+  return values.length % 2 ? values[half] : (values[half - 1] + values[half]) / 2.0;
+}
 
-  const storageKey = function(k: string): string {
-    return opts.storageKeyPrefix ? opts.storageKeyPrefix + '.' + k : k;
+export default function(opts: CevalOpts): CevalCtrl {
+  const storageKey = (k: string) => {
+    return opts.storageKeyPrefix ? `${opts.storageKeyPrefix}.${k}` : k;
   };
 
-  const pnaclSupported = makeWatchdog('pnacl').good() && 'application/x-pnacl' in navigator.mimeTypes;
-  const wasmSupported = typeof WebAssembly === 'object' && WebAssembly.validate(Uint8Array.of(0x0, 0x61, 0x73, 0x6d, 0x01, 0x00, 0x00, 0x00));
-  const wasmxSupported = wasmSupported && wasmThreadsSupported();
+  // select pnacl > wasmx > wasm > asmjs
+  let technology: CevalTechnology = 'asmjs';
+  if (makeWatchdog('pnacl').good() && 'application/x-pnacl' in navigator.mimeTypes) technology = 'pnacl';
+  else if (typeof WebAssembly === 'object' && WebAssembly.validate(Uint8Array.of(0x0, 0x61, 0x73, 0x6d, 0x01, 0x00, 0x00, 0x00))) {
+    technology = 'wasm';
+    if (officialStockfish(opts.variant.key) && wasmThreadsSupported()) technology = 'wasmx';
+  }
 
   const minDepth = 6;
   const maxDepth = storedProp<number>(storageKey('ceval.max-depth'), 18);
   const multiPv = storedProp(storageKey('ceval.multipv'), opts.multiPvDefault || 1);
-  const threads = storedProp(storageKey('ceval.threads'), Math.min(Math.ceil((navigator.hardwareConcurrency || 1) / 2), 8));
   const hashSize = storedProp(storageKey('ceval.hash-size'), 128);
   const infinite = storedProp('ceval.infinite', false);
   let curEval: Tree.ClientEval | null = null;
-  const enableStorage = li.storage.make(storageKey('client-eval-enabled'));
+  const enableStorage = li.storage.makeBoolean(storageKey('client-eval-enabled'));
   const allowed = prop(true);
-  const enabled = prop(opts.possible && allowed() && enableStorage.get() == '1' && !document.hidden);
+  const enabled = prop(opts.possible && allowed() && enableStorage.get() && !document.hidden);
   let started: Started | false = false;
   let lastStarted: Started | false = false; // last started object (for going deeper even if stopped)
   const hovering = prop<Hovering | null>(null);
   const isDeeper = prop(false);
 
+  const maxThreads = Math.min(
+    Math.max((navigator.hardwareConcurrency || 1) - 1, 1),
+    technology == 'wasmx' ? 4 : 512); // wasm limitations: https://github.com/niklasf/stockfish.wasm/issues/4
+  const threads = storedProp(storageKey('ceval.threads'), Math.min(Math.ceil((navigator.hardwareConcurrency || 1) / 2), maxThreads));
+
   const pool = new Pool({
+    technology,
     asmjs: 'vendor/stockfish.js/stockfish.js',
-    pnacl: pnaclSupported && 'vendor/stockfish.pexe/stockfish.nmf',
-    wasm: wasmSupported && 'vendor/stockfish.js/stockfish.wasm.js',
-    wasmx: wasmxSupported && (officialStockfish(opts.variant.key) ? 'vendor/stockfish.wasm/stockfish.js' : 'vendor/stockfish-mv.wasm/stockfish.js'),
+    pnacl: 'vendor/stockfish.pexe/stockfish.nmf',
+    wasm: 'vendor/stockfish.js/stockfish.wasm.js',
+    wasmx: officialStockfish(opts.variant.key) ? 'vendor/stockfish.wasm/stockfish.js' : 'vendor/stockfish-mv.wasm/stockfish.js',
   }, {
     minDepth,
     variant: opts.variant.key,
-    threads: (pnaclSupported || wasmxSupported) && threads,
-    hashSize: (pnaclSupported && !wasmxSupported) && hashSize
+    threads: (technology == 'pnacl' || technology == 'wasmx') && threads,
+    hashSize: technology == 'pnacl' && hashSize
   });
 
   // adjusts maxDepth based on nodes per second
@@ -102,8 +119,8 @@ export default function(opts: CevalOpts): CevalCtrl {
     return function(ev: Tree.ClientEval) {
       if (!applies(ev)) return;
       values.push(ev.knps);
-      if (values.length >= 5) {
-        var depth = 18,
+      if (values.length > 9) {
+        let depth = 18,
           knps = median(values) || 0;
         if (knps > 100) depth = 19;
         if (knps > 150) depth = 20;
@@ -115,14 +132,14 @@ export default function(opts: CevalOpts): CevalCtrl {
         if (knps > 5000) depth = 26;
         if (knps > 7000) depth = 27;
         maxDepth(depth);
-        if (values.length > 20) values.shift();
+        if (values.length > 40) values.shift();
       }
     };
   })();
 
   let lastEmitFen: string | null = null;
 
-  const onEmit = throttle(500, (ev: Tree.ClientEval, work: Work) => {
+  const onEmit = throttle(200, (ev: Tree.ClientEval, work: Work) => {
     sortPvsInPlace(ev.pvs, (work.ply % 2 === (work.threatMode ? 1 : 0)) ? 'white' : 'black');
     npsRecorder(ev);
     curEval = ev;
@@ -133,17 +150,14 @@ export default function(opts: CevalOpts): CevalCtrl {
     }
   });
 
-  const effectiveMaxDepth = function(): number {
-    return (isDeeper() || infinite()) ? 99 : parseInt(maxDepth());
-  };
+  const effectiveMaxDepth = () => (isDeeper() || infinite()) ? 99 : parseInt(maxDepth());
 
-  const sortPvsInPlace = function(pvs: Tree.PvData[], color: Color) {
+  const sortPvsInPlace = (pvs: Tree.PvData[], color: Color) =>
     pvs.sort(function(a, b) {
       return povChances(color, b) - povChances(color, a);
     });
-  };
 
-  const start = function(path: Tree.Path, steps: Step[], threatMode: boolean, deeper: boolean) {
+  const start = (path: Tree.Path, steps: Step[], threatMode: boolean, deeper: boolean) => {
 
     if (!enabled() || !opts.possible) return;
 
@@ -219,17 +233,16 @@ export default function(opts: CevalOpts): CevalCtrl {
   }
 
   return {
-    pnaclSupported,
-    wasmSupported,
-    wasmxSupported,
+    technology,
     start,
     stop,
     allowed,
     possible: opts.possible,
     enabled,
     multiPv,
-    threads,
-    hashSize,
+    threads: (technology == 'pnacl' || technology == 'wasmx') ? threads : undefined,
+    hashSize: technology == 'pnacl' ? hashSize : undefined,
+    maxThreads,
     infinite,
     hovering,
     setHovering(fen: Fen, uci?: Uci) {
@@ -244,27 +257,17 @@ export default function(opts: CevalOpts): CevalCtrl {
       stop();
       enabled(!enabled());
       if (document.visibilityState !== 'hidden')
-        enableStorage.set(enabled() ? '1' : '0');
+        enableStorage.set(enabled());
     },
-    curDepth(): number {
-      return curEval ? curEval.depth : 0;
-    },
+    curDepth: () => curEval ? curEval.depth : 0,
     effectiveMaxDepth,
     variant: opts.variant,
     isDeeper,
     goDeeper,
-    canGoDeeper() {
-      return !isDeeper() && !infinite() && !pool.isComputing();
-    },
-    isComputing() {
-      return !!started && pool.isComputing();
-    },
-    engineName() {
-      return pool.engineName();
-    },
-    destroy() {
-      pool.destroy();
-    },
+    canGoDeeper: () => !isDeeper() && !infinite() && !pool.isComputing(),
+    isComputing: () => !!started && pool.isComputing(),
+    engineName: pool.engineName,
+    destroy: pool.destroy,
     redraw: opts.redraw
   };
 };

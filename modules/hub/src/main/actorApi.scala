@@ -12,6 +12,9 @@ case object DeployPost extends Deploy("deployPost")
 
 case object Shutdown // on actor system termination
 
+// announce something to all clients
+case class Announce(msg: String, date: DateTime, json: JsObject)
+
 package streamer {
   case class StreamsOnAir(html: String)
   case class StreamStart(userId: String)
@@ -24,8 +27,6 @@ package map {
 }
 
 package socket {
-  case class WithUserIds(f: Iterable[String] => Unit)
-  case class HasUserId(userId: String, promise: Promise[Boolean])
   case class SendTo(userId: String, message: JsObject)
   object SendTo {
     def apply[A: Writes](userId: String, typ: String, data: A): SendTo =
@@ -36,11 +37,16 @@ package socket {
     def apply[A: Writes](userIds: Set[String], typ: String, data: A): SendTos =
       SendTos(userIds, Json.obj("t" -> typ, "d" -> data))
   }
+  object remote {
+    case class TellSriIn(sri: String, user: Option[String], msg: JsObject)
+    case class TellSriOut(sri: String, payload: JsValue)
+  }
+  case class BotIsOnline(userId: String, isOnline: Boolean)
 }
 
 package report {
   case class Cheater(userId: String, text: String)
-  case class Shutup(userId: String, text: String)
+  case class Shutup(userId: String, text: String, major: Boolean)
   case class Booster(winnerId: String, loserId: String)
 }
 
@@ -53,7 +59,7 @@ package security {
 package shutup {
   case class RecordPublicForumMessage(userId: String, text: String)
   case class RecordTeamForumMessage(userId: String, text: String)
-  case class RecordPrivateMessage(userId: String, toUserId: String, text: String)
+  case class RecordPrivateMessage(userId: String, toUserId: String, text: String, muted: Boolean)
   case class RecordPrivateChat(chatId: String, userId: String, text: String)
   case class RecordPublicChat(userId: String, text: String, source: PublicSource)
 
@@ -72,6 +78,9 @@ package mod {
   case class ChatTimeout(mod: String, user: String, reason: String)
   case class Shadowban(user: String, value: Boolean)
   case class KickFromRankings(userId: String)
+  case class SetPermissions(userId: String, permissions: List[String])
+  case class AutoWarning(userId: String, subject: String)
+  case class Impersonate(userId: String, by: Option[String])
 }
 
 package playban {
@@ -127,15 +136,6 @@ package timeline {
   case class TourJoin(userId: String, tourId: String, tourName: String) extends Atom("tournament", true) {
     def userIds = List(userId)
   }
-  case class QaQuestion(userId: String, id: Int, title: String) extends Atom("qa", true) {
-    def userIds = List(userId)
-  }
-  case class QaAnswer(userId: String, id: Int, title: String, answerId: Int) extends Atom("qa", true) {
-    def userIds = List(userId)
-  }
-  case class QaComment(userId: String, id: Int, title: String, commentId: String) extends Atom("qa", true) {
-    def userIds = List(userId)
-  }
   case class GameEnd(playerId: String, opponent: Option[String], win: Option[Boolean], perf: String) extends Atom("gameEnd", true) {
     def userIds = opponent.toList
   }
@@ -189,11 +189,12 @@ package game {
 }
 
 package tv {
-  case class Select(msg: JsObject)
+  case class TvSelect(gameId: String, speed: chess.Speed, data: JsObject)
 }
 
 package notify {
   case class Notified(userId: String)
+  case class NotifiedBatch(userIds: Iterable[String])
 }
 
 package team {
@@ -238,18 +239,19 @@ package round {
       simulId: String,
       opponentUserId: String
   )
-  case class NbRounds(nb: Int)
   case class Berserk(gameId: String, userId: String)
   case class IsOnGame(color: chess.Color, promise: Promise[Boolean])
-  sealed trait SocketEvent
-  case class TourStanding(json: JsArray)
-  case class FishnetPlay(uci: Uci, currentFen: chess.format.FEN)
+  case class TourStandingOld(data: JsArray)
+  case class TourStanding(tourId: String, data: JsArray)
+  case class FishnetPlay(uci: Uci, ply: Int)
+  case object FishnetStart
   case class BotPlay(playerId: String, uci: Uci, promise: Option[scala.concurrent.Promise[Unit]] = None)
   case class RematchOffer(gameId: String)
   case class RematchYes(playerId: String)
   case class RematchNo(playerId: String)
   case class Abort(playerId: String)
   case class Resign(playerId: String)
+  case class Mlat(micros: Int)
 }
 
 package evaluation {

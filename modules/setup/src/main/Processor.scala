@@ -1,11 +1,11 @@
 package lila.setup
 
+import lila.common.Bus
 import lila.game.{ GameRepo, Pov, PerfPicker }
 import lila.lobby.actorApi.{ AddHook, AddSeek }
 import lila.user.{ User, UserContext }
 
 private[setup] final class Processor(
-    bus: lila.common.Bus,
     gameCache: lila.game.Cached,
     maxPlaying: Int,
     fishnetPlayer: lila.fishnet.Player,
@@ -28,22 +28,22 @@ private[setup] final class Processor(
 
   def hook(
     configBase: HookConfig,
-    uid: lila.socket.Socket.Uid,
+    sri: lila.socket.Socket.Sri,
     sid: Option[String],
     blocking: Set[String]
   )(implicit ctx: UserContext): Fu[Processor.HookResult] = {
     import Processor.HookResult._
     val config = configBase.fixColor
     saveConfig(_ withHook config) >> {
-      config.hook(uid, ctx.me, sid, blocking) match {
+      config.hook(sri, ctx.me, sid, blocking) match {
         case Left(hook) => fuccess {
-          bus.publish(AddHook(hook), 'lobbyTrouper)
+          Bus.publish(AddHook(hook), 'lobbyTrouper)
           Created(hook.id)
         }
         case Right(Some(seek)) => ctx.userId.??(gameCache.nbPlaying) map { nbPlaying =>
           if (nbPlaying >= maxPlaying) Refused
           else {
-            bus.publish(AddSeek(seek), 'lobbyTrouper)
+            Bus.publish(AddSeek(seek), 'lobbyTrouper)
             Created(seek.id)
           }
         }

@@ -3,18 +3,20 @@ package lila.bot
 import akka.actor._
 import play.api.libs.iteratee._
 import play.api.libs.json._
-import scala.concurrent.duration._
 
 import chess.format.FEN
-
 import lila.chat.Chat
 import lila.chat.UserLine
-import lila.game.actorApi.{ FinishGame, AbortedBy, MoveGameEvent }
-import lila.game.{ Game, GameRepo }
+import lila.common.Bus
+import lila.game.actorApi.{ AbortedBy, FinishGame, MoveGameEvent }
+import lila.game.Event.ReloadOwner
+import lila.game.Game
 import lila.hub.actorApi.map.Tell
 import lila.hub.actorApi.round.MoveEvent
-import lila.socket.actorApi.BotConnected
+import lila.round.actorApi.BotConnected
+import lila.round.actorApi.round.{ DrawNo, DrawYes }
 import lila.user.User
+import scala.concurrent.duration._
 
 final class GameStateStream(
     system: ActorSystem,
@@ -44,7 +46,7 @@ final class GameStateStream(
 
           override def preStart(): Unit = {
             super.preStart()
-            system.lilaBus.subscribe(self, classifiers: _*)
+            Bus.subscribe(self, classifiers: _*)
             jsonView gameFull init foreach { json =>
               // prepend the full game JSON at the start of the stream
               channel push json.some
@@ -56,7 +58,7 @@ final class GameStateStream(
 
           override def postStop(): Unit = {
             super.postStop()
-            system.lilaBus.unsubscribe(self, classifiers)
+            Bus.unsubscribe(self, classifiers)
             // hang around if game is over
             // so the opponent has a chance to rematch
             context.system.scheduler.scheduleOnce(if (gameOver) 10 second else 1 second) {
@@ -70,9 +72,7 @@ final class GameStateStream(
               pushChatLine(username, text, chatId.value.size == Game.gameIdSize)
             case FinishGame(g, _, _) if g.id == id => onGameOver
             case AbortedBy(pov) if pov.gameId == id => onGameOver
-
             case SetOnline =>
-              setConnected(true)
               context.system.scheduler.scheduleOnce(6 second) {
                 // gotta send a message to check if the client has disconnected
                 channel push None
@@ -82,11 +82,12 @@ final class GameStateStream(
 
           def pushState(g: Game) = jsonView gameState Game.WithInitialFen(g, init.fen) map some map channel.push
           def pushChatLine(username: String, text: String, player: Boolean) = channel push jsonView.chatLine(username, text, player).some
+
           def onGameOver = {
             gameOver = true
             channel.eofAndEnd()
           }
-          def setConnected(v: Boolean) = system.lilaBus.publish(
+          def setConnected(v: Boolean) = Bus.publish(
             Tell(init.game.id, BotConnected(as, v)),
             'roundSocket
           )

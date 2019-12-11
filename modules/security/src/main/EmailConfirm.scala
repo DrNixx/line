@@ -1,6 +1,6 @@
 package lila.security
 
-import play.twirl.api.Html
+import scalatags.Text.all._
 
 import lila.common.{ Lang, EmailAddress }
 import lila.i18n.I18nKeys.{ emails => trans }
@@ -19,7 +19,7 @@ object EmailConfirmSkip extends EmailConfirm {
 
   def effective = false
 
-  def send(user: User, email: EmailAddress)(implicit lang: Lang) = UserRepo setEmailConfirmed user.id
+  def send(user: User, email: EmailAddress)(implicit lang: Lang) = UserRepo setEmailConfirmed user.id void
 
   def confirm(token: String): Fu[EmailConfirm.Result] = fuccess(EmailConfirm.Result.NotFound)
 }
@@ -30,14 +30,16 @@ final class EmailConfirmMailgun(
     tokenerSecret: String
 ) extends EmailConfirm {
 
+  import Mailgun.html._
+
   def effective = true
 
   val maxTries = 3
 
   def send(user: User, email: EmailAddress)(implicit lang: Lang): Funit = tokener make user.id flatMap { token =>
-    lila.mon.email.confirmation()
+    lila.mon.email.types.confirmation()
     val url = s"$baseUrl/signup/confirm/$token"
-    lila.log("auth").info(s"Confirm URL ${user.username} $email $url")
+    lila.log("auth").info(s"Confirm URL ${user.username} ${email.value} $url")
     mailgun send Mailgun.Message(
       to = email,
       subject = trans.emailConfirm_subject.literalTxtTo(lang, List(user.username)),
@@ -51,20 +53,17 @@ ${trans.common_orPaste.literalTxtTo(lang)}
 ${Mailgun.txt.serviceNote}
 ${trans.emailConfirm_ignore.literalTxtTo(lang, List("https://live.chess-online.com"))}
 """,
-      htmlBody = Html(s"""
-<div itemscope itemtype="http://schema.org/EmailMessage">
-  <p itemprop="description">${trans.emailConfirm_click.literalHtmlTo(lang)}</p>
-  <div itemprop="potentialAction" itemscope itemtype="http://schema.org/ViewAction">
-    <meta itemprop="name" content="Activate account">
-    ${Mailgun.html.url(url)}
-  </div>
-  <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <small>
-      ${trans.common_note.literalHtmlTo(lang, List(Mailgun.html.noteLink))}
-      ${trans.emailConfirm_ignore.literalHtmlTo(lang)}
-    </small>
-  </div>
-</div>""").some
+      htmlBody = emailMessage(
+        pDesc(trans.emailConfirm_click.literalTo(lang)),
+        potentialAction(metaName("Activate account"), Mailgun.html.url(url)),
+        publisher(
+          small(
+            trans.common_note.literalTo(lang, List(Mailgun.html.noteLink)),
+            " ",
+            trans.emailConfirm_ignore.literalTo(lang)
+          )
+        )
+      ).some
     )
   }
 

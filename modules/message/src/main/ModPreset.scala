@@ -1,5 +1,7 @@
 package lila.message
 
+import lila.user.User
+
 case class ModPreset(subject: String, text: String)
 
 /* From https://github.com/ornicar/lila/wiki/Canned-responses-for-moderators */
@@ -13,9 +15,9 @@ object ModPreset {
 
 Warning: Offensive language
 
-On Lichess, you *must* be nice when communicating with other players. At all times.
+On Chess-Online, you *must* be nice when communicating with other players. At all times.
 
-Lichess is intended to be a fun and friendly environment for everyone. Please note that repeated violation of chat policy will result in loss of chat privileges.
+Chess-Online is intended to be a fun and friendly environment for everyone. Please note that repeated violation of chat policy will result in loss of chat privileges.
 
 """, /* ---------------------------------------------------------------*/ """
 
@@ -33,7 +35,7 @@ In your game history, you have several games where the opponent clearly has inte
 
 Warning: Excessive draw offers
 
-Offering an excessive amount of draws in order to distract or annoy an opponent is not acceptable on Lichess. If this behavior continues to happen, your account will be terminated.
+Offering an excessive amount of draws in order to distract or annoy an opponent is not acceptable on Chess-Online. If this behavior continues to happen, your account will be terminated.
 
 """, /* ---------------------------------------------------------------*/ """
 
@@ -51,13 +53,13 @@ In order to report players for bad behavior, please visit https://live.chess-onl
 
 Warning: Accusations
 
-Accusing other players of using computer assistance or otherwise cheating is not acceptable on Lichess. If you are confident that a player is cheating, use the report button on their profile page to report them to the moderators.
+Accusing other players of using computer assistance or otherwise cheating is not acceptable on Chess-Online. If you are confident that a player is cheating, use the report button on their profile page to report them to the moderators.
 
 """, /* ---------------------------------------------------------------*/ """
 
-Warning: chat spam is not permitted
+Warning: spam is not permitted
 
-You may post your link only once. Not once per tournament, per forum, or once per day: but just once. Repeated violation of chat policy will result in loss of chat privileges.
+You may post your link only once. Not once per tournament, per forum, per player, or per day: but just once. Repeated violation of this policy will result in loss of communication privileges.
 
 """, /* ---------------------------------------------------------------*/ """
 
@@ -70,13 +72,20 @@ Please also remember that, over the long run, ratings tend to gravitate towards 
 
 Warning: Username that implies you are a titled player
 
-The username policy (https://github.com/ornicar/lila/wiki/Username-policy) for Lichess states that you can't have a username that implies that you have a FIDE title or the Lichess Master title. Actual titled players can send an email to support@chess-online.com with evidence that documents their identity, e.g. a scanned ID card, driving license, passport or similar. We will then verify your identity and title, and your title will be shown in front of your username and on your Lichess user profile. Since your username implies that you have a title, we reserve the right to close your account within two weeks, if you have not verified your title within that time.
+The username policy (https://github.com/ornicar/lila/wiki/Username-policy) for Chess-Online states that you can't have a username that implies that you have a FIDE title or the Arena Master title. Actual titled players can send an email to support@chess-online.com with evidence that documents their identity, e.g. a scanned ID card, driving license, passport or similar. We will then verify your identity and title, and your title will be shown in front of your username and on your Arena user profile. Since your username implies that you have a title, we reserve the right to close your account within two weeks, if you have not verified your title within that time.
 
 """, /* ---------------------------------------------------------------*/ """
 
 Account marked for computer assistance
 
-Our cheating detection algorithms have marked your account for using computer assistance. If you want to contest the mark, please send an email to Lichess Contact contact@chess-online.com. If you are a titled player, we will need a proof of your identity. It can be a picture of a document, like an ID card or a driving license.
+Our cheating detection algorithms have marked your account for using computer assistance. If you want to contest the mark, please send an email to Chess-Online Contact contact@chess-online.com. If you are a titled player, we will need a proof of your identity. It can be a picture of a document, like an ID card or a driving license.
+
+""", /* ---------------------------------------------------------------*/ """
+
+Warning: leaving games / stalling on time
+
+In your game history, you have several games where you have left the game or just let the time run out instead of playing or resigning.
+This can be very annoying for your opponents. If this behavior continues to happen, we may be forced to terminate your account.
 
 """) flatMap toPreset
 
@@ -91,7 +100,21 @@ Our cheating detection algorithms have marked your account for using computer as
   lazy val sandbagAuto = ModPreset(
     subject = "Warning: possible sandbagging",
     text = """You have lost a couple games after a few moves. Please note that you MUST try to win every rated game.
-Losing rated games on purpose is called "sandbagging", and is not allowed on lichess.
+Losing rated games on purpose is called "sandbagging", and is not allowed on Chess-Online.
+
+Thank you for your understanding."""
+  )
+
+  lazy val sittingAuto = ModPreset(
+    subject = "Warning: leaving games / stalling on time",
+    text = """In your game history, you have several games where you have left the game or just let the time run out instead of playing or resigning.
+This can be very annoying for your opponents. If this behavior continues to happen, we may be forced to terminate your account."""
+  )
+
+  def maxFollow(userId: User.ID, max: Int) = ModPreset(
+    subject = "Follow limit reached!",
+    text = s"""Sorry, you can't follow more than $max players on Chess-Online.
+To follow new players, you must first unfollow some on https://live.chess-online.com/@/$userId/following.
 
 Thank you for your understanding."""
   )

@@ -7,13 +7,14 @@ import lila.game.actorApi.FinishGame
 
 private[tournament] final class ApiActor(
     api: TournamentApi,
-    leaderboard: LeaderboardApi,
-    socketMap: SocketMap
+    leaderboard: LeaderboardApi
 ) extends Actor {
 
   def receive = {
 
     case FinishGame(game, _, _) => api finishGame game
+
+    case lila.playban.SittingDetected(game, player) => api.sittingDetected(game, player)
 
     case lila.hub.actorApi.mod.MarkCheater(userId, true) =>
       leaderboard.getAndDeleteRecent(userId, DateTime.now minusDays 3) foreach {
@@ -25,7 +26,5 @@ private[tournament] final class ApiActor(
     case lila.hub.actorApi.round.Berserk(gameId, userId) => api.berserk(gameId, userId)
 
     case lila.hub.actorApi.playban.Playban(userId, _) => api.pausePlaybanned(userId)
-
-    case m: lila.hub.actorApi.Deploy => socketMap tellAll m
   }
 }

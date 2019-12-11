@@ -3,6 +3,7 @@ package lila.common
 import com.typesafe.config.Config
 import org.joda.time.{ DateTime, Period }
 import play.api.{ Play, Application, Mode }
+import play.api.routing.Router
 import scala.collection.JavaConversions._
 
 object PlayApp {
@@ -10,7 +11,7 @@ object PlayApp {
   val startedAt = DateTime.now
   val startedAtMillis = nowMillis
 
-  def uptime = new Period(startedAt, DateTime.now)
+  def uptimeSeconds = nowSeconds - startedAt.getSeconds
 
   def startedSinceMinutes(minutes: Int) =
     startedSinceSeconds(minutes * 60)

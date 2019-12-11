@@ -6,10 +6,9 @@ import org.joda.time.DateTime
 import lila.hub.actorApi.timeline.propagation._
 import lila.hub.actorApi.timeline.{ Propagate, Atom, ForumPost, ReloadTimelines }
 import lila.security.{ Granter, Permission }
-import lila.user.UserRepo
+import lila.user.{ User, UserRepo }
 
 private[timeline] final class Push(
-    bus: lila.common.Bus,
     renderer: ActorSelection,
     getFriendIds: String => Fu[Set[String]],
     getFollowerIds: String => Fu[Set[String]],
@@ -24,12 +23,12 @@ private[timeline] final class Push(
         unsubApi.filterUnsub(data.channel, users)
       } foreach { users =>
         if (users.nonEmpty) makeEntry(users, data) >>-
-          bus.publish(ReloadTimelines(users), 'lobbySocket)
+          lila.common.Bus.publish(ReloadTimelines(users), 'lobbySocket)
         lila.mon.timeline.notification(users.size)
       }
   }
 
-  private def propagate(propagations: List[Propagation]): Fu[List[String]] =
+  private def propagate(propagations: List[Propagation]): Fu[List[User.ID]] =
     propagations.map {
       case Users(ids) => fuccess(ids)
       case Followers(id) => getFollowerIds(id)
@@ -54,7 +53,7 @@ private[timeline] final class Push(
     Permission.SuperAdmin
   )
 
-  private def makeEntry(users: List[String], data: Atom): Fu[Entry] = {
+  private def makeEntry(users: List[User.ID], data: Atom): Fu[Entry] = {
     val entry = Entry.make(data)
     entryApi.findRecent(entry.typ, DateTime.now minusMinutes 60, 1000) flatMap { entries =>
       if (entries.exists(_ similarTo entry)) fufail[Entry]("[timeline] a similar entry already exists")

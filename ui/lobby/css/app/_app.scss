@@ -1,0 +1,65 @@
+@import 'pool';
+@import 'hook-chart';
+@import 'hook-list';
+
+.lobby__app {
+  @extend %flex-column;
+  @include lobby-app-size;
+  user-select: none;
+
+  .lobby-nope & {
+    display: none;
+  }
+
+  &__content {
+    @extend %box-neat;
+    flex: 1 1 100%;
+    position: relative;
+    @if $theme == 'transp' {
+      background: fade-out($c-bg-box, .2);
+    }
+    @else {
+      $logo-color: 'dadada';
+      @if $theme-dark {
+        $logo-color: '383633';
+      }
+      background: $c-bg-box url("/assets/images/chess_figure_q_1024.png");
+    }
+    background-size: contain;
+    background-position: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .lredir {
+    background: $c-bg-box;
+    display: flex;
+    .spinner {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .toggle {
+    position: absolute;
+    padding: .6em;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 1.3em;
+    &.toggle-filter {
+      right: 0;
+    }
+    @include transition();
+    &:hover {
+      color: $c-accent;
+    }
+  }
+
+  .gamesFiltered {
+    color: $c-accent;
+    @include transition();
+    &:hover {
+      color: $c-accent-dim;
+    }
+  }
+}

@@ -1,20 +1,27 @@
-export default function(text: string, parseMoves: boolean): string {
+export function enhance(text: string, parseMoves: boolean): string {
   const escaped = window.lichess.escapeHtml(text);
   const linked = autoLink(escaped);
   const plied = parseMoves && linked === escaped ? addPlies(linked) : linked;
   return plied;
 }
 
-const linkPattern = /\b(https?:\/\/|live.chess-online\.org\/)[-–—\w+&'@#\/%?=()~|!:,.;]+[\w+&@#\/%=~|]/gi;
+const moreThanTextPattern = /[&<>"@]/;
+const possibleLinkPattern = /\.\w/;
+
+export function isMoreThanText(str: string) {
+  return moreThanTextPattern.test(str) || possibleLinkPattern.test(str);
+}
+
+const linkPattern = /\b(https?:\/\/|live\.chess-online\.com\/)[-–—\w+&'@#\/%?=()~|!:,.;]+[\w+&@#\/%=~|]/gi;
 
 function linkReplace(url: string, scheme: string) {
-  if (url.indexOf('&quot;') !== -1) return url;
-  const fullUrl = scheme === 'live.chess-online.org/' ? 'https://' + url : url;
+  if (url.includes('&quot;')) return url;
+  const fullUrl = scheme === 'live.chess-online.com/' ? 'https://' + url : url;
   const minUrl = url.replace(/^https:\/\//, '');
   return '<a target="_blank" rel="nofollow" href="' + fullUrl + '">' + minUrl + '</a>';
 }
 
-const userPattern = /(^|[^\w@#/])(@|(?:https:\/\/)?live.chess-online\.org\/@\/)([\w-]{2,})/g;
+const userPattern = /(^|[^\w@#/])(@|(?:https:\/\/)?live\.chess-online\.com\/@\/)([\w-]{2,})/g;
 const pawnDropPattern = /^[a-h][2-7]$/;
 
 function userLinkReplace(orig: string, prefix: String, scheme: String, user: string) {
