@@ -15,7 +15,7 @@ object topnav {
     st.section(
       linkTitle("/", frag(
         span(cls := "play")(trans.play()),
-        span(cls := "home")("live.chess-online.com")
+        span(cls := "home")("Chess Arena")
       )),
       div(role := "group")(
         if (ctx.noBot) a(href := "/?any#hook")(trans.createAGame())
