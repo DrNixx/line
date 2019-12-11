@@ -55,7 +55,7 @@ object layout {
               if (online) {
                   location.href = "${routes.Auth.oidcLogin}?referrer=" + encodeURIComponent(location.href);
               }
-          });""")
+          });""").render
     ).mkString
   }
 
@@ -65,7 +65,7 @@ object layout {
       embedJsUnsafe(s"""window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'UA-33469827-5');""")
+      gtag('config', 'UA-33469827-5');""").render
     ).mkString
   }
 
