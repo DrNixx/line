@@ -693,12 +693,21 @@
 
   lichess.widget("friends", (function() {
     var getId = function(titleName) {
-      return titleName.toLowerCase().replace(/^\w+\s/, '');
+      var idn = titleName.split('/');
+      return (idn.length > 1) ? idn[0] : titleName.toLowerCase().replace(/^\w+\s/, '');
     };
     var makeUser = function(titleName) {
-      var split = titleName.split(' ');
+      var idn = titleName.split('/');
+      var id, split;
+      if (idn.length > 1) {
+        id = idn[0];
+        split = idn[1].split(' ');
+      } else {
+        split = titleName.split(' ');
+        id = split[split.length - 1].toLowerCase();
+      }
       return {
-        id: split[split.length - 1].toLowerCase(),
+        id: id,
         name: split[split.length - 1],
         title: (split.length > 1) ? split[0] : undefined,
         playing: false,

@@ -213,7 +213,7 @@ object layout {
             div(
               id := "friend_box",
               dataPreload := safeJsonValue(Json.obj(
-                "users" -> ctx.onlineFriends.users.map(_.titleName),
+                "users" -> ctx.onlineFriends.users.map(_.idVsTitleName),
                 "playing" -> ctx.onlineFriends.playing,
                 "patrons" -> ctx.onlineFriends.patrons,
                 "studying" -> ctx.onlineFriends.studying,
