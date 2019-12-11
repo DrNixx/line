@@ -18,7 +18,7 @@ object index {
           )
         ),
         p(cls := "box__pad")(
-          "Want to build something that integrates with and extends Lichess? Register a new OAuth App to get started developing on the Lichess API.",
+          "Want to build something that integrates with and extends ChessOnline? Register a new OAuth App to get started developing on the Chess-Online API.",
           br, br,
           "Here's a ",
           a(href := "https://github.com/lichess-org/api/tree/master/example/oauth-authorization-code")("lichess OAuth app example"),

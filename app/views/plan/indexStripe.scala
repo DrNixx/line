@@ -19,15 +19,15 @@ object indexStripe {
         main(cls := "box box-pad plan")(
           h1(
             userLink(me), " • ",
-            if (patron.isLifetime) strong("Lifetime Lichess Patron")
-            else frag("Lichess Patron for ", pluralize("month", me.plan.months))
+            if (patron.isLifetime) strong("Lifetime Chess-Online Patron")
+            else frag("Chess-Online Patron for ", pluralize("month", me.plan.months))
           ),
           table(cls := "all")(
             tbody(
               tr(
                 th("Current status"),
                 td(
-                  "You support lichess.org with ", strong(info.subscription.plan.usd.toString), " per month.",
+                  "You support Chess-Online.Com with ", strong(info.subscription.plan.usd.toString), " per month.",
                   span(cls := "thanks")("Thank you very much for your help. You rock!")
                 )
               ),
@@ -45,7 +45,7 @@ object indexStripe {
                   a(dataForm := "switch")("Change the monthly amount (", info.subscription.plan.usd.toString, ")"),
                   " or ", a(dataForm := "cancel")("cancel your support"),
                   postForm(cls := "switch", action := routes.Plan.switch)(
-                    p("Decide what Lichess is worth to you:"),
+                    p("Decide what Chess-Online is worth to you:"),
                     "USD $ ",
                     input(tpe := "number", min := 1, max := 100000, step := "0.01", name := "usd", value := info.subscription.plan.usd.toString),
                     submitButton(cls := "button")(trans.apply()),
@@ -53,7 +53,7 @@ object indexStripe {
                   ),
                   postForm(cls := "cancel", action := routes.Plan.cancel)(
                     p("Withdraw your credit card and stop payments:"),
-                    submitButton(cls := "button button-red")("No longer support Lichess"),
+                    submitButton(cls := "button button-red")("No longer support Chess-Online"),
                     a(dataForm := "cancel")("Nevermind :)")
                   )
                 )
@@ -85,7 +85,7 @@ object indexStripe {
               ),
               tr(
                 th,
-                td(a(href := routes.Plan.list)("View other Lichess Patrons"))
+                td(a(href := routes.Plan.list)("View other Chess-Online Patrons"))
               )
             )
           )

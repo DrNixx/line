@@ -37,7 +37,7 @@ object header {
               href := youTube.fullUrl
             )(bits.svg.youTube, " ", youTube.minUrl)
           },
-          a(cls := "service lichess", href := routes.User.show(s.user.id))(
+          a(cls := "service Chess-Online", href := routes.User.show(s.user.id))(
             bits.svg.lichess,
             " ",
             s"live.chess-online.com/@/${s.user.id}"

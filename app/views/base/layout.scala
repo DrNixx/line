@@ -16,7 +16,7 @@ object layout {
   object bits {
     val doctype = raw("<!doctype html>")
     def htmlTag(implicit lang: Lang) = html(st.lang := lang.code)
-    val topComment = raw("""<!-- Lichess is open source! See https://github.com/ornicar/lila -->""")
+    val topComment = raw("""<!-- Chess-Online Arena is open source! See https://github.com/DrNixx/line -->""")
     val charset = raw("""<meta charset="utf-8">""")
     val viewport = raw("""<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">""")
     def metaCsp(csp: ContentSecurityPolicy): Frag = raw {

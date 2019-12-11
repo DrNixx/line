@@ -33,7 +33,7 @@ lichess.puzzle = ${
         image = cdnUrl(routes.Export.puzzlePng(puzzle.id).url).some,
         title = s"Chess tactic #${puzzle.id} - ${puzzle.color.name.capitalize} to play",
         url = s"$netBaseUrl${routes.Puzzle.show(puzzle.id).url}",
-        description = s"Lichess tactic trainer: " + puzzle.color.fold(
+        description = s"Chess-Online tactic trainer: " + puzzle.color.fold(
           trans.findTheBestMoveForWhite,
           trans.findTheBestMoveForBlack
         ).txt() + s" Played by ${puzzle.attempts} players."

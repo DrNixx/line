@@ -39,7 +39,7 @@ object help {
   }
 
   def webmasters()(implicit ctx: Context) = {
-    val baseUrl = "https://lichess.org"
+    val baseUrl = "https://live.chess-online.com"
     val parameters = frag(
       p("Parameters:"),
       ul(
@@ -56,7 +56,7 @@ object help {
         div(cls := "box box-pad developers body") {
           val args = """style="width: 400px; height: 444px;" allowtransparency="true" frameborder="0""""
           frag(
-            h1(id := "embed-tv")("Embed Lichess TV in your site"),
+            h1(id := "embed-tv")("Embed Chess-Online Arena TV in your site"),
             div(cls := "center")(raw(s"""<iframe src="/tv/frame?theme=wood" $args></iframe>""")),
             p("Add the following HTML to your site:"),
             p(cls := "copy-zone")(
@@ -114,12 +114,12 @@ object help {
         br,
         div(cls := "box box-pad developers body")(
           h1("HTTP API"),
-          p(raw("""Lichess exposes a RESTish HTTP/JSON API that you are welcome to use. Read the <a href="/api" class="blue">HTTP API documentation</a>."""))
+          p(raw("""Chess-Online Arena exposes a RESTish HTTP/JSON API that you are welcome to use. Read the <a href="/api" class="blue">HTTP API documentation</a>."""))
         ),
         br,
         div(cls := "box box-pad developers body")(
-          h1(id := "widgets")("Lichess Widgets"),
-          p("Let your website/blog visitors know that you're playing on lichess!"),
+          h1(id := "widgets")("Chess-Online Arena Widgets"),
+          p("Let your website/blog visitors know that you're playing on Chess-Online!"),
           p(raw("""See <a href="https://rubenwardy.com/lichess_widgets/" class="blue">https://rubenwardy.com/lichess_widgets/</a> for widgets with your username and rating."""))
         )
       ))
@@ -141,7 +141,7 @@ object help {
     def activeCls(c: String) = cls := active.activeO(c)
     main(cls := "page-menu")(
       st.nav(cls := "page-menu__menu subnav")(
-        a(activeCls("about"), href := routes.Page.about)(trans.aboutX("lichess.org")),
+        a(activeCls("about"), href := routes.Page.about)(trans.aboutX("Chess-Online Arena")),
         a(activeCls("faq"), href := routes.Main.faq)("FAQ"),
         a(activeCls("contact"), href := routes.Main.contact)(trans.contact()),
         a(activeCls("tos"), href := routes.Page.tos)(trans.termsOfService()),
@@ -153,10 +153,10 @@ object help {
         a(activeCls("thanks"), href := routes.Page.thanks)(trans.thankYou()),
         sep,
         a(activeCls("webmasters"), href := routes.Main.webmasters)(trans.webmasters()),
-        a(activeCls("database"), href := "https://database.lichess.org")(trans.database(), external),
+        a(activeCls("database"), href := "https://database.chess-online.com")(trans.database(), external),
         a(activeCls("api"), href := routes.Api.index)("API", external),
         sep,
-        a(activeCls("lag"), href := routes.Main.lag)("Is Lichess lagging?")
+        a(activeCls("lag"), href := routes.Main.lag)("Is Chess-Online Arena lagging?")
       ),
       div(cls := s"page-menu__content $contentCls")(body)
     )

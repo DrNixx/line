@@ -17,7 +17,7 @@ object form {
         h1(title),
         postForm(cls := "form3", action := routes.OAuthApp.create)(
           div(cls := "form-group")(
-            "Want to build something that integrates with and extends Lichess? Register a new OAuth App to get started developing on the Lichess API."
+            "Want to build something that integrates with and extends Chess-Online? Register a new OAuth App to get started developing on the Lichess API."
           ),
           inner(form)
         )

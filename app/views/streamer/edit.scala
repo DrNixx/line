@@ -52,17 +52,17 @@ object edit {
                 )(
                     if (granted) frag(
                       "Your stream is approved and listed on ",
-                      a(href := routes.Streamer.index())("lichess streamers list"), "."
+                      a(href := routes.Streamer.index())("Chess-Online streamers list"), "."
                     )
                     else frag(
                       if (s.streamer.approval.requested) frag(
                         "Your stream is being reviewed by moderators, and will soon be listed on ",
-                        a(href := routes.Streamer.index())("lichess streamers list"), "."
+                        a(href := routes.Streamer.index())("Chess-Online streamers list"), "."
                       )
                       else frag(
                         if (s.streamer.completeEnough) frag(
                           "When you are ready to be listed on ",
-                          a(href := routes.Streamer.index())("lichess streamers list"), ", ",
+                          a(href := routes.Streamer.index())("Chess-Online streamers list"), ", ",
                           postForm(action := routes.Streamer.approvalRequest)(
                             button(tpe := "submmit", cls := "button", (!ctx.is(s.user)) option disabled)(
                               "request a moderator review"
@@ -119,7 +119,7 @@ object edit {
                     form3.split(
                       form3.checkbox(form("approval.chat"), raw("Embed stream chat too"), help = modsOnly, half = true),
                       if (granted)
-                        form3.checkbox(form("approval.featured"), raw("Feature on lichess homepage"), help = modsOnly, half = true)
+                        form3.checkbox(form("approval.featured"), raw("Feature on Chess-Online homepage"), help = modsOnly, half = true)
                       else
                         form3.checkbox(form("approval.ignored"), raw("Ignore further approval requests"), help = modsOnly, half = true)
                     ),
@@ -130,7 +130,7 @@ object edit {
                     form3.group(form("youTube"), raw("Your YouTube channel ID or URL"), help = raw("Optional. Leave empty if none").some, half = true)(form3.input(_))
                   ),
                   form3.split(
-                    form3.group(form("name"), raw("Your streamer name on lichess"), help = raw("Keep it short: 20 characters max").some, half = true)(form3.input(_)),
+                    form3.group(form("name"), raw("Your streamer name on Chess-Online"), help = raw("Keep it short: 20 characters max").some, half = true)(form3.input(_)),
                     form3.checkbox(form("listed"), raw("Visible on the streamers page"), help = raw("When approved by moderators").some, half = true)
                   ),
                   form3.group(form("headline"), raw("Headline"), help = raw("In one sentence, tell us about your stream").some)(form3.input(_)),

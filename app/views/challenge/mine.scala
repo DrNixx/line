@@ -51,7 +51,7 @@ object mine {
                   p(trans.theFirstPersonToComeOnThisUrlWillPlayWithYou())
                 ),
                 ctx.isAuth option div(
-                  h2(cls := "ninja-title", "Or invite a lichess user:"), br,
+                  h2(cls := "ninja-title", "Or invite a Chess-Online user:"), br,
                   postForm(cls := "user-invite", action := routes.Challenge.toFriend(c.id))(
                     input(name := "username", cls := "friend-autocomplete", placeholder := trans.search.txt()),
                     error.map { badTag(_) }

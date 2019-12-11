@@ -35,7 +35,7 @@ object irwin {
               )
             ),
             div(cls := "box__top__actions")(
-              a(href := "https://monitor.lichess.ovh/dashboard/db/lichess-moderation", cls := "button button-empty")("Monitoring")
+              a(href := "https://monitor.chess-online.com/dashboard/db/lichess-moderation", cls := "button button-empty")("Monitoring")
             )
           ),
           table(cls := "slist slist-pad")(

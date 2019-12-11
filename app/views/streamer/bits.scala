@@ -9,7 +9,7 @@ import lila.user.User
 object bits {
 
   def create(me: User)(implicit ctx: Context) = views.html.site.message(
-    title = "Become a lichess streamer",
+    title = "Become a Chess-Online Arena streamer",
     icon = Some(""),
     back = false,
     moreCss = cssTag("streamer.form").some
@@ -31,7 +31,7 @@ object bits {
       height := size,
       cls := "picture",
       src := dbImageUrl(path.value),
-      alt := s"${u.titleUsername} lichess streamer"
+      alt := s"${u.titleUsername} Chess-Online Arena streamer"
     )
     case _ => img(
       width := size,
@@ -94,9 +94,9 @@ object bits {
   }
 
   def rules = ul(cls := "streamer-rules")(
-    li("Be listed as a lichess streamer."),
-    li(title := "For example: Blitz battle on lichess.org")("Get bumped up the top of the list when you stream with the keyword \"lichess.org\" in the stream title."),
-    li("Notify your lichess followers when you start streaming."),
+    li("Be listed as a Chess-Online Arena streamer."),
+    li(title := "For example: Blitz battle on live.chess-online.com")("Get bumped up the top of the list when you stream with the keyword \"chess-online.com\" in the stream title."),
+    li("Notify your Chess-Online followers when you start streaming."),
     li("Promote your stream in your games and tournaments.")
   )
 }

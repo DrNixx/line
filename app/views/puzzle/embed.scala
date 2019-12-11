@@ -21,7 +21,7 @@ object embed {
       head(
         layout.charset,
         layout.metaCsp(basicCsp),
-        st.headTitle("lichess.org chess puzzle"),
+        st.headTitle("Chess-Online.Com chess puzzle"),
         layout.pieceSprite(lila.pref.PieceSet.default),
         cssTagWithTheme("tv.embed", config.bg)
       ),

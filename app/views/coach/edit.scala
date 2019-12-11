@@ -78,7 +78,7 @@ object edit {
                 form3.group(form("profile.methodology"), raw("Teaching methodology"), help = raw("How you prepare and run lessons. How you follow up with students.").some)(form3.textarea(_)(rows := 8))
               ),
               div(cls := "panel contents")(
-                form3.group(form("profile.publicStudies"), raw("Featured public lichess studies"), help = raw("Up to 6 lichess study URLs, one per line").some)(form3.textarea(_)()),
+                form3.group(form("profile.publicStudies"), raw("Featured public Chess-online studies"), help = raw("Up to 6 lichess study URLs, one per line").some)(form3.textarea(_)()),
                 form3.group(form("profile.youtubeChannel"), raw("URL of your Youtube channel"))(form3.input(_)),
                 form3.group(form("profile.youtubeVideos"), raw("Featured youtube videos"), help = raw("Up to 6 Youtube video URLs, one per line").some)(form3.textarea(_)(rows := 6))
               ),

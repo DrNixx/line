@@ -52,7 +52,7 @@ object form {
         a(href := "https://guides.github.com/features/mastering-markdown/", target := "_blank")("Markdown"), " is available"
       ).some)(form3.textarea(_)(rows := 10)),
       if (isGranted(_.Relay))
-        form3.checkbox(form("official"), raw("Official lichess broadcast"), help = raw("Feature on /broadcast - for admins only").some)
+        form3.checkbox(form("official"), raw("Official Chess-Online broadcast"), help = raw("Feature on /broadcast - for admins only").some)
       else form3.hidden(form("official")),
       form3.group(form("syncUrl"), raw("Source URL"))(form3.input(_, typ = "url")),
       form("syncUrl").value.exists(LccRegex.matches) option {

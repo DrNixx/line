@@ -193,6 +193,7 @@ It's useful against spambots. These marks are not visible to the public."""
                   )
                 },
                 div(cls := "social_links col2")(
+                  a(href := s"https://www.chess-online.com/@/${u.id}", target := "_blank")("Chess-Online.Com"),
                   profile.actualLinks.map { link =>
                     a(href := link.url, target := "_blank", rel := "nofollow")(link.site.name)
                   }

@@ -17,7 +17,7 @@ object widget {
 
   def pic(c: lila.coach.Coach.WithUser, size: Int)(implicit ctx: Context) =
     c.coach.picturePath.map { path =>
-      img(width := size, height := size, cls := "picture", src := dbImageUrl(path.value), alt := s"${c.user.titleUsername} lichess coach")
+      img(width := size, height := size, cls := "picture", src := dbImageUrl(path.value), alt := s"${c.user.titleUsername} Chess-Online coach")
     }.getOrElse {
       img(width := size, height := size, cls := "default picture", src := staticUrl("images/placeholder.png"))
     }

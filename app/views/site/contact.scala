@@ -36,21 +36,16 @@ object contact {
     ul(
       li(
         "In the ",
-        a(href := routes.ForumCateg.show("lichess-feedback"))("Lichess Feedback Forum")
+        a(href := routes.ForumCateg.show("arena-feedback"))("Chess-Online Feedback Forum")
       ),
       li(
         "As a ",
-        a(href := "https://github.com/ornicar/lila/issues")("Lichess website issue"),
-        " on GitHub"
-      ),
-      li(
-        "As a ",
-        a(href := "https://github.com/veloce/lichobile/issues")("Lichess mobile app issue"),
+        a(href := "https://github.com/DrNixx/line/issues")("Chess-Online Arena website issue"),
         " on GitHub"
       ),
       li(
         "In the ",
-        a(href := "https://discord.gg/hy5jqSs")("Lichess discord server")
+        a(href := "https://discord.gg/Rfw6C2C")("Chess-Online discord server")
       )
     ),
     p("Please describe what the bug looks like, what you expected to happen instead, and the steps to reproduce the bug.")
@@ -90,11 +85,11 @@ object contact {
         )),
         reopenLeaf("login"),
         Leaf("dns", "\"This site can’t be reached\"", frag(
-          p("If you can't reach Lichess, and your browser says something like:"),
+          p("If you can't reach Chess-Online Arena, and your browser says something like:"),
           ul(
             li("This site can't be reached."),
-            li(strong("lichess.org"), "’s server IP address could not be found."),
-            li("We can’t connect to the server at lichess.org.")
+            li(strong("Chess-Online.Com"), "’s server IP address could not be found."),
+            li("We can’t connect to the server at live.chess-online.com.")
           ),
           p("Then you have a ", strong("DNS issue"), "."),
           p(
@@ -105,9 +100,9 @@ object contact {
         ))
       )),
       Branch("account", "I need account support", List(
-        Leaf("title", "I want my title displayed on Lichess", frag(
+        Leaf("title", "I want my title displayed on Chess-Online Arena", frag(
           p(
-            "To show your title on your Lichess profile, and participate to Titled Arenas, ",
+            "To show your title on your Chess-Online Arena profile, and participate to Titled Arenas, ",
             a(href := routes.Page.master)(
               "visit the title confirmation page"
             ),
@@ -199,8 +194,8 @@ object contact {
         Leaf("security", "Security vulnerability", frag(
           p(s"Please report security issues to $contactEmail."),
           p(
-            "Like all contributions to Lichess, security reviews and pentesting are appreciated. ",
-            "Note that Lichess is built by volunteers and we currently do not have a bug bounty program. ",
+            "Like all contributions to Chess-Online Arena, security reviews and pentesting are appreciated. ",
+            "Note that Chess-Online Arena is built by volunteers and we currently do not have a bug bounty program. ",
             "At your option, we're happy to publicly thank you for any findings."
           ),
           p(
@@ -248,21 +243,16 @@ object contact {
         ))
       )),
       Branch("collab", "Collaboration, legal, commercial", List(
-        Leaf("monetize", "Monetizing Lichess", frag(
-          p("We are not interested in any way of monetizing Lichess."),
-          p("We will never display any kind of ads, we won't track our players, and we won't sell or buy traffic or users."),
-          p("Please do not email us about marketing, tracking, or advertising.")
-        )),
-        Leaf("buy", "Buying Lichess", frag(
+        Leaf("buy", "Buying Chess-Online Arena", frag(
           p("We are not selling, to anyone, for any price. Ever.")
         )),
-        Leaf("authorize", "Authorization to use Lichess", frag(
-          p("You are welcome to use Lichess for your activity, even commercial."),
-          p("You can show it in your videos, and you can print screenshots of Lichess in your books."),
+        Leaf("authorize", "Authorization to use Chess-Online Arena", frag(
+          p("You are welcome to use Chess-Online Arena for your activity, even commercial."),
+          p("You can show it in your videos, and you can print screenshots of Chess-Online Arena in your books."),
           p("Credit is appreciated but not required.")
         )),
         Leaf("gdpr", "GDPR", frag(
-          p("If you are a European citizen, you may request the deletion of your Lichess account."),
+          p("If you are a European citizen, you may request the deletion of your Chess-Online Arena account."),
           p(
             "First, ",
             a(href := routes.Account.close)("close your account"),
@@ -275,7 +265,7 @@ object contact {
           p(s"Please send us an email at $contactEmail."),
           p(
             "Please explain your request clearly and thoroughly. ",
-            "State your Lichess username, and any information that could help us help you."
+            "State your Chess-Online Arena username, and any information that could help us help you."
           )
         ))
       ))
@@ -316,7 +306,7 @@ object contact {
     moreJs = embedJsUnsafe("""location=location.hash||"#help-root""""),
     contentCls = "page box box-pad"
   )(frag(
-      h1("Contact Lichess"),
+      h1("Contact Chess-Online Arena"),
       div(cls := "contact")(
         renderedMenu
       )

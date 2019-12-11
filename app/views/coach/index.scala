@@ -12,7 +12,7 @@ object index {
 
   def apply(pager: Paginator[lila.coach.Coach.WithUser], order: lila.coach.CoachPager.Order)(implicit ctx: Context) =
     views.html.base.layout(
-      title = "Lichess coaches",
+      title = "Chess-Online coaches",
       moreCss = cssTag("coach"),
       moreJs = infiniteScrollTag
     ) {
@@ -20,7 +20,7 @@ object index {
           st.aside(cls := "coach-list__side coach-side")(
             p(
               "Are you a great chess coach?", br,
-              "Do you have a ", a(href := "https://lichess.org/help/master")("FIDE title"), "?", br,
+              "Do you have a ", a(href := "https://live.chess-online.com/help/master")("FIDE title"), "?", br,
               "Send us an email at ", contactEmailLink, br,
               "and we will review your application."
             )

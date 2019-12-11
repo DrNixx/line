@@ -17,7 +17,7 @@ object atom {
     tag("id")(routes.Blog.index().absoluteURL(true)),
     link(rel := "alternate", tpe := "text/html", href := routes.Blog.index().absoluteURL(true)),
     link(rel := "self", tpe := "application/atom+xml", href := routes.Blog.atom().absoluteURL(true)),
-    tag("title")("lichess.org blog"),
+    tag("title")("Chess-Online Arena blog"),
     tag("updated")(pager.currentPageResults.headOption.flatMap(atomDate("blog.date"))),
     pager.currentPageResults.map { doc =>
       tag("entry")(

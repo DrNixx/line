@@ -16,7 +16,7 @@ object index {
     requests: Boolean
   )(implicit ctx: Context) = {
 
-    val title = if (requests) "Streamer approval requests" else "Lichess streamers"
+    val title = if (requests) "Streamer approval requests" else "Chess-Online Arena streamers"
 
     def widget(s: lila.streamer.Streamer.WithUser, stream: Option[lila.streamer.Stream]) = frag(
       a(

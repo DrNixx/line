@@ -49,7 +49,7 @@ $('.coach-review-form form').show();
     ) {
         main(cls := "coach-show coach-full-page")(
           st.aside(cls := "coach-show__side coach-side")(
-            a(cls := "button button-empty", href := routes.User.show(c.user.id))("View ", c.user.username, " lichess profile"),
+            a(cls := "button button-empty", href := routes.User.show(c.user.id))("View ", c.user.username, " Chess-Online profile"),
             if (ctx.me.exists(c.coach.is)) frag(
               if (c.coach.isListed) p("This page is now public.")
               else "This page is not public yet. ",

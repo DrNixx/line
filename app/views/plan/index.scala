@@ -17,7 +17,7 @@ object index {
     bestIds: List[String]
   )(implicit ctx: Context) = {
 
-    val title = "Become a Patron of lichess.org"
+    val title = "Become a Patron of Chess-Online.Com"
 
     views.html.base.layout(
       title = title,
@@ -78,7 +78,7 @@ object index {
                   ),
                   p(
                     "We rely on support from people like you to make it possible. ",
-                    "If you've gotten something out of Lichess, please take a second to pitch in!"
+                    "If you've gotten something out of Chess-Online, please take a second to pitch in!"
                   )
                 ),
                 div(cls := "content")(
@@ -101,13 +101,13 @@ object index {
   <input type="hidden" name="amount" class="amount" value="">
   <input type="hidden" name="cmd" value="_xclick">
   <input type="hidden" name="business" value="Q3H72BENTXL4G">
-  <input type="hidden" name="item_name" value="lichess.org one-time">
+  <input type="hidden" name="item_name" value="Chess-Online.Com one-time">
   <input type="hidden" name="button_subtype" value="services">
   <input type="hidden" name="no_note" value="1">
   <input type="hidden" name="no_shipping" value="1">
   <input type="hidden" name="rm" value="1">
-  <input type="hidden" name="return" value="https://lichess.org/patron/thanks">
-  <input type="hidden" name="cancel_return" value="https://lichess.org/patron">
+  <input type="hidden" name="return" value="https://live.chess-online.com/patron/thanks">
+  <input type="hidden" name="cancel_return" value="https://live.chess-online.com/patron">
   <input type="hidden" name="lc" value="US">
   <input type="hidden" name="currency_code" value="USD">
 </form>
@@ -116,12 +116,12 @@ object index {
   <input type="hidden" name="a3" class="amount" value="">
   <input type="hidden" name="cmd" value="_xclick-subscriptions">
   <input type="hidden" name="business" value="Q3H72BENTXL4G">
-  <input type="hidden" name="item_name" value="lichess.org monthly">
+  <input type="hidden" name="item_name" value="Chess-Online.Com monthly">
   <input type="hidden" name="no_note" value="1">
   <input type="hidden" name="no_shipping" value="1">
   <input type="hidden" name="rm" value="1">
-  <input type="hidden" name="return" value="https://lichess.org/patron/thanks">
-  <input type="hidden" name="cancel_return" value="https://lichess.org/patron">
+  <input type="hidden" name="return" value="https://live.chess-online.com/patron/thanks">
+  <input type="hidden" name="cancel_return" value="https://live.chess-online.com/patron">
   <input type="hidden" name="src" value="1">
   <input type="hidden" name="p3" value="1">
   <input type="hidden" name="t3" value="M">
@@ -133,13 +133,13 @@ object index {
   <input type="hidden" name="amount" class="amount" value="">
   <input type="hidden" name="cmd" value="_xclick">
   <input type="hidden" name="business" value="Q3H72BENTXL4G">
-  <input type="hidden" name="item_name" value="lichess.org lifetime">
+  <input type="hidden" name="item_name" value="Chess-Online.Com lifetime">
   <input type="hidden" name="button_subtype" value="services">
   <input type="hidden" name="no_note" value="1">
   <input type="hidden" name="no_shipping" value="1">
   <input type="hidden" name="rm" value="1">
-  <input type="hidden" name="return" value="https://lichess.org/patron/thanks">
-  <input type="hidden" name="cancel_return" value="https://lichess.org/patron">
+  <input type="hidden" name="return" value="https://live.chess-online.com/patron/thanks">
+  <input type="hidden" name="cancel_return" value="https://live.chess-online.com/patron">
   <input type="hidden" name="lc" value="US">
   <input type="hidden" name="currency_code" value="USD">
 </form>"""),
@@ -149,7 +149,7 @@ object index {
 
                       st.group(cls := "radio buttons freq")(
                         div(
-                          st.title := s"Pay ${lila.plan.Cents.lifetime.usd} once. Be a Lichess Patron forever!",
+                          st.title := s"Pay ${lila.plan.Cents.lifetime.usd} once. Be a Chess-Online Patron forever!",
                           cls := List("lifetime-check" -> patron.exists(_.isLifetime)),
                           input(tpe := "radio", name := "freq", id := "freq_lifetime", patron.exists(_.isLifetime) option disabled, value := "lifetime"),
                           label(`for` := "freq_lifetime")("Lifetime")
@@ -207,7 +207,7 @@ object index {
               ),
               faq,
               div(cls := "best_patrons")(
-                h2("The celebrated Patrons who make Lichess possible"),
+                h2("The celebrated Patrons who make Chess-Online possible"),
                 div(cls := "list")(
                   bestIds.map { userId =>
                     div(userIdLink(userId.some))
@@ -225,10 +225,10 @@ object index {
       dt("Where does the money go?"),
       dd(
         "First of all, powerful servers.", br,
-        "Then we pay a full-time developer: ", userIdLink("thibault".some), ", the founder of Lichess.", br,
+        "Then we pay a full-time developers.", br,
         "See the ", a(href := "/costs", target := "_blank")("detailed cost breakdown.")
       ),
-      dt("Is Lichess an official non-profit?"),
+      dt("Is Chess-Online.Com an official non-profit?"),
       dd(
         "Yes, here's the ", a(href := "http://www.journal-officiel.gouv.fr/association/index.php?ACTION=Rechercher&WHAT=lichess.org")(
           "act of creation (FR)"
@@ -239,7 +239,7 @@ object index {
       dt("Can I change/cancel my monthly support?"),
       dd(
         "Yes, at any time, from this page.", br,
-        "Or you can ", a(href := routes.Main.contact, target := "_blank")("contact Lichess support"), "."
+        "Or you can ", a(href := routes.Main.contact, target := "_blank")("contact Chess-Online support"), "."
       ),
       dt("Other methods of donation?"),
       dd(
@@ -253,7 +253,7 @@ object index {
       dt("Are some features reserved to Patrons?"),
       dd(
         a(href := routes.Plan.features, target := "_blank")("No"), ", because ",
-        "Lichess is entirely free, forever, and for everyone. That's a promise. ",
+        "Chess-Online is entirely free, forever, and for everyone. That's a promise. ",
         "But Patrons get bragging rights with a cool new profile icon.", br,
         "See the ", a(href := routes.Plan.features, target := "_blank")("detailed features comparison"), "."
       )

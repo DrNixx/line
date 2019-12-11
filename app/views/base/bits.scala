@@ -14,7 +14,7 @@ object bits {
   )
 
   lazy val stage = a(
-    href := "https://lichess.org",
+    href := "https://live.chess-online.com",
     style := """
 background: #7f1010;
 color: #fff;
@@ -26,6 +26,6 @@ border-top-right-radius: 3px;
 z-index: 99;
 """
   )(
-      "This is an empty lichess preview website, go to lichess.org instead"
+      "This is an empty Chess-Online preview website, go to live.chess-online.com instead"
     )
 }

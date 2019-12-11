@@ -18,7 +18,7 @@ object thanks {
           h1(cls := "text", dataIcon := patronIconChar)("Thank you for your support!"),
 
           div(cls := "body")(
-            p("Thank you for helping us build Lichess. ", strong("You rock!")),
+            p("Thank you for helping us build Chess-Online. ", strong("You rock!")),
             p(
               "Your transaction has been completed, ",
               "and a receipt for your donation has been emailed to you."
@@ -40,21 +40,21 @@ object thanks {
                 )
                 else frag(
                   if (pat.isLifetime) p(
-                    "You are now a lifetime Lichess Patron!", br,
+                    "You are now a lifetime Chess-Online Patron!", br,
                     ctx.me.map { me =>
                       frag("Check out your ", a(href := routes.User.show(me.id))("profile page"), ".")
                     }
                   )
                   else frag(
                     p(
-                      "You are now a Lichess Patron for one month!", br,
+                      "You are now a Chess-Online Patron for one month!", br,
                       ctx.me.map { me =>
                         frag("Check out your ", a(href := routes.User.show(me.id))("profile page"), ".")
                       }
                     ),
                     p(
                       "In one month, you will ", strong("not"), " be charged again, ",
-                      "and your Lichess account will be downgraded to free."
+                      "and your Chess-Online account will be downgraded to free."
                     ),
                     p(
                       "To get a permanent Patron account, please consider making a ",
@@ -64,7 +64,7 @@ object thanks {
                 )
               }
             },
-            p("Success! ", a(href := routes.Lobby.home)("Return to Lichess homepage"), ".")
+            p("Success! ", a(href := routes.Lobby.home)("Return to Chess-Online Arena homepage"), ".")
           )
         )
       }

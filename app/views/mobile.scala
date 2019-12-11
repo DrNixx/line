@@ -41,13 +41,13 @@ object mobile {
                 li(trans.puzzles()),
                 li(trans.gameAnalysis()),
                 li(trans.boardEditor()),
-                li("Lichess TV"),
+                li("Arena TV"),
                 li(trans.followAndChallengeFriends()),
                 li(trans.availableInNbLanguages.pluralSame(80))
               )
             ),
             div(cls := "right-side")(
-              img(cls := "nexus5-playing", width := "268", height := "513", src := staticUrl("images/mobile/nexus5-playing.png"), alt := "Lichess mobile on nexus 5"),
+              img(cls := "nexus5-playing", width := "268", height := "513", src := staticUrl("images/mobile/nexus5-playing.png"), alt := "Chess-Online mobile on nexus 5"),
               img(cls := "qrcode", width := "200", height := "200", src := staticUrl("images/mobile/dynamic-qrcode.png"), alt := "Download QR code")
             )
           )
