@@ -12,7 +12,7 @@ object Tv extends LilaController {
   def index = onChannel(lila.tv.Tv.Channel.Best.key)
 
   def onChannel(chanKey: String) = Open { implicit ctx =>
-    (lila.tv.Tv.Channel.byKey get chanKey).fold(Redirect(routes.Lobby.home))(lichessTv)
+    (lila.tv.Tv.Channel.byKey get chanKey).fold(Redirect(routes.Lobby.home).fuccess)(lichessTv)
   }
 
   def sides(gameId: String, color: String) = Open { implicit ctx =>
