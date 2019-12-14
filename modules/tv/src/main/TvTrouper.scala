@@ -68,6 +68,7 @@ private[tv] final class TvTrouper(
         "color" -> game.firstColor.name,
         "player" -> user.map { u =>
           Json.obj(
+            "id" -> u.id,
             "name" -> u.name,
             "title" -> u.title,
             "rating" -> player.rating

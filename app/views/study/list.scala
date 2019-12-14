@@ -29,7 +29,7 @@ object list {
     active = "owner",
     order = order,
     pag = pag,
-    searchFilter = s"owner:${owner.username}",
+    searchFilter = s"owner:${owner.id}",
     url = o => routes.Study.byOwner(owner.id, o)
   )(trans.study.studiesCreatedByX(userLink(owner)))
 
@@ -38,7 +38,7 @@ object list {
     active = "mine",
     order = order,
     pag = pag,
-    searchFilter = s"owner:${me.username}",
+    searchFilter = s"owner:${me.id}",
     url = o => routes.Study.mine(o)
   )(trans.study.myStudies())
 
@@ -60,7 +60,7 @@ object list {
     active = "mineMember",
     order = order,
     pag = pag,
-    searchFilter = s"member:${me.username}",
+    searchFilter = s"member:${me.id}",
     url = o => routes.Study.mineMember(o)
   )(trans.study.studiesIContributeTo())
 
@@ -69,7 +69,7 @@ object list {
     active = "minePublic",
     order = order,
     pag = pag,
-    searchFilter = s"owner:${me.username}",
+    searchFilter = s"owner:${me.id}",
     url = o => routes.Study.minePublic(o)
   )(trans.study.myPublicStudies())
 
@@ -78,7 +78,7 @@ object list {
     active = "minePrivate",
     order = order,
     pag = pag,
-    searchFilter = s"owner:${me.username}",
+    searchFilter = s"owner:${me.id}",
     url = o => routes.Study.minePrivate(o)
   )(trans.study.myPrivateStudies())
 
