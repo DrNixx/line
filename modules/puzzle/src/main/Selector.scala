@@ -88,7 +88,8 @@ private final object Selector {
 
   val toleranceMax = 1000
 
-  val anonSkipMax = 5000
+  // val anonSkipMax = 5000
+  val anonSkipMax = 750
 
   def toleranceStepFor(rating: Int, nbPuzzles: Int) = {
     math.abs(1500 - rating) match {
