@@ -58,6 +58,7 @@ private[api] final class Cli extends lila.common.Cli {
   private def processors =
     lila.security.Env.current.cli.process orElse
       lila.i18n.Env.current.cli.process orElse
+      lila.gameSearch.Env.current.cli.process orElse
       lila.teamSearch.Env.current.cli.process orElse
       lila.forumSearch.Env.current.cli.process orElse
       lila.team.Env.current.cli.process orElse

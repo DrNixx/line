@@ -4,9 +4,9 @@ import org.joda.time.DateTime
 import org.joda.time.format.DateTimeFormat
 import play.api.libs.iteratee._
 import play.api.libs.json._
+
 import scala.concurrent.duration._
 import scala.util.Try
-
 import lila.db.dsl._
 import lila.game.{ Game, GameRepo }
 import lila.search._
@@ -36,6 +36,32 @@ final class GameSearchApi(
         logger.some
       )(system)
     }
+  }
+
+  def reset(userId: lila.user.User.ID) = client match {
+    case c: ESClientHttp => c.putMapping >> {
+      import play.api.libs.iteratee._
+      import reactivemongo.play.iteratees.cursorProducer
+      import reactivemongo.api.ReadPreference
+
+      val query = lila.game.Query.user(userId) ++
+        lila.game.Query.finished
+
+      val batchSize = 500
+      val maxEntries = Int.MaxValue
+
+      GameRepo.cursor(
+        selector = query,
+        readPreference = ReadPreference.secondaryPreferred
+      ).enumerator(maxEntries)
+        .|>>>(Iteratee.foldM[Game, Int](0) {
+          case (count, game) => {
+            store(game)
+          } inject (count + 1)
+        })
+    } >> client.refresh
+
+    case _ => funit
   }
 
   private def storable(game: Game) = game.finished || game.imported

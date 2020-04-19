@@ -32,6 +32,12 @@ final class Env(
     paginator = paginator
   )
 
+  def cli = new lila.common.Cli {
+    def process = {
+      case "game" :: "search" :: username :: "reset" :: Nil => api.reset(username) inject "done"
+    }
+  }
+
   lila.common.Bus.subscribeFun('finishGame, 'gameSearchInsert) {
     case FinishGame(game, _, _) if !game.aborted => api store game
     case InsertGame(game) => api store game
