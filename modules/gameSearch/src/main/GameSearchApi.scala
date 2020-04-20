@@ -38,8 +38,8 @@ final class GameSearchApi(
     }
   }
 
-  def reset(userId: lila.user.User.ID) = client match {
-    case c: ESClientHttp => c.putMapping >> {
+  def index(userId: lila.user.User.ID) = client match {
+    case c: ESClientHttp => {
       import play.api.libs.iteratee._
       import reactivemongo.play.iteratees.cursorProducer
       import reactivemongo.api.ReadPreference
@@ -59,7 +59,9 @@ final class GameSearchApi(
             store(game)
           } inject (count + 1)
         })
-    } >> client.refresh
+
+      c.refresh
+    }
 
     case _ => funit
   }
