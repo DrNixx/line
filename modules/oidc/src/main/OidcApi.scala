@@ -23,7 +23,7 @@ final class OidcApi(
   }
 
   def authenticate(req: RequestHeader): Fu[Option[User]] = {
-    val redirectBackURI = req.flash("referrer")
+    // val redirectBackURI = req.flash("referrer")
     val state = req.flash("oidcState")
     val nonce = req.flash("oidcNonce")
     val params = req.queryString.map { case (k, Seq(v)) => (k, v) }
@@ -37,7 +37,7 @@ final class OidcApi(
   private def getOrCreateUser(userInfo: UserInfo): Fu[Option[User]] = {
     userRepo byId userInfo.getSubject.toString flatMap {
       case Some(user) =>
-        userRepo setUsername (user.id, userInfo.getPreferredUsername)
+        userRepo.setUsername(user.id, userInfo.getPreferredUsername)
         fuccess(Some(user))
       case None =>
         createOidcUser(userInfo)
@@ -49,7 +49,7 @@ final class OidcApi(
     val blind = false
     val confirmEmail = false
     val email = new EmailAddress(userInfo.getEmailAddress)
-    var username = userInfo.getPreferredUsername
+    val username = userInfo.getPreferredUsername
     userRepo.create2(userInfo.getSubject.toString, username, pwd, email, blind, none, confirmEmail)
   }
 }

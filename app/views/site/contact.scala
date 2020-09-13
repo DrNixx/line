@@ -77,7 +77,7 @@ object contact {
               "forgot-username",
               forgotUsername(),
               p(
-                a(href := routes.Auth.login())(youCanLoginWithEmail()),
+                a(href := routes.Auth.oidcLogin())(youCanLoginWithEmail()),
                 "."
               )
             ),

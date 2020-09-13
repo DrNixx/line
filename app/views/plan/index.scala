@@ -210,7 +210,7 @@ object index {
                     if (ctx.isAuth)
                       button(cls := "stripe button")(withCreditCard())
                     else
-                      a(cls := "stripe button", href := routes.Auth.login())(withCreditCard()),
+                      a(cls := "stripe button", href := routes.Auth.oidcLogin())(withCreditCard()),
                     button(cls := "paypal button")(withPaypal())
                   )
                 )

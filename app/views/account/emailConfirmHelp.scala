@@ -67,7 +67,7 @@ object emailConfirmHelp {
               case Confirmed(name) =>
                 frag(
                   p("The user ", strong(name), " is successfully confirmed."),
-                  p("You can ", a(href := routes.Auth.login())("login right now as ", name), "."),
+                  p("You can ", a(href := routes.Auth.oidcLogin())("login right now as ", name), "."),
                   p("You do not need a confirmation email.")
                 )
               case Closed(name) =>
