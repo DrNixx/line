@@ -48,7 +48,7 @@ export default function($input: JQuery, opts: UserAutocompleteOpts = {}): Promis
         pending: spinnerHtml,
         suggestion(o) {
           const tag = opts.tag || 'a';
-          return '<' + tag + ' class="ulpt user-link' + (o.online ? ' online' : '') + '" ' + (tag === 'a' ? '' : 'data-') + 'href="/@/' + o.name + '">' +
+          return '<' + tag + ' class="ulpt user-link' + (o.online ? ' online' : '') + '" ' + (tag === 'a' ? '' : 'data-') + 'href="/@/' + o.id + '">' +
             '<i class="line' + (o.patron ? ' patron' : '') + '"></i>' + (o.title ? '<span class="utitle">' + o.title + '</span>&nbsp;' : '') + o.name +
             '</' + tag + '>';
         }

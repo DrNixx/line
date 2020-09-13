@@ -17,7 +17,7 @@ function podiumPosition(p: PodiumPlayer, pos: string, trans: Trans): VNode | und
   return p ? h('div.' + pos, [
     h('div.trophy'),
     h('a.text.ulpt.user-link', {
-      attrs: { href: '/@/' + p.user.name }
+      attrs: { href: '/@/' + p.user.id }
     }, userName(p.user)),
     podiumStats(p, trans)
   ]) : undefined;

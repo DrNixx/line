@@ -19,7 +19,7 @@ export default function renderConvo(ctrl: MsgCtrl, convo: Convo): VNode {
           hook: bindMobileMousedown(ctrl.showSide)
         }),
         h('a.user-link.ulpt', {
-          attrs: { href: `/@/${user.name}` },
+          attrs: { href: `/@/${user.id}` },
           class: {
             online: user.online,
             offline: !user.online

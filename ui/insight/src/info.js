@@ -7,7 +7,7 @@ module.exports = function(ctrl) {
   return m('div.info.box', [
     m('div.top', [
       m('a.username.user-link.insight-ulpt', {
-        href: '/@/' + ctrl.user.name
+        href: '/@/' + ctrl.user.id
       }, ctrl.user.name)
     ]),
     m('div.content', [

@@ -18,7 +18,7 @@ export function bind(eventName: string, f: (e: Event) => void): Hooks {
 
 export function player(p: Player) {
   return h('a.ulpt.user-link.online', {
-    attrs: { href: '/@/' + p.name },
+    attrs: { href: '/@/' + p.id },
     hook: {
       destroy(vnode) {
         $.powerTip.destroy(vnode.elm as HTMLElement)

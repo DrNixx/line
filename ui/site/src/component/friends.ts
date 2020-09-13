@@ -53,7 +53,7 @@ export default class OnlineFriends {
   renderFriend = (friend: Friend) => {
     const icon = `<i class="line${friend.patron ? ' patron' : ''}"></i>`,
       titleTag = friend.title ? `<span class="utitle"${friend.title === 'BOT' ? ' data-bot' : ''}>${friend.title}</span>&nbsp;` : '',
-      url = '/@/' + friend.name,
+      url = '/@/' + friend.id,
       tvButton = friend.playing ? `<a data-icon="1" class="tv ulpt" data-pt-pos="nw" href="${url}/tv" data-href="${url}"></a>` : '';
     return `<div><a class="user-link ulpt" data-pt-pos="nw" href="${url}">${icon}${titleTag}${friend.name}</a>${tvButton}</div>`;
   }

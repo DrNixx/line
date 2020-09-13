@@ -32,14 +32,14 @@ const miniPairing = (ctrl: SimulCtrl) => (pairing: Pairing) => {
     h('span.mini-game__player', [
       h('a.mini-game__user.ulpt', {
         attrs: {
-          href: `/@/${player.name}`
+          href: `/@/${player.id}`
         }
       }, [
         h('span.name', player.title ? [h('span.utitle', player.title), ' ', player.name] : [player.name]),
         ' ',
         h('span.rating', player.rating)
       ]),
-      game.clock ? 
+      game.clock ?
         renderClock(opposite(game.orient), game.clock[opposite(game.orient)]) :
         h('span.mini-game__result', game.winner ? (game.winner == game.orient ? 0 : 1) : '½'),
     ]),

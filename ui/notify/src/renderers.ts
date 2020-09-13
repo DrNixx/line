@@ -161,7 +161,7 @@ export const renderers: Renderers = {
     text: _ => 'Time is almost up!'
   },
   irwinDone: {
-    html: n => generic(n, '/@/' + n.content.user.name + '?mod', '', [
+    html: n => generic(n, '/@/' + n.content.user.id + '?mod', '', [
       h('span', [
         h('strong', userFullName(n.content.user)),
         drawTime(n)

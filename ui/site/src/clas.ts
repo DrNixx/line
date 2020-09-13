@@ -51,7 +51,7 @@ window.lichess.load.then(() => {
           }).catch(() => callback([]))
         },
         template: o =>
-          '<span class="ulpt user-link' + (o.online ? ' online' : '') + '" href="/@/' + o.name + '">' +
+          '<span class="ulpt user-link' + (o.online ? ' online' : '') + '" href="/@/' + o.id + '">' +
           '<i class="line' + (o.patron ? ' patron' : '') + '"></i>' + (o.title ? '<span class="utitle">' + o.title + '</span>&nbsp;' : '') + o.name +
           '</span>',
         replace: o => '$1' + o.name + '\n'
