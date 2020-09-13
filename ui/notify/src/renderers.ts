@@ -36,9 +36,9 @@ export const renderers: Renderers = {
     text: n => userFullName(n.content.invitedBy) + ' invited you to « ' + n.content.studyName + ' ».'
   },
   privateMessage: {
-    html: n => generic(n, "/inbox/" + n.content.thread.id + '#bottom', 'c', [
+    html: n => generic(n, "/inbox/" + n.content.user.name, 'c', [
       h('span', [
-        h('strong', userFullName(n.content.sender)),
+        h('strong', userFullName(n.content.user)),
         drawTime(n)
       ]),
       h('span', n.content.text)
@@ -54,16 +54,6 @@ export const renderers: Renderers = {
       h('span', "You are now part of the team.")
     ]),
     text: n => "You have joined  « " + n.content.name + "  »."
-  },
-  teamMadeOwner: {
-    html: n => generic(n, "/team/" + n.content.id, 'f', [
-      h('span', [
-        h('strong', n.content.name),
-        drawTime(n)
-      ]),
-      h('span', "You are appointed as team owner.")
-    ]),
-    text: n => "You are now the owner of  « " + n.content.name + "  »."
   },
   titledTourney: {
     html: n => generic(n, '/tournament/' + n.content.id, 'g', [
@@ -126,9 +116,9 @@ export const renderers: Renderers = {
         h('strong', 'Thank you!'),
         drawTime(n)
       ]),
-      h('span', 'You just became a Chess-Online Patron.')
+      h('span', 'You just became a lichess Patron.')
     ]),
-    text: _ => 'You just became a Chess-Online Patron.'
+    text: _ => 'You just became a lichess Patron.'
   },
   planExpire: {
     html: n => generic(n, '/patron', '', [
@@ -171,14 +161,14 @@ export const renderers: Renderers = {
     text: _ => 'Time is almost up!'
   },
   irwinDone: {
-    html: n => generic(n, '/@/' + n.content.user.id + '?mod', '', [
+    html: n => generic(n, '/@/' + n.content.user.name + '?mod', '', [
       h('span', [
         h('strong', userFullName(n.content.user)),
         drawTime(n)
       ]),
       h('span', 'Irwin job complete!')
     ]),
-    text: n => n.content.user.id + ': Irwin job complete!'
+    text: n => n.content.user.name + ': Irwin job complete!'
   }
 };
 

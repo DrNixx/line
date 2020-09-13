@@ -1,16 +1,14 @@
 package lila.oidc
 
-import java.net.URI
 import java.io.IOException
 
-import com.nimbusds.jose.JWSAlgorithm.Family
 import com.nimbusds.jose.proc.BadJOSEException
 import com.nimbusds.jose.util.DefaultResourceRetriever
-import com.nimbusds.jose.{ JOSEException, JWSAlgorithm }
+import com.nimbusds.jose.JOSEException
 import com.nimbusds.oauth2.sdk._
 import com.nimbusds.oauth2.sdk.auth.ClientSecretBasic
 import com.nimbusds.oauth2.sdk.http.HTTPResponse
-import com.nimbusds.oauth2.sdk.id.{ ClientID, Issuer, State }
+import com.nimbusds.oauth2.sdk.id.{ Issuer, State }
 import com.nimbusds.oauth2.sdk.token.BearerAccessToken
 import com.nimbusds.openid.connect.sdk.claims.IDTokenClaimsSet
 import com.nimbusds.openid.connect.sdk.op.OIDCProviderMetadata
@@ -18,13 +16,13 @@ import com.nimbusds.openid.connect.sdk.validators.IDTokenValidator
 import com.nimbusds.openid.connect.sdk.{ AuthenticationErrorResponse, _ }
 import com.nimbusds.openid.connect.sdk.claims._
 
-import scala.collection.JavaConversions._
+import scala.jdk.CollectionConverters._
 
 // http://nemcio.cf/gitbucket/
 
 final class OpenIDConnectService(
     val oidc: OIDC
-) {
+)(implicit ec: scala.concurrent.ExecutionContext) {
 
   private lazy val metadata = getMetadata(oidc.issuer)
 
@@ -88,7 +86,7 @@ final class OpenIDConnectService(
    */
   def validateOIDCAuthenticationResponse(params: Map[String, String], state: State): Fu[AuthenticationSuccessResponse] =
     try {
-      AuthenticationResponseParser.parse(oidc.signinCallbackUrl, params) match {
+      AuthenticationResponseParser.parse(oidc.signinCallbackUrl, params.asJava) match {
         case response: AuthenticationSuccessResponse =>
           if (response.getState == state) {
             fuccess(response)

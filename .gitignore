@@ -2,8 +2,6 @@
 conf/application.conf
 conf/version.conf
 
-bin/dev
-bin/dev.bat
 logs
 project/project
 project/target

@@ -13,6 +13,7 @@ case class OIDC(
     signinCallbackUrl: URI,
     jwsAlgorithm: Option[JWSAlgorithm]
 )
+
 object OIDCFactory {
   def apply(issuer: String, clientID: String, clientSecret: String, signinCallbackUrl: String, jwsAlgorithm: Option[String]): OIDC =
     new OIDC(new Issuer(issuer), new ClientID(clientID), new Secret(clientSecret), new URI(signinCallbackUrl), jwsAlgorithm.map(JWSAlgorithm.parse))

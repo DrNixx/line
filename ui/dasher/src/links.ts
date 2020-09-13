@@ -13,10 +13,10 @@ export default function(ctrl: DasherCtrl): VNode {
     return d.user ? h('div.links', [
       h(
         'a.user-link.online.text.is-green',
-        linkCfg(`/@/${d.user.id}`, d.user.patron ? '' : ''),
+        linkCfg(`/@/${d.user.name}`, d.user.patron ? '' : ''),
         noarg('profile')),
 
-      d.kid ? null : h(
+      h(
         'a.text',
         linkCfg('/inbox', 'e'),
         noarg('inbox')),

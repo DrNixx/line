@@ -44,7 +44,7 @@ final class Account(
       } { username =>
         env.user.repo
           .setUsernameCased(me.id, username) inject
-          Redirect(routes.User show me.username).flashSuccess recover {
+          Redirect(routes.User show me.id).flashSuccess recover {
           case e =>
             BadRequest(html.account.username(me, env.user.forms.username(me))).flashFailure(e.getMessage)
         }
@@ -130,7 +130,7 @@ final class Account(
 
   def passwdApply =
     AuthBody { implicit ctx => me =>
-      auth.HasherRateLimit(me.username, ctx.req) { _ =>
+      auth.HasherRateLimit(me.id, ctx.req) { _ =>
         implicit val req = ctx.body
         env.user.forms passwd me flatMap { form =>
           FormFuResult(form) { err =>
@@ -178,7 +178,7 @@ final class Account(
 
   def emailApply =
     AuthBody { implicit ctx => me =>
-      auth.HasherRateLimit(me.username, ctx.req) { _ =>
+      auth.HasherRateLimit(me.id, ctx.req) { _ =>
         implicit val req = ctx.body
         env.security.forms.preloadEmailDns >> emailForm(me).flatMap { form =>
           FormFuResult(form) { err =>
@@ -186,7 +186,7 @@ final class Account(
           } { data =>
             val email = env.security.emailAddressValidator
               .validate(data.realEmail) err s"Invalid email ${data.email}"
-            val newUserEmail = lila.security.EmailConfirm.UserEmail(me.username, email.acceptable)
+            val newUserEmail = lila.security.EmailConfirm.UserEmail(me.id, email.acceptable)
             auth.EmailConfirmRateLimit(newUserEmail, ctx.req) {
               env.security.emailChange.send(me, newUserEmail.email) inject
                 Redirect(routes.Account.email()).flashSuccess {
@@ -208,7 +208,7 @@ final class Account(
                 user,
                 result =
                   if (prevEmail.exists(_.isNoReply))
-                    Some(_ => Redirect(routes.User.show(user.username)).flashSuccess)
+                    Some(_ => Redirect(routes.User.show(user.id)).flashSuccess)
                   else
                     Some(_ => Redirect(routes.Account.email()).flashSuccess)
               )
@@ -221,7 +221,7 @@ final class Account(
       import lila.security.EmailConfirm.Help._
       ctx.me match {
         case Some(me) =>
-          Redirect(routes.User.show(me.username)).fuccess
+          Redirect(routes.User.show(me.id)).fuccess
         case None if get("username").isEmpty =>
           Ok(html.account.emailConfirmHelp(helpForm, none)).fuccess
         case None =>
@@ -252,7 +252,7 @@ final class Account(
 
   def setupTwoFactor =
     AuthBody { implicit ctx => me =>
-      auth.HasherRateLimit(me.username, ctx.req) { _ =>
+      auth.HasherRateLimit(me.id, ctx.req) { _ =>
         implicit val req = ctx.body
         env.security.forms.setupTwoFactor(me) flatMap { form =>
           FormFuResult(form) { err =>
@@ -267,7 +267,7 @@ final class Account(
 
   def disableTwoFactor =
     AuthBody { implicit ctx => me =>
-      auth.HasherRateLimit(me.username, ctx.req) { _ =>
+      auth.HasherRateLimit(me.id, ctx.req) { _ =>
         implicit val req = ctx.body
         env.security.forms.disableTwoFactor(me) flatMap { form =>
           FormFuResult(form) { err =>
@@ -298,7 +298,7 @@ final class Account(
             fuccess(html.account.close(me, err, managed = false))
           } { _ =>
             env.closeAccount(me.id, self = true) inject {
-              Redirect(routes.User show me.username) withCookies env.lilaCookie.newSession
+              Redirect(routes.User show me.id) withCookies env.lilaCookie.newSession
             }
           }
         }

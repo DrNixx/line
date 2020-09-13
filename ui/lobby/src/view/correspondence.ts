@@ -16,7 +16,7 @@ function renderSeek(ctrl: LobbyController, seek: Seek): VNode {
   }, tds([
     h('span.is.is2.color-icon.' + (seek.color || 'random')),
     (seek.rating ? h('span.ulpt', {
-      attrs: { 'data-href': '/@/' + seek.username }
+      attrs: { 'data-href': '/@/' + seek.id }
     }, seek.username) : 'Anonymous'),
     seek.rating + (seek.provisional ? '?' : ''),
     seek.days ? ctrl.trans.plural('nbDays', seek.days) : '∞',

@@ -2,6 +2,6 @@
 
 They are generated, and will be overwritten.
 
-### Instead, [use Crowdin to contribute to Chess-Online translations](https://crowdin.com/project/Chess-Online).
+### Instead, [use Crowdin to contribute to lichess translations](https://crowdin.com/project/lichess).
 
 Thank you!

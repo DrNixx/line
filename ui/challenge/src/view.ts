@@ -127,12 +127,12 @@ function renderUser(u?: ChallengeUser): VNode {
   if (!u) return h('span', 'Open challenge');
   const rating = u.rating + (u.provisional ? '?' : '');
   return h('a.ulpt.user-link', {
-    attrs: { href: `/@/${u.id}`},
+    attrs: { href: `/@/${u.name}`},
     class: { online: !!u.online }
   }, [
     h('i.line' + (u.patron ? '.patron' : '')),
     h('name', [
-      u.title && h('span.title', u.title == 'BOT' ? { attrs: { 'data-bot': true } } : {}, u.title + ' '),
+      u.title && h('span.utitle', u.title == 'BOT' ? { attrs: { 'data-bot': true } } : {}, u.title + ' '),
       u.name + ' (' + rating + ') '
     ]),
       h('signal', u.lag === undefined ? [] : [1, 2, 3, 4].map((i) => h('i', {

@@ -441,7 +441,7 @@ final class Clas(
               err => BadRequest(html.clas.student.edit(clas, students, s, err)).fuccess,
               data =>
                 env.clas.api.student.update(s.student, data) map { _ =>
-                  Redirect(routes.Clas.studentShow(clas.id.value, s.user.username)).flashSuccess
+                  Redirect(routes.Clas.studentShow(clas.id.value, s.user.id)).flashSuccess
                 }
             )
         }
@@ -488,7 +488,7 @@ final class Clas(
           if (s.student.managed)
             Ok(views.html.clas.student.release(clas, students, s, env.clas.forms.student.release)).fuccess
           else
-            Redirect(routes.Clas.studentShow(clas.id.value, s.user.username)).fuccess
+            Redirect(routes.Clas.studentShow(clas.id.value, s.user.id)).fuccess
         }
       }
     }
@@ -505,17 +505,17 @@ final class Clas(
                 data => {
                   val email = env.security.emailAddressValidator
                     .validate(lila.common.EmailAddress(data)) err s"Invalid email $data"
-                  val newUserEmail = lila.security.EmailConfirm.UserEmail(s.user.username, email.acceptable)
+                  val newUserEmail = lila.security.EmailConfirm.UserEmail(s.user.id, email.acceptable)
                   authC.EmailConfirmRateLimit(newUserEmail, ctx.req) {
                     env.security.emailChange.send(s.user, newUserEmail.email) inject
-                      Redirect(routes.Clas.studentShow(clas.id.value, s.user.username)).flashSuccess {
+                      Redirect(routes.Clas.studentShow(clas.id.value, s.user.id)).flashSuccess {
                         s"A confirmation email was sent to ${email.acceptable.value}. ${s.student.realName} must click the link in the email to release the account."
                       }
                   }(rateLimitedFu)
                 }
               )
           else
-            Redirect(routes.Clas.studentShow(clas.id.value, s.user.username)).fuccess
+            Redirect(routes.Clas.studentShow(clas.id.value, s.user.id)).fuccess
         }
       }
     }
