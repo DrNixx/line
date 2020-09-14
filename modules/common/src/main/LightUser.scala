@@ -10,7 +10,7 @@ case class LightUser(
 ) {
 
   def titleName = title.fold(name)(_ + " " + name)
-
+  def idVsTitleName = title.fold(id + "/" + name)(id + "/" + _ + " " + name)
   def isBot = title has "BOT"
 }
 
