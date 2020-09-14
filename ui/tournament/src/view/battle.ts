@@ -61,7 +61,7 @@ function teamTr(ctrl: TournamentController, battle: TeamBattle, team: RankedTeam
   team.players.forEach((p, i) => {
     if (i > 0) players.push('+');
     players.push(h('score.ulpt.user-link', {
-      key: p.user.name,
+      key: p.user.id,
       class: { top: i === 0 },
       attrs: {
         'data-href': '/@/' + p.user.id,

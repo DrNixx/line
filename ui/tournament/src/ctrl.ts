@@ -146,7 +146,7 @@ export default class TournamentController {
 
   showPlayerInfo = (player) => {
     if (this.data.secondsToStart) return;
-    const userId = player.name.toLowerCase();
+    const userId = player.id;
     this.teamInfo.requested = undefined;
     this.playerInfo = {
       id: this.playerInfo.id === userId ? null : userId,
