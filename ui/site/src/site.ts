@@ -10,6 +10,7 @@ import miniGame from "./component/mini-game";
 import { requestIdleCallback } from "./component/functions";
 import powertip from "./component/powertip";
 import timeago from "./component/timeago";
+import sidebar from "./component/sidebar";
 import topBar from "./component/top-bar";
 import userAutocomplete from "./component/user-autocomplete";
 import loadInfiniteScroll from "./component/infinite-scroll";
@@ -78,6 +79,7 @@ li.load.then(() => {
         li.socket = new StrongSocket("/socket/v5", false);
     }, 300);
 
+    sidebar();
     topBar();
 
     window.addEventListener('resize', () => document.body.dispatchEvent(new Event('chessground.resize')));

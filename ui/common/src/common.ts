@@ -26,3 +26,17 @@ export const prop = <A>(initialValue: A): Prop<A> => {
   };
   return fun as Prop<A>;
 }
+
+export interface Props {}
+
+export function extend<A extends Props> (a: A, b: A): A {
+  if (b !== undefined) {
+      for (var key in b) {
+          if (b.hasOwnProperty(key)) {
+              a[key] = b[key];
+          }
+      }
+  }
+  
+  return a;
+}

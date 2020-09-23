@@ -258,6 +258,7 @@ object layout {
           netConfig.stageBanner option views.html.base.bits.stage,
           lila.security.EmailConfirm.cookie.get(ctx.req).map(views.html.auth.bits.checkYourEmailBanner(_)),
           playing option zenToggle,
+          sidebar(),
           siteHeader(playing),
           div(
             id := "main-wrap",
