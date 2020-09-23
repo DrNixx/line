@@ -25,7 +25,7 @@ const
     sOpen       = 'open',
     sActive     = 'active';
 
-const body = window.body;
+const body = document.body;
 
 const sidebar = () => {
     const pinnedStorage = storage.makeBoolean('sidebar.pinned');

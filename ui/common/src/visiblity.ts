@@ -15,7 +15,7 @@ export const checkVisiblity = (size: DeviceSizeType) => {
         const utilElement = document.createElement('div');
         utilElement.className = elementClass;
         utilElement.setAttribute("id", elementId);
-        window.body.appendChild(utilElement)
+        document.body.appendChild(utilElement)
         pgElement = document.getElementById(elementId);
     }
 
