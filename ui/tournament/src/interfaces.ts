@@ -69,7 +69,8 @@ export interface RankedTeam {
 
 export interface TeamPlayer {
   user: {
-    name: string
+    id: string;
+    name: string;
   };
   score: number
 }
@@ -95,6 +96,7 @@ export interface TeamInfo {
 }
 
 export interface TeamPlayer {
+  id: string;
   name: string;
   rating: number;
   score: number;
