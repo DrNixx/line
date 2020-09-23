@@ -85,9 +85,9 @@ const sidebar = () => {
              if (dom.hasClass(body,"menu-pin"))
                  return;
     
-             if (dom.hasClass(window.element.querySelector('.sidebar-overlay-slide'), sShow)) {
+             if (dom.hasClass(element.querySelector('.sidebar-overlay-slide'), sShow)) {
                 // @TODO : 
-                dom.removeClass(window.element.querySelector('.sidebar-overlay-slide'), sShow);
+                dom.removeClass(element.querySelector('.sidebar-overlay-slide'), sShow);
                 // $("[data-pages-toggle']").removeClass(sActive)
              }
     

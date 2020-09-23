@@ -90,8 +90,8 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
 
         .sidebar-header-controls {
             display: inline-block;
-            -webkit-transition: -webkit-transform 0 0.4s cubic-bezier($menu-bezier);
-            transition: transform 0 0.4s cubic-bezier($menu-bezier);
+            -webkit-transition: -webkit-transform 400ms cubic-bezier($menu-bezier);
+            transition: transform 400ms cubic-bezier($menu-bezier);
             -webkit-backface-visibility: hidden;
             .btn i {
                 width: 18px;
@@ -162,6 +162,10 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
             height: calc(100% - 10px);
             width: 100%;
             li {
+                &:first-child {
+                    margin-top: 20px;
+                }
+
                 &:hover,
                 &.open,
                 &.active {
@@ -385,8 +389,8 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
         float: right;
         margin-right: 14px;
         color: $color-menu-light;
-        -webkit-transition: -webkit-transform 0 0.4s cubic-bezier($menu-bezier);
-        transition: transform 0 0.4s cubic-bezier($menu-bezier);
+        -webkit-transition: -webkit-transform 400ms cubic-bezier($menu-bezier);
+        transition: transform 400ms cubic-bezier($menu-bezier);
         -webkit-backface-visibility: hidden;
         -webkit-perspective: 1000;
         font-family: $base-font-family;
