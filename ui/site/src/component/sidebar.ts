@@ -45,7 +45,7 @@ const sidebar = () => {
 
         const $el = $(element);
 
-        const openSideBar = (e: JQueryEventObject) => {
+        const openSideBar = () => {
             var _sideBarWidthCondensed = dom.hasClass(body, "rtl") ? - options.sideBarWidthCondensed! : options.sideBarWidthCondensed;
     
              var menuOpenCSS = options.css3d == true ? 
@@ -68,7 +68,7 @@ const sidebar = () => {
              dom.addClass(body, 'sidebar-visible');
         }
 
-        const closeSideBar = (e: JQueryEventObject) => {
+        const closeSideBar = () => {
             var menuClosedCSS = options.css3d == true ? 
                 'translate3d(0, 0,0)' : 
                 'translate(0, 0)';
@@ -98,25 +98,26 @@ const sidebar = () => {
         const toggleSidebar = () => {
             let timer;
             const bodyStyles = getComputedStyle(body, null);
-             options.pageContainer.style.backgroundColor = bodyStyles.backgroundColor;
+            const pageContainer = <HTMLElement>document.querySelectorAll(options.pageContainer)[0];
+            pageContainer.style.backgroundColor = bodyStyles.backgroundColor;
     
-             if (dom.hasClass(body,'sidebar-' + sOpen)) {
-                 dom.removeClass(body,'sidebar-' + sOpen);
-                 timer = setTimeout(function() {
-                    dom.removeClass(self.element,'visible');
-                 }.bind(self), 400);
-             } else {
-                 clearTimeout(timer);
-                 dom.addClass(self.element,'visible');
-                 setTimeout(function() {
-                    dom.addClass(body,'sidebar-' + sOpen);
-                 }.bind(self), 10);
+            if (dom.hasClass(body,'sidebar-' + sOpen)) {
+                dom.removeClass(body,'sidebar-' + sOpen);
+                timer = setTimeout(function() {
+                     dom.removeClass(self.element,'visible');
+                }.bind(self), 400);
+            } else {
+                clearTimeout(timer);
+                dom.addClass(self.element,'visible');
+                setTimeout(function() {
+                     dom.addClass(body,'sidebar-' + sOpen);
+                }.bind(self), 10);
     
-                 setTimeout(function() {
-                    // remove background color
-                    self.pageContainer.style.backgroundColor = ''
-                 }, 1000);
-             }
+                setTimeout(function() {
+                     // remove background color
+                     self.pageContainer.style.backgroundColor = ''
+                }, 1000);
+            }
         }
 
         const togglePinSidebar = (toggle?: string) => {
@@ -160,7 +161,6 @@ const sidebar = () => {
                 
                 dom.addClass(element.querySelector(".arrow"), sOpen);
                 dom.addClass(element.querySelector(".arrow"), sActive);
-                //Velocity(sub, "stop", true);
                 if (sub) {
                     dom.addClass(li, sOpen)
                     dom.addClass(li, sActive)
@@ -184,12 +184,12 @@ const sidebar = () => {
 
         $('.sidebar-slide-toggle').on('click', function(e: JQueryEventObject) {
             e.preventDefault();
-            dom.toggleClass(e.currentTarget, sActive);
+            dom.toggleClass(<HTMLElement>e.currentTarget, sActive);
             const elId = e.currentTarget.getAttribute('data-pages-toggle');
             if (elId != null) {
                 //Only by ID
                 const el = document.getElementById(elId.substr(1));
-                dom.toggleClass(el, sShow);
+                dom.toggleClass(<HTMLElement>el, sShow);
             }
         });
 

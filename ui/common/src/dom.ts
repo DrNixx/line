@@ -1,5 +1,5 @@
 
-export const hasClass = (el: HTMLElement, className: string) => {
+export const hasClass = (el: HTMLElement|null, className: string) => {
     if (el) {
         return el.classList ? el.classList.contains(className) : new RegExp('\\b'+ className+'\\b').test(el.className);
     } else {
@@ -7,7 +7,7 @@ export const hasClass = (el: HTMLElement, className: string) => {
     }
 }
 
-export const addClass = (el: HTMLElement, className: string) => {
+export const addClass = (el: HTMLElement|null, className: string) => {
     if (el) {
         if (el.classList) {
             el.classList.add(className);
@@ -17,7 +17,7 @@ export const addClass = (el: HTMLElement, className: string) => {
     }
 }
 
-export const removeClass = (el: HTMLElement, className: string) => {
+export const removeClass = (el: HTMLElement|null, className: string) => {
     if (el) {
         if (el.classList) {
             el.classList.remove(className);
@@ -27,7 +27,7 @@ export const removeClass = (el: HTMLElement, className: string) => {
     }
 }
 
-export const toggleClass = (el: HTMLElement, className: string) => {
+export const toggleClass = (el: HTMLElement|null, className: string) => {
     if (hasClass(el, className)){
         removeClass(el, className)
     } else {
