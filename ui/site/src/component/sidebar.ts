@@ -98,7 +98,7 @@ const sidebar = () => {
         const toggleSidebar = () => {
             let timer;
             const bodyStyles = getComputedStyle(body, null);
-            const pageContainer = <HTMLElement>document.querySelectorAll(options.pageContainer)[0];
+            const pageContainer = <HTMLElement>document.querySelectorAll(options.pageContainer!)[0];
             pageContainer.style.backgroundColor = bodyStyles.backgroundColor;
     
             if (dom.hasClass(body,'sidebar-' + sOpen)) {
