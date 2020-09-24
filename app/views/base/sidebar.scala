@@ -46,7 +46,7 @@ object sidebar {
               span(cls := "title")(trans.play()),
               arrow()
             ),
-            icon("5"),
+            icon("а"),
             ul(cls := "sub-menu")(
               if (ctx.noBot) menuItem("/?any#hook", trans.createAGame())
               else menuItem("/?any#friend", trans.playWithAFriend()),
@@ -94,7 +94,7 @@ object sidebar {
               span(cls := "title")(trans.community()),
               arrow()
             ),
-            icon("f"),
+            icon("в"),
             ul(cls := "sub-menu")(
               menuItem(routes.User.list().toString(), trans.players()),
               menuItem(routes.Team.home().toString(), trans.team.teams()),
@@ -106,7 +106,7 @@ object sidebar {
               span(cls := "title")(trans.tools()),
               arrow()
             ),
-            icon("n"),
+            icon("г"),
             ul(cls := "sub-menu")(
               menuItem(routes.UserAnalysis.index().toString(), trans.analysis()),
               menuItem(s"${routes.UserAnalysis.index()}#explorer", trans.openingExplorer()),

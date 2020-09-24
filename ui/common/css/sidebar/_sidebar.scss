@@ -210,15 +210,16 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
 
                     & > .arrow {
                         float: right;
-                        padding-right: 25px;
+                        padding-right: 15px;
 
                         &:before {
                             display: inline;
                             float: right;
                             font-size: 16px;
-                            font-family: "pages-icon";
+                            font-family: "lichess";
                             height: auto;
-                            content: "\e989";
+                            speak: none;
+                            content: "Г";
                             font-weight: 300;
                             text-shadow: none;
                             transition: all 0.12s ease;
@@ -304,8 +305,9 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
                                         margin-right: 20px;
                                         display: inline;
                                         font-size: 16px;
-                                        font-family: "pages-icon";
-                                        content: "\e989";
+                                        font-family: "lichess";
+                                        content: "Г";
+                                        speak: none;
                                         font-weight: 300;
                                         text-shadow: none;
                                         transition: all 0.12s ease;
