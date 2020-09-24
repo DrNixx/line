@@ -336,12 +336,12 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
                         display: none;
                         list-style: none;
                         clear: both;
-                        margin: 0, 0, 10px, 0;
+                        margin: 0 0 10px 0;
                         background-color: $color-menu-dark;
                         padding: 18px 0 10px 0;
                         & > li {
                             background: none;
-                            padding: 0, 20px, 0, 40px;
+                            padding: 0 20px 0 40px;
                             margin-top: 1px;
                             &:hover {
                                 & > .icon-thumbnail {
