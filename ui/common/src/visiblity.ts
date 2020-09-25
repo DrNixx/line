@@ -7,7 +7,7 @@ export type DeviceSizeType = 'xlg' | 'xl' | 'lg' | 'md' | 'sm' | 'xs';
  */
 export const checkVisiblity = (size: DeviceSizeType) => {
     const elementId = "pg-visible-" + size;
-    const elementClass = "visible-" + size;
+    const elementClass = "visible-" + size + '-only';
 
     let pgElement = document.getElementById(elementId);
     

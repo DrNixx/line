@@ -4,15 +4,33 @@
 @import "buttons";
 
 #top {
-  height: $site-header-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  position: relative;
+  width: 100%;
+  height: $site-header-height;
+  padding: 0 20px 0 0;
   z-index: z("site-header");
-  max-width: 1800px;
-  margin: 0 auto;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: $c-bg-header;
+  border-bottom: 1px solid $c-bg-header-border;
   user-select: none;
   --dropdown-top: 40px;
+
+  .toggle-sidebar {
+    padding: 8px 16px;
+  }
 
   @include breakpoint($mq-site-header-tall) {
     --dropdown-top: 60px;
@@ -21,5 +39,34 @@
 
 .site-title-nav {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+
+  @include breakpoint($mq-medium) {
+    justify-content: flex-start;
+  }
+  
+  .brand {
+    display: inline-block;
+    vertical-align: middle;
+    width: 229px;
+    position: relative;
+    text-align: right;
+    padding-right: 1rem;
+
+    @include breakpoint($mq-medium) {
+      position: relative;
+    }
+
+    @include breakpoint($mq-not-medium) {
+      width: auto;
+    }
+
+    img {
+      vertical-align: middle;
+      width: 180px;
+      height: 44px;
+    }
+  }
 }

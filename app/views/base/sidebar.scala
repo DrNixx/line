@@ -8,8 +8,11 @@ import controllers.routes
 
 object sidebar {
 
+  private val dataPageToggle            = attr("data-pages-toggle")
+  private val dataTogglePin             = attr("data-toggle-pin")
   private val dataPages                 = attr("data-pages")
   private val dataIcon                  = attr("data-icon")
+  private val dataIconAlt                  = attr("data-icon-alt")
 
   private def icon(name: String)(implicit ctx: Context) =
     (name != "") option span(cls := "icon-thumbnail")(i(dataIcon := name)())
@@ -33,10 +36,18 @@ object sidebar {
       st.div(cls := "sidebar-header")(
         a(href := "/")(
           img(
-            src := "https://cdn.chess-online.com/images/logos/nav-logo-black.png",
-            alt := "Chess-Online",
-            style := "width:127px;height:24px;"
+            cls := "brand",
+            src := "https://cdn.chess-online.com/images/logos/nav-logo-arena.png",
+            alt := "Chess-Online"
           )
+        ),
+        st.div(cls := "sidebar-header-controls")(
+          button(cls := "btn-link sidebar-slide-toggle", dataPageToggle := "#appMenu", `type` := "button")(
+            i(dataIcon := "А")
+          ),
+          button(cls := "btn-link", dataTogglePin := "sidebar", `type` := "button")(
+            i(dataIcon := "Д", dataIconAlt := "Е")
+          ),
         )
       ),
       st.div(cls := "sidebar-menu")(
@@ -48,12 +59,12 @@ object sidebar {
             ),
             icon("а"),
             ul(cls := "sub-menu")(
-              if (ctx.noBot) menuItem("/?any#hook", trans.createAGame())
-              else menuItem("/?any#friend", trans.playWithAFriend()),
+              if (ctx.noBot) menuItem("/?any#hook", trans.createAGame(), "О")
+              else menuItem("/?any#friend", trans.playWithAFriend(), "О"),
               ctx.noBot option frag(
-                menuItem(routes.Tournament.home().toString(), trans.arena.arenaTournaments()),
-                menuItem(routes.Swiss.home().toString(), trans.swiss.swissTournaments()),
-                menuItem(routes.Simul.home().toString(), trans.simultaneousExhibitions())
+                menuItem(routes.Tournament.home().toString(), trans.arena.arenaTournaments(), "Т"),
+                menuItem(routes.Swiss.home().toString(), trans.swiss.swissTournaments(), "?"),
+                menuItem(routes.Simul.home().toString(), trans.simultaneousExhibitions(), ".")
               )
             )
           ),
@@ -65,14 +76,14 @@ object sidebar {
             icon(":"),
             ul(cls := "sub-menu")(
               ctx.noBot option frag(
-                menuItem(routes.Learn.index().toString(), trans.chessBasics()),
-                menuItem(routes.Puzzle.home().toString(), trans.puzzles()),
-                menuItem(routes.Practice.index().toString(), trans.practice()),
-                menuItem(routes.Coordinate.home().toString(), trans.coordinates.coordinates())
+                menuItem(routes.Learn.index().toString(), trans.chessBasics(), "м"),
+                menuItem(routes.Puzzle.home().toString(), trans.puzzles(), "к"),
+                menuItem(routes.Practice.index().toString(), trans.practice(), "Ф"),
+                menuItem(routes.Coordinate.home().toString(), trans.coordinates.coordinates(), "н")
               ),
-              menuItem(routes.Study.allDefault(1).toString(), trans.studyMenu()),
-              ctx.noKid option menuItem(routes.Coach.all(1).toString(), trans.coaches()),
-              canSeeClasMenu option menuItem(routes.Clas.index().toString(), trans.clas.lichessClasses())
+              menuItem(routes.Study.allDefault(1).toString(), trans.studyMenu(), "4"),
+              ctx.noKid option menuItem(routes.Coach.all(1).toString(), trans.coaches(), "е"),
+              canSeeClasMenu option menuItem(routes.Clas.index().toString(), trans.clas.lichessClasses(), "и")
             )
           ),
           li()(
@@ -80,13 +91,13 @@ object sidebar {
               span(cls := "title")(trans.watch()),
               arrow()
             ),
-            icon("1"),
+            icon("v"),
             ul(cls := "sub-menu")(
-              menuItem(routes.Tv.index().toString(), "Lichess TV"),
-              menuItem(routes.Tv.games().toString(), trans.currentGames()),
-              ctx.noKid option menuItem(routes.Streamer.index().toString(), trans.streamersMenu()),
-              menuItem(routes.Relay.index().toString(), trans.broadcast.broadcasts()),
-              ctx.noBot option menuItem(routes.Video.index().toString(), trans.videoLibrary())
+              menuItem(routes.Tv.index().toString(), "Chess TV", "1"),
+              menuItem(routes.Tv.games().toString(), trans.currentGames(), "Q"),
+              ctx.noKid option menuItem(routes.Streamer.index().toString(), trans.streamersMenu(), "п"),
+              menuItem(routes.Relay.index().toString(), trans.broadcast.broadcasts(), "о"),
+              ctx.noBot option menuItem(routes.Video.index().toString(), trans.videoLibrary(), "л")
             )
           ),
           li()(
@@ -96,9 +107,9 @@ object sidebar {
             ),
             icon("в"),
             ul(cls := "sub-menu")(
-              menuItem(routes.User.list().toString(), trans.players()),
-              menuItem(routes.Team.home().toString(), trans.team.teams()),
-              ctx.noKid option menuItem(routes.ForumCateg.index().toString(), trans.forum())
+              menuItem(routes.User.list().toString(), trans.players(), "Й"),
+              menuItem(routes.Team.home().toString(), trans.team.teams(), "К"),
+              ctx.noKid option menuItem("https://www.chess-online.com/forums", trans.forum(), "Л")
             )
           ),
           li()(
@@ -108,11 +119,11 @@ object sidebar {
             ),
             icon("г"),
             ul(cls := "sub-menu")(
-              menuItem(routes.UserAnalysis.index().toString(), trans.analysis()),
-              menuItem(s"${routes.UserAnalysis.index()}#explorer", trans.openingExplorer()),
-              menuItem(routes.Editor.index().toString(), trans.boardEditor()),
-              menuItem(routes.Importer.importGame().toString(), trans.importGame()),
-              menuItem(routes.Search.index().toString(), trans.search.advancedSearch())
+              menuItem(routes.UserAnalysis.index().toString(), trans.analysis(), "A"),
+              menuItem(s"${routes.UserAnalysis.index()}#explorer", trans.openingExplorer(), "]"),
+              menuItem(routes.Editor.index().toString(), trans.boardEditor(), "6"),
+              menuItem(routes.Importer.importGame().toString(), trans.importGame(), "/"),
+              menuItem(routes.Search.index().toString(), trans.search.advancedSearch(), "y")
             )
           ),
         )

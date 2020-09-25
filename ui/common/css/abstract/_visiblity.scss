@@ -1,36 +1,40 @@
-.visible-xlg { display: none; }
-.visible-xl { display: none; }
-.visible-lg { display: none; }
-.visible-md { display: none; }
-.visible-sm { display: none; }
-.visible-xs { display: none; }
+.visible-xlg-only { display: none; }
+.visible-xl-only { display: none; }
+.visible-lg-only { display: none; }
+.visible-md-only { display: none; }
+.visible-sm-only { display: none; }
+.visible-xs-only { display: none; }
+
+.visible {
+    display: block !important;
+}
 
 /*** Extra Extra Large screens ***/
-@media (min-width: 1824px) {
-    .visible-xlg { display: block !important; }
+@include breakpoint($mq-xx-large) {
+    .visible-xlg-only { display: block !important; }
 }
 
 /*** Extra Large screens ***/
-@media (min-width: 1200px) and (max-width: 1823px) {
-    .visible-xl { display: block !important; }
+@include breakpoint($mq-x-large $mq-not-xx-large) {
+    .visible-xl-only { display: block !important; }
 }
 
 /*** Large screens ***/
-@media (min-width: 992px) and (min-width: 1199px) {
-    .visible-lg { display: block !important; }
+@include breakpoint($mq-large $mq-not-x-large) {
+    .visible-lg-only { display: block !important; }
 }
 
 /*** Medium devices ***/
-@media (min-width: 768px) and (max-width: 991px) {
-    .visible-md { display: block !important; }
+@include breakpoint($mq-medium $mq-not-large) {
+    .visible-md-only { display: block !important; }
 }
 
 /*** Small devices ***/
-@media (min-width: 576px) and (max-width: 767px) {
-    .visible-sm { display: block !important; }
+@include breakpoint($mq-xx-small $mq-not-medium) {
+    .visible-sm-only { display: block !important; }
 }
 
-/*** Small devices ***/
-@media (max-width: 575px) {
-    .visible-xs { display: block !important; }
+/*** Extra Small devices ***/
+@include breakpoint($mq-not-xx-small) {
+    .visible-xs-only { display: block !important; }
 }

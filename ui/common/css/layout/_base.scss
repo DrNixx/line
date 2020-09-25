@@ -38,7 +38,7 @@ body {
   grid-template-areas: '. . main . .';
   --main-max-width: #{$main-max-width};
   grid-template-columns: $main-margin 1fr minmax(auto, var(--main-max-width)) 1fr $main-margin;
-
+  
   &.full-screen {
     --main-max-width: auto;
   }
@@ -47,6 +47,8 @@ body {
     --main-max-width: 100%;
   }
 
+  padding-top: $site-header-height;
+  padding-left: $layout-sidepanel-width-collapsed;
   margin-top: $site-header-margin;
 
   @media (hover: none) {

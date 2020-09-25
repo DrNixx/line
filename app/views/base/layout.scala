@@ -287,9 +287,7 @@ object layout {
 
     private val topnavToggle = spaceless(
       """
-<input type="checkbox" id="tn-tg" class="topnav-toggle fullscreen-toggle" aria-label="Navigation">
-<label for="tn-tg" class="fullscreen-mask"></label>
-<label for="tn-tg" class="hbg"><span class="hbg__in"></span></label>"""
+<a href="#" class="toggle-sidebar" data-toggle="sidebar"><i data-icon="["></i></a>"""
     )
 
     private def reports(implicit ctx: Context) =
@@ -314,18 +312,17 @@ object layout {
 
     def apply(playing: Boolean)(implicit ctx: Context) =
       header(id := "top")(
+        topnavToggle,
         div(cls := "site-title-nav")(
-          topnavToggle,
-          h1(cls := "site-title")(
-            if (ctx.kid) span(title := trans.kidMode.txt(), cls := "kiddo")(":)")
-            else ctx.isBot option botImage,
+          st.div(cls := "brand inline")(
             a(href := "/")(
-              "lichess",
-              span(if (netConfig.isProd) ".org" else ".dev")
+              img(
+                src := "https://cdn.chess-online.com/images/logos/nav-logo-uni.png",
+                alt := "Chess-Online"
+              )
             )
           ),
           ctx.blind option h2("Navigation"),
-          topnav()
         ),
         div(cls := "site-buttons")(
           clinput,

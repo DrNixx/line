@@ -92,31 +92,23 @@ const sidebar = () => {
              }
     
              element.style.transform = menuClosedCSS;
-             dom.removeClass(body,'sidebar-visible');
+             dom.removeClass(body, 'sidebar-visible');
         }
 
         const toggleSidebar = () => {
             let timer;
-            const bodyStyles = getComputedStyle(body, null);
-            const pageContainer = <HTMLElement>document.querySelectorAll(options.pageContainer!)[0];
-            pageContainer.style.backgroundColor = bodyStyles.backgroundColor;
-    
-            if (dom.hasClass(body,'sidebar-' + sOpen)) {
-                dom.removeClass(body,'sidebar-' + sOpen);
+            
+            if (dom.hasClass(body, 'sidebar-' + sOpen)) {
+                dom.removeClass(body, 'sidebar-' + sOpen);
                 timer = setTimeout(function() {
-                     dom.removeClass(self.element,'visible');
-                }.bind(self), 400);
+                     dom.removeClass(element, 'visible');
+                }, 400);
             } else {
                 clearTimeout(timer);
-                dom.addClass(self.element,'visible');
+                dom.addClass(element, 'visible');
                 setTimeout(function() {
-                     dom.addClass(body,'sidebar-' + sOpen);
-                }.bind(self), 10);
-    
-                setTimeout(function() {
-                     // remove background color
-                     self.pageContainer.style.backgroundColor = ''
-                }, 1000);
+                     dom.addClass(body, 'sidebar-' + sOpen);
+                }, 10);
             }
         }
 
