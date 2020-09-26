@@ -99,16 +99,16 @@ const sidebar = () => {
             let timer;
             
             if (dom.hasClass(body, 'sidebar-' + sOpen)) {
-                dom.removeClass(body, 'sidebar-' + sOpen);
+                dom.removeClass(element, 'visible');
                 timer = setTimeout(function() {
-                     dom.removeClass(element, 'visible');
-                }, 400);
+                    dom.removeClass(body, 'sidebar-' + sOpen);     
+                }, 250);
             } else {
                 clearTimeout(timer);
-                dom.addClass(element, 'visible');
+                dom.addClass(body, 'sidebar-' + sOpen);
                 setTimeout(function() {
-                     dom.addClass(body, 'sidebar-' + sOpen);
-                }, 10);
+                    dom.addClass(element, 'visible');     
+                }, 250);
             }
         }
 

@@ -18,7 +18,7 @@ export default function(ctrl: DasherCtrl): VNode {
 
       h(
         'a.text',
-        linkCfg('/inbox', 'e'),
+        linkCfg('https://www.chess-online.com/pm/inbox', 'e'),
         noarg('inbox')),
 
       h(

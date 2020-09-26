@@ -6,6 +6,11 @@
 
 .site-buttons {
   @extend %flex-center-nowrap;
+  padding-right: 2em;
+
+  & > div {
+    position: relative;
+  }
 
   .link {
     @extend %top-icon;
@@ -56,6 +61,29 @@
     button {
       color: $c-header-dropdown;
     }
+
+    &:before {
+      position: absolute;
+      top: -7px;
+      right: 15px;
+      display: inline-block;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #ccc;
+      border-left: 7px solid transparent;
+      border-bottom-color: rgba(0, 0, 0, 0.2);
+      content: '';
+    }
+
+    &:after {
+      position: absolute;
+      top: -6px;
+      right: 16px;
+      display: inline-block;
+      border-right: 6px solid transparent;
+      border-bottom: 6px solid #ffffff;
+      border-left: 6px solid transparent;
+      content: '';
+    }
   }
 
   .shown {
@@ -85,6 +113,18 @@
     margin-top: 5px;
     height: inherit;
     line-height: inherit;
+  }
+
+  .user-menu {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: 16px;
+    }
   }
 }
 

@@ -14,7 +14,7 @@ object layout {
   object bits {
     val doctype                      = raw("<!DOCTYPE html>")
     def htmlTag(implicit lang: Lang) = html(st.lang := lang.code)
-    val topComment                   = raw("""<!-- Lichess is open source! See https://github.com/ornicar/lila -->""")
+    val topComment                   = raw("""<!-- Chess-Online Arena is open source! See https://github.com/DrNixx/line -->""")
     val charset                      = raw("""<meta charset="utf-8">""")
     val viewport = raw(
       """<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">"""
@@ -60,17 +60,37 @@ object layout {
     List(512, 256, 192, 128, 64)
       .map { px =>
         s"""<link rel="icon" type="image/png" href="${assetUrl(
-          s"logo/lichess-favicon-$px.png"
+          s"logo/chess-favicon-$px.png"
         )}" sizes="${px}x$px">"""
       }
       .mkString(
         "",
         "",
         s"""<link id="favicon" rel="icon" type="image/png" href="${assetUrl(
-          "logo/lichess-favicon-32.png"
+          "logo/chess-favicon-32.png"
         )}" sizes="32x32">"""
       )
   }
+
+  private def autoLogin(implicit ctx: Context) = raw {
+    List(
+      s"""<script src="https://passport.chess-online.com/script"></script>""",
+      embedJsUnsafe(s"""window.chessPassport.isLoggedIn(function (online) {
+              if (online) {
+                  location.href = "${routes.Auth.oidcLogin()}?referrer=" + encodeURIComponent(location.href);
+              }
+          });""").render
+    ).mkString
+  }
+
+  private def ga(implicit ctx: Context) = raw {
+    embedJsUnsafe(s"""(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WVSBPV');""").render
+  }
+
   private def blindModeForm(implicit ctx: Context) =
     raw(s"""<form id="blind-mode" action="${routes.Main
       .toggleBlindMode()}" method="POST"><input type="hidden" name="enable" value="${if (ctx.blind)
@@ -84,7 +104,7 @@ object layout {
   private val zenToggle = raw("""<a data-icon="E" id="zentog" class="text fbt active">ZEN MODE</a>""")
   private def dasher(me: lila.user.User) =
     raw(
-      s"""<div class="dasher"><a id="user_tag" class="toggle link">${me.username}</a><div id="dasher_app" class="dropdown"></div></div>"""
+      s"""<div class="user-menu"><img src="https://a00.chess-online.com/userpics/get/${me.id}" alt="${me.username}"><div class="dasher"><a id="user_tag" class="toggle link">${me.username}</a><div id="dasher_app" class="dropdown"></div></div></div>"""
     )
 
   private def allNotifications(implicit ctx: Context) =
@@ -195,9 +215,9 @@ object layout {
           metaCsp(csp),
           metaThemeColor,
           st.headTitle {
-            if (ctx.blind) "lichess"
-            else if (netConfig.isProd) fullTitle | s"$title • lichess.org"
-            else s"[dev] ${fullTitle | s"$title • lichess.dev"}"
+            if (ctx.blind) "Chess-Online"
+            else if (netConfig.isProd) fullTitle | s"$title • Chess-Online Arena"
+            else s"[dev] ${fullTitle | s"$title • Chess-Online Arena"}"
           },
           cssTag("site"),
           ctx.pref.is3d option cssTag("board-3d"),
@@ -210,11 +230,15 @@ object layout {
             content := openGraph.fold(trans.siteDescription.txt())(o => o.description),
             name := "description"
           ),
-          link(rel := "mask-icon", href := assetUrl("logo/lichess.svg"), color := "black"),
+          link(rel := "mask-icon", href := assetUrl("logo/chess.svg"), color := "black"),
           favicons,
           !robots option raw("""<meta content="noindex, nofollow" name="robots">"""),
           noTranslate,
           openGraph.map(_.frags),
+          netConfig.isProd option frag(
+            ga,
+            ctx.userId.isEmpty option autoLogin
+          ),
           link(
             href := routes.Blog.atom(),
             tpe := "application/atom+xml",

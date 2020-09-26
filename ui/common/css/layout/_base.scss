@@ -9,10 +9,10 @@ body {
   }
 
 
-  --site-header-margin: 0px;
+  --site-header-margin: 1em;
 
   &.header-margin {
-    --site-header-margin: 1em;
+    --site-header-margin: 2em;
   }
 
   --main-margin: 0;

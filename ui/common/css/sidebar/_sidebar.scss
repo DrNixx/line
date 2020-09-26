@@ -94,10 +94,16 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
         }
 
         .sidebar-header-controls {
-            display: inline-block;
+            display: none;
             -webkit-transition: -webkit-transform 400ms cubic-bezier($menu-bezier);
             transition: transform 400ms cubic-bezier($menu-bezier);
             -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+            @include breakpoint($mq-medium) {
+                display: inline-block;
+            }
+
             button {
                 display: inline-block;
                 margin: 0;
@@ -457,25 +463,8 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
     }
 }
 
-[data-toggle-pin="sidebar"] {
-    & > i:before {
-        // content: "\e98c";
-    }
-}
 
-@media only screen and (max-width: 1400px) {
-    .page-sidebar .page-sidebar-inner .sidebar-slide {
-        .sidebar-menu {
-            bottom: 50px;
-        }
-
-        .sidebar-widgets {
-            display: none;
-        }
-    }
-}
-
-@media only screen and (min-width: 980px) {
+@include breakpoint($mq-medium) {
     body {
         &.menu-pin {
             #main-wrap {
@@ -511,62 +500,50 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
                 }
             }
         }
-    
-        &.menu-behind {
-            .page-sidebar {
-                z-index: $zIndex-navbar - 1;
-            }
-        }
-    
-        &.box-layout {
-            .page-sidebar {
-                left: auto;
-                transform: none !important;
-                -webkit-transform: none !important;
-            }
-        }
+    }
+
+    #reconnecting {
+        left: $layout-sidepanel-width-collapsed !important;
     }
 }
 
-@media (max-width: 991px) {
+@include breakpoint($mq-not-medium) {
+    body {
+        &.sidebar-open {
+            #main-wrap {
+                transform: translate3d($layout-sidepanel-pin-width, 0, 0);
+                overflow: hidden;
+                position: fixed;
+            }
+        }
+    }
+
+    #main-wrap {
+        transition: transform .25s ease;
+        -webkit-transition: -webkit-transform .25s ease;
+    }
+
     .page-sidebar {
-        width: 250px;
+        display: none;
+        z-index: auto;
+
+        width: $layout-sidepanel-pin-width;
         z-index: auto;
         left: 0 !important;
         -webkit-transform: translate3d(0, 0px, 0px) !important;
         transform: translate3d(0, 0px, 0px) !important;
-            .sidebar-menu .menu-items > li ul.sub-menu > li {
+
+        &.visible {
+            display: block;
+        }
+
+        .sidebar-menu .menu-items > li ul.sub-menu > li {
             padding: 0px 30px 0 36px;
         }
     }
   
     .icon-thumbnail {
         margin-right: 24px;
-    }
-
-    .page-sidebar {
-        display: none;
-        z-index: auto;
-        &.visible {
-            display: block;
-        }
-      
-        .page-sidebar-inner {
-            z-index: 1;
-            left: 0 !important;
-            width: 260px;
-            .sidebar-slide {
-                .sidebar-menu {
-                    overflow: scroll;
-                    -webkit-overflow-scrolling: touch;
-                    top: 40px;
-                    bottom: 0;
-                    ul > li > a > .badge {
-                        display: inline-block;
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -617,23 +594,8 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
 }
   
 @media (max-width: 480px) {
-    body {
-        .header {
-            .header-inner {
-                .toggle-secondary-sidebar {
-                    font-size: 16px;
-                    top: 12px;
-                }
-            }
-        }
-    }
-
     .page-sidebar .sidebar-header {
         height: $site-header-height;
         line-height: $site-header-height;
     }
-}
-
-#reconnecting {
-    left: $layout-sidepanel-width-collapsed !important;
 }

@@ -65,7 +65,7 @@ $('.coach-review-form form').show();
             a(
               cls := "text button button-empty",
               dataIcon := "c",
-              href := s"${routes.Msg.convo(c.user.id)}"
+              href := s"https://www.chess-online.com/pm/compose/${c.user.id}"
             )(sendPM()),
           ctx.me.exists(_.id != c.user.id) option review.form(c, myReview),
           review.list(coachReviews)

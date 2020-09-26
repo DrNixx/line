@@ -87,7 +87,7 @@ object student {
         ),
         div(
           a(
-            href := routes.Msg.convo(s.user.id),
+            href := s"https://www.chess-online.com/pm/compose/${s.user.id}",
             cls := "button button-empty"
           )(trans.message()),
           a(

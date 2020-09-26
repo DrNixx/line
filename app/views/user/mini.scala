@@ -55,7 +55,7 @@ object mini {
                 dataIcon := "c",
                 cls := "btn-rack__btn",
                 title := trans.chat.txt(),
-                href := routes.Msg.convo(u.id)
+                href := s"https://www.chess-online.com/pm/compose/${u.id}",
               ),
               a(
                 dataIcon := "U",

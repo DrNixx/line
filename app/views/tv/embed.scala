@@ -12,11 +12,11 @@ object embed {
 
   def apply(pov: lila.game.Pov)(implicit config: EmbedConfig) =
     views.html.base.embed(
-      title = "lichess.org chess TV",
+      title = "Chess-Online.Com chess TV",
       cssModule = "tv.embed"
     )(
       dataStreamUrl := routes.Tv.feed(),
-      div(id := "featured-game", cls := "embedded", title := "lichess.org TV")(
+      div(id := "featured-game", cls := "embedded", title := "Chess TV")(
         views.html.game.mini.noCtx(pov, tv = true, blank = true)
       ),
       jQueryTag,

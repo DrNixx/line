@@ -94,8 +94,8 @@ object contact {
                 p("If you can't reach Lichess, and your browser says something like:"),
                 ul(
                   li("This site can't be reached."),
-                  li(strong("lichess.org"), "’s server IP address could not be found."),
-                  li("We can’t connect to the server at lichess.org.")
+                  li(strong("Chess-Online.Com"), "’s server IP address could not be found."),
+                  li("We can’t connect to the server at Chess-Online.Com.")
                 ),
                 p("Then you have a ", strong("DNS issue"), "."),
                 p(

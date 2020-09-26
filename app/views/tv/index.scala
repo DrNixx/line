@@ -38,9 +38,9 @@ object index {
       chessground = false,
       openGraph = lila.app.ui
         .OpenGraph(
-          title = s"Watch the best ${channel.name.toLowerCase} games of lichess.org",
+          title = s"Watch the best ${channel.name.toLowerCase} games of Chess-Online.Com",
           description =
-            s"Sit back, relax, and watch the best ${channel.name.toLowerCase} Lichess players compete on Lichess TV",
+            s"Sit back, relax, and watch the best ${channel.name.toLowerCase} Chess-Online.Com players compete on Chess TV",
           url = s"$netBaseUrl${routes.Tv.onChannel(channel.key)}"
         )
         .some,

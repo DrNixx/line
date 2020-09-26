@@ -29,7 +29,7 @@ object actions {
             ),
             a(
               titleOrText(trans.composeMessage.txt()),
-              href := routes.Msg.convo(userId),
+              href := s"https://www.chess-online.com/pm/compose/$userId",
               cls := "btn-rack__btn",
               dataIcon := "c"
             )

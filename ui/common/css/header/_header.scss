@@ -26,10 +26,14 @@
   background-color: $c-bg-header;
   border-bottom: 1px solid $c-bg-header-border;
   user-select: none;
-  --dropdown-top: 40px;
+  --dropdown-top: $site-header-tall-height;
 
   .toggle-sidebar {
     padding: 8px 16px;
+    color: $c-font;
+    &:hover {
+        color: $c-font-clearer;
+    }
   }
 
   @include breakpoint($mq-site-header-tall) {
