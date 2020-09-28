@@ -20,7 +20,7 @@ interface UpdateData {
 
 const forumTop = {
     init(node: HTMLElement) {
-        const boxes = dom.getElementsByClassName(node, 'lobby__box__top');
+        const boxes = dom.getElementsByClassName(node, 'lobby__forum');
         if (boxes.length > 0) {
             const box = <HTMLElement>boxes[0];
             const contents = dom.getElementsByClassName(box, 'lobby__box__content');
@@ -28,7 +28,7 @@ const forumTop = {
                 const content = <HTMLElement>contents[0];
 
                 const doRequest = () => {
-                    fetch('https://www.chess-online.com/ru-ru/api/forums/latest-posts')
+                    fetch('https://www.chess-online.com/ru-ru/api/forums/latest-posts', { credentials: 'include' })
                     .then((response) => {
                         return response.json();
                     })
