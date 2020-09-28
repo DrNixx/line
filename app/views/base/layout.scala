@@ -76,9 +76,9 @@ object layout {
     List(
       s"""<script src="https://passport.chess-online.com/script"></script>""",
       embedJsUnsafe(s"""window.chessPassport.isLoggedIn(function (online) {
-              //if (online) {
-              //    location.href = "${routes.Auth.oidcLogin()}?referrer=" + encodeURIComponent(location.href);
-              //}
+              if (online) {
+                  location.href = "${routes.Auth.oidcCallback()}?referrer=" + encodeURIComponent(location.href);
+              }
           });""").render
     ).mkString
   }
