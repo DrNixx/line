@@ -26,7 +26,7 @@ final class OidcApi(
     // val redirectBackURI = req.flash("referrer")
     val state = req.flash("oidcState")
     val nonce = req.flash("oidcNonce")
-    val params = req.queryString.map { case (k, Seq(v)) => (k, v) }
+    val params = req.queryString
     val client = new OpenIDConnectService(oidc);
 
     client.authenticate(params, new State(state), new Nonce(nonce)) flatMap { userInfo =>

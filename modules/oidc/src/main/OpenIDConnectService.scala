@@ -65,7 +65,7 @@ final class OpenIDConnectService(
    * @return User
    */
   def authenticate(
-    params: Map[String, String],
+    params: Map[String, Seq[String]],
     state: State,
     nonce: Nonce
   ): Fu[UserInfo] =
@@ -77,6 +77,10 @@ final class OpenIDConnectService(
       }
     }
 
+  private def converParams(params: Map[String, Seq[String]]) = {
+    params.map { case (k, v) => (k, v.toList.asJava) }  asJava
+  }
+
   /**
    * Validate the authentication response.
    *
@@ -84,9 +88,9 @@ final class OpenIDConnectService(
    * @param state       State saved in the session
    * @return Authentication response
    */
-  def validateOIDCAuthenticationResponse(params: Map[String, String], state: State): Fu[AuthenticationSuccessResponse] =
+  def validateOIDCAuthenticationResponse(params: Map[String, Seq[String]], state: State): Fu[AuthenticationSuccessResponse] =
     try {
-      AuthenticationResponseParser.parse(oidc.signinCallbackUrl, params.asJava) match {
+      AuthenticationResponseParser.parse(oidc.signinCallbackUrl, converParams(params)) match {
         case response: AuthenticationSuccessResponse =>
           if (response.getState == state) {
             fuccess(response)
