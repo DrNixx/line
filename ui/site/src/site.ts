@@ -16,7 +16,7 @@ import userAutocomplete from "./component/user-autocomplete";
 import loadInfiniteScroll from "./component/infinite-scroll";
 import { storage } from "./component/storage";
 import { assetUrl } from "./component/assets";
-import serviceWorker from "./component/service-worker";
+import serviceWorker from "./component/serviceWorker";
 import loadClockWidget from "./component/clock-widget";
 import info from "./component/info";
 import OnlineFriends from "./component/friends";
