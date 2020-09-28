@@ -3,7 +3,7 @@
   <string name="donate">Поддержать проект</string>
   <string name="lichessPatron">Chess-Online-спонсор</string>
   <string name="freeAccount">Бесплатный аккаунт</string>
-  <string name="becomePatron">Стать спонсором Chess-Online</string>
+  <string name="becomePatron">Поддержать Chess-Online</string>
   <string name="xBecamePatron">%s стал спонсором Chess-Online</string>
   <string name="newPatrons">Новые спонсоры</string>
   <string name="freeChess">Бесплатные шахматы для всех, навсегда!</string>
@@ -13,9 +13,9 @@
   <string name="patronUntil">Ваш аккаунт покровителя действует до %s.</string>
   <string name="ifNotRenewed">Если не будет продлено, то вы будете переведены на бесплатный план.</string>
   <string name="weAreNonProfit">Мы некоммерческая ассоциация, потому что мы считаем, что все должны иметь бесплатный и свободный доступ к шахматной платформе мирового класса.</string>
-  <string name="weRelyOnSupport">Мы полагаемся на поддержку таких людей как вы. Если вам нравится Chess-Online, пожалуйста, поддержите нас, сделав пожертвование и став его спонсором!</string>
+  <string name="weRelyOnSupport">Мы полагаемся на поддержку таких людей как вы. Если вам нравится Chess-Online, пожалуйста, поддержите нас, сделав пожертвование!</string>
   <string name="lifetime">Пожизненная</string>
-  <string name="payLifetimeOnce">Заплатите %s один раз. Станьте спонсором навсегда!</string>
+  <string name="payLifetimeOnce">Пожертвуйте %s один раз. Станьте спонсором навсегда!</string>
   <string name="lifetimePatron">Пожизненный покровитель Chess-Online</string>
   <string name="makeExtraDonation">Сделать дополнительное пожертвование?</string>
   <string name="monthly">Ежемесячно</string>

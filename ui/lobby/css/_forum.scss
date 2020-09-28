@@ -4,6 +4,20 @@
     padding-left: 9px;
     line-height: 14px;
     white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    & > * {
+      display: inline-block;
+      padding-right: 1em;
+    }
+
+    .text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      flex-grow: 1;
+    }
   }
 
   .extract {
