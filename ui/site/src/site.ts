@@ -21,6 +21,7 @@ import loadClockWidget from "./component/clock-widget";
 import info from "./component/info";
 import OnlineFriends from "./component/friends";
 import watchers from "./component/watchers";
+import forumTop from './component/forum-top';
 
 exportLichessGlobals();
 const li = window.lichess;
@@ -149,6 +150,7 @@ li.load.then(() => {
 
     miniBoard.initAll();
     miniGame.initAll();
+    forumTop.init(document.body);
     pubsub.on('content_loaded', miniBoard.initAll);
     pubsub.on('content_loaded', miniGame.initAll);
 

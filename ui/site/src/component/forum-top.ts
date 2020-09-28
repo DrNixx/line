@@ -27,10 +27,22 @@ const forumTop = {
             if (contents.length > 0) {
                 const content = <HTMLElement>contents[0];
 
-
+                const doRequest = () => {
+                    fetch('https://www.chess-online.com/ru-ru/api/forums/latest-posts')
+                    .then((response) => {
+                        return response.json();
+                    })
+                    .then((data) => {
+                        forumTop.update(content, data);
+                    });
+                }
+                
+                doRequest();
+                setInterval(() => doRequest(), 60000);
             }
         }
     },
+
     update(node: HTMLElement, data: UpdateData[]) {
         const ol = document.createElement('ol');
         data.forEach(item => {
