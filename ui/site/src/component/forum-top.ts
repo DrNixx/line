@@ -1,4 +1,4 @@
-import * as dom from '../../../common/src/dom';
+import * as dom from 'common/dom';
 
 interface Poster  {
     id: number;

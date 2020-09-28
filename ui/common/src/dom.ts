@@ -1,6 +1,6 @@
 
-export const getElementsByClassName = (element: Element, classNAME: string): Element[] => { // returns Array
-    return [].slice.call(element['getElementsByClassName'](classNAME));
+export const getElementsByClassName = (el: Element, classNAME: string) => { // returns Array
+    return [].slice.call(el['getElementsByClassName'](classNAME));
 }
 
 export const hasClass = (el: HTMLElement|null, className: string) => {
