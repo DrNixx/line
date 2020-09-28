@@ -123,6 +123,20 @@ $border-width: 1px;
 $border-style: solid;
 $border: $border-width $border-style $c-border;
 
+/* Sidebar */
+//Neutral color shades
+$color-contrast-lowest: #fff;
+$color-contrast-higher: #212121;
+
+$menu: #929aac;
+$color-menu: #013f47;
+$color-menu-light: $menu;
+$color-menu-dark: #013137;
+$color-menu-darker: #013940;
+$color-menu-link-hover: #fff;
+
+$color-hinted-a: #999; //rgba value of $color-contrast-medium for hinted text
+
 /* Shadows */
 
 $box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);

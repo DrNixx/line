@@ -108,10 +108,10 @@
   <string name="castleQueenSide">Táhněte králem o 2 pole na delší stranu šachovnice. Takto uděláte dlouhou rošádu!</string>
   <string name="theKnightIsInTheWay">V cestě stojí jezdec! Pohněte s ním a poté udělejte krátkou rošádu.</string>
   <string name="castleKingSideMovePiecesFirst">Udělte krátkou rošádu! Nejdříve musíte \"odklidit\" figury.</string>
-  <string name="castleQueenSideMovePiecesFirst">Udělejte dlouhou rošádu! 
+  <string name="castleQueenSideMovePiecesFirst">Udělejte dlouhou rošádu!
 Nejprve musíte uvolnit místo mezi králem a věží.</string>
   <string name="youCannotCastleIfMoved">Nemůžete dělat rošádu, pokud se král nebo věž pohli.</string>
-  <string name="youCannotCastleIfAttacked">Nemůžete udělat rošádu, pokud je král v šachu. 
+  <string name="youCannotCastleIfAttacked">Nemůžete udělat rošádu, pokud je král v šachu.
 Zabraňte šachu, a pak udělejte rošádu!</string>
   <string name="findAWayToCastleKingSide">Najděte cestu k malé rošádě!</string>
   <string name="findAWayToCastleQueenSide">Najděte cestu k velké rošádě!</string>
@@ -120,10 +120,10 @@ Zabraňte šachu, a pak udělejte rošádu!</string>
   <string name="theSpecialPawnMove">Speciální tah pěšcem</string>
   <string name="enPassantIntro">Když soupeř táhne pěšcem o dvě pole, můžete ho sebrat tak, jakoby táhl jen o jedno.</string>
   <string name="blackJustMovedThePawnByTwoSquares">Černý právě pohl pěšcem
-o dvě pole! 
+o dvě pole!
 Vemte ho mimochodem!</string>
   <string name="enPassantOnlyWorksImmediately">Braní mimochodem funguje jen neprodleně poté, co soupeř hrál sousedním pěšcem o dvě pole.</string>
-  <string name="enPassantOnlyWorksOnFifthRank">Braní mimochodem funguje jen, 
+  <string name="enPassantOnlyWorksOnFifthRank">Braní mimochodem funguje jen,
 když je váš pěšec na páté řadě.</string>
   <string name="takeAllThePawnsEnPassant">Vemte všechny pěšce mimochodem!</string>
   <string name="enPassantComplete">Gratulace! Nyní již ovládáte pravidlo braní mimochodem.</string>
@@ -163,7 +163,7 @@ Pěšec = 1</string>
   <string name="whatNext">A co dál?</string>
   <string name="youKnowHowToPlayChess">Gratulujeme, už víte, jak hrát šachy! Chcete se stát silnějším hráčem?</string>
   <string name="register">Zaregistrujte se</string>
-  <string name="getAFreeLichessAccount">Získejte zdarma účet na Lichess</string>
+  <string name="getAFreeLichessAccount">Získejte zdarma účet na Chess-Online</string>
   <string name="practice">Procvičování</string>
   <string name="learnCommonChessPositions">Naučte se běžné šachové pozice</string>
   <string name="puzzles">Úlohy</string>

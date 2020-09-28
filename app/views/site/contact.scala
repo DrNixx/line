@@ -91,7 +91,7 @@ object contact {
               "dns",
               "\"This site can’t be reached\"",
               frag(
-                p("If you can't reach Lichess, and your browser says something like:"),
+                p("If you can't reach Chess-Online, and your browser says something like:"),
                 ul(
                   li("This site can't be reached."),
                   li(strong("Chess-Online.Com"), "’s server IP address could not be found."),
@@ -233,8 +233,8 @@ object contact {
               frag(
                 p(s"Please report security issues to $contactEmail."),
                 p(
-                  "Like all contributions to Lichess, security reviews and pentesting are appreciated. ",
-                  "Note that Lichess is built by volunteers and we currently do not have a bug bounty program."
+                  "Like all contributions to Chess-Online, security reviews and pentesting are appreciated. ",
+                  "Note that Chess-Online is built by volunteers and we currently do not have a bug bounty program."
                 ),
                 p(
                   "Vulnerabilities are relevant even when they are not directly exploitable, ",
@@ -305,7 +305,7 @@ object contact {
               "monetize",
               monetizing(),
               frag(
-                p("We are not interested in any way of monetizing Lichess."),
+                p("We are not interested in any way of monetizing Chess-Online."),
                 p(
                   "We will never display any kind of ads, we won't track our players, and we won't sell or buy traffic or users."
                 ),
@@ -335,7 +335,7 @@ object contact {
               "gdpr",
               "GDPR",
               frag(
-                p("If you are a European citizen, you may request the deletion of your Lichess account."),
+                p("If you are a European citizen, you may request the deletion of your Chess-Online account."),
                 p(
                   "First, ",
                   a(href := routes.Account.close())("close your account"),

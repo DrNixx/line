@@ -275,7 +275,7 @@
     <item quantity="one">Ge %s sekund</item>
     <item quantity="other">Ge %s sekunder</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Detta konto bröt mot användarvillkoren för Lichess</string>
+  <string name="thisAccountViolatedTos">Detta konto bröt mot användarvillkoren för Chess-Online</string>
   <string name="thisPlayerArtificiallyIncreasesTheirRating">Den här spelaren manipulerar sin rating</string>
   <string name="openingExplorerAndTablebase">Öppningsutforskare &amp; slutspelsteori</string>
   <string name="takeback">Gör om drag</string>
@@ -448,8 +448,8 @@
   <string name="country">Land</string>
   <string name="socialMediaLinks">Länkar till sociala medier</string>
   <string name="inlineNotation">Visa notation</string>
-  <string name="watchLichessTV">Titta på Lichess-TV</string>
-  <string name="previouslyOnLichessTV">Föregående Lichess-TV</string>
+  <string name="watchLichessTV">Titta på Chess-Online-TV</string>
+  <string name="previouslyOnLichessTV">Föregående Chess-Online-TV</string>
   <string name="onlinePlayers">Inloggade spelare</string>
   <string name="activeToday">Mest aktiva idag</string>
   <string name="activePlayers">Mest aktiva spelare</string>
@@ -578,7 +578,7 @@
   <string name="clock">Klocka</string>
   <string name="unauthorizedError">Tillgång är oauktoriserad</string>
   <string name="noInternetConnection">Ingen internet förbindelse. Du kan spela offline från menyn.</string>
-  <string name="connectedToLichess">Du är nu ansluten till lichess.org</string>
+  <string name="connectedToLichess">Du är nu ansluten till chess-online.com</string>
   <string name="signedOut">Du har loggats ut</string>
   <string name="loginSuccessful">Du är nu inloggad</string>
   <string name="playOnTheBoardOffline">Spela 2 på samma enhet</string>
@@ -618,7 +618,7 @@
   <string name="streamersMenu">Videosändningar</string>
   <string name="mobileApp">Mobilapp</string>
   <string name="webmasters">Webbmasters</string>
-  <string name="about">Om Lichess</string>
+  <string name="about">Om Chess-Online</string>
   <string name="aboutX">Om %s</string>
   <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s är en gratis (%2$s), oberoende och reklamfri schackserver med öppen källkod.</string>
   <string name="really">på riktigt</string>
@@ -644,7 +644,7 @@
   <string name="simulClockHint">Inställningar för fischerklocka. Ju fler spelare du tar dig an, desto mer tid kan du behöva.</string>
   <string name="simulAddExtraTime">Du kan lägga till extra tid till dig för att klara av simultanspelet.</string>
   <string name="simulHostExtraTime">Värdens extratid</string>
-  <string name="lichessTournaments">Lichess-turneringar</string>
+  <string name="lichessTournaments">Chess-Online-turneringar</string>
   <string name="tournamentFAQ">Turnering: Vanliga frågor</string>
   <string name="tournamentOfficial">Officiell</string>
   <string name="timeBeforeTournamentStarts">Tid tills turneringen börjar</string>
@@ -743,7 +743,7 @@
   <string name="usernameSuffixInvalid">Användarnamnet måste sluta med en bokstav eller ett nummer.</string>
   <string name="usernameCharsInvalid">Användarnamnet får bara innehålla bokstäver, siffror, understrykningstecken och bindestreck.</string>
   <string name="usernameUnacceptable">Detta användarnamn är inte acceptabelt.</string>
-  <string name="directlySupportLichess">Stöd Lichess</string>
+  <string name="directlySupportLichess">Stöd Chess-Online</string>
   <string name="playChessInStyle">Spela schack med stil</string>
   <string name="chessBasics">Grunderna i schack</string>
   <string name="coaches">Schacktränare</string>
@@ -830,14 +830,14 @@
   <string name="tryToWin">Försök vinna (eller åtminstone nå remi i) varje parti som du spelar.</string>
   <string name="resignLostGames">Ge upp förlorade partier (i stället för att låta tiden rinna ut).</string>
   <string name="temporaryInconvenience">Vi ber om ursäkt för den tillfälliga olägenheten,</string>
-  <string name="wishYouGreatGames">och önskar dig bra partier på lichess.org.</string>
+  <string name="wishYouGreatGames">och önskar dig bra partier på chess-online.com.</string>
   <string name="thankYouForReading">Tack för att du läste!</string>
   <string name="lifetimeScore">Livstidspoäng</string>
   <string name="currentMatchScore">Nuvarande matchpoäng</string>
   <string name="agreementAssistance">Jag lovar att jag inte kommer att få hjälp under mina partier (från en schackdator, bok, databas eller annan person).</string>
   <string name="agreementNice">Jag lovar att jag alltid kommer att vara respektfull mot andra spelare.</string>
   <string name="agreementAccount">Jag instämmer med att jag inte kommer att skapa flera konton.</string>
-  <string name="agreementPolicy">Jag instämmer med att jag kommer att följa alla Lichess-regler.</string>
+  <string name="agreementPolicy">Jag instämmer med att jag kommer att följa alla Chess-Online-regler.</string>
   <string name="searchOrStartNewDiscussion">Sök eller starta ny konversation</string>
   <string name="edit">Redigera</string>
   <string name="rapid">Rapid</string>

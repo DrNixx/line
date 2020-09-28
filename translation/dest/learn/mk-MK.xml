@@ -11,12 +11,12 @@
   <string name="theRook">Топот</string>
   <string name="itMovesInStraightLines">Се движи по права линија</string>
   <string name="rookIntro">Топот е моќна фигура. Спремен си да му дадеш наредба?</string>
-  <string name="rookGoal">Кликни на топот за 
+  <string name="rookGoal">Кликни на топот за
 да го однесеш до ѕвездата!</string>
   <string name="grabAllTheStars">Освои ги сите ѕвезди!</string>
-  <string name="theFewerMoves">Колку помалку потези, 
+  <string name="theFewerMoves">Колку помалку потези,
 толку повеќе поени добиваш!</string>
-  <string name="useTwoRooks">Користи два топа 
+  <string name="useTwoRooks">Користи два топа
 за да ги забрзаш работите!</string>
   <string name="rookComplete">Браво! Успешно го совлада топот.</string>
   <string name="theBishop">Ловецот</string>
@@ -51,7 +51,7 @@
 Но, кога ќе стигнат до крајот на таблата, стануваат помоќна фигура!</string>
   <string name="mostOfTheTimePromotingToAQueenIsBest">Најчесто е најдобро да ги унапредиш во кралица.
 Но, понекогаш и коњ може да ти користи!</string>
-  <string name="pawnsMoveForward">Пешаците се движат напред, 
+  <string name="pawnsMoveForward">Пешаците се движат напред,
 но земаат дијагонално!</string>
   <string name="captureThenPromote">Земи, па унапреди!</string>
   <string name="useAllThePawns">Користи ги сите пешаци! Не мора да ги унапредиш.</string>
@@ -77,9 +77,9 @@
   <string name="protectionComplete">Честитки! Незагубената фигура е освоена фигура!</string>
   <string name="escape">Нападнат си!
 Избегни ја заканата!</string>
-  <string name="noEscape">Нема излез, 
+  <string name="noEscape">Нема излез,
 но можеш да се браниш!</string>
-  <string name="dontLetThemTakeAnyUndefendedPiece">Не дозволувај да ти 
+  <string name="dontLetThemTakeAnyUndefendedPiece">Не дозволувај да ти
 земат незаштитена фигура!</string>
   <string name="combat">Борба</string>
   <string name="captureAndDefendPieces">Земај фигури и одбранувај фигури</string>
@@ -130,9 +130,9 @@
   <string name="castling">Рокада</string>
   <string name="theSpecialKingMove">Специјалниот потег на кралот</string>
   <string name="castlingIntro">Заштити си го кралот и намести го топот за напад!</string>
-  <string name="castleKingSide">Помести го кралот две полиња за да 
+  <string name="castleKingSide">Помести го кралот две полиња за да
 направиш мала рокада на страната на кралот!</string>
-  <string name="castleQueenSide">Помести го кралот две полиња за да направиш 
+  <string name="castleQueenSide">Помести го кралот две полиња за да направиш
 голема рокада на страната на кралицата!</string>
   <string name="theKnightIsInTheWay">Коњот ти го попречува патот!
 Помести го, па направи мала рокада.</string>
@@ -158,7 +158,7 @@
 Земи го со Ан Пасан.</string>
   <string name="enPassantOnlyWorksImmediately">Ан Пасан може да се користи само
 веднаш по противничкиот потег со пешакот.</string>
-  <string name="enPassantOnlyWorksOnFifthRank">Ан Пасан може да се користи 
+  <string name="enPassantOnlyWorksOnFifthRank">Ан Пасан може да се користи
 само ако пешакот ти е на 5-тиот ред.</string>
   <string name="takeAllThePawnsEnPassant">Земи ги сите пешаци со Ан Пасан!</string>
   <string name="enPassantComplete">Честитки! Сега знаеш да го користиш Ан Пасан потегот.</string>
@@ -197,7 +197,7 @@
   <string name="whatNext">Што е следно?</string>
   <string name="youKnowHowToPlayChess">Знаеш како да играш шах. Честитки! Сакаш да станеш подобар играч?</string>
   <string name="register">Регистрирај се</string>
-  <string name="getAFreeLichessAccount">Направи бесплатна Lichess сметка</string>
+  <string name="getAFreeLichessAccount">Направи бесплатна Chess-Online сметка</string>
   <string name="practice">Вежбај</string>
   <string name="learnCommonChessPositions">Научи ги основните шаховски позиции</string>
   <string name="puzzles">Загатки</string>

@@ -1,9 +1,10 @@
 package lila.gameSearch
 
+import akka.stream.scaladsl.{Keep, Sink}
 import play.api.libs.json._
-import scala.concurrent.duration._
 
-import lila.game.{ Game, GameRepo }
+import scala.concurrent.duration._
+import lila.game.{Game, GameRepo}
 import lila.search._
 
 final class GameSearchApi(
@@ -35,6 +36,37 @@ final class GameSearchApi(
           logger.some
         )
       }
+    }
+
+  def doStore(game: Game) =
+    gameRepo isAnalysed game.id flatMap { analysed =>
+      client.store(Id(game.id), toDoc(game, analysed))
+    }
+
+  def reindex(userId: lila.user.User.ID) =
+    client match {
+      case c: ESClientHttp => {
+        import reactivemongo.api.ReadPreference
+
+        val query = lila.game.Query.user(userId) ++
+          lila.game.Query.finished
+
+        logger.info(s"Index to ${c.index.name} for $userId")
+        val retryLogger = logger.branch("index")
+        gameRepo
+          .cursor(
+            selector = query,
+            readPreference = ReadPreference.secondaryPreferred
+          )
+          .documentSource()
+          .via(lila.common.LilaStream.logRate[Game]("game index")(logger))
+          .mapAsyncUnordered(8) { game =>
+            lila.common.Future.retry(() => doStore(game), 5 seconds, 10, retryLogger.some)
+          }
+          .toMat(Sink.ignore)(Keep.right)
+          .run()
+      } >> client.refresh
+      case _ => funit
     }
 
   private def storable(game: Game) = game.finished || game.imported

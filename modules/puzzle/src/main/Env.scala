@@ -54,7 +54,8 @@ final class Env(
     roundColl = roundColl,
     voteColl = voteColl,
     headColl = headColl,
-    cacheApi = cacheApi
+    cacheApi = cacheApi,
+    apiToken = config.apiToken
   )
 
   lazy val roundRepo = RoundRepo(roundColl)

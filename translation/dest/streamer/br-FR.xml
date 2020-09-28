@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessStreamers">Streamerien Lichess</string>
-  <string name="lichessStreamer">Streamer Lichess</string>
+  <string name="lichessStreamers">Streamerien Chess-Online</string>
+  <string name="lichessStreamer">Streamer Chess-Online</string>
   <string name="live">WAR-EEUN!</string>
   <string name="offline">EZLINENN</string>
   <string name="currentlyStreaming">O skignañ ur stream: %s</string>
   <string name="lastStream">Stream diwezhañ %s</string>
-  <string name="becomeStreamer">Dont da vezañ ur streamer war Lichess</string>
+  <string name="becomeStreamer">Dont da vezañ ur streamer war Chess-Online</string>
   <string name="doYouHaveStream">Ur chadenn Twitch pe YouTube ho peus?</string>
   <string name="hereWeGo">Deomp dezhi!</string>
   <string name="allStreamers">An holl streamerien</string>
@@ -18,7 +18,7 @@
   <string name="twitchUsername">Hoc\'h anv-implijer Twitch pe URL</string>
   <string name="optionalOrEmpty">Diret. Laoskit goullo ma n\'eus ket</string>
   <string name="youtubeChannel">ID ho chadenn YouTube pe URL</string>
-  <string name="streamerName">Hoc\'h anv streamer war Lichess</string>
+  <string name="streamerName">Hoc\'h anv streamer war Chess-Online</string>
   <plurals name="keepItShort">
     <item quantity="one">E berr gomzoù: %s arouezenn d\'ar muiañ</item>
     <item quantity="two">E berr gomzoù: %s arouezenn d\'ar muiañ</item>

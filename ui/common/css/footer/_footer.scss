@@ -1,0 +1,30 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: .85em;
+    padding: 15px 0;
+    margin-top: 20px;
+    border-top: $border;
+
+    .rules {
+        a {
+            &:not(:last-child) {
+                &:after {
+                    content: "|";
+                    padding: 0 1em;
+                    color: $c-font;
+                }
+            }
+        }
+    }
+
+    .foot-left {
+        flex-grow: 1;
+    }
+
+    .foot-right {
+        display: flex;
+        flex-grow: 2;
+        justify-content: space-between;
+    }
+}

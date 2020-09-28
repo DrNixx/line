@@ -2,7 +2,7 @@
 <resources>
   <string name="lichessClasses">課程</string>
   <string name="features">功能</string>
-  <string name="applyToBeLichessTeacher">申請成為 Lichess 的的教師</string>
+  <string name="applyToBeLichessTeacher">申請成為 Chess-Online 的的教師</string>
   <string name="noClassesYet">還沒有課程</string>
   <string name="teachersX">%s個教師</string>
   <string name="newClass">新的課程</string>

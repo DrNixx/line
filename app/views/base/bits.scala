@@ -37,6 +37,7 @@ z-index: 99;
     div(cls := "connect-links")(
       a(href := "https://www.facebook.com/ChessOnline", rel := "nofollow")("Facebook"),
       a(href := "https://vk.com/chessonlineru", rel := "nofollow")("VK"),
+      a(href := "https://twitter.com/playschess", rel := "nofollow")("Twitter"),
       a(href := "https://discord.gg/mpMQCuj", rel := "nofollow")("Discord")
     )
 }

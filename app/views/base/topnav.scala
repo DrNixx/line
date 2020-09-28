@@ -51,7 +51,7 @@ object topnav {
       st.section(
         linkTitle(routes.Tv.index().path, trans.watch()),
         div(role := "group")(
-          a(href := routes.Tv.index())("Lichess TV"),
+          a(href := routes.Tv.index())("Chess-Online TV"),
           a(href := routes.Tv.games())(trans.currentGames()),
           ctx.noKid option a(href := routes.Streamer.index())(trans.streamersMenu()),
           a(href := routes.Relay.index())(trans.broadcast.broadcasts()),

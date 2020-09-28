@@ -2,7 +2,7 @@
 <resources>
   <string name="activity">აქტიურობა</string>
   <string name="hostedALiveStream">იყო პირდაპირ ეთერში</string>
-  <string name="signedUp">დარეგისტრირდა lichess.org-ზე</string>
+  <string name="signedUp">დარეგისტრირდა chess-online.com-ზე</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">შეუერთდა ჯგუფს %s</item>
     <item quantity="other">შეუერთდა ჯგუფებს %s</item>

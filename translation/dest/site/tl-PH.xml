@@ -430,8 +430,8 @@
   <string name="biography">Talambuhay</string>
   <string name="country">Bansa</string>
   <string name="inlineNotation">Nakalinyang notasyon</string>
-  <string name="watchLichessTV">Tumingin sa Lichess TV</string>
-  <string name="previouslyOnLichessTV">Ang Nakaraan sa Lichess TV</string>
+  <string name="watchLichessTV">Tumingin sa Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Ang Nakaraan sa Chess-Online TV</string>
   <string name="onlinePlayers">Mga online na manlalaro</string>
   <string name="activeToday">Aktibo ngayon</string>
   <string name="activePlayers">Aktibong manlalaro</string>
@@ -451,7 +451,7 @@
   <string name="butYouCanKeepTrying">Pero pwede kang magpatuloy.</string>
   <string name="success">Tagumpay</string>
   <string name="wasThisPuzzleAnyGood">Magaling ba ang palaisipang ito?</string>
-  <string name="pleaseVotePuzzle">Tulungan ang Lichess na umunlad sa pagboto, gamit ang taas o baba na arrow:</string>
+  <string name="pleaseVotePuzzle">Tulungan ang Chess-Online na umunlad sa pagboto, gamit ang taas o baba na arrow:</string>
   <string name="thankYou">Salamat!</string>
   <string name="ratingX">Marka: %s</string>
   <plurals name="playedXTimes">
@@ -554,7 +554,7 @@
   <string name="clock">Orasan</string>
   <string name="unauthorizedError">Ang pagbukas ay hindi pinapayagan.</string>
   <string name="noInternetConnection">Walang koneksyon ng internet. Pwede ka parin maglaro ng offline galing sa menu.</string>
-  <string name="connectedToLichess">Konectado sa lichess.org</string>
+  <string name="connectedToLichess">Konectado sa chess-online.com</string>
   <string name="signedOut">Ikaw ay nasign-out</string>
   <string name="loginSuccessful">Ikaw ay nasign-in ngayon</string>
   <string name="playOnTheBoardOffline">Sa ibabaw ng board</string>
@@ -614,7 +614,7 @@
   <string name="simulClockHint">Fischer na Orasan ng pagaayos. Mas maraming manlalaro na iyong nilaro, mas maraming oras ang iyong maaring kailanganin.</string>
   <string name="simulAddExtraTime">Maaring magdadag ng sobrang oras sa iyong orasan upang tumulong na makaya ang simul.</string>
   <string name="simulHostExtraTime">Maghost ng sobrang oras sa orasan</string>
-  <string name="lichessTournaments">Mga Paligsahan ng Lichess</string>
+  <string name="lichessTournaments">Mga Paligsahan ng Chess-Online</string>
   <string name="tournamentFAQ">Lugar ng paligsahan na FAQ</string>
   <string name="tournamentOfficial">Opisyal</string>
   <string name="timeBeforeTournamentStarts">Oras bago magsimula ang paligsahan</string>
@@ -708,7 +708,7 @@
   <string name="usernameSuffixInvalid">Kailangang tapusin ang iyong pangalan gamit ang kahit anong letra o numero.</string>
   <string name="usernameCharsInvalid">Maaari lang maglaman ang iyong pangalan ng mga letra, numero, salungguhit, at gitling.</string>
   <string name="usernameUnacceptable">Ang username na ito ay hindi matatanggap.</string>
-  <string name="directlySupportLichess">Direktang sumusuporta sa Lichess</string>
+  <string name="directlySupportLichess">Direktang sumusuporta sa Chess-Online</string>
   <string name="playChessInStyle">Maglaro ng chess na may istilo</string>
   <string name="chessBasics">Mga pangunahing kaalaman ng Chess</string>
   <string name="coaches">Mga Tagapagsanay</string>

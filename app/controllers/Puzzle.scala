@@ -264,4 +264,31 @@ final class Puzzle(
         .fuccess
     }
 
+  def recentGame = Action.async { req =>
+    if (!get("token", req).contains(env.api.config.apiToken.value)) BadRequest.fuccess
+    else {
+      lila.log("puzzle import").info("No recent good game, serving a random one :-/")
+      env.game.gameRepo.findRandomFinished(1000) flatMap {
+        _ ?? { game =>
+          env.game.gameRepo.initialFen(game) flatMap { fen =>
+            env.api.pgnDump(game, fen, analysis = none, lila.game.PgnDump.WithFlags(clocks = false)) map { pgn =>
+              Ok(pgn.render)
+            }
+          }
+        }
+      }
+    }
+  }
+
+  def importOne = Action.async(parse.json) { implicit req =>
+    env.puzzle.api.puzzle.importOne(req.body, ~get("token", req)) map { id =>
+      val url = s"https://live.chess-online.com/training/$id"
+      lila.log("puzzle import").info(s"${req.remoteAddress} $url")
+      Ok(s"kthxbye $url")
+    } recover {
+      case e =>
+        lila.log("puzzle import").warn(s"${req.remoteAddress} ${e.getMessage}", e)
+        BadRequest(e.getMessage)
+    }
+  }
 }

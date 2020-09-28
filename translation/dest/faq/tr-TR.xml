@@ -2,23 +2,23 @@
 <resources>
   <string name="faqAbbreviation">S.S.S</string>
   <string name="frequentlyAskedQuestions">Sıkça Sorulan Sorular</string>
-  <string name="whyIsLichessCalledLichess">Lichess\'in adı neden Lichess?</string>
-  <string name="lichessCombinationLiveLightLibrePronounced">Lichess, \"live/light/libre\" kelimeleri ile satranç anlamına gelen \"chess\" kelimesinin birleşimiyle oluşturulmuştur. Şu şekilde telaffuz edilir: %1$s .</string>
+  <string name="whyIsLichessCalledLichess">Chess-Online\'in adı neden Chess-Online?</string>
+  <string name="lichessCombinationLiveLightLibrePronounced">Chess-Online, \"live/light/libre\" kelimeleri ile satranç anlamına gelen \"chess\" kelimesinin birleşimiyle oluşturulmuştur. Şu şekilde telaffuz edilir: %1$s .</string>
   <string name="leechess">lii-çes</string>
   <string name="hearItPronouncedBySpecialist">Telaffuzunu bir uzmandan dinleyin.</string>
-  <string name="whyLiveLightLibre">Canlı, çünkü oyunlar gerçek zamanlı olarak 24/7 oynanır ve izlenir; bunun nedeni Lichess açık kaynak kodludur ve diğer web sitelerini rahatsız eden önemsiz sıkıntılar tarafından engellenmemesi içindir.</string>
-  <string name="whyIsLilaCalledLila">Benzer şekilde, Lichess için kaynak kodu, %1$s, li[sca satranç] la anlamına gelir, Lichess, %2$s gibi sezgisel bir programlama dili ile yazılmıştır.</string>
-  <string name="howCanIContributeToLichess">Lichess\'in kaynak kodlarına nasıl katkıda bulunabilirim?</string>
-  <string name="lichessPoweredByDonationsAndVolunteers">Lichess, sizlerin bağışlarınızla ve katkılarınızla ayakta kalmaktadır.</string>
-  <string name="findMoreAndSeeHowHelp">%1$s olmakla alakalı daha fazla şey bulabilirsiniz. (%2$s dahil) Lichess\'e gerek zamanınızla gerek yeteneklerinizle destek olmanın %3$s vardır.</string>
+  <string name="whyLiveLightLibre">Canlı, çünkü oyunlar gerçek zamanlı olarak 24/7 oynanır ve izlenir; bunun nedeni Chess-Online açık kaynak kodludur ve diğer web sitelerini rahatsız eden önemsiz sıkıntılar tarafından engellenmemesi içindir.</string>
+  <string name="whyIsLilaCalledLila">Benzer şekilde, Chess-Online için kaynak kodu, %1$s, li[sca satranç] la anlamına gelir, Chess-Online, %2$s gibi sezgisel bir programlama dili ile yazılmıştır.</string>
+  <string name="howCanIContributeToLichess">Chess-Online\'in kaynak kodlarına nasıl katkıda bulunabilirim?</string>
+  <string name="lichessPoweredByDonationsAndVolunteers">Chess-Online, sizlerin bağışlarınızla ve katkılarınızla ayakta kalmaktadır.</string>
+  <string name="findMoreAndSeeHowHelp">%1$s olmakla alakalı daha fazla şey bulabilirsiniz. (%2$s dahil) Chess-Online\'e gerek zamanınızla gerek yeteneklerinizle destek olmanın %3$s vardır.</string>
   <string name="beingAPatron">patron</string>
   <string name="breakdownOfOurCosts">giderlerimizin dağılışı</string>
   <string name="otherWaysToHelp">yardım etmenin diğer yolları</string>
-  <string name="areThereWebsitesBasedOnLichess">Lichess kaynak kodunu kullanan diğer siteler de var mı?</string>
+  <string name="areThereWebsitesBasedOnLichess">Chess-Online kaynak kodunu kullanan diğer siteler de var mı?</string>
   <string name="yesLichessInspiredOtherOpenSourceWebsites">Evet. Bizim %1$s, %2$s ve %3$s kullanan bir çok site var.</string>
   <string name="fairPlay">Adil Oyun</string>
   <string name="whyFlaggedRatingManipulationOrCheater">Neden bir bilgisayardan yardım alan ya da haksız puan kazanan birisi olarak işaretlendim?</string>
-  <string name="cheatDetectionMethods">Lichess bu konuda güçlü bir yakalama sistemine ve bunu işleme yetisine sahiptir. Bu süreç bir çok moderatör tarafından incelenir ve bu baya zaman alabilir. Haksız ve ya bireysel itirazlar ile ilgilenmiyoruz. Çünkü bu ileride tespit edilmekten kaçışı kolaylaştıracak çok zaman alacaktır. Zamanı ve eforu daha önemli olaylarda harcamak daha iyidir. İtirazlar e-mail yolu ile de yapılabilir. (%1$s) ama unutmayın ki verilen kararlar ya da yasaklar nadiren kaldırılır.</string>
+  <string name="cheatDetectionMethods">Chess-Online bu konuda güçlü bir yakalama sistemine ve bunu işleme yetisine sahiptir. Bu süreç bir çok moderatör tarafından incelenir ve bu baya zaman alabilir. Haksız ve ya bireysel itirazlar ile ilgilenmiyoruz. Çünkü bu ileride tespit edilmekten kaçışı kolaylaştıracak çok zaman alacaktır. Zamanı ve eforu daha önemli olaylarda harcamak daha iyidir. İtirazlar e-mail yolu ile de yapılabilir. (%1$s) ama unutmayın ki verilen kararlar ya da yasaklar nadiren kaldırılır.</string>
   <string name="whenAmIEligibleRatinRefund">Hileye karşı kaybettiğim puanlarımı ne zaman geri alacağım?</string>
   <string name="ratingRefundExplanation">Bir oyuncu işaretlendikten bir dakika sonra, son 3 gün içinde oynadığı 40 puanlı oyun geri alınır. Bu oyunlarda eğer rakibi iseniz, puan kaybettiyseniz (bir kayıp veya beraberlik nedeniyle) ve puanınız geçici değilse, puan geri ödemesi alırsınız. Geri ödeme, en yüksek puanınıza ve oyundan sonraki puan ilerlemenize göre sınırlanır.
 (Örneğin, bu oyunlardan sonra puanınız büyük ölçüde artarsa, geri ödeme veya yalnızca kısmi geri ödeme alabilirsiniz.) Geri ödeme asla 150 puanı geçmez.</string>
@@ -27,16 +27,16 @@
   <string name="howCanIBecomeModerator">Nasıl moderatör olabilirim?</string>
   <string name="youCannotApply">Moderatör olmak için başvuru yapmak mümkün değildir. Moderatör olarak iyi olacağını düşündüğümüz birini görürsek, onlarla doğrudan iletişime geçeceğiz.</string>
   <string name="isCorrespondenceDifferent">Yazışmalı oyun normal satrançtan farklı mıdır?</string>
-  <string name="youCanUseOpeningBookNoEngine">Lichess\'te, yazışma satrancı kurallarındaki temel fark, bir açılış kitabına izin verilmesidir. Motorların kullanımı hala yasaktır ve motor yardımı alırsanız hesabınız işaretlenecektir. ICCF yazışmalarda motor kullanımına izin verse de, Lichess buna izin vermez.</string>
-  <string name="gameplay" comment="gameplay&#10;&#10;A heading under https://lichess.org/faq (as with other strings under the FAQ file). You are free to translate it loosely.">Oynanış</string>
+  <string name="youCanUseOpeningBookNoEngine">Chess-Online\'te, yazışma satrancı kurallarındaki temel fark, bir açılış kitabına izin verilmesidir. Motorların kullanımı hala yasaktır ve motor yardımı alırsanız hesabınız işaretlenecektir. ICCF yazışmalarda motor kullanımına izin verse de, Chess-Online buna izin vermez.</string>
+  <string name="gameplay" comment="gameplay&#10;&#10;A heading under https://www.chess-online.com/help/faq (as with other strings under the FAQ file). You are free to translate it loosely.">Oynanış</string>
   <string name="howBulletBlitzEtcDecided">Bullet, blitz ve diğer zaman kontrolleri neye göre karar veriliyor?</string>
   <string name="basedOnGameDuration">Zaman kontrolleri oyunun süresine bağlı olarak değişiyor = %1$s
 Örneğin, bir 5+3 blitz oyununun yaklaşık süresi 5 x 60 + 40 x 3 = 420 saniyedir.</string>
   <string name="durationFormula">(zaman) + 40 x (arttırma)</string>
-  <string name="inferiorThanXsEqualYtimeControl" comment="inferiorThanXsEqualYtimeControl&#10;&#10;Used for several time controls:&#10;&#10;https://lichess.org/faq#time-controls&#10;&#10;%1$s is the number of seconds&#10;%2$s is the name of the time control (Bullet, Blitz, Rapid, etc)">≤ %1$ss = %2$s</string>
+  <string name="inferiorThanXsEqualYtimeControl" comment="inferiorThanXsEqualYtimeControl&#10;&#10;Used for several time controls:&#10;&#10;https://www.chess-online.com/help/faq#time-controls&#10;&#10;%1$s is the number of seconds&#10;%2$s is the name of the time control (Bullet, Blitz, Rapid, etc)">≤ %1$ss = %2$s</string>
   <string name="superiorThanXsEqualYtimeControl">≥ %1$ss = %2$s</string>
-  <string name="whatVariantsCanIplay">Lichess\'te hangi varyantları oynayabilirim?</string>
-  <string name="lichessSupportChessAnd">Lichess standart satranç ve%1$s\'yi destekler.</string>
+  <string name="whatVariantsCanIplay">Chess-Online\'te hangi varyantları oynayabilirim?</string>
+  <string name="lichessSupportChessAnd">Chess-Online standart satranç ve%1$s\'yi destekler.</string>
   <string name="eightVariants">8 satranç varyantı</string>
   <string name="whatIsACPL">Ortalama santipiyon kaybı (OSK) nedir?</string>
   <string name="acplExplanation">Santipiyon, satrançta avantajın temsili olarak kullanılan ölçü birimidir. Bir santipiyon, bir piyonun 1 / 100\'üne eşittir. Bu nedenle 100 santipiyon = 1 piyon. Bu değerler oyunda resmi bir rol oynamaz, ancak oyuncular için yararlıdır ve bilgisayar satrancında pozisyonları değerlendirmek için gereklidir.
@@ -45,7 +45,7 @@ En iyi bilgisayar hareketi sıfır santipiyon kaybettirir, ancak daha az hamle s
 
 Bu değer, oyun kalitesinin bir göstergesi olarak kullanılabilir. Hareket başına ne kadar az santipiyon kaybederse, oyun o kadar güçlü olur.
 
-Lichess üzerindeki bilgisayar analizi Stockfish tarafından desteklenmektedir.</string>
+Chess-Online üzerindeki bilgisayar analizi Stockfish tarafından desteklenmektedir.</string>
   <string name="insufficientMaterial">Zaman kaybı, beraberlik ve yetersiz taş</string>
   <string name="lichessFollowFIDErules">Bir oyuncunun zaman tükenmesi durumunda, bu oyuncu genellikle oyunu kaybedecektir. Ancak, oyun, rakip oyuncunun şahını olası herhangi bir yasal hamleler dizisi (%1$s) mat edebiliyor ise maç sonucu değişebilir.
 
@@ -63,44 +63,44 @@ Rakibin şahı kenara sıkıştırabilecek herhangi bir taşı varsa, tek bir at
 Biraz pratik yapmak için bu hamle için olan %3$s\'ye bakın.</string>
   <string name="goodIntroduction">iyi giriş</string>
   <string name="officialRulesPDF">resmi kurallar (PDF)</string>
-  <string name="lichessTraining">Lichess egzersizi</string>
+  <string name="lichessTraining">Chess-Online egzersizi</string>
   <string name="threefoldRepetition">Üç kez hamle tekrarı</string>
-  <string name="threefoldRepetitionExplanation">Bir pozisyon üç kez gerçekleşirse, oyuncular %1$s ile beraberlik talebinde bulunabilirler. Lichess, %2$s\'nin 9.2 (d) maddesinde açıklandığı gibi resmi FIDE kurallarını uygular.</string>
+  <string name="threefoldRepetitionExplanation">Bir pozisyon üç kez gerçekleşirse, oyuncular %1$s ile beraberlik talebinde bulunabilirler. Chess-Online, %2$s\'nin 9.2 (d) maddesinde açıklandığı gibi resmi FIDE kurallarını uygular.</string>
   <string name="threefoldRepetitionLowerCase">üç kez hamle tekrarı</string>
   <string name="handBookPDF">el kitabı (PDF)</string>
   <string name="notRepeatedMoves">Biz hamle tekrarı yapmadık. Oyun neden hamle tekrarından berabere bitti?</string>
   <string name="repeatedPositionsThatMatters">Üç kez hamle tekrarı %1$s ile ilgilidir, hamle ile değil. Tekrarlama ardışık olarak gerçekleşmek zorunda değildir.</string>
   <string name="positions">pozisyonlar</string>
   <string name="weRepeatedthreeTimesPosButNoDraw">Üç kere aynı pozisyonu tekrarladık. Neden oyun berabere bitmedi?</string>
-  <string name="threeFoldHasToBeClaimed">Hamle tekrarı oyunculardan biri tarafından kabul edilmesi gerekiyor. Gösterilen düğmeye basarak veya son yinelenen hareketinizden önce bir beraberlik sunarak bunu yapabilirsiniz. Ayrıca %1$s Lichess otomatik olarak sizin için hamle tekrarı talep edebilirsiniz. Ek olarak, beş kez hamle tekrarı her zaman oyunu hemen bitirir.</string>
+  <string name="threeFoldHasToBeClaimed">Hamle tekrarı oyunculardan biri tarafından kabul edilmesi gerekiyor. Gösterilen düğmeye basarak veya son yinelenen hareketinizden önce bir beraberlik sunarak bunu yapabilirsiniz. Ayrıca %1$s Chess-Online otomatik olarak sizin için hamle tekrarı talep edebilirsiniz. Ek olarak, beş kez hamle tekrarı her zaman oyunu hemen bitirir.</string>
   <string name="configure">yapılandır</string>
   <string name="accounts">Hesaplar</string>
-  <string name="titlesAvailableOnLichess">Lichess\'te hangi unvanlar var?</string>
-  <string name="lichessRecognizeAllOTBtitles">Lichess, OTB (over the board) oyunundan elde edilen tüm FIDE başlıklarını ve %1$s\'yi tanır. işte FIDE başlıklarının bir listesi:</string>
+  <string name="titlesAvailableOnLichess">Chess-Online\'te hangi unvanlar var?</string>
+  <string name="lichessRecognizeAllOTBtitles">Chess-Online, OTB (over the board) oyunundan elde edilen tüm FIDE başlıklarını ve %1$s\'yi tanır. işte FIDE başlıklarının bir listesi:</string>
   <string name="showYourTitle">Eğer bir OTB unvanınız varsa, %1$s\'yi tamamlayarak bunu hesabınızda göstermeniz için başvuruda bulunabilirsiniz; bunu, tanımlayıcı bir belge/kartın net bir görüntüsü ve belgeyi/kartı elinde tutan bir fotoğraf da dahil olmak üzere gerçekleştirebilirsiniz.
 
-Lichess\'te Unvanlı bir oyuncu olarak doğrulanmak Unvanlı Arena olaylarda oynamak için erişim sağlar.
+Chess-Online\'te Unvanlı bir oyuncu olarak doğrulanmak Unvanlı Arena olaylarda oynamak için erişim sağlar.
 
 Bir de Onursal bir %2$s Unvanı var.</string>
   <string name="asWellAsManyNMtitles">birçok ulusal usta unvanı</string>
   <string name="verificationForm">onaylama formu</string>
-  <string name="canIbecomeLM">Lichess ustası (LM) ünvanını alabilir miyim?</string>
+  <string name="canIbecomeLM">Chess-Online ustası (LM) ünvanını alabilir miyim?</string>
   <string name="noUpperCaseDot">Hayır.</string>
-  <string name="lMtitleComesToYouDoNotRequestIt">Bu onursal unvan resmi değil ve sadece Lichess üzerinde var.
+  <string name="lMtitleComesToYouDoNotRequestIt">Bu onursal unvan resmi değil ve sadece Chess-Online üzerinde var.
 
-Biz nadiren takdiri hak eden iyi Lichess kullanıcılarına bu unvanı veriyoruz. LM unvanı alamazsın, LM unvanı sana gelir. Eğer hak kazanırsanız, bizden bir mesaj alacaksınız ve kabul etme veya reddetme seçimine sahip olacaksınız.
+Biz nadiren takdiri hak eden iyi Chess-Online kullanıcılarına bu unvanı veriyoruz. LM unvanı alamazsın, LM unvanı sana gelir. Eğer hak kazanırsanız, bizden bir mesaj alacaksınız ve kabul etme veya reddetme seçimine sahip olacaksınız.
 
 LM unvanı için sorma.</string>
   <string name="whatUsernameCanIchoose">Kullanıcı adım ne olmalı?</string>
   <string name="usernamesNotOffensive">Genel olarak, kullanıcı adları: saldırgan, başkasını taklit eden veya reklam amaçlı olmamalıdır. %1$s hakkında daha fazla bilgi edinebilirsiniz.</string>
   <string name="guidelines">yönetmelik</string>
   <string name="uniqueTrophies">Benzersiz kupalar</string>
-  <string name="ownerUniqueTrophies">Bu kupa Lichess tarihinde benzersizdir ve %1$s dışında kimse bu kupaya sahip olamaz.</string>
+  <string name="ownerUniqueTrophies">Bu kupa Chess-Online tarihinde benzersizdir ve %1$s dışında kimse bu kupaya sahip olamaz.</string>
   <string name="wayOfBerserkExplanation">Bunu almak için, hiimgosu kendini berserk ile test etti ve %s oyunlarının 100%%\'ünü kazandı.</string>
   <string name="aHourlyBulletTournament">bir saatlik Kurşun turnuvası</string>
   <string name="goldenZeeExplanation">ZugAddict canlı yayın açmıştı ve son 2 saat boyunca A.I. level 8\'i 1+0 oyununda başarılı bir şekilde yenmeye çalışıyordu. Thibault, canlı yayında başarılı bir şekilde bunu gerçekleştirirse, ona benzersiz bir kupa alacağını söyledi. Bir saat sonra, Stockfish\'i yendi ve söz onurlandırıldı.</string>
-  <string name="lichessRatings">Lichess derecelendirmeleri</string>
-  <string name="whichRatingSystemUsedByLichess">Lichess hangi derecelendirme sistemini kullanıyor?</string>
+  <string name="lichessRatings">Chess-Online derecelendirmeleri</string>
+  <string name="whichRatingSystemUsedByLichess">Chess-Online hangi derecelendirme sistemini kullanıyor?</string>
   <string name="ratingSystemUsedByLichess">Puanlar Mark Glickman tarafından geliştirilen Glicko-2 değerlendirme yöntemi kullanılarak hesaplanır. Bu çok popüler bir derecelendirme yöntemidir ve önemli sayıda satranç organizasyonu tarafından kullanılır (FIDE, hala tarihi Elo derecelendirme sistemini kullandığı için bu kayda değer bir karşı örnektir).
 
 Temel olarak, glicko derecelendirmeleri, derecelendirmenizi hesaplarken ve temsil ederken \"güven aralıkları\" kullanır. Siteyi ilk kullanmaya başladığınızda, puanınız 1500 ± 700\'de başlar. 1500 puanınızı temsil eder ve 700 güven aralığını temsil eder.
@@ -130,11 +130,11 @@ Derecelendirmeleri \"göreceli\" rakamlar olarak düşünmek en iyisidir (\"mutl
   <string name="enableZenMode">%1$s\'de veya Oyun sırasında %2$s tuşlarına basarak Zen modunu etkinleştirin.</string>
   <string name="displayPreferences">görüntüleme tercihleri</string>
   <string name="connexionLostCanIGetMyRatingBack">Gecikme / bağlantı kopması nedeniyle oyunu kaybettim. Puanlarımı geri alabilir miyim?</string>
-  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">Maalesef, gecikme ya da bağlantı kopması nedeniyle yaşanan puan kayıplarını sorunun sizde mi bizde mi olduğuna bakmaksızın geri veremeyiz. İkincisi çok nadirdir. Ayrıca Lichess yeniden başladığında ve bu nedenle zamandan kaybettiğinizde, haksız bir kaybı önlemek için oyunu iptal ettiğimizi unutmayın.</string>
+  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">Maalesef, gecikme ya da bağlantı kopması nedeniyle yaşanan puan kayıplarını sorunun sizde mi bizde mi olduğuna bakmaksızın geri veremeyiz. İkincisi çok nadirdir. Ayrıca Chess-Online yeniden başladığında ve bu nedenle zamandan kaybettiğinizde, haksız bir kaybı önlemek için oyunu iptal ettiğimizi unutmayın.</string>
   <string name="howToThreeDots">Nasıl...</string>
   <string name="enableDisableNotificationPopUps">Bildirimler etkinleştirilsin mi, devre dışı mı bırakılsın?</string>
   <string name="viewSiteInformationPopUp">Site bilgilerini görüntüle</string>
-  <string name="lichessCanOptionnalySendPopUps">Lichess isteğe bağlı olarak oyun bildirimleri gönderebilir, örneğin hamle sırası sizdeyken veya özel bir mesaj aldığınızda.
- lichess.org sitesinde tarayıcınızdaki sol üst köşede yer alan kilit ikonuna tıklayın.
-Sonra Lichess bildirimlerine izin ver veya engelle seçeneğine tıklayın.</string>
+  <string name="lichessCanOptionnalySendPopUps">Chess-Online isteğe bağlı olarak oyun bildirimleri gönderebilir, örneğin hamle sırası sizdeyken veya özel bir mesaj aldığınızda.
+ chess-online.com sitesinde tarayıcınızdaki sol üst köşede yer alan kilit ikonuna tıklayın.
+Sonra Chess-Online bildirimlerine izin ver veya engelle seçeneğine tıklayın.</string>
 </resources>

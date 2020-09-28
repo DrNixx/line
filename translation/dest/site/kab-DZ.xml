@@ -267,8 +267,8 @@
   <string name="lastName">Isem n twacult</string>
   <string name="biography">Tameddurt</string>
   <string name="country">Tamurt</string>
-  <string name="watchLichessTV">Wali kan Lichess TV</string>
-  <string name="previouslyOnLichessTV">Yakan seg Lichess TV</string>
+  <string name="watchLichessTV">Wali kan Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Yakan seg Chess-Online TV</string>
   <string name="onlinePlayers">Imariren s weskar uqqin</string>
   <string name="activeToday">Urmid ass-a</string>
   <string name="activePlayers">Imariren urmiden</string>
@@ -285,7 +285,7 @@
   <string name="puzzleFailed">Aεewwiq ixeṣren</string>
   <string name="butYouCanKeepTrying">Maca tzemṛed ad tɛawdeḍ tikkelt niḍen.</string>
   <string name="wasThisPuzzleAnyGood">I sɣa azal ugur agi</string>
-  <string name="pleaseVotePuzzle">All Lichess a d-i sileɣ s dɣeṛ s innecaben</string>
+  <string name="pleaseVotePuzzle">All Chess-Online a d-i sileɣ s dɣeṛ s innecaben</string>
   <string name="thankYou">Tanemmirt!</string>
   <string name="ratingX">Abellez : %s</string>
   <plurals name="playedXTimes">

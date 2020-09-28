@@ -146,16 +146,16 @@ Løpar = 3
 Springar = 3
 Bonde = 1
 Kongen er uvurderleg! Misser du han har du tapt spelet.</string>
-  <string name="queenOverBishop">Slå ut brikken 
+  <string name="queenOverBishop">Slå ut brikken
 med det høgste verdet!
 Dronning &gt; løpar</string>
   <string name="takeThePieceWithTheHighestValue">Slå ut brikka
 med høgast verde!</string>
-  <string name="pieceValueComplete">Gratulerar! Du kjenner verdet til brikkene! 
-Dronning = 9 
-Tårn = 5 
-Løpar = 3 
-Springar = 3 
+  <string name="pieceValueComplete">Gratulerar! Du kjenner verdet til brikkene!
+Dronning = 9
+Tårn = 5
+Løpar = 3
+Springar = 3
 Bonde = 1</string>
   <string name="checkInTwo">Sjakk i to trekk</string>
   <string name="twoMovesToGiveCheck">Sjakk om to trekk</string>
@@ -165,7 +165,7 @@ Bonde = 1</string>
   <string name="whatNext">Kva kjem no?</string>
   <string name="youKnowHowToPlayChess">No veit du korleis ein spelar sjakk, gratulerer! Vil du verta ein sterkare spelar?</string>
   <string name="register">Registrer deg</string>
-  <string name="getAFreeLichessAccount">Få ein gratis brukarkonto hos Lichess</string>
+  <string name="getAFreeLichessAccount">Få ein gratis brukarkonto hos Chess-Online</string>
   <string name="practice">Øv</string>
   <string name="learnCommonChessPositions">Lær deg dei sjakkstillingane som ein ser oftast</string>
   <string name="puzzles">Sjakknøtter</string>

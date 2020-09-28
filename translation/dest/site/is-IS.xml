@@ -560,7 +560,7 @@
   <string name="clock">Tími</string>
   <string name="unauthorizedError">Aðgangur óheimill</string>
   <string name="noInternetConnection">Engin tenging. Þú getur enn spilað ótengdur.</string>
-  <string name="connectedToLichess">Þú ert tengd(ur) við lichess.org</string>
+  <string name="connectedToLichess">Þú ert tengd(ur) við chess-online.com</string>
   <string name="signedOut">Þú ert útskráður</string>
   <string name="loginSuccessful">Þú ert innskráður</string>
   <string name="playOnTheBoardOffline">Yfir borðið</string>
@@ -622,7 +622,7 @@
   <string name="simulClockHint">Uppsetning á Fischer-klukku. Því fleiri andstæðinga sem þú teflir við, því meiri tíma gætirðu þurft.</string>
   <string name="simulAddExtraTime">Þú getur bætt við tíma til að hjálpa þér að ráða við hópskákina.</string>
   <string name="simulHostExtraTime">Aukatími á klukku þess sem hýsir.</string>
-  <string name="lichessTournaments">Lichess mót</string>
+  <string name="lichessTournaments">Chess-Online mót</string>
   <string name="tournamentFAQ">Leikvangsmót - Algengar spurningar</string>
   <string name="tournamentOfficial">Opinbert</string>
   <string name="timeBeforeTournamentStarts">Tími áður en mót hefst</string>
@@ -758,7 +758,7 @@
   <string name="resignLostGames">Gefa tapaðar skákir (ekki láta tímann renna út).</string>
   <string name="agreementNice">Ég samþykki að ég muni alltaf koma vel fram við aðra leikmenn.</string>
   <string name="agreementAccount">Ég samþykki að ég muni ekki stofna marga reikninga.</string>
-  <string name="agreementPolicy">Ég samþykki að ég muni fylgja öllum reglum Lichess.</string>
+  <string name="agreementPolicy">Ég samþykki að ég muni fylgja öllum reglum Chess-Online.</string>
   <string name="searchOrStartNewDiscussion">Leita eða hefja nýtt samtal</string>
   <string name="edit">Breyta</string>
   <string name="rapid">Atskák</string>

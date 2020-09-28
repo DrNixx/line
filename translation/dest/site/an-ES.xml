@@ -275,7 +275,7 @@
     <item quantity="one">Dar %s segundo</item>
     <item quantity="other">Dar %s segundos</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Esta cuenta ha violau los Termins de Servicio de Lichess</string>
+  <string name="thisAccountViolatedTos">Esta cuenta ha violau los Termins de Servicio de Chess-Online</string>
   <string name="thisPlayerArtificiallyIncreasesTheirRating">Este chugador incrementa u disminuye artificialment la suya puntuación</string>
   <string name="openingExplorerAndTablebase">Explorador d\'obriduras y base de datos de finals</string>
   <string name="takeback">Desfer chugada</string>
@@ -448,8 +448,8 @@
   <string name="country">País</string>
   <string name="socialMediaLinks">Vinclos a retz socials</string>
   <string name="inlineNotation">Notación compacta</string>
-  <string name="watchLichessTV">Veyer Lichess TV</string>
-  <string name="previouslyOnLichessTV">Anteriorment en Lichess TV</string>
+  <string name="watchLichessTV">Veyer Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Anteriorment en Chess-Online TV</string>
   <string name="onlinePlayers">Chugadors connectaus</string>
   <string name="activeToday">Activos hue</string>
   <string name="activePlayers">Chugadors activos</string>
@@ -578,7 +578,7 @@
   <string name="clock">Reloch</string>
   <string name="unauthorizedError">Acceso no autorizau.</string>
   <string name="noInternetConnection">No tiens connexión a Internet. Puetz chugar sin connexión dende lo menú.</string>
-  <string name="connectedToLichess">Yes connectau a lichess.org</string>
+  <string name="connectedToLichess">Yes connectau a chess-online.com</string>
   <string name="signedOut">Has zarrau la sesión</string>
   <string name="loginSuccessful">Connectau</string>
   <string name="playOnTheBoardOffline">Chugar sin connexión</string>
@@ -635,7 +635,7 @@
   <string name="returnToSimulHomepage">Tornar a la pachina de simultanias</string>
   <string name="aboutSimul">En as simultanias, un chugador chuga de vez con bells quantos oponents.</string>
   <string name="aboutSimulImage">De 50 oponents, Fischer ganó 47 partidas, empató dos y perdió una.</string>
-  <string name="aboutSimulRealLife">Lo concepto de simultanias en Lichess se prene d\'a vida real, an l\'anfitrión va de taula en taula fendo las suyas chugadas.</string>
+  <string name="aboutSimulRealLife">Lo concepto de simultanias en Chess-Online se prene d\'a vida real, an l\'anfitrión va de taula en taula fendo las suyas chugadas.</string>
   <string name="aboutSimulRules">Quan la simultania encomienza, cada chugador prencipia una partida con l\'anfitrión, que chuga con blancas. La simultania remata quan s\'acaban totas las partidas.</string>
   <string name="aboutSimulSettings">Las simultanias son siempre partidas amistosas. Las opcions de petición de reminche, desfer chugada y anyadir tiempo son desactivadas.</string>
   <string name="create">Crear</string>
@@ -644,7 +644,7 @@
   <string name="simulClockHint">Configuración de reloch Fischer. Quantos mas oponents, mas tiempo se precisa.</string>
   <string name="simulAddExtraTime">Puetz anyadir tiempo adicional a lo tuyo reloch pa aduyar-te en a simultania.</string>
   <string name="simulHostExtraTime">Tiempo extra de l\'anfitrión</string>
-  <string name="lichessTournaments">Torneyos de Lichess</string>
+  <string name="lichessTournaments">Torneyos de Chess-Online</string>
   <string name="tournamentFAQ">Preguntas freqüents d\'os torneyos arena</string>
   <string name="tournamentOfficial">Oficial</string>
   <string name="timeBeforeTournamentStarts">Tiempo antes que prencipie lo torneyo</string>
@@ -679,7 +679,7 @@
   <string name="weHaveSentYouAnEmailTo">T\'hemos ninviau un correu a %s. Restableix la tuya clau fendo clic en o vinclo.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">En rechistrar-te, acceptas las %s.</string>
   <string name="networkLagBetweenYouAndLichess">Retardo de connexión entre tu y lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Tiempo pa procesar un movimiento en o servidor de Lichess</string>
+  <string name="timeToProcessAMoveOnLichessServer">Tiempo pa procesar un movimiento en o servidor de Chess-Online</string>
   <string name="downloadAnnotated">Descargar la partida anotada</string>
   <string name="downloadRaw">Descargar la partida sin anotar</string>
   <string name="downloadImported">Descargar la partida importada</string>
@@ -743,7 +743,7 @@
   <string name="usernameSuffixInvalid">Lo nombre d\'usuario ha de finalizar con una letra u un numero.</string>
   <string name="usernameCharsInvalid">Lo nombre d\'usuario ha de contener nomás letras, numeros, guións baixos y guións.</string>
   <string name="usernameUnacceptable">Este nombre d\'usuario no ye valido.</string>
-  <string name="directlySupportLichess">Emparar economicament a Lichess</string>
+  <string name="directlySupportLichess">Emparar economicament a Chess-Online</string>
   <string name="playChessInStyle">Chuga a los escaques con estilo</string>
   <string name="chessBasics">Fundamentos d\'escaques</string>
   <string name="coaches">Entrenadors</string>
@@ -830,14 +830,14 @@
   <string name="tryToWin">Intenta ganar (u, a lo menos, empatar) cada partida que chugues.</string>
   <string name="resignLostGames">Abandona en posicions perdidas (no deixes que lo tiempo s\'acotole sin mas).</string>
   <string name="temporaryInconvenience">Te pedimos disculpas per las molestias</string>
-  <string name="wishYouGreatGames">y esperamos que desfrutes de lichess.org.</string>
+  <string name="wishYouGreatGames">y esperamos que desfrutes de chess-online.com.</string>
   <string name="thankYouForReading">Gracias per prener-te lo tiempo pa leyer esto!</string>
   <string name="lifetimeScore">Puntuación historica</string>
   <string name="currentMatchScore">Puntuación actual</string>
   <string name="agreementAssistance">Me comprometo a no recibir aduya externa entre las mías partidas (d\'un ordinador, un libro, una base de datos u unatra persona).</string>
   <string name="agreementNice">Me comprometo a respectar siempre a atros chugadors.</string>
   <string name="agreementAccount">Me comprometo a no crear multiples cuentas.</string>
-  <string name="agreementPolicy">Me comprometo a seguir las normas de Lichess.</string>
+  <string name="agreementPolicy">Me comprometo a seguir las normas de Chess-Online.</string>
   <string name="searchOrStartNewDiscussion">Buscar u empecipiar una nueva conversación</string>
   <string name="edit">Editar</string>
   <string name="rapid">Rapidas</string>

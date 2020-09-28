@@ -106,7 +106,7 @@
 वे कोनों में रखे जाते हैं।</string>
   <string name="thenPlaceTheKnights">आब घोड़ो को जगह पे रखे
 इन्हे हाथी के बगल में रखे!</string>
-  <string name="placeTheBishops">ऊँटो को जगह पर रखे 
+  <string name="placeTheBishops">ऊँटो को जगह पर रखे
 वे घोड़ो के पास रखे जायेंगे</string>
   <string name="placeTheQueen">रानी को रखे!
 वह अपने रंग वाले खाने पे रखी जाती है</string>
@@ -118,9 +118,9 @@
   <string name="castling">केस्लिंग</string>
   <string name="theSpecialKingMove">विशेष राजा कदम</string>
   <string name="castlingIntro">सुरक्षा के लिए अपने राजा लाओ, और हमले के लिए अपनी हड्डी तैनात!</string>
-  <string name="castleKingSide">राजा को दो कदम बढ़ाये 
+  <string name="castleKingSide">राजा को दो कदम बढ़ाये
 कैसल किंग साइड!</string>
-  <string name="castleQueenSide">राजा को दो कदम बढाए 
+  <string name="castleQueenSide">राजा को दो कदम बढाए
 कैसल क्वीन साइड</string>
   <string name="theKnightIsInTheWay">घोड़े को रास्ते से हटा कर किंग साइड कैसल करे</string>
   <string name="castleKingSideMovePiecesFirst">किंग साइड कैसल करे
@@ -175,7 +175,7 @@
   <string name="whatNext">आगे क्या?</string>
   <string name="youKnowHowToPlayChess">आप शतरंज खेलना सीख चुके है, बधाई हो! क्या आप एक मजबूत खिलाड़ी बनना चाहते हैं?</string>
   <string name="register">पंजीकृत करें</string>
-  <string name="getAFreeLichessAccount">एक मुफ्त Lichess खाता प्राप्त करें</string>
+  <string name="getAFreeLichessAccount">एक मुफ्त Chess-Online खाता प्राप्त करें</string>
   <string name="practice">अभ्यास</string>
   <string name="learnCommonChessPositions">सामान्य शतरंज की स्थिति जानें</string>
   <string name="puzzles">पहेलियाँ</string>

@@ -13,7 +13,7 @@
   <string name="doPasswordReset">Poista toinen tunnistautumisvaihe nollaamalla salasanasi</string>
   <string name="accountSupport">Tarvitsen tukea käyttäjätiliini</string>
   <string name="wantTitle">Haluan minun arvonimeni näkyvän Lichessissä</string>
-  <string name="visitTitleConfirmation">Arvonimesi näyttämisestä Lichess-profiilissasi sekä arvonimiareenoihin osallistumisesta saat lisätietoa arvonimen vahvistussivulta</string>
+  <string name="visitTitleConfirmation">Arvonimesi näyttämisestä Chess-Online-profiilissasi sekä arvonimiareenoihin osallistumisesta saat lisätietoa arvonimen vahvistussivulta</string>
   <string name="wantCloseAccount">Haluan sulkea tilini</string>
   <string name="closeYourAccount">Voit sulkea tilisi tältä sivulta</string>
   <string name="doNotAskByEmail">Älä pyydä meitä sähköpostitse sulkemaan tiliäsi, sitä me emme tee.</string>
@@ -39,7 +39,7 @@
   <string name="doNotMessageModerators">Älä lähetä yksityisviestejä moderaattoreille.</string>
   <string name="onlyReports">Vain lomakkeen kautta tapahtuvalla ilmoituksella on vaikutusta.</string>
   <string name="wantReportBug">Haluan ilmoittaa viasta</string>
-  <string name="reportBugInForum">Foorumin Lichess Feedback -osiossa</string>
+  <string name="reportBugInForum">Foorumin Chess-Online Feedback -osiossa</string>
   <string name="reportWebsiteIssue">Lichessin verkkosivusto-ongelmaksi GitHubissa</string>
   <string name="reportMobileIssue">Lichessin mobiilisovellusongelmaksi GitHubissa</string>
   <string name="reportBugInDiscord">Lichessin Discord-palvelimella</string>
@@ -76,5 +76,5 @@
   <string name="creditAppreciated">Tunnustus on tervetullutta, mutta emme vaadi sitä.</string>
   <string name="noneOfTheAbove">Ei mitään näistä</string>
   <string name="sendEmailAt">Lähetä sähköpostia osoitteeseen %s.</string>
-  <string name="explainYourRequest">Selitä pyyntösi selvästi ja kattavasti. Kerro Lichess-käyttäjänimesi ja kaikki muut tiedot, joista voi olla apua sinun auttamisessa.</string>
+  <string name="explainYourRequest">Selitä pyyntösi selvästi ja kattavasti. Kerro Chess-Online-käyttäjänimesi ja kaikki muut tiedot, joista voi olla apua sinun auttamisessa.</string>
 </resources>

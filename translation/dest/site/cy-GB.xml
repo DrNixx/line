@@ -329,7 +329,7 @@
   <string name="biography">Cofiant</string>
   <string name="country">Gwlad</string>
   <string name="watchLichessTV">Gwylio ar lichess TV</string>
-  <string name="previouslyOnLichessTV">Ar Lichess TV yn barod</string>
+  <string name="previouslyOnLichessTV">Ar Chess-Online TV yn barod</string>
   <string name="onlinePlayers">Chwarewyr ar-lein</string>
   <string name="activeToday">Gweithredol heddiw</string>
   <string name="activePlayers">Chwaraewyr gweithredol</string>
@@ -435,7 +435,7 @@
   <string name="clock">Cloc</string>
   <string name="unauthorizedError">Dim mynediad.</string>
   <string name="noInternetConnection">Dim cysylltiad i\'r rhyngrwyd. Gellwch chwarae all-lein o\'r ddewislen.</string>
-  <string name="connectedToLichess">Rydych â chysylltiad â lichess.org rwan</string>
+  <string name="connectedToLichess">Rydych â chysylltiad â chess-online.com rwan</string>
   <string name="signedOut">Allgofnodioch</string>
   <string name="loginSuccessful">Mewngofnodioch</string>
   <string name="playOnTheBoardOffline">Dros y bwrdd</string>
@@ -579,8 +579,8 @@
   <string name="usernamePrefixInvalid">Rhaid i enw defnyddiwr dechrau gyda llythyren.</string>
   <string name="usernameSuffixInvalid">Rhaid i\'r enw defnyddiwr orffen efo rhif neu lythyren.</string>
   <string name="usernameUnacceptable">Nid yw enw defnyddiwr hwn yn dderbyniol.</string>
-  <string name="directlySupportLichess">Cefnogwch Lichess yn uniongyrchol</string>
-  <string name="playChessInStyle">Edrychwch yn swanc efo Lichess</string>
+  <string name="directlySupportLichess">Cefnogwch Chess-Online yn uniongyrchol</string>
+  <string name="playChessInStyle">Edrychwch yn swanc efo Chess-Online</string>
   <string name="chessBasics">Hanfodion gwyddbwyll</string>
   <string name="coaches">Hyfforddwyr</string>
   <string name="invalidPgn">PGN anilys</string>

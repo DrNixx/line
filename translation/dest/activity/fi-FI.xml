@@ -3,8 +3,8 @@
   <string name="activity">Toiminta</string>
   <string name="hostedALiveStream">Piti livestreamin</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">On tukenut lichess.orgia %1$s:n kuukauden ajan %2$s:ina</item>
-    <item quantity="other">On tukenut lichess.orgia %1$s:n kuukauden ajan %2$s:ina</item>
+    <item quantity="one">On tukenut chess-online.comia %1$s:n kuukauden ajan %2$s:ina</item>
+    <item quantity="other">On tukenut chess-online.comia %1$s:n kuukauden ajan %2$s:ina</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">Harjoitteli %1$s %2$s -tilannetta</item>
@@ -62,7 +62,7 @@
     <item quantity="one">Sijoittui %1$s. sijalle (parhaaseen %2$s%%) pelattuaan %3$s pelin turnauksessa %4$s</item>
     <item quantity="other">Sijoittui %1$s. sijalle (parhaaseen %2$s%%) pelattuaan %3$s peliä turnauksessa %4$s</item>
   </plurals>
-  <string name="signedUp">Liittyi lichess.orgiin</string>
+  <string name="signedUp">Liittyi chess-online.comiin</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">Liittyi %s joukkueeseen</item>
     <item quantity="other">Liittyi %s joukkueeseen</item>

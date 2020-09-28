@@ -92,7 +92,7 @@
     <item quantity="many">מדורג במקום #%1$s (מעל %%%2$s) עם %3$s משחקים ב%4$s</item>
     <item quantity="other">מדורג במקום #%1$s (מעל %%%2$s) עם %3$s משחקים ב%4$s</item>
   </plurals>
-  <string name="signedUp">נרשם לlichess.org</string>
+  <string name="signedUp">נרשם לchess-online.com</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">הצטרף לקבוצה אחת</item>
     <item quantity="two">הצטרף לשתי קבוצות</item>

@@ -67,7 +67,7 @@ Un nezaudējiet savas.</string>
   <string name="protectionComplete">Apsveicam! Figūra, kas nav pazaudēta, ir iegūta figūra!</string>
   <string name="escape">Jums uzbrūk!
 Izvairieties no draudiem!</string>
-  <string name="noEscape">Izbēgt nevar, 
+  <string name="noEscape">Izbēgt nevar,
 bet varat aizsargāties!</string>
   <string name="dontLetThemTakeAnyUndefendedPiece">Neļaujiet viņiem nosist nevienu neaizsargātu figūru!</string>
   <string name="combat">Kauja</string>
@@ -170,7 +170,7 @@ Bandinieks = 1</string>
   <string name="whatNext">Ko tālāk?</string>
   <string name="youKnowHowToPlayChess">Tu proti spēlēt šahu, apsveicam! Vēlies kļūt par spēcīgu spēlētāju?</string>
   <string name="register">Reģistrējies</string>
-  <string name="getAFreeLichessAccount">Saņem bezmaksas Lichess kontu</string>
+  <string name="getAFreeLichessAccount">Saņem bezmaksas Chess-Online kontu</string>
   <string name="practice">Treniņš</string>
   <string name="learnCommonChessPositions">Mācīties vispārīgas šaha pozīcijas</string>
   <string name="puzzles">Puzles</string>

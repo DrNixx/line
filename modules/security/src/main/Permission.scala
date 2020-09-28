@@ -68,7 +68,7 @@ object Permission {
       extends Permission(
         "LICHESS_TEAM",
         List(Prismic),
-        "Lichess team"
+        "Chess-Online team"
       )
 
   case object Hunter

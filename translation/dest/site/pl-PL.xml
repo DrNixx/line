@@ -309,7 +309,7 @@
     <item quantity="many">Dodaj %s sekund</item>
     <item quantity="other">Dodaj %s sekund</item>
   </plurals>
-  <string name="thisAccountViolatedTos">To konto naruszyło warunki korzystania z Lichess</string>
+  <string name="thisAccountViolatedTos">To konto naruszyło warunki korzystania z Chess-Online</string>
   <string name="thisPlayerArtificiallyIncreasesTheirRating">Ten gracz sztucznie zwiększa/obniża swój ranking</string>
   <string name="openingExplorerAndTablebase">Biblioteka otwarć i końcówek</string>
   <string name="takeback">Cofnij ruch</string>
@@ -504,8 +504,8 @@
   <string name="country">Kraj</string>
   <string name="socialMediaLinks">Linki do mediów społecznościowych</string>
   <string name="inlineNotation">Notacja ciągła</string>
-  <string name="watchLichessTV">Oglądaj Lichess TV</string>
-  <string name="previouslyOnLichessTV">Poprzednio w Lichess TV</string>
+  <string name="watchLichessTV">Oglądaj Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Poprzednio w Chess-Online TV</string>
   <string name="onlinePlayers">Gracze online</string>
   <string name="activeToday">Aktywni dzisiaj</string>
   <string name="activePlayers">Aktywni gracze</string>
@@ -642,7 +642,7 @@
   <string name="clock">Zegar</string>
   <string name="unauthorizedError">Brak dostępu.</string>
   <string name="noInternetConnection">Brak połączenia z internetem. Nadal możesz wybrać z menu opcję gry offline.</string>
-  <string name="connectedToLichess">Połączono z lichess.org</string>
+  <string name="connectedToLichess">Połączono z chess-online.com</string>
   <string name="signedOut">Wylogowano</string>
   <string name="loginSuccessful">Jesteś zalogowany</string>
   <string name="playOnTheBoardOffline">Z człowiekiem</string>
@@ -710,7 +710,7 @@
   <string name="simulClockHint">Ustawienia zegara Fischera. W przypadku większej liczby graczy możesz potrzebować więcej czasu.</string>
   <string name="simulAddExtraTime">Aby ułatwić sobie rozegranie symultany możesz ustawić dodatkowy czas dla siebie.</string>
   <string name="simulHostExtraTime">Dodatkowy czas dla symultanisty</string>
-  <string name="lichessTournaments">Turnieje Lichess</string>
+  <string name="lichessTournaments">Turnieje Chess-Online</string>
   <string name="tournamentFAQ">Turnieje typu Arena FAQ</string>
   <string name="tournamentOfficial">Oficjalny</string>
   <string name="timeBeforeTournamentStarts">Czas do rozpoczęcia turnieju</string>
@@ -906,14 +906,14 @@
   <string name="tryToWin">Staraj się wygrywać (lub przynajmniej remisować) każdą rozgrywaną partię.</string>
   <string name="resignLostGames">Poddawaj przegrane partie (nie czekaj na upłynięcie czasu gry).</string>
   <string name="temporaryInconvenience">Przepraszamy za chwilowe niedogodności,</string>
-  <string name="wishYouGreatGames">i życzymy Ci samych udanych partii na lichess.org.</string>
+  <string name="wishYouGreatGames">i życzymy Ci samych udanych partii na chess-online.com.</string>
   <string name="thankYouForReading">Dziękujemy za przeczytanie!</string>
   <string name="lifetimeScore">Wynik wszystkich partii</string>
   <string name="currentMatchScore">Wynik bieżącego meczu</string>
   <string name="agreementAssistance">Zgadzam się nie korzystać z pomocy podczas gry (programów szachowych, książek, baz danych, czy innych osób).</string>
   <string name="agreementNice">Zgadzam się odnosić zawsze z szacunkiem do innych graczy.</string>
   <string name="agreementAccount">Zgadzam się nie tworzyć wielu kont.</string>
-  <string name="agreementPolicy">Zgadzam się przestrzegać wszystkich zasad Lichess.</string>
+  <string name="agreementPolicy">Zgadzam się przestrzegać wszystkich zasad Chess-Online.</string>
   <string name="searchOrStartNewDiscussion">Szukaj lub rozpocznij nową dyskusję</string>
   <string name="edit">Edytuj</string>
   <string name="rapid">Rapid</string>

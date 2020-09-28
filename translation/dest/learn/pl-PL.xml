@@ -43,9 +43,9 @@ Skacz i zbieraj gwiazdki!</string>
   <string name="thePawn">Pion</string>
   <string name="itMovesForwardOnly">Porusza się tylko do przodu</string>
   <string name="pawnIntro">Piony są słabe, ale mają w sobie duży potencjał.</string>
-  <string name="pawnsMoveOneSquareOnly">Piony poruszają się tylko o jedno pole. 
+  <string name="pawnsMoveOneSquareOnly">Piony poruszają się tylko o jedno pole.
 Ale jeśli dojdą do ostatniej linii mogą zamienić się w silniejszą figurę!</string>
-  <string name="mostOfTheTimePromotingToAQueenIsBest">W większości przypadków najlepiej promować piona na hetmana. 
+  <string name="mostOfTheTimePromotingToAQueenIsBest">W większości przypadków najlepiej promować piona na hetmana.
 Jednak czasem bardziej przydatny może być skoczek!</string>
   <string name="pawnsMoveForward">Piony poruszają się do przodu, ale biją po przekątnej!</string>
   <string name="captureThenPromote">Zbijaj, a później promuj!</string>
@@ -161,7 +161,7 @@ Pionek – 1</string>
   <string name="whatNext">Co dalej?</string>
   <string name="youKnowHowToPlayChess">Gratulacje! Wiesz już jak grać w szachy. Czy chcesz stać się silniejszym graczem?</string>
   <string name="register">Rejestracja</string>
-  <string name="getAFreeLichessAccount">Załóż darmowe konto Lichess</string>
+  <string name="getAFreeLichessAccount">Załóż darmowe konto Chess-Online</string>
   <string name="practice">Ćwiczenia</string>
   <string name="learnCommonChessPositions">Poznaj częste pozycje szachowe</string>
   <string name="puzzles">Zadania szachowe</string>

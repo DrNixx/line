@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <string name="library">Library</string>
+  <string name="chessBooks">Chess books</string>
+  <string name="helpMenu">Info &amp; help</string>
+  <string name="information">Information</string>
+  <string name="feedback">Feedback</string>
+  <string name="membership">Club Chess-Online</string>
+  <string name="corrsTournaments">Correcpondence</string>
+
   <string name="playWithAFriend">Play with a friend</string>
   <string name="playWithTheMachine">Play with the computer</string>
   <string name="toInviteSomeoneToPlayGiveThisUrl">To invite someone to play, give this URL</string>
@@ -18,7 +26,7 @@
   <string name="white">White</string>
   <string name="black">Black</string>
   <string name="randomColor">Random side</string>
-  <string name="createAGame">Create a game</string>
+  <string name="createAGame">Single game</string>
   <string name="whiteIsVictorious">White is victorious</string>
   <string name="blackIsVictorious">Black is victorious</string>
   <string name="youPlayTheWhitePieces">You play the white pieces</string>
@@ -275,7 +283,7 @@
     <item quantity="one">Give %s second</item>
     <item quantity="other">Give %s seconds</item>
   </plurals>
-  <string name="thisAccountViolatedTos">This account violated the Lichess Terms of Service</string>
+  <string name="thisAccountViolatedTos">This account violated the Chess-Online Terms of Service</string>
   <string name="thisPlayerArtificiallyIncreasesTheirRating">This player artificially increases/decreases their rating</string>
   <string name="openingExplorerAndTablebase">Opening explorer &amp; tablebase</string>
   <string name="takeback">Takeback</string>
@@ -449,8 +457,8 @@ computer analysis, game chat and shareable URL.</string>
   <string name="country">Country</string>
   <string name="socialMediaLinks">Social media links</string>
   <string name="inlineNotation">Inline notation</string>
-  <string name="watchLichessTV">Watch Lichess TV</string>
-  <string name="previouslyOnLichessTV">Previously on Lichess TV</string>
+  <string name="watchLichessTV">Watch Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Previously on Chess-Online TV</string>
   <string name="onlinePlayers">Online players</string>
   <string name="activeToday">Active today</string>
   <string name="activePlayers">Active players</string>
@@ -579,7 +587,7 @@ computer analysis, game chat and shareable URL.</string>
   <string name="clock">Clock</string>
   <string name="unauthorizedError">Access is unauthorized.</string>
   <string name="noInternetConnection">No internet connection. You can still play offline from the menu.</string>
-  <string name="connectedToLichess">You are now connected to lichess.org</string>
+  <string name="connectedToLichess">You are now connected to chess-online.com</string>
   <string name="signedOut">You have been signed out</string>
   <string name="loginSuccessful">You are now signed in</string>
   <string name="playOnTheBoardOffline">Over the board</string>
@@ -645,7 +653,7 @@ computer analysis, game chat and shareable URL.</string>
   <string name="simulClockHint">Fischer Clock setup. The more players you take on, the more time you may need.</string>
   <string name="simulAddExtraTime">You may add extra time to your clock to help cope with the simul.</string>
   <string name="simulHostExtraTime">Host extra clock time</string>
-  <string name="lichessTournaments">Lichess tournaments</string>
+  <string name="lichessTournaments">Chess-Online tournaments</string>
   <string name="tournamentFAQ">Arena tournament FAQ</string>
   <string name="tournamentOfficial">Official</string>
   <string name="timeBeforeTournamentStarts">Time before tournament starts</string>
@@ -744,7 +752,7 @@ computer analysis, game chat and shareable URL.</string>
   <string name="usernameSuffixInvalid">The username must end with a letter or a number.</string>
   <string name="usernameCharsInvalid">The username must only contain letters, numbers, underscores, and hyphens.</string>
   <string name="usernameUnacceptable">This username is not acceptable.</string>
-  <string name="directlySupportLichess">Directly support Lichess</string>
+  <string name="directlySupportLichess">Directly support Chess-Online</string>
   <string name="playChessInStyle">Play chess in style</string>
   <string name="chessBasics">Chess basics</string>
   <string name="coaches">Coaches</string>
@@ -831,14 +839,14 @@ computer analysis, game chat and shareable URL.</string>
   <string name="tryToWin">Try to win (or at least draw) every game you play.</string>
   <string name="resignLostGames">Resign lost games (don\'t let the clock run down).</string>
   <string name="temporaryInconvenience">We apologize for the temporary inconvenience,</string>
-  <string name="wishYouGreatGames">and wish you great games on lichess.org.</string>
+  <string name="wishYouGreatGames">and wish you great games on chess-online.com.</string>
   <string name="thankYouForReading">Thank you for reading!</string>
   <string name="lifetimeScore">Lifetime score</string>
   <string name="currentMatchScore">Current match score</string>
   <string name="agreementAssistance">I agree that I will at no time receive assistance during my games (from a chess computer, book, database or another person).</string>
   <string name="agreementNice">I agree that I will always be nice to other players.</string>
   <string name="agreementAccount">I agree that I will not create multiple accounts.</string>
-  <string name="agreementPolicy">I agree that I will follow all Lichess policies.</string>
+  <string name="agreementPolicy">I agree that I will follow all Chess-Online policies.</string>
   <string name="searchOrStartNewDiscussion">Search or start new discussion</string>
   <string name="edit">Edit</string>
   <string name="rapid">Rapid</string>

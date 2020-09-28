@@ -59,7 +59,7 @@
   <string name="chapterPgn">Bab PGN</string>
   <string name="downloadGame">Unduh permainan</string>
   <string name="studyUrl">URL studi</string>
-  <string name="broadcastUrl" comment="broadcastUrl&#10;&#10;This is to do with the Broadcasts feature. These are tournaments in the chess world, hosted elsewhere, for example the FIDE Championship. This specific text lets you share the URL. https://lichess.org/broadcast">URL Broadcast</string>
+  <string name="broadcastUrl" comment="broadcastUrl&#10;&#10;This is to do with the Broadcasts feature. These are tournaments in the chess world, hosted elsewhere, for example the FIDE Championship. This specific text lets you share the URL. https://live.chess-online.com/broadcast">URL Broadcast</string>
   <string name="currentChapterUrl">URL Bab saat ini</string>
   <string name="currentGameUrl">URL permainan</string>
   <string name="youCanPasteThisInTheForumToEmbed" comment="youCanPasteThisInTheForumToEmbed&#10;&#10;The thing you are pasting is a link to a study. This will make it appear in the correct section as well.">Anda dapat menempelkan ini di forum untuk disematkan</string>

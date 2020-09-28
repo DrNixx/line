@@ -292,7 +292,7 @@
     <item quantity="few">Dodaj protivniku %s sekunde</item>
     <item quantity="other">Dodaj protivniku %s sekundi</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Korisnički račun je prekršio Lichess Uvjete Pružanja Usluge</string>
+  <string name="thisAccountViolatedTos">Korisnički račun je prekršio Chess-Online Uvjete Pružanja Usluge</string>
   <string name="thisPlayerArtificiallyIncreasesTheirRating">Ovaj igrač umjetno podiže/spušta svoj rejting</string>
   <string name="openingExplorerAndTablebase">Pretraživač otvaranja &amp; baza pozicija u završnici</string>
   <string name="takeback">Vrati potez</string>
@@ -365,7 +365,7 @@
   <string name="continueFromHere">Nastavi odavde</string>
   <string name="toStudy">Prouči</string>
   <string name="importGame">Uvezi partiju</string>
-  <string name="importGameExplanation">Kada zalijepiš PGN neke partije, dobivaš reprizu partije (koju možeš pretraživati), 
+  <string name="importGameExplanation">Kada zalijepiš PGN neke partije, dobivaš reprizu partije (koju možeš pretraživati),
 računalnu analizu, chat partije i URL za dijeljenje.</string>
   <plurals name="nbImportedGames">
     <item quantity="one">%s uvezena partija</item>
@@ -477,8 +477,8 @@ računalnu analizu, chat partije i URL za dijeljenje.</string>
   <string name="country">Zemlja</string>
   <string name="socialMediaLinks">Linkovi društvenih mreža</string>
   <string name="inlineNotation">Kompaktnija notacija</string>
-  <string name="watchLichessTV">Gledaj Lichess TV</string>
-  <string name="previouslyOnLichessTV">Prethodno na Lichess TV-u</string>
+  <string name="watchLichessTV">Gledaj Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Prethodno na Chess-Online TV-u</string>
   <string name="onlinePlayers">Online igrači</string>
   <string name="activeToday">Danas aktivni</string>
   <string name="activePlayers">Aktivni igrači</string>
@@ -611,7 +611,7 @@ računalnu analizu, chat partije i URL za dijeljenje.</string>
   <string name="clock">Sat</string>
   <string name="unauthorizedError">Pristup neodobren.</string>
   <string name="noInternetConnection">Nedostupna internetska veza. Možeš i dalje igrati bez internetske veze preko izbornika.</string>
-  <string name="connectedToLichess">Spojen/a si na lichess.org</string>
+  <string name="connectedToLichess">Spojen/a si na chess-online.com</string>
   <string name="signedOut">Odjavljen/a si</string>
   <string name="loginSuccessful">Prijavljen/a si</string>
   <string name="playOnTheBoardOffline">Igraj bez mreže, preko uređaja</string>
@@ -678,7 +678,7 @@ računalnu analizu, chat partije i URL za dijeljenje.</string>
   <string name="simulClockHint">Fischer podešavanje sata. Što više igrača primiš, više vremena bit će ti potrebno.</string>
   <string name="simulAddExtraTime">Možeš dodati dodatno vrijeme na svoj sat da ti pomogne savladati simultanku.</string>
   <string name="simulHostExtraTime">Dodatno vrijeme domaćina</string>
-  <string name="lichessTournaments">Lichess turniri</string>
+  <string name="lichessTournaments">Chess-Online turniri</string>
   <string name="tournamentFAQ">Najčešće postavljana pitanja o Arena turnirima</string>
   <string name="tournamentOfficial">Službeno</string>
   <string name="timeBeforeTournamentStarts">Vrijeme prije nego turnir započne</string>
@@ -779,7 +779,7 @@ računalnu analizu, chat partije i URL za dijeljenje.</string>
   <string name="usernameSuffixInvalid">Korisničko ime mora završiti sa slovom ili brojem.</string>
   <string name="usernameCharsInvalid">Korisničko ime može sadržavati samo slova, brojeve, podvlake i crtice.</string>
   <string name="usernameUnacceptable">Ovo korisničko ime nije prihvatljivo.</string>
-  <string name="directlySupportLichess">Direktno podrži Lichess</string>
+  <string name="directlySupportLichess">Direktno podrži Chess-Online</string>
   <string name="playChessInStyle">Igraj šah u stilu</string>
   <string name="chessBasics">Šahovske osnove</string>
   <string name="coaches">Treneri</string>
@@ -869,7 +869,7 @@ računalnu analizu, chat partije i URL za dijeljenje.</string>
   <string name="tryToWin">Pokušajte pobijediti (ili barem igrati neriješeno) svaku igru ​​koju igrate.</string>
   <string name="resignLostGames">Predajte izgubljene igre (ne dopustite da vam vrijeme istekne).</string>
   <string name="temporaryInconvenience">Ispričavamo se zbog privremene neugodnosti,</string>
-  <string name="wishYouGreatGames">i želimo vam sjajne igre na lichess.org.</string>
+  <string name="wishYouGreatGames">i želimo vam sjajne igre na chess-online.com.</string>
   <string name="thankYouForReading">Hvala na čitanju!</string>
   <string name="lifetimeScore">Ukupni rezultat</string>
   <string name="currentMatchScore">Trenutni rezultat meča</string>

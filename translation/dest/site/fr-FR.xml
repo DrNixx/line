@@ -275,7 +275,7 @@
     <item quantity="one">Rajouter %s seconde</item>
     <item quantity="other">Rajouter %s secondes</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Ce compte a enfreint les conditions d\'utilisation de Lichess</string>
+  <string name="thisAccountViolatedTos">Ce compte a enfreint les conditions d\'utilisation de Chess-Online</string>
   <string name="thisPlayerArtificiallyIncreasesTheirRating">Ce joueur augmente ou réduit artificiellement son classement</string>
   <string name="openingExplorerAndTablebase">Arbre d\'ouvertures &amp; tables de finales</string>
   <string name="takeback">Annuler le coup</string>
@@ -448,8 +448,8 @@
   <string name="country">Pays</string>
   <string name="socialMediaLinks">Liens des réseaux sociaux</string>
   <string name="inlineNotation">Notation en ligne</string>
-  <string name="watchLichessTV">Regarder Lichess TV</string>
-  <string name="previouslyOnLichessTV">Précédemment sur Lichess TV</string>
+  <string name="watchLichessTV">Regarder Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Précédemment sur Chess-Online TV</string>
   <string name="onlinePlayers">Joueurs en ligne</string>
   <string name="activeToday">Actifs aujourd\'hui</string>
   <string name="activePlayers">Joueurs actifs</string>
@@ -469,7 +469,7 @@
   <string name="butYouCanKeepTrying">Mais vous pouvez réessayer.</string>
   <string name="success">Réussi</string>
   <string name="wasThisPuzzleAnyGood">Ce problème était-il intéressant  ?</string>
-  <string name="pleaseVotePuzzle">Aidez Lichess à s\'améliorer en votant grâce aux flèches :</string>
+  <string name="pleaseVotePuzzle">Aidez Chess-Online à s\'améliorer en votant grâce aux flèches :</string>
   <string name="thankYou">Merci !</string>
   <string name="ratingX">Classement : %s</string>
   <string name="hidden">masqué</string>
@@ -578,7 +578,7 @@
   <string name="clock">Pendule</string>
   <string name="unauthorizedError">Accès non autorisé.</string>
   <string name="noInternetConnection">Pas de connexion à Internet. Vous pouvez cependant jouer hors ligne à partir du menu.</string>
-  <string name="connectedToLichess">Vous êtes maintenant connecté à lichess.org</string>
+  <string name="connectedToLichess">Vous êtes maintenant connecté à chess-online.com</string>
   <string name="signedOut">Vous avez été déconnecté</string>
   <string name="loginSuccessful">Vous êtes connecté</string>
   <string name="playOnTheBoardOffline">Jouer hors ligne, avec un ami</string>
@@ -644,7 +644,7 @@
   <string name="simulClockHint">Configuration de la cadence Fischer. Plus il y a d\'adversaires, plus vous pourriez avoir besoin de temps.</string>
   <string name="simulAddExtraTime">Vous pouvez ajouter du temps supplémentaire à votre pendule pour gérer la simultanée.</string>
   <string name="simulHostExtraTime">Temps supplémentaire de l\'hôte</string>
-  <string name="lichessTournaments">Tournois Lichess</string>
+  <string name="lichessTournaments">Tournois Chess-Online</string>
   <string name="tournamentFAQ">FAQ des tournois</string>
   <string name="tournamentOfficial">Officiel</string>
   <string name="timeBeforeTournamentStarts">Temps restant avant le début du tournoi</string>
@@ -707,7 +707,7 @@
   <string name="builtForTheLoveOfChessNotMoney">Construit pour l\'amour du jeu d\'échecs, pas pour l\'argent</string>
   <string name="everybodyGetsAllFeaturesForFree">Toutes les fonctionnalités sont gratuites pour tout le monde</string>
   <string name="zeroAdvertisement">Aucune publicité</string>
-  <string name="fullFeatured">Tout Lichess, et encore plus</string>
+  <string name="fullFeatured">Tout Chess-Online, et encore plus</string>
   <string name="phoneAndTablet">Smartphones et tablettes</string>
   <string name="bulletBlitzClassical">Partie éclair, Rapide, Semi-Rapide</string>
   <string name="correspondenceChess">Échecs par correspondance</string>
@@ -743,7 +743,7 @@
   <string name="usernameSuffixInvalid">Le nom d’utilisateur doit se terminer par une lettre ou un chiffre.</string>
   <string name="usernameCharsInvalid">Le nom d\'utilisateur doit contenir uniquement des lettres, des chiffres, des tirets.</string>
   <string name="usernameUnacceptable">Nom d\'utilisateur refusé.</string>
-  <string name="directlySupportLichess">Financer Lichess</string>
+  <string name="directlySupportLichess">Financer Chess-Online</string>
   <string name="playChessInStyle">Jouez aux échecs avec classe</string>
   <string name="chessBasics">Bases des échecs</string>
   <string name="coaches">Entraîneurs</string>
@@ -830,14 +830,14 @@
   <string name="tryToWin">Essayez de gagner (ou du moins d\'annuler) chaque partie que vous jouez.</string>
   <string name="resignLostGames">Abandonnez les parties perdues sans laisser votre temps s\'écouler.</string>
   <string name="temporaryInconvenience">Nous nous excusons pour le désagrément occasionné,</string>
-  <string name="wishYouGreatGames">et vous souhaitons d\'excellentes parties sur lichess.org.</string>
+  <string name="wishYouGreatGames">et vous souhaitons d\'excellentes parties sur chess-online.com.</string>
   <string name="thankYouForReading">Merci d\'avoir pris le temps de lire !</string>
   <string name="lifetimeScore">Meilleur résultat</string>
   <string name="currentMatchScore">Résultat actuel (match)</string>
   <string name="agreementAssistance">Je m\'engage à ne jamais recevoir d\'aide pendant mes parties (ni d\'un programme d\'échecs, ni d\'un livre, ni d\'une base de données, ni d\'autrui).</string>
   <string name="agreementNice">Je m\'engage à toujours être agréable envers les autres.</string>
   <string name="agreementAccount">Je m\'engage à ne pas créer de comptes multiples.</string>
-  <string name="agreementPolicy">Je m\'engage à respecter toutes les règles de Lichess.</string>
+  <string name="agreementPolicy">Je m\'engage à respecter toutes les règles de Chess-Online.</string>
   <string name="searchOrStartNewDiscussion">Rechercher ou démarrer une nouvelle conversation</string>
   <string name="edit">Éditer</string>
   <string name="rapid">Rapide</string>

@@ -511,4 +511,25 @@ final class GameRepo(val coll: Coll)(implicit ec: scala.concurrent.ExecutionCont
     game.perfType ?? { pt =>
       coll.updateField($id(game.id), F.perfType, pt.id).void
     }
+
+  def findRandomFinished(distribution: Int): Fu[Option[Game]] =
+    coll.find(
+      Query.finished
+        ++ Query.variantStandard
+        ++ Query.turnsGt(20)
+        ++ Query.rated
+    ).sort(Query.sortCreated)
+      .skip(scala.util.Random nextInt distribution)
+      .one[Game]
+
+  def randomFinished(distribution: Int): Fu[Option[Game]] =
+    coll.find(
+      Query.finished
+        ++ Query.rated
+        ++ Query.variantStandard
+        ++ Query.bothRatingsGreaterThan(1600)
+    ).sort(Query.sortCreated)
+      .skip(scala.util.Random nextInt distribution)
+      .cursor[Game](ReadPreference.secondary)
+      .uno
 }

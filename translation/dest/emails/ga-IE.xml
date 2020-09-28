@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="emailConfirm_subject">Deimhnigh do chuntas Lichess.org, %s</string>
-  <string name="emailConfirm_click">Cliceáil an nasc chun do chuntas Lichess a chumasú:</string>
+  <string name="emailConfirm_subject">Deimhnigh do chuntas chess-online.com, %s</string>
+  <string name="emailConfirm_click">Cliceáil an nasc chun do chuntas Chess-Online a chumasú:</string>
   <string name="emailConfirm_ignore">Munar chláraigh tú le lichess, is féidir neamhaird a thabhairt ar an teachtaireacht seo.</string>
   <string name="passwordReset_subject">Athshocraigh do phasfhocal lichess, %s</string>
   <string name="passwordReset_intro">Fuair muid iarratas chun do phasfhocal a athshocrú.</string>

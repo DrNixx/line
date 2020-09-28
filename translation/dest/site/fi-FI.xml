@@ -448,8 +448,8 @@
   <string name="country">Maa</string>
   <string name="socialMediaLinks">Sosiaalisen median linkit</string>
   <string name="inlineNotation">Rivinsisäinen kommentointi</string>
-  <string name="watchLichessTV">Katso Lichess TV:tä</string>
-  <string name="previouslyOnLichessTV">Viimeksi Lichess TV:ssä</string>
+  <string name="watchLichessTV">Katso Chess-Online TV:tä</string>
+  <string name="previouslyOnLichessTV">Viimeksi Chess-Online TV:ssä</string>
   <string name="onlinePlayers">Paikalla olevat pelaajat</string>
   <string name="activeToday">Aktiivisena tänään</string>
   <string name="activePlayers">Aktiiviset pelaajat</string>
@@ -578,7 +578,7 @@
   <string name="clock">Kello</string>
   <string name="unauthorizedError">Pääsy evätty.</string>
   <string name="noInternetConnection">Ei Internet-yhteyttä. Voit silti pelata offline-tilassa.</string>
-  <string name="connectedToLichess">Nyt olet yhteydessä lichess.org:iin</string>
+  <string name="connectedToLichess">Nyt olet yhteydessä chess-online.com:iin</string>
   <string name="signedOut">Olet kirjautunut ulos</string>
   <string name="loginSuccessful">Olet nyt kirjautuneena sisään</string>
   <string name="playOnTheBoardOffline">Pelaa offline-tilassa kaveria vastaan</string>
@@ -830,7 +830,7 @@
   <string name="tryToWin">Yritä voittaa (tai edes pelata tasan) joka peli jonka pelaat.</string>
   <string name="resignLostGames">Luovuta hävityt pelit (äläkä juoksuta kelloa loppuun).</string>
   <string name="temporaryInconvenience">Pahoittelemme tilapäistä harmia,</string>
-  <string name="wishYouGreatGames">ja toivotamme hyviä pelejä lichess.org -sivustolla.</string>
+  <string name="wishYouGreatGames">ja toivotamme hyviä pelejä chess-online.com -sivustolla.</string>
   <string name="thankYouForReading">Kiitos kun luit!</string>
   <string name="lifetimeScore">Kaikkien aikojen yhteistilanne</string>
   <string name="currentMatchScore">Nykyisen ottelun tilanne</string>

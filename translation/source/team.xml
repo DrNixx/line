@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
+  <string name="clubs">Clubs</string>
+  <string name="playGroups">Play groups</string>
+  <string name="specGroups">Special groups</string>
+  <string name="sysGroups">System groups</string>
+
   <string name="team">Team</string>
   <string name="teams">Teams</string>
   <plurals name="nbMembers">

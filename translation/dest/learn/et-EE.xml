@@ -107,39 +107,39 @@ mitte ühtegi kaitseta vigurit!</string>
   <string name="boardSetup">Laua ülesehitus</string>
   <string name="howTheGameStarts">Kuidas mäng algab</string>
   <string name="boardSetupIntro">Kaks sõjaväge seisavad vastamisi, valmis lahinguks.</string>
-  <string name="thisIsTheInitialPosition">See on iga malemängu esialgne positsioon! 
+  <string name="thisIsTheInitialPosition">See on iga malemängu esialgne positsioon!
 Tee mõni käik, et jätkata.</string>
-  <string name="firstPlaceTheRooks">Kõigepealt paigalda ratsanikud! 
+  <string name="firstPlaceTheRooks">Kõigepealt paigalda ratsanikud!
 Nad lähevad nurkadesse.</string>
-  <string name="thenPlaceTheKnights">Siis paigalda kuningad! 
+  <string name="thenPlaceTheKnights">Siis paigalda kuningad!
 Nad lähevad hobuste kõrvale.</string>
-  <string name="placeTheBishops">Paigalda piiskopid! 
+  <string name="placeTheBishops">Paigalda piiskopid!
 Nad lähevad kuningate kõrvale.</string>
-  <string name="placeTheQueen">Paigalda kuninganna! 
+  <string name="placeTheQueen">Paigalda kuninganna!
 Ta läheb oma värvile.</string>
-  <string name="placeTheKing">Paigalda kuningas! 
+  <string name="placeTheKing">Paigalda kuningas!
 Kohe kuninga kõrvale.</string>
-  <string name="pawnsFormTheFrontLine">Etturid ette ritta. 
+  <string name="pawnsFormTheFrontLine">Etturid ette ritta.
 Tee mõni käik, et jätkata.</string>
   <string name="boardSetupComplete">Õnnitlused! Olete osav võitleja.</string>
   <string name="castling">Vangerdus</string>
   <string name="theSpecialKingMove">Eriline kuninga liigutus</string>
   <string name="castlingIntro">Too oma kuningas tagasi ohutusse kohta, ja kasuta oma ettureid rünnakuks!</string>
-  <string name="castleKingSide">Liiguta oma kuningat kahe ruudu võrra 
+  <string name="castleKingSide">Liiguta oma kuningat kahe ruudu võrra
 lossi kuninga poolele!</string>
-  <string name="castleQueenSide">Liiguta oma kuningat kahe ruudu võrra 
+  <string name="castleQueenSide">Liiguta oma kuningat kahe ruudu võrra
 lossi kuninganna poolele!</string>
-  <string name="theKnightIsInTheWay">Rüütel on tulekul! 
+  <string name="theKnightIsInTheWay">Rüütel on tulekul!
 Liiguta seda lossi kuninga poolele.</string>
-  <string name="castleKingSideMovePiecesFirst">Lossi kuninga poolel! 
+  <string name="castleKingSideMovePiecesFirst">Lossi kuninga poolel!
 Sa pead kõigepealt tükid eest ära koristama.</string>
-  <string name="castleQueenSideMovePiecesFirst">Lossi kuninganna poolel! 
+  <string name="castleQueenSideMovePiecesFirst">Lossi kuninganna poolel!
 Sa pead kõigepealt tükid eest ära koristama.</string>
   <string name="youCannotCastleIfMoved">Sa ei saa enne lossi kui kuningas on juba liikunud või ratsanikud on juva liikunud.</string>
-  <string name="youCannotCastleIfAttacked">Sa ei saa lossi kui 
-kuningat rünnatakse teepeal. 
+  <string name="youCannotCastleIfAttacked">Sa ei saa lossi kui
+kuningat rünnatakse teepeal.
 Blokeeri ruut, siis mine lossi!</string>
-  <string name="findAWayToCastleKingSide">Leia tee 
+  <string name="findAWayToCastleKingSide">Leia tee
 lossi kuninga poolele!</string>
   <string name="findAWayToCastleQueenSide">Leia tee lossi kuninganna poolele!</string>
   <string name="castlingComplete">Palju õnne! Sa peaks peaaegu alati vangerdama.</string>
@@ -193,7 +193,7 @@ kahe käiguga!</string>
   <string name="whatNext">Mis edasi?</string>
   <string name="youKnowHowToPlayChess">Sa oskad malet mängida, õnnitlused! Kas sa tahad saada tugevaks mängijaks?</string>
   <string name="register">Registreeru</string>
-  <string name="getAFreeLichessAccount">Lichess konto loomine on tasuta</string>
+  <string name="getAFreeLichessAccount">Chess-Online konto loomine on tasuta</string>
   <string name="practice">Harjuta</string>
   <string name="learnCommonChessPositions">Õpi tuntud male seise</string>
   <string name="puzzles">Pusled</string>

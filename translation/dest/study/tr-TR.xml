@@ -62,7 +62,7 @@
   <string name="chapterPgn">Bölüm PGN\'si</string>
   <string name="downloadGame">Oyunu indir</string>
   <string name="studyUrl">Çalışma Adresi</string>
-  <string name="broadcastUrl" comment="broadcastUrl&#10;&#10;This is to do with the Broadcasts feature. These are tournaments in the chess world, hosted elsewhere, for example the FIDE Championship. This specific text lets you share the URL. https://lichess.org/broadcast">Yayın Linki</string>
+  <string name="broadcastUrl" comment="broadcastUrl&#10;&#10;This is to do with the Broadcasts feature. These are tournaments in the chess world, hosted elsewhere, for example the FIDE Championship. This specific text lets you share the URL. https://live.chess-online.com/broadcast">Yayın Linki</string>
   <string name="currentChapterUrl">Mevcut Bölümün Adresi</string>
   <string name="currentGameUrl">Şu anki oyunun adresi</string>
   <string name="youCanPasteThisInTheForumToEmbed" comment="youCanPasteThisInTheForumToEmbed&#10;&#10;The thing you are pasting is a link to a study. This will make it appear in the correct section as well.">Forumda gömülü olarak paylaşmak için yukarıdaki bağlantıyı kullanabilirsiniz</string>

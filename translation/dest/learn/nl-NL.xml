@@ -123,7 +123,7 @@ Zij staan in de hoeken.</string>
   <string name="placeTheBishops">Plaats de lopers! Zij staan naast de paarden.</string>
   <string name="placeTheQueen">Plaats de dame! Zij staat op haar eigen kleur.</string>
   <string name="placeTheKing">Plaats de koning! Aan de zijde van zijn koningin.</string>
-  <string name="pawnsFormTheFrontLine">Pionnen vormen de frontlinie. 
+  <string name="pawnsFormTheFrontLine">Pionnen vormen de frontlinie.
 Doe een willekeurige welke zet om door te gaan.</string>
   <string name="boardSetupComplete">Gefeliciteerd! Nu weet je hoe je het schaakbord moet klaarzetten.</string>
   <string name="castling">Rokeren</string>
@@ -185,11 +185,11 @@ met de hoogste waarde!
 Koningin &gt; Loper</string>
   <string name="takeThePieceWithTheHighestValue">Sla het stuk
 met de hoogste waarde!</string>
-  <string name="pieceValueComplete">Gefeliciteerd! Je kent nu de waarde van materiaal! 
-Koningin = 9 
-Toren = 5 
-Loper = 3 
-Paard = 3 
+  <string name="pieceValueComplete">Gefeliciteerd! Je kent nu de waarde van materiaal!
+Koningin = 9
+Toren = 5
+Loper = 3
+Paard = 3
 Pion = 1</string>
   <string name="checkInTwo">Schaak in twee zetten</string>
   <string name="twoMovesToGiveCheck">Twee zetten om hem schaak te zetten</string>
@@ -199,7 +199,7 @@ Pion = 1</string>
   <string name="whatNext">Wat nu?</string>
   <string name="youKnowHowToPlayChess">Je weet hoe je moet schaken, gefeliciteerd! Wil je een sterkere speler worden?</string>
   <string name="register">Registreren</string>
-  <string name="getAFreeLichessAccount">Ontvang een gratis Lichess account</string>
+  <string name="getAFreeLichessAccount">Ontvang een gratis Chess-Online account</string>
   <string name="practice">Oefenen</string>
   <string name="learnCommonChessPositions">Leer veelvoorkomende schaakposities</string>
   <string name="puzzles">Puzzels</string>

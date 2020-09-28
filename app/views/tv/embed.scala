@@ -16,7 +16,7 @@ object embed {
       cssModule = "tv.embed"
     )(
       dataStreamUrl := routes.Tv.feed(),
-      div(id := "featured-game", cls := "embedded", title := "Chess TV")(
+      div(id := "featured-game", cls := "embedded", title := "Chess-Online TV")(
         views.html.game.mini.noCtx(pov, tv = true, blank = true)
       ),
       jQueryTag,

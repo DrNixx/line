@@ -86,7 +86,7 @@ final private class TournamentScheduler(
           val yo = date.getYear - 2010
           Schedule(Unique, Rapid, Standard, std, date) plan {
             _.copy(
-              name = s"${date.getYear} Lichess Anniversary",
+              name = s"${date.getYear} Chess-Online Anniversary",
               minutes = 12 * 60,
               spotlight = Spotlight(
                 headline = s"$yo years of free chess!",

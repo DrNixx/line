@@ -275,7 +275,7 @@
     <item quantity="one">Dhuro %s sekonda</item>
     <item quantity="other">Dhuro %s sekonda</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Kjo llogari ka shkelur Kushtet e Shërbimit të Lichess</string>
+  <string name="thisAccountViolatedTos">Kjo llogari ka shkelur Kushtet e Shërbimit të Chess-Online</string>
   <string name="thisPlayerArtificiallyIncreasesTheirRating">Ky lojtar e ka rritur vlerësimin e vet në mënyre artificiale</string>
   <string name="openingExplorerAndTablebase">Eksploruesi i hapjeve &amp; tabela e fundlojës</string>
   <string name="takeback">Anulo levizje</string>
@@ -448,8 +448,8 @@
   <string name="country">Shteti</string>
   <string name="socialMediaLinks">Lidhjet me llogaritë e mediat sociale</string>
   <string name="inlineNotation">Shenimet ne rresht</string>
-  <string name="watchLichessTV">Shiko Lichess TV</string>
-  <string name="previouslyOnLichessTV">Herën e fundit në Lichess TV</string>
+  <string name="watchLichessTV">Shiko Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Herën e fundit në Chess-Online TV</string>
   <string name="onlinePlayers">Lojtarët në linjë</string>
   <string name="activeToday">Aktiv sot</string>
   <string name="activePlayers">Lojëtarët aktivë</string>
@@ -578,7 +578,7 @@
   <string name="clock">Koha</string>
   <string name="unauthorizedError">Hyrje e paautorizuar.</string>
   <string name="noInternetConnection">Nuk ka lidhje interneti. Gjithsesi, ju mund të luani të shkëputur nga interneti nëpërmjet menusë.</string>
-  <string name="connectedToLichess">Tani jeni të lidhur me lichess.org</string>
+  <string name="connectedToLichess">Tani jeni të lidhur me chess-online.com</string>
   <string name="signedOut">Ju keni dalë nga faqja.</string>
   <string name="loginSuccessful">Hyrje me sukses</string>
   <string name="playOnTheBoardOffline">Luaj i shkëputur, në ekran.</string>
@@ -644,7 +644,7 @@
   <string name="simulClockHint">Koha Fisher. Kundër sa më shumë lojtarëve luani, aq më shumë kohë mund t\'ju nevojitet.</string>
   <string name="simulAddExtraTime">Ju mund të shtoni kohë shtesë për t\'i bërë ballë simultanes.</string>
   <string name="simulHostExtraTime">Kohë shtesë për pritësin</string>
-  <string name="lichessTournaments">Turnetë në Lichess</string>
+  <string name="lichessTournaments">Turnetë në Chess-Online</string>
   <string name="tournamentFAQ">Pyetjet e turneve</string>
   <string name="tournamentOfficial">Zyrtar</string>
   <string name="timeBeforeTournamentStarts">Koha deri sa të fillojë turneu</string>
@@ -743,7 +743,7 @@
   <string name="usernameSuffixInvalid">Username duhet të përfundojë me një letër ose një numër.</string>
   <string name="usernameCharsInvalid">Username duhet të përmbajë vetëm letra, numra, nënvizime dhe hyfe.</string>
   <string name="usernameUnacceptable">Emri i perdoruesit nuk eshte i pranueshem.</string>
-  <string name="directlySupportLichess">Mbeshtet Lichess ne menyre te drejtperdrejte</string>
+  <string name="directlySupportLichess">Mbeshtet Chess-Online ne menyre te drejtperdrejte</string>
   <string name="playChessInStyle">Luaj shah ne stil</string>
   <string name="chessBasics">Bazat e shahut</string>
   <string name="coaches">Trajnerë</string>
@@ -830,14 +830,14 @@
   <string name="tryToWin">Mundohu të fitosh (ose të paktën të barazishësh) çdo lojë që luash.</string>
   <string name="resignLostGames">Dorezoni lojrat e humbura (mos lejoni qe ora te perpiqet).</string>
   <string name="temporaryInconvenience">Na vjen keq për bezdisjen e përkohshme,</string>
-  <string name="wishYouGreatGames">edhe të urojmë lojëra të shkëlqyera në lichess.org.</string>
+  <string name="wishYouGreatGames">edhe të urojmë lojëra të shkëlqyera në chess-online.com.</string>
   <string name="thankYouForReading">Faleminderit që lexove!</string>
   <string name="lifetimeScore">Rezultati i jetës</string>
   <string name="currentMatchScore">Rezultati aktual i ndeshjes</string>
   <string name="agreementAssistance">Jam dakord që nuk do të marr asnjëherë ndihmë gjatë lojërave të mia (nga një kompjuter shahu, libër, baza e të dhënave ose një person tjetër).</string>
   <string name="agreementNice">Jam dakord që gjithmonë do të jem me respekt ndaj lojtarëve të tjerë.</string>
   <string name="agreementAccount">Jam dakord që nuk do krijoj shumë llogari.</string>
-  <string name="agreementPolicy">Jam dakord që do të ndjek të gjitha politikat e Lichess-it.</string>
+  <string name="agreementPolicy">Jam dakord që do të ndjek të gjitha politikat e Chess-Online-it.</string>
   <string name="searchOrStartNewDiscussion">Kërkoni ose filloni muhabet e re</string>
   <string name="edit">Ndrysho</string>
   <string name="rapid">I shpejtë</string>

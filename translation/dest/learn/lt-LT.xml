@@ -11,17 +11,17 @@
   <string name="theRook">Bokštas</string>
   <string name="itMovesInStraightLines">Juda tiesiomis linijomis</string>
   <string name="rookIntro">Bokštas yra galinga figūra. Ar esate pasirengę ją valdyti?</string>
-  <string name="rookGoal">Spustelėkite ant boškto, 
+  <string name="rookGoal">Spustelėkite ant boškto,
 kad perkeltumėte jį ant žvaigždės!</string>
   <string name="grabAllTheStars">Surinkite visas žvaigždes!</string>
   <string name="theFewerMoves">Kuo mažiau ėjimų atliksite,
 tuo daugiau taškų gausite!</string>
-  <string name="useTwoRooks">Naudokite abu bokštus, 
+  <string name="useTwoRooks">Naudokite abu bokštus,
 kad surinktumėte greičiau!</string>
   <string name="rookComplete">Sveikinimai! Sėkmingai įvaldėte bokštą.</string>
   <string name="theBishop">Rikis</string>
   <string name="itMovesDiagonally">Juda įstrižai</string>
-  <string name="bishopIntro">Toliau mes išmoksime, 
+  <string name="bishopIntro">Toliau mes išmoksime,
 kaip reikia judėti rikiu!</string>
   <string name="youNeedBothBishops">Vienas rikis baltuose laukeliuose,
 kitas rikis juoduose laukeliuose.
@@ -40,7 +40,7 @@ Jums reikės abiejų!</string>
   <string name="theKnight">Žirgas</string>
   <string name="itMovesInAnLShape">Juda L raidės forma</string>
   <string name="knightIntro">Štai jums iššūkis. Žirgas yra... sudėtinga figūra.</string>
-  <string name="knightsHaveAFancyWay">Žirgai geba šokinėti 
+  <string name="knightsHaveAFancyWay">Žirgai geba šokinėti
 po lentą įdomiu būdu!</string>
   <string name="knightsCanJumpOverObstacles">Žirgai geba šokinėti per kliūtis!
 Ištrūkite ir nugalėkite žvaigždes!</string>
@@ -188,7 +188,7 @@ dviem ėjimais!</string>
   <string name="whatNext">Kas toliau?</string>
   <string name="youKnowHowToPlayChess">Jau žinai, kaip žaisti šachmatus, sveikiname! Ar norėtum tapti stipresniu žaidėju?</string>
   <string name="register">Užsiregistruok</string>
-  <string name="getAFreeLichessAccount">Susikurk nemokamą Lichess paskyrą</string>
+  <string name="getAFreeLichessAccount">Susikurk nemokamą Chess-Online paskyrą</string>
   <string name="practice">Treniruokis</string>
   <string name="learnCommonChessPositions">Išmok dažnas šachmatų pozicijas</string>
   <string name="puzzles">Užduotys</string>

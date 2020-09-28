@@ -11,7 +11,7 @@
   <string name="fullDescription">Polni opis dogodka</string>
   <string name="fullDescriptionHelp">Neobvezen dolg opis oddaje. %1$s je na voljo. Dolžina mora biti manjša od %2$s znakov.</string>
   <string name="sourceUrl">URL vira</string>
-  <string name="sourceUrlHelp">URL, ki ga bo Lichess preveril, da bo prejel PGN posodobitve. Javno mora biti dostopen preko interneta.</string>
+  <string name="sourceUrlHelp">URL, ki ga bo Chess-Online preveril, da bo prejel PGN posodobitve. Javno mora biti dostopen preko interneta.</string>
   <string name="roundNumber">Številka kroga</string>
   <string name="startDate">Datum začetka v vaše časovnem pasu</string>
   <string name="startDateHelp">Izbirno, če veste, kdaj se dogodek začne</string>

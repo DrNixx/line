@@ -441,7 +441,7 @@
   <string name="butYouCanKeepTrying">但您可以繼續嘗試。</string>
   <string name="success">大功告成！</string>
   <string name="wasThisPuzzleAnyGood">這道題目好不好？</string>
-  <string name="pleaseVotePuzzle">按向上鍵或向下鍵投票來幫助 Lichess 提高訓練題品質：</string>
+  <string name="pleaseVotePuzzle">按向上鍵或向下鍵投票來幫助 Chess-Online 提高訓練題品質：</string>
   <string name="thankYou">謝謝！</string>
   <string name="ratingX">評級：%s</string>
   <string name="hidden">隱藏</string>
@@ -546,7 +546,7 @@
   <string name="clock">鐘</string>
   <string name="unauthorizedError">无权访问。</string>
   <string name="noInternetConnection">无网络。您仍然可以从菜单栏离线对弈。</string>
-  <string name="connectedToLichess">您已接入lichess.org</string>
+  <string name="connectedToLichess">您已接入chess-online.com</string>
   <string name="signedOut">登出成功</string>
   <string name="loginSuccessful">登出成功</string>
   <string name="playOnTheBoardOffline">面對面</string>
@@ -658,7 +658,7 @@
   <string name="withNobody">不分享</string>
   <string name="withFriends">與好友分享</string>
   <string name="withEverybody">與所有人分享</string>
-  <string name="youHaveAlreadyRegisteredTheEmail">您已經用過 %s 來註冊 Lichess 賬戶</string>
+  <string name="youHaveAlreadyRegisteredTheEmail">您已經用過 %s 來註冊 Chess-Online 賬戶</string>
   <string name="kidMode">兒童模式</string>
   <string name="kidModeExplanation">考量安全，在兒童模式中，網站上全部的文字交流將會被關閉。開啟此模式來保護你的孩子及學生不被網路上的人傷害。</string>
   <string name="inKidModeTheLichessLogoGetsIconX">在兒童模式下，Lichess的標誌會有一個%s圖示，讓你知道你的孩子是安全的。</string>
@@ -792,7 +792,7 @@
   <string name="tryToWin">試著在每個棋局裡獲勝(或至少平手)</string>
   <string name="resignLostGames">棄權(不要讓時間耗盡)</string>
   <string name="temporaryInconvenience">對於給您帶來的不便，我們深表歉意</string>
-  <string name="wishYouGreatGames">並祝您在lichess.org上玩得開心。</string>
+  <string name="wishYouGreatGames">並祝您在chess-online.com上玩得開心。</string>
   <string name="thankYouForReading">感謝您的閱讀!</string>
   <string name="lifetimeScore">帳戶總分</string>
   <string name="currentMatchScore">最近的對局分數</string>

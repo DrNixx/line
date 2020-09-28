@@ -305,8 +305,8 @@
   <string name="lastName">Ազգանուն</string>
   <string name="biography">Կենսագրություն</string>
   <string name="country">Երկիր</string>
-  <string name="watchLichessTV">Դիտել Lichess TV</string>
-  <string name="previouslyOnLichessTV">Նախորդները Lichess TV-ով</string>
+  <string name="watchLichessTV">Դիտել Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Նախորդները Chess-Online TV-ով</string>
   <string name="onlinePlayers">Online խաղացողներ</string>
   <string name="activeToday">Ակտիվ այսօր</string>
   <string name="activePlayers">Ակտիվ խաղացողներ</string>
@@ -413,7 +413,7 @@
   <string name="clock">ժամացույց</string>
   <string name="unauthorizedError">Մուտքն արգելված է։</string>
   <string name="noInternetConnection">Չկա ինտերնետ կապ : Դուք կարող եք խաղալ օֆլայն</string>
-  <string name="connectedToLichess">Դուք նորից միացաք lichess.org կայքին</string>
+  <string name="connectedToLichess">Դուք նորից միացաք chess-online.com կայքին</string>
   <string name="signedOut">Դուք հաջողությամբ դուրս եկաք ձեր էջից</string>
   <string name="loginSuccessful">Դուք հաջողությամբ մուտք գործեցիք ձեր էջ</string>
   <string name="playOfflineComputer">Համակարգիչ</string>
@@ -441,7 +441,7 @@
   <string name="termsOfService">Ծառայությունների մատուցման պայմաններ</string>
   <string name="host">Ընդունող</string>
   <string name="create">Ստեղծել</string>
-  <string name="lichessTournaments">Lichess մրցաշարեր</string>
+  <string name="lichessTournaments">Chess-Online մրցաշարեր</string>
   <string name="tournamentOfficial">Պաշտոնական</string>
   <string name="averageCentipawnLoss">Միջինուն հարյուրերորդական զինվորի կորուստ</string>
   <string name="newTournament">Նոր մրցաշար</string>

@@ -14,7 +14,7 @@
   <string name="rookGoal">Klik op die toring
 om dit na die ster te bring!</string>
   <string name="grabAllTheStars">Gryp al die sterre!</string>
-  <string name="theFewerMoves">Hoe minder skuiwe jy maak, 
+  <string name="theFewerMoves">Hoe minder skuiwe jy maak,
 hoe meer punte kry jy!</string>
   <string name="useTwoRooks">Gebruik albei torings
 om spoed op te tel!</string>
@@ -51,7 +51,7 @@ Ontsnap en verslaan al die sterre!</string>
 Maar wanneer hulle die anderkant van die bord bereik, word hulle \'n sterker stuk!</string>
   <string name="mostOfTheTimePromotingToAQueenIsBest">Meeste van die tyd is dit die beste om na \'n dame te promoveer.
 Maar soms kan \'n perd handig wees!</string>
-  <string name="pawnsMoveForward">Pionne beweeg vorentoe, 
+  <string name="pawnsMoveForward">Pionne beweeg vorentoe,
 maar hulle vat diagonaal!</string>
   <string name="captureThenPromote">Vat eers, promoveer daarna!</string>
   <string name="useAllThePawns">Gebruik al die pionne!
@@ -156,7 +156,7 @@ langkant te rokeer!</string>
   <string name="enPassant">En passant</string>
   <string name="theSpecialPawnMove">Die spesiale pion skuif</string>
   <string name="enPassantIntro">Wanneer die opponent pion twee blokkies skuif, kan jy die pion vat asof dit net een blokkie geskuif het.</string>
-  <string name="blackJustMovedThePawnByTwoSquares">Swart het net nou net die pion 
+  <string name="blackJustMovedThePawnByTwoSquares">Swart het net nou net die pion
 twee blokkies aangeskuif!
 Vat dit en passant.</string>
   <string name="enPassantOnlyWorksImmediately">En passant werk net
@@ -203,7 +203,7 @@ in twee skuiwe!</string>
   <string name="whatNext">Wat nou?</string>
   <string name="youKnowHowToPlayChess">Jy weet hoe om skaak te speel, baie geluk! Wil jy \'n beter speler word?</string>
   <string name="register">Registreer</string>
-  <string name="getAFreeLichessAccount">Kry ’n gratis Lichess-rekening</string>
+  <string name="getAFreeLichessAccount">Kry ’n gratis Chess-Online-rekening</string>
   <string name="practice">Oefen</string>
   <string name="learnCommonChessPositions">Leer algemene skaakposisies</string>
   <string name="puzzles">Kopkrappers</string>

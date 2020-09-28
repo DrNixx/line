@@ -16,7 +16,7 @@ hann að stjörnunni!</string>
   <string name="grabAllTheStars">Náðu öllum stjörnunum!</string>
   <string name="theFewerMoves">Því færri leiki sem þú leikur
 þeim mun fleiri stig færðu!</string>
-  <string name="useTwoRooks">Notaðu tvo hróka 
+  <string name="useTwoRooks">Notaðu tvo hróka
 til að flýta fyrir!</string>
   <string name="rookComplete">Til lukku! Þú hefur náð valdi á hróknum.</string>
   <string name="theBishop">Biskupinn</string>
@@ -205,7 +205,7 @@ Peð = 1</string>
   <string name="whatNext">Hvað er næst?</string>
   <string name="youKnowHowToPlayChess">Nú kanntu skák, til hamingju! Viltu verða sterkari leikmaður?</string>
   <string name="register">Skráning</string>
-  <string name="getAFreeLichessAccount">Fáðu ókeypis Lichess reikning</string>
+  <string name="getAFreeLichessAccount">Fáðu ókeypis Chess-Online reikning</string>
   <string name="practice">Æfing</string>
   <string name="learnCommonChessPositions">Lærðu algengar stöður í skák</string>
   <string name="puzzles">Þrautir</string>

@@ -706,7 +706,7 @@
   <string name="clock">الوقت</string>
   <string name="unauthorizedError">الوصول غير مصرح به.</string>
   <string name="noInternetConnection">لايوجد اتصال بالإنترنت. لا يزال يمكنك اللعب دون اتصال من القائمة.</string>
-  <string name="connectedToLichess">أنت الآن متصل بـ lichess.org</string>
+  <string name="connectedToLichess">أنت الآن متصل بـ chess-online.com</string>
   <string name="signedOut">تم تسجيل الخروج.</string>
   <string name="loginSuccessful">تم الدخول بنجاح</string>
   <string name="playOnTheBoardOffline">على الرقعة</string>
@@ -982,7 +982,7 @@
   <string name="tryToWin">حاول فوز (او تعادل على الأقل) كل دور تلعبه.</string>
   <string name="resignLostGames">انسحب اذا كنت على وشك الهزيمة (لا تدع الوقت ينتهي).</string>
   <string name="temporaryInconvenience">نعتذر عن الازعاج المؤقت</string>
-  <string name="wishYouGreatGames">ونتمنى لك ادوار جيدة على Lichess.org.</string>
+  <string name="wishYouGreatGames">ونتمنى لك ادوار جيدة على chess-online.com.</string>
   <string name="thankYouForReading">نشكرك على القراءة!</string>
   <string name="lifetimeScore">النتيجة النهائية</string>
   <string name="currentMatchScore">نتيجة المباراة الحالية</string>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="lichessClasses">Mësimet</string>
-  <string name="teachClassesOfChessStudents">Mësoni klasë të studentëve të shahut me suiten e mjeteve të Lichess Classes.</string>
+  <string name="teachClassesOfChessStudents">Mësoni klasë të studentëve të shahut me suiten e mjeteve të Chess-Online Classes.</string>
   <string name="features">Karakteristikat</string>
   <string name="quicklyGenerateSafeUsernames">Gjenero shpejtë emra përdorues dhe fjalëkalime të sigurta për studentët</string>
   <string name="trackStudentProgress">Përcill progresin e nxënësit në lojëra dhe enigma</string>
   <string name="messageAllStudents">Dërgo mesazh te të gjithë nxënësit për materiale të reja mësimore</string>
   <string name="freeForAllForever">100% pa pagesë për të gjithë, pa reklama dhe gjurmues</string>
-  <string name="applyToBeLichessTeacher">Apliko për tu bërë Mësues i Lichess-it</string>
+  <string name="applyToBeLichessTeacher">Apliko për tu bërë Mësues i Chess-Online-it</string>
   <string name="noClassesYet">Asnjë mësim deri më tani.</string>
   <string name="teachersX">Mësuesit: %s</string>
   <string name="newClass">Mësim i ri</string>
@@ -23,7 +23,7 @@
   <string name="classDescription">Përshkrimi i mësimit</string>
   <string name="visibleByBothStudentsAndTeachers">E dukshme edhe nga mësuesit edhe nga nxënësit</string>
   <string name="teachersOfTheClass">Mësuesit</string>
-  <string name="addLichessUsernames">Shto emra të përdoruesve të Lichess për ti ftuar ata si mësues. Një për linjë.</string>
+  <string name="addLichessUsernames">Shto emra të përdoruesve të Chess-Online për ti ftuar ata si mësues. Një për linjë.</string>
   <string name="theyMustFirstApply">Ata duhet te aplikojne per te qene Mesues Lichessi ne fillim.</string>
   <string name="resetPassword">Rivendos fjalëkalimin</string>
   <string name="makeSureToCopy">Sigurohu qe e kopjove ose e shkruajte dikund fjalekalimin tani. S\'do te keni mundesi ta shifni perseri!</string>
@@ -39,7 +39,7 @@ Nofka: %2$s
 Fjalekalimi: %3$s</string>
   <string name="inviteALichessAccount">Fto nje llogari lichessi</string>
   <string name="inviteDesc1">Nese studenti ka nje llogari Lichessi, mund ta ftoni ne klase.</string>
-  <string name="inviteDesc2">Ata do te marrin nje mesazh ne Lichess me nje adrese ku mund ti bashkangjiten klases.</string>
+  <string name="inviteDesc2">Ata do te marrin nje mesazh ne Chess-Online me nje adrese ku mund ti bashkangjiten klases.</string>
   <string name="inviteDesc3">E rendesishme: ftoni vetem studente qe i njihni, dhe qe kane deshire te bashkangjiten ne klase.</string>
   <string name="inviteDesc4">Kurre mos i dergoni ftesa lojtareve qe si njihni.</string>
   <string name="createANewLichessAccount">Krijoni nje llogari te re Lichessi</string>

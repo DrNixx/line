@@ -309,7 +309,7 @@
     <item quantity="many">Даць %s секунд</item>
     <item quantity="other">Даць %s секунд</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Гэты ўліковы запіс парушыў Умовы выкарыстання Lichess</string>
+  <string name="thisAccountViolatedTos">Гэты ўліковы запіс парушыў Умовы выкарыстання Chess-Online</string>
   <string name="thisPlayerArtificiallyIncreasesTheirRating">Гэты гулец штучна павялічвае свой рэйтынг</string>
   <string name="openingExplorerAndTablebase">База дэбютаў і эндшпіляў</string>
   <string name="takeback">Скасаваць ход</string>
@@ -504,8 +504,8 @@
   <string name="country">Краіна</string>
   <string name="socialMediaLinks">Спасылкі на сацсеткі</string>
   <string name="inlineNotation">Убудаваная натацыя</string>
-  <string name="watchLichessTV">Глядзець Lichess TV</string>
-  <string name="previouslyOnLichessTV">Раней на Lichess TV</string>
+  <string name="watchLichessTV">Глядзець Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Раней на Chess-Online TV</string>
   <string name="onlinePlayers">Гульцы анлайн</string>
   <string name="activeToday">Гулялі сёння</string>
   <string name="activePlayers">Актыўныя гульцы</string>
@@ -525,7 +525,7 @@
   <string name="butYouCanKeepTrying">Паспрабуйце яшчэ раз.</string>
   <string name="success">Поспех</string>
   <string name="wasThisPuzzleAnyGood">Ці спадабалася вам гэтая галаваломка?</string>
-  <string name="pleaseVotePuzzle">Пакіньце свой голас, каб дапамагчы Lichess прапаноўваць гульцам найлепшыя галаваломкі!</string>
+  <string name="pleaseVotePuzzle">Пакіньце свой голас, каб дапамагчы Chess-Online прапаноўваць гульцам найлепшыя галаваломкі!</string>
   <string name="thankYou">Дзякуй!</string>
   <string name="ratingX">Рэйтынг: %s</string>
   <string name="hidden">схаваны</string>
@@ -642,7 +642,7 @@
   <string name="clock">Гадзіньнік</string>
   <string name="unauthorizedError">Няма доступу.</string>
   <string name="noInternetConnection">Няма злучэньня зь сецівам. Ты ўсё яшчэ можаш згуляць у афлайн мэню.</string>
-  <string name="connectedToLichess">Ты цяпер падлучаны да lichess.org</string>
+  <string name="connectedToLichess">Ты цяпер падлучаны да chess-online.com</string>
   <string name="signedOut">Ты выйшаў з свайго акаўту</string>
   <string name="loginSuccessful">Ты ўвайшоў у свой акаўнт</string>
   <string name="playOnTheBoardOffline">Ля дошкі</string>
@@ -710,7 +710,7 @@
   <string name="simulClockHint">Налады гадзінніку Фішэра. Чым больш у вас супернікаў, тым больш часу вам можа спатрэбіцца.</string>
   <string name="simulAddExtraTime">Вы можаце ўзяць сабе дадатковы час на роздумы.</string>
   <string name="simulHostExtraTime">Дадатковы час для арганізатара</string>
-  <string name="lichessTournaments">Турніры Lichess</string>
+  <string name="lichessTournaments">Турніры Chess-Online</string>
   <string name="tournamentFAQ">FAQ турніру</string>
   <string name="tournamentOfficial">Афіцыйны</string>
   <string name="timeBeforeTournamentStarts">Турнір пачнецца праз</string>
@@ -722,7 +722,7 @@
   <string name="keyEnterOrExitVariation">увайсці/выйсці з варыянту</string>
   <string name="newTournament">Новы турнір</string>
   <string name="tournamentHomeTitle">Шахматны турнір</string>
-  <string name="tournamentHomeDescription">Гуляйце ў хуткія шахматы на турніры! Абірайце любы з афіцыйных турніраў Lichess ці стварыце ўласны. «Куля», бліц, класічны рэжым, шахматы Фішэра, «цар гары», тры шахі і яшчэ бясконцае мноства варыянтаў. Весяліцеся!</string>
+  <string name="tournamentHomeDescription">Гуляйце ў хуткія шахматы на турніры! Абірайце любы з афіцыйных турніраў Chess-Online ці стварыце ўласны. «Куля», бліц, класічны рэжым, шахматы Фішэра, «цар гары», тры шахі і яшчэ бясконцае мноства варыянтаў. Весяліцеся!</string>
   <string name="tournamentNotFound" comment="tournamentNotFound&#10;&#10;A 404 type of error specifically for tournaments, in case the tournament gets cancelled (for example, if no one enters it and it is abandoned), as these pages are deleted.">Турнір не знойдзены</string>
   <string name="tournamentDoesNotExist">Гэты турнір не існуе.</string>
   <string name="tournamentMayHaveBeenCanceled">Магчыма, ён быў скасаваны, калі ўсе гульцы выйшлі да пачатку.</string>
@@ -746,7 +746,7 @@
   <string name="ifYouDoNotSeeTheEmailCheckOtherPlaces">Калі вы не бачыце ліст, праверце, магчыма, ён трапіў у тэчку для спаму.</string>
   <string name="weHaveSentYouAnEmailTo">Мы адправілі ліст на ваш адрас %s. Пстрыкніце спасылку ў ім, каб скінуць ваш пароль.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Звярніце ўвагу: рэгіструючыся, вы прымаеце нашыя %s.</string>
-  <string name="networkLagBetweenYouAndLichess">Затрымка сеткі паміж вамі і Lichess</string>
+  <string name="networkLagBetweenYouAndLichess">Затрымка сеткі паміж вамі і Chess-Online</string>
   <string name="timeToProcessAMoveOnLichessServer">Час апрацоўкі ходу на серверы</string>
   <string name="downloadAnnotated">Спампаваць з анатацыямі</string>
   <string name="downloadRaw">Спампаваць без анатацый</string>
@@ -771,7 +771,7 @@
   <string name="alternativelyYouCanX">У якасці альтэрнатывы вы можаце %s.</string>
   <string name="revokeAllSessions">скасаваць усе сесіі</string>
   <string name="playChessEverywhere">Гуляйце ў шахматы дзе заўгодна</string>
-  <string name="asFreeAsLichess">Бясплатна, як і Lichess</string>
+  <string name="asFreeAsLichess">Бясплатна, як і Chess-Online</string>
   <string name="builtForTheLoveOfChessNotMoney">Створана дзеля шахматаў, а не дзеля грошай</string>
   <string name="everybodyGetsAllFeaturesForFree">Кожны бясплатна атрымлівае ўсе магчымасці</string>
   <string name="zeroAdvertisement">Без рэкламы</string>
@@ -813,7 +813,7 @@
   <string name="usernameSuffixInvalid">Імя карыстальніка павінна сканчацца на лічбу або літару.</string>
   <string name="usernameCharsInvalid">Імя карыстальніка можа ўтрымліваць толькі літары, лічбы, ніжнія падкрэсліванні і злучок.</string>
   <string name="usernameUnacceptable">Недапушчальнае імя карыстальніка.</string>
-  <string name="directlySupportLichess">Падтрымайце Lichess</string>
+  <string name="directlySupportLichess">Падтрымайце Chess-Online</string>
   <string name="playChessInStyle">Гуляйце стылёва!</string>
   <string name="chessBasics">Асновы шахмат</string>
   <string name="coaches">Трэнеры</string>
@@ -906,14 +906,14 @@
   <string name="tryToWin">Паспрабуйце перамагчы (або звесці на нічыю) кожную вашу гульню.</string>
   <string name="resignLostGames">Здавайцеся ў ясна прайграных гульнях (а не чакайце, пакуль час скончыцца).</string>
   <string name="temporaryInconvenience">Мы просім прабачэння за часовыя нязручнасці,</string>
-  <string name="wishYouGreatGames">і жадаем вам вельмі добрых гульняў на lichess.org.</string>
+  <string name="wishYouGreatGames">і жадаем вам вельмі добрых гульняў на chess-online.com.</string>
   <string name="thankYouForReading">Дзякуй за ўвагу!</string>
   <string name="lifetimeScore">Рахунак за ўсё время</string>
   <string name="currentMatchScore">Рахунак у бягучым матчы</string>
   <string name="agreementAssistance">Я згаджаюся, што я ніколі не скарыстаюся старонняй дапамогай у сваіх гульнях (ад шахматных праграм, кніг, баз даных або іншых гульцоў).</string>
   <string name="agreementNice">Я згаджаюся, што я заўсёды адносіцца з павагай да другіх гульцоў.</string>
   <string name="agreementAccount">Я згаджаюся, што я не буду ствараць некалькі ўліковых запісаў.</string>
-  <string name="agreementPolicy">Я згаджаюся, што я буду прытрымлівацца ўсіх правіл Lichess.</string>
+  <string name="agreementPolicy">Я згаджаюся, што я буду прытрымлівацца ўсіх правіл Chess-Online.</string>
   <string name="searchOrStartNewDiscussion">Знайсці размову або пачаць новую</string>
   <string name="edit">Змяніць</string>
   <string name="rapid">Рапід</string>

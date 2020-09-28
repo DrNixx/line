@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="emailConfirm_subject">حساب خود را در lichess.org تایید کنید،%s</string>
+  <string name="emailConfirm_subject">حساب خود را در chess-online.com تایید کنید،%s</string>
   <string name="emailConfirm_click">بر روی لینک کلیک کنید تا حساب شما در lichess فعال شود:</string>
   <string name="emailConfirm_ignore">اگر شما در lichess ثبت نام نکرده اید میتوانید با خیال راحت این پیام را نادیده بگیرید.</string>
   <string name="passwordReset_subject">بازنشانی گذرواژه لیچس %s</string>
@@ -10,7 +10,7 @@
   <string name="emailChange_intro">شما درخواست داده اید که آدرس ایمیل خود را تغییر دهید.</string>
   <string name="emailChange_click">برای اینکه تایید کنید که شما به این ایمیل دسترسی دارید، لطفا بر روی لینک زیر کلیک کنید:</string>
   <string name="welcome_subject">به لیچس خوش آمدید، %s</string>
-  <string name="welcome_text">شما با موفقیت حساب خود را در https://lichess.org ایجاد کردید.
+  <string name="welcome_text">شما با موفقیت حساب خود را در https://live.chess-online.com ایجاد کردید.
 
 صفحه پروفایل شما اینجاست: %1$s. شما میتوانید در %2$s آن را شخصی سازی کنید.
 

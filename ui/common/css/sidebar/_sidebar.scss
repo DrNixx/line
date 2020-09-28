@@ -4,19 +4,6 @@ $zIndex-sidebar: 1000;
 $menu-bezier: .05, .74, .27, .99;
 $menu-icon-size: 40px;
 
-//Neutral color shades
-$color-contrast-lowest: #fff;
-$color-contrast-higher: #212121;
-
-$menu: #929aac;
-$color-menu: #013f47;
-$color-menu-light: $menu;
-$color-menu-dark: #013137;
-$color-menu-darker: #013940;
-$color-menu-link-hover: #fff;
-
-$color-hinted-a: #999; //rgba value of $color-contrast-medium for hinted text
-
 $base-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell","Fira Sans", "Droid Sans", "Helvetica Neue",sans-serif;
 $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell","Fira Sans", "Droid Sans", "Helvetica Neue",sans-serif;
 
@@ -501,6 +488,11 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
             }
         }
     }
+
+    #main-wrap {
+        padding-left: $layout-sidepanel-width-collapsed;
+    }
+    
 
     #reconnecting {
         left: $layout-sidepanel-width-collapsed !important;

@@ -275,7 +275,7 @@
     <item quantity="one">Doni %s sekundojn</item>
     <item quantity="other">Doni %s sekundojn</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Ĉi tiu konto malobservis la Kondiĉojn de Servo de Lichess</string>
+  <string name="thisAccountViolatedTos">Ĉi tiu konto malobservis la Kondiĉojn de Servo de Chess-Online</string>
   <string name="thisPlayerArtificiallyIncreasesTheirRating">Tiu ĉi ludanto fripone (mal)pligrandigas sian rangon</string>
   <string name="openingExplorerAndTablebase">Esplorilo de malfermoj &amp; tablobazo</string>
   <string name="takeback">Repreno</string>
@@ -448,8 +448,8 @@
   <string name="country">Lando</string>
   <string name="socialMediaLinks">Ligiloj al sociaj retejoj</string>
   <string name="inlineNotation">Enlineaj markoj</string>
-  <string name="watchLichessTV">Spekti Lichess-TV</string>
-  <string name="previouslyOnLichessTV">Antaŭe ĉe Lichess-TV</string>
+  <string name="watchLichessTV">Spekti Chess-Online-TV</string>
+  <string name="previouslyOnLichessTV">Antaŭe ĉe Chess-Online-TV</string>
   <string name="onlinePlayers">Konektitaj ludantoj</string>
   <string name="activeToday">Aktivaj hodiaŭ</string>
   <string name="activePlayers">Aktivaj ludantoj</string>
@@ -469,7 +469,7 @@
   <string name="butYouCanKeepTrying">Sed vi rajtas daŭrigi la provon.</string>
   <string name="success">Sukceso</string>
   <string name="wasThisPuzzleAnyGood">Ĉu vi ŝatis ĉi tiun puzlon?</string>
-  <string name="pleaseVotePuzzle">Helpu al Lichess pliboniĝi per voĉdoni, uzante la supren- aŭ suben-sagbutonojn:</string>
+  <string name="pleaseVotePuzzle">Helpu al Chess-Online pliboniĝi per voĉdoni, uzante la supren- aŭ suben-sagbutonojn:</string>
   <string name="thankYou">Dankon!</string>
   <string name="ratingX">Rango: %s</string>
   <string name="hidden">kaŝita</string>
@@ -578,7 +578,7 @@
   <string name="clock">Horloĝo</string>
   <string name="unauthorizedError">Aliro estas malpermesata.</string>
   <string name="noInternetConnection">Neniu interreta konekto. Vi ja povas ludi malkonektite de la menuo.</string>
-  <string name="connectedToLichess">Vi nun estas konektita al lichess.org</string>
+  <string name="connectedToLichess">Vi nun estas konektita al chess-online.com</string>
   <string name="signedOut">Vi elsalutis</string>
   <string name="loginSuccessful">Vi ĵus ensalutis</string>
   <string name="playOnTheBoardOffline">Ludi fizike kun aliulo</string>
@@ -644,7 +644,7 @@
   <string name="simulClockHint">Ŝakhorloĝo. Ju pli da ludantoj kiujn vi defios, des pli da tempo kiun vi eble bezonos.</string>
   <string name="simulAddExtraTime">Vi povas aldoni plian tempon al via ŝakhorloĝo por helpi vian ludadon.</string>
   <string name="simulHostExtraTime">Plia tempo por la gastiganto</string>
-  <string name="lichessTournaments">Turniroj de Lichess</string>
+  <string name="lichessTournaments">Turniroj de Chess-Online</string>
   <string name="tournamentFAQ">Oftaj demandoj pri la turnira areno</string>
   <string name="tournamentOfficial">Oficiala</string>
   <string name="timeBeforeTournamentStarts">Tempo ĝis la turniro komenciĝas</string>
@@ -678,8 +678,8 @@
   <string name="ifYouDoNotSeeTheEmailCheckOtherPlaces">Se vi ne vidas la retpoŝton , kontrolu aliajn lokojn kie ĝi povas esti, kiel via rubo , spam, socia , aŭ aliaj dosierujoj.</string>
   <string name="weHaveSentYouAnEmailTo">Ni sendis retmesaĝon al %s. Klaku la ligilon en la poŝto por rekomencigi vian pasvorton.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">De registranta , vi konsentas al esti ligita de nia %s.</string>
-  <string name="networkLagBetweenYouAndLichess">Reto lag inter vi kaj Lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Tempo por prilabori moviĝon sur Lichess servilo</string>
+  <string name="networkLagBetweenYouAndLichess">Reto lag inter vi kaj Chess-Online</string>
+  <string name="timeToProcessAMoveOnLichessServer">Tempo por prilabori moviĝon sur Chess-Online servilo</string>
   <string name="downloadAnnotated">Elŝutu prinotitan</string>
   <string name="downloadRaw">Elŝutu krudaj</string>
   <string name="downloadImported">Elŝutu importitan</string>
@@ -743,7 +743,7 @@
   <string name="usernameSuffixInvalid">La salutnomo devas finanta kun letero aux numero.</string>
   <string name="usernameCharsInvalid">La uzantnomo devas enhavi nur literojn, nombrojn, substrekojn, kaj streketojn.</string>
   <string name="usernameUnacceptable">Ĉi tiu uzantnomo estas malakceptata.</string>
-  <string name="directlySupportLichess">Rekte subteni Lichess</string>
+  <string name="directlySupportLichess">Rekte subteni Chess-Online</string>
   <string name="playChessInStyle">Ludu ŝakon elegante</string>
   <string name="chessBasics">Ŝaka aboco</string>
   <string name="coaches">Trejnistoj</string>
@@ -830,14 +830,14 @@
   <string name="tryToWin">Provu gajni (aŭ almenaŭ egaligi) ĉiun ludon, kiun vi ludas.</string>
   <string name="resignLostGames">Rezignu perditajn ludojn (ne foruzu la tempon).</string>
   <string name="temporaryInconvenience">Ni pardonpetas pro la provizoraj malkomfortoj,</string>
-  <string name="wishYouGreatGames">kaj ni deziras al vi bonegajn ludojn ĉe lichess.org.</string>
+  <string name="wishYouGreatGames">kaj ni deziras al vi bonegajn ludojn ĉe chess-online.com.</string>
   <string name="thankYouForReading">Dankon pro via legado!</string>
   <string name="lifetimeScore">Ĝisnuna poentaro</string>
   <string name="currentMatchScore">Aktuala matĉa poentaro</string>
   <string name="agreementAssistance">Mi konsentas, ke mi neniam ricevos helpon dum miaj ludoj (de komputila programo, libro, datumbazo aŭ alia persono).</string>
   <string name="agreementNice">Mi konsentas, ke mi ĉiam estos respektema al aliaj ludantoj.</string>
   <string name="agreementAccount">Mi konsentas, ke mi ne kreos plurajn kontojn.</string>
-  <string name="agreementPolicy">Mi konsentas sekvi ĉiujn politikojn de Lichess.</string>
+  <string name="agreementPolicy">Mi konsentas sekvi ĉiujn politikojn de Chess-Online.</string>
   <string name="searchOrStartNewDiscussion">Serĉi aŭ komenci novan konversacion</string>
   <string name="edit">Redakti</string>
   <string name="rapid">Rapida</string>

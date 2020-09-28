@@ -301,7 +301,7 @@
   <string name="lastName">lo lazme\'e</string>
   <string name="biography">velski do fo do</string>
   <string name="country">lo gugde</string>
-  <string name="watchLichessTV">mencti la\'o gy. Lichess TV .gy</string>
+  <string name="watchLichessTV">mencti la\'o gy. Chess-Online TV .gy</string>
   <string name="previouslyOnLichessTV">lo purci nunkei pe lo la .litces. se tivni</string>
   <string name="onlinePlayers">lo cabna jvikei</string>
   <string name="activeToday">keicfu ca lo cabdei</string>
@@ -416,7 +416,7 @@
   <string name="clock">junla</string>
   <string name="unauthorizedError">jonse tolcru</string>
   <string name="noInternetConnection">ka\'e nai kibro jorne .i ku\'i kakne lo ka kelci se cau kei do\'e lo cuxna uidje</string>
-  <string name="connectedToLichess">do ca jorne la\'o zoi. lichess.org .zoi</string>
+  <string name="connectedToLichess">do ca jorne la\'o zoi. chess-online.com .zoi</string>
   <string name="signedOut">do co\'u pilno lo jaspu</string>
   <string name="loginSuccessful">do co\'a pilno lo jaspu</string>
   <string name="playOnTheBoardOffline">pilno lo pa fonxa</string>

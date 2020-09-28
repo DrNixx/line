@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="contact">聯繫我們</string>
-  <string name="contactLichess">聯繫 Lichess</string>
+  <string name="contactLichess">聯繫 Chess-Online</string>
   <string name="whatCanWeHelpYouWith">有什麼我們能幫您的地方？</string>
   <string name="visitThisPage">觀看這個頁面以獲取解答</string>
   <string name="iCantLogIn">我無法登錄。</string>
@@ -32,7 +32,7 @@
   <string name="doNotReportInForum">請不要在論壇中檢舉使用者</string>
   <string name="doNotSendReportEmails">請不要使用電子郵件向我們舉報玩家</string>
   <string name="wantReportBug">我想要提出遊戲bug</string>
-  <string name="reportBugInDiscord">在 Lichess 的 Discord 伺服器</string>
+  <string name="reportBugInDiscord">在 Chess-Online 的 Discord 伺服器</string>
   <string name="illegalPawnCapture">不合規則的移動(吃法)</string>
   <string name="illegalCastling">后的不合規則移動或不可能的移動</string>
   <string name="castlingRules">請確定后的移動的規則</string>
@@ -44,10 +44,10 @@
   <string name="ifLegit">如果你的上訴是合理的，我們會盡快撤除懲處。</string>
   <string name="otherRestriction">其他限制</string>
   <string name="collaboration">合作，法律，商業等</string>
-  <string name="monetizing">在 Lichess 上獲得營利</string>
-  <string name="buyingLichess">買下 Lichess</string>
-  <string name="authorizationToUse">Lichess 的使用授權</string>
-  <string name="welcomeToUse">歡迎您使用 Lichess 進行活動，甚至用於商業活動。</string>
+  <string name="monetizing">在 Chess-Online 上獲得營利</string>
+  <string name="buyingLichess">買下 Chess-Online</string>
+  <string name="authorizationToUse">Chess-Online 的使用授權</string>
+  <string name="welcomeToUse">歡迎您使用 Chess-Online 進行活動，甚至用於商業活動。</string>
   <string name="noneOfTheAbove">以上皆非</string>
   <string name="sendEmailAt">請傳送郵件到 %s</string>
 </resources>

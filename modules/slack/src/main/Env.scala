@@ -27,7 +27,7 @@ final class Env(
   lazy val api: SlackApi = wire[SlackApi]
 
   if (mode == Mode.Prod) {
-    api.publishInfo("Lichess has started!")
+    api.publishInfo("Chess-Online has started!")
     Lilakka.shutdown(shutdown, _.PhaseBeforeServiceUnbind, "Tell slack")(api.stop _)
   }
 

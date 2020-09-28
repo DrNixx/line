@@ -235,7 +235,7 @@
   </plurals>
   <string name="exportGames">Eksportear partijen</string>
   <string name="ratingRange">Ratingberik</string>
-  <string name="thisAccountViolatedTos">Dit akkount hat de regels fan de Lichess Tsjinstbetingsten oertrêden</string>
+  <string name="thisAccountViolatedTos">Dit akkount hat de regels fan de Chess-Online Tsjinstbetingsten oertrêden</string>
   <string name="thisPlayerArtificiallyIncreasesTheirRating">Dizze spiler fergruttet / fermindert har rating keunstmjittich</string>
   <string name="openingExplorerAndTablebase">Openingsblêder &amp; tablebase</string>
   <string name="takeback">Set werom</string>
@@ -287,7 +287,7 @@
   <string name="usernameSuffixInvalid">Oan de ein fan de brûkersnamme moat in letter of in sifer komme.</string>
   <string name="usernameCharsInvalid">De brûkersnamme kin allinne mar bestean út letter, sifers, ûnderstrekingsteken en keppelteken.</string>
   <string name="usernameUnacceptable">Dizze brûkersnamme kin der net op troch.</string>
-  <string name="directlySupportLichess">Lichess daliks stypje</string>
+  <string name="directlySupportLichess">Chess-Online daliks stypje</string>
   <string name="playChessInStyle">Skaak yn styl</string>
   <string name="chessBasics">Wêr\'t it by skaken om giet</string>
   <string name="invalidPgn">Unjildige PGN</string>

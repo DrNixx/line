@@ -11,8 +11,8 @@
   <string name="lost2FA">Mi-am pierdut accesul la codurile mele de autentificare in doi pași</string>
   <string name="doPasswordReset">Completează resetarea parolei pentru a elimina al doilea pas</string>
   <string name="accountSupport">Am nevoie de suport pentru cont</string>
-  <string name="wantTitle">Vreau ca titlul meu să fie afișat pe Lichess</string>
-  <string name="visitTitleConfirmation">Pentru a afișa titlul dvs. pe profilul Lichess și pentru a participa la Titled Arenas, vizitați pagina de confirmare a titlului</string>
+  <string name="wantTitle">Vreau ca titlul meu să fie afișat pe Chess-Online</string>
+  <string name="visitTitleConfirmation">Pentru a afișa titlul dvs. pe profilul Chess-Online și pentru a participa la Titled Arenas, vizitați pagina de confirmare a titlului</string>
   <string name="wantCloseAccount">Vreau să îmi închid contul</string>
   <string name="closeYourAccount">Puteți închide contul dvs. pe această pagină</string>
   <string name="doNotAskByEmail">Nu ne cereți prin e-mail să închidem un cont, nu îl vom face.</string>
@@ -36,10 +36,10 @@
   <string name="doNotMessageModerators">Nu trimite mesaje directe către moderatori.</string>
   <string name="onlyReports">Numai operatorii care raportează prin intermediul formularului de raport sunt eficienţi.</string>
   <string name="wantReportBug">Vreau să raportez o eroare</string>
-  <string name="reportBugInForum">În secțiunea Lichess Feedback a forumului</string>
-  <string name="reportWebsiteIssue">Ca o problemă a site-ului Lichess pe GitHub</string>
-  <string name="reportMobileIssue">Ca o problemă a aplicației mobile Lichess pe GitHub</string>
-  <string name="reportBugInDiscord">Pe serverul de Discord Lichess</string>
+  <string name="reportBugInForum">În secțiunea Chess-Online Feedback a forumului</string>
+  <string name="reportWebsiteIssue">Ca o problemă a site-ului Chess-Online pe GitHub</string>
+  <string name="reportMobileIssue">Ca o problemă a aplicației mobile Chess-Online pe GitHub</string>
+  <string name="reportBugInDiscord">Pe serverul de Discord Chess-Online</string>
   <string name="howToReportBug">Vă rugăm să descrieți cum arată eroarea, ce v-ați așteptat să se întâmple în schimb, și pașii pentru a reproduce eroarea.</string>
   <string name="illegalPawnCapture">Capturarea ilegală a pionului</string>
   <string name="calledEnPassant">Se numeşte „en passant” şi este unul dintre regulile şahului.</string>

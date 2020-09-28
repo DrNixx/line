@@ -18,7 +18,7 @@ final class AutomaticEmail(
 
   val regards = """Regards,
 
-The Lichess team"""
+The Chess-Online team"""
 
   def welcome(user: User, email: EmailAddress)(implicit lang: Lang): Funit = {
     val profileUrl = s"$baseUrl/@/${user.id}"
@@ -49,7 +49,7 @@ ${Mailgun.txt.serviceNote}
 
       val body = s"""Hello,
 
-Thank you for confirming your $title title on Lichess.
+Thank you for confirming your $title title on Chess-Online.
 It is now visible on your profile page: $baseUrl/@/${user.id}.
 
 $regards
@@ -75,7 +75,7 @@ ${Mailgun.txt.serviceNote}
         implicit val lang = userLang(user)
         val body          = s"""Hello,
 
-It is our pleasure to welcome you as a Lichess coach.
+It is our pleasure to welcome you as a Chess-Online coach.
 Your coach profile awaits you on $baseUrl/coach/edit.
 
 $regards

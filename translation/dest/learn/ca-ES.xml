@@ -80,26 +80,26 @@ cap peça no defesa!</string>
   <string name="checkInOne">Escac en un</string>
   <string name="attackTheOpponentsKing">Atacar el rei de l\'oponent</string>
   <string name="checkInOneIntro">Per posar en escac a l\'oponent, ataca el seu rei. L\'ha de defendre!</string>
-  <string name="checkInOneGoal">Amenaça el rei de l\'oponent 
+  <string name="checkInOneGoal">Amenaça el rei de l\'oponent
 en un moviment!</string>
   <string name="checkInOneComplete">Felicitats! Has posat en escac a l\'oponent, obligant-lo a defensar el seu rei!</string>
   <string name="outOfCheck">Sortir de l\'escac</string>
   <string name="defendYourKing">Defensa el teu rei</string>
   <string name="outOfCheckIntro">Ets en escac! Has de fugir o bloquejar l\'atac.</string>
   <string name="escapeWithTheKing">Escapa amb el rei!</string>
-  <string name="theKingCannotEscapeButBlock">El rei no pot fugir, 
+  <string name="theKingCannotEscapeButBlock">El rei no pot fugir,
 però pot bloquejar l\'atac!</string>
-  <string name="youCanGetOutOfCheckByTaking">Pots sortir de l\'escac 
+  <string name="youCanGetOutOfCheckByTaking">Pots sortir de l\'escac
 prenent la peça atacant.</string>
-  <string name="thisKnightIsCheckingThroughYourDefenses">El cavall et dóna escac 
+  <string name="thisKnightIsCheckingThroughYourDefenses">El cavall et dóna escac
 a través de les teves defenses!</string>
-  <string name="escapeOrBlock">Escapa amb el rei 
+  <string name="escapeOrBlock">Escapa amb el rei
 o bloqueja l\'atac!</string>
   <string name="outOfCheckComplete">Felicitats! El teu rei no por ser mai capturat, assegura\'t que pots defendre\'l contra un escac!</string>
   <string name="mateInOne">Escac i mat en un</string>
   <string name="defeatTheOpponentsKing">Derrota el rei de l\'oponent</string>
   <string name="mateInOneIntro">Guanyes quan el teu oponent no es pot defendre contra un escac.</string>
-  <string name="attackYourOpponentsKing">Ataca el rei del teu oponent 
+  <string name="attackYourOpponentsKing">Ataca el rei del teu oponent
 de forma que no es pugui defendre!</string>
   <string name="mateInOneComplete">Felicitats! Així és com es guanya als escacs!</string>
   <string name="intermediate">Intermedi</string>
@@ -125,25 +125,25 @@ fer un moviment per continuar.</string>
   <string name="castling">Enroc</string>
   <string name="theSpecialKingMove">El moviment especial del rei</string>
   <string name="castlingIntro">Assegura el rei, i desplega la teva torre per l\'atac!</string>
-  <string name="castleKingSide">Mou el rei dues caselles 
+  <string name="castleKingSide">Mou el rei dues caselles
 per enrocar al costat de rei!</string>
-  <string name="castleQueenSide">Mou el rei dues caselles 
+  <string name="castleQueenSide">Mou el rei dues caselles
 per enrocar al costat de dama!</string>
   <string name="theKnightIsInTheWay">El cavall està en el camí!
 mou-lo, llavors enroca en curt.</string>
-  <string name="castleKingSideMovePiecesFirst">Enroca en curt! 
+  <string name="castleKingSideMovePiecesFirst">Enroca en curt!
 Necessites moure les peces primer.</string>
   <string name="castleQueenSideMovePiecesFirst">Enroca en llarg!
 Cal moure les peces primer.</string>
-  <string name="youCannotCastleIfMoved">No pots enrocar si 
-el rei o la torre 
+  <string name="youCannotCastleIfMoved">No pots enrocar si
+el rei o la torre
 s\'han mogut ja.</string>
-  <string name="youCannotCastleIfAttacked">No pots enrocar si 
+  <string name="youCannotCastleIfAttacked">No pots enrocar si
 el rei és atacat en el camí.
 Bloqueja l\'escac i aleshores enroca!</string>
-  <string name="findAWayToCastleKingSide">Troba la forma 
+  <string name="findAWayToCastleKingSide">Troba la forma
 d\'enrocar en curt!</string>
-  <string name="findAWayToCastleQueenSide">Troba la forma 
+  <string name="findAWayToCastleQueenSide">Troba la forma
 d\'enrocar en llarg!</string>
   <string name="castlingComplete">Felicitats! Convé enrocar en gairebé totes les partides.</string>
   <string name="enPassant">«En passant»</string>
@@ -169,33 +169,33 @@ si el seu peó és a la fila 5.</string>
   <string name="advanced">Avançat</string>
   <string name="pieceValue">Valor de la peça</string>
   <string name="evaluatePieceStrength">Avaluar la força de la peça</string>
-  <string name="pieceValueIntro">Les peces amb alta mobilitat tenen un valor més alt! 
-Dama = 9 
-Torre = 5 
-Àlfil = 3 
-Cavall = 3 
-Peó = 1 
+  <string name="pieceValueIntro">Les peces amb alta mobilitat tenen un valor més alt!
+Dama = 9
+Torre = 5
+Àlfil = 3
+Cavall = 3
+Peó = 1
 El rei no té preu! Perdre\'l vol dir perdre el joc.</string>
-  <string name="queenOverBishop">Captura la peça 
+  <string name="queenOverBishop">Captura la peça
 amb el valor més alt!
 Dama &gt; Àlfil</string>
   <string name="takeThePieceWithTheHighestValue">Captura la peça amb el valor més alt!</string>
-  <string name="pieceValueComplete">Felicitats! Saps el valor del material! 
-Dama = 9 
-Torre = 5 
-Àlfil = 3 
-Cavall = 3 
+  <string name="pieceValueComplete">Felicitats! Saps el valor del material!
+Dama = 9
+Torre = 5
+Àlfil = 3
+Cavall = 3
 Peó = 1</string>
   <string name="checkInTwo">Escac en dos</string>
   <string name="twoMovesToGiveCheck">Dos moviments per fer un escac</string>
   <string name="checkInTwoIntro">Trobar la combinació correcta de dos moviments que posa en escac el rei del contrincant!</string>
-  <string name="checkInTwoGoal">Amenaça el rei de l\'oponent 
+  <string name="checkInTwoGoal">Amenaça el rei de l\'oponent
 en dos moviments!</string>
   <string name="checkInTwoComplete">Felicitats! Has posat en escac a l\'oponent, obligant-lo a defensar el seu rei!</string>
   <string name="whatNext">I ara què ve?</string>
   <string name="youKnowHowToPlayChess">Ja saps com jugar als escacs, enhorabona! Vols convertir-te en un jugador més fort?</string>
   <string name="register">Registra\'t</string>
-  <string name="getAFreeLichessAccount">Obtenir un compte gratuït a Lichess</string>
+  <string name="getAFreeLichessAccount">Obtenir un compte gratuït a Chess-Online</string>
   <string name="practice">Pràctica</string>
   <string name="learnCommonChessPositions">Aprendre posicions comunes d\'escacs</string>
   <string name="puzzles">Problemes</string>

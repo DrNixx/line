@@ -154,7 +154,7 @@ Allow: /
       Ok {
         Json.obj(
           "name"             -> env.net.domain.value,
-          "short_name"       -> "Lichess",
+          "short_name"       -> "Chess-Online",
           "start_url"        -> "/",
           "display"          -> "standalone",
           "background_color" -> "#161512",

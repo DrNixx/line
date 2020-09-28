@@ -275,7 +275,7 @@
     <item quantity="one">Dar %s segundo</item>
     <item quantity="other">Dar %s segundos</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Esta conta violou os termos de serviço do Lichess</string>
+  <string name="thisAccountViolatedTos">Esta conta violou os termos de serviço do Chess-Online</string>
   <string name="thisPlayerArtificiallyIncreasesTheirRating">Este jogador aumentou/diminuiu a sua pontuação de forma artificial</string>
   <string name="openingExplorerAndTablebase">Explorador de aberturas &amp; tabelas de finais</string>
   <string name="takeback">Voltar uma jogada atrás</string>
@@ -449,8 +449,8 @@ análise de computador, sala de chat do jogo e link de partilha.</string>
   <string name="country">País</string>
   <string name="socialMediaLinks">Links das redes sociais</string>
   <string name="inlineNotation">Anotações em linha</string>
-  <string name="watchLichessTV">Assistir à TV Lichess</string>
-  <string name="previouslyOnLichessTV">Anteriormente na TV Lichess</string>
+  <string name="watchLichessTV">Assistir à TV Chess-Online</string>
+  <string name="previouslyOnLichessTV">Anteriormente na TV Chess-Online</string>
   <string name="onlinePlayers">Jogadores online</string>
   <string name="activeToday">Ativos hoje</string>
   <string name="activePlayers">Jogadores ativos</string>
@@ -470,7 +470,7 @@ análise de computador, sala de chat do jogo e link de partilha.</string>
   <string name="butYouCanKeepTrying">Mas podes continuar a tentar.</string>
   <string name="success">Sucesso</string>
   <string name="wasThisPuzzleAnyGood">Este problema foi bom?</string>
-  <string name="pleaseVotePuzzle">Ajuda o Lichess a melhorar através do teu voto, usando as setas para cima ou para baixo:</string>
+  <string name="pleaseVotePuzzle">Ajuda o Chess-Online a melhorar através do teu voto, usando as setas para cima ou para baixo:</string>
   <string name="thankYou">Obrigado!</string>
   <string name="ratingX">Pontuação: %s</string>
   <string name="hidden">oculta</string>
@@ -579,7 +579,7 @@ análise de computador, sala de chat do jogo e link de partilha.</string>
   <string name="clock">Relógio</string>
   <string name="unauthorizedError">Acesso negado</string>
   <string name="noInternetConnection">Sem conexão à internet. Ainda podes jogar offline a partir do menu.</string>
-  <string name="connectedToLichess">Agora estás conectado ao lichess.org</string>
+  <string name="connectedToLichess">Agora estás conectado ao chess-online.com</string>
   <string name="signedOut">Terminaste sessão</string>
   <string name="loginSuccessful">Iniciaste sessão</string>
   <string name="playOnTheBoardOffline">Contra um amigo</string>
@@ -645,7 +645,7 @@ análise de computador, sala de chat do jogo e link de partilha.</string>
   <string name="simulClockHint">Configuração de incrementos no relógio. Quanto mais jogadores admitires, mais tempo poderás necessitar.</string>
   <string name="simulAddExtraTime">Podes acrescentar tempo adicional ao teu relógio, para te ajudar a lidar com a simultânea.</string>
   <string name="simulHostExtraTime">Tempo adicional do anfitrião</string>
-  <string name="lichessTournaments">Torneios do Lichess</string>
+  <string name="lichessTournaments">Torneios do Chess-Online</string>
   <string name="tournamentFAQ">Perguntas frequentes sobre torneios em arena</string>
   <string name="tournamentOfficial">Oficial</string>
   <string name="timeBeforeTournamentStarts">Contagem decrescente para o início do torneio</string>
@@ -679,8 +679,8 @@ análise de computador, sala de chat do jogo e link de partilha.</string>
   <string name="ifYouDoNotSeeTheEmailCheckOtherPlaces">Se você não vires o e-mail, verifica outros locais onde este possa estar, como pastas de lixo, spam, social ou outras.</string>
   <string name="weHaveSentYouAnEmailTo">Enviámos-te um e-mail para %s. Clica no link nesse e-mail para redefinires a tua palavra-passe.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Ao criares uma conta, concordas comprometeres-te com os nossos %s.</string>
-  <string name="networkLagBetweenYouAndLichess">Atraso na rede entre ti e o Lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Tempo para processar um movimento no servidor do Lichess</string>
+  <string name="networkLagBetweenYouAndLichess">Atraso na rede entre ti e o Chess-Online</string>
+  <string name="timeToProcessAMoveOnLichessServer">Tempo para processar um movimento no servidor do Chess-Online</string>
   <string name="downloadAnnotated">Descarregar a anotação</string>
   <string name="downloadRaw">Descarregar o texto</string>
   <string name="downloadImported">Descarregar a partida importada</string>
@@ -696,7 +696,7 @@ análise de computador, sala de chat do jogo e link de partilha.</string>
   <string name="youHaveAlreadyRegisteredTheEmail">Já registaste o e-mail: %s</string>
   <string name="kidMode">Modo infantil</string>
   <string name="kidModeExplanation">Iso é sobre segurança. No modo infantil, todas as comunicações do site ficam desactivadas. Activa esta opção para os teus filhos ou alunos, para protegê-los de outros utilizadores da internet.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">No modo criança, o logótipo do Lichess fica com um ícone %s para que saibas que as tuas crianças estão seguras.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">No modo criança, o logótipo do Chess-Online fica com um ícone %s para que saibas que as tuas crianças estão seguras.</string>
   <string name="enableKidMode">Ativar o modo infantil</string>
   <string name="disableKidMode">Desativar o modo infantil</string>
   <string name="security">Segurança</string>
@@ -704,7 +704,7 @@ análise de computador, sala de chat do jogo e link de partilha.</string>
   <string name="alternativelyYouCanX">Alternativamente, podes %s.</string>
   <string name="revokeAllSessions">desativar todas as sessões</string>
   <string name="playChessEverywhere">Joga xadrez em qualquer lugar</string>
-  <string name="asFreeAsLichess">Tão gratuito quanto o Lichess</string>
+  <string name="asFreeAsLichess">Tão gratuito quanto o Chess-Online</string>
   <string name="builtForTheLoveOfChessNotMoney">Desenvolvido pelo amor ao xadrez, não pelo dinheiro</string>
   <string name="everybodyGetsAllFeaturesForFree">Todos têm todos os recursos gratuitamente</string>
   <string name="zeroAdvertisement">Zero anúncios</string>
@@ -744,7 +744,7 @@ análise de computador, sala de chat do jogo e link de partilha.</string>
   <string name="usernameSuffixInvalid">O nome do utilizador tem de acabar com uma letra ou número.</string>
   <string name="usernameCharsInvalid">O nome do utilizador só pode conter letras, números, underscores ou hífenes.</string>
   <string name="usernameUnacceptable">Este nome de utilizador não é aceitável.</string>
-  <string name="directlySupportLichess">Apoiar o Lichess diretamente</string>
+  <string name="directlySupportLichess">Apoiar o Chess-Online diretamente</string>
   <string name="playChessInStyle">Jogar xadrez com estilo</string>
   <string name="chessBasics">O básico do xadrez</string>
   <string name="coaches">Treinadores</string>
@@ -831,14 +831,14 @@ análise de computador, sala de chat do jogo e link de partilha.</string>
   <string name="tryToWin">Tenta ganhar (ou pelo menos empatar) todas as partida que jogares.</string>
   <string name="resignLostGames">Desiste em partidas perdidas (não deixes o tempo no relógio acabar).</string>
   <string name="temporaryInconvenience">Pedimos desculpa pelo incómodo temporário,</string>
-  <string name="wishYouGreatGames">e desejamos-te grandes jogos no lichess.org.</string>
+  <string name="wishYouGreatGames">e desejamos-te grandes jogos no chess-online.com.</string>
   <string name="thankYouForReading">Obrigado pela leitura!</string>
   <string name="lifetimeScore">Pontuação desde sempre</string>
   <string name="currentMatchScore">Pontuação atual</string>
   <string name="agreementAssistance">Concordo que nunca recorrerei a assistência durante as minhas partidas (de um computador de xadrez, livro, base de dados ou outra pessoa).</string>
   <string name="agreementNice">Concordo que serei sempre repeitoso para os outros jogadores.</string>
   <string name="agreementAccount">Concordo que não criarei várias contas.</string>
-  <string name="agreementPolicy">Concordo que seguirei todas as políticas do Lichess.</string>
+  <string name="agreementPolicy">Concordo que seguirei todas as políticas do Chess-Online.</string>
   <string name="searchOrStartNewDiscussion">Pesquisa ou começa uma nova conversa</string>
   <string name="edit">Editar</string>
   <string name="rapid">Semi-rápidas</string>

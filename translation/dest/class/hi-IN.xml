@@ -33,17 +33,17 @@
   <string name="realName">वास्‍तविक नाम</string>
   <string name="privateWillNeverBeShown">निजी। कक्षा के बाहर कभी नहीं दिखाया जाएगा। याद रखने में मदद करता है कि छात्र कौन है।</string>
   <string name="addStudent">छात्र जोड़ें</string>
-  <string name="lichessProfileXCreatedForY">Lichess प्रोफाइल %1$s ने %2$s के लिए बनाया।</string>
+  <string name="lichessProfileXCreatedForY">Chess-Online प्रोफाइल %1$s ने %2$s के लिए बनाया।</string>
   <string name="studentCredentials">छात्र:%1$s
 उपयोगकर्ता नाम:%2$s
 पासवर्ड:%3$s</string>
-  <string name="inviteALichessAccount">एक Lichess उपयोगकर्ता को आमंत्रित करें</string>
-  <string name="inviteDesc1">यदि छात्र के पास पहले से ही एक Lichess खाता है, तो आप उन्हें कक्षा में आमंत्रित कर सकते हैं।</string>
+  <string name="inviteALichessAccount">एक Chess-Online उपयोगकर्ता को आमंत्रित करें</string>
+  <string name="inviteDesc1">यदि छात्र के पास पहले से ही एक Chess-Online खाता है, तो आप उन्हें कक्षा में आमंत्रित कर सकते हैं।</string>
   <string name="inviteDesc2">वे लिचेस पर एक संदेश प्राप्त करेंगे जिसमें कक्षा में शामिल होने का लिंक होगा।</string>
   <string name="inviteDesc3">महत्वपूर्ण: केवल उन छात्रों को आमंत्रित करें जिन्हें आप जानते हैं, और जो सक्रिय रूप से कक्षा में शामिल होना चाहते हैं।</string>
   <string name="inviteDesc4">अनियंत्रित आमंत्रण कभी भी मनमाने खिलाड़ियों को न भेजें।</string>
-  <string name="createANewLichessAccount">एक नया Lichess खाता बनाएँ</string>
-  <string name="createDesc1">यदि छात्र के पास अभी तक कोई Lichess खाता नहीं है, तो आप उनके लिए यहां एक बना सकते हैं</string>
+  <string name="createANewLichessAccount">एक नया Chess-Online खाता बनाएँ</string>
+  <string name="createDesc1">यदि छात्र के पास अभी तक कोई Chess-Online खाता नहीं है, तो आप उनके लिए यहां एक बना सकते हैं</string>
   <string name="createDesc2">किसी ईमेल पते की आवश्यकता नहीं है। एक पासवर्ड उत्पन्न किया जाएगा, और आपको इसे छात्रो भेजना होगा, इससे वे लॉगिन कर सकते है।</string>
   <string name="createDesc3">महत्वपूर्ण: एक छात्र के पास कई खाते नहीं होने चाहिए।</string>
   <string name="createDesc4">यदि उनके पास पहले से ही एक है, तो आमंत्रित फ़ॉर्म का उपयोग करें।</string>

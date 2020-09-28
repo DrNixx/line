@@ -26,7 +26,7 @@ object Fixtures {
 
 <p>To be honest, this was quite tough to implement, but also fun and totally worth it. The main challenge being that crazyhouse changes the very definition of what a <em>move</em> is; since now it can also be a drop. This change to a key concept of lichess required some rewiring of the program foundations.</p>
 
-<p><em>Please don't ask me for </em><a href="https://en.wikipedia.org/wiki/Bughouse_chess"><em>bughouse</em></a>. Lichess is a game for one board and two players. Now, someone should totally build a new bughouse website/app. It's impossible to integrate into lichess because it's radically unlike chess, structurally speaking.</p>
+<p><em>Please don't ask me for </em><a href="https://en.wikipedia.org/wiki/Bughouse_chess"><em>bughouse</em></a>. Chess-Online is a game for one board and two players. Now, someone should totally build a new bughouse website/app. It's impossible to integrate into lichess because it's radically unlike chess, structurally speaking.</p>
 
 <h2>First crazyhouse tournament</h2>
 
@@ -339,7 +339,7 @@ object Fixtures {
 
 <li><a href="https://www.youtube.com/watch?v=wn87NOBBNl4">Lichess Master Atrophied explains opening principles</a></li>
 
-<li><a href="http://lichess.org/games/search?perf=18&sort.field=d&sort.order=desc">Lichess Crazyhouse Games Database</a></li>
+<li><a href="http://lichess.org/games/search?perf=18&sort.field=d&sort.order=desc">Chess-Online Crazyhouse Games Database</a></li>
 
 <li><a href="http://ficsgames.org/cgi-bin/search.cgi">FICS Crazyhouse Games Database (search for games by cheesybread or tantheman -- the very best!)</a></li>
 

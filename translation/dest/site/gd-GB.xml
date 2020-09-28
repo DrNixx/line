@@ -215,8 +215,8 @@
   <string name="lastName">Sloinneadh</string>
   <string name="biography">Eachdraidh-beatha</string>
   <string name="country">Dùthaich</string>
-  <string name="watchLichessTV">Coimhead air tbh Lichess</string>
-  <string name="previouslyOnLichessTV">Air tbh Lichess roimhe</string>
+  <string name="watchLichessTV">Coimhead air tbh Chess-Online</string>
+  <string name="previouslyOnLichessTV">Air tbh Chess-Online roimhe</string>
   <string name="onlinePlayers">Cluicheadairean air loidhne</string>
   <string name="activeToday">Gnìomhach an-diugh</string>
   <string name="activePlayers">Cluicheadairean gnìomhach</string>
@@ -310,7 +310,7 @@
   <string name="computer">Coimpiutair</string>
   <string name="side">Taobh</string>
   <string name="clock">Uaireadair</string>
-  <string name="connectedToLichess">Tha thu ceangailte ri lichess.org a-nis</string>
+  <string name="connectedToLichess">Tha thu ceangailte ri chess-online.com a-nis</string>
   <string name="signedOut">Chaidh do chlàradh a-mach</string>
   <string name="loginSuccessful">Chaidh do chlàradh a-steach</string>
   <string name="playOfflineComputer">Coimpiutair</string>
@@ -343,7 +343,7 @@
   <string name="sourceCode">Bun-tùs</string>
   <string name="host">Òstair</string>
   <string name="create">Cruthaich</string>
-  <string name="lichessTournaments">Féillean-chluich Lichess</string>
+  <string name="lichessTournaments">Féillean-chluich Chess-Online</string>
   <string name="tournamentOfficial">Oifigeil</string>
   <string name="timeBeforeTournamentStarts">Ùine mus tòisich an fhéill-chluich</string>
   <string name="keyboardShortcuts">Ath-ghoiridean a\' mheur-chlàir</string>

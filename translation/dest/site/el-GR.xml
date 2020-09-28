@@ -143,7 +143,7 @@
   <string name="signIn">Είσοδος</string>
   <string name="youNeedAnAccountToDoThat">Χρειάζεστε λογαριασμό για να το κάνετε αυτό</string>
   <string name="signUp">Εγγραφή</string>
-  <string name="computersAreNotAllowedToPlay">Δεν επιτρέπουμε στους υπολογιστές και παίκτες με υποβοήθηση υπολογιστή να παίζουν στο Lichess. Παρακαλούμε μη δεχτείτε βοήθεια από σκακιστικούς υπολογιστές, βάσεις δεδομένων ή άλλους παίκτες όσο παίζετε εδώ. Επίσης σημειώστε πως αποθαρρύνουμε την δημιουργία πολλών λογαριασμών και υπερβολή σε αυτό θα καταλήξει σε αποκλεισμό.</string>
+  <string name="computersAreNotAllowedToPlay">Δεν επιτρέπουμε στους υπολογιστές και παίκτες με υποβοήθηση υπολογιστή να παίζουν στο Chess-Online. Παρακαλούμε μη δεχτείτε βοήθεια από σκακιστικούς υπολογιστές, βάσεις δεδομένων ή άλλους παίκτες όσο παίζετε εδώ. Επίσης σημειώστε πως αποθαρρύνουμε την δημιουργία πολλών λογαριασμών και υπερβολή σε αυτό θα καταλήξει σε αποκλεισμό.</string>
   <string name="games">Παιχνίδια</string>
   <string name="forum">Φόρουμ</string>
   <string name="xPostedInForumY">Ο χρήστης %1$s έγραψε στη συζήτηση %2$s</string>
@@ -275,7 +275,7 @@
     <item quantity="one">Προσθέστε %s δευτερόλεπτα</item>
     <item quantity="other">Προσθέστε %s δευτερόλεπτα</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Αυτός ο λογαριασμός παραβαίνει τους Όρους Χρήσης του Lichess</string>
+  <string name="thisAccountViolatedTos">Αυτός ο λογαριασμός παραβαίνει τους Όρους Χρήσης του Chess-Online</string>
   <string name="thisPlayerArtificiallyIncreasesTheirRating">Ο παίκτης αυξάνει/μειώνει τεχνητά την βαθμολογία</string>
   <string name="openingExplorerAndTablebase">Εξερευνητής ανοιγμάτων &amp; τελειωμάτων</string>
   <string name="takeback">Ανάκληση κίνησης</string>
@@ -342,7 +342,7 @@
   <string name="continueFromHere">Συνέχεια από εδώ</string>
   <string name="toStudy">Μελέτη</string>
   <string name="importGame">Εισαγωγή παιχνιδιού</string>
-  <string name="importGameExplanation">Επικολλήστε PGN παιχνιδιού για να δημιουργήσετε περιηγήσιμη αναπαραγωγή, 
+  <string name="importGameExplanation">Επικολλήστε PGN παιχνιδιού για να δημιουργήσετε περιηγήσιμη αναπαραγωγή,
 ανάλυση από υπολογιστή, συνομιλία παιχνιδιού και κοινόχρηστο URL.</string>
   <plurals name="nbImportedGames">
     <item quantity="one">%s Εισαγόμενο παιχνίδι</item>
@@ -449,8 +449,8 @@
   <string name="country">Χώρα</string>
   <string name="socialMediaLinks">Σύνδεσμοι κοινωνικών μέσων</string>
   <string name="inlineNotation">Ενσωματωμένη σημειογραφία</string>
-  <string name="watchLichessTV">Παρακολουθήστε Lichess TV</string>
-  <string name="previouslyOnLichessTV">Νωρίτερα στη Tηλεόραση Lichess</string>
+  <string name="watchLichessTV">Παρακολουθήστε Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Νωρίτερα στη Tηλεόραση Chess-Online</string>
   <string name="onlinePlayers">Συνδεδεμένοι παίκτες</string>
   <string name="activeToday">Ενεργοί σήμερα</string>
   <string name="activePlayers">Ενεργοί παίκτες</string>
@@ -579,7 +579,7 @@
   <string name="clock">Χρόνος</string>
   <string name="unauthorizedError">Άρνηση πρόσβασης.</string>
   <string name="noInternetConnection">Χωρίς σύνδεση. Για να παίξετε χωρίς σύνδεση, ανοίξτε το μενού.</string>
-  <string name="connectedToLichess">Έχετε συνδεθεί στο lichess.org</string>
+  <string name="connectedToLichess">Έχετε συνδεθεί στο chess-online.com</string>
   <string name="signedOut">Έχετε αποσυνδεθεί επιτυχώς</string>
   <string name="loginSuccessful">Είσοδος επιτυχής</string>
   <string name="playOnTheBoardOffline">Τοπικά</string>
@@ -744,7 +744,7 @@
   <string name="usernameSuffixInvalid">Το όνομα χρήστη πρέπει να τελειώνει με ένα γράμμα ή έναν αριθμό.</string>
   <string name="usernameCharsInvalid">Το όνομα χρήστη πρέπει να περιέχει μόνο γράμματα, αριθμούς, κάτω παύλες και ενωτικά.</string>
   <string name="usernameUnacceptable">Αυτό το όνομα χρήστη δεν είναι αποδεκτό.</string>
-  <string name="directlySupportLichess">Υποστηρίξτε άμεσα το Lichess</string>
+  <string name="directlySupportLichess">Υποστηρίξτε άμεσα το Chess-Online</string>
   <string name="playChessInStyle">Παίξτε σκάκι με στυλ</string>
   <string name="chessBasics">Τα βασικά στο σκάκι</string>
   <string name="coaches">Προπονητές</string>
@@ -831,14 +831,14 @@
   <string name="tryToWin">Προσπαθήστε να νικήσετε (ή να φέρετε ισοπαλία) σε κάθε παιχνίδι που παίζετε.</string>
   <string name="resignLostGames">Παραιτηθείτε σε παιχνίδια που χάνετε (μην αφήνετε τον χρόνο σας να τελειώσει).</string>
   <string name="temporaryInconvenience">Συγχωρέστε μας για την προσωρινή δυσφορία,</string>
-  <string name="wishYouGreatGames">και σας ευχόμαστε καλές παρτίδες στο lichess.org.</string>
+  <string name="wishYouGreatGames">και σας ευχόμαστε καλές παρτίδες στο chess-online.com.</string>
   <string name="thankYouForReading">Ευχαριστούμε που αφιερώσατε χρόνο για να να τα διαβάσετε!</string>
   <string name="lifetimeScore">Συνολικό σκορ</string>
   <string name="currentMatchScore">Τρέχον σκορ</string>
   <string name="agreementAssistance">Αποδέχομαι ότι ουδέποτε θα λάβω βοήθεια κατά τις παρτίδες μου (από υπολογιστή, βιβλίο, βάση δεδομένων ή άλλο πρόσωπο).</string>
   <string name="agreementNice">Αποδέχομαι ότι πάντα θα επιδεικνύω σεβασμό προς όλους του παίκτες.</string>
   <string name="agreementAccount">Αποδέχομαι ότι δεν θα δημιουργήσω πολλαπλούς λογαριασμούς.</string>
-  <string name="agreementPolicy">Αποδέχομαι ότι θα συμμορφωθώ με όλες τις πολιτικές του Lichess.</string>
+  <string name="agreementPolicy">Αποδέχομαι ότι θα συμμορφωθώ με όλες τις πολιτικές του Chess-Online.</string>
   <string name="searchOrStartNewDiscussion">Αναζήτηση ή έναρξη νέας συνομιλίας</string>
   <string name="edit">Επεξεργασία</string>
   <string name="classical">Κλασικό</string>

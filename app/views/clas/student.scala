@@ -185,12 +185,12 @@ object student {
         div(cls := "student-add__or")("~ or ~"),
         div(cls := "student-add__choice")(
           div(cls := "info")(
-            h2("Create multiple Lichess accounts at once"),
+            h2("Create multiple Chess-Online accounts at once"),
             "You can also ",
             a(href := routes.Clas.studentManyForm(clas.id.value))(
               "use this form"
             ),
-            " to create multiple Lichess accounts from a list of student names."
+            " to create multiple Chess-Online accounts from a list of student names."
           )
         )
       )
@@ -205,7 +205,7 @@ object student {
   )(implicit ctx: Context) =
     bits.layout(trans.clas.addStudent.txt(), Left(clas withStudents students))(
       cls := "box-pad student-add-many",
-      h1("Create multiple Lichess accounts at once"),
+      h1("Create multiple Chess-Online accounts at once"),
       maxStudentsWarning(clas),
       created.nonEmpty option frag(
         flashMessage(cls := "student-add-many__created")(
@@ -217,8 +217,8 @@ object student {
             thead(
               tr(
                 th("Real name"),
-                th("Lichess username"),
-                th("Lichess password")
+                th("Chess-Online username"),
+                th("Chess-Online password")
               )
             ),
             tbody(

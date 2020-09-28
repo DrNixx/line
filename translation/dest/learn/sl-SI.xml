@@ -70,7 +70,7 @@ Ne izgubite svojih.</string>
 Pobegnite grožnji!</string>
   <string name="noEscape">Ni pobega,
 vendar se lahko branite!</string>
-  <string name="dontLetThemTakeAnyUndefendedPiece">Ne dovolite, da vam vzamejo 
+  <string name="dontLetThemTakeAnyUndefendedPiece">Ne dovolite, da vam vzamejo
 nezaščitene figure!</string>
   <string name="combat">Boj</string>
   <string name="captureAndDefendPieces">Vzemite in ubranite figure</string>
@@ -89,7 +89,7 @@ nezaščitene figure!</string>
   <string name="youCanGetOutOfCheckByTaking">Šah lahko obranite, da vzamete napadalno figuro.</string>
   <string name="thisKnightIsCheckingThroughYourDefenses">Skakač daje šah
 skozi vašo obrambo!</string>
-  <string name="escapeOrBlock">Pobegnite s kraljem 
+  <string name="escapeOrBlock">Pobegnite s kraljem
 ali zaščitite napad!</string>
   <string name="outOfCheckComplete">Čestitamo! Vašega kralja ni mogoče vzeti poskrbite, da se ubranite pred šahom!</string>
   <string name="mateInOne">Mat v ena</string>
@@ -102,7 +102,7 @@ tako, da obramba ne bo mogoča!</string>
   <string name="boardSetup">Postavitev figur</string>
   <string name="howTheGameStarts">Kako začeti igro</string>
   <string name="boardSetupIntro">Dve vojski ki stojita nasproti, sta pripravljeni na bitko.</string>
-  <string name="thisIsTheInitialPosition">To je začetna pozicija 
+  <string name="thisIsTheInitialPosition">To je začetna pozicija
 vsake šahovske partije!
 Na nadaljevanje naredite potezo.</string>
   <string name="firstPlaceTheRooks">Najprej postavite trdnjavi!
@@ -166,11 +166,11 @@ premaknil kmeta.</string>
   <string name="pieceValue">Vrednosti figur</string>
   <string name="evaluatePieceStrength">Ocenite moč figur</string>
   <string name="pieceValueIntro">Figure z večjo gibljivostjo štejejo več točk!
-Kraljica = 9 
-Trdnjava = 5 
-Lovec = 3 
-Skakač = 3 
-Kmet = 1 
+Kraljica = 9
+Trdnjava = 5
+Lovec = 3
+Skakač = 3
+Kmet = 1
 Kralj je neprecenljiv! Izgubiti ga, pomeni izgubiti partijo.</string>
   <string name="queenOverBishop">Vzemite figuro
 z največjo vrednostjo!
@@ -178,10 +178,10 @@ Kraljica &gt; Lovec</string>
   <string name="takeThePieceWithTheHighestValue">Vzemite figuro
 z najvišjo vrednostjo!</string>
   <string name="pieceValueComplete">Čestitamo! Poznate vrednosti figur!
-Kraljica = 9 
-Trdnjava = 5 
-Lovec = 3 
-Skakač = 3 
+Kraljica = 9
+Trdnjava = 5
+Lovec = 3
+Skakač = 3
 Kmet = 1</string>
   <string name="checkInTwo">Šah v dve</string>
   <string name="twoMovesToGiveCheck">Dajte šah v dveh pozerah</string>
@@ -192,7 +192,7 @@ v dveh potezah!</string>
   <string name="whatNext">Kaj naprej?</string>
   <string name="youKnowHowToPlayChess">Znate igrati šah, čestitamo! Ali želite postati močnejši šahist?</string>
   <string name="register">Registrirajte se</string>
-  <string name="getAFreeLichessAccount">Naredite si brezplačen Lichess račun</string>
+  <string name="getAFreeLichessAccount">Naredite si brezplačen Chess-Online račun</string>
   <string name="practice">Treniraje</string>
   <string name="learnCommonChessPositions">Naučite se pogostih pozicij</string>
   <string name="puzzles">Problemi</string>

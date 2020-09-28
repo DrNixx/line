@@ -3,10 +3,10 @@
   <string name="activity">Aktivnost</string>
   <string name="hostedALiveStream">Gostil prenos v živo</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">%1$s mesec podpira lichess.org kot %2$s</item>
-    <item quantity="two">%1$s meseca podpira lichess.org kot %2$s</item>
-    <item quantity="few">%1$s mesece podpira lichess.org kot %2$s</item>
-    <item quantity="other">%1$s mesecev podpira lichess.org kot %2$s</item>
+    <item quantity="one">%1$s mesec podpira chess-online.com kot %2$s</item>
+    <item quantity="two">%1$s meseca podpira chess-online.com kot %2$s</item>
+    <item quantity="few">%1$s mesece podpira chess-online.com kot %2$s</item>
+    <item quantity="other">%1$s mesecev podpira chess-online.com kot %2$s</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">Treniral %1$s pozicijo na %2$s</item>

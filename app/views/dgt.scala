@@ -14,9 +14,9 @@ object dgt {
 
   def index(implicit ctx: Context) =
     layout("index")(
-      h1("Lichess <3 DGT (BETA)"),
+      h1("Chess-Online <3 DGT (BETA)"),
       p(
-        "This page allows you to connect your DGT board to Lichess, and to use it for playing games."
+        "This page allows you to connect your DGT board to Chess-Online, and to use it for playing games."
       ),
       br,
       br,
@@ -57,7 +57,7 @@ object dgt {
         h1("DGT - configure"),
         form(action := routes.DgtCtrl.generateToken(), method := "post")(
           st.section(
-            h2("Lichess connectivity"),
+            h2("Chess-Online connectivity"),
             if (token.isDefined)
               p(cls := "text", dataIcon := "E")("You have an OAuth token suitable for DGT play.")
             else
@@ -119,7 +119,7 @@ object dgt {
                 List(("san", "SAN (Nf6)"), ("uci", "UCI (g8f6)"))
               ),
               st.small(cls := "form-help")(
-                """San is the standard on Lichess like "Nf6". UCI is common on engines like "g8f6""""
+                """San is the standard on Chess-Online like "Nf6". UCI is common on engines like "g8f6""""
               )
             ),
             "dgt-speech-keywords" pipe { name =>

@@ -3,7 +3,7 @@
   <string name="activity">Hoạt động</string>
   <string name="hostedALiveStream">Chủ trì một luồng trực tuyến</string>
   <plurals name="supportedNbMonths">
-    <item quantity="other">Đã hỗ trợ lichess.org %1$s tháng như một %2$s</item>
+    <item quantity="other">Đã hỗ trợ chess-online.com %1$s tháng như một %2$s</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="other">Đã luyện tập %1$s vị trí ở %2$s</item>
@@ -47,7 +47,7 @@
   <plurals name="rankedInTournament">
     <item quantity="other">Hạng #%1$s (tốp %2$s%%) với %3$s ván ở %4$s</item>
   </plurals>
-  <string name="signedUp">Đã ghi danh ở lichess.org</string>
+  <string name="signedUp">Đã ghi danh ở chess-online.com</string>
   <plurals name="joinedNbTeams">
     <item quantity="other">Đã gia nhập %s đội</item>
   </plurals>

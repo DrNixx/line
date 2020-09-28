@@ -152,7 +152,7 @@ Bloku la ŝakon, poste aroku!</string>
   <string name="blackJustMovedThePawnByTwoSquares">La nigrulo ĵus movis la peonon du kvadratojn!
 Prenu ĝin pasante.</string>
   <string name="enPassantOnlyWorksImmediately">Preni pasante funkcias nur
-tuj post la koncernata peonmovo 
+tuj post la koncernata peonmovo
 de la kontraŭulo.</string>
   <string name="enPassantOnlyWorksOnFifthRank">Preni pasante funkcias nur
 se via peono staras en kvina vico.</string>
@@ -196,7 +196,7 @@ en du movoj!</string>
   <string name="whatNext">Kio proksime?</string>
   <string name="youKnowHowToPlayChess">Vi scias kiel ludi ŝakon, gratulojn! Ĉu vi volas fariĝi pli forta ludanto?</string>
   <string name="register">Registriĝi</string>
-  <string name="getAFreeLichessAccount">Akiri liberan konton de Lichess</string>
+  <string name="getAFreeLichessAccount">Akiri liberan konton de Chess-Online</string>
   <string name="practice">Praktiki</string>
   <string name="learnCommonChessPositions">Lernu komunajn ŝakajn poziciojn</string>
   <string name="puzzles">Puzloj</string>

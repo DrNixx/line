@@ -254,7 +254,7 @@ object home {
       i("?"),
       p(
         strong("What about other tournament systems?"),
-        "We don't plan to add more tournament systems to Lichess at the moment."
+        "We don't plan to add more tournament systems to Chess-Online at the moment."
       )
     )
   )

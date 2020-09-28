@@ -29,7 +29,7 @@ object faq {
     ) {
       div(cls := "faq small-page box box-pad")(
         h1(cls := "lichess_title")(frequentlyAskedQuestions()),
-        h2("Lichess"),
+        h2("Chess-Online"),
         question(
           "name",
           whyIsLichessCalledLichess.txt(),
@@ -207,7 +207,7 @@ object faq {
           p(
             showYourTitle(
               a(href := routes.Main.verifyTitle())(verificationForm()),
-              a(href := "#lm")("Lichess master (LM)")
+              a(href := "#lm")("Chess-Online master (LM)")
             )
           )
         ),

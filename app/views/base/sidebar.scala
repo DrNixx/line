@@ -59,12 +59,26 @@ object sidebar {
             ),
             icon("а"),
             ul(cls := "sub-menu")(
-              if (ctx.noBot) menuItem("/?any#hook", trans.createAGame(), "О")
+              if (ctx.noBot) menuItem("https://www.chess-online.com/chess/create", trans.createAGame(), "О")
               else menuItem("/?any#friend", trans.playWithAFriend(), "О"),
               ctx.noBot option frag(
                 menuItem(routes.Tournament.home().toString(), trans.arena.arenaTournaments(), "Т"),
                 menuItem(routes.Swiss.home().toString(), trans.swiss.swissTournaments(), "?"),
                 menuItem(routes.Simul.home().toString(), trans.simultaneousExhibitions(), ".")
+              )
+            )
+          ),
+          ctx.noBot option frag(
+            li()(
+              a(href := "javascript:;")(
+                span(cls := "title")(trans.tournaments()),
+                arrow()
+              ),
+              icon("р"),
+              ul(cls := "sub-menu")(
+                menuItem(routes.Tournament.home().toString(), trans.arena.arenaTournaments(), "5"),
+                menuItem(routes.Swiss.home().toString(), trans.swiss.swissTournaments(), "с"),
+                menuItem("https://www.chess-online.com/tournaments", trans.corrsTournaments(), "Ь")
               )
             )
           ),
@@ -88,28 +102,41 @@ object sidebar {
           ),
           li()(
             a(href := "javascript:;")(
-              span(cls := "title")(trans.watch()),
-              arrow()
-            ),
-            icon("v"),
-            ul(cls := "sub-menu")(
-              menuItem(routes.Tv.index().toString(), "Chess TV", "1"),
-              menuItem(routes.Tv.games().toString(), trans.currentGames(), "Q"),
-              ctx.noKid option menuItem(routes.Streamer.index().toString(), trans.streamersMenu(), "п"),
-              menuItem(routes.Relay.index().toString(), trans.broadcast.broadcasts(), "о"),
-              ctx.noBot option menuItem(routes.Video.index().toString(), trans.videoLibrary(), "л")
-            )
-          ),
-          li()(
-            a(href := "javascript:;")(
               span(cls := "title")(trans.community()),
               arrow()
             ),
             icon("в"),
             ul(cls := "sub-menu")(
-              menuItem(routes.User.list().toString(), trans.players(), "Й"),
-              menuItem(routes.Team.home().toString(), trans.team.teams(), "К"),
-              ctx.noKid option menuItem("https://www.chess-online.com/forums", trans.forum(), "Л")
+              menuItem(routes.User.list().toString(), trans.players(), "т"),
+              menuItem("https://www.chess-online.com/teams/list", trans.team.teams(), "у"),
+              menuItem("https://www.chess-online.com/groups/social", trans.team.clubs(), "ф"),
+              menuItem("https://www.chess-online.com/groups/play", trans.team.playGroups(), "х")
+            )
+          ),
+          li()(
+            a(href := "javascript:;")(
+              span(cls := "title")(trans.watch()),
+              arrow()
+            ),
+            icon("v"),
+            ul(cls := "sub-menu")(
+              menuItem(routes.Tv.index().toString(), "Chess-Online TV", "1"),
+              menuItem(routes.Tv.games().toString(), trans.currentGames(), "Q"),
+              ctx.noKid option menuItem(routes.Streamer.index().toString(), trans.streamersMenu(), "п"),
+              menuItem(routes.Relay.index().toString(), trans.broadcast.broadcasts(), "о")
+            )
+          ),
+          ctx.noBot option frag(
+            li()(
+              a(href := "javascript:;")(
+                span(cls := "title")(trans.library()),
+                arrow()
+              ),
+              icon("ш"),
+              ul(cls := "sub-menu")(
+                menuItem("https://www.chess-online.com/library/index", trans.chessBooks(), "щ"),
+                menuItem(routes.Video.index().toString(), trans.videoLibrary(), "л")
+              )
             )
           ),
           li()(
@@ -126,6 +153,19 @@ object sidebar {
               menuItem(routes.Search.index().toString(), trans.search.advancedSearch(), "y")
             )
           ),
+          li()(
+            a(href := "javascript:;")(
+              span(cls := "title")(trans.help()),
+              arrow()
+            ),
+            icon("ъ"),
+            ul(cls := "sub-menu")(
+              menuItem("https://www.chess-online.com/help/index", trans.information()),
+              menuItem("https://www.chess-online.com/feedback", trans.feedback())
+            )
+          ),
+          ctx.noKid option menuItem("https://www.chess-online.com/forums", trans.forum(), "Л"),
+          ctx.noKid option menuItem("https://www.chess-online.com/membership/club", trans.membership(), "ы"),
         )
       )
     )

@@ -47,7 +47,7 @@ Pobjegni i savladaj zvijezde!</string>
   <string name="thePawn">Pješak</string>
   <string name="itMovesForwardOnly">Kreće se samo naprijed</string>
   <string name="pawnIntro">Pješaci su slabi, ali imaju puno potencijala.</string>
-  <string name="pawnsMoveOneSquareOnly">Pješaci se pomiču za samo jedno polje. 
+  <string name="pawnsMoveOneSquareOnly">Pješaci se pomiču za samo jedno polje.
 Ali kada dosegnu drugu stranu ploče, postaju jedna od snažnijih figura!</string>
   <string name="mostOfTheTimePromotingToAQueenIsBest">Većinu vremena najbolja opcija je promovirati u damu.
 Ali ponekad i skakač može poslužiti!</string>
@@ -78,7 +78,7 @@ I nemoj izgubiti svoje.</string>
   <string name="protectionComplete">Čestitke! Figura koju ne izgubiš je figura koju dobiješ!</string>
   <string name="escape">Pod napadom si!
 Pobjegni prijetnji!</string>
-  <string name="noEscape">Nema bijega, 
+  <string name="noEscape">Nema bijega,
 ali možeš braniti!</string>
   <string name="dontLetThemTakeAnyUndefendedPiece">Nemoj mu dopustiti da uzme
 bilo koju nebranjenu figuru!</string>
@@ -95,7 +95,7 @@ bilo koju nebranjenu figuru!</string>
   <string name="defendYourKing">Obrani svog kralja</string>
   <string name="outOfCheckIntro">Pod šahom si! Moraš pobjeći ili blokirati napad.</string>
   <string name="escapeWithTheKing">Pobjegni kraljem!</string>
-  <string name="theKingCannotEscapeButBlock">Kralj ne može pobjeći, 
+  <string name="theKingCannotEscapeButBlock">Kralj ne može pobjeći,
 ali možeš blokirati napad!</string>
   <string name="youCanGetOutOfCheckByTaking">Možeš se maknuti iz šaha
 uzimanjem protivničke figure.</string>
@@ -144,14 +144,14 @@ Ali prvo moraš pomaknuti figure.</string>
   <string name="castleQueenSideMovePiecesFirst">Napravi veliku rokadu!
 Ali prvo moraš pomaknuti figure.</string>
   <string name="youCannotCastleIfMoved">Ne možeš napraviti rokadu ako
-se kralj već pomaknuo 
+se kralj već pomaknuo
 ili se top već pomaknuo.</string>
   <string name="youCannotCastleIfAttacked">Ne možeš rokirati ako bi
 kralj u međuvremenu prošao kroz šah.
 Blokiraj šah i tek onda rokiraj!</string>
-  <string name="findAWayToCastleKingSide">Pronađi način 
+  <string name="findAWayToCastleKingSide">Pronađi način
 za malu rokadu!</string>
-  <string name="findAWayToCastleQueenSide">Pronađi način 
+  <string name="findAWayToCastleQueenSide">Pronađi način
 za veliku rokadu!</string>
   <string name="castlingComplete">Čestitke! Gotovo uvijek bi trebao rokirati u partiji.</string>
   <string name="enPassant">En passant</string>
@@ -187,7 +187,7 @@ Kralj je neprocjenjiv! Izgubiti ga bi značilo izgubiti partiju.</string>
   <string name="queenOverBishop">Uzmi figure
 s najvećom vrijednošću!
 Dama &gt; Lovac</string>
-  <string name="takeThePieceWithTheHighestValue">Uzmi figuru 
+  <string name="takeThePieceWithTheHighestValue">Uzmi figuru
 s najvećom vrijednošću!</string>
   <string name="pieceValueComplete">Čestitke! Znaš vrijednost materijala!
 Dama = 9
@@ -198,13 +198,13 @@ Pješak = 1</string>
   <string name="checkInTwo">Šah u dva poteza</string>
   <string name="twoMovesToGiveCheck">Dva poteza za davanje šaha</string>
   <string name="checkInTwoIntro">Pronađi najbolju kombinaciju dvaju poteza koji šahiraju protivnikovog kralja!</string>
-  <string name="checkInTwoGoal">Zaprijeti protivničkom kralju 
+  <string name="checkInTwoGoal">Zaprijeti protivničkom kralju
 u dva poteza!</string>
   <string name="checkInTwoComplete">Čestitke! Šahirao si protivnika, prisiljavajući ga da obrani svoga protivnika!</string>
   <string name="whatNext">Što dalje?</string>
   <string name="youKnowHowToPlayChess">Sada znaš igrati šah, čestitke! Želiš li postati jači igrač?</string>
   <string name="register">Registriraj se</string>
-  <string name="getAFreeLichessAccount">Napravi besplatni Lichess račun</string>
+  <string name="getAFreeLichessAccount">Napravi besplatni Chess-Online račun</string>
   <string name="practice">Vježbaj</string>
   <string name="learnCommonChessPositions">Nauči uobičajene šahovske pozicije</string>
   <string name="puzzles">Problemi</string>

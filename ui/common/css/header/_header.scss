@@ -42,13 +42,14 @@
 }
 
 .site-title-nav {
-  display: flex;
+  display: none;
   justify-content: center;
-  align-items: center;
-  flex-grow: 1;
 
   @include breakpoint($mq-medium) {
     justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
   }
   
   .brand {

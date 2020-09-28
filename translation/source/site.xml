@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
+  <string name="library">Library</string>
+  <string name="chessBooks">Chess books</string>
+  <string name="helpMenu">Info &amp; help</string>
+  <string name="information">Information</string>
+  <string name="feedback">Feedback</string>
+  <string name="membership">Club Chess-Online</string>
+  <string name="corrsTournaments">Correcpondence</string>
+  <string name="copyright">© Chess-Online Network</string>
+  <string name="basedOn">Based on Lila server</string>
+  <string name="withLove">With love to Chess!</string>
+
   <string name="playWithAFriend">Play with a friend</string>
   <string name="playWithTheMachine">Play with the computer</string>
   <string name="toInviteSomeoneToPlayGiveThisUrl">To invite someone to play, give this URL</string>

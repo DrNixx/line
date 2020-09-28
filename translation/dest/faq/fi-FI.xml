@@ -2,11 +2,11 @@
 <resources>
   <string name="faqAbbreviation">FAQ</string>
   <string name="frequentlyAskedQuestions">Usein kysyttyjä kysymyksiä</string>
-  <string name="whyIsLichessCalledLichess">Miksi Lichessin nimi on Lichess?</string>
-  <string name="lichessCombinationLiveLightLibrePronounced">Lichess on sanojen live/light/libre ja chess yhdistelmä. Se lausutaan näin: %1$s.</string>
+  <string name="whyIsLichessCalledLichess">Miksi Lichessin nimi on Chess-Online?</string>
+  <string name="lichessCombinationLiveLightLibrePronounced">Chess-Online on sanojen live/light/libre ja chess yhdistelmä. Se lausutaan näin: %1$s.</string>
   <string name="leechess">li-tšes</string>
   <string name="hearItPronouncedBySpecialist"> Kuuntele se asiantuntijan lausumana.</string>
-  <string name="whyLiveLightLibre">Live, koska pelejä pelataan ja katsellaan reaaliajassa 24 tuntia päivässä; light (kevyt) ja libre (vapaa) siksi, että Lichess perustuu avoimelle lähdekoodille, eikä sitä rasita toisia nettisivuja turmeleva omisteinen roina.</string>
+  <string name="whyLiveLightLibre">Live, koska pelejä pelataan ja katsellaan reaaliajassa 24 tuntia päivässä; light (kevyt) ja libre (vapaa) siksi, että Chess-Online perustuu avoimelle lähdekoodille, eikä sitä rasita toisia nettisivuja turmeleva omisteinen roina.</string>
   <string name="whyIsLilaCalledLila">Niin ikään Lichessin lähdekoodi, %1$s, tarkoittaa \"li[chess in sca]la\", sillä suurin osa Lichessistä on kirjoitettu %2$slla, intuitiivisella ohjelmointikielellä.</string>
   <string name="howCanIContributeToLichess">Kuinka voin tukea Lichessiä?</string>
   <string name="lichessPoweredByDonationsAndVolunteers">Lichessiä pidetään yllä tukijoiden lahjoituksilla ja vapaaehtoisten ryhmän ponnisteluilla.</string>
@@ -15,25 +15,25 @@
   <string name="breakdownOfOurCosts">juoksevista kuluistamme</string>
   <string name="otherWaysToHelp">muitakin tapoja auttaa</string>
   <string name="areThereWebsitesBasedOnLichess">Onko olemassa Lichessiin perustuvia nettisivuja?</string>
-  <string name="yesLichessInspiredOtherOpenSourceWebsites">On. Lichess on tosiaankin inspiroinut muita avoimen lähdekoodin sivustoja, jotka käyttävät meidän %1$samme, %2$s:amme, tai %3$samme.</string>
+  <string name="yesLichessInspiredOtherOpenSourceWebsites">On. Chess-Online on tosiaankin inspiroinut muita avoimen lähdekoodin sivustoja, jotka käyttävät meidän %1$samme, %2$s:amme, tai %3$samme.</string>
   <string name="fairPlay">Reilu peli</string>
   <string name="whyFlaggedRatingManipulationOrCheater">Miksi minulla on merkintä vahvuusluvun keinotekoisesta manipuloinnista (löysäilystä ja boostaamisesta) tai tietokoneavusta?</string>
   <string name="cheatDetectionMethods">Lichessillä on vahvat paljastusmenetelmät ja hyvin kattava prosessi todisteiden tarkastamiseen ja päätöksen tekoon. Prosessiin osallistuu usein monta moderaattoria, ja se voi kestää kauan. Merkintää lukuun ottamatta emme lähde yksittäistapauksissa erittelemään todisteita emmekä päätöksentekoprosessia. Jos tekisimme niin, paljastumisen välttäminen helpottuisi tulevaisuudessa, ja hyödyttömiä keskusteluja voisi herätä. Niihin kuluva aika ja vaiva on parasta käyttää muihin tärkeisiin asioihin. Käyttäjät voivat vedota meihin lähettämällä sähköpostin osoitteeseen %1$s, mutta päätöksiä muutetaan hyvin harvoin.</string>
   <string name="whenAmIEligibleRatinRefund">Milloin voin saada huijaajilta automaattisen vahvuusluvun hyvityksen?</string>
-  <string name="ratingRefundExplanation">Minuutti siitä, kun pelaaja on merkitty, hänen viimeiset 40 pisteytettyä peliään viimeiseltä 3 päivältä otetaan käsittelyyn. Jos olit hänen vastustajansa noissa peleissä, vahvuuslukusi heikkeni (tappion tai tasapelin takia) eikä se ole väliaikainen, saat vahvuuslukuusi hyvityksen. Hyvityksen yläraja määräytyy huippuvahvuuslukusi sekä pelin jälkeisen vahvuuslukusi kehittymisen perusteella. 
+  <string name="ratingRefundExplanation">Minuutti siitä, kun pelaaja on merkitty, hänen viimeiset 40 pisteytettyä peliään viimeiseltä 3 päivältä otetaan käsittelyyn. Jos olit hänen vastustajansa noissa peleissä, vahvuuslukusi heikkeni (tappion tai tasapelin takia) eikä se ole väliaikainen, saat vahvuuslukuusi hyvityksen. Hyvityksen yläraja määräytyy huippuvahvuuslukusi sekä pelin jälkeisen vahvuuslukusi kehittymisen perusteella.
   (Jos esimerkiksi vahvuuslukusi on noussut kovasti noiden pelien jälkeen, et ehkä saa hyvitystä lainkaan tai vain osittaisen hyvityksen.) Hyvitys ei koskaan voi olla 150 pistettä enempää.</string>
   <string name="preventLeavingGameWithoutResigning">Mitä tehdään pelaajille, jotka jättävät pelejä kesken luovuttamatta?</string>
   <string name="leavingGameWithoutResigningExplanation">Jos vastustajasi lähtee usein peleistä tai jättää niitä kesken, he saavat pelikiellon, eli he eivät väliaikaisesti voi pelata pelejä. Tämä näkyy julkisesti heidän käyttäjäprofiilissaan. Jos tämä käytös jatkuu, pelikiellon pituus kasvaa – ja pitkittynyt tällainen käytös voi johtaa tunnuksen sulkemiseen.</string>
   <string name="howCanIBecomeModerator">Kuinka voin päästä moderaattoriksi?</string>
   <string name="youCannotApply">Moderaattoriksi ei voi hakea. Jos me huomaamme jonkun, joka meidän mielestämme olisi hyvä moderaattori, me otamme häneen suoraan yhteyttä.</string>
   <string name="isCorrespondenceDifferent">Onko kirjeshakki erilaista kuin tavallinen shakki?</string>
-  <string name="youCanUseOpeningBookNoEngine">Lichessissä kirjeshakin sääntöjen suurin ero on se, että avauskirjojen käyttö on sallittu. Tietokoneanalyysi on kuitenkin kielletty, ja sen käyttö johtaa merkintään tietokoneavusta. Vaikka ICCF hyväksyy tietokoneanalyysin kirjeshakissa, Lichess ei hyväksy sitä.</string>
-  <string name="gameplay" comment="gameplay&#10;&#10;A heading under https://lichess.org/faq (as with other strings under the FAQ file). You are free to translate it loosely.">Pelaaminen</string>
+  <string name="youCanUseOpeningBookNoEngine">Lichessissä kirjeshakin sääntöjen suurin ero on se, että avauskirjojen käyttö on sallittu. Tietokoneanalyysi on kuitenkin kielletty, ja sen käyttö johtaa merkintään tietokoneavusta. Vaikka ICCF hyväksyy tietokoneanalyysin kirjeshakissa, Chess-Online ei hyväksy sitä.</string>
+  <string name="gameplay" comment="gameplay&#10;&#10;A heading under https://www.chess-online.com/help/faq (as with other strings under the FAQ file). You are free to translate it loosely.">Pelaaminen</string>
   <string name="howBulletBlitzEtcDecided">Kuinka Bullet, Blitz ja muut aikakontrollit on määritelty?</string>
   <string name="basedOnGameDuration">Lichessin aikakontrollit perustuvat pelin arvioituun kestoon = %1$s
 Esimerkiksi 5+3 pelin arvioitu kesto on 5 × 60 + 40 × 3 = 420 sekuntia.</string>
   <string name="durationFormula">(aloitusaika minuutteina) + 40 × (lisäaika sekunteina)</string>
-  <string name="inferiorThanXsEqualYtimeControl" comment="inferiorThanXsEqualYtimeControl&#10;&#10;Used for several time controls:&#10;&#10;https://lichess.org/faq#time-controls&#10;&#10;%1$s is the number of seconds&#10;%2$s is the name of the time control (Bullet, Blitz, Rapid, etc)">≤ %1$s s = %2$s</string>
+  <string name="inferiorThanXsEqualYtimeControl" comment="inferiorThanXsEqualYtimeControl&#10;&#10;Used for several time controls:&#10;&#10;https://www.chess-online.com/help/faq#time-controls&#10;&#10;%1$s is the number of seconds&#10;%2$s is the name of the time control (Bullet, Blitz, Rapid, etc)">≤ %1$s s = %2$s</string>
   <string name="superiorThanXsEqualYtimeControl">≥ %1$s s = %2$s</string>
   <string name="whatVariantsCanIplay">Mitä variantteja voin pelata Lichessissä?</string>
   <string name="lichessSupportChessAnd">Lichessissä voi pelata tavallista shakkia ja %1$s.</string>
@@ -55,7 +55,7 @@ Esimerkiksi 5+3 pelin arvioitu kesto on 5 × 60 + 40 × 3 = 420 sekuntia.</strin
   <string name="linkToFIDErules">FIDE:n käsikirja §6.9, PDF</string>
   <string name="discoveringEnPassant">Miksi sotilas voi lyödä toisen sotilaan, kun se on jo kulkenut ohitse? (ohestalyönti)</string>
   <string name="explainingEnPassant">Tämä sallittu siirto tunnetaan ohestalyöntinä (\"en passant\"). Wikipediassa on %1$s ohestalyöntiin.
- 
+
  Siirto on kuvattu %2$s kohdassa 3.7 (d):
 
   \"Sotilas, joka uhkaa ruutua, jonka alkuruudustaan kaksi ruutua kerrallaan siirtynyt vastustajan sotilas on ylittänyt, voi lyödä tämän vastustajan sotilaan ikäänkuin se olisi siirtynyt vain yhden ruudun. Tämä lyönti on laillinen vain välittömästi vastauksena kahden ruudun siirtoon, ja tätä lyöntiä kutsutaan ohestalyönniksi (en passant).\"
@@ -64,9 +64,9 @@ Esimerkiksi 5+3 pelin arvioitu kesto on 5 × 60 + 40 × 3 = 420 sekuntia.</strin
   </string>
   <string name="goodIntroduction">hyvä johdanto</string>
   <string name="officialRulesPDF">virallisten sääntöjen (PDF)</string>
-  <string name="lichessTraining">Lichess-harjoittelu</string>
+  <string name="lichessTraining">Chess-Online-harjoittelu</string>
   <string name="threefoldRepetition">Aseman toisto kolmesti</string>
-  <string name="threefoldRepetitionExplanation">Jos asema toistuu kolmesti, pelaaja voi vaatia tasapelin %1$s perusteella. Lichess noudattaa FIDE:n virallisia sääntöjä, jotka on kuvattu %2$s kohdassa 9.2 (d).</string>
+  <string name="threefoldRepetitionExplanation">Jos asema toistuu kolmesti, pelaaja voi vaatia tasapelin %1$s perusteella. Chess-Online noudattaa FIDE:n virallisia sääntöjä, jotka on kuvattu %2$s kohdassa 9.2 (d).</string>
   <string name="threefoldRepetitionLowerCase">kolminkertaisen toiston</string>
   <string name="handBookPDF">käsikirjan (PDF)</string>
   <string name="notRepeatedMoves">Me emme toistaneet siirtoja. Miksi peli silti päättyi tasapeliin toiston perusteella?</string>
@@ -77,7 +77,7 @@ Esimerkiksi 5+3 pelin arvioitu kesto on 5 × 60 + 40 × 3 = 420 sekuntia.</strin
   <string name="configure">konfiguroida</string>
   <string name="accounts">Käyttäjätunnukset</string>
   <string name="titlesAvailableOnLichess">Mitä arvonimiä Lichessissä on?</string>
-  <string name="lichessRecognizeAllOTBtitles">Lichess tunnustaa kaikki FIDE:n lähishakissa myöntämät arvonimet sekä %1$s. Tässä on lista FIDE:n arvonimistä:</string>
+  <string name="lichessRecognizeAllOTBtitles">Chess-Online tunnustaa kaikki FIDE:n lähishakissa myöntämät arvonimet sekä %1$s. Tässä on lista FIDE:n arvonimistä:</string>
   <string name="showYourTitle">Jos sinulla on lähishakin arvonimi, voit hakea sen näyttämistä käyttäjätunnuksessasi täyttämällä %1$s ja liittämällä oheen selvän kuvan henkilöllisyystodistuksesta tai selfien, jossa pidät sitä kädessäsi.
 
  Kun arvonimesi on varmennettu Lichessissä, pääset pelaamaan Arvonimiareena-tapahtumissa.
@@ -85,11 +85,11 @@ Esimerkiksi 5+3 pelin arvioitu kesto on 5 × 60 + 40 × 3 = 420 sekuntia.</strin
  Lisäksi on olemassa kunnianimi %2$s.</string>
   <string name="asWellAsManyNMtitles">monia kansallisia mestarititteleitä</string>
   <string name="verificationForm">varmennuslomakkeen</string>
-  <string name="canIbecomeLM">Voinko saada Lichess-mestarin (LM) arvonimen?</string>
+  <string name="canIbecomeLM">Voinko saada Chess-Online-mestarin (LM) arvonimen?</string>
   <string name="noUpperCaseDot">Et.</string>
   <string name="lMtitleComesToYouDoNotRequestIt">Tämä kunnianimi on epävirallinen ja olemassa vain Lichessissä.
 
-  Me myönnämme sen harvoin oman harkintamme mukaan erityisen merkittäville pelaajille, jotka ovat hyviä Lichess-kansalaisia. Sinä et voi hankkia LM-arvonimeä, vaan LM-arvonimi saapuu luoksesi. Jos täytät vaatimukset, saat meiltä sitä koskevan viestin, ja voit joko hyväksyä tai hylätä arvonimen.
+  Me myönnämme sen harvoin oman harkintamme mukaan erityisen merkittäville pelaajille, jotka ovat hyviä Chess-Online-kansalaisia. Sinä et voi hankkia LM-arvonimeä, vaan LM-arvonimi saapuu luoksesi. Jos täytät vaatimukset, saat meiltä sitä koskevan viestin, ja voit joko hyväksyä tai hylätä arvonimen.
 
   Älä pyydä meiltä LM-arvonimeä.</string>
   <string name="whatUsernameCanIchoose">Mikä minun käyttäjänimeni voi olla?</string>
@@ -100,8 +100,8 @@ Esimerkiksi 5+3 pelin arvioitu kesto on 5 × 60 + 40 × 3 = 420 sekuntia.</strin
   <string name="wayOfBerserkExplanation">hiimgosu sai sen haastettuaan itsensä voittamaan berserkkitilassa 100%% %s peleistä.</string>
   <string name="aHourlyBulletTournament">tunnittaisen Bullet-turnauksen</string>
   <string name="goldenZeeExplanation">ZugAddict striimasi ja oli viimeiset 2 tuntia yrittänyt voittaa tason 8 tekoälyn 1+0-pelissä onnistumatta siinä. Thibault sanoi hänelle, että jos hän striimatessaan onnistuisi siinä, hän saisi ainutlaatuisen palkinnon. Tuntia myöhemmin ZugAddict löi Stockfishin, ja lupaus pidettiin.</string>
-  <string name="lichessRatings">Lichess-vahvuusluvut</string>
-  <string name="whichRatingSystemUsedByLichess">Mitä vahvuuslukujärjestelmää Lichess käyttää?</string>
+  <string name="lichessRatings">Chess-Online-vahvuusluvut</string>
+  <string name="whichRatingSystemUsedByLichess">Mitä vahvuuslukujärjestelmää Chess-Online käyttää?</string>
   <string name="ratingSystemUsedByLichess">Vahvuusluvut lasketaan käyttämällä Mark Glickmanin kehittämää Glicko-2-vahvuuslukujärjestelmää. Se on hyvin suosittu vahvuuslukujärjestelmä, ja sitä käyttää hyvin moni shakkijärjestö (FIDE on huomattava vastaesimerkki, sillä se käyttää vielä vanhaa ELO-järjestelmää).
 
  Glicko-vahvuusluvut käyttävät pohjimmiltaan vahvuusluvun laskemisessa ja esittämisessä \"luottamusintervalleja\". Kun alat ensi kertaa käyttää sivustoa, vahvuuslukusi lähtökohta on 1500 ± 700. 1500 on sinun vahvuuslukusi ja 700 luottamusintervallisi.
@@ -131,13 +131,13 @@ Esimerkiksi 5+3 pelin arvioitu kesto on 5 × 60 + 40 × 3 = 420 sekuntia.</strin
   <string name="enableZenMode">Aktivoi Zen-moodi %1$s, tai paina pelin aikana kirjainta %2$s.</string>
   <string name="displayPreferences">ulkoasuasetuksista</string>
   <string name="connexionLostCanIGetMyRatingBack">Hävisin pelin viiveen tai katkenneen yhteyden takia. Voinko saada vahvuuslukupisteeni takaisin?</string>
-  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">Valitettavasti emme voi antaa takaisin vahvuuslukupisteitä viiveen tai katkenneen yhteyden takia hävityistä peleistä riippumatta siitä, oliko ongelma sinun vai meidän päässä. Jälkimmäinen on kuitenkin erittäin harvinaista. Huomaa myös, että kun Lichess käynnistyy uudelleen, ja häviät pelin ajalla sen takia, me keskeytämme pelin välttääksemme epäreilun tappion.</string>
+  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">Valitettavasti emme voi antaa takaisin vahvuuslukupisteitä viiveen tai katkenneen yhteyden takia hävityistä peleistä riippumatta siitä, oliko ongelma sinun vai meidän päässä. Jälkimmäinen on kuitenkin erittäin harvinaista. Huomaa myös, että kun Chess-Online käynnistyy uudelleen, ja häviät pelin ajalla sen takia, me keskeytämme pelin välttääksemme epäreilun tappion.</string>
   <string name="howToThreeDots">Kuinka voin...</string>
   <string name="enableDisableNotificationPopUps">Ottaa käyttöön tai poistaa käytöstä ponnahdusikkunat?</string>
   <string name="viewSiteInformationPopUp">Näytä sivuston informaatio-ponnahdusikkuna</string>
-  <string name="lichessCanOptionnalySendPopUps">Lichess voi halutessasi lähettää ilmoituksia ponnahdusikkunoilla, esimerkiksi kun on sinun siirtovuorosi tai kun olet saanut henkilökohtaisen viestin.
+  <string name="lichessCanOptionnalySendPopUps">Chess-Online voi halutessasi lähettää ilmoituksia ponnahdusikkunoilla, esimerkiksi kun on sinun siirtovuorosi tai kun olet saanut henkilökohtaisen viestin.
 
- Napsauta selaimesi osoitepalkissa lichess.org-osoitteen vieressä olevaa lukkokuvaketta.
+ Napsauta selaimesi osoitepalkissa chess-online.com-osoitteen vieressä olevaa lukkokuvaketta.
 
  Valitse sitten, haluatko ottaa käyttöön vai poistaa käytöstä Lichessin ilmoitukset.</string>
 </resources>

@@ -92,7 +92,7 @@ $('#asset-version-message').text(lichess.info.message);"""
         div(cls := "box box-pad developers body") {
           val args = """style="width: 400px; height: 444px;" allowtransparency="true" frameborder="0""""
           frag(
-            h1(id := "embed-tv")("Embed Lichess TV in your site"),
+            h1(id := "embed-tv")("Embed Chess-Online TV in your site"),
             div(cls := "center")(raw(s"""<iframe src="/tv/frame?theme=wood&bg=dark" $args></iframe>""")),
             p("Add the following HTML to your site:"),
             p(cls := "copy-zone")(
@@ -167,13 +167,13 @@ $('#asset-version-message').text(lichess.info.message);"""
           h1("HTTP API"),
           p(
             raw(
-              """Lichess exposes a RESTish HTTP/JSON API that you are welcome to use. Read the <a href="/api" class="blue">HTTP API documentation</a>."""
+              """Chess-Online exposes a RESTish HTTP/JSON API that you are welcome to use. Read the <a href="/api" class="blue">HTTP API documentation</a>."""
             )
           )
         ),
         br,
         div(cls := "box box-pad developers body")(
-          h1(id := "widgets")("Lichess Widgets"),
+          h1(id := "widgets")("Chess-Online Widgets"),
           p("Let your website/blog visitors know that you're playing on lichess!"),
           p(
             raw(

@@ -1,4 +1,8 @@
 
+export const getElementsByClassName = (element: Element, classNAME: string): Element[] => { // returns Array
+    return [].slice.call(element['getElementsByClassName'](classNAME));
+}
+
 export const hasClass = (el: HTMLElement|null, className: string) => {
     if (el) {
         return el.classList ? el.classList.contains(className) : new RegExp('\\b'+ className+'\\b').test(el.className);

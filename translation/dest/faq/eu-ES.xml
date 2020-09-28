@@ -2,20 +2,20 @@
 <resources>
   <string name="faqAbbreviation">SEG / FAQ</string>
   <string name="frequentlyAskedQuestions">Maiz egiten diren galderak</string>
-  <string name="whyIsLichessCalledLichess">Zergatik da Lichess Lichessen izena?</string>
-  <string name="lichessCombinationLiveLightLibrePronounced">Lichess inglesezko live/light/libre eta chessen arteko konbinazioa da. Xakea zuzenean/arina/librea. %1$s ahoskatzen da.</string>
+  <string name="whyIsLichessCalledLichess">Zergatik da Chess-Online Lichessen izena?</string>
+  <string name="lichessCombinationLiveLightLibrePronounced">Chess-Online inglesezko live/light/libre eta chessen arteko konbinazioa da. Xakea zuzenean/arina/librea. %1$s ahoskatzen da.</string>
   <string name="leechess">li-txes</string>
   <string name="hearItPronouncedBySpecialist">Entzun espezialista batek nola ahoskatzen duen.</string>
-  <string name="whyLiveLightLibre">Zuzenean, partidak denbora errealean 24 orduz, astean 7 egunez jokatu eta ikusten direlako; arina eta librea, Lichess kode-irekikoa delako eta ez duelako programa jabedunik erabiltzen, beste webgune batzuek bezala.</string>
+  <string name="whyLiveLightLibre">Zuzenean, partidak denbora errealean 24 orduz, astean 7 egunez jokatu eta ikusten direlako; arina eta librea, Chess-Online kode-irekikoa delako eta ez duelako programa jabedunik erabiltzen, beste webgune batzuek bezala.</string>
   <string name="whyIsLilaCalledLila">Antzera, Lichessen iturburuko kodeak, %1$s, li[chess in sca]la esan nahi du, %2$s izeneko programazio lengoaian idatzita dagoelako.</string>
-  <string name="howCanIContributeToLichess">Nola lagundu dezaket Lichess?</string>
+  <string name="howCanIContributeToLichess">Nola lagundu dezaket Chess-Online?</string>
   <string name="lichessPoweredByDonationsAndVolunteers">Lichessek dohaintzen bidez eta bolondres taldearen lanarekin funtzionatzen du.</string>
   <string name="findMoreAndSeeHowHelp">%1$s buruzko informazio gehiago (%2$s barne). Lichessi laguntza eman nahi badiozu zure denbora edo laguntza emanez, hainbat %3$s.</string>
   <string name="beingAPatron">Babesletzari buruzko</string>
   <string name="breakdownOfOurCosts">gure gastuak</string>
   <string name="otherWaysToHelp">aukera dituzu</string>
   <string name="areThereWebsitesBasedOnLichess">Lichessen oinarritutako webgunerik badago?</string>
-  <string name="yesLichessInspiredOtherOpenSourceWebsites">Bai. Lichess inspirazio iturri erabili dituen eta bere %1$s, %2$s edo %3$s darabilten hainbat webgune ditu.</string>
+  <string name="yesLichessInspiredOtherOpenSourceWebsites">Bai. Chess-Online inspirazio iturri erabili dituen eta bere %1$s, %2$s edo %3$s darabilten hainbat webgune ditu.</string>
   <string name="fairPlay">Joko Garbia</string>
   <string name="whyFlaggedRatingManipulationOrCheater">Zergatik nago puntuazioa manipulatzeagatik edo ordenagailuen laguntza erabiltzeagatik markatuta?</string>
   <string name="cheatDetectionMethods">Lichessek proba eta salaketa guztiak errebisatzeko eta arazoak aurkitzeko modu sendoa du. Prozesuan hainbat moderatzaileren lana hartzen da kontuan eta denbora asko iraun dezake. Markatuta izateaz gain, ez dugu kasuei buruzko beste xehetasunik emango. Zergatik? Horrek etorkizuneko salaketetan eragina izan dezakeelako jendeak zer egin jakingo lukeelako. Eztabaida horretako denbora eta ahaleginak beste gauza batzuetan inbertitzea nahiago dugu. Azken erabakien gaineko kexak posta elektronikoz %1$s helbidera bidali daitezke, baina normalean erabakiak ez ditugu atzera botatzen.</string>
@@ -28,12 +28,12 @@
   <string name="youCannotApply">Ezin da moderatzaile izateko eskaerarik egin. Norbait moderatzaile izan daitekeela uste badugu zuzenean jarriko gara berarekin kontaktuan.</string>
   <string name="isCorrespondenceDifferent">Zein dira posta bidezko partidak eta xake arruntaren arteko desberdintasunak?</string>
   <string name="youCanUseOpeningBookNoEngine">Lichessen posta bidezko xakearen arauen desberdintasun handiena, hasiera liburua erabili daitekeela da. Analisi-motoreak erabiltzea debekatuta dago eta laguntza erabiltzeagatik markatuko ditugu hori egiten duten jokalariak. Nahiz eta ICCFk analisi-motoreak erabiltzea uztean duen, Lichessek ez.</string>
-  <string name="gameplay" comment="gameplay&#10;&#10;A heading under https://lichess.org/faq (as with other strings under the FAQ file). You are free to translate it loosely.">Jokoa</string>
+  <string name="gameplay" comment="gameplay&#10;&#10;A heading under https://www.chess-online.com/help/faq (as with other strings under the FAQ file). You are free to translate it loosely.">Jokoa</string>
   <string name="howBulletBlitzEtcDecided">Nola erabakizen da zer diren Bullet, Blitz edo beste erritmo batzuk?</string>
   <string name="basedOnGameDuration">Lichesseko joko erritmoak partiden ustezko iraupenaren arabera ezartzen dira = %1$s
   Adibidez, 5+3 partida baten ustezko iraupena hauxe da: 5 * 60 + 40 * 3 = 420 segundo.</string>
   <string name="durationFormula">(erlojuaren hasierako denbora) + 40 * (denbora gehigarria)</string>
-  <string name="inferiorThanXsEqualYtimeControl" comment="inferiorThanXsEqualYtimeControl&#10;&#10;Used for several time controls:&#10;&#10;https://lichess.org/faq#time-controls&#10;&#10;%1$s is the number of seconds&#10;%2$s is the name of the time control (Bullet, Blitz, Rapid, etc)">≤ %1$ss = %2$s</string>
+  <string name="inferiorThanXsEqualYtimeControl" comment="inferiorThanXsEqualYtimeControl&#10;&#10;Used for several time controls:&#10;&#10;https://www.chess-online.com/help/faq#time-controls&#10;&#10;%1$s is the number of seconds&#10;%2$s is the name of the time control (Bullet, Blitz, Rapid, etc)">≤ %1$ss = %2$s</string>
   <string name="superiorThanXsEqualYtimeControl">≥ %1$ss = %2$s</string>
   <string name="whatVariantsCanIplay">Zein aldaeratara jokatu dezaket Lichessen?</string>
   <string name="lichessSupportChessAnd">Lichessen ohiko xakean eta %1$s jokatu dezakezu.</string>
@@ -72,7 +72,7 @@ Ikusi jokaldi honen inguruko %3$s eta praktikatu bertan.</string>
   <string name="repeatedPositionsThatMatters">Posizioa hiru aldiz errepikatzeak, errepikatu dena %1$s dela esan nahi du, ez jokaldiak. Errepikapenak, gainera, ez dute zertan jarraian gertatu behar.</string>
   <string name="positions">posizioak</string>
   <string name="weRepeatedthreeTimesPosButNoDraw">Posizioa hiru aldiz errepikatu genuen? Zergatik ez da berdinketarekin amaitu?</string>
-  <string name="threeFoldHasToBeClaimed">Errepikapenagatiko berdinketa jokalarietako batek eskatu behar du. Horretarako agertuko den botoia sakatu behar duzu edo errepikapena egiten duen azken jokaldia egin aurretik berdinketa eskaini behar duzu. Lichess %1$s dezakezu berdinketak zure ordez eskatzeko. Gainera, posizioa bost aldiz errepikatzen bada, partida berdinketarekin amaituko da edozein kasutan.</string>
+  <string name="threeFoldHasToBeClaimed">Errepikapenagatiko berdinketa jokalarietako batek eskatu behar du. Horretarako agertuko den botoia sakatu behar duzu edo errepikapena egiten duen azken jokaldia egin aurretik berdinketa eskaini behar duzu. Chess-Online %1$s dezakezu berdinketak zure ordez eskatzeko. Gainera, posizioa bost aldiz errepikatzen bada, partida berdinketarekin amaituko da edozein kasutan.</string>
   <string name="configure">konfiguratu</string>
   <string name="accounts">Kontuak</string>
   <string name="titlesAvailableOnLichess">Zein titulo daude Lichessen?</string>
@@ -84,7 +84,7 @@ Ikusi jokaldi honen inguruko %3$s eta praktikatu bertan.</string>
   Azkenik ohorezko %2$s tituloa ere badago.</string>
   <string name="asWellAsManyNMtitles">hainbat titulo nazional ere</string>
   <string name="verificationForm">egiaztapen formularioa</string>
-  <string name="canIbecomeLM">Lortu dezaket Lichess Maisu (LM) tituloa?</string>
+  <string name="canIbecomeLM">Lortu dezaket Chess-Online Maisu (LM) tituloa?</string>
   <string name="noUpperCaseDot">Ez.</string>
   <string name="lMtitleComesToYouDoNotRequestIt">Titulo hau ez da ofiziala eta Lichessen bakarrik agertzen da.
 
@@ -99,7 +99,7 @@ Ikusi jokaldi honen inguruko %3$s eta praktikatu bertan.</string>
   <string name="wayOfBerserkExplanation">Lortzeko, hiimgosu erabiltzeaileak berserk erabiliz erronka egin zion eta %s partidatik 100%% irabazi.</string>
   <string name="aHourlyBulletTournament">ordueroko Bullet txapelketa</string>
   <string name="goldenZeeExplanation">ZugAddict 2 orduz ari zen zuzeneko bat egiten eta 8. mailako A.A. garaitu nahian 1+0 erako partidan, inolako arrakastarik gabe. Thibaultek hori lortuko balu eta zuzenean emate bazuen garaikurra emango ziola. Ordubete beranduago Stockfish garaitu zuen eta agindutako bete egin zuten.</string>
-  <string name="lichessRatings">Lichess puntuazioak</string>
+  <string name="lichessRatings">Chess-Online puntuazioak</string>
   <string name="whichRatingSystemUsedByLichess">Zein puntuazio sistema erabiltzen du Lichessek?</string>
   <string name="ratingSystemUsedByLichess">Puntuazioak Mark Glickmanek garatutako Glicko-2 puntuazio sistema erabiliz kalkulatzen dira. Hainbat erakundek erabilitako puntuazio sistema arrunta da (FIDEk aldiz Elo izeneko sistema erabiltzen du).
 
@@ -130,13 +130,13 @@ Hobe da puntuazioak zenbaki \"erlatibo\" gisa ulertzea: jokalari multzo bat hart
   <string name="enableZenMode">Aktibatu Zen-modua %1$s, edo partidan zehar %2$s sakatuz.</string>
   <string name="displayPreferences">ezarpenetan</string>
   <string name="connexionLostCanIGetMyRatingBack">Partida atzerapenagatik edo konexioa galtzeagatik galdu dut. Berreskuratu ditzaket galdutako puntuak?</string>
-  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">Zoritxarrez ezin ditugu arrazoi horiengatik galdutako puntuak itzuli, berdin delarik errua zurea ala gurea izan. Hala ere normalean ez da gure errua izango. Lichess berrabiarazten dugunean eta horregatik partida galtzen baduzu, partida bertan behera uzten dugu.</string>
+  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">Zoritxarrez ezin ditugu arrazoi horiengatik galdutako puntuak itzuli, berdin delarik errua zurea ala gurea izan. Hala ere normalean ez da gure errua izango. Chess-Online berrabiarazten dugunean eta horregatik partida galtzen baduzu, partida bertan behera uzten dugu.</string>
   <string name="howToThreeDots">Nola...</string>
   <string name="enableDisableNotificationPopUps">Aktibatu edo desaktibatu jakinarazpenak?</string>
   <string name="viewSiteInformationPopUp">Ikusi atariaren informazioaren inguruko leihoa</string>
   <string name="lichessCanOptionnalySendPopUps">Lichessek jakinarazpenak bidali ditzake, adibidez zure txanda denean edo mezu pribatu bat jasotzean.
 
-Egin klik zure nabigatzailean lichess.org dioen helbide barraren ondoan dagoen giltzarrapoan.
+Egin klik zure nabigatzailean chess-online.com dioen helbide barraren ondoan dagoen giltzarrapoan.
 
 Ondoren aukeratu Lichessen jakinarazpenak blokeatu nahi dituzun ala ez.</string>
 </resources>

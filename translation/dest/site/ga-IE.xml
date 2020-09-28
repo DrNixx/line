@@ -199,7 +199,7 @@
     <item quantity="many">Tabhair %s shoicind</item>
     <item quantity="other">Tabhair %s shoicind</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Chuaigh an chuntas seo in aghaidh téarmaí sheirbhíse Lichess</string>
+  <string name="thisAccountViolatedTos">Chuaigh an chuntas seo in aghaidh téarmaí sheirbhíse Chess-Online</string>
   <string name="thisPlayerArtificiallyIncreasesTheirRating">Ardaíonn/Íslíonn an imreoir seo a rátáil ar shlí bhréagach</string>
   <string name="openingExplorerAndTablebase">Taiscélaí thionscnaimh &amp; bunachar dheireadh an chluiche</string>
   <string name="takeback">Aistógadh</string>
@@ -288,8 +288,8 @@
   <string name="firstName">Céadainm</string>
   <string name="lastName">Sloinne</string>
   <string name="country">Tír</string>
-  <string name="watchLichessTV">Féach ar Lichess TV</string>
-  <string name="previouslyOnLichessTV">Níos luaithe ar Lichess TV</string>
+  <string name="watchLichessTV">Féach ar Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Níos luaithe ar Chess-Online TV</string>
   <string name="onlinePlayers">Imreoirí ar-líne</string>
   <string name="bestMove">Bogadh is fearr!</string>
   <string name="success">D\'éirigh leat</string>
@@ -330,11 +330,11 @@
   <string name="about">Faoi</string>
   <string name="aboutX">Faoi %s</string>
   <string name="create">Cruthaigh</string>
-  <string name="lichessTournaments">Comórtais Lichess</string>
+  <string name="lichessTournaments">Comórtais Chess-Online</string>
   <string name="tournamentOfficial">Oifigiúil</string>
   <string name="timeBeforeTournamentStarts">Am fágtha sula thosnaíonn an comórtas</string>
   <string name="youHaveAlreadyRegisteredTheEmail">Chláraigh tú an ríomhphost cheana féin: %s</string>
-  <string name="asFreeAsLichess">Chomh saor le Lichess</string>
+  <string name="asFreeAsLichess">Chomh saor le Chess-Online</string>
   <string name="anonymous">Gan ainm</string>
   <string name="language">Teanga</string>
   <string name="challenges">Dushláin</string>

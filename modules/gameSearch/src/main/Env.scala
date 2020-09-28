@@ -30,13 +30,23 @@ final class Env(
 
   private lazy val client = makeClient(Index(config.indexName))
 
-  lazy val api = wire[GameSearchApi]
+  lazy val api = new GameSearchApi(
+    client,
+    gameRepo
+  ) // wire[GameSearchApi]
 
   lazy val paginator = wire[PaginatorBuilder[lila.game.Game, Query]]
 
   lazy val forms = wire[GameSearchForm]
 
   lazy val userGameSearch = wire[UserGameSearch]
+
+  def cli =
+    new lila.common.Cli {
+      def process = {
+        case "game" :: "search" :: username :: "index" :: Nil => api.reindex(username) inject "done"
+      }
+    }
 
   lila.common.Bus.subscribeFun("finishGame", "gameSearchInsert") {
     case FinishGame(game, _, _) if !game.aborted => api store game

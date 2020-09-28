@@ -447,8 +447,8 @@
   <string name="country">Welat</string>
   <string name="socialMediaLinks">Têkîliyên Medyaya Civakî</string>
   <string name="inlineNotation">Notasyona navrêzî</string>
-  <string name="watchLichessTV">Li Lichess TVyê temaşe bike</string>
-  <string name="previouslyOnLichessTV">Berê ser Lichess TVyê</string>
+  <string name="watchLichessTV">Li Chess-Online TVyê temaşe bike</string>
+  <string name="previouslyOnLichessTV">Berê ser Chess-Online TVyê</string>
   <string name="onlinePlayers">Lîzerên serhêl</string>
   <string name="activeToday">Yên îro çalak bûn</string>
   <string name="activePlayers">Lîzerên aktîv</string>
@@ -577,7 +577,7 @@
   <string name="clock">Saet</string>
   <string name="unauthorizedError">Gihaştin bêdestûr e.</string>
   <string name="noInternetConnection">Girêdana înternetê tine. Tu hê jî dikarî derhêl bilîzî ji menuyê.</string>
-  <string name="connectedToLichess">Te vêga hatî girêdan li Lichess.org-ê</string>
+  <string name="connectedToLichess">Te vêga hatî girêdan li chess-online.com-ê</string>
   <string name="signedOut">Te jê derketiye</string>
   <string name="loginSuccessful">Tı vêga têketî yî</string>
   <string name="playOnTheBoardOffline">Ji ser texteyê</string>
@@ -829,7 +829,7 @@
   <string name="tryToWin">Biceribîne ku bi ser bikevî (an jî qenebe wekheviyê bi dest bixe) di her lîstikê ku tu lîstî de.</string>
   <string name="resignLostGames">Ji lîstikên ku tu mexlûb bûyî vekişe (nehêle ku dema te tijî bibe).</string>
   <string name="temporaryInconvenience">Em lêborîna xwe dixwazin ji ber aciziya demkî,</string>
-  <string name="wishYouGreatGames">û em lîstikêm xweş hêvî dikin ji bo te li ser lichess.org-ê.</string>
+  <string name="wishYouGreatGames">û em lîstikêm xweş hêvî dikin ji bo te li ser chess-online.com-ê.</string>
   <string name="thankYouForReading">Spas ji bo xwendinê!</string>
   <string name="lifetimeScore">Yekûna skorê</string>
   <string name="currentMatchScore">Skora lîstika berdest</string>

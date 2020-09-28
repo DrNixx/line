@@ -448,8 +448,8 @@
   <string name="country">ملک</string>
   <string name="socialMediaLinks">سوشل میڈیا کے لنکس</string>
   <string name="inlineNotation">ان لائن نوٹیشن</string>
-  <string name="watchLichessTV">Lichess نشریات</string>
-  <string name="previouslyOnLichessTV">Lichess گذشتہ نشریات</string>
+  <string name="watchLichessTV">Chess-Online نشریات</string>
+  <string name="previouslyOnLichessTV">Chess-Online گذشتہ نشریات</string>
   <string name="onlinePlayers">آن لائن کھلاڑی</string>
   <string name="activeToday">آج سب سے فعال</string>
   <string name="activePlayers">فعال کھلاڑی</string>
@@ -578,7 +578,7 @@
   <string name="clock">دورانیہ</string>
   <string name="unauthorizedError">داخلہ ممنوع ہے</string>
   <string name="noInternetConnection">انٹرنیٹ سے رابطہ نہیں- آپ پھربھی فہرست سے بغیر رابطے کے کھیل شروع کر سکتے ہیں</string>
-  <string name="connectedToLichess">آپ اب lichess.org سے منسلک ہیں</string>
+  <string name="connectedToLichess">آپ اب chess-online.com سے منسلک ہیں</string>
   <string name="signedOut">آپکو خارج کردیا گیا ہے</string>
   <string name="loginSuccessful">آپ داخل ہیں</string>
   <string name="playOnTheBoardOffline">حقیقی بساط پر</string>
@@ -830,7 +830,7 @@
   <string name="tryToWin">ہر بازی کو جیتنے(یا کم از کم برابر کرنے) کی کوشش کریں.</string>
   <string name="resignLostGames">ہاری ہوئی بازیوں سے استعفی دے دیں (وقت کو ختم نہ ہونے دیں).</string>
   <string name="temporaryInconvenience">ہم عارضی تکلیف کے لیے معذرت خواہ ہیں</string>
-  <string name="wishYouGreatGames">اور امید کرتے ہیں کہ آپ lichess.org پرعمدہ بازیوں سے لطف اندوز ہوں گے.</string>
+  <string name="wishYouGreatGames">اور امید کرتے ہیں کہ آپ chess-online.com پرعمدہ بازیوں سے لطف اندوز ہوں گے.</string>
   <string name="thankYouForReading">پڑھنے کا شکریہ!</string>
   <string name="lifetimeScore">زندگی بھر کا سکور</string>
   <string name="currentMatchScore">اس میچ کا سکور</string>

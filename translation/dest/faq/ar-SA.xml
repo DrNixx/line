@@ -2,8 +2,8 @@
 <resources>
   <string name="faqAbbreviation">الأسئلة الشائعة</string>
   <string name="frequentlyAskedQuestions">الأسئلة الشائعة</string>
-  <string name="whyIsLichessCalledLichess">لماذا تسمى Lichess؟</string>
-  <string name="lichessCombinationLiveLightLibrePronounced" comment="Keep live/light/libre if a translation doesn't make sense in your language.&#10;&#10;Some further context on what these mean:&#10;&#10;Live, in that you can do games in real time. The way Lichess did this in 2010, at the time of founding, was particularly innovative.&#10;&#10;Light, in that it is lightweight (on hardware resources) and will run well on most computers and phones. A serious technical challenge.&#10;&#10;Libre, in the sense of 'free software' (as in freedom). More on this here: https://www.gnu.org/philosophy/free-sw.html">كلمة Lichess مزيج من live/light/libre (مباشر\خفيف\حر) و chess (شطرنج). تنطق %1$s.</string>
+  <string name="whyIsLichessCalledLichess">لماذا تسمى Chess-Online؟</string>
+  <string name="lichessCombinationLiveLightLibrePronounced" comment="Keep live/light/libre if a translation doesn't make sense in your language.&#10;&#10;Some further context on what these mean:&#10;&#10;Live, in that you can do games in real time. The way Chess-Online did this in 2010, at the time of founding, was particularly innovative.&#10;&#10;Light, in that it is lightweight (on hardware resources) and will run well on most computers and phones. A serious technical challenge.&#10;&#10;Libre, in the sense of 'free software' (as in freedom). More on this here: https://www.gnu.org/philosophy/free-sw.html">كلمة Chess-Online مزيج من live/light/libre (مباشر\خفيف\حر) و chess (شطرنج). تنطق %1$s.</string>
   <string name="leechess">لي-تشس</string>
   <string name="hearItPronouncedBySpecialist">اسمع نطقها من أخصائي.</string>
   <string name="whyLiveLightLibre">مباشر، لأنها تلعب وتشاهد بالوقت الحقيقي 24\7؛خفيف وحر لأنها مفتوحة المصدر ولا تحتوي على القمامة المملوكة التي تعاني منها المواقع الأخرى.</string>
@@ -39,6 +39,6 @@
   <string name="wayOfBerserkExplanation">من أجل الحصول على هذا اللقب، تحدى hiimgosu نفسه وقام بالمخاطرة والفوز بـ 100%% من مباريات %s.</string>
   <string name="aHourlyBulletTournament">بطولة شطرنج الطلقة السَّاعية</string>
   <string name="goldenZeeExplanation">حاول ZugAddict هزيمة المستوى 8 من ستوكفيش لساعتين متواصلتين بينما كان يقوم بالبث في مباراة 1+0 لكن لم يحالفه الحظ في النجاح. أخبره Thibault أنه إذا نجح في القيام بذلك أثناء البث فسوف يحصل على كأس فريد. بعد ذلك بساعة، قام بهزم المحرك هزيمة نكراء وتم الوفاء بالوعد.</string>
-  <string name="lichessRatings">تقييمات Lichess</string>
+  <string name="lichessRatings">تقييمات Chess-Online</string>
   <string name="whichRatingSystemUsedByLichess">ما هو نظام التقييم الذي يستخدمه ليشيس؟</string>
 </resources>

@@ -10,7 +10,7 @@ object lag {
 
   def apply()(implicit ctx: Context) =
     help.layout(
-      title = "Is Lichess lagging?",
+      title = "Is Chess-Online lagging?",
       active = "lag",
       moreCss = cssTag("lag"),
       moreJs = frag(

@@ -95,7 +95,7 @@ object otherTrophies {
             "trophy award icon3d streamer" -> true,
             "streaming"                    -> isStreaming(info.user.id)
           ),
-          ariaTitle(if (isStreaming(info.user.id)) "Live now!" else "Lichess Streamer")
+          ariaTitle(if (isStreaming(info.user.id)) "Live now!" else "Chess-Online Streamer")
         )("")
     )
 

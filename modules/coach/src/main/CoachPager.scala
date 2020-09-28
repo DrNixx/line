@@ -62,7 +62,7 @@ object CoachPager {
 
   object Order {
     case object Login         extends Order("login", "Last login", $sort desc "user.seenAt")
-    case object LichessRating extends Order("rating", "Lichess rating", $sort desc "user.rating")
+    case object LichessRating extends Order("rating", "Chess-Online rating", $sort desc "user.rating")
     case object NbReview      extends Order("review", "User reviews", $sort desc "nbReviews")
     case object Alphabetical  extends Order("alphabetical", "Alphabetical", $sort asc "_id")
 

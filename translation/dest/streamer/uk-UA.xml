@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessStreamers">Стрімери Lichess</string>
-  <string name="lichessStreamer">Стрімер Lichess</string>
+  <string name="lichessStreamers">Стрімери Chess-Online</string>
+  <string name="lichessStreamer">Стрімер Chess-Online</string>
   <string name="live">НАЖИВО!</string>
   <string name="offline">ОФЛАЙН</string>
   <string name="currentlyStreaming">Зараз транслює: %s</string>
   <string name="lastStream">Остання трансляція %s</string>
-  <string name="becomeStreamer">Стати стрімером Lichess</string>
+  <string name="becomeStreamer">Стати стрімером Chess-Online</string>
   <string name="doYouHaveStream">У Вас є канал на Twitch чи YouTube?</string>
   <string name="hereWeGo">Поїхали!</string>
   <string name="allStreamers">Всі стрімери</string>
@@ -15,27 +15,27 @@
   <string name="downloadKit">Завантажити набір інструментів стрімера</string>
   <string name="xIsStreaming">%s транслює</string>
   <string name="rules">Правила трансляцій</string>
-  <string name="rule1">Додайте ключове слово \"lichess.org\" у заголовку Вашої трансляції і використовуйте категорію \"Chess\" під час трансляції на Lichess.</string>
-  <string name="rule2">Видаліть ключове слово, коли транслюєте щось не пов\'язане з Lichess.</string>
-  <string name="rule3">Lichess буде автоматично виявляти Вашу трансляцію і включати наступні переваги:</string>
+  <string name="rule1">Додайте ключове слово \"chess-online.com\" у заголовку Вашої трансляції і використовуйте категорію \"Chess\" під час трансляції на Chess-Online.</string>
+  <string name="rule2">Видаліть ключове слово, коли транслюєте щось не пов\'язане з Chess-Online.</string>
+  <string name="rule3">Chess-Online буде автоматично виявляти Вашу трансляцію і включати наступні переваги:</string>
   <string name="perks">Переваги трансляції з ключовим словом</string>
-  <string name="perk1">Ви отримуєте знак стрімера у Вашому обліковому записі Lichess.</string>
+  <string name="perk1">Ви отримуєте знак стрімера у Вашому обліковому записі Chess-Online.</string>
   <string name="perk2">Ви будете переміщені вверх по списку стрімерів.</string>
-  <string name="perk3">Повідомлення Ваших підписників Lichess.</string>
+  <string name="perk3">Повідомлення Ваших підписників Chess-Online.</string>
   <string name="perk4">Відображення Вашої трансляції у Ваших іграх, турнірах та дослідженнях.</string>
   <string name="approved">Вашу трансляцію затверджено.</string>
   <string name="pendingReview">Вашу трансляцію перевіряють модератори.</string>
   <string name="pleaseFillIn">Будь ласка, заповніть інформацію про трансляцію та завантажте фотографію.</string>
-  <string name="whenReady">Коли Ви будете готові бути переліченим як стрімер Lichess, %s</string>
+  <string name="whenReady">Коли Ви будете готові бути переліченим як стрімер Chess-Online, %s</string>
   <string name="requestReview">запросити відгук модератора</string>
   <string name="anotherLanguage">Якщо Ви транслюєте не англійською мовою, вкажіть правильний тег мови (%s), оточений квадратними дужками, на початку назви Вашої трансляції.
 Як приклад, ви можете вказати \"[UA]\" для української, \"[TR]\" для турецької, \"[FR]\" для французької мови тощо.
-Поставте це в заголовок трансляції Twitch або YouTube, а не в налаштуваннях трансляції Lichess.
+Поставте це в заголовок трансляції Twitch або YouTube, а не в налаштуваннях трансляції Chess-Online.
 Якщо Ваша трансляція англійською, немає необхідності включати мовний тег.</string>
   <string name="twitchUsername">Ваше ім\'я користувача Twitch або посилання</string>
   <string name="optionalOrEmpty">Необов\'язково. Залиште пустим, якщо немає</string>
   <string name="youtubeChannel">ID вашого YouTube каналу або посилання</string>
-  <string name="streamerName">Ваше ім\'я для трансляцій на Lichess</string>
+  <string name="streamerName">Ваше ім\'я для трансляцій на Chess-Online</string>
   <plurals name="keepItShort">
     <item quantity="one">Скоротіть: максимум %s символ</item>
     <item quantity="few">Скоротіть: максимум %s символи</item>
@@ -55,6 +55,6 @@
   <string name="installBlocker">Встановіть блокувальник зловмисних програм!</string>
   <string name="beSafe">Будьте в безпеці від реклами і трекерів,
 якими наповнені Twitch і YouTube.
-Lichess рекомендує uBlock Origin,
+Chess-Online рекомендує uBlock Origin,
 який є безкоштовним і має відкритий код.</string>
 </resources>

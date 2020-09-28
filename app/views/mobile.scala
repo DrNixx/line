@@ -40,7 +40,7 @@ object mobile {
                 li(trans.puzzles()),
                 li(trans.gameAnalysis()),
                 li(trans.boardEditor()),
-                li("Lichess TV"),
+                li("Chess-Online TV"),
                 li(trans.followAndChallengeFriends()),
                 li(trans.availableInNbLanguages.pluralSame(80))
               )
@@ -51,7 +51,7 @@ object mobile {
                 width := "268",
                 height := "513",
                 src := assetUrl("images/mobile/nexus5-playing.png"),
-                alt := "Lichess mobile on nexus 5"
+                alt := "Chess-Online mobile on nexus 5"
               ),
               img(
                 cls := "qrcode",

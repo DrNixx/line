@@ -4,6 +4,17 @@ package lila.i18n
 // format: OFF
 object I18nKeys {
 
+val `library` = new I18nKey("library")
+val `chessBooks` = new I18nKey("chessBooks")
+val `helpMenu` = new I18nKey("helpMenu")
+val `information` = new I18nKey("information")
+val `feedback` = new I18nKey("feedback")
+val `membership` = new I18nKey("membership")
+val `corrsTournaments` = new I18nKey("corrsTournaments")
+val `copyright` = new I18nKey("copyright")
+val `basedOn` = new I18nKey("basedOn")
+val `withLove` = new I18nKey("withLove")
+
 val `playWithAFriend` = new I18nKey("playWithAFriend")
 val `playWithTheMachine` = new I18nKey("playWithTheMachine")
 val `toInviteSomeoneToPlayGiveThisUrl` = new I18nKey("toInviteSomeoneToPlayGiveThisUrl")
@@ -1535,6 +1546,10 @@ val `yourPreferencesHaveBeenSaved` = new I18nKey("preferences:yourPreferencesHav
 object team {
 val `team` = new I18nKey("team:team")
 val `teams` = new I18nKey("team:teams")
+val `clubs` = new I18nKey("team:clubs")
+val `playGroups` = new I18nKey("team:playGroups")
+val `specGroups` = new I18nKey("team:specGroups")
+val `sysGroups` = new I18nKey("team:sysGroups")
 val `allTeams` = new I18nKey("team:allTeams")
 val `newTeam` = new I18nKey("team:newTeam")
 val `myTeams` = new I18nKey("team:myTeams")

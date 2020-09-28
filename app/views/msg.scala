@@ -23,7 +23,7 @@ object msg {
           )})"""
         )
       ),
-      title = "Lichess Inbox"
+      title = "Chess-Online Inbox"
     ) {
       main(cls := "box msg-app")
     }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="contact">اتصل بنا</string>
-  <string name="contactLichess">تواصل مع Lichess</string>
+  <string name="contactLichess">تواصل مع Chess-Online</string>
   <string name="whatCanWeHelpYouWith">كيف يمكن أن نساعدك؟</string>
   <string name="visitThisPage">قم بزيارة هذه الصفحة لحل المشكلة</string>
   <string name="iCantLogIn">لا يمكنني تسجيل الدخول</string>
@@ -11,8 +11,8 @@
   <string name="youCanLoginWithEmail">يمكنك تسجيل الدخول باستخدام عنوان البريد الإلكتروني الذي قمت بالتسجيل به</string>
   <string name="lost2FA">لقد فقدت الوصول إلى رموز المصادقة الثنائية الخاصة بي</string>
   <string name="doPasswordReset">أكمل إعادة تعيين كلمة المرور لإزالة المصادقة الثنائية</string>
-  <string name="wantTitle">أريد أن يتم عرض لقبي على Lichess</string>
-  <string name="visitTitleConfirmation">لإظهار لقبك على ملفك الشخصي في Lichess، والمشاركة في بطولات حملة الألقاب، قم بزيارة صفحة تأكيد اللقب</string>
+  <string name="wantTitle">أريد أن يتم عرض لقبي على Chess-Online</string>
+  <string name="visitTitleConfirmation">لإظهار لقبك على ملفك الشخصي في Chess-Online، والمشاركة في بطولات حملة الألقاب، قم بزيارة صفحة تأكيد اللقب</string>
   <string name="wantCloseAccount">أريد إغلاق حسابي</string>
   <string name="closeYourAccount">يمكنك إغلاق حسابك في هذه الصفحة</string>
   <string name="doNotAskByEmail">لا تطلب إغلاق الحساب عن طريق البريد الإلكتروني، فنحن لن نقوم بذلك.</string>
@@ -35,7 +35,7 @@
   <string name="doNotSendReportEmails">لا ترسل بالتبليغ عبر البريد الإلكتروني.</string>
   <string name="doNotMessageModerators">لا ترسل رسائل مباشرة للمشرفين.</string>
   <string name="wantReportBug">أريد أن أبلغ عن خطأ برمجي</string>
-  <string name="reportBugInDiscord">في خادم ديسكورد Lichess</string>
+  <string name="reportBugInDiscord">في خادم ديسكورد Chess-Online</string>
   <string name="howToReportBug">يرجى وصف الخطأ البرمجي بدقة، ماذا كنت تتوقع أن يحدث بدلاً من ذلك، والخطوات التي أدت إلى حدوث الخطأ.</string>
   <string name="illegalPawnCapture">أخذ غير قانوني للبيدق</string>
   <string name="calledEnPassant">هذا يُعرف باسم \"الأخذ بالتجاوز\" وهو أحد قوانين الشطرنج.</string>

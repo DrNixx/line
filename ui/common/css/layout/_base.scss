@@ -35,9 +35,12 @@ body {
 
 #main-wrap {
   display: grid;
-  grid-template-areas: '. . main . .';
+  grid-template-areas: 
+    ". . main . ."
+    ". . footer . .";
   --main-max-width: #{$main-max-width};
   grid-template-columns: $main-margin 1fr minmax(auto, var(--main-max-width)) 1fr $main-margin;
+  grid-template-rows: auto 90px;
   
   &.full-screen {
     --main-max-width: auto;
@@ -48,7 +51,6 @@ body {
   }
 
   padding-top: $site-header-height;
-  padding-left: $layout-sidepanel-width-collapsed;
   margin-top: $site-header-margin;
 
   @media (hover: none) {
@@ -92,4 +94,8 @@ main {
     margin: auto;
     width: 100%;
   }
+}
+
+footer {
+  grid-area: footer;
 }

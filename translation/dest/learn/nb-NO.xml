@@ -37,7 +37,7 @@ Du trenger begge!</string>
   <string name="itMovesInAnLShape">Den flyttes i en L-form</string>
   <string name="knightIntro">Dette blir en utfordring. Springeren er en... vanskelig brikke.</string>
   <string name="knightsHaveAFancyWay">Springere har en fancy måte å hoppe rundt på!</string>
-  <string name="knightsCanJumpOverObstacles">Springere kan hoppe over hindringer! 
+  <string name="knightsCanJumpOverObstacles">Springere kan hoppe over hindringer!
 Flykt og beseire stjernene!</string>
   <string name="knightComplete">Gratulerer! Du har mestret springeren.</string>
   <string name="thePawn">Bonden</string>
@@ -148,16 +148,16 @@ Løper = 3
 Springer = 3
 Bonde = 1
 Kongen er uvurderlig! Mister du den er spillet tapt.</string>
-  <string name="queenOverBishop">Slå ut brikken 
+  <string name="queenOverBishop">Slå ut brikken
 med høyest verdi!
 Dronning &gt; løper</string>
   <string name="takeThePieceWithTheHighestValue">Slå ut brikken
 med høyest verdi!</string>
-  <string name="pieceValueComplete">Gratulerer! Du kjenner brikkenes verdi! 
-Dronning = 9 
-Tårn = 5 
-Løper = 3 
-Springer = 3 
+  <string name="pieceValueComplete">Gratulerer! Du kjenner brikkenes verdi!
+Dronning = 9
+Tårn = 5
+Løper = 3
+Springer = 3
 Bonde = 1</string>
   <string name="checkInTwo">Sjakk i to trekk</string>
   <string name="twoMovesToGiveCheck">To trekk for å sette sjakk</string>
@@ -167,7 +167,7 @@ Bonde = 1</string>
   <string name="whatNext">Hva kommer nå?</string>
   <string name="youKnowHowToPlayChess">Nå vet du hvordan man spiller sjakk, gratulerer! Vil du bli en sterkere spiller?</string>
   <string name="register">Registrer deg</string>
-  <string name="getAFreeLichessAccount">Få en gratis brukerkonto hos Lichess</string>
+  <string name="getAFreeLichessAccount">Få en gratis brukerkonto hos Chess-Online</string>
   <string name="practice">Øv</string>
   <string name="learnCommonChessPositions">Lær deg de oftest forekommende sjakkstillingene</string>
   <string name="puzzles">Sjakknøtter</string>

@@ -62,7 +62,7 @@
   <string name="chapterPgn">PGN del capítulo</string>
   <string name="downloadGame">Descargar partida</string>
   <string name="studyUrl">URL del estudio</string>
-  <string name="broadcastUrl" comment="broadcastUrl&#10;&#10;This is to do with the Broadcasts feature. These are tournaments in the chess world, hosted elsewhere, for example the FIDE Championship. This specific text lets you share the URL. https://lichess.org/broadcast">Enlace de la transmisión</string>
+  <string name="broadcastUrl" comment="broadcastUrl&#10;&#10;This is to do with the Broadcasts feature. These are tournaments in the chess world, hosted elsewhere, for example the FIDE Championship. This specific text lets you share the URL. https://live.chess-online.com/broadcast">Enlace de la transmisión</string>
   <string name="currentChapterUrl">URL del capítulo actual</string>
   <string name="currentGameUrl">Enlace de la partida actual</string>
   <string name="youCanPasteThisInTheForumToEmbed" comment="youCanPasteThisInTheForumToEmbed&#10;&#10;The thing you are pasting is a link to a study. This will make it appear in the correct section as well.">Puedes pegar esto en el foro para insertar la partida</string>

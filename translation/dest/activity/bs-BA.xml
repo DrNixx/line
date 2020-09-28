@@ -3,9 +3,9 @@
   <string name="activity">Aktivnost</string>
   <string name="hostedALiveStream">Bio/la domaćin emitovanja uživo</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">Podržavao/la lichess.org %1$s mjesec kao %2$s</item>
-    <item quantity="few">Podržavao/la lichess.org %1$s mjeseca kao %2$s</item>
-    <item quantity="other">Podržavao/la lichess.org %1$s mjeseci kao %2$s</item>
+    <item quantity="one">Podržavao/la chess-online.com %1$s mjesec kao %2$s</item>
+    <item quantity="few">Podržavao/la chess-online.com %1$s mjeseca kao %2$s</item>
+    <item quantity="other">Podržavao/la chess-online.com %1$s mjeseci kao %2$s</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">Vježbao/la %1$s poziciju na %2$s</item>

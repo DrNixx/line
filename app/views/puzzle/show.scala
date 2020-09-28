@@ -33,7 +33,7 @@ object show {
           image = cdnUrl(routes.Export.puzzleThumbnail(puzzle.id).url).some,
           title = s"Chess tactic #${puzzle.id} - ${puzzle.color.name.capitalize} to play",
           url = s"$netBaseUrl${routes.Puzzle.show(puzzle.id).url}",
-          description = s"Lichess tactic trainer: " + puzzle.color
+          description = s"Chess-Online tactic trainer: " + puzzle.color
             .fold(
               trans.findTheBestMoveForWhite,
               trans.findTheBestMoveForBlack

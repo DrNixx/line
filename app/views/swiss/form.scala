@@ -165,7 +165,7 @@ final private class SwissFields(form: Form[_])(implicit ctx: Context) {
           Swiss.ChatFor.NONE    -> "No chat",
           Swiss.ChatFor.LEADERS -> "Only team leaders",
           Swiss.ChatFor.MEMBERS -> "Only team members",
-          Swiss.ChatFor.ALL     -> "All Lichess players"
+          Swiss.ChatFor.ALL     -> "All Chess-Online players"
         )
       )
     }

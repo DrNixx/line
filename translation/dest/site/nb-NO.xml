@@ -275,7 +275,7 @@
     <item quantity="one">Gi %s sekund</item>
     <item quantity="other">Gi %s sekunder</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Denne kontoen brøt vilkårene for å bruke Lichess</string>
+  <string name="thisAccountViolatedTos">Denne kontoen brøt vilkårene for å bruke Chess-Online</string>
   <string name="thisPlayerArtificiallyIncreasesTheirRating">Denne spilleren øker/reduserer ratingen kunstig</string>
   <string name="openingExplorerAndTablebase">Åpningsutforsker &amp; tabellbase</string>
   <string name="takeback">Angre</string>
@@ -448,8 +448,8 @@
   <string name="country">Land</string>
   <string name="socialMediaLinks">Linker til sosiale media</string>
   <string name="inlineNotation">Innebygd notasjon</string>
-  <string name="watchLichessTV">Se på Lichess TV</string>
-  <string name="previouslyOnLichessTV">Tidligere på Lichess TV</string>
+  <string name="watchLichessTV">Se på Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Tidligere på Chess-Online TV</string>
   <string name="onlinePlayers">Påloggede spillere</string>
   <string name="activeToday">Aktive i dag</string>
   <string name="activePlayers">Aktive spillere</string>
@@ -578,7 +578,7 @@
   <string name="clock">Klokke</string>
   <string name="unauthorizedError">Uautorisert tilgang.</string>
   <string name="noInternetConnection">Ingen internettilkobling. Du kan fremdeles spille frakoblet fra menyen.</string>
-  <string name="connectedToLichess">Du er nå tilkoblet lichess.org</string>
+  <string name="connectedToLichess">Du er nå tilkoblet chess-online.com</string>
   <string name="signedOut">Du har blitt logget ut.</string>
   <string name="loginSuccessful">Du er nå pålogget</string>
   <string name="playOnTheBoardOffline">Over brettet</string>
@@ -743,7 +743,7 @@
   <string name="usernameSuffixInvalid">Det siste tegnet i brukernavnet må være en bokstav eller et tall.</string>
   <string name="usernameCharsInvalid">Brukernavnet kan bare bestå av bokstaver, tall, understrekingstegn og bindestreker.</string>
   <string name="usernameUnacceptable">Dette brukernavnet er ikke akseptabelt.</string>
-  <string name="directlySupportLichess">Støtt Lichess direkte</string>
+  <string name="directlySupportLichess">Støtt Chess-Online direkte</string>
   <string name="playChessInStyle">Spill sjakk med stil</string>
   <string name="chessBasics">Grunnleggende sjakk</string>
   <string name="coaches">Trenere</string>
@@ -830,14 +830,14 @@
   <string name="tryToWin">Forsøk å vinne (eller i det minste oppnå remis) i alle partier du spiller.</string>
   <string name="resignLostGames">Gi opp tapte stillinger (ikke la tiden løpe ut).</string>
   <string name="temporaryInconvenience">Vi beklager det midlertidige bryet,</string>
-  <string name="wishYouGreatGames">og håper du får gode partier på lichess.org.</string>
+  <string name="wishYouGreatGames">og håper du får gode partier på chess-online.com.</string>
   <string name="thankYouForReading">Takk for at du leste!</string>
   <string name="lifetimeScore">Livstidsscore</string>
   <string name="currentMatchScore">Gjeldende kampscore</string>
   <string name="agreementAssistance">Jeg lover at jeg aldri vil motta hjelp under partiene mine, hverken fra maskiner, bøker, databaser eller andre personer.</string>
   <string name="agreementNice">Jeg lover å alltid være høflig mot andre spillere.</string>
   <string name="agreementAccount">Jeg lover å ikke opprette flere brukerkonti.</string>
-  <string name="agreementPolicy">Jeg lover å respektere alle Lichess\' retningslinjer.</string>
+  <string name="agreementPolicy">Jeg lover å respektere alle Chess-Online\' retningslinjer.</string>
   <string name="searchOrStartNewDiscussion">Søk eller start en ny diskusjon</string>
   <string name="edit">Rediger</string>
   <string name="rapid">Hurtigsjakk</string>

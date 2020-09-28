@@ -73,10 +73,10 @@ E non perdere i tuoi.</string>
   <string name="keepYourPiecesSafe">Tieni al sicuro i tuoi pezzi</string>
   <string name="protectionIntro">Identifica i pezzi che il tuo avversario sta attaccando e difendili!</string>
   <string name="protectionComplete">Congratulazioni! Un pezzo che non perdi è un pezzo che vinci!</string>
-  <string name="escape">Sei sotto attacco! 
+  <string name="escape">Sei sotto attacco!
 Sfuggi alla minaccia!</string>
   <string name="noEscape">Non c\'è scampo, ma puoi difendere!</string>
-  <string name="dontLetThemTakeAnyUndefendedPiece">Non lasciar conquistare 
+  <string name="dontLetThemTakeAnyUndefendedPiece">Non lasciar conquistare
 nessun pezzo!</string>
   <string name="combat">Il combattimento</string>
   <string name="captureAndDefendPieces">Cattura e difendi i pezzi</string>
@@ -85,7 +85,7 @@ nessun pezzo!</string>
   <string name="checkInOne">Scacco</string>
   <string name="attackTheOpponentsKing">Attacca il re dell\'avversario</string>
   <string name="checkInOneIntro">Per dare scacco attacca il re. L\'avversario dovrà difenderlo!</string>
-  <string name="checkInOneGoal">Metti nel mirino il re avversario 
+  <string name="checkInOneGoal">Metti nel mirino il re avversario
 in una sola mossa!</string>
   <string name="checkInOneComplete">Congratulazioni! Hai dato scacco al tuo avversario costringendolo a difendere il re!</string>
   <string name="outOfCheck">Para lo scacco</string>
@@ -157,7 +157,7 @@ arroccare sull\'ala di regina!</string>
 di due case!
 Catturalo en passant.</string>
   <string name="enPassantOnlyWorksImmediately">La cattura en passant funziona solo
-se fatta immediatamente dopo 
+se fatta immediatamente dopo
 la mossa dell\'avversario.</string>
   <string name="enPassantOnlyWorksOnFifthRank">La cattura en passant funziona solo
 se il tuo pedone si trova sulla quinta traversa.</string>
@@ -183,13 +183,13 @@ Il re è inestimabile! Perdere il re significa essere sconfitti.</string>
   <string name="queenOverBishop">Cattura il pezzo
 con il più alto valore!
 Regina &gt; Alfiere</string>
-  <string name="takeThePieceWithTheHighestValue">Cattura il pezzo 
+  <string name="takeThePieceWithTheHighestValue">Cattura il pezzo
 con il valore più alto!</string>
-  <string name="pieceValueComplete">Congratulazioni! Ora conosci il valore dei pezzi! 
-Regina = 9 
-Torre = 5 
+  <string name="pieceValueComplete">Congratulazioni! Ora conosci il valore dei pezzi!
+Regina = 9
+Torre = 5
 Alfiere = 3
-Cavallo = 3 
+Cavallo = 3
 Pedone = 1</string>
   <string name="checkInTwo">Scacco in due mosse</string>
   <string name="twoMovesToGiveCheck">Due mosse per dare uno scacco</string>
@@ -200,7 +200,7 @@ in due mosse!</string>
   <string name="whatNext">E ora?</string>
   <string name="youKnowHowToPlayChess">Sai come giocare a scacchi, ora vuoi diventare un giocatore più forte?</string>
   <string name="register">Registrati</string>
-  <string name="getAFreeLichessAccount">Otteni un account Lichess gratuito</string>
+  <string name="getAFreeLichessAccount">Otteni un account Chess-Online gratuito</string>
   <string name="practice">Allenamento</string>
   <string name="learnCommonChessPositions">Impara le posizioni più frequenti</string>
   <string name="puzzles">Tattiche</string>

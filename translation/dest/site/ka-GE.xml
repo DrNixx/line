@@ -400,7 +400,7 @@
   <string name="biography">ბიოგრაფია</string>
   <string name="country">ქვეყანა</string>
   <string name="watchLichessTV">უყურეთ ტელევიზიას</string>
-  <string name="previouslyOnLichessTV">წინა Lichess TV-ზე</string>
+  <string name="previouslyOnLichessTV">წინა Chess-Online TV-ზე</string>
   <string name="onlinePlayers">ონლაინ მოთამაშეები</string>
   <string name="activeToday">აქტიურები დღეს</string>
   <string name="activePlayers">აქტიური მოთამაშეები</string>
@@ -420,7 +420,7 @@
   <string name="butYouCanKeepTrying">ისევ შეგიძლია სცადო.</string>
   <string name="success">წარმატება</string>
   <string name="wasThisPuzzleAnyGood">როგორ შეაფასებდი ამ ფაზლს?</string>
-  <string name="pleaseVotePuzzle">გააუმჯობესეთ Lichess ხმის მიცემით ზემოთ ან ქვემოთ მიმართული ისრების მეშვეობით:</string>
+  <string name="pleaseVotePuzzle">გააუმჯობესეთ Chess-Online ხმის მიცემით ზემოთ ან ქვემოთ მიმართული ისრების მეშვეობით:</string>
   <string name="thankYou">გმადლობთ შეფასებისთვის!</string>
   <string name="ratingX">რეიტინგი: %s</string>
   <string name="hidden">დამალული</string>
@@ -524,7 +524,7 @@
   <string name="clock">დრო</string>
   <string name="unauthorizedError">დაკავშირება შეუძლებელია</string>
   <string name="noInternetConnection">ინტერნეტთან წვდომა არ არის. თქვენ შეგიძლიათ ითამაშოთ ოფფლაინში.</string>
-  <string name="connectedToLichess">კავშირი lichess.org-თან დამყარებულია</string>
+  <string name="connectedToLichess">კავშირი chess-online.com-თან დამყარებულია</string>
   <string name="signedOut">თქვენ გამოსული ხართ სისტემიდან</string>
   <string name="loginSuccessful">თქვენი ავტორიზირებული ხართ სისტემაში</string>
   <string name="playOnTheBoardOffline">ადგილობრივი თამაში</string>
@@ -584,7 +584,7 @@
   <string name="simulClockHint">ფიშერის საათის გამართვა. რაც მეტ მოთამაშეს დაუპირისპირდებით, შესაძლოა მით მეტი დრო დაგჭირდეთ.</string>
   <string name="simulAddExtraTime">თქვენ შეგიძლიათ დროის დამატება ერთდროული თამაშისას.</string>
   <string name="simulHostExtraTime">თამაშის შემქნელის დამატები დრო</string>
-  <string name="lichessTournaments">Lichess ტურნირები</string>
+  <string name="lichessTournaments">Chess-Online ტურნირები</string>
   <string name="tournamentFAQ">Arena ტურნირის ხშირი შეკითხვები</string>
   <string name="tournamentOfficial">ოფიციალური</string>
   <string name="timeBeforeTournamentStarts">ტურნირის დაწყებამდე დარჩენილი დრო</string>
@@ -606,7 +606,7 @@
   <string name="checkYourEmail">შეამოწმეთ ელ.ფოსტა</string>
   <string name="weHaveSentYouAnEmailClickTheLink">გამოგიგზავნით იმეილზე ლინკას, დააკლიკეთ და გაააქტიურეთ თქვენი ექაუნთი</string>
   <string name="weHaveSentYouAnEmailTo">ჩვენ გავაგზავნეთ შეტყობინება %s მეილზე. შეტყობინებაში დააჭირეთ ლინკს, რომ პაროლი შეცვალოთ.</string>
-  <string name="networkLagBetweenYouAndLichess">ქსელი გარკვეული შუალედი შორის თქვენ და Lichess</string>
+  <string name="networkLagBetweenYouAndLichess">ქსელი გარკვეული შუალედი შორის თქვენ და Chess-Online</string>
   <string name="downloadAnnotated">ანოტირებულის ჩამოტვირთვა</string>
   <string name="downloadRaw">სუფთას ჩამოტვირთვა</string>
   <string name="downloadImported">იმპორტირებულის ჩამოტვირთვა</string>

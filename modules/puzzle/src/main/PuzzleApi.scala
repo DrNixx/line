@@ -1,18 +1,21 @@
 package lila.puzzle
 
-import scala.concurrent.duration._
+import play.api.libs.json.{JsValue, __}
 
+import scala.concurrent.duration._
 import lila.db.AsyncColl
 import lila.db.dsl._
 import lila.user.User
-import Puzzle.{ BSONFields => F }
+import Puzzle.{BSONFields => F}
+import lila.common.config.Secret
 
 final private[puzzle] class PuzzleApi(
     puzzleColl: AsyncColl,
     roundColl: AsyncColl,
     voteColl: AsyncColl,
     headColl: AsyncColl,
-    cacheApi: lila.memo.CacheApi
+    cacheApi: lila.memo.CacheApi,
+    apiToken: Secret
 )(implicit ec: scala.concurrent.ExecutionContext) {
 
   import Puzzle.puzzleBSONHandler
@@ -39,6 +42,28 @@ final private[puzzle] class PuzzleApi(
           puzzleColl(lila.db.Util.findNextId) dmap (_ - 1)
         }
     }
+
+    def importOne(json: JsValue, token: String): Fu[PuzzleId] =
+      if (token != apiToken.value) fufail("Invalid API token")
+      else {
+        import Generated.generatedJSONRead
+        insertPuzzle(json.as[Generated])
+      }
+
+    private def insertPuzzle(generated: Generated): Fu[PuzzleId] =
+      puzzleColl(lila.db.Util.findNextId) flatMap { id =>
+        val p = generated.toPuzzle(id)
+        val fenStart = p.fen.split(' ').take(2).mkString(" ")
+        puzzleColl {
+          _.exists($doc(
+            F.id -> $gte(1),
+            F.fen.$regex(fenStart.replace("/", "\\/"), "")
+          )) flatMap {
+            case false => puzzleColl(_.insert.one(p)) inject id
+            case _ => fufail(s"Duplicate puzzle $fenStart")
+          }
+        }
+      }
 
     def disable(id: PuzzleId): Funit =
       puzzleColl {

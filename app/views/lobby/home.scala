@@ -18,7 +18,7 @@ object home {
     views.html.base.layout(
       title = "",
       fullTitle = Some {
-        s"lichess.${if (netConfig.isProd) "org" else "dev"} • ${trans.freeOnlineChess.txt()}"
+        s"Chess-Online.Com • ${trans.freeOnlineChess.txt()}"
       },
       moreJs = frag(
         jsModule("lobby"),
@@ -125,16 +125,6 @@ object home {
                 " »"
               )
             )
-          else
-            div(cls := "about-side")(
-              ctx.blind option h2("About"),
-              trans.xIsAFreeYLibreOpenSourceChessServer(
-                "Lichess",
-                a(cls := "blue", href := routes.Plan.features())(trans.really.txt())
-              ),
-              " ",
-              a(href := "/about")(trans.aboutX("Lichess"), "...")
-            )
         ),
         featured map { g =>
           div(cls := "lobby__tv")(
@@ -150,12 +140,12 @@ object home {
         },
         ctx.noBot option bits.underboards(tours, simuls, leaderboard, tournamentWinners),
         ctx.noKid option div(cls := "lobby__forum lobby__box")(
-          a(cls := "lobby__box__top", href := routes.ForumCateg.index())(
+          a(cls := "lobby__box__top", href := "https://www.chess-online.com/forums")(
             h2(cls := "title text", dataIcon := "d")(trans.latestForumPosts()),
             span(cls := "more")(trans.more(), " »")
           ),
           div(cls := "lobby__box__content")(
-            views.html.forum.post recent forumRecent
+            ol()
           )
         ),
         bits.lastPosts(lastPost),
@@ -166,25 +156,12 @@ object home {
               strong(trans.patron.donate()),
               span(trans.patron.becomePatron())
             )
-          ),
-          a(href := "https://shop.spreadshirt.com/lichess-org")(
-            iconTag(""),
-            span(cls := "lobby__support__text")(
-              strong("Swag Store"),
-              span(trans.playChessInStyle())
-            )
           )
         ),
         div(cls := "lobby__about")(
           ctx.blind option h2("About"),
-          a(href := "/about")(trans.aboutX("Lichess")),
-          a(href := "/faq")(trans.faq.faqAbbreviation()),
-          a(href := "/contact")(trans.contact.contact()),
-          a(href := "/mobile")(trans.mobileApp()),
-          a(href := routes.Page.tos())(trans.termsOfService()),
-          a(href := routes.Page.privacy())(trans.privacy()),
-          a(href := routes.Page.source())(trans.sourceCode()),
-          a(href := routes.Page.ads())("Ads"),
+          a(href := "https://www.chess-online.com/site/welcome")(trans.aboutX("Chess-Online")),
+          a(href := "https://www.chess-online.com/help/faq")(trans.faq.faqAbbreviation()),
           views.html.base.bits.connectLinks
         )
       )

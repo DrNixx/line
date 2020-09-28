@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="team">Клуб</string>
-  <string name="teams">Клубы</string>
+  <string name="teams">Команды</string>
+  <string name="clubs">Клубы по интересам</string>
+  <string name="playGroups">Игровые группы</string>
+  <string name="specGroups">Специальные группы</string>
+  <string name="sysGroups">Системные группы</string>
   <plurals name="nbMembers">
     <item quantity="one">%s член клуба</item>
     <item quantity="few">%s участников</item>

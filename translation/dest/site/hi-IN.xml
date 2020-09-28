@@ -447,8 +447,8 @@
   <string name="country">देश</string>
   <string name="socialMediaLinks">सामाजिक माध्यम</string>
   <string name="inlineNotation">इनलाइन नोटेशन</string>
-  <string name="watchLichessTV">Lichess TV देखें</string>
-  <string name="previouslyOnLichessTV">इससे पहले Lichess TV पर</string>
+  <string name="watchLichessTV">Chess-Online TV देखें</string>
+  <string name="previouslyOnLichessTV">इससे पहले Chess-Online TV पर</string>
   <string name="onlinePlayers">ऑनलाइन खिलाड़ियों</string>
   <string name="activeToday">आज सक्रिय</string>
   <string name="activePlayers">सक्रिय  खिलाडी</string>
@@ -580,7 +580,7 @@
   <string name="clock">घड़ी</string>
   <string name="unauthorizedError">पहुँच अनधिकृत है।</string>
   <string name="noInternetConnection">कोई इंटरनेट कनेक्शन नहीं। आप अब भी मेनू से ऑफ़लाइन खेल सकते हैं।</string>
-  <string name="connectedToLichess">अब आप lichess.org से जुड़े हैं</string>
+  <string name="connectedToLichess">अब आप chess-online.com से जुड़े हैं</string>
   <string name="signedOut">आप खातें से बहार आ चुके हैं</string>
   <string name="loginSuccessful">अब आप खाते के अंदर हैं</string>
   <string name="playOnTheBoardOffline">बोर्ड पर</string>
@@ -681,7 +681,7 @@
   <string name="weHaveSentYouAnEmailTo">हम%s के लिए एक ईमेल भेज दिया है। अपना पासवर्ड रीसेट करने के लिए ईमेल में लिंक पर क्लिक करें।</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">दर्ज करके, आप हमारे %s द्वारा बाध्य होने के लिए सहमत हैं।</string>
   <string name="networkLagBetweenYouAndLichess">आप और lichess के बीच नेटवर्क के अंतराल</string>
-  <string name="timeToProcessAMoveOnLichessServer">Lichess सर्वर पर एक कदम प्रक्रिया के लिए समय</string>
+  <string name="timeToProcessAMoveOnLichessServer">Chess-Online सर्वर पर एक कदम प्रक्रिया के लिए समय</string>
   <string name="downloadAnnotated">एनोटेट डाउनलोड करें</string>
   <string name="downloadRaw">कच्चा डाउनलोड करें</string>
   <string name="downloadImported">डाउनलोड आयातित</string>
@@ -705,7 +705,7 @@
   <string name="alternativelyYouCanX">वैकल्पिक रूप से आप %s कर सकते हैं।</string>
   <string name="revokeAllSessions">सभी सत्र रद्द</string>
   <string name="playChessEverywhere">हर जगह शतरंज खेलें</string>
-  <string name="asFreeAsLichess">Lichess जैसा मुक्त</string>
+  <string name="asFreeAsLichess">Chess-Online जैसा मुक्त</string>
   <string name="builtForTheLoveOfChessNotMoney">शतरंज के प्यार के लिए निर्मित, धन के लिए नहीं</string>
   <string name="everybodyGetsAllFeaturesForFree">हर कोई मुफ्त में सभी सुविधाओं प्राप्त करता है</string>
   <string name="zeroAdvertisement">शून्य विज्ञापन</string>
@@ -745,7 +745,7 @@
   <string name="usernameSuffixInvalid">जो नाम आप उपयोग करते, वह किसी अक्षर या संख्या के साथ समाप्त होना चाहिए ।</string>
   <string name="usernameCharsInvalid">जो नाम आप उपयोग करते, उनमें सिर्फ पत्र, संख्या, अंडरस्कोर और हाइफ़न होना चाहिए ।</string>
   <string name="usernameUnacceptable">यह उपयोगकर्ता नाम स्वीकार्य नहीं है।</string>
-  <string name="directlySupportLichess">Lichess का समर्थन करें</string>
+  <string name="directlySupportLichess">Chess-Online का समर्थन करें</string>
   <string name="playChessInStyle">शैली में शतरंज खेलें</string>
   <string name="chessBasics">शतरंज मूल बातें</string>
   <string name="coaches">कोच</string>
@@ -832,14 +832,14 @@
   <string name="tryToWin">आपके द्वारा खेले जाने वाले हर खेल को जीतने की कोशिश करें। (या कम से कम खेल ड्रा करें)।</string>
   <string name="resignLostGames">हारे हुए खेलों को त्याग दें (घड़ी को अंत तक न चलने दें)।</string>
   <string name="temporaryInconvenience">हमें अल्पकालिक असुविधा के लिए खेद है</string>
-  <string name="wishYouGreatGames">और lichess.org पर आपको अनेक शानदार खेलों की शुभकामनाएं।</string>
+  <string name="wishYouGreatGames">और chess-online.com पर आपको अनेक शानदार खेलों की शुभकामनाएं।</string>
   <string name="thankYouForReading">पढ़ने के लिए धन्यवाद!</string>
   <string name="lifetimeScore">जीवनकाल स्कोर</string>
   <string name="currentMatchScore">वर्तमान मैच का स्कोर</string>
   <string name="agreementAssistance">मैं मानता हूं कि मुझे अपने खेल के दौरान (शतरंज के कंप्यूटर, पुस्तक, डेटाबेस या किसी अन्य व्यक्ति से) सहायता प्राप्त नहीं होगी।</string>
   <string name="agreementNice">मैं इस बात से सहमत हूं कि मैं हमेशा अन्य खिलाड़ियों के प्रति सम्मानजनक रहूंगा।</string>
   <string name="agreementAccount">मैं सहमत हूं कि मैं अनेक अकाउंट नहीं बनाऊंगा।</string>
-  <string name="agreementPolicy">मैं इस बात से सहमत हूं कि मैं सभी Lichess नीतियों का पालन करूंगा।</string>
+  <string name="agreementPolicy">मैं इस बात से सहमत हूं कि मैं सभी Chess-Online नीतियों का पालन करूंगा।</string>
   <string name="searchOrStartNewDiscussion">खोजे या नया वार्तालाप आरम्भ करें</string>
   <string name="edit">संशोधन करें</string>
   <string name="rapid">रैपिड</string>

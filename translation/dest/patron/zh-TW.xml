@@ -11,13 +11,13 @@
   <string name="withCreditCard">信用卡</string>
   <string name="withPaypal">PayPal</string>
   <string name="whereMoneyGoes">我捐出的錢會到哪裡?</string>
-  <string name="officialNonProfit">Lichess 是一個非營利組織嗎?</string>
-  <string name="contactSupport">聯絡 Lichess 支援</string>
+  <string name="officialNonProfit">Chess-Online 是一個非營利組織嗎?</string>
+  <string name="contactSupport">聯絡 Chess-Online 支援</string>
   <string name="bankTransfers">我們也接受銀行轉帳</string>
-  <string name="youSupportWith">你贊助lichess.org每個月 %s美元</string>
+  <string name="youSupportWith">你贊助chess-online.com每個月 %s美元</string>
   <string name="update">更新</string>
   <string name="cancelSupport">取消贊助</string>
-  <string name="noLongerSupport">不再贊助 Lichess</string>
+  <string name="noLongerSupport">不再贊助 Chess-Online</string>
   <string name="paymentHistory">付款記錄</string>
   <string name="paid">已支付</string>
   <string name="date">日期</string>

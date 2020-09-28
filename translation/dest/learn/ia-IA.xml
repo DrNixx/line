@@ -94,13 +94,13 @@ in un movimento!</string>
   <string name="defendYourKing">Defende tu rege</string>
   <string name="outOfCheckIntro">Tu es in chaco! Tu debe escappar o blocar le attacco.</string>
   <string name="escapeWithTheKing">Escappa con le rege!</string>
-  <string name="theKingCannotEscapeButBlock">Le rege non pote escappar, 
+  <string name="theKingCannotEscapeButBlock">Le rege non pote escappar,
 ma tu pote blocar le attacco!</string>
   <string name="youCanGetOutOfCheckByTaking">Tu pote escappar del chaco
 capturante le pecia attaccator.</string>
   <string name="thisKnightIsCheckingThroughYourDefenses">Le cavallo da le chaco
 a transverso de tu defensas!</string>
-  <string name="escapeOrBlock">Escappa con le rege 
+  <string name="escapeOrBlock">Escappa con le rege
 o bloca le attacco!</string>
   <string name="outOfCheckComplete">Congratulationes! Tu rege es san e salve. Assecura te que tu pote defender te contra un chaco!</string>
   <string name="mateInOne">Mat in 1</string>
@@ -142,8 +142,8 @@ Movimenta lo, e postea, rocca.</string>
 Primarimente tu debe mover le pecias.</string>
   <string name="castleQueenSideMovePiecesFirst">Face le roc longe!
 Primarimente tu debe mover le pecias.</string>
-  <string name="youCannotCastleIfMoved">Tu non pote roccar si 
-le rege o le turre 
+  <string name="youCannotCastleIfMoved">Tu non pote roccar si
+le rege o le turre
 ja ha movite previemente.</string>
   <string name="youCannotCastleIfAttacked">Tu non pote roccar si
 le rege es menaciate in le route.
@@ -200,7 +200,7 @@ in duo movimentos!</string>
   <string name="whatNext">Que facer depost?</string>
   <string name="youKnowHowToPlayChess">Tu sape como jocar chacos, congratulationes! Esque tu vole devenir un jocator plus forte?</string>
   <string name="register">Crear conto</string>
-  <string name="getAFreeLichessAccount">Obtene un conto Lichess gratis</string>
+  <string name="getAFreeLichessAccount">Obtene un conto Chess-Online gratis</string>
   <string name="practice">Practicar</string>
   <string name="learnCommonChessPositions">Apprende positiones commun</string>
   <string name="puzzles">Enigmas</string>

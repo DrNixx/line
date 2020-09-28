@@ -123,7 +123,7 @@ case class Pref(
 
 object Pref {
 
-  val defaultBgImg = "//lichess1.org/assets/images/background/landscape.jpg"
+  val defaultBgImg = "https://cdn.chess-online.com/images/bg/bg1.jpg"
 
   trait BooleanPref {
     val NO      = 0

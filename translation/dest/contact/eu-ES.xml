@@ -40,7 +40,7 @@
   <string name="onlyReports">Formularioa erabiliz bakarrik egingo dizugu kasu.</string>
   <string name="wantReportBug">Errore baten berri eman nahi dut</string>
   <string name="reportBugInForum">Lichessen Foroan</string>
-  <string name="reportWebsiteIssue">GitHub erabiliz Lichess webgunearen ticket bezala</string>
+  <string name="reportWebsiteIssue">GitHub erabiliz Chess-Online webgunearen ticket bezala</string>
   <string name="reportMobileIssue">GitHub erabiliz telefonoko aplikazioaren ticket bezala</string>
   <string name="reportBugInDiscord">Lichessen discord zerbitzarian</string>
   <string name="howToReportBug">Azaldu zein den arazoa, zer gertatzea espero zenuen eta zer gertatu den, eta ez ahaztu zure pausoak zein izan diren azaltzea, errorea geuk ere ikusi dezagun.</string>
@@ -69,9 +69,9 @@
   <string name="otherRestriction">Beste murriztapen batzuk</string>
   <string name="collaboration">Laguntza, lege-laguntza, salmenta laguntza</string>
   <string name="monetizing">Lichessekin dirua egiten</string>
-  <string name="buyingLichess">Lichess erosi</string>
-  <string name="authorizationToUse">Lichess erabiltzeko baimena</string>
-  <string name="welcomeToUse">Lichess zure ekintzetarako erabili dezakezu, baita komertzialak badira ere.</string>
+  <string name="buyingLichess">Chess-Online erosi</string>
+  <string name="authorizationToUse">Chess-Online erabiltzeko baimena</string>
+  <string name="welcomeToUse">Chess-Online zure ekintzetarako erabili dezakezu, baita komertzialak badira ere.</string>
   <string name="videosAndBooks">Zure bideoetan erabili dezakezu eta pantaila-irudiak liburuetan ere argitaratu ditzakezu.</string>
   <string name="creditAppreciated">Erabili gaituzula esatea ondo dago baina ez da beharrezkoa.</string>
   <string name="noneOfTheAbove">Aurreko bat ere ez</string>

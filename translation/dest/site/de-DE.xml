@@ -275,7 +275,7 @@
     <item quantity="one">Dem Gegner %s Sekunde geben</item>
     <item quantity="other">Dem Gegner %s Sekunden geben</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Dieses Konto hat gegen die Lichess-Nutzungsbedingungen verstoßen</string>
+  <string name="thisAccountViolatedTos">Dieses Konto hat gegen die Chess-Online-Nutzungsbedingungen verstoßen</string>
   <string name="thisPlayerArtificiallyIncreasesTheirRating">Dieser Spieler manipuliert seine Wertungszahl</string>
   <string name="openingExplorerAndTablebase">Eröffnungsbuch &amp; Tablebase</string>
   <string name="takeback">Zugrücknahme</string>
@@ -448,8 +448,8 @@
   <string name="country">Land</string>
   <string name="socialMediaLinks">Social-Media Links</string>
   <string name="inlineNotation">Inline-Notation</string>
-  <string name="watchLichessTV">Lichess-TV anschauen</string>
-  <string name="previouslyOnLichessTV">Zuletzt auf Lichess TV</string>
+  <string name="watchLichessTV">Chess-Online-TV anschauen</string>
+  <string name="previouslyOnLichessTV">Zuletzt auf Chess-Online TV</string>
   <string name="onlinePlayers">Spieler online</string>
   <string name="activeToday">Heute aktiv</string>
   <string name="activePlayers">Aktive Spieler</string>
@@ -469,7 +469,7 @@
   <string name="butYouCanKeepTrying">Aber du kannst es trotzdem weiterversuchen.</string>
   <string name="success">Korrekt</string>
   <string name="wasThisPuzzleAnyGood">Wie fandest du diese Aufgabe?</string>
-  <string name="pleaseVotePuzzle">Verbessere Lichess, indem du mit den Pfeilen abstimmst:</string>
+  <string name="pleaseVotePuzzle">Verbessere Chess-Online, indem du mit den Pfeilen abstimmst:</string>
   <string name="thankYou">Vielen Dank!</string>
   <string name="ratingX">Schwierigkeitsgrad: %s</string>
   <string name="hidden">ausgeblendet</string>
@@ -644,7 +644,7 @@
   <string name="simulClockHint">Fischer Bedenkzeit. Je mehr Gegner du hast, desto mehr Zeit wirst du benötigen.</string>
   <string name="simulAddExtraTime">Du kannst dir selbst zusätzliche Zeit hinzufügen, um mit dem Simultan zurechtzukommen.</string>
   <string name="simulHostExtraTime">Extra Bedenkzeit des Ausrichters</string>
-  <string name="lichessTournaments">Lichess Turniere</string>
+  <string name="lichessTournaments">Chess-Online Turniere</string>
   <string name="tournamentFAQ">Arena FAQ</string>
   <string name="tournamentOfficial">Offiziell</string>
   <string name="timeBeforeTournamentStarts">Zeit bis zum Start des Turniers</string>
@@ -678,8 +678,8 @@
   <string name="ifYouDoNotSeeTheEmailCheckOtherPlaces">Wenn du die E-Mail nicht findest, prüfe in deinem E-Mail-Konto, ob sie in einem anderen Ordner wie z.B. dem Spamordner oder dem Papierkorb ist.</string>
   <string name="weHaveSentYouAnEmailTo">Wir haben dir eine Email an %s gesendet. Klicke auf den Link in der E-Mail, um dein Passwort zurück zu setzen.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Durch die Anmeldung wird den %s zugestimmt.</string>
-  <string name="networkLagBetweenYouAndLichess">Netzwerkverzögerung zwischen dir und Lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Zeit, um einen Zug auf dem Lichess-Server zu verarbeiten</string>
+  <string name="networkLagBetweenYouAndLichess">Netzwerkverzögerung zwischen dir und Chess-Online</string>
+  <string name="timeToProcessAMoveOnLichessServer">Zeit, um einen Zug auf dem Chess-Online-Server zu verarbeiten</string>
   <string name="downloadAnnotated">Download kommentiert</string>
   <string name="downloadRaw">Download unkommentiert</string>
   <string name="downloadImported">Importiertes Spiel herunterladen</string>
@@ -695,7 +695,7 @@
   <string name="youHaveAlreadyRegisteredTheEmail">Du hast die folgende Emailadresse schon registriert: %s</string>
   <string name="kidMode">Kindermodus</string>
   <string name="kidModeExplanation">Dies ist eine Sicherheitseinstellung. Im Kindermodus sind alle Kommunikationsmöglichkeiten deaktiviert. Aktiviere diese Option, um Kinder und Schüler vor anderen Internetbenutzern zu schützen.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">Im Kindermodus erhält das Lichess-Logo ein %s-Icon, an dem erkennen kannst, dass deine Kinder geschützt sind.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">Im Kindermodus erhält das Chess-Online-Logo ein %s-Icon, an dem erkennen kannst, dass deine Kinder geschützt sind.</string>
   <string name="enableKidMode">Kindermodus aktivieren</string>
   <string name="disableKidMode">Kindermodus deaktivieren</string>
   <string name="security">Sicherheit</string>
@@ -703,7 +703,7 @@
   <string name="alternativelyYouCanX">Alternativ kannst du %s.</string>
   <string name="revokeAllSessions">alle Sitzungen beenden</string>
   <string name="playChessEverywhere">Spiele Schach überall</string>
-  <string name="asFreeAsLichess">Frei wie Lichess</string>
+  <string name="asFreeAsLichess">Frei wie Chess-Online</string>
   <string name="builtForTheLoveOfChessNotMoney">Aus Liebe zum Schach</string>
   <string name="everybodyGetsAllFeaturesForFree">Jeder erhält alle Funktionen völlig kostenlos</string>
   <string name="zeroAdvertisement">Keine Werbung</string>
@@ -743,7 +743,7 @@
   <string name="usernameSuffixInvalid">Der Benutzername muss mit einem Buchstaben oder einer Zahl enden.</string>
   <string name="usernameCharsInvalid">Der Benutzername darf nur Buchstaben, Zahlen, Unterstriche und Bindestriche beinhalten.</string>
   <string name="usernameUnacceptable">Dieser Benutzername ist nicht akzeptabel.</string>
-  <string name="directlySupportLichess">Lichess direkt unterstützen</string>
+  <string name="directlySupportLichess">Chess-Online direkt unterstützen</string>
   <string name="playChessInStyle">Schachspielen mit Style</string>
   <string name="chessBasics">Grundlagen</string>
   <string name="coaches">Trainer</string>
@@ -830,14 +830,14 @@
   <string name="tryToWin">Versuche, jedes Spiel zu gewinnen (oder zumindest ein Remis zu erreichen).</string>
   <string name="resignLostGames">Gib verlorene Spiele auf (lasse die Uhr nicht herunterlaufen).</string>
   <string name="temporaryInconvenience">Wir entschuldigen uns für die vorübergehenden Unannehmlichkeiten,</string>
-  <string name="wishYouGreatGames">und wünschen Dir tolle Spiele auf lichess.org.</string>
+  <string name="wishYouGreatGames">und wünschen Dir tolle Spiele auf chess-online.com.</string>
   <string name="thankYouForReading">Vielen Dank für’s Lesen!</string>
   <string name="lifetimeScore">Ewiger Spielstand</string>
   <string name="currentMatchScore">Aktueller Spielstand</string>
   <string name="agreementAssistance">Ich stimme zu, dass ich zu keiner Zeit während meiner Partien Hilfe in Anspruch nehmen werde (durch einen Schachcomputer, Buch, Datenbank oder eine andere Person).</string>
   <string name="agreementNice">Ich stimme zu, dass ich anderen Spielern immer respektvoll gegenübertreten werde.</string>
   <string name="agreementAccount">Ich stimme zu, dass ich nicht mehrere Konten erstellen werde.</string>
-  <string name="agreementPolicy">Ich stimme zu, dass ich allen Lichess-Richtlinien folgen werde.</string>
+  <string name="agreementPolicy">Ich stimme zu, dass ich allen Chess-Online-Richtlinien folgen werde.</string>
   <string name="searchOrStartNewDiscussion">Suche oder beginne eine neue Konversation</string>
   <string name="edit">Bearbeiten</string>
   <string name="rapid">Schnellschach</string>

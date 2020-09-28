@@ -449,8 +449,8 @@ arvutianalüüsi, mängu jututoa ning jagatava URL-i.</string>
   <string name="country">Maa</string>
   <string name="socialMediaLinks">Sotsiaalmeedia Lingid</string>
   <string name="inlineNotation">Tekstisisene märge</string>
-  <string name="watchLichessTV">Vaata Lichess TV-d</string>
-  <string name="previouslyOnLichessTV">Eelnevalt Lichess TV-s</string>
+  <string name="watchLichessTV">Vaata Chess-Online TV-d</string>
+  <string name="previouslyOnLichessTV">Eelnevalt Chess-Online TV-s</string>
   <string name="onlinePlayers">Online -s mängijad</string>
   <string name="activeToday">aktiivne täna</string>
   <string name="activePlayers">aktiivsed mängijad</string>
@@ -579,7 +579,7 @@ arvutianalüüsi, mängu jututoa ning jagatava URL-i.</string>
   <string name="clock">Kell</string>
   <string name="unauthorizedError">Juurdepääs on keelatud.</string>
   <string name="noInternetConnection">Puudub internetiühendus. Saate siiski mängida ühenduseta olevast menüüst.</string>
-  <string name="connectedToLichess">Oled nüüd ühendatud lichess.org</string>
+  <string name="connectedToLichess">Oled nüüd ühendatud chess-online.com</string>
   <string name="signedOut">Olete välja logitud</string>
   <string name="loginSuccessful">Oled sisse logitud</string>
   <string name="playOnTheBoardOffline">Reaalelumäng</string>
@@ -744,7 +744,7 @@ arvutianalüüsi, mängu jututoa ning jagatava URL-i.</string>
   <string name="usernameSuffixInvalid">Kasutajanimi peab lõppema numbriga või tähega.</string>
   <string name="usernameCharsInvalid">Kasutajanimi peab sisaldama ainult tähti, numbreid, allkriipse ja sidekriipse.</string>
   <string name="usernameUnacceptable">Selline kasutajanimi ei ole lubatud.</string>
-  <string name="directlySupportLichess">Toeta Lichess-i</string>
+  <string name="directlySupportLichess">Toeta Chess-Online-i</string>
   <string name="playChessInStyle">Mängi malet stiiliga</string>
   <string name="chessBasics">Male põhitõed</string>
   <string name="coaches">Treenerid</string>
@@ -831,7 +831,7 @@ arvutianalüüsi, mängu jututoa ning jagatava URL-i.</string>
   <string name="tryToWin">Proovi võita (või vähemalt mängida viiki) igat mängu mida mängid.</string>
   <string name="resignLostGames">Alistu kaotatud mängud (ära lase kellal joosta).</string>
   <string name="temporaryInconvenience">Me vabandame ajutise ebamugavuse pärast,</string>
-  <string name="wishYouGreatGames">ja soovime teile häid mänge leheküljel lichess.org.</string>
+  <string name="wishYouGreatGames">ja soovime teile häid mänge leheküljel chess-online.com.</string>
   <string name="thankYouForReading">Aitäh, et lugesite!</string>
   <string name="lifetimeScore">Kõikide mängude skoor</string>
   <string name="currentMatchScore">Hetkeste mängude skoor</string>

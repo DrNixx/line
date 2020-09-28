@@ -610,7 +610,7 @@
   <string name="clock">Сат</string>
   <string name="unauthorizedError">Приступ није одобрен.</string>
   <string name="noInternetConnection">Нема интернет конекције. Можете играти офлајн са менија.</string>
-  <string name="connectedToLichess">Повезани сте на lichess.org</string>
+  <string name="connectedToLichess">Повезани сте на chess-online.com</string>
   <string name="signedOut">Одјављени сте</string>
   <string name="loginSuccessful">Пријављени сте</string>
   <string name="playOnTheBoardOffline">Играј у двоје</string>
@@ -868,7 +868,7 @@
   <string name="tryToWin">Пробај да победиш (или барем изједначиш) сваку партију коју одиграш.</string>
   <string name="resignLostGames">Предај изгубљене игре (немој пуштати да време истекне).</string>
   <string name="temporaryInconvenience">Извињавамо се на привременој нелагодности,</string>
-  <string name="wishYouGreatGames">и желимо вам одличне партије на lichess.org.</string>
+  <string name="wishYouGreatGames">и желимо вам одличне партије на chess-online.com.</string>
   <string name="thankYouForReading">Хвала на читању!</string>
   <string name="lifetimeScore">Животни скор</string>
   <string name="currentMatchScore">Скор тренутног меча</string>

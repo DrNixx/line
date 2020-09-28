@@ -51,7 +51,7 @@ object layout {
           )}" as="font" type="font/woff2" crossorigin>"""
     }
   private val manifests = raw(
-    """<link rel="manifest" href="/manifest.json"><meta name="twitter:site" content="@lichess">"""
+    """<link rel="manifest" href="/manifest.json"><meta name="twitter:site" content="@playschess">"""
   )
 
   private val jsLicense = raw("""<link rel="jslicense" href="/source">""")
@@ -291,7 +291,7 @@ object layout {
               "is2d"    -> ctx.pref.is2d,
               "is3d"    -> ctx.pref.is3d
             )
-          )(body),
+          )(body, sitefooter()),
           ctx.isAuth option div(
             id := "friend_box",
             dataI18n := safeJsonValue(i18nJsObject(i18nKeys))

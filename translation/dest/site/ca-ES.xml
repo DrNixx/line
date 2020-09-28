@@ -275,7 +275,7 @@
     <item quantity="one">Dóna %s segons</item>
     <item quantity="other">Dóna %s segons</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Aquest compte ha violat els Termes de Servei de Lichess</string>
+  <string name="thisAccountViolatedTos">Aquest compte ha violat els Termes de Servei de Chess-Online</string>
   <string name="thisPlayerArtificiallyIncreasesTheirRating">Aquest jugador incrementa/disminueix artificialment el seu ràting</string>
   <string name="openingExplorerAndTablebase">Explorador d\'obertures &amp; taula de moviments</string>
   <string name="takeback">Desfés la jugada</string>
@@ -448,8 +448,8 @@
   <string name="country">País</string>
   <string name="socialMediaLinks">Enllaços a xarxes social</string>
   <string name="inlineNotation">Notació Lineal</string>
-  <string name="watchLichessTV">Mira Lichess TV</string>
-  <string name="previouslyOnLichessTV">Prèviament a Lichess TV</string>
+  <string name="watchLichessTV">Mira Chess-Online TV</string>
+  <string name="previouslyOnLichessTV">Prèviament a Chess-Online TV</string>
   <string name="onlinePlayers">Jugadors connectats</string>
   <string name="activeToday">Actius avui</string>
   <string name="activePlayers">Jugadors actius</string>
@@ -581,7 +581,7 @@ en %3$s</string>
   <string name="clock">Rellotge</string>
   <string name="unauthorizedError">Accés no autoritzat.</string>
   <string name="noInternetConnection">Sense connexió a internet. Pots seguir jugar offline des del menú.</string>
-  <string name="connectedToLichess">Ara estàs connectat a lichess.org</string>
+  <string name="connectedToLichess">Ara estàs connectat a chess-online.com</string>
   <string name="signedOut">Has tancat la sessió</string>
   <string name="loginSuccessful">Ara ja estàs registrat</string>
   <string name="playOnTheBoardOffline">Juga offline, sobre el tauler</string>
@@ -647,7 +647,7 @@ en %3$s</string>
   <string name="simulClockHint">Sistema de Rellotge Fischer. Com més oponents tinguis, més temps et pot caldre.</string>
   <string name="simulAddExtraTime">Pots afegir temps extra al rellotge per ajudar-te amb les simultànies.</string>
   <string name="simulHostExtraTime">Temps extra per a l\'amfitrió</string>
-  <string name="lichessTournaments">Tornejos de Lichess</string>
+  <string name="lichessTournaments">Tornejos de Chess-Online</string>
   <string name="tournamentFAQ">Torneig Arena: Preguntes Més Freqüents</string>
   <string name="tournamentOfficial">Oficial</string>
   <string name="timeBeforeTournamentStarts">Temps per a què comenci el torneig</string>
@@ -746,7 +746,7 @@ en %3$s</string>
   <string name="usernameSuffixInvalid">El nom d\'usuari ha d\'acabar amb una lletra o dígit.</string>
   <string name="usernameCharsInvalid">Els noms d\'usuari només poden contenir lletres, números, guions i guions baixos.</string>
   <string name="usernameUnacceptable">Aquest nom d\'usuari no és acceptable.</string>
-  <string name="directlySupportLichess">Suporta directament a Lichess</string>
+  <string name="directlySupportLichess">Suporta directament a Chess-Online</string>
   <string name="playChessInStyle">Juga a escacs amb estil</string>
   <string name="chessBasics">Fonaments d\'escacs</string>
   <string name="coaches">Entrenador</string>
@@ -833,14 +833,14 @@ en %3$s</string>
   <string name="tryToWin">Prova de guanyar (o al menys fer taules) cada partida.</string>
   <string name="resignLostGames">Resigna els jocs perduts (no deixis córrer el temps).</string>
   <string name="temporaryInconvenience">Disculpes per aquest inconvenient temporal</string>
-  <string name="wishYouGreatGames">i et desitgem unes grans partides a lichess.org.</string>
+  <string name="wishYouGreatGames">i et desitgem unes grans partides a chess-online.com.</string>
   <string name="thankYouForReading">Gràcies per la teva lectura!</string>
   <string name="lifetimeScore">Valoració total de sempre</string>
   <string name="currentMatchScore">Valoració actual de partides</string>
   <string name="agreementAssistance">Estic d’acord que mai rebré assistència durant les meves partides (ni d’ordinadors, llibres, base de dades o d’una altra persona).</string>
   <string name="agreementNice">Estic d’acord que sempre seré respectuós amb els altres jugadors.</string>
   <string name="agreementAccount">Estic d’acord que no crearé múltiples comptes.</string>
-  <string name="agreementPolicy">Estic d’acord que seguiré totes les polítiques de Lichess.</string>
+  <string name="agreementPolicy">Estic d’acord que seguiré totes les polítiques de Chess-Online.</string>
   <string name="searchOrStartNewDiscussion">Cerca o inicia una nova discusió</string>
   <string name="edit">Edita</string>
   <string name="rapid">Ràpides</string>

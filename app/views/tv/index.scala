@@ -40,7 +40,7 @@ object index {
         .OpenGraph(
           title = s"Watch the best ${channel.name.toLowerCase} games of Chess-Online.Com",
           description =
-            s"Sit back, relax, and watch the best ${channel.name.toLowerCase} Chess-Online.Com players compete on Chess TV",
+            s"Sit back, relax, and watch the best ${channel.name.toLowerCase} Chess-Online.Com players compete on Chess-Online TV",
           url = s"$netBaseUrl${routes.Tv.onChannel(channel.key)}"
         )
         .some,

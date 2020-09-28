@@ -644,7 +644,7 @@
   <string name="clock">שעון</string>
   <string name="unauthorizedError">גישה לא מורשה</string>
   <string name="noInternetConnection">אין חיבור לאינטרנט. ניתן עדיין לשחק דרך התפריט.</string>
-  <string name="connectedToLichess">התחברת ל-lichess.org</string>
+  <string name="connectedToLichess">התחברת ל-chess-online.com</string>
   <string name="signedOut">יצאת</string>
   <string name="loginSuccessful">נכנסת</string>
   <string name="playOnTheBoardOffline">מעל הלוח</string>
@@ -815,7 +815,7 @@
   <string name="usernameSuffixInvalid">שם המשתמש חייב להסתיים באות או מספר.</string>
   <string name="usernameCharsInvalid">שם המשתמש חייב להכיל רק אותיות, מספרים, מקפים תחתונים ומקפים.</string>
   <string name="usernameUnacceptable">שם המשתמש הזה לא מקובל.</string>
-  <string name="directlySupportLichess">תמוך ישירות ב-Lichess</string>
+  <string name="directlySupportLichess">תמוך ישירות ב-Chess-Online</string>
   <string name="playChessInStyle">שחק שחמט בסגנון</string>
   <string name="chessBasics">יסודות השחמט</string>
   <string name="coaches">מאמנים</string>
@@ -908,14 +908,14 @@
   <string name="tryToWin">נסה/י לנצח (או לפחות לסיים בתיקו) כל משחק שהתחלת.</string>
   <string name="resignLostGames">פרוש/י במצבים שאת/ה מפסיד/ה (אל תתן/י לשעון להיגמר).</string>
   <string name="temporaryInconvenience">אנו מצטערים על אי הנעימות הזמנית,</string>
-  <string name="wishYouGreatGames">ומאחלים לך חוויה נעימה ב-lichess.org.</string>
+  <string name="wishYouGreatGames">ומאחלים לך חוויה נעימה ב-chess-online.com.</string>
   <string name="thankYouForReading">תודה שקראת!</string>
   <string name="lifetimeScore">תוצאה כוללת</string>
   <string name="currentMatchScore">תוצאה במפגש הנוכחי</string>
   <string name="agreementAssistance">אני מסכים שאף פעם לא אקבל עזרה תוך כדי משחק (ממנוע שח ממוחשב, ספר, מסד-נתונים, או אדם אחר).</string>
   <string name="agreementNice">אני מסכים שתמיד אהיה אדיב כלפי השחקנים האחרים.</string>
   <string name="agreementAccount">אני מסכים שלא אצור יותר מחשבון אחד.</string>
-  <string name="agreementPolicy">אני מסכים לעקוב אחרי כל תנאי השירות של Lichess.</string>
+  <string name="agreementPolicy">אני מסכים לעקוב אחרי כל תנאי השירות של Chess-Online.</string>
   <string name="searchOrStartNewDiscussion">חפש את התחל שיחה חדשה</string>
   <string name="edit">ערוך</string>
   <string name="rapid">רפיד</string>
