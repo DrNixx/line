@@ -151,7 +151,7 @@ final class Auth(
       env.security.store.delete(currentSessionId) >>
         env.push.webSubscriptionApi.unsubscribeBySession(currentSessionId) >>
         negotiate(
-          html = Redirect(routes.Auth.oidcLogin()).fuccess,
+          html = Redirect(routes.Lobby.home()).fuccess,
           api = _ => Ok(Json.obj("ok" -> true)).fuccess
         ).dmap(_.withCookies(env.lilaCookie.newSession))
     }
