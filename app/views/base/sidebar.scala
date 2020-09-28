@@ -155,7 +155,7 @@ object sidebar {
           ),
           li()(
             a(href := "javascript:;")(
-              span(cls := "title")(trans.help()),
+              span(cls := "title")(trans.helpMenu()),
               arrow()
             ),
             icon("ъ"),

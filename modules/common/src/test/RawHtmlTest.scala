@@ -111,7 +111,7 @@ class RawHtmlTest extends Specification {
     }
 
     "handle embedded links" in {
-      addLinks(".live.chess-online.com") must_== """.lichesslive.chess-online.com"""
+      addLinks(".live.chess-online.com") must_== """.live.chess-online.com"""
       addLinks("/live.chess-online.com") must_== """/live.chess-online.com"""
       addLinks(".http://live.chess-online.com") must_== """.<a href="/">live.chess-online.com</a>"""
 
