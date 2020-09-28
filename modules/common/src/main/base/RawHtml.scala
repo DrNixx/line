@@ -34,7 +34,7 @@ final object RawHtml {
 
   private[this] val USER_LINK = """/@/([\w-]{2,30}+)?""".r
 
-  final private[this] val DOMAIN      = "lichess.org"
+  final private[this] val DOMAIN      = "live.chess-online.com"
   final private[this] val linkReplace = DOMAIN + "/@/$1"
 
   // Matches a lichess username with an '@' prefix if it is used as a single

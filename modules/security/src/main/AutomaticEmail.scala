@@ -59,7 +59,7 @@ $regards
 
       mailgun send Mailgun.Message(
         to = email,
-        subject = s"$title title confirmed on lichess.org",
+        subject = s"$title title confirmed on live.chess-online.com",
         text = s"""
 $body
 
@@ -85,7 +85,7 @@ $regards
 
         mailgun send Mailgun.Message(
           to = email,
-          subject = "Coach profile unlocked on lichess.org",
+          subject = "Coach profile unlocked on live.chess-online.com",
           text = s"""
 $body
 

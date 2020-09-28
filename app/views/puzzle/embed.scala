@@ -12,7 +12,7 @@ object embed {
 
   def apply(daily: lila.puzzle.DailyPuzzle)(implicit config: EmbedConfig) =
     views.html.base.embed(
-      title = "lichess.org chess puzzle",
+      title = "live.chess-online.com chess puzzle",
       cssModule = "tv.embed"
     )(
       a(

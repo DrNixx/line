@@ -44,7 +44,7 @@ final class SelfReport(
               .log("cheat")
               .branch("jslog")
               .info(
-                s"$ip https://lichess.org/$fullId ${user.fold("anon")(_.id)} $name"
+                s"$ip https://live.chess-online.com/$fullId ${user.fold("anon")(_.id)} $name"
               )
             user.filter(recent.isNew) ?? { u =>
               slackApi.selfReport(

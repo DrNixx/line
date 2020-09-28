@@ -58,6 +58,7 @@ object RelayForm {
     "youtube.com",
     "youtu.be",
     "lichess.org",
+    "chess-online.com",
     "google.com",
     "chess.com",
     "vk.com",

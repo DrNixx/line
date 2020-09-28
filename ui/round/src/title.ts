@@ -6,8 +6,8 @@ const initialTitle = document.title;
 
 var curFaviconIdx = 0;
 const F = [
-  '/assets/logo/lichess-favicon-32.png',
-  '/assets/logo/lichess-favicon-32-invert.png'
+  '/assets/logo/chess-favicon-32.png',
+  '/assets/logo/chess-favicon-32-invert.png'
 ].map(function(path, i) {
   return function() {
     if (curFaviconIdx !== i) {

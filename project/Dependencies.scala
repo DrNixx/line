@@ -52,8 +52,8 @@ object Dependencies {
   }
 
   object nimbusds {
-    val jwt = "com.nimbusds" % "nimbus-jose-jwt" % "5.7"
-    val oidc = "com.nimbusds" % "oauth2-oidc-sdk" % "5.56"
+    val jwt = "com.nimbusds" % "nimbus-jose-jwt" % "8.18"
+    val oidc = "com.nimbusds" % "oauth2-oidc-sdk" % "8.20"
     def bundle = Seq(jwt, oidc)
   }
 

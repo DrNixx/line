@@ -215,7 +215,7 @@ object Tournament {
       startsAt = sched.at plusSeconds ThreadLocalRandom.nextInt(60)
     )
 
-  def tournamentUrl(tourId: String): String = s"https://lichess.org/tournament/$tourId"
+  def tournamentUrl(tourId: String): String = s"https://live.chess-online.com/tournament/$tourId"
 
   def makeId = ThreadLocalRandom nextString 8
 

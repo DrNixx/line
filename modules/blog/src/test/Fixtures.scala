@@ -6,7 +6,7 @@ object Fixtures {
     """
 <h2>YES! We did it. Crazyhouse is here!</h2>
 
-<p>It's everywhere. <strong>Lobby games, tournaments, simuls, and the analysis board; </strong>Crazyhouse is a first-class variant on lichess.org.</p>
+<p>It's everywhere. <strong>Lobby games, tournaments, simuls, and the analysis board; </strong>Crazyhouse is a first-class variant on live.chess-online.com.</p>
 
 <h2>What is crazyhouse?</h2>
 
@@ -20,7 +20,7 @@ object Fixtures {
 
 <p>In turn Black can block the check by <strong>dropping a knight on e5!</strong></p>
 
-<p><a href="http://lichess.org/variant/crazyhouse"><strong>Read more about crazyhouse rules and strategies here</strong></a></p>
+<p><a href="http://live.chess-online.com/variant/crazyhouse"><strong>Read more about crazyhouse rules and strategies here</strong></a></p>
 
 <h2>Have great games!</h2>
 
@@ -30,9 +30,9 @@ object Fixtures {
 
 <h2>First crazyhouse tournament</h2>
 
-<p>What could be a better way to get started? <a href="http://lichess.org/tournament/crazy1st"><strong>Join the party!</strong></a></p>
+<p>What could be a better way to get started? <a href="http://live.chess-online.com/tournament/crazy1st"><strong>Join the party!</strong></a></p>
 
-<p><em>[EDIT] The first tournament is over. Second crazyhouse tournament: </em><a href="http://lichess.org/tournament/crazy2nd"><em><strong>Join here!</strong></em></a></p>
+<p><em>[EDIT] The first tournament is over. Second crazyhouse tournament: </em><a href="http://live.chess-online.com/tournament/crazy2nd"><em><strong>Join here!</strong></em></a></p>
 """
 
   def withYoutube =
@@ -41,7 +41,7 @@ object Fixtures {
 
 <h2>Introduction to Crazyhouse</h2>
 
-<h3>What is <a href="http://lichess.org/variant/crazyhouse">crazyhouse</a>, and how does it differ from chess?</h3>
+<h3>What is <a href="http://live.chess-online.com/variant/crazyhouse">crazyhouse</a>, and how does it differ from chess?</h3>
 
 <p><em>According to the wiki:<br>Crazyhouse (also known as Drop chess, Mad chess, Reinforcement chess, Turnabout chess and Schizo-chess) is a chess variant similar to bughouse chess, but with only two players. It effectively incorporates a rule from the game shogi, in which a player can introduce a captured piece back to the chessboard as his own.</em></p>
 
@@ -121,7 +121,7 @@ object Fixtures {
 
 <li>If you identify a weakness but your pocket is empty, look to force exchanges. If your own position is weak, avoid exchanges until you're more solid.</li>
 
-<li>Avoid weakening squares of a certain color complex. Diags (pawns, bishops) can be dropped deep into your territory on your weak color complex. Try to create weaknesses in your opponent's pawn structure where you can infiltrate. Build pawn lattices into enemy territory (<a href="http://lichess.org/IqfmjHrW">like in this game</a>), preferably near the opponent's king. Expand your space wherever reasonably possible. </li>
+<li>Avoid weakening squares of a certain color complex. Diags (pawns, bishops) can be dropped deep into your territory on your weak color complex. Try to create weaknesses in your opponent's pawn structure where you can infiltrate. Build pawn lattices into enemy territory (<a href="http://live.chess-online.com/IqfmjHrW">like in this game</a>), preferably near the opponent's king. Expand your space wherever reasonably possible. </li>
 
 </ul>
 
@@ -153,7 +153,7 @@ object Fixtures {
 
 <li>Knights can be used to smother mate. Smother mates are more common in z because of the ability to drop a Q or R to force a smothered king combined with the ability to drop the N onto the checking square.</li>
 
-<li>Knights are often strongest when placed on the fifth rank (as white) or the fourth rank (as black), as from there they observe key squares on the seventh (or second) rank. For example, I sometimes like placing a knight N@h5 with the idea of sacking on g7 to pull the king out. <a href="http://lichess.org/THYYswro#29">Example in this game at move 15</a>.</li>
+<li>Knights are often strongest when placed on the fifth rank (as white) or the fourth rank (as black), as from there they observe key squares on the seventh (or second) rank. For example, I sometimes like placing a knight N@h5 with the idea of sacking on g7 to pull the king out. <a href="http://live.chess-online.com/THYYswro#29">Example in this game at move 15</a>.</li>
 
 <li>Rooks should for the most part be kept in your pocket until you can exploit the back rank.</li>
 
@@ -173,7 +173,7 @@ object Fixtures {
 
 <li>Rooks are more or less of comparable value to minor pieces, unless the back rank is weak, in which case they increase in relative importance.</li>
 
-<li>If the 7th rank is weak and a rook is exposed, place two pawns side-by-side attacking the rook with ideas of Queening. <a href="http://lichess.org/Gpk2WwCD#29">Example on move 15 here</a>. Promoted pieces turn back into pawns when re-captured.</li>
+<li>If the 7th rank is weak and a rook is exposed, place two pawns side-by-side attacking the rook with ideas of Queening. <a href="http://live.chess-online.com/Gpk2WwCD#29">Example on move 15 here</a>. Promoted pieces turn back into pawns when re-captured.</li>
 
 <li>Sometimes it's not worth saving your queen if it weakens your squares or puts you on the defensive: in such cases it can be okay to just protect it with a bishop or continue your attack. For example, on move 10 <a href="http://ficsgames.org/cgi-bin/show.cgi?ID=382131253">in this game</a>, black sacs his Queen (in a safe position) so that he can begin an attack.</li>
 

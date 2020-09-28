@@ -76,24 +76,24 @@ class RawHtmlTest extends Specification {
     }
 
     "internal links" in {
-      addLinks("lichess.org/@/foo/games") must_==
-        """<a href="/@/foo/games">lichess.org/@/foo/games</a>"""
-      addLinks("lichess.org/@/foo") must_== """<a href="/@/foo">@foo</a>"""
-      addLinks("http://lichess.org/") must_== """<a href="/">lichess.org/</a>"""
-      addLinks("http://lichess.org") must_== """<a href="/">lichess.org</a>"""
+      addLinks("live.chess-online.com/@/foo/games") must_==
+        """<a href="/@/foo/games">live.chess-online.com/@/foo/games</a>"""
+      addLinks("live.chess-online.com/@/foo") must_== """<a href="/@/foo">@foo</a>"""
+      addLinks("http://live.chess-online.com/") must_== """<a href="/">live.chess-online.com/</a>"""
+      addLinks("http://live.chess-online.com") must_== """<a href="/">live.chess-online.com</a>"""
       addLinks("@foo") must_== """<a href="/@/foo">@foo</a>"""
     }
 
     "handle weird characters" in {
-      addLinks("lichess.org/-–%20") must_== """<a href="/-–%20">lichess.org/-–%20</a>"""
+      addLinks("live.chess-online.com/-–%20") must_== """<a href="/-–%20">live.chess-online.com/-–%20</a>"""
     }
 
     "handle multiple links" in {
       addLinks(
-        "@foo blah lichess.org"
-      ) must_== """<a href="/@/foo">@foo</a> blah <a href="/">lichess.org</a>"""
-      addLinks("b foo.com blah lichess.org") must_==
-        """b <a rel="nofollow noopener noreferrer" href="https://foo.com" target="_blank">foo.com</a> blah <a href="/">lichess.org</a>"""
+        "@foo blah live.chess-online.com"
+      ) must_== """<a href="/@/foo">@foo</a> blah <a href="/">live.chess-online.com</a>"""
+      addLinks("b foo.com blah live.chess-online.com") must_==
+        """b <a rel="nofollow noopener noreferrer" href="https://foo.com" target="_blank">foo.com</a> blah <a href="/">live.chess-online.com</a>"""
     }
 
     "handle trailing punctuation" in {

@@ -24,7 +24,7 @@ This can be very annoying for your opponents. If this behavior continues to happ
     MsgPreset(
       name = "Follow limit reached!",
       text = s"""Sorry, you can't follow more than $max players on Chess-Online.
-To follow new players, you must first unfollow some on https://lichess.org/@/$username/following.
+To follow new players, you must first unfollow some on https://live.chess-online.com/@/$username/following.
 
 Thank you for your understanding."""
     )

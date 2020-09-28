@@ -196,7 +196,7 @@ export function view(ctrl: StudyChapterNewFormCtrl): VNode {
         activeTab === 'game' ? h('div.form-group', [
           h('label.form-label', {
             attrs: { 'for': 'chapter-game' }
-          }, trans('loadAGameFromXOrY', 'lichess.org', 'chessgames.com')),
+          }, trans('loadAGameFromXOrY', 'chess-online.com', 'chessgames.com')),
           h('textarea#chapter-game.form-control', {
             attrs: { placeholder: noarg('urlOfTheGame') }
           })

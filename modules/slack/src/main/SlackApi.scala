@@ -74,7 +74,7 @@ final class SlackApi(
             username = "Tournament name alert",
             icon = "children_crossing",
             text =
-              s"${userLink(userName)} created ${link(s"https://lichess.org/tournament/$tourId", s"$tourName Arena")}",
+              s"${userLink(userName)} created ${link(s"https://live.chess-online.com/tournament/$tourId", s"$tourName Arena")}",
             channel = rooms.tavern
           )
         )
@@ -223,7 +223,7 @@ final class SlackApi(
   private val chatPanicLink                           = lichessLink("mod/chat-panic", "Chat Panic")
 
   private val userRegex   = lila.common.String.atUsernameRegex.pattern
-  private val userReplace = link("https://lichess.org/@/$1?mod", "$1")
+  private val userReplace = link("https://live.chess-online.com/@/$1?mod", "$1")
 
   private def linkifyUsers(msg: String) =
     userRegex matcher msg replaceAll userReplace
@@ -309,7 +309,7 @@ private object SlackApi {
   }
 
   object stage {
-    val name = "stage.lichess.org"
+    val name = "stage.chess-online.com"
     val icon = "volcano"
   }
 }
