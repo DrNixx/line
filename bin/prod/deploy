@@ -1,7 +1,6 @@
 #!/bin/sh -e
-. bin/lilarc
 
-export PATH="/usr/lib/jvm/java-8-openjdk/jre/bin/:$PATH"
+# export PATH="/usr/lib/jvm/java-8-openjdk/jre/bin/:$PATH"
 
 mode=$1
 
@@ -27,7 +26,7 @@ else
   exit 1
 fi
 
-lilalog "Deploy to $mode server $REMOTE:$REMOTE_DIR"
+echo "Deploy to $mode server $REMOTE:$REMOTE_DIR"
 
 echo "##################################################"
 echo "#                                                #"
@@ -42,7 +41,7 @@ if [ "$2" = "asset" ]; then
 fi
 
 if [ $mode = "main" ]; then
-  lilalog "Notify pre deploy"
+  echo "Notify pre deploy"
   $CLI deploy pre
 fi
 
@@ -50,12 +49,12 @@ SBT_OPTS=""
 export JAVA_OPTS="-Xms512m -Xmx2048m -XX:ReservedCodeCacheSize=64m -XX:+UseConcMarkSweepGC"
 sbt stage exit
 if [ $? != 0 ]; then
-  lilalog "Deploy canceled"
+  echo "Deploy canceled"
   exit 1
 fi
 
 if [ $mode = "main" ]; then
-  lilalog "Backup production lichess dir"
+  echo "Backup production lichess dir"
   BACKUP_DIR=/home/backup/lichess-$(date +%Y-%m-%d_%H-%M)
   ssh $REMOTE "echo $BACKUP_DIR && cp -r $REMOTE_DIR $BACKUP_DIR && rm $BACKUP_DIR/RUNNING_PID && chown -R lichess:lichess $BACKUP_DIR"
 fi
@@ -81,7 +80,7 @@ RSYNC_OPTIONS=" \
   --exclude '.git/' \
   --exclude node_modules"
 
-lilalog "Rsync scripts, binaries and assets"
+echo "Rsync scripts, binaries and assets"
 stage="target/universal/stage"
 include="bin $stage/bin $stage/lib public"
 rsync_command="rsync $RSYNC_OPTIONS $include $REMOTE:$REMOTE_DIR"
@@ -90,22 +89,22 @@ $rsync_command
 echo "rsync complete"
 
 if [ $mode == "main" ]; then
-  lilalog "Deploy logger configuration"
+  echo "Deploy logger configuration"
   rsync -av conf/prod-logger.xml $REMOTE:/etc/lichess.logger.xml
 
-  lilalog "Deploy base configuration"
+  echo "Deploy base configuration"
   rsync -av conf/base.conf $REMOTE:/etc/lichess/base.conf
 fi
 
 if [ $FRONT_REMOTE ] && [ $FRONT_REMOTE_DIR ]; then
-  lilalog "Deploy assets to $mode frontend server $FRONT_REMOTE:$FRONT_REMOTE_DIR"
+  echo "Deploy assets to $mode frontend server $FRONT_REMOTE:$FRONT_REMOTE_DIR"
   rsync --archive --no-o --no-g --progress --exclude '*.dev.css' public $FRONT_REMOTE:$FRONT_REMOTE_DIR
 fi
 
 read -n 1 -p "Press [Enter] to complete deployment to $mode server $REMOTE:$REMOTE_DIR"
 
 if [ $mode = "main" ]; then
-  lilalog "Notify post deploy"
+  echo "Notify post deploy"
   $CLI deploy post
   sleep 1
 fi
@@ -116,7 +115,7 @@ fi
 # STOP_DROPPING="echo \"not resuming traffic\""
 
 if [ $mode = "main" ]; then
-  lilalog "Restart lichess"
+  echo "Restart lichess"
   RUN_DIR="/home/lichess"
   # SSH_COMMAND="$START_DROPPING && rm $RUN_DIR && ln -s $REMOTE_DIR $RUN_DIR && systemctl restart lichess && $STOP_DROPPING"
   SSH_COMMAND="rm $RUN_DIR && ln -s $REMOTE_DIR $RUN_DIR && systemctl restart lichess"
@@ -124,16 +123,16 @@ if [ $mode = "main" ]; then
   ssh $REMOTE $SSH_COMMAND
 fi
 if [ $mode = "stage" ]; then
-  lilalog "Restart lichess-stage"
+  echo "Restart lichess-stage"
   SSH_COMMAND="chown -R lichess:lichess $REMOTE_DIR && systemctl restart lichess-stage"
   echo $SSH_COMMAND
   ssh $REMOTE $SSH_COMMAND
 fi
 if [ $mode = "stress" ]; then
-  lilalog "Restart listress"
+  echo "Restart listress"
   SSH_COMMAND="chown -R lichess:lichess $REMOTE_DIR && systemctl restart lichess"
   echo $SSH_COMMAND
   ssh $REMOTE $SSH_COMMAND
 fi
 
-lilalog "Deploy complete"
+echo "Deploy complete"
