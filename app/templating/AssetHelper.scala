@@ -96,7 +96,7 @@ trait AssetHelper { self: I18nHelper with SecurityHelper =>
     }
     ContentSecurityPolicy(
       defaultSrc = List("'self'", assets),
-      connectSrc = "'self'" :: assets :: sockets ::: env.explorerEndpoint :: env.tablebaseEndpoint :: "https://www.chess-online.com" :: Nil,
+      connectSrc = "'self'" :: assets :: sockets ::: env.explorerEndpoint :: env.tablebaseEndpoint :: "https://www.chess-online.com" :: "https://www.google-analytics.com" :: Nil,
       styleSrc = List("'self'", "'unsafe-inline'", assets),
       fontSrc = List("'self'", assetDomain.value, "https://fonts.gstatic.com"),
       frameSrc = List("'self'", assets, "https://www.youtube.com", "https://player.twitch.tv"),
