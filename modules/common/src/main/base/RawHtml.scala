@@ -27,7 +27,7 @@ final object RawHtml {
   private[this] val urlPattern = (
     """(?i)\b[a-z](?>""" +                                     // pull out first char for perf.
       """ttp(?<=http)s?://(\w[-\w.~!$&';=:@]{0,100})|""" +     // http(s) links
-      """(?<![/@.-].)(?:\w{1,15}+\.){1,3}(?>com|org|edu))""" + // "lichess.org", etc
+      """(?<![/@.-].)(?:[\w-]{1,15}+\.){1,3}(?>com|org|edu))""" + // "lichess.org", etc
       """([/?#][-–—\w/.~!$&'()*+,;=:#?@%]{0,300}+)?""" +       // path, params
       """(?![\w/~$&*+=#@%])"""                                 // neg lookahead
   ).r.pattern
