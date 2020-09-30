@@ -4,7 +4,7 @@ import debounce from 'common/debounce';
 import spinnerHtml from './component/spinner';
 import extendTablesortNumber from './component/tablesort-number';
 
-window.lichess.load.then(() => {
+lichess.load.then(() => {
 
   const $toggle = $('.mod-zone-toggle'),
     $zone = $('.mod-zone');
@@ -52,29 +52,31 @@ window.lichess.load.then(() => {
     }
   }
 
-  $toggle.click(function() {
+  $toggle.on('click', () => {
     if ($zone.hasClass('none')) loadZone();
     else unloadZone();
     return false;
   });
 
-  function userMod($zone: JQuery) {
+  const getLocationHash = (a: HTMLAnchorElement) => a.href.replace(/.+(#\w+)$/, '$1');
 
-    window.lichess.pubsub.emit('content_loaded');
+  function userMod($zone: Cash) {
 
-    $('#mz_menu > a:not(.available)').each(function(this: HTMLElement) {
-      $(this).toggleClass('available', !!$($(this).attr('href')).length);
+    lichess.contentLoaded($zone[0]);
+
+    $('#mz_menu > a:not(.available)').each(function(this: HTMLAnchorElement) {
+      $(this).toggleClass('available', !!$(getLocationHash(this)).length);
     });
     makeReady('#mz_menu', el => {
       $(el).find('a').each(function(this: HTMLAnchorElement, i: number) {
-        const id = this.href.replace(/.+(#\w+)$/, '$1'), n = '' + (i + 1);
+        const id = getLocationHash(this), n = '' + (i + 1);
         $(this).prepend(`<i>${n}</i>`);
         window.Mousetrap.bind(n, () => scrollTo(id));
       });
     });
 
     makeReady('form.xhr', (el: HTMLFormElement) => {
-      $(el).submit(() => {
+      $(el).on('submit', () => {
         $(el).addClass('ready').find('input').prop('disabled', true);
         xhr.formToXhr(el).then(html => {
           $('#mz_actions').replaceWith(html);
@@ -84,11 +86,9 @@ window.lichess.load.then(() => {
       });
     });
 
-    makeReady('form.fide_title select', el => {
-      $(el).on('change', function() {
-        $(el).parent('form').submit();
-      });
-    });
+    makeReady('form.fide_title select', el => 
+      $(el).on('change', () => ($(el).parent('form')[0] as HTMLFormElement).submit())
+    );
 
     makeReady('#mz_others', el => {
       $(el).height($(el).height());
@@ -103,13 +103,13 @@ window.lichess.load.then(() => {
       tablesort(el, { descending: true });
     });
     makeReady('#mz_identification .spy_filter', el => {
-      $(el).find('.button').click(function(this: HTMLAnchorElement) {
-        xhr.text(this.getAttribute('href')!, { method: 'post' });
+      $(el).find('.button').on('click', function(this: HTMLAnchorElement) {
+        xhr.text($(this).attr('href')!, { method: 'post' });
         $(this).parent().parent().toggleClass('blocked');
         return false;
       });
       $(el).find('tr').on('mouseenter', function(this: HTMLElement) {
-        const v = $(this).find('td:first').text();
+        const v = $(this).find('td:first-child').text();
         $('#mz_others tbody tr').each(function(this: HTMLElement) {
           $(this).toggleClass('none', !($(this).data('tags') || '').includes(v));
         });
@@ -120,7 +120,7 @@ window.lichess.load.then(() => {
       tablesort(el, { descending: true });
     }, 'ready-sort');
     makeReady('#mz_others .more-others', el => {
-      $(el).addClass('.ready').click(() => {
+      $(el).addClass('.ready').on('click', () => {
         nbOthers = 1000;
         reloadZone();
       });
@@ -140,8 +140,8 @@ window.lichess.load.then(() => {
 
   extendTablesortNumber();
 
-  if (location.search.startsWith('?mod')) $toggle.click();
+  if (location.search.startsWith('?mod')) $toggle.trigger('click');
 
-  window.Mousetrap.bind('m', () => $toggle.click());
-  window.Mousetrap.bind('i', () => $zone.find('button.inquiry').click());
+  window.Mousetrap.bind('m', () => $toggle.trigger('click'));
+  window.Mousetrap.bind('i', () => $zone.find('button.inquiry').trigger('click'));
 });

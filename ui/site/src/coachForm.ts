@@ -1,9 +1,10 @@
 import debounce from "common/debounce";
 import * as xhr from 'common/xhr';
-import spinnerHtml from './component/spinner';
 import { notNull } from 'common';
+import spinnerHtml from './component/spinner';
+import Tagify from '@yaireo/tagify'
 
-window.lichess.load.then(() => {
+lichess.load.then(() => {
 
   var $editor = $('.coach-edit');
 
@@ -41,7 +42,7 @@ window.lichess.load.then(() => {
     }];
 
     return function() {
-      const points: JQuery[] = [];
+      const points: Cash[] = [];
       for (let o of must) if (!o.check()) points.push($('<li>').html(o.html));
       $el.find('ul').html(points as any);
       var fail = !!points.length;
@@ -51,7 +52,7 @@ window.lichess.load.then(() => {
     };
   })();
 
-  $editor.find('.tabs > div').click(function(this: HTMLElement) {
+  $editor.find('.tabs > div').on('click', function(this: HTMLElement) {
     $editor.find('.tabs > div').removeClass('active');
     $(this).addClass('active');
     $editor.find('.panel').removeClass('active');
@@ -73,27 +74,27 @@ window.lichess.load.then(() => {
     });
 
   if ($editor.find('.reviews .review').length)
-    $editor.find('.tabs div[data-tab=reviews]').click();
+    $editor.find('.tabs div[data-tab=reviews]').trigger('click');
 
   const $reviews = $editor.find('.reviews');
-  $reviews.find('.actions a').click(function(this: HTMLAnchorElement) {
+  $reviews.find('.actions a').on('click', function(this: HTMLAnchorElement) {
     const $review = $(this).parents('.review');
     xhr.text(
       $review.data('action') + '?v=' + $(this).data('value'),
       { method: 'post' }
     );
     $review.hide();
-    $editor.find('.tabs div[data-tab=reviews]').attr('data-count', $reviews.find('.review').length - 1);
+    $editor.find('.tabs div[data-tab=reviews]').data('count', ($reviews.find('.review').length - 1));
     return false;
   });
 
-  $('.coach_picture form.upload input[type=file]').change(function(this: HTMLInputElement) {
+  $('.coach_picture form.upload input[type=file]').on('change', function(this: HTMLInputElement) {
     $('.picture_wrap').html(spinnerHtml);
-    $(this).parents('form').submit();
+    ($(this).parents('form')[0] as HTMLFormElement).submit();
   });
 
   const langInput = document.getElementById('form3-languages');
-  const tagify = new window.Tagify(langInput, {
+  const tagify = new Tagify(langInput, {
     delimiters: null,
     maxTags: 10,
     whitelist: JSON.parse(langInput?.getAttribute('data-all') || ''),
