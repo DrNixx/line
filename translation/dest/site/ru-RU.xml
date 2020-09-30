@@ -2,7 +2,7 @@
 <resources>
   <string name="library">Библиотека</string>
   <string name="chessBooks">Шахматные книги</string>
-  <string name="helpMenu">Info &amp; help</string>
+  <string name="helpMenu">Помощь</string>
   <string name="information">Информация</string>
   <string name="feedback">Обратная связь</string>
   <string name="membership">Клуб привилегий</string>

@@ -24,8 +24,8 @@ final class OidcApi(
 
   def authenticate(req: RequestHeader): Fu[Option[User]] = {
     // val redirectBackURI = req.flash("referrer")
-    val state = req.flash("oidcState")
-    val nonce = req.flash("oidcNonce")
+    val state = req.flash.get("oidcState") getOrElse ""
+    val nonce = req.flash.get("oidcNonce") getOrElse ""
     val params = req.queryString
     val client = new OpenIDConnectService(oidc);
 

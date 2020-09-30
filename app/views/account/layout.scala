@@ -38,19 +38,16 @@ object layout {
             trans.coach.lichessCoach()
           ),
           div(cls := "sep"),
-          a(activeCls("password"), href := routes.Account.passwd())(
+          a(activeCls("password"), href := "https://passport.chess-online.com/manage/change-password")(
             trans.changePassword()
           ),
-          a(activeCls("email"), href := routes.Account.email())(
+          a(activeCls("email"), href := "https://passport.chess-online.com/manage/change-email")(
             trans.changeEmail()
           ),
-          a(activeCls("username"), href := routes.Account.username())(
+          a(activeCls("username"), href := "https://passport.chess-online.com/profile/edit-username")(
             trans.changeUsername()
           ),
-          a(activeCls("twofactor"), href := routes.Account.twoFactor())(
-            trans.tfa.twoFactorAuth()
-          ),
-          a(activeCls("security"), href := routes.Account.security())(
+          a(activeCls("security"), href := "https://passport.chess-online.com/profile")(
             trans.security()
           ),
           div(cls := "sep"),
@@ -61,7 +58,7 @@ object layout {
           ),
           ctx.noBot option a(activeCls("oauth.app"), href := routes.OAuthApp.index())("OAuth Apps"),
           div(cls := "sep"),
-          a(activeCls("close"), href := routes.Account.close())(
+          a(activeCls("close"), href := "https://passport.chess-online.com/manage/delete-account")(
             trans.settings.closeAccount()
           )
         ),
