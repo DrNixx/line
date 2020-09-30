@@ -24,14 +24,16 @@ sealed trait PieceSetObject {
 
 object PieceSet extends PieceSetObject {
 
-  val default = new PieceSet("cburnett")
+  val default = new PieceSet("alpha")
 
   val all = List(
     default.name,
     "merida",
-    "alpha",
+    "cburnett",
     "pirouetti",
+    "magnetic",
     "chessnut",
+    "smart",
     "chess7",
     "reillycraig",
     "companion",
@@ -52,7 +54,7 @@ object PieceSet extends PieceSetObject {
     "dubrovny",
     "icpieces",
     "shapes",
-    "letter"
+    "letter",
   ) map { name =>
     new PieceSet(name)
   }
