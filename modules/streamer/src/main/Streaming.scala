@@ -118,10 +118,9 @@ final private class Streaming(
             }
           case res => fufail(s"twitch ${lila.log.http(res.status, res.body)}")
         }
-        .recover {
-          case e: Exception =>
-            logger.warn(e.getMessage)
-            Twitch.Result(None, None)
+        .recover { case e: Exception =>
+          logger.warn(e.getMessage)
+          Twitch.Result(None, None)
         }
         .monSuccess(_.tv.streamer.twitch)
         .flatMap { result =>

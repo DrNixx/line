@@ -4,6 +4,7 @@ import akka.actor._
 import akka.stream.scaladsl._
 import play.api.i18n.Lang
 import play.api.libs.json._
+import scala.concurrent.duration._
 
 import lila.chat.Chat
 import lila.chat.UserLine
@@ -14,7 +15,6 @@ import lila.hub.actorApi.map.Tell
 import lila.round.actorApi.BotConnected
 import lila.round.actorApi.round.QuietFlag
 import lila.user. { User => UserModel }
-import scala.concurrent.duration._
 
 final class GameStateStream(
     onlineApiUsers: OnlineApiUsers,
@@ -99,7 +99,7 @@ final class GameStateStream(
       }
 
       def receive = {
-        case MoveGameEvent(g, _, _) if g.id == id => pushState(g)
+        case MoveGameEvent(g, _, _) if g.id == id && !g.finished => pushState(g)
         case lila.chat.actorApi.ChatLine(chatId, UserLine(id, username, _, text, false, false)) =>
           pushChatLine(id, username, text, chatId.value.lengthIs == Game.gameIdSize)
         case FinishGame(g, _, _) if g.id == id                          => onGameOver(g.some)

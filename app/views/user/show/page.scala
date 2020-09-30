@@ -27,7 +27,7 @@ object page {
           image = assetUrl("logo/lichess-tile-wide.png").some,
           twitterImage = assetUrl("logo/lichess-tile.png").some,
           title = u.titleUsernameWithBestRating,
-          url = s"$netBaseUrl${routes.User.show(u.id).url}",
+          url = s"$netBaseUrl${routes.User.show(u.username).url}",
           description = describeUser(u)
         )
         .some,
@@ -83,10 +83,10 @@ object page {
       info.ratingChart.map { ratingChart =>
         frag(
           jsTag("chart/ratingHistory.js"),
-          embedJsUnsafeLoadThen(s"lichess.ratingHistoryChart($ratingChart);")
+          embedJsUnsafeLoadThen(s"lichess.ratingHistoryChart($ratingChart)")
         )
       },
-      withSearch option jsModule("game-search"),
+      withSearch option jsModule("gameSearch"),
       isGranted(_.UserSpy) option jsModule("mod.user")
     )
 
