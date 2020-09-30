@@ -6,10 +6,11 @@
   <string name="information">Information</string>
   <string name="feedback">Feedback</string>
   <string name="membership">Club Chess-Online</string>
-  <string name="corrsTournaments">Correcpondence</string>
+  <string name="corrsTournaments">Correspondence</string>
   <string name="copyright">© Chess-Online Network</string>
   <string name="basedOn">Based on Lila server</string>
   <string name="withLove">With love to Chess!</string>
+  <string name="mainProfileLink">Main Chess-Online.Com profile</string>
 
   <string name="playWithAFriend">Play with a friend</string>
   <string name="playWithTheMachine">Play with the computer</string>

@@ -86,6 +86,8 @@ GET   /training/daily                  controllers.Puzzle.daily
 GET   /training/frame                  controllers.Puzzle.frame
 GET   /training/export/png/:id.png     controllers.Export.legacyPuzzleThumbnail(id: Int)
 GET   /training/export/gif/thumbnail/:id.gif controllers.Export.puzzleThumbnail(id: Int)
+GET   /training/api/game.pgn           controllers.Puzzle.recentGame
+POST  /training/api/puzzle             controllers.Puzzle.importOne
 GET   /training/batch                  controllers.Puzzle.batchSelect
 POST  /training/batch                  controllers.Puzzle.batchSolve
 GET   /training/:id                    controllers.Puzzle.show(id: Int)

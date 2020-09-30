@@ -56,7 +56,7 @@ fi
 if [ $mode = "main" ]; then
   echo "Backup production lichess dir"
   BACKUP_DIR=/home/backup/lichess-$(date +%Y-%m-%d_%H-%M)
-  ssh $REMOTE "echo $BACKUP_DIR && cp -r $REMOTE_DIR $BACKUP_DIR && rm $BACKUP_DIR/RUNNING_PID && chown -R lichess:lichess $BACKUP_DIR"
+  ssh $REMOTE "echo $BACKUP_DIR && cp -r $REMOTE_DIR $BACKUP_DIR && chown -R lichess:lichess $BACKUP_DIR"
 fi
 
 # read -n 1 -p "Press [Enter] to rsync to $REMOTE:$REMOTE_DIR"

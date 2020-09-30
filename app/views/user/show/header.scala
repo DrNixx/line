@@ -232,6 +232,9 @@ It's useful against spambots. These marks are not visible to the public."""
                     )
                   },
                   p(cls := "thin")(trans.memberSince(), " ", showDate(u.createdAt)),
+                  p()(
+                    a(href := s"https://www.chess-online.com/@/${u.id}", cls := "text", dataIcon := "r")(trans.mainProfileLink())
+                  ),
                   u.seenAt.map { seen =>
                     p(cls := "thin")(trans.lastSeenActive(momentFromNow(seen)))
                   },

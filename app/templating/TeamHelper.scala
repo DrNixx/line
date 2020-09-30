@@ -20,7 +20,7 @@ trait TeamHelper { self: HasEnv =>
 
   def teamLink(id: String, name: Frag, withIcon: Boolean): Tag =
     a(
-      href := routes.Team.show(id),
+      href := s"https://www.chess-online.com/teams/detail/${id}",
       dataIcon := withIcon.option("f"),
       cls := withIcon option "text"
     )(name)

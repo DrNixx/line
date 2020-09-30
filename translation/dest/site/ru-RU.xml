@@ -10,6 +10,7 @@
   <string name="copyright">© Chess-Online Network</string>
   <string name="basedOn">Работает на Lila server</string>
   <string name="withLove">С любовью к шахматам!</string>
+  <string name="mainProfileLink">Основной профиль Chess-Online.Com</string>
 
   <string name="playWithAFriend">Сыграть с другом</string>
   <string name="playWithTheMachine">Сыграть с компьютером</string>
