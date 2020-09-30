@@ -122,7 +122,7 @@ const sidebar = () => {
              }
         };
 
-        const handleMenu = (e: JQueryEventObject) => {
+        const handleMenu = (e: MouseEvent) => {
             const element = <HTMLAnchorElement>e.currentTarget;
             const li = <HTMLLIElement>element.parentNode;
 
@@ -160,6 +160,7 @@ const sidebar = () => {
             }
         };
 
+
         $el.on('mouseenter', openSideBar).on('mouseleave', closeSideBar);
         if ('ontouchstart' in document.documentElement) {
             $el.on('ontouchstart', openSideBar);
@@ -168,16 +169,16 @@ const sidebar = () => {
         // add handler for menu toggler with attr "data-toggle" equal to data-pages
         var dp = element.getAttribute("data-pages");
         if (dp) {
-            $('[data-toggle="' + dp + '"]').on('click', function(e: JQueryEventObject) {
+            $('[data-toggle="' + dp + '"]').on('click', function(e: MouseEvent) {
                 e.preventDefault();
                 toggleSidebar();
             });
         }
 
-        $('.sidebar-slide-toggle').on('click', function(e: JQueryEventObject) {
+        $('.sidebar-slide-toggle').on('click', function(e: MouseEvent) {
             e.preventDefault();
             dom.toggleClass(<HTMLElement>e.currentTarget, sActive);
-            const elId = e.currentTarget.getAttribute('data-pages-toggle');
+            const elId = (<HTMLElement>e.currentTarget).getAttribute('data-pages-toggle');
             if (elId != null) {
                 //Only by ID
                 const el = document.getElementById(elId.substr(1));
