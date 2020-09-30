@@ -202,23 +202,19 @@ $('#asset-version-message').text(lichess.info.message);"""
       def activeCls(c: String) = cls := active.activeO(c)
       main(cls := "page-menu")(
         st.nav(cls := "page-menu__menu subnav")(
-          a(activeCls("about"), href := routes.Page.about())(trans.aboutX("lichess.org")),
-          a(activeCls("faq"), href := routes.Main.faq())(trans.faq.faqAbbreviation()),
-          a(activeCls("contact"), href := routes.Main.contact())(trans.contact.contact()),
-          a(activeCls("tos"), href := routes.Page.tos())(trans.termsOfService()),
-          a(activeCls("privacy"), href := routes.Page.privacy())(trans.privacy()),
-          a(activeCls("master"), href := routes.Page.master())("Title verification"),
+          a(activeCls("about"), href := "https://www.chess-online.com/site/welcome")(trans.aboutX("Chess-Online.Com")),
+          a(activeCls("contact"), href := "https://www.chess-online.com/feedback")(trans.contact.contact()),
+          a(activeCls("tos"), href := "https://passport.chess-online.com/rules/legal")(trans.termsOfService()),
+          a(activeCls("privacy"), href := "https://passport.chess-online.com/rules/privacy")(trans.privacy()),
+          a(activeCls("master"), href := "https://www.chess-online.com/help/title")("Title verification"),
           sep,
           a(activeCls("source"), href := routes.Page.source())(trans.sourceCode()),
-          a(activeCls("help"), href := routes.Page.help())(trans.contribute()),
-          a(activeCls("thanks"), href := routes.Page.thanks())(trans.thankYou()),
+          a(activeCls("help"), href := "https://www.chess-online.com/help")(trans.contribute()),
+          a(activeCls("thanks"), href := "https://github.com/ornicar/lila/graphs/contributors")(trans.thankYou()),
           sep,
-          a(activeCls("webmasters"), href := routes.Main.webmasters())(trans.webmasters()),
-          a(activeCls("database"), href := "https://database.lichess.org")(trans.database(), external),
           a(activeCls("api"), href := routes.Api.index())("API", external),
           sep,
-          a(activeCls("lag"), href := routes.Main.lag())(trans.lag.isLichessLagging()),
-          a(activeCls("ads"), href := routes.Page.ads())("Block ads")
+          a(activeCls("lag"), href := "https://www.chess-online.com/help/lag")(trans.lag.isLichessLagging())
         ),
         div(cls := s"page-menu__content $contentCls")(body)
       )

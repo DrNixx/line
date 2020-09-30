@@ -40,16 +40,16 @@ export default function ctrl(opts: NotifyOpts, redraw: Redraw): Ctrl {
     const notif = data.pager.currentPageResults.find(n => !n.read);
     if (!notif) return;
     opts.pulse();
-    if (!li.quietMode) li.sound.newPM();
+    if (!lichess.quietMode) lichess.sound.play('newPM');
     const text = asText(notif);
-    const pushSubsribed = parseInt(li.storage.get('push-subscribed') || '0', 10) + 86400000 >= Date.now(); // 24h
+    const pushSubsribed = parseInt(lichess.storage.get('push-subscribed') || '0', 10) + 86400000 >= Date.now(); // 24h
     if (!pushSubsribed && text) notify(text);
   }
 
   const loadPage = (page: number) =>
     xhr.json(xhr.url('/notify', { page: page || 1 }))
       .then(d => update(d, false))
-      .catch(() => li.announce({ msg: 'Failed to load notifications' }));
+      .catch(() => lichess.announce({ msg: 'Failed to load notifications' }));
 
   function nextPage() {
     if (!data || !data.pager.nextPage) return;

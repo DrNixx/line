@@ -27,7 +27,7 @@ const miniPairing = (ctrl: SimulCtrl) => (pairing: Pairing) => {
       'data-state': `${game.fen},${game.orient},${game.lastMove}`,
       'data-live': game.clock ? game.id : ''
     },
-    hook: onInsert(window.lichess.powertip.manualUserIn)
+    hook: onInsert(lichess.powertip.manualUserIn)
   }, [
     h('span.mini-game__player', [
       h('a.mini-game__user.ulpt', {
@@ -39,7 +39,7 @@ const miniPairing = (ctrl: SimulCtrl) => (pairing: Pairing) => {
         ' ',
         h('span.rating', player.rating)
       ]),
-      game.clock ?
+      game.clock ? 
         renderClock(opposite(game.orient), game.clock[opposite(game.orient)]) :
         h('span.mini-game__result', game.winner ? (game.winner == game.orient ? 0 : 1) : '½'),
     ]),
