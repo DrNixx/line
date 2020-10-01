@@ -14,6 +14,7 @@ import StrongSocket from "./component/socket";
 import timeago from "./component/timeago";
 import sidebar from "./component/sidebar";
 import topBar from "./component/top-bar";
+import forumTop from './component/forum-top';
 import watchers from "./component/watchers";
 import { assetUrl, userComplete } from "./component/assets";
 import { reload } from "./component/reload";
@@ -146,6 +147,7 @@ lichess.load.then(() => {
 
     miniBoard.initAll();
     miniGame.initAll();
+    forumTop.init(document.body);
     pubsub.on('content-loaded', miniBoard.initAll);
     pubsub.on('content-loaded', miniGame.initAll);
 
