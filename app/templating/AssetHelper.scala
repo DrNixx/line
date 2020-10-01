@@ -85,7 +85,7 @@ trait AssetHelper { self: I18nHelper with SecurityHelper =>
       frameSrc = List("'self'", assets, "https://www.youtube.com", "https://player.twitch.tv"),
       workerSrc = List("'self'", assets),
       imgSrc = List("data:", "*"),
-      scriptSrc = List("'self'", "'unsafe-eval'", assets, "https://passport.chess-online.com", "https://www.googletagmanager.com"),
+      scriptSrc = List("'self'", "'unsafe-eval'", assets, "https://passport.chess-online.com", "https://www.googletagmanager.com", "https://www.google-analytics.com"),
       baseUri = List("'none'")
     )
   }

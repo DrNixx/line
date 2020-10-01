@@ -2,7 +2,7 @@
 <resources>
   <string name="team">Клуб</string>
   <string name="teams">Команды</string>
-  <string name="clubs">Клубы по интересам</string>
+  <string name="clubs">Клубы</string>
   <string name="playGroups">Игровые группы</string>
   <string name="specGroups">Специальные группы</string>
   <string name="sysGroups">Системные группы</string>

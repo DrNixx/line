@@ -53,7 +53,7 @@ object sidebar {
       st.div(cls := "sidebar-menu")(
         ul(cls := "menu-items")(
           li()(
-            a(href := "javascript:;")(
+            a(href := "#")(
               span(cls := "title")(trans.play()),
               arrow()
             ),
@@ -70,7 +70,7 @@ object sidebar {
           ),
           ctx.noBot option frag(
             li()(
-              a(href := "javascript:;")(
+              a(href := "#")(
                 span(cls := "title")(trans.tournaments()),
                 arrow()
               ),
@@ -83,7 +83,7 @@ object sidebar {
             )
           ),
           li()(
-            a(href := "javascript:;")(
+            a(href := "#")(
               span(cls := "title")(trans.learnMenu()),
               arrow()
             ),
@@ -101,7 +101,7 @@ object sidebar {
             )
           ),
           li()(
-            a(href := "javascript:;")(
+            a(href := "#")(
               span(cls := "title")(trans.community()),
               arrow()
             ),
@@ -114,7 +114,7 @@ object sidebar {
             )
           ),
           li()(
-            a(href := "javascript:;")(
+            a(href := "#")(
               span(cls := "title")(trans.watch()),
               arrow()
             ),
@@ -128,7 +128,7 @@ object sidebar {
           ),
           ctx.noBot option frag(
             li()(
-              a(href := "javascript:;")(
+              a(href := "#")(
                 span(cls := "title")(trans.library()),
                 arrow()
               ),
@@ -140,7 +140,7 @@ object sidebar {
             )
           ),
           li()(
-            a(href := "javascript:;")(
+            a(href := "#")(
               span(cls := "title")(trans.tools()),
               arrow()
             ),
@@ -154,7 +154,7 @@ object sidebar {
             )
           ),
           li()(
-            a(href := "javascript:;")(
+            a(href := "#")(
               span(cls := "title")(trans.helpMenu()),
               arrow()
             ),
