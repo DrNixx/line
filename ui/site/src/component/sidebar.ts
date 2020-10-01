@@ -123,6 +123,7 @@ const sidebar = () => {
         };
 
         const handleMenu = (e: MouseEvent) => {
+            e.preventDefault();
             const element = <HTMLAnchorElement>e.currentTarget;
             const li = <HTMLLIElement>element.parentNode;
 

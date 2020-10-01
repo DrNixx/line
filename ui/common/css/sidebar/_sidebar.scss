@@ -199,6 +199,8 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
             height: calc(100% - 10px);
             width: 100%;
             li {
+                line-height: 24px;
+
                 &:first-child {
                     margin-top: 20px;
                 }
@@ -279,23 +281,6 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
                         text-overflow: ellipsis;
                         overflow: hidden;
                         width: 75%;
-                    }
-
-                    & > .details {
-                        font-size: 12px;
-                        opacity: 0.4;
-                        display: block;
-                        clear: both;
-                    }
-
-                    &.detailed {
-                        & > .title {
-                            line-height: 28px;
-                        }
-                        
-                        & > .details {
-                            line-height: 16px;
-                        }
                     }
                 }
             
@@ -402,6 +387,25 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
                                 background-color: $color-menu;
                                 font-size: 14px;
                             }
+                        }
+                    }
+                }
+            }
+
+            & li {
+                & > a {
+                    & > .details {
+                        font-size: 12px;
+                        opacity: 0.4;
+                        display: block;
+                        clear: both;
+                    }
+                    &.detailed {
+                        & > .title {
+                            line-height: 28px;
+                        }
+                        & > .details {
+                            line-height: 16px;
                         }
                     }
                 }

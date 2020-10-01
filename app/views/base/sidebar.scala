@@ -15,14 +15,20 @@ object sidebar {
   private val dataIconAlt                  = attr("data-icon-alt")
 
   private def icon(name: String)(implicit ctx: Context) =
-    (name != "") option span(cls := "icon-thumbnail")(i(dataIcon := name)())
+    (!name.isEmpty) option span(cls := "icon-thumbnail")(i(dataIcon := name)())
 
   private def arrow()(implicit ctx: Context) =
     span(cls := "arrow")()
 
-  private def menuItem(url: String, title: Frag, iname: String = "")(implicit ctx: Context) =
+  private def menuItem(url: String, title: Frag, iname: String = "", details: Frag = emptyFrag)(implicit ctx: Context) =
     li()(
-      a(href := url)(title),
+      a(href := url)(
+        if (details.equals(emptyFrag)) title
+        else frag(
+          span(cls := "title")(title),
+          span(cls := "details")(details)
+        )
+      ),
       icon(iname)
     )
 
@@ -59,7 +65,8 @@ object sidebar {
             ),
             icon("а"),
             ul(cls := "sub-menu")(
-              if (ctx.noBot) menuItem("https://www.chess-online.com/chess/create", trans.createAGame(), "О")
+              if (ctx.userId.isEmpty) menuItem("/?any#hook", trans.playAsGuest(), "О", trans.playAsGuestDesc())
+              else if (ctx.noBot) menuItem("https://www.chess-online.com/chess/create", trans.createAGame(), "О")
               else menuItem("/?any#friend", trans.playWithAFriend(), "О"),
               ctx.noBot option frag(
                 menuItem(routes.Tournament.home().toString(), trans.arena.arenaTournaments(), "Т"),

@@ -15,6 +15,8 @@ val `copyright` = new I18nKey("copyright")
 val `basedOn` = new I18nKey("basedOn")
 val `withLove` = new I18nKey("withLove")
 val `mainProfileLink` = new I18nKey("mainProfileLink")
+val `playAsGuest` = new I18nKey("playAsGuest")
+val `playAsGuestDesc` = new I18nKey("playAsGuestDesc")
 
 val `playWithAFriend` = new I18nKey("playWithAFriend")
 val `playWithTheMachine` = new I18nKey("playWithTheMachine")

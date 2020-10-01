@@ -11,6 +11,8 @@
   <string name="basedOn">Based on Lila server</string>
   <string name="withLove">With love to Chess!</string>
   <string name="mainProfileLink">Main Chess-Online.Com profile</string>
+  <string name="playAsGuest">Play as guest</string>
+  <string name="playAsGuestDesc">Play unrated game without registration</string>
 
   <string name="playWithAFriend">Play with a friend</string>
   <string name="playWithTheMachine">Play with the computer</string>
