@@ -72,8 +72,8 @@ export default function (token: string) {
    */
   var localBoard: Chess = startingPosition(); //Board with valid moves played on Lichess and DGT Board. May be half move behind Lichess or half move in advance
   var DGTgameId = ''; //Used to track if DGT board was setup already with the lichess currentGameId
-  var boards = Array<{ serialnr: string, state: string }>(); //An array to store all the board recognized by DGT LiveChess 
-  var liveChessConnection: WebSocket; //Connection Object to LiveChess through websocket  
+  var boards = Array<{ serialnr: string, state: string }>(); //An array to store all the board recognized by DGT LiveChess
+  var liveChessConnection: WebSocket; //Connection Object to LiveChess through websocket
   var isLiveChessConnected = false; //Used to track if a board there is a connection to DGT Live Chess
   var currentSerialnr = '0'; //Public property to store the current serial number of the DGT Board in case there is more than one
   //subscription stores the information about the board being connected, most importantly the serialnr
@@ -145,11 +145,11 @@ export default function (token: string) {
 
   /**
    * GET /api/account
-   * 
+   *
    * Get my profile
-   * 
+   *
    * Shows Public informations about the logged in user.
-   * 
+   *
    * Example
    * {"id":"andrescavallin","username":"andrescavallin","online":true,"perfs":{"blitz":{"games":0,"rating":1500,"rd":350,"prog":0,"prov":true},"bullet":{"games":0,"rating":1500,"rd":350,"prog":0,"prov":true},"correspondence":{"games":0,"rating":1500,"rd":350,"prog":0,"prov":true},"classical":{"games":0,"rating":1500,"rd":350,"prog":0,"prov":true},"rapid":{"games":0,"rating":1500,"rd":350,"prog":0,"prov":true}},"createdAt":1599930231644,"seenAt":1599932744930,"playTime":{"total":0,"tv":0},"language":"en-US","url":"http://localhost:9663/@/andrescavallin","nbFollowing":0,"nbFollowers":0,"count":{"all":0,"rated":0,"ai":0,"draw":0,"drawH":0,"loss":0,"lossH":0,"win":0,"winH":0,"bookmark":0,"playing":0,"import":0,"me":0},"followable":true,"following":false,"blocking":false,"followsYou":false}
    * */
@@ -175,7 +175,7 @@ export default function (token: string) {
       );
   }
 
-  /** 
+  /**
     GET /api/stream/event
     Stream incoming events
 
@@ -249,21 +249,21 @@ export default function (token: string) {
 
   /**
   Stream Board game state
-   
+
   GET /api/board/game/stream/{gameId}
-   
+
   Stream the state of a game being played with the Board API, as ndjson.
   Use this endpoint to get updates about the game in real-time, with a single request.
   Each line is a JSON object containing a type field. Possible values are:
-   
+
   gameFull Full game data. All values are immutable, except for the state field.
   gameState Current state of the game. Immutable values not included. Sent when a move is played, a draw is offered, or when the game ends.
   chatLine Chat message sent by a user in the room "player" or "spectator".
-  gameFinish new message to signal that game ended 
+  gameFinish new message to signal that game ended
   The first line is always of type gameFull.
-   
+
   Examples:
-   
+
   New Game
   {"id":"972RKuuq","variant":{"key":"standard","name":"Standard","short":"Std"},"clock":{"initial":900000,"increment":10000},"speed":"rapid","perf":{"name":"Rapid"},"rated":false,"createdAt":1586647003562,"white":{"id":"godking666","name":"Godking666","title":null,"rating":1761},"black":{"id":"andrescavallin","name":"andrescavallin","title":null,"rating":1362,"provisional":true},"initialFen":"startpos","type":"gameFull","state":{"type":"gameState","moves":"e2e4","wtime":900000,"btime":900000,"winc":10000,"binc":10000,"wdraw":false,"bdraw":false,"status":"started"}}
   First Move
@@ -311,9 +311,9 @@ export default function (token: string) {
             //The first line is always of type gameFull.
             if (data.type == "gameFull") {
               if (!verbose) console.clear();
-              //Log game Summary 
+              //Log game Summary
               //logGameSummary(data);
-              //Store game inmutable information on the gameInfoMap dictionary collection 
+              //Store game inmutable information on the gameInfoMap dictionary collection
               gameInfoMap.set(gameId, data);
               //Store game state on the gameStateMap dictionary collection
               gameStateMap.set(gameId, data.state);
@@ -364,9 +364,9 @@ export default function (token: string) {
 
   /**
    * Return a string representation of the remaining time on the clock
-   * 
+   *
    * @param {number} timer - Numeric representation of remaining time
-   * 
+   *
    * @returns {String} - String representation of numeric time
    */
   function formattedTimer(timer: number): string {
@@ -433,7 +433,7 @@ export default function (token: string) {
       console.warn('Currently only one game is supported. Ability to select game coming soon. Defaulting to latest.')
       let index = playableGames.length - 1;
       currentGameId = playableGames[Number(index)].gameId;
-      //Command looks good for currentGameId 
+      //Command looks good for currentGameId
       attachCurrentGameIdToDGTBoard(); //Let the board know which color the player is actually playing and setup the position
       console.log('Active game updated. currentGameId: ' + currentGameId);
     }
@@ -442,7 +442,7 @@ export default function (token: string) {
 
   /**
    * Initialize a ChessBoard when connecting or re-connecting to a game
-   * 
+   *
    * @param {string} gameId - The gameId of the game to store on the board
    * @param {Object} data - The gameFull event from lichess.org
    */
@@ -476,7 +476,7 @@ export default function (token: string) {
 
   /**
   * Update the ChessBoard for the specified gameId with the new moves on newState since the last stored state
-  * 
+  *
   * @param {string} gameId - The gameId of the game to store on the board
   * @param {Object} currentState - The state stored on the gameStateMap
   * @param {Object} newState - The new state not yet stored
@@ -559,7 +559,7 @@ export default function (token: string) {
     var keys = Array.from(gameConnectionMap.keys());
     //The for each iterator is not used since we don't want to continue execution. We want a syncrhonous result
     //for (let [gameId, networkState] of gameConnectionMap) {
-    //    if (gameConnectionMap.get(gameId).connected && gameStateMap.get(gameId).status == "started") {    
+    //    if (gameConnectionMap.get(gameId).connected && gameStateMap.get(gameId).status == "started") {
     for (var i = 0; i < keys.length; i++) {
       if (gameConnectionMap.get(keys[i])?.connected && gameStateMap.get(keys[i])?.status == "started") {
         //Game is good for commands
@@ -627,9 +627,9 @@ export default function (token: string) {
 
   /**
    * Peeks a game state and calculates who played the last move and what move it was
-   * 
+   *
    * @param {string} gameId - The alphanumeric identifier of the game where the last move is going to be calculated
-   * 
+   *
    * @return {Object} - The move in JSON
    */
   function getLastUCIMove(gameId: string): { player: string, move: string, by: string } {
@@ -652,7 +652,7 @@ export default function (token: string) {
 
   /**
    * Fedback the user about the detected moved
-   * 
+   *
    * @param lastMove JSON object with the move information
    * @param wtime Remaining time for white
    * @param btime Remaining time for black
@@ -735,7 +735,7 @@ export default function (token: string) {
         boards = message.param;
         console.table(boards)
         if (verbose) console.info(boards[0].serialnr)
-        //TODO 
+        //TODO
         //we need to be able to handle more than one board
         //for now using the first board found
         //Update the base subscription message with the serial number
@@ -894,10 +894,10 @@ export default function (token: string) {
   }
 
   /**
-  * This functions hanldes the sending the move to the right lichess game. 
+  * This functions hanldes the sending the move to the right lichess game.
   * If more than one game is being played, it will ask which game to connect to,
   * thus waiting for user input and so, it becomes async
-  * 
+  *
   * @param {Object} boardMove - The move in chessops format or string if in lichess format
   */
   async function validateAndSendBoardMove(boardMove: NormalMove) {
@@ -916,14 +916,14 @@ export default function (token: string) {
 
   /**
    * Make a Board move
-   * 
+   *
    * /api/board/game/{gameId}/move/{move}
-   * 
+   *
    * Make a move in a game being played with the Board API.
    * The move can also contain a draw offer/agreement.
-   * 
+   *
    * @param {string} gameId - The gameId for the active game
-   * @param {string} uciMove - The move un UCI format 
+   * @param {string} uciMove - The move un UCI format
    */
   function sendMove(gameId: string, uciMove: string) {
     //prevent sending empty moves
@@ -1049,7 +1049,7 @@ export default function (token: string) {
     console.log("  ;::|   _.=`\\                   ░ ░       ░  ░  ░   ░  ░      ░        ░      ");
     console.log("  `;:|.=` _.=`\\                  ░                                             ");
     console.log("    '|_.=`   __\\                                                               ");
-    console.log("    `\\_..==`` /                 Lichess.org - DGT Electronic Board Connector   ");
+    console.log("    `\\_..==`` /                Chess-Online - DGT Electronic Board Connector   ");
     console.log("     .'.___.-'.                Developed by Andres Cavallin and Juan Cavallin  ");
     console.log("    /          \\                                  v1.0.0                       ");
     console.log("jgs('--......--')                                                             ");
