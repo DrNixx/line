@@ -125,15 +125,16 @@ const sidebar = () => {
         const handleMenu = (e: MouseEvent) => {
             const element = <HTMLAnchorElement>e.currentTarget;
             const li = <HTMLLIElement>element.parentNode;
+            const sub = <HTMLElement>li.querySelector(".sub-menu");
 
-            if (!li.querySelectorAll(".sub-menu")) {
+            if (!sub) {
                 return;
             }
 
             e.preventDefault();
 
             const parent = <HTMLElement>li.parentNode;
-            const sub = <HTMLElement>li.querySelector(".sub-menu");
+            
             if (dom.hasClass(li, sOpen)) {
                 dom.removeClass(element.querySelector(".arrow"), sOpen)
                 dom.removeClass(element.querySelector(".arrow"), sActive);
