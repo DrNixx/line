@@ -126,7 +126,7 @@ object TournamentForm {
   val minuteDefault = 45
   val minuteChoices = options(minutes, "%d minute{s}")
 
-  val waitMinutes       = Seq(1, 2, 3, 5, 10, 15, 20, 30, 45, 60)
+  val waitMinutes       = Seq(1, 2, 3, 5, 10, 15, 20, 30, 45, 60, 90, 120)
   val waitMinuteChoices = options(waitMinutes, "%d minute{s}")
   val waitMinuteDefault = 5
 
