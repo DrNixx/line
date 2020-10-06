@@ -1,11 +1,16 @@
 const searchParams = new URL(self.location.href).searchParams;
 const assetBase = new URL(searchParams.get('asset-url')!, self.location.href).href;
+const rightOrigin = location.protocol + '//live.chess-online.com';
 
 function assetUrl(path: string): string {
   return `${assetBase}assets/${path}`;
 }
 
 self.addEventListener('push', event => {
+  if (event.target && (event.target as ServiceWorkerGlobalScope).origin != rightOrigin) {
+    return;
+  }
+  
   const data = event.data!.json();
   return event.waitUntil(self.registration.showNotification(data.title, {
     badge: assetUrl('logo/chess-mono-128.png'),
