@@ -2,6 +2,7 @@ package lila.common
 
 import lila.common.config.NetDomain
 import ornicar.scalalib.Random
+import play.api.mvc.Cookie.SameSite
 import play.api.mvc._
 
 final class LilaCookie(domain: NetDomain, baker: SessionCookieBaker) {
@@ -33,7 +34,8 @@ final class LilaCookie(domain: NetDomain, baker: SessionCookieBaker) {
       "/",
       cookieDomain.some,
       baker.secure || req.headers.get("X-Forwarded-Proto").contains("https"),
-      httpOnly | baker.httpOnly
+      httpOnly | baker.httpOnly,
+      SameSite.None.some
     )
 
   def discard(name: String) =
