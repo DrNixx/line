@@ -189,14 +189,14 @@ Allow: /
   def costs =
     Action { req =>
       pageHit(req)
-      Redirect("https://docs.google.com/spreadsheets/d/1CGgu-7aNxlZkjLl9l-OlL00fch06xp0Q7eCVDDakYEE/preview")
+      Redirect("https://www.chess-online.com/help/cost")
     }
 
   def verifyTitle =
     Action { req =>
       pageHit(req)
       Redirect(
-        "https://docs.google.com/forms/d/e/1FAIpQLSd64rDqXOihJzPlBsQba75di5ioL-WMFhkInS2_vhVTvDtBag/viewform"
+        "https://www.chess-online.com/help/verify-title"
       )
     }
 

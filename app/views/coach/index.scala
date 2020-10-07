@@ -37,7 +37,7 @@ object index {
           p(
             areYouCoach(a(href := "https://www.chess-online.com/help/master")(nmOrFideTitle())),
             br,
-            if (!ctx.me.exists(_.hasTitle)) a(href := routes.Main.verifyTitle())(confirmTitle())
+            if (!ctx.me.exists(_.hasTitle)) a(href := "https://www.chess-online.com/help/coach")(confirmTitle())
             else sendApplication(contactEmailLink)
           )
         ),
