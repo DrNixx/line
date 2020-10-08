@@ -221,12 +221,13 @@ final class JsonView(
       externalId: Option[Game.ID] = none
   ) = {
     import pov._
+    val optId = externalId.getOrElse(gameId);
     val fen = Forsyth >> game.chess
     Json
       .obj(
         "game" -> Json
           .obj(
-            "id"         -> externalId.getOrElse(gameId),
+            "id"         -> optId,
             "variant"    -> game.variant,
             "opening"    -> game.opening,
             "initialFen" -> initialFen.fold(chess.format.Forsyth.initial)(_.value),
