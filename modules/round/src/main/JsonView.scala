@@ -217,7 +217,8 @@ final class JsonView(
       orientation: chess.Color,
       owner: Boolean,
       me: Option[User],
-      division: Option[chess.Division] = none
+      division: Option[chess.Division] = none,
+      hideAnalysis: Boolean = false
   ) = {
     import pov._
     val fen = Forsyth >> game.chess
@@ -257,7 +258,7 @@ final class JsonView(
           .add("highlight" -> pref.highlight)
           .add("destination" -> (pref.destination && !pref.isBlindfold)),
         "path"         -> pov.game.turns,
-        "userAnalysis" -> true
+        "userAnalysis" -> !hideAnalysis
       )
       .add("evalPut" -> me.??(evalCache.shouldPut))
   }
