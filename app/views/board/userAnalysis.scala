@@ -52,7 +52,7 @@ object userAnalysis {
         pov.game.synthetic option st.aside(cls := "analyse__side")(
           if (ccid.isDefined) {
             st.div(cls := "back-to-game")(
-              a(cls := "button button-empty text", href := s"https://www.chess-online.com/${ccid}", dataIcon := "i")(trans.backToGame())
+              a(cls := "button button-empty text", href := s"https://www.chess-online.com/${ccid.some}", dataIcon := "i")(trans.backToGame())
             )
           } else {
             views.html.base.bits.mselect(
