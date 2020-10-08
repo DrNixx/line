@@ -14,7 +14,7 @@ import controllers.routes
 
 object userAnalysis {
 
-  def apply(data: JsObject, pov: lila.game.Pov, withForecast: Boolean = false)(implicit ctx: Context) =
+  def apply(data: JsObject, pov: lila.game.Pov, withForecast: Boolean = false, ccid: Option[String] = none)(implicit ctx: Context) =
     views.html.base.layout(
       title = trans.analysis.txt(),
       moreCss = frag(
@@ -50,17 +50,23 @@ object userAnalysis {
     ) {
       main(cls := "analyse")(
         pov.game.synthetic option st.aside(cls := "analyse__side")(
-          views.html.base.bits.mselect(
-            "analyse-variant",
-            span(cls := "text", dataIcon := iconByVariant(pov.game.variant))(pov.game.variant.name),
-            chess.variant.Variant.all.filter(chess.variant.FromPosition.!=).map { v =>
-              a(
-                dataIcon := iconByVariant(v),
-                cls := (pov.game.variant == v).option("current"),
-                href := routes.UserAnalysis.parseArg(v.key)
-              )(v.name)
-            }
-          )
+          if (ccid.isDefined) {
+            st.div(cls := "back-to-game")(
+              a(cls := "button button-empty text", href := s"https://www.chess-online.com/${ccid}", dataIcon := "i")(trans.backToGame())
+            )
+          } else {
+            views.html.base.bits.mselect(
+              "analyse-variant",
+              span(cls := "text", dataIcon := iconByVariant(pov.game.variant))(pov.game.variant.name),
+              chess.variant.Variant.all.filter(chess.variant.FromPosition.!=).map { v =>
+                a(
+                  dataIcon := iconByVariant(v),
+                  cls := (pov.game.variant == v).option("current"),
+                  href := routes.UserAnalysis.parseArg(v.key)
+                )(v.name)
+              }
+            )
+          }
         ),
         div(cls := "analyse__board main-board")(chessgroundBoard),
         div(cls := "analyse__tools"),

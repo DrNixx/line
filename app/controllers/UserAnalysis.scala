@@ -44,9 +44,10 @@ final class UserAnalysis(
         .orElse(get("fen")) map FEN.apply
       val pov         = makePov(decodedFen, variant)
       val orientation = get("color").flatMap(chess.Color.fromName) | pov.color
+      var ccid = get("ccid")
       env.api.roundApi
         .userAnalysisJson(pov, ctx.pref, decodedFen, orientation, owner = false, me = ctx.me) map { data =>
-        EnableSharedArrayBuffer(Ok(html.board.userAnalysis(data, pov)))
+        EnableSharedArrayBuffer(Ok(html.board.userAnalysis(data, pov, false, ccid)))
       }
     }
 
