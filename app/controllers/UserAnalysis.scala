@@ -45,8 +45,9 @@ final class UserAnalysis(
       val pov         = makePov(decodedFen, variant)
       val orientation = get("color").flatMap(chess.Color.fromName) | pov.color
       var ccid = get("ccid")
+      var ha = get("ha")
       env.api.roundApi
-        .userAnalysisJson(pov, ctx.pref, decodedFen, orientation, owner = false, me = ctx.me) map { data =>
+        .userAnalysisJson(pov, ctx.pref, decodedFen, orientation, owner = ha.isDefined, me = ctx.me) map { data =>
         EnableSharedArrayBuffer(Ok(html.board.userAnalysis(data, pov, false, ccid)))
       }
     }
