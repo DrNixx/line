@@ -174,12 +174,12 @@ final private[api] class RoundApi(
       orientation: chess.Color,
       owner: Boolean,
       me: Option[User],
-      hideAnalysis: Boolean = false
+      externalId: Option[Game.ID] = none
   ) =
     owner.??(forecastApi loadForDisplay pov).map { fco =>
       withForecast(pov, owner, fco) {
         withTree(pov, analysis = none, initialFen, WithFlags(opening = true)) {
-          jsonView.userAnalysisJson(pov, pref, initialFen, orientation, owner = owner, me = me, hideAnalysis = hideAnalysis)
+          jsonView.userAnalysisJson(pov, pref, initialFen, orientation, owner = owner, me = me, externalId = externalId)
         }
       }
     }

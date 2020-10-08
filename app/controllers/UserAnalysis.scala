@@ -47,7 +47,7 @@ final class UserAnalysis(
       val ccid = get("ccid")
       val ha = get("ha")
       env.api.roundApi
-        .userAnalysisJson(pov, ctx.pref, decodedFen, orientation, owner = false, me = ctx.me, hideAnalysis = ha.isDefined) map { data =>
+        .userAnalysisJson(pov, ctx.pref, decodedFen, orientation, owner = false, me = ctx.me, externalId = ha) map { data =>
         EnableSharedArrayBuffer(Ok(html.board.userAnalysis(data, pov, false, ccid)))
       }
     }

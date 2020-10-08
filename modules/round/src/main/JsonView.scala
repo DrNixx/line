@@ -218,7 +218,7 @@ final class JsonView(
       owner: Boolean,
       me: Option[User],
       division: Option[chess.Division] = none,
-      hideAnalysis: Boolean = false
+      externalId: Option[Game.ID] = none
   ) = {
     import pov._
     val fen = Forsyth >> game.chess
@@ -226,7 +226,7 @@ final class JsonView(
       .obj(
         "game" -> Json
           .obj(
-            "id"         -> gameId,
+            "id"         -> externalId.getOrElse(gameId),
             "variant"    -> game.variant,
             "opening"    -> game.opening,
             "initialFen" -> initialFen.fold(chess.format.Forsyth.initial)(_.value),
