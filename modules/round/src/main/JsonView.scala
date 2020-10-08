@@ -260,7 +260,7 @@ final class JsonView(
         "path"         -> pov.game.turns,
         "userAnalysis" -> true
       )
-      .add("evalPut" -> (!hideAnalysis && me.??(evalCache.shouldPut)))
+      .add("evalPut" -> me.??(evalCache.shouldPut))
   }
 
   private def blurs(game: Game, player: lila.game.Player) =
