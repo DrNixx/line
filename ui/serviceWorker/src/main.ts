@@ -47,7 +47,11 @@ async function handleNotificationClick(event: NotificationEvent) {
   // navigate from open homepage to url
   for (const client of windowClients) {
     const clientUrl = new URL(client.url, self.location.href);
-    if (clientUrl.pathname === '/') return await client.navigate(url);
+    if ((clientUrl.pathname === '/ru-ru') || 
+      (clientUrl.pathname === '/en-us') ||
+      clientUrl.pathname === '/es-es') {
+        return await client.navigate(url);
+      }
   }
 
   // open new window
