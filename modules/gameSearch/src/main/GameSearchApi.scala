@@ -1,10 +1,10 @@
 package lila.gameSearch
 
-import akka.stream.scaladsl.{Keep, Sink}
+import akka.stream.scaladsl._
 import play.api.libs.json._
-
 import scala.concurrent.duration._
-import lila.game.{Game, GameRepo}
+
+import lila.game.{ Game, GameRepo }
 import lila.search._
 
 final class GameSearchApi(

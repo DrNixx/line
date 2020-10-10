@@ -57,7 +57,7 @@ final class Env(
 
   val config = ApiConfig loadFrom appConfig
   import config.apiToken
-  import net.domain
+  import net.{ baseUrl, domain }
 
   lazy val pgnDump: PgnDump = wire[PgnDump]
 
@@ -79,6 +79,8 @@ final class Env(
 
   lazy val personalDataExport = wire[PersonalDataExport]
 
+  lazy val referrerRedirect = wire[ReferrerRedirect]
+
   lazy val cli = wire[Cli]
 
   private lazy val influxEvent = new InfluxEvent(
@@ -96,7 +98,7 @@ final class Env(
 
   system.scheduler.scheduleWithFixedDelay(1 minute, 1 minute) { () =>
     lila.mon.bus.classifiers.update(lila.common.Bus.size)
-    // ensure the Chess-Online user is online
+    // ensure the Lichess user is online
     socketEnv.remoteSocket.onlineUserIds.getAndUpdate(_ + User.lichessId)
     userEnv.repo.setSeenAt(User.lichessId)
   }

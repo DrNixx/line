@@ -1,6 +1,3 @@
-# Accessibility
-POST  /toggle-blind-mode               controllers.Main.toggleBlindMode
-
 # Lobby
 GET   /                                controllers.Lobby.home
 GET   /lobby/seeks                     controllers.Lobby.seeks
@@ -552,7 +549,7 @@ POST  /appeal                          controllers.Appeal.post
 GET   /appeal/queue                    controllers.Appeal.queue
 GET   /appeal/:username                controllers.Appeal.show(username: String)
 POST  /appeal/:username                controllers.Appeal.reply(username: String)
-POST  /appeal/:username/act/:action    controllers.Appeal.act(username: String, action: String)
+POST  /appeal/:username/mute           controllers.Appeal.mute(username: String)
 
 # Stats
 GET    /stat/rating/distribution/:perf controllers.Stat.ratingDistribution(perf: String)
@@ -648,17 +645,17 @@ GET   /account/info                    controllers.Account.info
 GET   /account/now-playing             controllers.Account.nowPlaying
 
 # OAuth
-GET   /account/oauth/token             controllers.OAuthToken.index
-GET   /account/oauth/token/create      controllers.OAuthToken.create
-POST  /account/oauth/token/create      controllers.OAuthToken.createApply
-POST  /account/oauth/token/:id/delete  controllers.OAuthToken.delete(id: String)
-GET   /account/oauth/app               controllers.OAuthApp.index
-GET   /account/oauth/app/create        controllers.OAuthApp.create
-POST  /account/oauth/app/create        controllers.OAuthApp.createApply
-GET   /account/oauth/app/:id/edit      controllers.OAuthApp.edit(id: String)
-POST  /account/oauth/app/:id/edit      controllers.OAuthApp.update(id: String)
-POST  /account/oauth/app/:id/delete    controllers.OAuthApp.delete(id: String)
-POST  /account/oauth/app/:id/revoke    controllers.OAuthApp.revoke(id: String)
+GET   /account/oauth/token                  controllers.OAuthToken.index
+GET   /account/oauth/token/create           controllers.OAuthToken.create
+POST  /account/oauth/token/create           controllers.OAuthToken.createApply
+POST  /account/oauth/token/:publicId/delete controllers.OAuthToken.delete(publicId: String)
+GET   /account/oauth/app                    controllers.OAuthApp.index
+GET   /account/oauth/app/create             controllers.OAuthApp.create
+POST  /account/oauth/app/create             controllers.OAuthApp.createApply
+GET   /account/oauth/app/:id/edit           controllers.OAuthApp.edit(id: String)
+POST  /account/oauth/app/:id/edit           controllers.OAuthApp.update(id: String)
+POST  /account/oauth/app/:id/delete         controllers.OAuthApp.delete(id: String)
+POST  /account/oauth/app/:id/revoke         controllers.OAuthApp.revoke(id: String)
 
 # Events
 GET   /event/$id<\w{8}>                controllers.Event.show(id: String)
@@ -719,6 +716,9 @@ GET   /dgt                             controllers.DgtCtrl.index
 GET   /dgt/play                        controllers.DgtCtrl.play
 GET   /dgt/config                      controllers.DgtCtrl.config
 POST  /dgt/config/token                controllers.DgtCtrl.generateToken
+
+# Accessibility
+POST  /toggle-blind-mode               controllers.Main.toggleBlindMode
 
 GET   /prismic-preview                 controllers.Blog.preview(token: String)
 POST  /jslog/$id<\w{12}>               controllers.Main.jslog(id: String)

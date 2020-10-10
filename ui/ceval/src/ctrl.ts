@@ -72,7 +72,7 @@ export default function(opts: CevalOpts): CevalCtrl {
   const maxThreads = Math.min(Math.max((navigator.hardwareConcurrency || 1) - 1, 1), growableSharedMem ? 16 : initialAllocationMaxThreads);
   const threads = storedProp(storageKey('ceval.threads'), Math.min(Math.ceil((navigator.hardwareConcurrency || 1) / 4), maxThreads));
 
-  const maxHashSize = Math.min((navigator.deviceMemory || 0.5) * 1024 / 16, growableSharedMem ? 512 : 16);
+  const maxHashSize = Math.min((navigator.deviceMemory || 0.25) * 1024 / 8, growableSharedMem ? 1024 : 16);
   const hashSize = storedProp(storageKey('ceval.hash-size'), 16);
 
   const minDepth = 6;
@@ -100,14 +100,14 @@ export default function(opts: CevalOpts): CevalCtrl {
   });
 
   // adjusts maxDepth based on nodes per second
-  const npsRecorder = (function() {
+  const npsRecorder = (() => {
     const values: number[] = [];
     const applies = (ev: Tree.ClientEval) => {
       return ev.knps && ev.depth >= 16 &&
         typeof ev.cp !== 'undefined' && Math.abs(ev.cp) < 500 &&
         (ev.fen.split(/\s/)[0].split(/[nbrqkp]/i).length - 1) >= 10;
     };
-    return function(ev: Tree.ClientEval) {
+    return (ev: Tree.ClientEval) => {
       if (!applies(ev)) return;
       values.push(ev.knps);
       if (values.length > 9) {

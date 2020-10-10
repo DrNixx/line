@@ -33,11 +33,13 @@ final class Swiss(
         negotiate(
           html = swissOption.fold(swissNotFound.fuccess) { swiss =>
             for {
+              verdicts <- env.swiss.api.verdicts(swiss, ctx.me)
               version  <- env.swiss.version(swiss.id)
               isInTeam <- isCtxInTheTeam(swiss.teamId)
               json <- env.swiss.json(
                 swiss = swiss,
                 me = ctx.me,
+                verdicts = verdicts,
                 reqPage = page,
                 socketVersion = version.some,
                 playerInfo = none,
@@ -52,7 +54,7 @@ final class Swiss(
                 env.user.lightUserApi.preloadMany(c.chat.userIds)
               }
               isLocalMod <- canChat ?? canModChat(swiss)
-            } yield Ok(html.swiss.show(swiss, json, chat, isLocalMod))
+            } yield Ok(html.swiss.show(swiss, verdicts, json, chat, isLocalMod))
           },
           api = _ =>
             swissOption.fold(notFoundJson("No such swiss tournament")) { swiss =>
@@ -60,9 +62,11 @@ final class Swiss(
                 socketVersion <- getBool("socketVersion").??(env.swiss version swiss.id dmap some)
                 isInTeam      <- isCtxInTheTeam(swiss.teamId)
                 playerInfo    <- get("playerInfo").?? { env.swiss.api.playerInfo(swiss, _) }
+                verdicts      <- env.swiss.api.verdicts(swiss, ctx.me)
                 json <- env.swiss.json(
                   swiss = swiss,
                   me = ctx.me,
+                  verdicts = verdicts,
                   reqPage = page,
                   socketVersion = socketVersion,
                   playerInfo = playerInfo,
@@ -225,7 +229,7 @@ final class Swiss(
       env.swiss.api.byId(SwissId(id)) map {
         case None => NotFound("Tournament not found")
         case Some(swiss) =>
-          Ok.chunked(env.swiss trf swiss intersperse "\n")
+          Ok.chunked(env.swiss.trf(swiss, sorted = true) intersperse "\n")
             .withHeaders(CONTENT_DISPOSITION -> s"attachment; filename=lichess_swiss_$id.trf")
       }
     }

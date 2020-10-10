@@ -13,17 +13,19 @@ final class SwissTrf(
     baseUrl: lila.common.config.BaseUrl
 )(implicit ec: scala.concurrent.ExecutionContext) {
 
-  private type Bits      = List[(Int, String)]
-  private type PlayerIds = Map[User.ID, Int]
+  private type Bits = List[(Int, String)]
 
-  def apply(swiss: Swiss): Source[String, _] = Source futureSource {
-    fetchPlayerIds(swiss) map { playerIds =>
+  def apply(swiss: Swiss, sorted: Boolean): Source[String, _] = Source futureSource {
+    fetchPlayerIds(swiss) map { apply(swiss, _, sorted) }
+  }
+
+  def apply(swiss: Swiss, playerIds: PlayerIds, sorted: Boolean): Source[String, _] =
+    SwissPlayer.fields { f =>
       tournamentLines(swiss) concat sheetApi
-        .source(swiss)
+        .source(swiss, sort = sorted.??($doc(f.rating -> -1)))
         .map((playerLine(swiss, playerIds) _).tupled)
         .map(formatLine)
     }
-  }
 
   private def tournamentLines(swiss: Swiss) =
     Source(
@@ -88,7 +90,7 @@ final class SwissTrf(
 
   private val dateFormatter = org.joda.time.format.DateTimeFormat forStyle "M-"
 
-  private def fetchPlayerIds(swiss: Swiss): Fu[PlayerIds] =
+  def fetchPlayerIds(swiss: Swiss): Fu[PlayerIds] =
     SwissPlayer
       .fields { p =>
         import BsonHandlers._

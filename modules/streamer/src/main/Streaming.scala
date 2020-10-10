@@ -37,10 +37,10 @@ final private class Streaming(
 
     case Streaming.Get => sender() ! liveStreams
 
-    case Tick => updateStreams addEffectAnyway scheduleTick
+    case Tick => updateStreams.addEffectAnyway(scheduleTick()).unit
   }
 
-  private def scheduleTick = context.system.scheduler.scheduleOnce(15 seconds, self, Tick)
+  private def scheduleTick(): Unit = context.system.scheduler.scheduleOnce(15 seconds, self, Tick).unit
 
   self ! Tick
 
@@ -170,10 +170,9 @@ final private class Streaming(
               }
             }
             .monSuccess(_.tv.streamer.youTube)
-            .recover {
-              case e: Exception =>
-                logger.warn(e.getMessage)
-                YouTube.StreamsFetched(Nil, now)
+            .recover { case e: Exception =>
+              logger.warn(e.getMessage)
+              YouTube.StreamsFetched(Nil, now)
             }
         }
       res dmap { r =>

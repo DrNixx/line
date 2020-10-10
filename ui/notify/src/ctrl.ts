@@ -3,15 +3,13 @@ import * as xhr from 'common/xhr';
 import notify from 'common/notification';
 import { asText } from './view';
 
-const li = window.lichess;
-
 export default function ctrl(opts: NotifyOpts, redraw: Redraw): Ctrl {
 
   let data: NotifyData | undefined,
     initiating = true,
     scrolling = false;
 
-  const readAllStorage = li.storage.make('notify-read-all');
+  const readAllStorage = lichess.storage.make('notify-read-all');
 
   readAllStorage.listen(_ => {
     if (data) {
@@ -48,8 +46,7 @@ export default function ctrl(opts: NotifyOpts, redraw: Redraw): Ctrl {
 
   const loadPage = (page: number) =>
     xhr.json(xhr.url('/notify', { page: page || 1 }))
-      .then(d => update(d, false))
-      .catch(() => lichess.announce({ msg: 'Failed to load notifications' }));
+      .then(d => update(d, false), _ => lichess.announce({ msg: 'Failed to load notifications' }));
 
   function nextPage() {
     if (!data || !data.pager.nextPage) return;

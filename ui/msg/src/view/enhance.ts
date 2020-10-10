@@ -5,7 +5,7 @@ export const isMoreThanText = (str: string) => /(\n|(@|\.)\w{2,})/.test(str);
 
 export const enhance = (str: string) =>
   expandMentions(
-    expandUrls(window.lichess.escapeHtml(str))
+    expandUrls(lichess.escapeHtml(str))
   ).replace(/\n/g, '<br>');
 
 const expandMentions = (html: string) =>
@@ -34,7 +34,7 @@ const expandImage = (url: string) => /\.(jpg|jpeg|png|gif)$/.test(url) ? aImg(ur
 const expandLink = (url: string) => a(url, url.replace(/^https?:\/\//, ''));
 
 const a = (href: string, body: string) =>
-`<a target="_blank" href="${(href.startsWith('/') || href.includes('://')) ? href : '//' + href}">${body}</a>`;
+`<a target="_blank" rel="noopener nofollow" href="${(href.startsWith('/') || href.includes('://')) ? href : '//' + href}">${body}</a>`;
 
 const img = (src: string) => `<img src="${src}"/>`;
 
