@@ -105,7 +105,7 @@ read -n 1 -p "Press [Enter] to complete deployment to $mode server $REMOTE:$REMO
 
 if [ $mode = "main" ]; then
   echo "Notify post deploy"
-  $CLI announce Chess-Online updated!
+  $CLI announce 5 seconds Chess-Online updated!
   sleep 1
 fi
 
