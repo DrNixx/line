@@ -1,8 +1,10 @@
 #modal {
   &-overlay {
-    @extend %fullscreen-mask, %flex-center;
-
-    justify-content: flex-start;
+    @extend %fullscreen-mask;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: center;
   }
 
   &-wrap {
