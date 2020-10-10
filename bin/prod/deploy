@@ -42,7 +42,7 @@ fi
 
 if [ $mode = "main" ]; then
   echo "Notify pre deploy"
-  $CLI deploy pre
+  $CLI announce 3 minutes Chess-Online being update!
 fi
 
 SBT_OPTS=""
@@ -105,7 +105,7 @@ read -n 1 -p "Press [Enter] to complete deployment to $mode server $REMOTE:$REMO
 
 if [ $mode = "main" ]; then
   echo "Notify post deploy"
-  $CLI deploy post
+  $CLI announce Chess-Online updated!
   sleep 1
 fi
 
