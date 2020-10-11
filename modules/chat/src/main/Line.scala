@@ -15,7 +15,6 @@ sealed trait Line {
 }
 
 case class UserLine(
-    userId: User.ID,
     username: String,
     title: Option[String],
     text: String,
@@ -24,6 +23,8 @@ case class UserLine(
 ) extends Line {
 
   def author = username
+
+  def userId = User normalize username
 
   def delete = copy(deleted = true)
 
@@ -45,7 +46,7 @@ object Line {
 
   import reactivemongo.api.bson._
 
-  private val invalidLine = UserLine("", "", None, "[invalid character]", troll = false, deleted = true)
+  private val invalidLine = UserLine("", None, "[invalid character]", troll = false, deleted = true)
 
   implicit private[chat] val userLineBSONHandler = BSONStringHandler.as[UserLine](
     v => strToUserLine(v) getOrElse invalidLine,
@@ -64,8 +65,8 @@ object Line {
         val troll   = sep == "!"
         val deleted = sep == "?"
         username split titleSep match {
-          case Array(title, name) => UserLine(name, name, Some(title), text, troll = troll, deleted = deleted).some
-          case _                  => UserLine(username, username, None, text, troll = troll, deleted = deleted).some
+          case Array(title, name) => UserLine(name, Some(title), text, troll = troll, deleted = deleted).some
+          case _                  => UserLine(username, None, text, troll = troll, deleted = deleted).some
         }
       case _ => none
     }

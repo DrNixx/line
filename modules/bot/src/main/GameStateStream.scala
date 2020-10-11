@@ -99,8 +99,8 @@ final class GameStateStream(
 
       def receive = {
         case MoveGameEvent(g, _, _) if g.id == id && !g.finished => pushState(g).unit
-        case lila.chat.actorApi.ChatLine(chatId, UserLine(userID, username, _, text, false, false)) =>
-          pushChatLine(userID, username, text, chatId.value.lengthIs == Game.gameIdSize).unit
+        case lila.chat.actorApi.ChatLine(chatId, UserLine(username, _, text, false, false)) =>
+          pushChatLine(username, text, chatId.value.lengthIs == Game.gameIdSize).unit
         case FinishGame(g, _, _) if g.id == id                          => onGameOver(g.some).unit
         case AbortedBy(pov) if pov.gameId == id                         => onGameOver(pov.game.some).unit
         case lila.game.actorApi.BoardDrawOffer(pov) if pov.gameId == id => pushState(pov.game).unit
@@ -122,8 +122,8 @@ final class GameStateStream(
       def pushState(g: Game): Funit =
         jsonView gameState Game.WithInitialFen(g, init.fen) dmap some flatMap queue.offer void
 
-      def pushChatLine(id: lila.user.User.ID, username: String, text: String, player: Boolean): Funit =
-        queue offer jsonView.chatLine(id, username, text, player).some void
+      def pushChatLine(username: String, text: String, player: Boolean): Funit =
+        queue offer jsonView.chatLine(username, text, player).some void
 
       def onGameOver(g: Option[Game]) =
         g ?? pushState >>- {
