@@ -65,6 +65,7 @@ object JsonView {
     implicit private val userLineWriter = OWrites[UserLine] { l =>
       Json
         .obj(
+          "i" -> l.userId,
           "u" -> l.username,
           "t" -> l.text
         )

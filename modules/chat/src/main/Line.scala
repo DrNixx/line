@@ -1,7 +1,5 @@
 package lila.chat
 
-import lila.user.User
-
 import chess.Color
 
 sealed trait Line {
@@ -15,6 +13,7 @@ sealed trait Line {
 }
 
 case class UserLine(
+    userId: String,
     username: String,
     title: Option[String],
     text: String,
@@ -23,8 +22,6 @@ case class UserLine(
 ) extends Line {
 
   def author = username
-
-  def userId = User normalize username
 
   def delete = copy(deleted = true)
 
@@ -46,7 +43,7 @@ object Line {
 
   import reactivemongo.api.bson._
 
-  private val invalidLine = UserLine("", None, "[invalid character]", troll = false, deleted = true)
+  private val invalidLine = UserLine("", "", None, "[invalid character]", troll = false, deleted = true)
 
   implicit private[chat] val userLineBSONHandler = BSONStringHandler.as[UserLine](
     v => strToUserLine(v) getOrElse invalidLine,
@@ -58,15 +55,16 @@ object Line {
     lineToStr
   )
 
-  private val UserLineRegex = """(?s)([\w-~]{2,}+)([ !?])(.++)""".r
+  private val UserLineRegex = """(?s)([\w _-~]{2,}+):([ !?])(.++)""".r
   private def strToUserLine(str: String): Option[UserLine] =
     str match {
       case UserLineRegex(username, sep, text) =>
         val troll   = sep == "!"
         val deleted = sep == "?"
         username split titleSep match {
-          case Array(title, name) => UserLine(name, Some(title), text, troll = troll, deleted = deleted).some
-          case _                  => UserLine(username, None, text, troll = troll, deleted = deleted).some
+          case Array(title, name, id) => UserLine(id, name, Some(title), text, troll = troll, deleted = deleted).some
+          case Array(name, id) => UserLine(id, name, None, text, troll = troll, deleted = deleted).some
+          case _                  => UserLine(username, username, None, text, troll = troll, deleted = deleted).some
         }
       case _ => none
     }
@@ -76,7 +74,7 @@ object Line {
       else if (x.deleted) "?"
       else " "
     val tit = x.title.??(_ + titleSep)
-    s"$tit${x.username}$sep${x.text}"
+    s"$tit${x.username}${titleSep}${x.userId}$sep${x.text}"
   }
 
   def strToLine(str: String): Option[Line] =
