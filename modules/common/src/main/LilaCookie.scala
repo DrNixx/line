@@ -7,7 +7,11 @@ import play.api.mvc._
 
 final class LilaCookie(domain: NetDomain, baker: SessionCookieBaker) {
 
-  private val cookieDomain = domain.value.split(":").head
+  private val domainRegex = """\.[^.]++\.[^.]++$""".r
+
+  private val cleanDomain =  domain.value.split(":").head
+
+  private val cookieDomain = domainRegex.findFirstIn(cleanDomain).getOrElse(cleanDomain)
 
   def makeSessionId(implicit req: RequestHeader) = session(LilaCookie.sessionId, Random secureString 22)
 
