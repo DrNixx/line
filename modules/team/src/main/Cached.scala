@@ -18,7 +18,7 @@ final class Cached(
     compute = teamRepo.name,
     default = _ => none,
     strategy = Syncache.WaitAfterUptime(20 millis),
-    expireAfter = Syncache.ExpireAfterAccess(20 minutes)
+    expireAfter = Syncache.ExpireAfterAccess(5 minutes)
   )
 
   def blockingTeamName(id: Team.ID) = nameCache sync id
@@ -31,7 +31,7 @@ final class Cached(
     compute = u => memberRepo.teamIdsByUser(u).dmap(ids => Team.IdsStr(ids take 100)),
     default = _ => Team.IdsStr.empty,
     strategy = Syncache.WaitAfterUptime(20 millis),
-    expireAfter = Syncache.ExpireAfterWrite(1 hour)
+    expireAfter = Syncache.ExpireAfterWrite(5 minutes)
   )
 
   def syncTeamIds                  = teamIdsCache sync _
@@ -41,7 +41,7 @@ final class Cached(
   def invalidateTeamIds = teamIdsCache invalidate _
 
   val nbRequests = cacheApi[User.ID, Int](32768, "team.nbRequests") {
-    _.expireAfterAccess(25 minutes)
+    _.expireAfterAccess(5 minutes)
       .maximumSize(65536)
       .buildAsyncFuture[User.ID, Int] { userId =>
         teamIds(userId) flatMap { ids =>
