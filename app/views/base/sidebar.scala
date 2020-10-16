@@ -3,8 +3,8 @@ package views.html.base
 import lila.api.Context
 import lila.app.templating.Environment._
 import lila.app.ui.ScalatagsTemplate._
-
 import controllers.routes
+import lila.common.HTTPRequest
 
 object sidebar {
 
@@ -35,7 +35,7 @@ object sidebar {
   private def canSeeClasMenu(implicit ctx: Context) =
     ctx.hasClas || ctx.me.exists(u => u.hasTitle || u.roles.contains("ROLE_COACH"))
 
-
+  private def noIframe(implicit ctx: Context) = !HTTPRequest.isIframe(ctx.req)
 
   def apply()(implicit ctx: Context) =
     st.nav(cls := "page-sidebar", dataPages := "sidebar")(
@@ -141,7 +141,8 @@ object sidebar {
               ),
               icon("ш"),
               ul(cls := "sub-menu")(
-                menuItem("https://www.chess-online.com/library/index", trans.chessBooks(), "щ"),
+                menuItem("https://www.chess-online.com/library", trans.chessBooks(), "щ"),
+                menuItem("https://www.chess-online.com/encyclopedia", trans.worldTopPlayers(), "З"),
                 menuItem(routes.Video.index().toString(), trans.videoLibrary(), "л")
               )
             )
@@ -171,8 +172,8 @@ object sidebar {
               menuItem("https://www.chess-online.com/feedback", trans.feedback())
             )
           ),
-          ctx.noKid option menuItem("https://www.chess-online.com/forums", trans.forum(), "Л"),
-          ctx.noKid option menuItem("https://www.chess-online.com/membership/club", trans.membership(), "ы"),
+          (noIframe && ctx.noKid) option menuItem("https://www.chess-online.com/forums", trans.forum(), "Л"),
+          (noIframe && ctx.noKid) option menuItem("https://www.chess-online.com/membership/club", trans.membership(), "ы"),
         )
       )
     )

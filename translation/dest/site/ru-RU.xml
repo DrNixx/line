@@ -13,6 +13,7 @@
   <string name="mainProfileLink">Основной профиль Chess-Online.Com</string>
   <string name="playAsGuest">Играть как гость</string>
   <string name="playAsGuestDesc">Играть товарищескую партию без регистрации</string>
+  <string name="worldTopPlayers">Шахматная элита</string>
 
   <string name="playWithAFriend">Сыграть с другом</string>
   <string name="playWithTheMachine">Сыграть с компьютером</string>

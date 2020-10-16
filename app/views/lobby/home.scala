@@ -1,17 +1,18 @@
 package views.html.lobby
 
 import play.api.libs.json.Json
-
 import lila.api.Context
 import lila.app.mashup.Preload.Homepage
 import lila.app.templating.Environment._
 import lila.app.ui.ScalatagsTemplate._
 import lila.common.String.html.safeJsonValue
 import lila.game.Pov
-
 import controllers.routes
+import lila.common.HTTPRequest
 
 object home {
+
+  private def noIframe(implicit ctx: Context) = !HTTPRequest.isIframe(ctx.req)
 
   def apply(homepage: Homepage)(implicit ctx: Context) = {
     import homepage._
@@ -149,7 +150,7 @@ object home {
           )
         },
         ctx.noBot option bits.underboards(tours, simuls, leaderboard, tournamentWinners),
-        ctx.noKid option div(cls := "lobby__forum lobby__box")(
+        (noIframe && ctx.noKid) option div(cls := "lobby__forum lobby__box")(
           a(cls := "lobby__box__top", href := "https://www.chess-online.com/forums")(
             h2(cls := "title text", dataIcon := "d")(trans.latestForumPosts()),
             span(cls := "more")(trans.more(), " »")
@@ -158,8 +159,8 @@ object home {
             ol()
           )
         ),
-        bits.lastPosts(lastPost),
-        div(cls := "lobby__support")(
+        noIframe option bits.lastPosts(lastPost),
+        noIframe option div(cls := "lobby__support")(
           a(href := routes.Plan.index())(
             iconTag(patronIconChar),
             span(cls := "lobby__support__text")(
