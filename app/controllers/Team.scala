@@ -29,15 +29,22 @@ final class Team(
       }
     }
 
+
   def home(page: Int) =
     Open { implicit ctx =>
       ctx.me.??(api.hasTeams) map {
-        case true  => Redirect(routes.Team.mine())
-        case false => Redirect(routes.Team.all(page))
+        case true  => Redirect("https://www.chess-online.com/teams/list")
+        case false => Redirect("https://www.chess-online.com/teams/list")
       }
     }
 
   def show(id: String, page: Int) =
+    Open { implicit ctx =>
+      Redirect(s"https://www.chess-online.com/teams/detail/${id}").fuccess
+      // OptionFuOk(api team id) { renderTeam(_, page) }
+    }
+
+  def showOld(id: String, page: Int) =
     Open { implicit ctx =>
       OptionFuOk(api team id) { renderTeam(_, page) }
     }
