@@ -14,6 +14,7 @@
   <string name="playAsGuest">Play as guest</string>
   <string name="playAsGuestDesc">Play unrated game without registration</string>
   <string name="worldTopPlayers">Worldwide top players</string>
+  <string name="homeMenu">Home page</string>
 
   <string name="playWithAFriend">Play with a friend</string>
   <string name="playWithTheMachine">Play with the computer</string>

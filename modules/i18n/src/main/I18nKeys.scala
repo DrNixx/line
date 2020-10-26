@@ -18,6 +18,7 @@ val `mainProfileLink` = new I18nKey("mainProfileLink")
 val `playAsGuest` = new I18nKey("playAsGuest")
 val `playAsGuestDesc` = new I18nKey("playAsGuestDesc")
 val `worldTopPlayers` = new I18nKey("worldTopPlayers")
+val `homeMenu` = new I18nKey("homeMenu")
 
 val `playWithAFriend` = new I18nKey("playWithAFriend")
 val `playWithTheMachine` = new I18nKey("playWithTheMachine")

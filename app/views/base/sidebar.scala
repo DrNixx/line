@@ -58,6 +58,7 @@ object sidebar {
       ),
       st.div(cls := "sidebar-menu")(
         ul(cls := "menu-items")(
+          (noIframe) option menuItem("https://www.chess-online.com/", trans.homeMenu(), "Э"),
           li()(
             a(href := "#")(
               span(cls := "title")(trans.play()),

@@ -14,6 +14,7 @@
   <string name="playAsGuest">Играть как гость</string>
   <string name="playAsGuestDesc">Играть товарищескую партию без регистрации</string>
   <string name="worldTopPlayers">Шахматная элита</string>
+  <string name="homeMenu">Главная страница</string>
 
   <string name="playWithAFriend">Сыграть с другом</string>
   <string name="playWithTheMachine">Сыграть с компьютером</string>

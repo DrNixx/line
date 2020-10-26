@@ -38,6 +38,6 @@ z-index: 99;
       a(href := "https://www.facebook.com/ChessOnline", rel := "nofollow")("Facebook"),
       a(href := "https://vk.com/chessonlineru", rel := "nofollow")("VK"),
       a(href := "https://twitter.com/playschess", rel := "nofollow")("Twitter"),
-      a(href := "https://discord.gg/mpMQCuj", rel := "nofollow")("Discord")
+      a(href := "https://discord.com/invite/YCURk8P", rel := "nofollow")("Discord")
     )
 }
