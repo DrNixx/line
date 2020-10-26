@@ -83,12 +83,24 @@ export default class OnlineFriends {
     return this.users.get(id)!;
   };
 
-  getId = (titleName: TitleName) => titleName.toLowerCase().replace(/^\w+\s/, '');
+  getId = (titleName: TitleName) => {
+    const idn = titleName.split('/');
+    return (idn.length > 1) ? idn[0] : titleName.toLowerCase().replace(/^\w+\s/, '');
+  }
 
   toFriend = (titleName: TitleName): Friend => {
-    const split = titleName.split(' ');
+    const idn = titleName.split('/');
+    let id, split;
+    if (idn.length > 1) {
+      id = idn[0];
+      split = idn[1].split(' ');
+    } else {
+      split = titleName.split(' ');
+      id = split[split.length - 1].toLowerCase();
+    }
+
     return {
-      id: split[split.length - 1].toLowerCase(),
+      id: id,
       name: split[split.length - 1],
       title: (split.length > 1) ? split[0] : undefined,
       playing: false,
