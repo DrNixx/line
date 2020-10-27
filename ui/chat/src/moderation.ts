@@ -122,7 +122,7 @@ export function moderationView(ctrl?: ModerationCtrl): VNode[] | undefined {
       h('div.top', { key: 'mod-' + data.id }, [
         h('span.text', {
           attrs: {'data-icon': '' },
-        }, [userLink(data.id)]),
+        }, [userLink(data.id, data.username)]),
         h('a', {
           attrs: {'data-icon': 'L'},
           hook: bind('click', ctrl.close)

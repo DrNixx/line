@@ -42,6 +42,7 @@ export interface ChatData {
 }
 
 export interface Line {
+  i?: string // id
   u?: string // username
   t: string // text
   d: boolean // deleted

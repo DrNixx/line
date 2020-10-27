@@ -203,7 +203,7 @@ function renderLine(ctrl: Ctrl, line: Line): VNode {
     textNode
   ]);
 
-  const userNode = thunk('a', line.u, userLink, [line.u, line.title]);
+  const userNode = thunk('a', line.u, userLink, [line.i, line.u, line.title]);
 
   return h('li', ctrl.moderation() ? [
     line.u ? modLineAction() : null,
