@@ -180,7 +180,8 @@ object User {
   case class TotpToken(value: String) extends AnyVal
   case class PasswordAndToken(password: ClearPassword, token: Option[TotpToken])
 
-  case class Speaker(id: String , username: String, title: Option[Title], enabled: Boolean, marks: Option[UserMarks]) {
+  case class Speaker(_id: ID, username: String, title: Option[Title], enabled: Boolean, marks: Option[UserMarks]) {
+    def id      = _id
     def isBot   = title has Title.BOT
     def isTroll = marks.exists(_.troll)
   }
