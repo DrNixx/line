@@ -90,7 +90,8 @@ export default class OnlineFriends {
 
   toFriend = (titleName: TitleName): Friend => {
     const idn = titleName.split('/');
-    let id, split;
+    let id: string
+    let split: string[];
     if (idn.length > 1) {
       id = idn[0];
       split = idn[1].split(' ');

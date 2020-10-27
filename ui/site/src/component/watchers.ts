@@ -18,9 +18,23 @@ export default function watchers(element: HTMLElement) {
     if (!data || !data.nb) return element.classList.add('none');
     if (numberEl) numberEl.textContent = '' + data.nb;
     if (data.users && listEl) {
-      const tags = data.users.map(u =>
-        u ? `<a class="user-link ulpt" href="/@/${u.includes(' ') ? u.split(' ')[1] : u}">${u}</a>` : 'Anonymous'
-      );
+      const tags = data.users.map(u => {
+        if (u) {
+          const idn = u.split('/');
+          let id: string;
+          let name: string;
+          if (idn.length > 1) {
+            id = idn[0];
+            name = idn[1];
+          } else {
+            name = u;
+            id = name.toLowerCase();
+          }
+          return `<a class="user-link ulpt" href="/@/${id}">${name}</a>`
+        } else {
+          return 'Anonymous';
+        }
+      });
       if (data.anons === 1) tags.push('Anonymous');
       else if (data.anons) tags.push('Anonymous (' + data.anons + ')');
       listEl.innerHTML = tags.join(', ');
