@@ -21,7 +21,7 @@ case class UserLine(
     deleted: Boolean
 ) extends Line {
 
-  def author = username
+  def author = userId
 
   def delete = copy(deleted = true)
 
