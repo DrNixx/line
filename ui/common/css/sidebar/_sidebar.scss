@@ -54,7 +54,7 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
     .scroll-element {
         visibility: hidden;
     }
-    
+
     .sidebar-header {
         /* Side-bar header */
         display: block;
@@ -105,7 +105,7 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
                 -ms-text-size-adjust: 100%;
                 -webkit-font-feature-settings: "kern" 1;
                 -moz-font-feature-settings: "kern" 1;
-    
+
                 text-align: center;
                 vertical-align: middle;
                 cursor: pointer;
@@ -113,7 +113,7 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
                 text-shadow: none;
                 box-shadow: none;
                 line-height: 21px;
-                position: relative;        
+                position: relative;
                 text-decoration: none;
 
                 &:focus {
@@ -134,7 +134,7 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
                     i {
                         transition: all 0.12s ease;
                     }
-        
+
                     &:active {
                         i {
                             transform: rotate(-180deg);
@@ -215,7 +215,7 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
                         color: $color-menu-link-hover;
                     }
                 }
-            
+
                 & > a {
                     white-space: nowrap;
                     overflow: hidden;
@@ -223,7 +223,7 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
                     width: 70%;
                 }
             }
-          
+
             & > li {
                 display: block;
                 padding: 0;
@@ -234,7 +234,7 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
                     content: " ";
                     clear: both;
                 }
-    
+
                 & > a {
                     font-family: $interface-font-family, sans-serif;
                     display: inline-block;
@@ -270,11 +270,11 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
                             }
                         }
                     }
-              
+
                     & > .badge {
                         margin-top: 12px;
                     }
-              
+
                     & > .title {
                         float: left;
                         white-space: nowrap;
@@ -283,7 +283,7 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
                         width: 75%;
                     }
                 }
-            
+
                 &.active {
                     & > ul {
                         &.sub-menu {
@@ -307,7 +307,7 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
                                         padding-left: 10px;
                                         padding-right: 3px;
                                     }
-                            
+
                                     .icon-thumbnail {
                                         width: 25px;
                                         height: 25px;
@@ -317,7 +317,7 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
                                 }
                             }
                         }
-                
+
                         li {
                             & > a {
                                 & > .arrow {
@@ -334,7 +334,7 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
                                         text-shadow: none;
                                         transition: all 0.12s ease;
                                     }
-                                    
+
                                     &.open {
                                         &:before {
                                             float: right;
@@ -370,7 +370,7 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
                                     color: $color-menu-link-hover;
                                 }
                             }
-                  
+
                             & > a {
                                 display: inline-block;
                                 padding: 5px 0px;
@@ -378,7 +378,7 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
                                 font-family: $interface-font-family, sans-serif;
                                 white-space: normal;
                             }
-                  
+
                             .icon-thumbnail {
                                 width: 30px;
                                 height: 30px;
@@ -466,6 +466,10 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
                 left: $layout-sidepanel-pin-width !important;
             }
 
+            #announce {
+                left: $layout-sidepanel-pin-width !important;
+            }
+
             [data-toggle-pin="sidebar"] {
                 & > i:before {
                     content: attr(data-icon-alt);
@@ -476,9 +480,9 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
                 transform: translate($layout-sidepanel-width - $layout-sidepanel-width-collapsed, 0) !important;
                 -webkit-transform: translate($layout-sidepanel-width - $layout-sidepanel-width-collapsed, 0) !important;
                 -ms-transform: translate($layout-sidepanel-width - $layout-sidepanel-width-collapsed, 0) !important;
-          
+
                 width: $layout-sidepanel-pin-width;
-            
+
                 .menu-items .icon-thumbnail {
                     transform: translate3d(-14px, 0, 0);
                     -ms-transform: translate(-14px, 0);
@@ -496,7 +500,7 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
     #main-wrap {
         padding-left: $layout-sidepanel-width-collapsed;
     }
-    
+
 
     #reconnecting {
         left: $layout-sidepanel-width-collapsed !important;
@@ -537,7 +541,7 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
             padding: 0px 30px 0 36px;
         }
     }
-  
+
     .icon-thumbnail {
         margin-right: 24px;
     }
@@ -550,7 +554,7 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
         -webkit-perspective: 1000;
     }
 }
-  
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
     .page-sidebar .sidebar-menu .menu-items > li {
         & > a {
@@ -562,7 +566,7 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
         }
     }
 }
-  
+
 @media (max-width: 991px) {
     .sidebar-menu {
         .icon-thumbnail {
@@ -570,7 +574,7 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
         }
     }
 }
-  
+
 @media (max-width: 767px) {
     .page-sidebar {
         .sidebar-header {
@@ -581,14 +585,14 @@ $interface-font-family: "Inter UI", -apple-system, BlinkMacSystemFont,  "Segoe U
             & > a {
                 padding-left: 20px;
             }
-        
+
             ul.sub-menu > li {
                 padding: 0px 25px 0 28px;
             }
         }
     }
 }
-  
+
 @media (max-width: 480px) {
     .page-sidebar .sidebar-header {
         height: $site-header-height;

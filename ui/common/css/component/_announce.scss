@@ -7,7 +7,7 @@
   color: $c-primary-over;
   position: fixed;
   bottom: 0;
-  left: 0;
+  left: $layout-sidepanel-width-collapsed;
   padding: .7rem 1rem;
   z-index: z("tour-reminder");
   width: 100%;
