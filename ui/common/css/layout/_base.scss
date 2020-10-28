@@ -9,10 +9,10 @@ body {
   }
 
 
-  --site-header-margin: 1em;
+  --site-header-margin: 2em;
 
   &.header-margin {
-    --site-header-margin: 2em;
+    --site-header-margin: 3em;
   }
 
   --main-margin: 0;
@@ -35,13 +35,13 @@ body {
 
 #main-wrap {
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     ". . main . ."
     ". . footer . .";
   --main-max-width: #{$main-max-width};
   grid-template-columns: $main-margin 1fr minmax(auto, var(--main-max-width)) 1fr $main-margin;
   grid-template-rows: auto 90px;
-  
+
   &.full-screen {
     --main-max-width: auto;
   }
