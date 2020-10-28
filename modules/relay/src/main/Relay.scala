@@ -30,7 +30,7 @@ case class Relay(
   def studyId = Study.Id(id.value)
 
   def slug = {
-    val s = lila.common.String slugify name
+    val s = lila.common.Slugify apply name
     if (s.isEmpty) "-" else s
   }
 

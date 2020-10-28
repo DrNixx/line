@@ -54,7 +54,7 @@ case class PracticeStudy(
     chapters: List[Chapter.IdName]
 ) {
 
-  val slug = lila.common.String slugify name
+  val slug = lila.common.Slugify apply name
 
   def chapterIds = chapters.map(_.id)
 }

@@ -89,7 +89,7 @@ object Team {
     )
 
   def nameToId(name: String) =
-    (lila.common.String slugify name) pipe { slug =>
+    (lila.common.Slugify apply name) pipe { slug =>
       // if most chars are not latin, go for random slug
       if (slug.lengthIs > (name.lengthIs / 2)) slug else randomId()
     }

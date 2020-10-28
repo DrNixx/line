@@ -82,20 +82,20 @@ final class GameApiV2(
     }
   def filename(tour: Tournament, format: Format): String =
     fileR.replaceAllIn(
-      "lichess_tournament_%s_%s_%s.%s".format(
+      "chess_online_tournament_%s_%s_%s.%s".format(
         Tag.UTCDate.format.print(tour.startsAt),
         tour.id,
-        lila.common.String.slugify(tour.name),
+        lila.common.Slugify.apply(tour.name),
         format.toString.toLowerCase
       ),
       "_"
     )
   def filename(swiss: lila.swiss.Swiss, format: Format): String =
     fileR.replaceAllIn(
-      "lichess_swiss_%s_%s_%s.%s".format(
+      "chess_online_swiss_%s_%s_%s.%s".format(
         Tag.UTCDate.format.print(swiss.startsAt),
         swiss.id,
-        lila.common.String.slugify(swiss.name),
+        lila.common.Slugify.apply(swiss.name),
         format.toString.toLowerCase
       ),
       "_"
