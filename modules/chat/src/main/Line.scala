@@ -74,7 +74,7 @@ object Line {
       else if (x.deleted) "?"
       else " "
     val tit = x.title.??(_ + titleSep)
-    s"$tit${x.username}${titleSep}${x.userId}$sep${x.text}"
+    s"$tit${x.username}${titleSep}${x.userId}:$sep${x.text}"
   }
 
   def strToLine(str: String): Option[Line] =
