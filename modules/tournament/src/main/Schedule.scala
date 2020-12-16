@@ -265,7 +265,7 @@ object Schedule {
       case (Daily | Eastern, _, _)                 => 60
 
       case (Weekly, _, UltraBullet | HyperBullet | Bullet) => 60 // 60 * 2
-      case (Weekly, _, HippoBullet | SuperBlitz | Blitz)   => 150 // 60 * 3
+      case (Weekly, _, HippoBullet | SuperBlitz | Blitz)   => 90 // 60 * 3
       case (Weekly, _, Rapid)                              => 60 * 2 // 60 * 4
       case (Weekly, _, Classical)                          => 60 * 3 // 60 * 5
 
