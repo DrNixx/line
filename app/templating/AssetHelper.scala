@@ -79,13 +79,13 @@ trait AssetHelper { self: I18nHelper with SecurityHelper =>
     }
     ContentSecurityPolicy(
       defaultSrc = List("'self'", assets),
-      connectSrc = "'self'" :: assets :: sockets ::: env.explorerEndpoint :: env.tablebaseEndpoint :: "https://www.chess-online.com" :: "https://www.google-analytics.com" :: Nil,
+      connectSrc = "'self'" :: assets :: sockets ::: env.explorerEndpoint :: env.tablebaseEndpoint :: "https://www.chess-online.com" :: "https://www.google-analytics.com" :: "https://stats.g.doubleclick.net" :: Nil,
       styleSrc = List("'self'", "'unsafe-inline'", assets),
       fontSrc = List("'self'", assetDomain.value, "https://fonts.gstatic.com"),
       frameSrc = List("'self'", assets, "https://www.youtube.com", "https://player.twitch.tv"),
       workerSrc = List("'self'", assets),
       imgSrc = List("data:", "*"),
-      scriptSrc = List("'self'", "'unsafe-eval'", assets, "https://passport.chess-online.com", "https://www.googletagmanager.com", "https://www.google-analytics.com"),
+      scriptSrc = List("'self'", "'unsafe-eval'", assets, "https://passport.chess-online.com", "https://www.googletagmanager.com", "https://www.google-analytics.com", "https://stats.g.doubleclick.net"),
       baseUri = List("'none'")
     )
   }

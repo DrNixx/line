@@ -77,7 +77,7 @@ final private class TournamentScheduler(
 
     val farFuture = today plusMonths 7
 
-    val birthday = new DateTime(2010, 6, 20, 12, 0, 0)
+    val birthday = new DateTime(2006, 2, 2, 12, 0, 0)
 
     // all dates UTC
     List(
@@ -89,7 +89,7 @@ final private class TournamentScheduler(
               name = s"${date.getYear} Chess-Online Anniversary",
               minutes = 12 * 60,
               spotlight = Spotlight(
-                headline = s"$yo years of free chess!",
+                headline = s"$yo years of Chess-Online!",
                 description = s"""
 We've had $yo great chess years together!
 
@@ -205,28 +205,28 @@ Thank you all, you rock!"""
         ).flatten
       },
       List( // weekly standard tournaments!
-        nextMonday    -> Bullet,
-        nextTuesday   -> SuperBlitz,
-        nextWednesday -> Blitz,
+        nextTuesday   -> HyperBullet,
+        nextWednesday -> Bullet,
         nextThursday  -> Rapid,
         nextFriday    -> Classical,
-        nextSaturday  -> HyperBullet
+        nextSaturday  -> SuperBlitz,
+        nextSunday    -> Blitz
       ).flatMap { case (day, speed) =>
-        at(day, 17) map { date =>
+        at(day, 18) map { date =>
           Schedule(Weekly, speed, Standard, std, date pipe orNextWeek).plan
         }
       },
       List( // weekly variant tournaments!
         nextMonday    -> ThreeCheck,
-        nextTuesday   -> Crazyhouse,
+        nextTuesday   -> Chess960,
         nextWednesday -> KingOfTheHill,
-        nextThursday  -> RacingKings,
-        nextFriday    -> Antichess,
+        nextThursday  -> Antichess,
+        nextFriday    -> Crazyhouse,
         nextSaturday  -> Atomic,
         nextSunday    -> Horde,
-        nextSunday    -> Chess960
+        nextSunday    -> RacingKings
       ).flatMap { case (day, variant) =>
-        at(day, 19) map { date =>
+        at(day, 20) map { date =>
           Schedule(
             Weekly,
             if (variant == Chess960 || variant == Crazyhouse) Blitz else SuperBlitz,
@@ -237,8 +237,8 @@ Thank you all, you rock!"""
         }
       },
       List( // week-end elite tournaments!
-        nextSaturday -> SuperBlitz,
-        nextSunday   -> Bullet
+        nextSaturday -> Bullet,
+        nextSunday   -> SuperBlitz
       ).flatMap { case (day, speed) =>
         at(day, 17) map { date =>
           Schedule(Weekend, speed, Standard, std, date pipe orNextWeek).plan
