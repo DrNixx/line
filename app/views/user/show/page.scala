@@ -24,8 +24,8 @@ object page {
       title = s"${u.username} : ${trans.activity.activity.txt()}",
       openGraph = lila.app.ui
         .OpenGraph(
-          image = assetUrl("logo/lichess-tile-wide.png").some,
-          twitterImage = assetUrl("logo/lichess-tile.png").some,
+          image = assetUrl("logo/chess-tile-wide.png").some,
+          twitterImage = assetUrl("logo/chess-tile.png").some,
           title = u.titleUsernameWithBestRating,
           url = s"$netBaseUrl${routes.User.show(u.username).url}",
           description = describeUser(u)
