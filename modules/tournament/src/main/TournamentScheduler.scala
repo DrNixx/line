@@ -102,16 +102,16 @@ Thank you all, you rock!"""
       List( // yearly tournaments!
         secondWeekOf(JANUARY).withDayOfWeek(MONDAY)      -> Bullet,
         secondWeekOf(FEBRUARY).withDayOfWeek(TUESDAY)    -> SuperBlitz,
-        secondWeekOf(MARCH).withDayOfWeek(WEDNESDAY)     -> Blitz,
-        secondWeekOf(APRIL).withDayOfWeek(THURSDAY)      -> Rapid,
-        secondWeekOf(MAY).withDayOfWeek(FRIDAY)          -> Classical,
-        secondWeekOf(JUNE).withDayOfWeek(SATURDAY)       -> HyperBullet,
+        secondWeekOf(MARCH).withDayOfWeek(WEDNESDAY)     -> Rapid,
+        secondWeekOf(APRIL).withDayOfWeek(THURSDAY)      -> Blitz,
+        secondWeekOf(MAY).withDayOfWeek(FRIDAY)          -> HyperBullet,
+        secondWeekOf(JUNE).withDayOfWeek(SATURDAY)       -> Classical,
         secondWeekOf(JULY).withDayOfWeek(MONDAY)         -> Bullet,
         secondWeekOf(AUGUST).withDayOfWeek(TUESDAY)      -> SuperBlitz,
-        secondWeekOf(SEPTEMBER).withDayOfWeek(WEDNESDAY) -> Blitz,
-        secondWeekOf(OCTOBER).withDayOfWeek(THURSDAY)    -> Rapid,
-        secondWeekOf(NOVEMBER).withDayOfWeek(FRIDAY)     -> Classical,
-        secondWeekOf(DECEMBER).withDayOfWeek(SATURDAY)   -> HyperBullet
+        secondWeekOf(SEPTEMBER).withDayOfWeek(WEDNESDAY) -> Rapid,
+        secondWeekOf(OCTOBER).withDayOfWeek(THURSDAY)    -> Blitz,
+        secondWeekOf(NOVEMBER).withDayOfWeek(FRIDAY)     -> HyperBullet,
+        secondWeekOf(DECEMBER).withDayOfWeek(SATURDAY)   -> Classical
       ).flatMap { case (day, speed) =>
         at(day, 17) filter farFuture.isAfter map { date =>
           Schedule(Yearly, speed, Standard, std, date).plan
@@ -137,8 +137,8 @@ Thank you all, you rock!"""
             month.lastWeek.withDayOfWeek(MONDAY)    -> Bullet,
             month.lastWeek.withDayOfWeek(TUESDAY)   -> SuperBlitz,
             month.lastWeek.withDayOfWeek(WEDNESDAY) -> Blitz,
-            month.lastWeek.withDayOfWeek(THURSDAY)  -> Rapid,
-            month.lastWeek.withDayOfWeek(FRIDAY)    -> Classical,
+            month.lastWeek.withDayOfWeek(THURSDAY)  -> Classical,
+            month.lastWeek.withDayOfWeek(FRIDAY)    -> Rapid,
             month.lastWeek.withDayOfWeek(SATURDAY)  -> HyperBullet,
             month.lastWeek.withDayOfWeek(SUNDAY)    -> UltraBullet
           ).flatMap { case (day, speed) =>
@@ -149,11 +149,11 @@ Thank you all, you rock!"""
           List( // monthly variant tournaments!
             month.lastWeek.withDayOfWeek(MONDAY)    -> Chess960,
             month.lastWeek.withDayOfWeek(TUESDAY)   -> Crazyhouse,
-            month.lastWeek.withDayOfWeek(WEDNESDAY) -> KingOfTheHill,
+            month.lastWeek.withDayOfWeek(WEDNESDAY) -> Horde,
             month.lastWeek.withDayOfWeek(THURSDAY)  -> RacingKings,
             month.lastWeek.withDayOfWeek(FRIDAY)    -> Antichess,
-            month.lastWeek.withDayOfWeek(SATURDAY)  -> Atomic,
-            month.lastWeek.withDayOfWeek(SUNDAY)    -> Horde
+            month.lastWeek.withDayOfWeek(SATURDAY)  -> KingOfTheHill,
+            month.lastWeek.withDayOfWeek(SUNDAY)    -> Atomic
           ).flatMap { case (day, variant) =>
             at(day, 19) map { date =>
               Schedule(
@@ -169,8 +169,8 @@ Thank you all, you rock!"""
             month.firstWeek.withDayOfWeek(MONDAY)    -> Bullet,
             month.firstWeek.withDayOfWeek(TUESDAY)   -> SuperBlitz,
             month.firstWeek.withDayOfWeek(WEDNESDAY) -> Blitz,
-            month.firstWeek.withDayOfWeek(THURSDAY)  -> Rapid,
-            month.firstWeek.withDayOfWeek(FRIDAY)    -> Classical,
+            month.firstWeek.withDayOfWeek(THURSDAY)  -> Classical,
+            month.firstWeek.withDayOfWeek(FRIDAY)    -> Rapid,
             month.firstWeek.withDayOfWeek(SATURDAY)  -> HyperBullet,
             month.firstWeek.withDayOfWeek(SUNDAY)    -> UltraBullet
           ).flatMap { case (day, speed) =>
@@ -184,13 +184,13 @@ Thank you all, you rock!"""
             }
           },
           List( // shield variant tournaments!
-            month.secondWeek.withDayOfWeek(SUNDAY)   -> Chess960,
+            month.secondWeek.withDayOfWeek(MONDAY)  -> Antichess,
+            month.secondWeek.withDayOfWeek(WEDNESDAY)   -> Chess960,
             month.thirdWeek.withDayOfWeek(MONDAY)    -> Crazyhouse,
             month.thirdWeek.withDayOfWeek(TUESDAY)   -> KingOfTheHill,
             month.thirdWeek.withDayOfWeek(WEDNESDAY) -> RacingKings,
-            month.thirdWeek.withDayOfWeek(THURSDAY)  -> Antichess,
+            month.thirdWeek.withDayOfWeek(THURSDAY)  -> Horde,
             month.thirdWeek.withDayOfWeek(FRIDAY)    -> Atomic,
-            month.thirdWeek.withDayOfWeek(SATURDAY)  -> Horde,
             month.thirdWeek.withDayOfWeek(SUNDAY)    -> ThreeCheck
           ).flatMap { case (day, variant) =>
             at(day, 16) map { date =>
