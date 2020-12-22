@@ -83,7 +83,7 @@ final private class TournamentScheduler(
     List(
       List( // legendary tournaments!
         at(birthday.withYear(today.getYear), 12) map orNextYear map { date =>
-          val yo = date.getYear - 2010
+          val yo = date.getYear - 2006
           Schedule(Unique, Rapid, Standard, std, date) plan {
             _.copy(
               name = s"${date.getYear} Chess-Online Anniversary",
