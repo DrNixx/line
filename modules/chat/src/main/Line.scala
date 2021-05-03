@@ -55,7 +55,7 @@ object Line {
     lineToStr
   )
 
-  private val UserLineRegex = """(?sU)([\w _-~]{2,}+):([ !?])(.++)""".r
+  private val UserLineRegex = """(?sU)([\w _\-~]{2,}+):([ !?])(.++)""".r
   private def strToUserLine(str: String): Option[UserLine] =
     str match {
       case UserLineRegex(username, sep, text) =>
