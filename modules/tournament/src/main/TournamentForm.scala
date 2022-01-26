@@ -97,7 +97,6 @@ final class TournamentForm {
         "description"      -> optional(clean(nonEmptyText)),
         "hasChat"          -> optional(boolean)
       )(TournamentSetup.apply)(TournamentSetup.unapply)
-        .verifying("Invalid clock", _.validClock)
         .verifying("15s variant games cannot be rated", _.validRatedUltraBulletVariant)
         .verifying("Increase tournament duration, or decrease game clock", _.sufficientDuration)
         .verifying("Reduce tournament duration, or increase game clock", _.excessiveDuration)
