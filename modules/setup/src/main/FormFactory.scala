@@ -51,7 +51,6 @@ final class FormFactory {
         "color"     -> color,
         "fen"       -> fenField
       )(FriendConfig.from)(_.>>)
-        .verifying("Invalid clock", _.validClock)
         .verifying("Invalid speed", _.validSpeed(ctx.me.exists(_.isBot)))
         .verifying("invalidFen", _.validFen)
     )
@@ -71,7 +70,6 @@ final class FormFactory {
         "ratingRange" -> optional(ratingRange),
         "color"       -> color
       )(HookConfig.from)(_.>>)
-        .verifying("Invalid clock", _.validClock)
         .verifying("Can't create rated unlimited in lobby", _.noRatedUnlimited)
     )
 
