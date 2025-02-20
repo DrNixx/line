@@ -260,8 +260,9 @@ final class UserRepo(c: Coll)(using Executor) extends lila.core.user.UserRepo(c)
       lang: Option[String] = None
   ): Fu[Option[User]] =
     exists(id).not.flatMapz {
-      val doc = newUser2(id, username, passwordHash, email, blind, mobileApiVersion, mustConfirmEmail, lang) ++
-        ("len" -> BSONInteger(username.length))
+      val doc =
+        newUser2(id, username, passwordHash, email, blind, mobileApiVersion, mustConfirmEmail, lang) ++
+          ("len" -> BSONInteger(username.length))
       coll.insert.one(doc) >> byId(id)
     }
 
@@ -613,23 +614,23 @@ final class UserRepo(c: Coll)(using Executor) extends lila.core.user.UserRepo(c)
       mobileApiVersion: Option[ApiVersion],
       mustConfirmEmail: Boolean,
       lang: Option[String]
-    ) =
+  ) =
     val normalizedEmail = email.normalize
     val now             = nowInstant
 
     $doc(
-      F.id -> id,
-      F.username -> username,
-      F.email -> normalizedEmail,
-      F.mustConfirmEmail -> mustConfirmEmail.option(now),
-      F.bpass -> passwordHash,
-      F.count -> defaultCount,
-      F.enabled -> true,
-      F.createdAt -> now,
+      F.id                    -> id,
+      F.username              -> username,
+      F.email                 -> normalizedEmail,
+      F.mustConfirmEmail      -> mustConfirmEmail.option(now),
+      F.bpass                 -> passwordHash,
+      F.count                 -> defaultCount,
+      F.enabled               -> true,
+      F.createdAt             -> now,
       F.createdWithApiVersion -> mobileApiVersion.map(_.value),
-      F.seenAt -> now,
-      F.playTime -> PlayTime(0, 0),
-      F.lang -> lang
+      F.seenAt                -> now,
+      F.playTime              -> PlayTime(0, 0),
+      F.lang                  -> lang
     ) ++ {
       (email.value != normalizedEmail.value).so($doc(F.verbatimEmail -> email))
     } ++ {
