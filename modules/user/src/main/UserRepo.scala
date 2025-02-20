@@ -161,6 +161,9 @@ final class UserRepo(c: Coll)(using Executor) extends lila.core.user.UserRepo(c)
   def setRealName(id: UserId, name: String): Funit =
     coll.updateField($id(id), s"${F.profile}.realName", name).void
 
+  def setUsername(id: UserId, username: String): Funit =
+    coll.updateField($id(id), "username", username).void
+
   def setUsernameCased(id: UserId, name: UserName): Funit =
     if id.is(name) then
       coll.update
@@ -244,6 +247,22 @@ final class UserRepo(c: Coll)(using Executor) extends lila.core.user.UserRepo(c)
       val doc = newUser(name, passwordHash, email, blind, mobileApiVersion, mustConfirmEmail, lang) ++
         ("len" -> BSONInteger(name.value.length))
       coll.insert.one(doc) >> byId(name.id)
+    }
+
+  def create2(
+      id: UserId,
+      username: String,
+      passwordHash: HashedPassword,
+      email: EmailAddress,
+      blind: Boolean,
+      mobileApiVersion: Option[ApiVersion],
+      mustConfirmEmail: Boolean,
+      lang: Option[String] = None
+  ): Fu[Option[User]] =
+    exists(id).not.flatMapz {
+      val doc = newUser2(id, username, passwordHash, email, blind, mobileApiVersion, mustConfirmEmail, lang) ++
+        ("len" -> BSONInteger(username.length))
+      coll.insert.one(doc) >> byId(id)
     }
 
   def exists[U: UserIdOf](u: U): Fu[Boolean] = coll.exists($id(u.id))
@@ -579,6 +598,38 @@ final class UserRepo(c: Coll)(using Executor) extends lila.core.user.UserRepo(c)
       F.seenAt                -> now,
       F.playTime              -> PlayTime(0, 0),
       F.lang                  -> lang
+    ) ++ {
+      (email.value != normalizedEmail.value).so($doc(F.verbatimEmail -> email))
+    } ++ {
+      blind.so($doc(F.blind -> true))
+    }
+
+  private def newUser2(
+      id: UserId,
+      username: String,
+      passwordHash: HashedPassword,
+      email: EmailAddress,
+      blind: Boolean,
+      mobileApiVersion: Option[ApiVersion],
+      mustConfirmEmail: Boolean,
+      lang: Option[String]
+    ) =
+    val normalizedEmail = email.normalize
+    val now             = nowInstant
+
+    $doc(
+      F.id -> id,
+      F.username -> username,
+      F.email -> normalizedEmail,
+      F.mustConfirmEmail -> mustConfirmEmail.option(now),
+      F.bpass -> passwordHash,
+      F.count -> defaultCount,
+      F.enabled -> true,
+      F.createdAt -> now,
+      F.createdWithApiVersion -> mobileApiVersion.map(_.value),
+      F.seenAt -> now,
+      F.playTime -> PlayTime(0, 0),
+      F.lang -> lang
     ) ++ {
       (email.value != normalizedEmail.value).so($doc(F.verbatimEmail -> email))
     } ++ {

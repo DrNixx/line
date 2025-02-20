@@ -3,9 +3,9 @@ package lila.oidc
 import com.softwaremill.macwire.*
 import play.api.Configuration
 
-import io.methvin.play.autoconfig.{ *, given }
+import lila.common.autoconfig.{ *, given }
+import lila.common.config.{*, given}
 import lila.core.config.*
-import lila.user.{Authenticator, UserRepo}
 
 @Module
 private case class OidcConfig(
@@ -19,7 +19,9 @@ private case class OidcConfig(
 @Module
 final class Env(
     appConfig: Configuration,
-    net: NetConfig
+    net: NetConfig,
+    userRepo: lila.user.UserRepo,
+    authenticator: lila.core.security.Authenticator
 )(using Executor, akka.stream.Materializer) {
   import net.baseUrl
 
