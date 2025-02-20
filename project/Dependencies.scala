@@ -85,6 +85,12 @@ object Dependencies {
     def bundle = Seq(driver, stream)
   }
 
+  object nimbusds {
+    val jwt = "com.nimbusds" % "nimbus-jose-jwt" % "10.0.1"
+    val oidc = "com.nimbusds" % "oauth2-oidc-sdk" % "11.23"
+    def bundle = Seq(jwt, oidc)
+  }
+
   object play {
     val playVersion = "2.8.18-lila_3.20"
     val json        = "org.playframework" %% "play-json"         % "3.0.4"

@@ -1,0 +1,37 @@
+package lila.oidc
+
+import com.softwaremill.macwire.*
+import play.api.Configuration
+
+import io.methvin.play.autoconfig.{ *, given }
+import lila.core.config.*
+import lila.user.{Authenticator, UserRepo}
+
+@Module
+private case class OidcConfig(
+    @ConfigName("issuer.base_url") val issuer: String,
+    @ConfigName("issuer.client_id") val clientId: String,
+    @ConfigName("issuer.client_secret") val clientSecret: Secret,
+    @ConfigName("issuer.scopes") val scopes: String,
+    @ConfigName("issuer.jws_alg") val jwsAlgorithm: String,
+)
+
+@Module
+final class Env(
+    appConfig: Configuration,
+    net: NetConfig
+)(using Executor, akka.stream.Materializer) {
+  import net.baseUrl
+
+  private val config = appConfig.get[OidcConfig]("oidc")(AutoConfig.loader)
+
+  private lazy val oidc = OIDCFactory.apply(
+    config.issuer,
+    config.clientId,
+    config.clientSecret.value,
+    s"$baseUrl/signin-oidc",
+    Some(config.jwsAlgorithm)
+  )
+
+  lazy val api = wire[OidcApi]
+}

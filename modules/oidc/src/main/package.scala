@@ -1,6 +1,6 @@
-package lila.oauth
+package lila.oidc
 
 export lila.core.lilaism.Lilaism.{ *, given }
 export lila.common.extensions.*
 
-private val logger = lila.log("oauth")
+private val logger = lila.log("oidc")

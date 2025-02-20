@@ -63,7 +63,7 @@ lazy val modules = Seq(
   memo, rating,
   // level 5
   game, gathering, study, user, puzzle, analyse,
-  report, pref, chat, playban, lobby, mailer, oauth,
+  report, pref, chat, playban, lobby, mailer, oauth, oidc,
   // level 6
   insight, evaluation, storm,
   // level 7
@@ -330,8 +330,13 @@ lazy val oauth = module("oauth",
   Seq()
 )
 
+lazy val oidc = module("oidc",
+  Seq(common, db, user),
+  Seq() ++ nimbusds.bundle
+)
+
 lazy val security = module("security",
-  Seq(oauth, user, mailer),
+  Seq(oauth, oidc, user, mailer),
   Seq(maxmind, hasher, uaparser) ++ tests.bundle
 )
 
