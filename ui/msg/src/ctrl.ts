@@ -50,7 +50,7 @@ export default class MsgCtrl {
       this.search.result = undefined;
       this.loading = false;
       if (data.convo) {
-        history.replaceState({ contact: userId }, '', `/inbox/${data.convo.user.name}`);
+        history.replaceState({ contact: userId }, '', `/inbox/${data.convo.user.id}`);
         this.onLoadConvo(data.convo);
         this.redraw();
       } else this.showSide();

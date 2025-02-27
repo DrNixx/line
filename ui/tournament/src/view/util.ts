@@ -17,7 +17,7 @@ export const player = (
   h(
     'a.ulpt.user-link' + (((p.title || '') + p.name).length > 15 ? '.long' : ''),
     {
-      attrs: asLink || 'ontouchstart' in window ? { href: '/@/' + p.name } : { 'data-href': '/@/' + p.name },
+      attrs: asLink || 'ontouchstart' in window ? { href: '/@/' + p.id } : { 'data-href': '/@/' + p.id },
       hook: { destroy: vnode => $.powerTip.destroy(vnode.elm as HTMLElement) },
     },
     [

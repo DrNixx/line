@@ -349,7 +349,7 @@ final class ActivityUi(helpers: Helpers)(
     ctx.kid.no.option(
       entryTag(
         iconTag(Icon.Mic),
-        a(href := routes.Streamer.redirect(u.username))(trans.activity.hostedALiveStream())
+        a(href := routes.Streamer.redirect(u.id))(trans.activity.hostedALiveStream())
       )
     )
 

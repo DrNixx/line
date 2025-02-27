@@ -80,7 +80,7 @@ final class TopNav(helpers: Helpers):
         linkTitle(routes.User.list.url, trans.site.community()),
         div(role := "group")(
           a(href := routes.User.list)(trans.site.players()),
-          ctx.me.map(me => a(href := routes.Relation.following(me.username))(trans.site.friends())),
+          ctx.me.map(me => a(href := routes.Relation.following(me.userId))(trans.site.friends())),
           a(href := routes.Team.home())(trans.team.teams()),
           ctx.kid.no.option(a(href := routes.ForumCateg.index)(trans.site.forum())),
           ctx.kid.no.option(a(href := langHref(routes.Ublog.communityAll()))(trans.site.blog())),

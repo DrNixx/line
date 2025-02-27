@@ -36,7 +36,7 @@ final class PerfStatUi(helpers: Helpers)(communityMenu: Context ?=> Frag):
               div(cls := "box__top__title")(
                 perfTrophies,
                 h1(
-                  a(href := routes.User.show(user.username))(user.username),
+                  a(href := routes.User.show(user.id))(user.username),
                   span(tps.perfStats(perfType.trans))
                 )
               ),
@@ -44,7 +44,7 @@ final class PerfStatUi(helpers: Helpers)(communityMenu: Context ?=> Frag):
                 a(
                   cls      := "button button-empty text",
                   dataIcon := perfType.icon,
-                  href     := s"${routes.User.games(user.username, "search")}?perf=${perfType.id}"
+                  href     := s"${routes.User.games(user.id, "search")}?perf=${perfType.id}"
                 )(tps.viewTheGames())
               )
             ),
@@ -61,8 +61,8 @@ final class PerfStatUi(helpers: Helpers)(communityMenu: Context ?=> Frag):
       )
     else
       trans.site.userIsBetterThanPercentOfPerfTypePlayers(
-        a(href := routes.User.show(u.username))(u.username),
-        a(href := routes.User.ratingDistribution(pk, u.username.some))(
+        a(href := routes.User.show(u.id))(u.username),
+        a(href := routes.User.ratingDistribution(pk, u.id.some))(
           strong(percentile, "%")
         ),
         a(href := routes.User.topNb(200, pk))(pk.perfName.txt())
@@ -400,7 +400,7 @@ final class PerfStatUi(helpers: Helpers)(communityMenu: Context ?=> Frag):
                         a(
                           dataIcon := pt.icon,
                           cls      := (perfType == pt).option("current"),
-                          href     := routes.User.ratingDistribution(pt.key, otherUser.map(_.username))
+                          href     := routes.User.ratingDistribution(pt.key, otherUser.map(_.id))
                         )(pt.trans)
                   )
                 )

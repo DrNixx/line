@@ -36,7 +36,7 @@ final class CoachEditUi(helpers: Helpers, ui: CoachUi):
             span(
               h1(ui.titleName(c)),
               a(
-                href     := routes.Coach.show(c.user.username),
+                href     := routes.Coach.show(c.user.id),
                 cls      := "button button-empty text",
                 dataIcon := Icon.Eye
               )("Preview coach page")

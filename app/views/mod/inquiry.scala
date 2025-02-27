@@ -32,9 +32,9 @@ object inquiry:
       ),
       div(cls := "links")(
         isGranted(_.MarkBooster).option {
-          val searchUrl = routes.User.games(in.user.username, "search")
+          val searchUrl = routes.User.games(in.user.id, "search")
           div(cls := "dropper view-games")(
-            a(href := routes.GameMod.index(in.user.username))("View", br, "Games"),
+            a(href := routes.GameMod.index(in.user.id))("View", br, "Games"),
             div(cls := "view-games-dropdown")(
               a(
                 cls := "fbt",
@@ -68,14 +68,14 @@ object inquiry:
             iconTag(Icon.Envelope),
             div:
               env.mod.presets.getPmPresetsOpt.value.map: preset =>
-                postForm(action := routes.Mod.warn(in.user.username, preset.name))(
+                postForm(action := routes.Mod.warn(in.user.id, preset.name))(
                   submitButton(cls := "fbt", title := preset.text)(preset.name),
                   ui.autoNextInput
                 )
           )
         ),
         isGranted(_.MarkEngine).option {
-          val url = routes.Mod.engine(in.user.username, !in.user.marks.engine).url
+          val url = routes.Mod.engine(in.user.id, !in.user.marks.engine).url
           div(cls := "dropper engine buttons")(
             postForm(action := url, cls := "main", title := "Mark as cheat")(
               ui.markButton(in.user.marks.engine)(dataIcon := Icon.Cogs),
@@ -85,7 +85,7 @@ object inquiry:
           )
         },
         isGranted(_.MarkBooster).option {
-          val url = routes.Mod.booster(in.user.username, !in.user.marks.boost).url
+          val url = routes.Mod.booster(in.user.id, !in.user.marks.boost).url
           div(cls := "dropper booster buttons")(
             postForm(action := url, cls := "main", title := "Mark as booster or sandbagger")(
               ui.markButton(in.user.marks.boost)(dataIcon := Icon.LineGraph),
@@ -95,7 +95,7 @@ object inquiry:
           )
         },
         isGranted(_.Shadowban).option {
-          val url = routes.Mod.troll(in.user.username, !in.user.marks.troll).url
+          val url = routes.Mod.troll(in.user.id, !in.user.marks.troll).url
           div(cls := "dropper shadowban buttons")(
             postForm(
               action := url,
@@ -109,7 +109,7 @@ object inquiry:
           )
         },
         isGranted(_.CloseAccount).option {
-          val url = routes.Mod.alt(in.user.username, !in.user.marks.alt).url
+          val url = routes.Mod.alt(in.user.id, !in.user.marks.alt).url
           div(cls := "dropper alt buttons")(
             postForm(action := url, cls := "main", title := "Close alt account")(
               ui.markButton(in.user.marks.alt)(i("A")),
@@ -130,12 +130,12 @@ object inquiry:
               )
             },
             isGranted(_.SendToZulip).option {
-              postForm(action := routes.Mod.askUsertableCheck(in.user.username))(
+              postForm(action := routes.Mod.askUsertableCheck(in.user.id))(
                 submitButton(cls := "fbt")("Ask for usertable check")
               )
             },
             isGranted(_.SendToZulip).option {
-              postForm(action := routes.Mod.createNameCloseVote(in.user.username))(
+              postForm(action := routes.Mod.createNameCloseVote(in.user.id))(
                 submitButton(cls := "fbt")("Create name-close vote")
               )
             },

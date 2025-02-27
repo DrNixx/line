@@ -32,7 +32,7 @@ export interface Race {
 
 export interface Player {
   name: string;
-  id?: string;
+  id: string;
   title?: string;
   flair?: Flair;
 }

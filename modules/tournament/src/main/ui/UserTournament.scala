@@ -46,7 +46,7 @@ final class UserTournament(helpers: Helpers, ui: TournamentUi):
                     td(cls := "text", dataIcon := Icon.User)(t.nbPlayers.localize)
                   )
                 },
-                pagerNextTable(pager, np => routes.UserTournament.path(u.username, "created", np).url)
+                pagerNextTable(pager, np => routes.UserTournament.path(u.id, "created", np).url)
               )
             )
           )
@@ -157,7 +157,7 @@ final class UserTournament(helpers: Helpers, ui: TournamentUi):
                 td(cls := "rank")(strong(e.entry.rank), " / ", e.tour.nbPlayers)
               )
             },
-            pagerNextTable(pager, np => routes.UserTournament.path(u.username, path, np).url)
+            pagerNextTable(pager, np => routes.UserTournament.path(u.id, path, np).url)
           )
         )
       )
@@ -168,23 +168,23 @@ final class UserTournament(helpers: Helpers, ui: TournamentUi):
       .wrap: body =>
         main(cls := "page-menu")(
           lila.ui.bits.pageMenuSubnav(
-            a(cls := path.active("created"), href := routes.UserTournament.path(u.username, "created"))(
+            a(cls := path.active("created"), href := routes.UserTournament.path(u.id, "created"))(
               trans.arena.created()
             ),
             ctx
               .is(u)
               .option(
-                a(cls := path.active("upcoming"), href := routes.UserTournament.path(u.username, "upcoming"))(
+                a(cls := path.active("upcoming"), href := routes.UserTournament.path(u.id, "upcoming"))(
                   trans.broadcast.upcoming()
                 )
               ),
-            a(cls := path.active("recent"), href := routes.UserTournament.path(u.username, "recent"))(
+            a(cls := path.active("recent"), href := routes.UserTournament.path(u.id, "recent"))(
               trans.arena.recentlyPlayed()
             ),
-            a(cls := path.active("best"), href := routes.UserTournament.path(u.username, "best"))(
+            a(cls := path.active("best"), href := routes.UserTournament.path(u.id, "best"))(
               trans.arena.bestResults()
             ),
-            a(cls := path.active("chart"), href := routes.UserTournament.path(u.username, "chart"))(
+            a(cls := path.active("chart"), href := routes.UserTournament.path(u.id, "chart"))(
               trans.site.stats()
             )
           ),

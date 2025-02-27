@@ -226,15 +226,15 @@ final class Swiss(
       JsonOk:
         env.swiss.standingApi(swiss, page)
 
-  def pageOf(id: SwissId, userId: UserStr) = Anon:
+  def pageOf(id: SwissId, userId: UserId) = Anon:
     WithSwiss(id): swiss =>
-      Found(env.swiss.api.pageOf(swiss, userId.id)): page =>
+      Found(env.swiss.api.pageOf(swiss, userId)): page =>
         JsonOk:
           env.swiss.standingApi(swiss, page)
 
-  def player(id: SwissId, userId: UserStr) = Anon:
+  def player(id: SwissId, userId: UserId) = Anon:
     WithSwiss(id): swiss =>
-      Found(env.swiss.api.playerInfo(swiss, userId.id)): player =>
+      Found(env.swiss.api.playerInfo(swiss, userId)): player =>
         JsonOk(lila.swiss.SwissJson.playerJsonExt(swiss, player))
 
   def exportTrf(id: SwissId) = Anon:

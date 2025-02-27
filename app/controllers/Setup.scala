@@ -33,7 +33,7 @@ final class Setup(
             }
         )
 
-  def friend(userId: Option[UserStr]) =
+  def friend(userId: Option[UserId]) =
     OpenBody: ctx ?=>
       limit.setupPost(ctx.ip, rateLimited):
         bindForm(forms.friend)(

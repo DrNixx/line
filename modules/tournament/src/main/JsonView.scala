@@ -356,6 +356,7 @@ final class JsonView(
       .map: u =>
         Json
           .obj(
+            "i" -> u.id,
             "n" -> u.name,
             "r" -> p.rating.value,
             "k" -> p.rank.value
@@ -486,6 +487,7 @@ object JsonView:
         val light = getLightUser(p.userId)
         Json
           .obj(
+            "i" -> p.userId,
             "n" -> light.fold(p.userId.into(UserName))(_.name),
             "s" -> p.score
           )

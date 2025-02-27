@@ -144,7 +144,7 @@ object mod:
               userNotes.nonEmpty
                 .option {
                   td(dataSort := userNotes.size)(
-                    a(href := s"${routes.User.show(o.username)}?notes")(
+                    a(href := s"${routes.User.show(o.id)}?notes")(
                       notesText(
                         title := s"Notes from ${userNotes.map(_.from).map(titleNameOrId).mkString(", ")}",
                         cls   := "is-green"

@@ -114,7 +114,7 @@ final class StormUi(helpers: Helpers):
                   np =>
                     addQueryParam(
                       if ctx.is(user) then routes.Storm.dashboard().url
-                      else routes.Storm.dashboardOf(user.username).url,
+                      else routes.Storm.dashboardOf(user.id).url,
                       "page",
                       np.toString
                     )

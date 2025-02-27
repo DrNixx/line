@@ -72,8 +72,8 @@ final class Auth(
       then Ok(s"ok:${routes.Auth.checkYourEmail}")
       else BadRequest.async(accountC.renderCheckYourEmail)
 
-  def login     = Open(serveLogin)
-  def loginLang = LangPage(routes.Auth.login)(serveLogin)
+  def login     = Open(oidcLogin)
+  def loginLang = LangPage(routes.Auth.login)(oidcLogin)
 
   private def serveLogin(using ctx: Context) = NoBot:
     val referrer = get("referrer").flatMap(env.web.referrerRedirect.valid)
@@ -85,6 +85,33 @@ final class Auth(
         val form            = api.loginFormFilled(prefillUsername)
         Ok.page(views.auth.login(form, referrer)).map(_.withCanonical(routes.Auth.login))
 
+  private def oidcLogin(using ctx: Context) = NoBot:
+    val referrer = get("referrer").flatMap(env.web.referrerRedirect.valid)
+    val switch   = get("switch").orElse(get("as"))
+    referrer.ifTrue(ctx.isAuth).ifTrue(switch.isEmpty) match
+      case Some(url) => Redirect(url) // redirect immediately if already logged in
+      case None =>
+        env.oidc.api.getAuthenticationRequest() flatMap { request =>
+          fuccess(
+            Redirect(request.toURI.toString).flashing(
+              "referrer" -> referrer.getOrElse("/"),
+              "oidcState" -> request.getState.getValue,
+              "oidcNonce" -> request.getNonce.getValue
+            )
+          )
+        }
+
+  def signinOidc = Open(oidcCallback)
+
+  private def oidcCallback(using ctx: Context) = NoBot:
+    env.oidc.api.authenticate(ctx.req) flatMap { userOp =>
+      userOp match {
+        case None => InternalServerError("Authentication error")
+        case Some(user) =>
+          authenticateUser(user, remember = true)
+      }
+    }
+  
   private val is2fa = Set("MissingTotpToken", "InvalidTotpToken")
 
   def authenticate = OpenBody:
@@ -163,8 +190,8 @@ final class Auth(
     )
   }
 
-  def signup     = Open(serveSignup)
-  def signupLang = LangPage(routes.Auth.signup)(serveSignup)
+  def signup     = Open(oidcLogin)
+  def signupLang = LangPage(routes.Auth.signup)(oidcLogin)
   private def serveSignup(using Context) = NoTor:
     forms.signup.website.flatMap: form =>
       Ok.page(views.auth.signup(form))
@@ -231,7 +258,7 @@ final class Auth(
       EmailConfirm.cookie.get(ctx.req) match
         case None => Ok.async(accountC.renderCheckYourEmail)
         case Some(userEmail) =>
-          env.user.repo.exists(userEmail.username).flatMap {
+          env.user.repo.exists(userEmail.id).flatMap {
             if _ then Ok.async(accountC.renderCheckYourEmail)
             else Redirect(routes.Auth.signup).withCookies(env.security.lilaCookie.newSession)
           }
@@ -244,7 +271,7 @@ final class Auth(
           err => BadRequest.page(views.auth.checkYourEmail(userEmail.email.some, err.some)),
           email =>
             env.user.repo
-              .byId(userEmail.username)
+              .byId(userEmail.id)
               .flatMap:
                 _.fold(Redirect(routes.Auth.signup).toFuccess): user =>
                   env.user.repo
@@ -277,7 +304,7 @@ final class Auth(
       notFound
     case EmailConfirm.Result.NeedsConfirm(user) => Ok.page(views.auth.signupConfirm(user, token, none))
     case EmailConfirm.Result.AlreadyConfirmed(user) =>
-      if ctx.is(user) then Redirect(routes.User.show(user.username))
+      if ctx.is(user) then Redirect(routes.User.show(user.id))
       else Redirect(routes.Auth.login)
     case EmailConfirm.Result.JustConfirmed(user) =>
       lila.mon.user.register.confirmEmailResult(true).increment()
@@ -294,7 +321,7 @@ final class Auth(
       .saveAuthentication(user.id, ctx.mobileApiVersion)
       .flatMap: sessionId =>
         negotiate(
-          Redirect(getReferrerOption | routes.User.show(user.username).url)
+          Redirect(getReferrerOption | routes.User.show(user.id).url)
             .flashSuccess("Welcome! Your account is now active."),
           mobileUserOk(user, sessionId)
         ).map(authenticateCookie(sessionId, remember = true))
@@ -505,4 +532,4 @@ final class Auth(
   private[controllers] def EmailConfirmRateLimit = EmailConfirm.rateLimit[Result]
 
   private[controllers] def RedirectToProfileIfLoggedIn(f: => Fu[Result])(using ctx: Context): Fu[Result] =
-    ctx.me.fold(f)(me => Redirect(routes.User.show(me.username)))
+    ctx.me.fold(f)(me => Redirect(routes.User.show(me.userId)))

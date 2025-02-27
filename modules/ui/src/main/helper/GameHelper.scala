@@ -98,7 +98,7 @@ trait GameHelper:
           (if link then a else span) (
             cls := userClass(user.id, cssClass, withOnline),
             (if link then href
-             else dataHref) := s"${routes.User.show(user.name)}${if mod then "?mod" else ""}"
+             else dataHref) := s"${routes.User.show(user.id)}${if mod then "?mod" else ""}"
           )(
             withOnline.option(frag(lineIcon(user), " ")),
             playerUsername(
@@ -139,7 +139,7 @@ trait GameHelper:
           (if link then a else span) (
             cls := userClass(user.id, cssClass, withOnline),
             (if link then href
-             else dataHref) := s"${routes.User.show(user.name)}${if mod then "?mod" else ""}"
+             else dataHref) := s"${routes.User.show(user.id)}${if mod then "?mod" else ""}"
           )(
             withOnline.option(frag(lineIcon(user), " ")),
             playerUsername(

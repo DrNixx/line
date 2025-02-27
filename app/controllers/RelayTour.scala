@@ -44,17 +44,17 @@ final class RelayTour(env: Env, apiC: => Api, roundC: => RelayRound) extends Lil
   def help     = page("broadcasts", "help")
   def app      = page("broadcaster-app", "app")
 
-  def by(owner: UserStr, page: Int) = Open:
+  def by(owner: UserId, page: Int) = Open:
     Reasonable(page, Max(20)):
-      FoundPage(env.user.lightUser(owner.id)): owner =>
+      FoundPage(env.user.lightUser(owner)): owner =>
         env.relay.pager
           .byOwner(owner.id, page)
           .map:
             views.relay.tour.byOwner(_, owner)
 
-  def apiBy(owner: UserStr, page: Int) = Open:
+  def apiBy(owner: UserId, page: Int) = Open:
     Reasonable(page, Max(20)):
-      Found(env.user.lightUser(owner.id)): owner =>
+      Found(env.user.lightUser(owner)): owner =>
         env.relay.pager
           .byOwner(owner.id, page)
           .map(_.mapResults(env.relay.jsonView.tourWithAnyRound(_)))
@@ -133,7 +133,7 @@ final class RelayTour(env: Env, apiC: => Api, roundC: => RelayRound) extends Lil
 
   def delete(id: RelayTourId) = AuthOrScoped(_.Study.Write) { _ ?=> me ?=>
     WithTour(id): tour =>
-      env.relay.api.deleteTourIfOwner(tour).inject(Redirect(routes.RelayTour.by(me.username)).flashSuccess)
+      env.relay.api.deleteTourIfOwner(tour).inject(Redirect(routes.RelayTour.by(me.userId)).flashSuccess)
   }
 
   def image(id: RelayTourId, tag: Option[String]) = AuthBody(parse.multipartFormData) { ctx ?=> me ?=>

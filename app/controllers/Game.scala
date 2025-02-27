@@ -25,7 +25,7 @@ final class Game(env: Env, apiC: => Api) extends LilaController(env):
           _ <- env.game.gameRepo.remove(game.id)
           _ <- env.analyse.analysisRepo.remove(game.id)
           _ <- env.game.cached.clearNbImportedByCache(me)
-        yield Redirect(routes.User.show(me.username))
+        yield Redirect(routes.User.show(me.userId))
       else Redirect(routes.Round.watcher(game.id, game.naturalOrientation))
   }
 
@@ -48,11 +48,11 @@ final class Game(env: Env, apiC: => Api) extends LilaController(env):
         .withHeaders(headersForApiOrApp*)
         .as(gameContentType(config))
 
-  def exportByUser(username: UserStr)    = OpenOrScoped()(handleExport(username))
-  def apiExportByUser(username: UserStr) = AnonOrScoped()(handleExport(username))
+  def exportByUser(userId: UserId)    = OpenOrScoped()(handleExport(userId))
+  def apiExportByUser(userId: UserId) = AnonOrScoped()(handleExport(userId))
 
-  private def handleExport(username: UserStr)(using ctx: Context) =
-    meOrFetch(username).flatMap:
+  private def handleExport(userId: UserId)(using ctx: Context) =
+    meOrFetch(userId).flatMap:
       _.filter(u => u.enabled.yes || ctx.is(u) || isGrantedOpt(_.GamesModView)).so: user =>
         val format = GameApiV2.Format.byRequest
         WithVs: vs =>

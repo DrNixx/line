@@ -15,7 +15,7 @@ def apply(u: UserWithPerfs, as: Iterable[lila.activity.ActivityView])(using ctx:
             trans.ublog.publishedNbBlogPosts.pluralSame(posts.size),
             ui.subTag(posts.map: post =>
               div(
-                a(href := routes.Ublog.post(u.user.username, post.slug, post.id))(shorten(post.title, 120))
+                a(href := routes.Ublog.post(u.user.id, post.slug, post.id))(shorten(post.title, 120))
               ))
           )
         )

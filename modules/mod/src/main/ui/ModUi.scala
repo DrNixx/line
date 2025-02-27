@@ -75,7 +75,7 @@ final class ModUi(helpers: Helpers):
       main(cls := "mod-permissions page-small box box-pad")(
         boxTop(h1(userLink(u), " permissions")),
         standardFlash,
-        postForm(cls := "form3", action := routes.Mod.permissions(u.username))(
+        postForm(cls := "form3", action := routes.Mod.permissions(u.id))(
           p(cls := "granted")("In green, permissions enabled manually or by a package."),
           div(cls := "permission-list")(
             permissions
@@ -108,7 +108,7 @@ final class ModUi(helpers: Helpers):
                 )
           ),
           form3.actions(
-            a(href := routes.User.show(u.username))(trans.site.cancel()),
+            a(href := routes.User.show(u.id))(trans.site.cancel()),
             submitButton(cls := "button")(trans.site.save())
           )
         )

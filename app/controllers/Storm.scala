@@ -37,8 +37,8 @@ final class Storm(env: Env) extends LilaController(env):
     renderDashboardOf(me, page)
   }
 
-  def dashboardOf(username: UserStr, page: Int) = Open:
-    Found(env.user.repo.enabledById(username)):
+  def dashboardOf(userId: UserId, page: Int) = Open:
+    Found(env.user.repo.enabledById(userId)):
       renderDashboardOf(_, page)
 
   private def renderDashboardOf(user: lila.user.User, page: Int)(using Context): Fu[Result] = for
@@ -47,10 +47,10 @@ final class Storm(env: Env) extends LilaController(env):
     page    <- renderPage(views.storm.dashboard(user, history, high))
   yield Ok(page)
 
-  def apiDashboardOf(username: UserStr, days: Int) = Open:
-    username.validateId.so: userId =>
-      if days < 0 || days > 365 then notFoundJson("Invalid days parameter")
-      else
-        ((days > 0).so(env.storm.dayApi.apiHistory(userId, days))).zip(env.storm.highApi.get(userId)).map {
-          case (history, high) => Ok(env.storm.json.apiDashboard(high, history))
-        }
+  def apiDashboardOf(userId: UserId, days: Int) = Open:
+    if days < 0 || days > 365 then notFoundJson("Invalid days parameter")
+    else
+      ((days > 0).so(env.storm.dayApi.apiHistory(userId, days))).zip(env.storm.highApi.get(userId)).map {
+        case (history, high) => Ok(env.storm.json.apiDashboard(high, history))
+      }
+      

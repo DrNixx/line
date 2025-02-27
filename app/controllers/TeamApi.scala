@@ -71,8 +71,8 @@ final class TeamApi(env: Env, apiC: => Api) extends LilaController(env):
             leads <- teams.mapFutureList(env.team.memberRepo.addPublicLeaderIds)
           yield leads
 
-  def teamsOf(username: UserStr) = AnonOrScoped(): ctx ?=>
-    Found(meOrFetch(username)): user =>
+  def teamsOf(userId: UserId) = AnonOrScoped(): ctx ?=>
+    Found(meOrFetch(userId)): user =>
       import env.team.jsonView.given
       JsonOk:
         for
@@ -102,9 +102,9 @@ final class TeamApi(env: Env, apiC: => Api) extends LilaController(env):
           )
   }
 
-  def requestProcess(teamId: TeamId, userId: UserStr, decision: String) = Scoped(_.Team.Lead) { _ ?=> me ?=>
+  def requestProcess(teamId: TeamId, userId: UserId, decision: String) = Scoped(_.Team.Lead) { _ ?=> me ?=>
     WithOwnedTeamEnabled(teamId, _.Request): team =>
-      api.request(lila.team.TeamRequest.makeId(team.id, userId.id)).flatMap {
+      api.request(lila.team.TeamRequest.makeId(team.id, userId)).flatMap {
         case None      => fuccess(ApiResult.ClientError("No such team join request"))
         case Some(req) => api.processRequest(team, req, decision).inject(ApiResult.Done)
       }
@@ -112,16 +112,16 @@ final class TeamApi(env: Env, apiC: => Api) extends LilaController(env):
 
   private val kickLimitReportOnce = scalalib.cache.OnceEvery[UserId](10.minutes)
 
-  def kickUser(teamId: TeamId, username: UserStr) = Scoped(_.Team.Lead) { ctx ?=> me ?=>
+  def kickUser(teamId: TeamId, userId: UserId) = Scoped(_.Team.Lead) { ctx ?=> me ?=>
     WithOwnedTeamEnabled(teamId, _.Kick): team =>
       def limited =
-        if kickLimitReportOnce(username.id) then
+        if kickLimitReportOnce(userId) then
           lila
             .log("security")
             .warn(s"API team.kick limited team:${teamId} user:${me.username} ip:${req.ipAddress}")
         fuccess(ApiResult.Limited)
       limit.teamKick(req.ipAddress, limited, cost = if me.isVerified || me.isApiHog then 0 else 1):
-        api.kick(team, username.id).inject(ApiResult.Done)
+        api.kick(team, userId).inject(ApiResult.Done)
   }
 
   private def WithOwnedTeamEnabled(teamId: TeamId, perm: TeamSecurity.Permission.Selector)(

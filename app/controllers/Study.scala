@@ -73,10 +73,10 @@ final class Study(
             )
           yield res
 
-  def byOwnerDefault(username: UserStr, page: Int) = byOwner(username, Orders.default, page)
+  def byOwnerDefault(userId: UserId, page: Int) = byOwner(userId, Orders.default, page)
 
-  def byOwner(username: UserStr, order: Order, page: Int) = Open:
-    Found(meOrFetch(username)): owner =>
+  def byOwner(userId: UserId, order: Order, page: Int) = Open:
+    Found(meOrFetch(userId)): owner =>
       env.study.pager
         .byOwner(owner, order, page)
         .flatMap: pag =>
@@ -289,7 +289,7 @@ final class Study(
 
   def createAs = AuthBody { ctx ?=> me ?=>
     bindForm(StudyForm.importGame.form)(
-      _ => Redirect(routes.Study.byOwnerDefault(me.username)),
+      _ => Redirect(routes.Study.byOwnerDefault(me.userId)),
       data =>
         for
           owner   <- env.study.api.recentByOwnerWithChapterCount(me, 50)
@@ -309,7 +309,7 @@ final class Study(
 
   def create = AuthBody { ctx ?=> me ?=>
     bindForm(StudyForm.importGame.form)(
-      _ => Redirect(routes.Study.byOwnerDefault(me.username)),
+      _ => Redirect(routes.Study.byOwnerDefault(me.userId)),
       createStudy
     )
   }
@@ -465,12 +465,7 @@ final class Study(
       }
     }
 
-  def exportPgn(username: UserStr) = OpenOrScoped(_.Study.Read, _.Web.Mobile): ctx ?=>
-    val name =
-      if username.value == "me"
-      then ctx.me.fold(UserName("me"))(_.username)
-      else username.into(UserName)
-    val userId = name.id
+  def exportPgn(userId: UserId) = OpenOrScoped(_.Study.Read, _.Web.Mobile): ctx ?=>
     val isMe   = ctx.me.exists(_.is(userId))
     val makeStream = env.study.studyRepo
       .sourceByOwner(userId, isMe)
@@ -480,14 +475,14 @@ final class Study(
         akka.stream.ActorAttributes.supervisionStrategy(akka.stream.Supervision.resumingDecider)
     apiC.GlobalConcurrencyLimitPerIpAndUserOption(userId.some)(makeStream): source =>
       Ok.chunked(source)
-        .pipe(asAttachmentStream(s"${name}-${if isMe then "all" else "public"}-studies.pgn"))
+        .pipe(asAttachmentStream(s"${userId}-${if isMe then "all" else "public"}-studies.pgn"))
         .as(pgnContentType)
 
-  def apiListByOwner(username: UserStr) = OpenOrScoped(_.Study.Read, _.Web.Mobile): ctx ?=>
-    val isMe = ctx.is(username)
+  def apiListByOwner(userId: UserId) = OpenOrScoped(_.Study.Read, _.Web.Mobile): ctx ?=>
+    val isMe = ctx.is(userId)
     apiC.jsonDownload:
       env.study.studyRepo
-        .sourceByOwner(username.id, isMe)
+        .sourceByOwner(userId, isMe)
         .throttle(if isMe then 50 else 20, 1.second)
         .map(lila.study.JsonView.metadata)
 

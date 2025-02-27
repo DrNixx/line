@@ -46,7 +46,7 @@ final class Account(
           _ <- bindForm(env.user.forms.flair)(_ => funit, env.user.repo.setFlair(me, _))
         yield
           env.user.lightUserApi.invalidate(me)
-          Redirect(routes.User.show(me.username)).flashSuccess
+          Redirect(routes.User.show(me.userId)).flashSuccess
     )
   }
 
@@ -54,7 +54,7 @@ final class Account(
     FormFuResult(env.user.forms.username(me))(err => renderPage(pages.username(me, err))): username =>
       env.user.repo
         .setUsernameCased(me, username)
-        .inject(Redirect(routes.User.show(me.username)).flashSuccess)
+        .inject(Redirect(routes.User.show(me.userId)).flashSuccess)
         .recover: e =>
           Redirect(routes.Account.username).flashFailure(e.getMessage)
   }
@@ -170,7 +170,7 @@ final class Account(
     auth.HasherRateLimit:
       env.security.forms.preloadEmailDns() >> emailForm.flatMap: form =>
         FormFuResult(form)(err => renderPage(pages.email(err))): data =>
-          val newUserEmail = lila.security.EmailConfirm.UserEmail(me.username, data.email)
+          val newUserEmail = lila.security.EmailConfirm.UserEmail(me.userId, me.username, data.email)
           auth.EmailConfirmRateLimit(newUserEmail, ctx.req, rateLimited):
             env.security.emailChange
               .send(me, newUserEmail.email)
@@ -187,7 +187,7 @@ final class Account(
           remember = true,
           result =
             if prevEmail.exists(_.isNoReply)
-            then Some(_ => Redirect(routes.User.show(user.username)).flashSuccess)
+            then Some(_ => Redirect(routes.User.show(user.userId)).flashSuccess)
             else Some(_ => Redirect(routes.Account.email).flashSuccess)
         )
       yield res
@@ -196,7 +196,7 @@ final class Account(
     import lila.security.EmailConfirm.Help.*
     ctx.me match
       case Some(me) =>
-        Redirect(routes.User.show(me.username))
+        Redirect(routes.User.show(me.userId))
       case None if get("username").isEmpty =>
         Ok.page(views.account.security.emailConfirmHelp(helpForm, none))
       case None =>

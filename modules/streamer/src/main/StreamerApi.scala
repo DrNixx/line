@@ -33,8 +33,8 @@ final class StreamerApi(
       val s = Streamer.WithUser(Streamer.make(user), user)
       coll.insert.one(s.streamer).inject(s.some)
 
-  def forSubscriber(streamerName: UserStr)(using me: Option[MyId]): Fu[Option[Streamer.WithContext]] =
-    me.foldLeft(find(streamerName)): (streamerFu, me) =>
+  def forSubscriber(streamerId: UserId)(using me: Option[MyId]): Fu[Option[Streamer.WithContext]] =
+    me.foldLeft(find(streamerId)): (streamerFu, me) =>
       streamerFu.flatMapz: s =>
         subsRepo.isSubscribed(me.id, s.streamer).map { sub => s.copy(subscribed = sub).some }
 

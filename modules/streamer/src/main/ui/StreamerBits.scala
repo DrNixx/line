@@ -133,14 +133,14 @@ final class StreamerBits(helpers: Helpers)(picfitUrl: lila.core.misc.PicfitUrl):
       a(href := "/about")(trs.downloadKit())
     )
 
-  def redirectLink(username: UserStr, isStreaming: Option[Boolean] = None): Tag =
+  def redirectLink(userId: UserId, isStreaming: Option[Boolean] = None): Tag =
     isStreaming match
-      case Some(false) => a(href := routes.Streamer.show(username))
-      case _           => a(href := routes.Streamer.redirect(username), targetBlank, noFollow)
+      case Some(false) => a(href := routes.Streamer.show(userId))
+      case _           => a(href := routes.Streamer.redirect(userId), targetBlank, noFollow)
 
   def liveStreams(l: LiveStreams.WithTitles): Frag =
     l.live.streams.map { s =>
-      redirectLink(s.streamer.id.into(UserStr))(
+      redirectLink(s.streamer.id.into(UserId))(
         cls   := "stream highlight",
         title := s.status
       )(

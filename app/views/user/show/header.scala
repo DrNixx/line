@@ -50,7 +50,7 @@ object header:
         div(cls := "number-menu")(
           u.noBot.option(
             a(
-              href       := routes.UserTournament.path(u.username, "recent"),
+              href       := routes.UserTournament.path(u.id, "recent"),
               cls        := "nm-item",
               dataToints := u.toints
             )(
@@ -59,7 +59,7 @@ object header:
           ),
           (info.nbSimuls > 0).option(
             a(
-              href := routes.Simul.byUser(u.username),
+              href := routes.Simul.byUser(u.id),
               cls  := "nm-item"
             )(
               splitNumber(trans.site.nbSimuls.pluralSame(info.nbSimuls))
@@ -67,13 +67,13 @@ object header:
           ),
           (info.nbRelays > 0).option(
             a(
-              href := routes.RelayTour.by(u.username),
+              href := routes.RelayTour.by(u.id),
               cls  := "nm-item"
             )(
               splitNumber(trans.broadcast.nbBroadcasts.pluralSame(info.nbRelays))
             )
           ),
-          a(href := routes.Study.byOwnerDefault(u.username), cls := "nm-item")(
+          a(href := routes.Study.byOwnerDefault(u.id), cls := "nm-item")(
             splitNumber(trans.site.`nbStudies`.pluralSame(info.nbStudies))
           ),
           ctx.kid.no.option(
@@ -87,7 +87,7 @@ object header:
           (ctx.kid.no && (info.ublog.exists(_.nbPosts > 0) || ctx.is(u))).option(
             a(
               cls  := "nm-item",
-              href := routes.Ublog.index(u.username)
+              href := routes.Ublog.index(u.id)
             )(
               splitNumber(trans.ublog.blogPosts.pluralSame(info.ublog.so(_.nbPosts)))
             )
@@ -99,7 +99,7 @@ object header:
           isGranted(_.UserModView).option(
             a(
               cls      := "mod-zone-toggle",
-              href     := routes.User.mod(u.username),
+              href     := routes.User.mod(u.id),
               dataIcon := Icon.Agent,
               title    := "Mod zone (Hotkey: m)"
             )
@@ -125,7 +125,7 @@ object header:
                 ),
               a(
                 cls      := "text",
-                href     := routes.User.tv(u.username),
+                href     := routes.User.tv(u.id),
                 dataIcon := Icon.AnalogTv
               )(trans.site.watchGames.txt()),
               ctx
@@ -145,7 +145,7 @@ object header:
               )(trans.site.openingExplorer.txt()),
               a(
                 cls      := "text",
-                href     := routes.User.download(u.username),
+                href     := routes.User.download(u.id),
                 dataIcon := Icon.Download
               )(trans.site.exportGames.txt()),
               (ctx.isAuth && ctx.kid.no && ctx.isnt(u)).option(
@@ -156,7 +156,7 @@ object header:
                 )(trans.site.reportXToModerators.txt(u.username))
               ),
               (ctx.is(u) || isGranted(_.CloseAccount)).option(
-                a(href := routes.Relation.following(u.username), dataIcon := Icon.User)(trans.site.friends())
+                a(href := routes.Relation.following(u.id), dataIcon := Icon.User)(trans.site.friends())
               ),
               (ctx.is(u) || isGranted(_.BoostHunter)).option(
                 a(href := s"${routes.User.opponents}?u=${u.username}", dataIcon := Icon.User)(
@@ -254,10 +254,10 @@ object header:
                 )
               ),
               info.insightVisible.option(
-                a(cls := "insight", href := routes.Insight.index(u.username), dataIcon := Icon.Target):
+                a(cls := "insight", href := routes.Insight.index(u.id), dataIcon := Icon.Target):
                   span(
                     strong("Chess Insights"),
-                    em("Analytics from ", if ctx.is(u) then "your" else s"${u.username}'s", " games")
+                    em("Analytics from ", if ctx.is(u) then "your" else s"${u.id}'s", " games")
                   )
               )
             )
@@ -275,7 +275,7 @@ object header:
             "nm-item to-activity" -> true,
             "active"              -> (angle == UserInfo.Angle.Activity)
           ),
-          href := routes.User.show(u.username)
+          href := routes.User.show(u.id)
         )(trans.activity.activity()),
         a(
           dataTab := "games",
@@ -283,7 +283,7 @@ object header:
             "nm-item to-games" -> true,
             "active"           -> (angle.key == "games")
           ),
-          href := routes.User.gamesAll(u.username)
+          href := routes.User.gamesAll(u.id)
         )(
           trans.site.nbGames.plural(info.user.count.game, info.user.count.game.localize),
           (info.nbs.playing > 0).option(

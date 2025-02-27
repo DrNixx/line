@@ -12,7 +12,7 @@ final class NoteUi(helpers: Helpers)(using NetDomain):
   import helpers.{ *, given }
 
   def zone(u: User, notes: List[Note])(using ctx: Context) = div(cls := "note-zone")(
-    postForm(cls := "note-form", action := routes.User.writeNote(u.username))(
+    postForm(cls := "note-form", action := routes.User.writeNote(u.id))(
       form3.textarea(lila.user.UserForm.note("text"))(
         placeholder := trans.site.writeAPrivateNoteAboutThisUser.txt()
       ),

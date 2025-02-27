@@ -32,7 +32,7 @@ final class ListUi(helpers: Helpers, bits: StudyBits):
       order = order,
       pag = pag,
       searchFilter = s"owner:${owner.username}",
-      url = routes.Study.byOwner(owner.username, _)
+      url = routes.Study.byOwner(owner.id, _)
     )
 
   def mine(pag: Paginator[WithChaptersAndLiked], order: Order, topics: StudyTopics)(using

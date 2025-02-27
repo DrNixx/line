@@ -37,6 +37,7 @@ final class Env(
   val mailer: lila.mailer.Env     = wire[lila.mailer.Env]
   val oAuth: lila.oauth.Env       = wire[lila.oauth.Env]
   val security: lila.security.Env = wire[lila.security.Env]
+  val oidc: lila.oidc.Env         = wire[lila.oidc.Env]
   val pref: lila.pref.Env         = wire[lila.pref.Env]
   val relation: lila.relation.Env = wire[lila.relation.Env]
   val game: lila.game.Env         = wire[lila.game.Env]

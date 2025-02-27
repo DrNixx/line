@@ -64,7 +64,7 @@ final class UblogFormUi(helpers: Helpers, ui: UblogUi)(
   )(using Context) =
     postForm(
       cls    := "form3 ublog-post-form__main",
-      action := post.fold(u => routes.Ublog.create(u.username), p => routes.Ublog.update(p.id))
+      action := post.fold(u => routes.Ublog.create(u.id), p => routes.Ublog.update(p.id))
     )(
       form3.globalError(form),
       post.toOption.map(image(_, form)),
@@ -124,7 +124,7 @@ final class UblogFormUi(helpers: Helpers, ui: UblogUi)(
       form3.actions(
         a(
           href := post
-            .fold(user => routes.Ublog.index(user.username), ui.urlOfPost)
+            .fold(user => routes.Ublog.index(user.id), ui.urlOfPost)
         )(
           trans.site.cancel()
         ),

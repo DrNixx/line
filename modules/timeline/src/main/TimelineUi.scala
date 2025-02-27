@@ -7,7 +7,7 @@ import lila.ui.*
 import ScalatagsTemplate.{ *, given }
 
 final class TimelineUi(helpers: Helpers)(
-    streamerLink: UserStr => Tag
+    streamerLink: UserId => Tag
 ):
   import helpers.{ *, given }
 
@@ -55,7 +55,7 @@ final class TimelineUi(helpers: Helpers)(
           trans.ublog.xPublishedY(
             userLink(userId),
             a(
-              href     := routes.Ublog.post(usernameOrId(userId), slug, id),
+              href     := routes.Ublog.post(userId, slug, id),
               st.title := title
             )(shorten(title, 40))
           )
@@ -107,7 +107,7 @@ final class TimelineUi(helpers: Helpers)(
             a(href := routes.Ublog.redirect(postId))(postTitle)
           )
         case StreamStart(id, name) =>
-          streamerLink(id.into(UserStr))(cls := "text", dataIcon := Icon.Mic)(
+          streamerLink(id.into(UserId))(cls := "text", dataIcon := Icon.Mic)(
             trans.site.xStartedStreaming(name)
           )
       ,

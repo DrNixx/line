@@ -61,7 +61,7 @@ final class TutorHome(helpers: Helpers, bits: TutorBits, perfUi: PerfUi):
   ) =
     st.article(
       cls      := "tutor__perfs__perf tutor-card tutor-card--link",
-      dataHref := routes.Tutor.perf(user.username, perfReport.perf.key)
+      dataHref := routes.Tutor.perf(user.id, perfReport.perf.key)
     )(
       div(cls := "tutor-card__top")(
         iconTag(perfReport.perf.icon),
@@ -99,7 +99,7 @@ final class TutorHome(helpers: Helpers, bits: TutorBits, perfUi: PerfUi):
         frag(
           boxTop(h1(bits.otherUser(user), "Lichess Tutor")),
           bits.mascotSays("Explain what tutor is about here."),
-          postForm(cls := "tutor__empty__cta", action := routes.Tutor.refresh(user.username))(
+          postForm(cls := "tutor__empty__cta", action := routes.Tutor.refresh(user.id))(
             submitButton(cls := "button button-fat button-no-upper")("Analyse my games and help me improve")
           )
         )

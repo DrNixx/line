@@ -53,7 +53,7 @@ final class MsgJson(
         threads
           .zip(users)
           .map: (thread, userOption) =>
-            MsgThread.WithContact(thread, userOption | LightUser.fallback(thread.other.into(UserName)))
+            MsgThread.WithContact(thread, userOption | LightUser.fallback(thread.other))
 
   private def renderThread(t: MsgThread.WithContact)(using me: Option[Me]) =
     Json.obj(

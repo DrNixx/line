@@ -68,11 +68,11 @@ final class Report(env: Env, userC: => User, modC: => Mod) extends LilaControlle
     else modC.redirect(inquiry.user)
 
   protected[controllers] def onModAction(goTo: Suspect)(using ctx: BodyContext[?], me: Me): Fu[Result] =
-    if HTTPRequest.isXhr(ctx.req) then userC.renderModZoneActions(goTo.user.username)
+    if HTTPRequest.isXhr(ctx.req) then userC.renderModZoneActions(goTo.user.id)
     else
       api.inquiries
         .ofModId(me.id)
-        .flatMap(_.fold(userC.modZoneOrRedirect(goTo.user.username))(onInquiryAction(_)))
+        .flatMap(_.fold(userC.modZoneOrRedirect(goTo.user.id))(onInquiryAction(_)))
 
   protected[controllers] def onInquiryAction(
       inquiry: ReportModel,

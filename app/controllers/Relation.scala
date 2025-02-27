@@ -16,8 +16,8 @@ final class Relation(env: Env, apiC: => Api) extends LilaController(env):
 
   val api = env.relation.api
 
-  private def renderActions(username: UserName, mini: Boolean)(using ctx: Context) = for
-    user       <- env.user.lightUserApi.asyncFallbackName(username)
+  private def renderActions(userId: UserId, mini: Boolean)(using ctx: Context) = for
+    user       <- env.user.lightUserApi.asyncFallbackName(userId)
     relation   <- ctx.userId.so(api.fetchRelation(_, user.id))
     followable <- ctx.isAuth.so(env.pref.api.followable(user.id))
     blocked    <- ctx.userId.so(api.fetchBlocks(user.id, _))
@@ -28,70 +28,70 @@ final class Relation(env: Env, apiC: => Api) extends LilaController(env):
   yield res
 
   private def RatelimitWith(
-      str: UserStr
+      id: UserId
   )(f: LightUser => Fu[Result])(using me: Me)(using Context): Fu[Result] =
-    Found(env.user.lightUserApi.async(str.id)): user =>
+    Found(env.user.lightUserApi.async(id)): user =>
       limit.follow(me, rateLimited):
         f(user)
 
-  def follow(username: UserStr) = AuthOrScoped(_.Follow.Write, _.Web.Mobile) { ctx ?=> me ?=>
-    RatelimitWith(username): user =>
+  def follow(userId: UserId) = AuthOrScoped(_.Follow.Write, _.Web.Mobile) { ctx ?=> me ?=>
+    RatelimitWith(userId): user =>
       api.reachedMaxFollowing(me).flatMap {
         if _ then
           val msg = lila.msg.MsgPreset.maxFollow(me.username, env.relation.maxFollow.value)
           env.msg.api.postPreset(me, msg) >> rateLimited(msg.name)
         else
           api.follow(me, user.id).recoverDefault >> negotiate(
-            renderActions(user.name, getBool("mini")),
+            renderActions(user.id, getBool("mini")),
             jsonOkResult
           )
       }
   }
   def followBc = follow
 
-  def unfollow(username: UserStr) = AuthOrScoped(_.Follow.Write, _.Web.Mobile) { ctx ?=> me ?=>
-    RatelimitWith(username): user =>
+  def unfollow(userId: UserId) = AuthOrScoped(_.Follow.Write, _.Web.Mobile) { ctx ?=> me ?=>
+    RatelimitWith(userId): user =>
       api.unfollow(me, user.id).recoverDefault >> negotiate(
-        renderActions(user.name, getBool("mini")),
+        renderActions(user.id, getBool("mini")),
         jsonOkResult
       )
   }
   def unfollowBc = unfollow
 
-  def block(username: UserStr) = AuthOrScoped(_.Follow.Write, _.Web.Mobile) { ctx ?=> me ?=>
-    RatelimitWith(username): user =>
+  def block(userId: UserId) = AuthOrScoped(_.Follow.Write, _.Web.Mobile) { ctx ?=> me ?=>
+    RatelimitWith(userId): user =>
       api.block(me, user.id).recoverDefault >> negotiate(
-        renderActions(user.name, getBool("mini")),
+        renderActions(user.id, getBool("mini")),
         jsonOkResult
       )
   }
 
-  def unblock(username: UserStr) = AuthOrScoped(_.Follow.Write, _.Web.Mobile) { ctx ?=> me ?=>
-    RatelimitWith(username): user =>
+  def unblock(userId: UserId) = AuthOrScoped(_.Follow.Write, _.Web.Mobile) { ctx ?=> me ?=>
+    RatelimitWith(userId): user =>
       api.unblock(me, user.id).recoverDefault >> negotiate(
-        renderActions(user.name, getBool("mini")),
+        renderActions(user.id, getBool("mini")),
         jsonOkResult
       )
   }
 
-  def following(username: UserStr, page: Int) = Open:
+  def following(userId: UserId, page: Int) = Open:
     Reasonable(page, Max(20)):
-      Found(meOrFetch(username)): user =>
+      Found(meOrFetch(userId)): user =>
         for
           _   <- (page == 1).so(api.unfollowInactiveAccounts(user.id))
           pag <- RelatedPager(api.followingPaginatorAdapter(user.id), page)
           res <- negotiate(
             if ctx.is(user) || isGrantedOpt(_.CloseAccount)
             then Ok.page(views.relation.friends(user, pag))
-            else Found(ctx.me)(me => Redirect(routes.Relation.following(me.username))),
+            else Found(ctx.me)(me => Redirect(routes.Relation.following(me.userId))),
             Ok(jsonRelatedPaginator(pag))
           )
         yield res
 
-  def followers(username: UserStr, page: Int) = Open:
+  def followers(userId: UserId, page: Int) = Open:
     negotiateJson:
       Reasonable(page, Max(20)):
-        RelatedPager(api.followersPaginatorAdapter(username.id), page).flatMap: pag =>
+        RelatedPager(api.followersPaginatorAdapter(userId), page).flatMap: pag =>
           Ok(jsonRelatedPaginator(pag))
 
   def apiFollowing = Scoped(_.Follow.Read, _.Web.Mobile) { ctx ?=> me ?=>

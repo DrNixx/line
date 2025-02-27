@@ -79,13 +79,13 @@ final class Simul(env: Env) extends LilaController(env):
       }
   }
 
-  def accept(simulId: SimulId, userId: UserStr) = Open:
+  def accept(simulId: SimulId, userId: UserId) = Open:
     AsHost(simulId): simul =>
-      env.simul.api.accept(simul.id, userId.id, v = true).inject(jsonOkResult)
+      env.simul.api.accept(simul.id, userId, v = true).inject(jsonOkResult)
 
-  def reject(simulId: SimulId, userId: UserStr) = Open:
+  def reject(simulId: SimulId, userId: UserId) = Open:
     AsHost(simulId): simul =>
-      env.simul.api.accept(simul.id, userId.id, v = false).inject(jsonOkResult)
+      env.simul.api.accept(simul.id, userId, v = false).inject(jsonOkResult)
 
   def setText(simulId: SimulId) = OpenBody:
     AsHost(simulId): simul =>
@@ -166,9 +166,9 @@ final class Simul(env: Env) extends LilaController(env):
             )
   }
 
-  def byUser(username: UserStr, page: Int) = Open:
+  def byUser(userId: UserId, page: Int) = Open:
     Reasonable(page):
-      Found(meOrFetch(username).map(_.filter(_.enabled.yes || isGrantedOpt(_.SeeReport)))): user =>
+      Found(meOrFetch(userId).map(_.filter(_.enabled.yes || isGrantedOpt(_.SeeReport)))): user =>
         Ok.async:
           env.simul.api
             .hostedByUser(user.id, page)

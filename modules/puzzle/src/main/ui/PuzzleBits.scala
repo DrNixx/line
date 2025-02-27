@@ -26,7 +26,7 @@ final class PuzzleBits(helpers: Helpers):
       )
 
   def pageMenu(active: String, user: Option[User], days: Days = Days(30))(using ctx: Context) =
-    val u = user.filterNot(ctx.is).map(_.username)
+    val u = user.filterNot(ctx.is).map(_.id)
     lila.ui.bits.pageMenuSubnav(
       a(href := routes.Puzzle.home)(
         trans.site.puzzles()

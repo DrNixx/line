@@ -205,7 +205,7 @@ final class StreamerEdit(helpers: Helpers, bits: StreamerBits):
                   )(form3.input(_)),
                   form3.group(form("description"), trs.longDescription())(form3.textarea(_)(rows := 10)),
                   form3.actions(
-                    a(href := routes.Streamer.show(s.user.username))(trans.site.cancel()),
+                    a(href := routes.Streamer.show(s.user.id))(trans.site.cancel()),
                     button(
                       tpe   := "submit",
                       cls   := "submit button text approval-request-submit",

@@ -113,8 +113,8 @@ object ModTimeline:
       case AccountCreation(at)     => at
     def url(u: User): String = e match
       case _: AppealMsg => routes.Appeal.show(u.username).url
-      case _: Note      => s"${routes.User.show(u.username)}?notes=1"
-      case _            => s"${routes.User.show(u.username)}?mod=1"
+      case _: Note      => s"${routes.User.show(u.id)}?notes=1"
+      case _            => s"${routes.User.show(u.id)}?mod=1"
 
   enum Angle:
     case None

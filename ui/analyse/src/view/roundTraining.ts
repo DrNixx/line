@@ -17,7 +17,7 @@ interface Advice {
 const renderPlayer = (ctrl: AnalyseCtrl, color: Color): VNode => {
   const p = getPlayer(ctrl.data, color);
   if (p.user)
-    return h('a.user-link.ulpt', { attrs: { href: '/@/' + p.user.username } }, [
+    return h('a.user-link.ulpt', { attrs: { href: '/@/' + p.user.id } }, [
       p.user.username,
       ' ',
       ratingDiff(p),

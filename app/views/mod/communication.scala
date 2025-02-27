@@ -39,25 +39,25 @@ def communication(
           div(cls := "actions")(
             a(
               cls  := "button button-empty mod-zone-toggle",
-              href := routes.User.mod(u.username),
+              href := routes.User.mod(u.id),
               titleOrText("Mod zone (Hotkey: m)"),
               dataIcon := Icon.Agent
             ),
             isGranted(_.ViewPrivateComms)
               .option {
                 if priv then
-                  a(cls := "priv button active", href := routes.Mod.communicationPublic(u.username))("PMs")
+                  a(cls := "priv button active", href := routes.Mod.communicationPublic(u.id))("PMs")
                 else
                   a(
                     cls   := "priv button",
-                    href  := routes.Mod.communicationPrivate(u.username),
+                    href  := routes.Mod.communicationPrivate(u.id),
                     title := "View private messages. This will be logged in #commlog"
                   )("PMs")
               },
             (priv && isGranted(_.FullCommsExport))
               .option {
                 postForm(
-                  action := routes.Mod.fullCommsExport(u.username)
+                  action := routes.Mod.fullCommsExport(u.id)
                 )(
                   form3.action(
                     form3.submit(

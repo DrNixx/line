@@ -32,7 +32,7 @@ final class UserGamesDownload(helpers: Helpers):
                 td(
                   copyMeInput("")(
                     id                    := "dl-api-url",
-                    attr("data-api-path") := routes.Game.apiExportByUser(user.username)
+                    attr("data-api-path") := routes.Game.apiExportByUser(user.id)
                   )
                 )
               ),
@@ -41,7 +41,7 @@ final class UserGamesDownload(helpers: Helpers):
                   a(
                     id   := "dl-button",
                     cls  := "button",
-                    href := routes.Game.exportByUser(user.username),
+                    href := routes.Game.exportByUser(user.id),
                     downloadAttr
                   )(trans.site.download())
                 )

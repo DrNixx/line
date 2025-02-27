@@ -8,7 +8,7 @@ export function player(p: Player, ctrl: SimulCtrl) {
   return h(
     'a.ulpt.user-link.' + (p.online || ctrl.data.host.id !== p.id ? 'online' : 'offline'),
     {
-      attrs: { href: '/@/' + p.name },
+      attrs: { href: '/@/' + p.id },
       hook: { destroy: vnode => $.powerTip.destroy(vnode.elm as HTMLElement) },
     },
     [

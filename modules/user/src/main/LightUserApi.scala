@@ -15,15 +15,15 @@ final class LightUserApi(repo: UserRepo, cacheApi: CacheApi)(using Executor)
     if id.isGhost then fuccess(LightUser.ghost.some) else cache.async(id)
   val asyncFallback = LightUser.GetterFallback: id =>
     if id.isGhost then fuccess(LightUser.ghost)
-    else cache.async(id).dmap(_ | LightUser.fallback(id.into(UserName)))
+    else cache.async(id).dmap(_ | LightUser.fallback(id))
   val sync = LightUser.GetterSync: id =>
     if id.isGhost then LightUser.ghost.some else cache.sync(id)
   val syncFallback = LightUser.GetterSyncFallback: id =>
-    if id.isGhost then LightUser.ghost else cache.sync(id) | LightUser.fallback(id.into(UserName))
+    if id.isGhost then LightUser.ghost else cache.sync(id) | LightUser.fallback(id)
 
   export cache.{ asyncMany, invalidate, preloadOne, preloadMany }
 
-  def asyncFallbackName(name: UserName) = async(name.id).dmap(_ | LightUser.fallback(name))
+  def asyncFallbackName(userId: UserId) = async(userId).dmap(_ | LightUser.fallback(userId))
 
   def asyncManyFallback(ids: Seq[UserId]): Fu[Seq[LightUser]] = ids.parallel(asyncFallback)
 

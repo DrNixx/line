@@ -15,7 +15,7 @@ final class TutorOpening(helpers: Helpers, bits: TutorBits, perfUi: PerfUi):
       perfReport.openings(as).families.map { family =>
         a(
           href := routes.Tutor
-            .opening(user.username, perfReport.perf.key, as, family.family.key.value),
+            .opening(user.id, perfReport.perf.key, as, family.family.key.value),
           cls := family.family.key.value.active(report.family.key.value)
         )(family.family.name.value)
       }
@@ -36,7 +36,7 @@ final class TutorOpening(helpers: Helpers, bits: TutorBits, perfUi: PerfUi):
         boxTop(
           h1(
             a(
-              href     := routes.Tutor.openings(user.username, perfReport.perf.key),
+              href     := routes.Tutor.openings(user.id, perfReport.perf.key),
               dataIcon := Icon.LessThan,
               cls      := "text"
             ),
@@ -95,7 +95,7 @@ final class TutorOpening(helpers: Helpers, bits: TutorBits, perfUi: PerfUi):
         boxTop(
           h1(
             a(
-              href     := routes.Tutor.perf(user.username, report.perf.key),
+              href     := routes.Tutor.perf(user.id, report.perf.key),
               dataIcon := Icon.LessThan,
               cls      := "text"
             ),
@@ -114,7 +114,7 @@ final class TutorOpening(helpers: Helpers, bits: TutorBits, perfUi: PerfUi):
               div(
                 cls := "tutor__openings__opening tutor-card tutor-card--link",
                 dataHref := routes.Tutor
-                  .opening(user.username, report.perf.key, color, fam.family.key.value)
+                  .opening(user.id, report.perf.key, color, fam.family.key.value)
               )(
                 div(cls := "tutor-card__top")(
                   div(cls := "no-square")(pieceTag(cls := s"pawn ${color.name}")),

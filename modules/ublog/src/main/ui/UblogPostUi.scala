@@ -29,14 +29,14 @@ final class UblogPostUi(helpers: Helpers, ui: UblogUi)(
           `type` = "article",
           image = post.image.isDefined.option(ui.thumbnailUrl(post, _.Size.Large)),
           title = post.title,
-          url = s"$netBaseUrl${routes.Ublog.post(user.username, post.slug, post.id)}",
+          url = s"$netBaseUrl${routes.Ublog.post(user.id, post.slug, post.id)}",
           description = post.intro
         )
       )
       .copy(atomLinkTag =
         link(
-          href     := routes.Ublog.userAtom(user.username),
-          st.title := trans.ublog.xBlog.txt(user.username)
+          href     := routes.Ublog.userAtom(user.id),
+          st.title := trans.ublog.xBlog.txt(user.id)
         ).some
       )
       .flag(_.noRobots, !blog.listed || !post.indexable || blog.tier < UblogRank.Tier.HIGH)
@@ -55,8 +55,8 @@ final class UblogPostUi(helpers: Helpers, ui: UblogUi)(
             div(cls := "ublog-post__meta")(
               a(
                 cls      := userClass(user.id, none, withOnline = true),
-                href     := routes.Ublog.index(user.username),
-                dataHref := routes.User.show(user.username)
+                href     := routes.Ublog.index(user.id),
+                dataHref := routes.User.show(user.id)
               )(userLinkContent(user)),
               iconTag(Icon.InfoCircle)(
                 cls      := "ublog-post__meta__disclaimer",
@@ -123,7 +123,7 @@ final class UblogPostUi(helpers: Helpers, ui: UblogUi)(
                   followable.option(followButton(user, followed))
                 )
               ),
-              h2(a(href := routes.Ublog.index(user.username))(trans.ublog.moreBlogPostsBy(user.username))),
+              h2(a(href := routes.Ublog.index(user.id))(trans.ublog.moreBlogPostsBy(user.username))),
               (others.size > 0).option(div(cls := "ublog-post-cards")(others.map(ui.card(_))))
             )
           )

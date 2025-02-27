@@ -15,9 +15,9 @@ final class Ublog(env: Env) extends LilaController(env):
   import views.ublog.ui.{ editUrlOfPost, urlOfPost, urlOfBlog }
   import scalalib.paginator.Paginator.given
 
-  def index(username: UserStr, page: Int) = Open:
-    NotForKidsUnlessOfficial(username):
-      FoundPage(meOrFetch(username)): user =>
+  def index(userId: UserId, page: Int) = Open:
+    NotForKidsUnlessOfficial(userId):
+      FoundPage(meOrFetch(userId)): user =>
         env.ublog.api
           .getUserBlog(user)
           .flatMap: blog =>
@@ -26,9 +26,9 @@ final class Ublog(env: Env) extends LilaController(env):
               .map:
                 views.ublog.ui.blogPage(user, blog, _)
 
-  def drafts(username: UserStr, page: Int) = Auth { ctx ?=> me ?=>
+  def drafts(userId: UserId, page: Int) = Auth { ctx ?=> me ?=>
     NotForKids:
-      WithBlogOf(username, _.draft): (user, blog) =>
+      WithBlogOf(userId, _.draft): (user, blog) =>
         Ok.async:
           env.ublog.paginator
             .byBlog(blog.id, false, page)
@@ -36,9 +36,9 @@ final class Ublog(env: Env) extends LilaController(env):
               views.ublog.ui.drafts(user, blog, _)
   }
 
-  def post(username: UserStr, slug: String, id: UblogPostId) = Open: ctx ?=>
+  def post(userId: UserStr, slug: String, id: UblogPostId) = Open: ctx ?=>
     Found(env.ublog.api.getPost(id)): post =>
-      if slug == post.slug && post.isUserBlog(username)
+      if slug == post.slug && post.isUserBlog(userId)
       then handlePost(post)
       else
         val url = urlOfPost(post).url
@@ -105,15 +105,15 @@ final class Ublog(env: Env) extends LilaController(env):
       else if allows(blog.allows) then f(user, blog)
       else Unauthorized("Not your blog to edit")
 
-  def form(username: UserStr) = Auth { ctx ?=> me ?=>
+  def form(userId: UserId) = Auth { ctx ?=> me ?=>
     NotForKids:
-      WithBlogOf(username, _.edit): (user, blog) =>
+      WithBlogOf(userId, _.edit): (user, blog) =>
         Ok.page(views.ublog.form.create(user, env.ublog.form.create, anyCaptcha))
   }
 
-  def create(username: UserStr) = AuthBody { ctx ?=> me ?=>
+  def create(userId: UserStr) = AuthBody { ctx ?=> me ?=>
     NotForKids:
-      WithBlogOf(username, _.edit): (user, blog) =>
+      WithBlogOf(userId, _.edit): (user, blog) =>
         bindForm(env.ublog.form.create)(
           err => BadRequest.page(views.ublog.form.create(user, err, anyCaptcha)),
           data =>
@@ -293,9 +293,9 @@ final class Ublog(env: Env) extends LilaController(env):
                 .map:
                   views.ublog.ui.topic(top, _, byDate)
 
-  def userAtom(username: UserStr) = Anon:
+  def userAtom(userId: UserStr) = Anon:
     env.user.repo
-      .enabledById(username)
+      .enabledById(userId)
       .flatMap:
         _.fold(notFound): user =>
           env.ublog.api
@@ -308,12 +308,12 @@ final class Ublog(env: Env) extends LilaController(env):
 
   def historicalBlogPost(id: String, slug: String) = Open:
     Found(env.ublog.api.getByPrismicId(id)): post =>
-      Redirect(routes.Ublog.post(UserName.lichess, post.slug, post.id), MOVED_PERMANENTLY)
+      Redirect(routes.Ublog.post(UserId.lichess, post.slug, post.id), MOVED_PERMANENTLY)
 
   private def isBlogVisible(user: UserModel, blog: UblogBlog) = user.enabled.yes && blog.visible
 
-  def NotForKidsUnlessOfficial(username: UserStr)(f: => Fu[Result])(using Context): Fu[Result] =
-    if username.is(UserId.lichess) then f else NotForKids(f)
+  def NotForKidsUnlessOfficial(userId: UserId)(f: => Fu[Result])(using Context): Fu[Result] =
+    if userId.is(UserId.lichess) then f else NotForKids(f)
 
   private def canViewBlogOf(user: UserModel, blog: UblogBlog)(using ctx: Context) =
     ctx.is(user) || isGrantedOpt(_.ModerateBlog) || isBlogVisible(user, blog)

@@ -177,7 +177,7 @@ final class SimulHome(helpers: Helpers, ui: SimulUi):
                     td(s"${s.wins} / ${s.draws} / ${s.losses}")
                   )
                 ,
-                pagerNextTable(pager, np => routes.Simul.byUser(user.username, np).url)
+                pagerNextTable(pager, np => routes.Simul.byUser(user.id, np).url)
               )
             )
         )

@@ -43,7 +43,7 @@ site.load.then(() => {
           '<span class="ulpt user-link' +
           (o.online ? ' online' : '') +
           '" data-href="/@/' +
-          o.name +
+          o.id +
           '">' +
           '<i class="line' +
           (o.patron ? ' patron' : '') +

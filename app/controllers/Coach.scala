@@ -29,8 +29,8 @@ final class Coach(env: Env) extends LilaController(env):
       page      <- renderPage(views.coach.ui.index(pager, lang, order, langCodes, countries, country))
     yield Ok(page)
 
-  def show(username: UserStr) = Open:
-    Found(api.find(username)): c =>
+  def show(userId: UserId) = Open:
+    Found(api.find(userId)): c =>
       WithVisibleCoach(c):
         for
           stu     <- env.study.api.publicByIds(c.coach.profile.studyIds)

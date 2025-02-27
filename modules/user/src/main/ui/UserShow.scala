@@ -13,7 +13,7 @@ final class UserShow(helpers: Helpers, bits: UserBits):
   def userDom(u: User)(using ctx: Context) =
     span(
       cls      := userClass(u.id, none, withOnline = !u.isPatron, withPowerTip = false),
-      dataHref := userUrl(u.username)
+      dataHref := userUrl(u.id)
     )(
       (!u.isPatron).so(lineIcon(u)),
       titleTag(u.title),
@@ -66,7 +66,7 @@ final class UserShow(helpers: Helpers, bits: UserBits):
                 dataIcon := Icon.AnalogTv,
                 cls      := "btn-rack__btn",
                 title    := trans.site.watchGames.txt(),
-                href     := routes.User.tv(u.username)
+                href     := routes.User.tv(u.id)
               ),
               (!blocked).option(
                 frag(
@@ -74,13 +74,13 @@ final class UserShow(helpers: Helpers, bits: UserBits):
                     dataIcon := Icon.BubbleSpeech,
                     cls      := "btn-rack__btn",
                     title    := trans.site.chat.txt(),
-                    href     := routes.Msg.convo(u.username)
+                    href     := routes.Msg.convo(u.id)
                   ),
                   a(
                     dataIcon := Icon.Swords,
                     cls      := "btn-rack__btn",
                     title    := trans.challenge.challengeToPlay.txt(),
-                    href     := s"${routes.Lobby.home}?user=${u.username}#friend"
+                    href     := s"${routes.Lobby.home}?user=${u.id}#friend"
                   )
                 )
               ),

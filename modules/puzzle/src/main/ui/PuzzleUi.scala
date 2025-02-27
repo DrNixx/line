@@ -266,7 +266,7 @@ final class PuzzleUi(helpers: Helpers, val bits: PuzzleBits)(
                             )
                           )
                         },
-                        pagerNext(pager, np => s"${routes.Puzzle.ofPlayer(u.username.some, np).url}")
+                        pagerNext(pager, np => s"${routes.Puzzle.ofPlayer(u.id.some, np).url}")
                       )
                     )
                 case (_, _) => emptyFrag
@@ -291,7 +291,7 @@ final class PuzzleUi(helpers: Helpers, val bits: PuzzleBits)(
               div(cls := "puzzle-history")(
                 div(cls := "infinite-scroll")(
                   pager.currentPageResults.map(renderSession),
-                  pagerNext(pager, np => routes.Puzzle.history(np, user.username.some).url)
+                  pagerNext(pager, np => routes.Puzzle.history(np, user.id.some).url)
                 )
               )
             )

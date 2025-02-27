@@ -277,15 +277,15 @@ final class Challenge(env: Env) extends LilaController(env):
       else notFound
   }
 
-  def apiCreate(username: UserStr) =
+  def apiCreate(userId: UserId) =
     ScopedBody(_.Challenge.Write, _.Bot.Play, _.Board.Play, _.Web.Mobile) { ctx ?=> me ?=>
-      (!me.is(username)).so(
+      (!me.is(userId)).so(
         bindForm(env.setup.forms.api.user)(
           doubleJsonFormError,
           config =>
             limit.challenge(req.ipAddress, rateLimited, cost = if me.isApiHog then 0 else 1):
-              env.user.repo.enabledById(username).flatMap {
-                case None => JsonBadRequest(jsonError(s"No such user: $username"))
+              env.user.repo.enabledById(userId).flatMap {
+                case None => JsonBadRequest(jsonError(s"No such user: $userId"))
                 case Some(destUser) if destUser.isBot && !config.rules.isEmpty =>
                   JsonBadRequest(jsonError("Rules not applicable for bots"))
                 case Some(destUser) =>

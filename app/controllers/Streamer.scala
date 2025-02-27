@@ -51,8 +51,8 @@ final class Streamer(env: Env, apiC: => Api) extends LilaController(env):
           Json.toJsObject(user) ++
             lila.streamer.Stream.toJson(env.memo.picfitUrl, stream)
 
-  def show(username: UserStr) = Open:
-    Found(api.forSubscriber(username)): s =>
+  def show(userId: UserId) = Open:
+    Found(api.forSubscriber(userId)): s =>
       WithVisibleStreamer(s):
         for
           sws      <- env.streamer.liveStreamApi.of(s)
@@ -61,11 +61,11 @@ final class Streamer(env: Env, apiC: => Api) extends LilaController(env):
           page     <- renderPage(views.streamer.show(sws, perfs, activity))
         yield Ok(page)
 
-  def redirect(username: UserStr) = Open:
-    Found(api.forSubscriber(username)): s =>
+  def redirect(userId: UserId) = Open:
+    Found(api.forSubscriber(userId)): s =>
       WithVisibleStreamer(s):
         env.streamer.liveStreamApi.of(s).map { sws =>
-          Redirect(sws.redirectToLiveUrl | routes.Streamer.show(username).url)
+          Redirect(sws.redirectToLiveUrl | routes.Streamer.show(userId).url)
         }
 
   def create = AuthBody { _ ?=> me ?=>
@@ -138,15 +138,15 @@ final class Streamer(env: Env, apiC: => Api) extends LilaController(env):
         case None => Redirect(routes.Streamer.edit).flashFailure
   }
 
-  def subscribe(streamer: UserStr, set: Boolean) = AuthBody { _ ?=> me ?=>
+  def subscribe(streamer: UserId, set: Boolean) = AuthBody { _ ?=> me ?=>
     if set
     then env.relation.subs.subscribe(me, streamer.id)
     else env.relation.subs.unsubscribe(me, streamer.id)
     Ok
   }
 
-  def checkOnline(streamer: UserStr) = Auth { _ ?=> me ?=>
-    val uid   = streamer.id
+  def checkOnline(streamer: UserId) = Auth { _ ?=> me ?=>
+    val uid   = streamer
     val isMod = isGranted(_.ModLog)
     if ctx.is(uid) || isMod then
       limit

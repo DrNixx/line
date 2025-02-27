@@ -284,7 +284,7 @@ final class SwissApi(
             .asyncMany(opponents.map(_.userId))
             .map { users =>
               opponents.zip(users).map { case (o, u) =>
-                SwissPlayer.WithUser(o, u | LightUser.fallback(o.userId.into(UserName)))
+                SwissPlayer.WithUser(o, u | LightUser.fallback(o.userId))
               }
             }
             .map { opponents =>

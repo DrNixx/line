@@ -50,7 +50,7 @@ final class TournamentList(helpers: Helpers, ui: TournamentUi)(
             p(cls := "tour__links")(
               ctx.me.map: me =>
                 frag(
-                  a(href := routes.UserTournament.path(me.username, "created"))(trans.arena.myTournaments()),
+                  a(href := routes.UserTournament.path(me.userId, "created"))(trans.arena.myTournaments()),
                   br
                 ),
               a(href := routes.Tournament.calendar)(trans.site.tournamentCalendar()),

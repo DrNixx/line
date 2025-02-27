@@ -25,9 +25,17 @@ object LightUser:
 
   given UserIdOf[LightUser] = _.id
 
-  def fallback(name: UserName) = LightUser(
-    id = name.id,
-    name = name,
+  def fallback(id: UserId) = LightUser(
+    id = id,
+    name = UserName(s"user_${id.value}"),
+    title = None,
+    flair = None,
+    isPatron = false
+  )
+
+  def lichess() = LightUser(
+    id = UserId.lichess,
+    name = UserName.lichess,
     title = None,
     flair = None,
     isPatron = false

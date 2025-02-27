@@ -116,6 +116,7 @@ export interface FeaturedGame {
 }
 
 export interface SimplePlayer {
+  id: string;
   name: string;
   rating: number;
   title?: string;
@@ -149,6 +150,7 @@ export interface RankedTeam {
 
 export interface TeamPlayer {
   user: {
+    id: string;
     name: string;
   };
   score: number;
@@ -175,6 +177,7 @@ export interface Pairing {
   color: Color;
   op: {
     rating: number;
+    id: string;
     name: string;
     title?: string;
     berserk?: boolean;
@@ -199,6 +202,7 @@ export interface TeamInfo {
 }
 
 export interface TeamPlayer {
+  id: string;
   name: string;
   rating: number;
   score: number;

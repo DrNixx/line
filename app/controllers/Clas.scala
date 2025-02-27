@@ -441,7 +441,7 @@ final class Clas(env: Env, authC: Auth) extends LilaController(env):
             bindForm(env.clas.forms.student.release)(
               err => BadRequest.page(views.clas.student.release(clas, students, s, err)),
               email =>
-                val newUserEmail = lila.security.EmailConfirm.UserEmail(s.user.username, email)
+                val newUserEmail = lila.security.EmailConfirm.UserEmail(s.user.id, s.user.username, email)
                 authC.EmailConfirmRateLimit(newUserEmail, ctx.req, rateLimited):
                   env.security.emailChange
                     .send(s.user, newUserEmail.email)

@@ -192,14 +192,14 @@ final class RelayTourUi(helpers: Helpers, ui: RelayUi):
       a(href := routes.RelayTour.index(), cls := menu.activeO("index"))(trc.broadcasts()),
       ctx.me.map: me =>
         a(
-          href := routes.RelayTour.by(me.username, 1),
+          href := routes.RelayTour.by(me.userId, 1),
           cls  := (menu == "new" || by.exists(_.is(me))).option("active")
         ):
           trc.myBroadcasts()
       ,
       by.filterNot(ctx.is)
         .map: user =>
-          a(href := routes.RelayTour.by(user.name, 1), cls := "active")(
+          a(href := routes.RelayTour.by(user.id, 1), cls := "active")(
             user.name,
             " ",
             trc.broadcasts()
@@ -312,7 +312,7 @@ final class RelayTourUi(helpers: Helpers, ui: RelayUi):
   )(using Context): Tag = renderPager(pager): page =>
     owner match
       case None    => routes.RelayTour.index(page, query)
-      case Some(u) => routes.RelayTour.by(u.name, page)
+      case Some(u) => routes.RelayTour.by(u.id, page)
 
   def renderPager(pager: Paginator[RelayTour | WithLastRound])(next: Int => Call)(using Context): Tag =
     st.section(cls := "infinite-scroll relay-cards")(

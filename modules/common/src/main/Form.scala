@@ -261,8 +261,8 @@ object Form:
 
   object username:
     val historicalConstraints = Seq(
-      Constraints.minLength(2),
-      Constraints.maxLength(30),
+      Constraints.minLength(1),
+      Constraints.maxLength(12),
       Constraints.pattern(regex = UserName.historicalRegex)
     )
     val historicalField = trim(text).verifying(historicalConstraints*).into[UserStr]

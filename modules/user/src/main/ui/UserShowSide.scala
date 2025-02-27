@@ -32,9 +32,9 @@ final class UserShowSide(helpers: Helpers):
         href := ctx.pref.showRatings.so:
           if isPuzzle
           then
-            val other = ctx.isnt(u).option(u.username)
+            val other = ctx.isnt(u).option(u.id)
             routes.Puzzle.dashboard(Days(30), "home", other).url
-          else routes.User.perfStat(u.username, pk).url
+          else routes.User.perfStat(u.id, pk).url
         ,
         span(
           h3(pk.perfTrans),
@@ -108,7 +108,7 @@ final class UserShowSide(helpers: Helpers):
       cls := List(
         "empty" -> !storm.nonEmpty
       ),
-      href := routes.Storm.dashboardOf(user.username),
+      href := routes.Storm.dashboardOf(user.id),
       span(
         h3("Puzzle Storm"),
         st.rating(

@@ -83,26 +83,26 @@ final class RelationUi(helpers: Helpers):
                   (followable && !blocked).option(
                     a(
                       cls      := "text relation-button",
-                      href     := routes.Relation.follow(user.name),
+                      href     := routes.Relation.follow(user.id),
                       dataIcon := Icon.ThumbsUp
                     )(trans.site.follow.txt())
                   ),
                   a(
                     cls      := "text relation-button",
-                    href     := routes.Relation.block(user.name),
+                    href     := routes.Relation.block(user.id),
                     dataIcon := Icon.NotAllowed
                   )(trans.site.block.txt())
                 )
               case Some(Relation.Follow) =>
                 a(
                   cls      := "text relation-button",
-                  href     := routes.Relation.unfollow(user.name),
+                  href     := routes.Relation.unfollow(user.id),
                   dataIcon := Icon.ThumbsUp
                 )(trans.site.unfollow.txt())
               case Some(Relation.Block) =>
                 a(
                   cls      := "text relation-button",
-                  href     := routes.Relation.unblock(user.name),
+                  href     := routes.Relation.unblock(user.id),
                   dataIcon := Icon.NotAllowed
                 )(trans.site.unblock.txt())
           )
@@ -113,11 +113,11 @@ final class RelationUi(helpers: Helpers):
       frag(
         boxTop(
           h1(
-            a(href := routes.User.show(u.username), dataIcon := Icon.LessThan, cls := "text"),
+            a(href := routes.User.show(u.id), dataIcon := Icon.LessThan, cls := "text"),
             trans.site.friends()
           )
         ),
-        pagTable(pag, routes.Relation.following(u.username))
+        pagTable(pag, routes.Relation.following(u.id))
       )
 
   def blocks(u: User, pag: Paginator[Related[UserWithPerfs]])(using Context) =
@@ -135,7 +135,7 @@ final class RelationUi(helpers: Helpers):
       frag(
         boxTop:
           h1(
-            a(href := routes.User.show(u.username), dataIcon := Icon.LessThan, cls := "text"),
+            a(href := routes.User.show(u.id), dataIcon := Icon.LessThan, cls := "text"),
             trans.site.favoriteOpponents(),
             " (",
             trans.site.nbGames.pluralSame(lila.core.game.favOpponentOverGames),
@@ -151,7 +151,7 @@ final class RelationUi(helpers: Helpers):
                   ctx.pref.showRatings.option(td(showBestPerf(r.user.perfs))),
                   td:
                     r.nbGames.filter(_ > 0).map { nbGames =>
-                      a(href := s"${routes.User.games(u.username, "search")}?players.b=${r.user.username}"):
+                      a(href := s"${routes.User.games(u.id, "search")}?players.b=${r.user.username}"):
                         trans.site.nbGames.plural(nbGames, nbGames.localize)
                     }
                 )

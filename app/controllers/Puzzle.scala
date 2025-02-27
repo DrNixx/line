@@ -114,12 +114,11 @@ final class Puzzle(env: Env, apiC: => Api) extends LilaController(env):
       onComplete(env.puzzle.forms.bc.round)(_, PuzzleAngle.mix, mobileBc = true)
     }
 
-  def ofPlayer(name: Option[UserStr], page: Int) = Open:
-    val userId = name.flatMap(_.validateId)
+  def ofPlayer(userId: Option[UserId], page: Int) = Open:
     for
       user    <- userId.so(env.user.repo.enabledById).orElse(fuccess(ctx.me.map(_.value)))
       puzzles <- user.soFu(env.puzzle.api.puzzle.of(_, page))
-      page    <- renderPage(views.puzzle.ui.ofPlayer(name.so(_.value), user, puzzles))
+      page    <- renderPage(views.puzzle.ui.ofPlayer(userId.so(_.value), user, puzzles))
     yield Ok(page)
 
   private def onComplete[A](
@@ -394,7 +393,7 @@ final class Puzzle(env: Env, apiC: => Api) extends LilaController(env):
       env.puzzle.dashboard(me, days).map2 { env.puzzle.jsonView.dashboardJson(_, days) }
   }
 
-  def dashboard(days: Days, path: String = "home", u: Option[UserStr]) =
+  def dashboard(days: Days, path: String = "home", u: Option[UserId]) =
     DashboardPage(u) { ctx ?=> user =>
       env.puzzle.dashboard(user, days).flatMap { dashboard =>
         path match
@@ -403,7 +402,7 @@ final class Puzzle(env: Env, apiC: => Api) extends LilaController(env):
             Ok.page(views.puzzle.dashboard.improvementAreas(user, dashboard, days))
           case "strengths" => Ok.page(views.puzzle.dashboard.strengths(user, dashboard, days))
           case _ =>
-            Redirect(routes.Puzzle.dashboard(days, "dashboard", (ctx.isnt(user)).option(user.username)))
+            Redirect(routes.Puzzle.dashboard(days, "dashboard", (ctx.isnt(user)).option(user.id)))
       }
     }
 
@@ -416,7 +415,7 @@ final class Puzzle(env: Env, apiC: => Api) extends LilaController(env):
     }
   }
 
-  def history(page: Int, u: Option[UserStr]) = DashboardPage(u) { _ ?=> user =>
+  def history(page: Int, u: Option[UserId]) = DashboardPage(u) { _ ?=> user =>
     Reasonable(page):
       WithPuzzlePerf: perf ?=>
         Ok.async:
@@ -531,9 +530,9 @@ final class Puzzle(env: Env, apiC: => Api) extends LilaController(env):
   def help = Open:
     Ok.snip(lila.web.ui.help.puzzle)
 
-  private def DashboardPage(username: Option[UserStr])(f: Context ?=> lila.user.User => Fu[Result]) =
+  private def DashboardPage(userId: Option[UserId])(f: Context ?=> lila.user.User => Fu[Result]) =
     Auth { ctx ?=> me ?=>
-      meOrFetch(username)
+      meOrFetch(userId)
         .flatMapz: user =>
           (fuccess(user.is(me) || isGranted(_.CheatHunter)) >>|
             user.enabled.yes.so(env.clas.api.clas.isTeacherOf(me, user.id))).map {

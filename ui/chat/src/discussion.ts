@@ -185,8 +185,8 @@ function renderText(t: string, opts?: enhance.EnhanceOpts) {
   return h('t', t);
 }
 
-const userThunk = (name: string, title?: string, patron?: boolean, flair?: Flair) =>
-  userLink({ name, title, patron, line: !!patron, flair });
+const userThunk = (id: string, name: string, title?: string, patron?: boolean, flair?: Flair) =>
+  userLink({ id, name, title, patron, line: !!patron, flair });
 
 function renderLine(ctrl: ChatCtrl, line: Line): VNode {
   const textNode = renderText(line.t, ctrl.opts.enhance);

@@ -150,7 +150,7 @@ final class ClasUi(helpers: lila.ui.Helpers)(
         a(
           href     := routes.Clas.teacher(user.name),
           cls      := userClass(user.id, none, withOnline = true),
-          dataHref := routes.User.show(user.name)
+          dataHref := routes.User.show(user.id)
         )(
           lineIcon(user),
           titleTag(user),

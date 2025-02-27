@@ -13,7 +13,7 @@ final class PerfUi(helpers: Helpers, bits: TutorBits):
       frag(
         boxTop(
           h1(
-            a(href := routes.Tutor.user(user.username), dataIcon := Icon.LessThan, cls := "text"),
+            a(href := routes.Tutor.user(user.id), dataIcon := Icon.LessThan, cls := "text"),
             bits.otherUser(user),
             "Tutor: ",
             report.perf.trans
@@ -32,7 +32,7 @@ final class PerfUi(helpers: Helpers, bits: TutorBits):
         div(cls := "tutor__perf__angles tutor-cards")(
           angleCard(
             frag(report.perf.trans, " skills"),
-            routes.Tutor.skills(user.username, report.perf.key).some
+            routes.Tutor.skills(user.id, report.perf.key).some
           )(
             grade.peerGrade(concept.accuracy, report.accuracy),
             grade.peerGrade(concept.tacticalAwareness, report.awareness),
@@ -41,7 +41,7 @@ final class PerfUi(helpers: Helpers, bits: TutorBits):
           ),
           angleCard(
             frag(report.perf.trans, " openings"),
-            routes.Tutor.openings(user.username, report.perf.key).some
+            routes.Tutor.openings(user.id, report.perf.key).some
           )(
             Color.all.map: color =>
               report.openings(color).families.headOption.map { fam =>
@@ -51,7 +51,7 @@ final class PerfUi(helpers: Helpers, bits: TutorBits):
           angleCard(
             frag(report.perf.trans, " time management"),
             (report.perf.key != PerfKey.correspondence)
-              .option(routes.Tutor.time(user.username, report.perf.key))
+              .option(routes.Tutor.time(user.id, report.perf.key))
           )(
             if report.perf.key == PerfKey.correspondence then p("Not applicable.")
             else
@@ -63,7 +63,7 @@ final class PerfUi(helpers: Helpers, bits: TutorBits):
           ),
           angleCard(
             frag(report.perf.trans, " phases"),
-            routes.Tutor.phases(user.username, report.perf.key).some
+            routes.Tutor.phases(user.id, report.perf.key).some
           ):
             report.phases.map: phase =>
               grade.peerGrade(concept.phase(phase.phase), phase.mix)
@@ -96,19 +96,19 @@ final class PerfUi(helpers: Helpers, bits: TutorBits):
       report: TutorPerfReport,
       active: String
   )(using Context) = frag(
-    a(href := routes.Tutor.perf(user.username, report.perf.key), cls := active.active("perf"))(
+    a(href := routes.Tutor.perf(user.id, report.perf.key), cls := active.active("perf"))(
       report.perf.trans
     ),
-    a(href := routes.Tutor.skills(user.username, report.perf.key), cls := active.active("skills"))(
+    a(href := routes.Tutor.skills(user.id, report.perf.key), cls := active.active("skills"))(
       "Skills"
     ),
-    a(href := routes.Tutor.openings(user.username, report.perf.key), cls := active.active("openings"))(
+    a(href := routes.Tutor.openings(user.id, report.perf.key), cls := active.active("openings"))(
       "Openings"
     ),
-    a(href := routes.Tutor.time(user.username, report.perf.key), cls := active.active("time"))(
+    a(href := routes.Tutor.time(user.id, report.perf.key), cls := active.active("time"))(
       "Time management"
     ),
-    a(href := routes.Tutor.phases(user.username, report.perf.key), cls := active.active("phases"))(
+    a(href := routes.Tutor.phases(user.id, report.perf.key), cls := active.active("phases"))(
       "Game phases"
     )
   )
@@ -132,7 +132,7 @@ final class PerfUi(helpers: Helpers, bits: TutorBits):
         boxTop(
           h1(
             a(
-              href     := routes.Tutor.perf(user.username, report.perf.key),
+              href     := routes.Tutor.perf(user.id, report.perf.key),
               dataIcon := Icon.LessThan,
               cls      := "text"
             ),
@@ -166,7 +166,7 @@ final class PerfUi(helpers: Helpers, bits: TutorBits):
                   )("Watch ", phase.phase.name, " videos")
                 ),
                 (phase.phase == Phase.Opening).option(
-                  a(cls := "tutor-card__more", href := routes.Tutor.openings(user.username, report.perf.key))(
+                  a(cls := "tutor-card__more", href := routes.Tutor.openings(user.id, report.perf.key))(
                     "More about your ",
                     report.perf.trans,
                     " openings"
@@ -183,7 +183,7 @@ final class PerfUi(helpers: Helpers, bits: TutorBits):
         boxTop(
           h1(
             a(
-              href     := routes.Tutor.perf(user.username, report.perf.key),
+              href     := routes.Tutor.perf(user.id, report.perf.key),
               dataIcon := Icon.LessThan,
               cls      := "text"
             ),
@@ -209,7 +209,7 @@ final class PerfUi(helpers: Helpers, bits: TutorBits):
         boxTop(
           h1(
             a(
-              href     := routes.Tutor.perf(user.username, report.perf.key),
+              href     := routes.Tutor.perf(user.id, report.perf.key),
               dataIcon := Icon.LessThan,
               cls      := "text"
             ),

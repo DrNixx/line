@@ -197,7 +197,7 @@ final class PlanPages(helpers: Helpers)(fishnetPerDay: Int):
                   p(
                     trp.permanentPatron(),
                     br,
-                    a(href := routes.User.show(me.username))(trp.checkOutProfile())
+                    a(href := routes.User.show(me.userId))(trp.checkOutProfile())
                   )
                 }
               else
@@ -207,7 +207,7 @@ final class PlanPages(helpers: Helpers)(fishnetPerDay: Int):
                       trp.nowLifetime(),
                       br,
                       ctx.me.map { me =>
-                        a(href := routes.User.show(me.username))(trp.checkOutProfile())
+                        a(href := routes.User.show(me.userId))(trp.checkOutProfile())
                       }
                     )
                   else
@@ -216,7 +216,7 @@ final class PlanPages(helpers: Helpers)(fishnetPerDay: Int):
                         trp.nowOneMonth(),
                         br,
                         ctx.me.map { me =>
-                          a(href := routes.User.show(me.username))(trp.checkOutProfile())
+                          a(href := routes.User.show(me.userId))(trp.checkOutProfile())
                         }
                       ),
                       p(trp.downgradeNextMonth())

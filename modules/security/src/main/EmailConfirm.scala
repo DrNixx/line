@@ -101,7 +101,7 @@ object EmailConfirm:
     case AlreadyConfirmed(user: User)
     case NotFound
 
-  case class UserEmail(username: UserName, email: EmailAddress)
+  case class UserEmail(id: UserId, username: UserName, email: EmailAddress)
 
   object cookie:
 
@@ -111,14 +111,14 @@ object EmailConfirm:
     def make(lilaCookie: LilaCookie, user: User, email: EmailAddress)(using RequestHeader): Cookie =
       lilaCookie.session(
         name = name,
-        value = s"${user.username}$sep${email.value}"
+        value = s"${user.id}$sep${user.username}$sep${email.value}"
       )
 
     def has(req: RequestHeader) = req.session.data contains name
 
     def get(req: RequestHeader): Option[UserEmail] =
-      req.session.get(name).map(_.split(sep, 2)).collect { case Array(username, email) =>
-        UserEmail(UserName(username), EmailAddress(email))
+      req.session.get(name).map(_.split(sep, 3)).collect { case Array(id, username, email) =>
+        UserEmail(UserId(id), UserName(username), EmailAddress(email))
       }
 
   import lila.memo.RateLimit
@@ -146,7 +146,7 @@ object EmailConfirm:
   )
 
   def rateLimit[A](userEmail: UserEmail, req: RequestHeader, default: => Fu[A])(run: => Fu[A]): Fu[A] =
-    rateLimitPerUser(userEmail.username.id, default):
+    rateLimitPerUser(userEmail.id, default):
       rateLimitPerEmail(userEmail.email.value, default):
         rateLimitPerIP(HTTPRequest.ipAddress(req), default):
           run

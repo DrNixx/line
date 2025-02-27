@@ -40,7 +40,7 @@ final class AccountPages(helpers: Helpers, ui: AccountUi, flagApi: lila.core.use
             ),
             form3.actions(
               frag(
-                a(href := routes.User.show(me.username))(trs.cancelKeepAccount()),
+                a(href := routes.User.show(me.userId))(trs.cancelKeepAccount()),
                 form3.submit(
                   trs.closeAccount(),
                   icon = Icon.CautionCircle.some,
@@ -103,7 +103,7 @@ final class AccountPages(helpers: Helpers, ui: AccountUi, flagApi: lila.core.use
         ,
         form3.actions(
           frag(
-            a(href := routes.User.show(me.username))(trs.cancelKeepAccount()),
+            a(href := routes.User.show(me.userId))(trs.cancelKeepAccount()),
             form3.submit(
               "Delete my account",
               icon = Icon.CautionCircle.some,

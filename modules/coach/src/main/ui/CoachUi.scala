@@ -42,7 +42,7 @@ final class CoachUi(helpers: Helpers)(
   def widget(c: Coach.WithUser, link: Boolean)(using Context) =
     val profile = c.user.profileOrDefault
     frag(
-      link.option(a(cls := "overlay", href := routes.Coach.show(c.user.username))),
+      link.option(a(cls := "overlay", href := routes.Coach.show(c.user.id))),
       thumbnail(c, if link then 300 else 350),
       div(cls := "overview")(
         (if link then h2 else h1) (cls := "coach-name")(titleName(c)),
@@ -80,7 +80,7 @@ final class CoachUi(helpers: Helpers)(
                 profile.fideRating.map { r =>
                   frag("FIDE: ", r)
                 },
-                a(href := routes.User.show(c.user.username))(
+                a(href := routes.User.show(c.user.id))(
                   c.user.perfs.best6Perfs
                     .filter(c.user.perfs.hasEstablishedRating)
                     .map(showPerfRating(c.user.perfs, _))
@@ -128,14 +128,14 @@ final class CoachUi(helpers: Helpers)(
         OpenGraph(
           title = title,
           description = shorten(~(c.coach.profile.headline), 152),
-          url = s"$netBaseUrl${routes.Coach.show(c.user.username)}",
+          url = s"$netBaseUrl${routes.Coach.show(c.user.id)}",
           `type` = "profile",
           image = c.coach.picture.isDefined.option(thumbnailUrl(c.coach))
         )
       ):
         main(cls := "coach-show coach-full-page")(
           st.aside(cls := "coach-show__side coach-side")(
-            a(cls := "button button-empty", href := routes.User.show(c.user.username))(
+            a(cls := "button button-empty", href := routes.User.show(c.user.id))(
               trc.viewXProfile(c.user.username)
             ),
             if ctx.me.exists(_.is(c.coach)) then

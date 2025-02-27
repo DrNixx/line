@@ -4,9 +4,9 @@ import lila.app.{ *, given }
 
 final class UserTournament(env: Env, apiC: => Api) extends LilaController(env):
 
-  def path(username: UserStr, path: String, page: Int) = Open:
+  def path(userId: UserId, path: String, page: Int) = Open:
     Reasonable(page):
-      Found(meOrFetch(username).map(_.filter(_.enabled.yes || isGrantedOpt(_.SeeReport)))): user =>
+      Found(meOrFetch(userId).map(_.filter(_.enabled.yes || isGrantedOpt(_.SeeReport)))): user =>
         path match
           case "recent" =>
             env.tournament.leaderboardApi.recentByUser(user, page).flatMap { entries =>
@@ -30,30 +30,30 @@ final class UserTournament(env: Env, apiC: => Api) extends LilaController(env):
             }
           case "upcoming" =>
             Found(ctx.me): me =>
-              Redirect(routes.UserTournament.path(me.username, "upcoming"))
+              Redirect(routes.UserTournament.path(me.userId, "upcoming"))
           case _ => notFound
 
-  def apiTournamentsByOwner(name: UserStr, status: List[Int]) = AnonOrScoped():
-    Found(meOrFetch(name).map(_.filterNot(_.is(UserId.lichess)))): user =>
+  def apiTournamentsByOwner(userId: UserId, status: List[Int]) = AnonOrScoped():
+    Found(meOrFetch(userId).map(_.filterNot(_.is(UserId.lichess)))): user =>
       val tourStatus = status.flatMap(lila.core.tournament.Status.byId.get)
       apiC.jsonDownload:
         env.tournament.api
-          .byOwnerStream(user, tourStatus, maxPerSecond(name), getInt("nb") | Int.MaxValue)
+          .byOwnerStream(user, tourStatus, maxPerSecond(userId), getInt("nb") | Int.MaxValue)
           .mapAsync(1)(env.tournament.apiJsonView.fullJson)
 
-  def apiTournamentsByPlayer(name: UserStr) = AnonOrScoped():
-    Found(meOrFetch(name)): user =>
+  def apiTournamentsByPlayer(userId: UserId) = AnonOrScoped():
+    Found(meOrFetch(userId)): user =>
       apiC.jsonDownload:
         env.tournament.leaderboardApi
           .byPlayerStream(
             user.id,
             withPerformance = getBool("performance"),
-            maxPerSecond(name),
+            maxPerSecond(userId),
             getInt("nb") | Int.MaxValue
           )
           .map(env.tournament.apiJsonView.byPlayer)
 
-  private def maxPerSecond(of: UserStr)(using ctx: Context) =
+  private def maxPerSecond(of: UserId)(using ctx: Context) =
     MaxPerSecond:
       if ctx.is(of) then 50
       else if ctx.isOAuth then 30 // bonus for oauth logged in only (not for CSRF)

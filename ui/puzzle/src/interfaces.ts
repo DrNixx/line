@@ -94,6 +94,7 @@ export interface PuzzleGame {
 }
 
 export interface PuzzlePlayer {
+  id: string;
   name: string;
   rating?: number;
   title?: string;

@@ -76,7 +76,7 @@ object dashboard:
               PuzzleDashboard.dayChoices.map: d =>
                 a(
                   cls  := (d == days).option("current"),
-                  href := routes.Puzzle.dashboard(d, path, user.username.some)
+                  href := routes.Puzzle.dashboard(d, path, user.id.some)
                 )(trans.site.nbDays.pluralSame(d.value))
             )
           ),

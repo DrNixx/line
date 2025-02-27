@@ -78,7 +78,7 @@ final class ModUserTableUi(helpers: Helpers, modUi: ModUi):
               td(dataSort := u.seenAt.map(_.toMillis.toString))(u.seenAt.map(momentFromNowServer)),
               eraseButton.option(
                 td(
-                  postForm(action := routes.Mod.gdprErase(u.username)):
+                  postForm(action := routes.Mod.gdprErase(u.id)):
                     modUi.gdprEraseButton(u)(cls := "button button-red button-empty yes-no-confirm")
                 )
               ),
@@ -107,7 +107,7 @@ final class ModUserTableUi(helpers: Helpers, modUi: ModUi):
                 tr(
                   td(userLink(user)),
                   td(
-                    a(href := routes.Mod.permissions(user.username))(
+                    a(href := routes.Mod.permissions(user.id))(
                       lila.core.perm.Permission(user).map(_.name).mkString(", ")
                     )
                   ),

@@ -111,7 +111,7 @@ final class GameSearchUi(helpers: Helpers)(
     st.form(
       noFollow,
       cls    := "search__form",
-      action := routes.User.games(u.username, "search"),
+      action := routes.User.games(u.id, "search"),
       method := "GET"
     )(f.dataReqs)(
       table(

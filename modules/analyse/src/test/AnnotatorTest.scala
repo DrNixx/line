@@ -46,7 +46,7 @@ class AnnotatorTest extends munit.FunSuite:
 
   object LightUserApi:
     def mock: LightUserApiMinimal = new:
-      val sync  = LightUser.GetterSync(id => LightUser.fallback(id.into(UserName)).some)
+      val sync  = LightUser.GetterSync(id => LightUser.fallback(id).some)
       val async = LightUser.Getter(id => fuccess(sync(id)))
 
   test("empty game"):

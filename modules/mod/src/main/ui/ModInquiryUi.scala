@@ -45,7 +45,7 @@ final class ModInquiryUi(helpers: Helpers):
       "Notes"
     ),
     div(
-      postForm(cls := "note", action := s"${routes.User.writeNote(u.username)}?inquiry=1")(
+      postForm(cls := "note", action := s"${routes.User.writeNote(u.id)}?inquiry=1")(
         form3.textarea(lila.user.UserForm.note("text"))(
           placeholder := "Write a mod note"
         ),

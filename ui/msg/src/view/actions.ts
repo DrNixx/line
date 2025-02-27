@@ -14,7 +14,7 @@ export default function renderActions(ctrl: MsgCtrl, convo: Convo): VNode[] {
       key: 'play',
       attrs: {
         'data-icon': licon.Swords,
-        href: `/?user=${convo.user.name}#friend`,
+        href: `/?user=${convo.user.id}#friend`,
         title: i18n.challenge.challengeToPlay,
       },
     }),
@@ -56,7 +56,7 @@ export default function renderActions(ctrl: MsgCtrl, convo: Convo): VNode[] {
     h(`a.${cls}.bad`, {
       key: 'report',
       attrs: {
-        href: '/report/inbox/' + convo.user.name,
+        href: '/report/inbox/' + convo.user.id,
         'data-icon': licon.CautionTriangle,
         title: i18n.site.reportXToModerators(convo.user.name),
       },

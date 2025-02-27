@@ -47,7 +47,7 @@ export default function makeRenderers(): Renderers {
     },
     privateMessage: {
       html: n =>
-        generic(n, '/inbox/' + n.content.user!.name, licon.BubbleSpeech, [
+        generic(n, '/inbox/' + n.content.user!.id, licon.BubbleSpeech, [
           h('span', [h('strong', userFullName(n.content.user)), drawTime(n)]),
           h('span', n.content.text),
         ]),

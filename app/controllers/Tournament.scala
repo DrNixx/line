@@ -125,15 +125,15 @@ final class Tournament(env: Env, apiC: => Api)(using akka.stream.Materializer) e
       JsonOk:
         env.tournament.standingApi(tour, page, withScores = getBoolOpt("scores") | true)
 
-  def pageOf(id: TourId, userId: UserStr) = Open:
+  def pageOf(id: TourId, userId: UserId) = Open:
     Found(cachedTour(id)): tour =>
-      Found(api.pageOf(tour, userId.id)): page =>
+      Found(api.pageOf(tour, userId)): page =>
         JsonOk:
           env.tournament.standingApi(tour, page, withScores = getBoolOpt("scores") | true)
 
-  def player(tourId: TourId, userId: UserStr) = Anon:
+  def player(tourId: TourId, userId: UserId) = Anon:
     Found(cachedTour(tourId)): tour =>
-      Found(api.playerInfo(tour, userId.id)): player =>
+      Found(api.playerInfo(tour, userId)): player =>
         JsonOk:
           jsonView.playerInfoExtended(tour, player)
 

@@ -39,11 +39,11 @@ final class Api(
   def index = Anon:
     Ok.snip(views.bits.api)
 
-  def user(name: UserStr) = OpenOrScoped(): ctx ?=>
-    userC.userShowRateLimit(rateLimited, cost = if env.socket.isOnline.exec(name.id) then 1 else 2):
+  def user(userId: UserId) = OpenOrScoped(): ctx ?=>
+    userC.userShowRateLimit(rateLimited, cost = if env.socket.isOnline.exec(userId) then 1 else 2):
       userApi
         .extended(
-          name,
+          userId,
           withFollows = userWithFollows,
           withTrophies = getBool("trophies"),
           withCanChallenge = getBool("challenge")
@@ -130,9 +130,9 @@ final class Api(
   def game(id: GameId) = ApiRequest:
     gameApi.one(id, gameFlagsFromRequest).map(toApiResult)
 
-  def crosstable(name1: UserStr, name2: UserStr) = ApiRequest:
+  def crosstable(id1: UserId, id2: UserId) = ApiRequest:
     limit.crosstable(req.ipAddress, fuccess(ApiResult.Limited), cost = 1):
-      val (u1, u2) = (name1.id, name2.id)
+      val (u1, u2) = (id1, id2)
       env.game.crosstableApi(u1, u2).flatMap { ct =>
         (ct.results.nonEmpty && getBool("matchup"))
           .so:
@@ -314,10 +314,10 @@ final class Api(
                 jsOptToNdJson(env.api.eventStream(povs.map(_.game), challenges))
     }
 
-  def activity(name: UserStr) = ApiRequest:
+  def activity(userId: UserId) = ApiRequest:
     limit.userActivity(req.ipAddress, fuccess(ApiResult.Limited), cost = 1):
       lila.mon.api.activity.increment(1)
-      meOrFetch(name)
+      meOrFetch(userId)
         .flatMapz { user =>
           env.activity.read
             .recentAndPreload(user)

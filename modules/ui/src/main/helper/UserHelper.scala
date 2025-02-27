@@ -99,7 +99,7 @@ trait UserHelper:
   )(using Translate): Tag =
     span(
       cls      := userClass(user.id, cssClass, withOnline),
-      dataHref := userUrl(user.name)
+      dataHref := userUrl(user.id)
     )(
       withOnline.so(lineIcon(user.isPatron)),
       titleTag(user.title),
@@ -118,7 +118,7 @@ trait UserHelper:
   )(using Translate): Tag =
     a(
       cls  := userClass(user.id, none, withOnline, withPowerTip),
-      href := userUrl(user.username, params)
+      href := userUrl(user.id, params)
     )(userLinkContent(user, withOnline, withTitle, withPerfRating, name))
 
   def userSpan(
@@ -132,7 +132,7 @@ trait UserHelper:
   )(using Translate): Tag =
     span(
       cls      := userClass(user.id, cssClass, withOnline, withPowerTip),
-      dataHref := userUrl(user.username)
+      dataHref := userUrl(user.id)
     )(userLinkContent(user, withOnline, withTitle, withPerfRating, name))
 
   def userLinkContent(
@@ -163,7 +163,7 @@ trait UserHelper:
   )(using Translate): Tag =
     a(
       cls  := userClass(userId, cssClass, withOnline),
-      href := userUrl(username, params = params)
+      href := userUrl(userId, params = params)
     )(
       withOnline.so(if modIcon then moderatorIcon else lineIcon(isPatron)),
       titleTag(title),
@@ -176,16 +176,16 @@ trait UserHelper:
     val name = user.fold(userId.into(UserName))(_.name)
     span(
       cls      := userClass(userId, none, withOnline),
-      dataHref := userUrl(name)
+      dataHref := userUrl(userId)
     )(
       withOnline.so(lineIcon(user)),
       user.map(titleTag),
       name
     )
 
-  def userUrl(username: UserName, params: String = ""): Option[String] =
-    Option.when(username.id.noGhost):
-      s"${routes.User.show(username)}$params"
+  def userUrl(userId: UserId, params: String = ""): Option[String] =
+    Option.when(userId.noGhost):
+      s"${routes.User.show(userId)}$params"
 
   def userClass(
       userId: UserId,

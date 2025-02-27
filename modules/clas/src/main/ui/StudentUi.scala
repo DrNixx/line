@@ -110,18 +110,18 @@ final class StudentUi(helpers: Helpers, clasUi: ClasUi)(using NetDomain):
             cls  := "button button-empty"
           )(trans.site.edit()),
           a(
-            href := routes.User.show(s.user.username),
+            href := routes.User.show(s.user.id),
             cls  := "button button-empty"
           )(trans.site.profile()),
           a(
-            href := routes.Puzzle.dashboard(Days(7), "home", s.user.username.some),
+            href := routes.Puzzle.dashboard(Days(7), "home", s.user.id.some),
             cls  := "button button-empty"
           )(trans.puzzle.puzzleDashboard()),
           Granter
             .opt(_.Beta)
             .option(
               a(
-                href := routes.Tutor.user(s.user.username),
+                href := routes.Tutor.user(s.user.id),
                 cls  := "button button-empty"
               )("Tutor")
             )

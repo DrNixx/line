@@ -40,12 +40,12 @@ final class UserApi(
   }.add("joinedTeamAt", joinedAt)
 
   def extended(
-      username: UserStr,
+      userId: UserId,
       withFollows: Boolean,
       withTrophies: Boolean,
       withCanChallenge: Boolean
   )(using Option[Me], Lang): Fu[Option[JsObject]] =
-    userApi.withPerfs(username).flatMapz {
+    userApi.withPerfs(userId).flatMapz {
       extended(_, withFollows, withTrophies, withCanChallenge).dmap(some)
     }
 

@@ -60,12 +60,12 @@ final class UblogUi(helpers: Helpers, atomUi: AtomUi)(picfitUrl: lila.core.misc.
 
   def urlOfPost(post: UblogPost.BasePost) = post.blog match
     case UblogBlog.Id.User(userId) =>
-      routes.Ublog.post(usernameOrId(userId), post.slug, post.id)
+      routes.Ublog.post(userId, post.slug, post.id)
 
   def editUrlOfPost(post: UblogPost.BasePost) = routes.Ublog.edit(post.id)
 
   def newPostLink(user: User)(using Context) = a(
-    href     := routes.Ublog.form(user.username),
+    href     := routes.Ublog.form(user.id),
     cls      := "button button-green",
     dataIcon := Icon.PlusButton,
     title    := trans.ublog.newPost.txt()
@@ -76,7 +76,7 @@ final class UblogUi(helpers: Helpers, atomUi: AtomUi)(picfitUrl: lila.core.misc.
     Page(title)
       .css("bits.ublog")
       .js(posts.hasNextPage.option(infiniteScrollEsmInit) ++ ctx.isAuth.so(Esm("bits.ublog")))
-      .copy(atomLinkTag = link(href := routes.Ublog.userAtom(user.username), st.title := title).some)
+      .copy(atomLinkTag = link(href := routes.Ublog.userAtom(user.id), st.title := title).some)
       .flag(_.noRobots, !blog.listed):
         main(cls := "page-menu")(
           menu(Left(user.id)),
@@ -87,18 +87,18 @@ final class UblogUi(helpers: Helpers, atomUi: AtomUi)(picfitUrl: lila.core.misc.
                 blog.allows.moderate.option(tierForm(blog)),
                 blog.allows.draft.option(
                   frag(
-                    a(href := routes.Ublog.drafts(user.username))(trans.ublog.drafts()),
+                    a(href := routes.Ublog.drafts(user.id))(trans.ublog.drafts()),
                     newPostLink(user)
                   )
                 ),
-                atomUi.atomLink(routes.Ublog.userAtom(user.username))
+                atomUi.atomLink(routes.Ublog.userAtom(user.id))
               )
             ),
             standardFlash,
             if posts.nbResults > 0 then
               div(cls := "ublog-index__posts ublog-post-cards infinite-scroll")(
                 posts.currentPageResults.map(card(_)),
-                pagerNext(posts, np => s"${routes.Ublog.index(user.username, np).url}")
+                pagerNext(posts, np => s"${routes.Ublog.index(user.id, np).url}")
               )
             else
               div(cls := "ublog-index__posts--empty")(
@@ -173,7 +173,7 @@ final class UblogUi(helpers: Helpers, atomUi: AtomUi)(picfitUrl: lila.core.misc.
                 trans.ublog.drafts()
               ),
               div(cls := "box__top__actions")(
-                a(href := routes.Ublog.index(user.username))(trans.ublog.published()),
+                a(href := routes.Ublog.index(user.id))(trans.ublog.published()),
                 newPostLink(user)
               )
             ),
@@ -181,7 +181,7 @@ final class UblogUi(helpers: Helpers, atomUi: AtomUi)(picfitUrl: lila.core.misc.
               val url = if blog.allows.edit then editUrlOfPost else urlOfPost
               div(cls := "ublog-index__posts ublog-index__posts--drafts ublog-post-cards infinite-scroll")(
                 posts.currentPageResults.map { card(_, url) },
-                pagerNext(posts, np => routes.Ublog.drafts(user.username, np).url)
+                pagerNext(posts, np => routes.Ublog.drafts(user.id, np).url)
               )
             else
               div(cls := "ublog-index__posts--empty"):
@@ -273,7 +273,7 @@ final class UblogUi(helpers: Helpers, atomUi: AtomUi)(picfitUrl: lila.core.misc.
 
   def urlOfBlog(blog: UblogBlog): Call = urlOfBlog(blog.id)
   def urlOfBlog(blogId: UblogBlog.Id): Call = blogId match
-    case UblogBlog.Id.User(userId) => routes.Ublog.index(usernameOrId(userId))
+    case UblogBlog.Id.User(userId) => routes.Ublog.index(userId)
 
   private def tierForm(blog: UblogBlog) = postForm(action := routes.Ublog.setTier(blog.id.full)) {
     val form = lila.ublog.UblogForm.tier.fill(blog.tier)
@@ -315,8 +315,8 @@ final class UblogUi(helpers: Helpers, atomUi: AtomUi)(picfitUrl: lila.core.misc.
       ctx.me
         .ifTrue(ctx.kid.no)
         .map: me =>
-          a(cls := mine.option("active"), href := routes.Ublog.index(me.username))("My blog"),
-      a(cls := lichess.option("active"), href := routes.Ublog.index(UserName.lichess))("Lichess blog")
+          a(cls := mine.option("active"), href := routes.Ublog.index(me.userId))("My blog"),
+      a(cls := lichess.option("active"), href := routes.Ublog.index(UserId.lichess))("Lichess blog")
     )
 
   object atom:
@@ -326,8 +326,8 @@ final class UblogUi(helpers: Helpers, atomUi: AtomUi)(picfitUrl: lila.core.misc.
     )(using Translate) =
       atomUi.feed(
         elems = posts,
-        htmlCall = routes.Ublog.index(user.username),
-        atomCall = routes.Ublog.userAtom(user.username),
+        htmlCall = routes.Ublog.index(user.id),
+        atomCall = routes.Ublog.userAtom(user.id),
         title = trans.ublog.xBlog.txt(user.username),
         updated = posts.headOption.flatMap(_.lived).map(_.at)
       ): post =>

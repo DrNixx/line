@@ -32,7 +32,7 @@ final class StreamerUi(helpers: Helpers, bits: StreamerBits)(using netDomain: Ne
     def widget(s: Streamer.WithContext, stream: Option[Stream]) =
       frag(
         if requests then a(href := s"${routes.Streamer.edit}?u=${s.user.username}", cls := "overlay")
-        else bits.redirectLink(s.user.username, stream.isDefined.some)(cls := "overlay"),
+        else bits.redirectLink(s.user.id, stream.isDefined.some)(cls := "overlay"),
         stream.isDefined.option(span(cls := "live-ribbon")(span(trans.streamer.live()))),
         bits.thumbnail(s.streamer, s.user),
         div(cls := "overview")(
@@ -112,7 +112,7 @@ final class StreamerUi(helpers: Helpers, bits: StreamerBits)(using netDomain: Ne
           title = s"${s.titleName} streams chess",
           description =
             shorten(~(s.streamer.headline.map(_.value).orElse(s.streamer.description.map(_.value))), 152),
-          url = s"$netBaseUrl${routes.Streamer.show(s.user.username)}",
+          url = s"$netBaseUrl${routes.Streamer.show(s.user.id)}",
           `type` = "video",
           image = s.streamer.hasPicture.option(bits.thumbnail.url(s.streamer))
         )
@@ -169,7 +169,7 @@ final class StreamerUi(helpers: Helpers, bits: StreamerBits)(using netDomain: Ne
             div(cls := "box streamer")(
               bits.header(s),
               div(cls := "description")(richText(s.streamer.description.fold("")(_.value))),
-              ctx.pref.showRatings.option(a(cls := "ratings", href := routes.User.show(s.user.username)):
+              ctx.pref.showRatings.option(a(cls := "ratings", href := routes.User.show(s.user.id)):
                 perfRatings),
               activities
             )

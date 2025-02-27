@@ -19,7 +19,7 @@ object gamesContent:
         filters.list.map: f =>
           a(
             cls  := s"nm-item to-${f.name}${(filters.current == f).so(" active")}",
-            href := routes.User.games(u.username, f.name)
+            href := routes.User.games(u.id, f.name)
           )(page.userGameFilterTitle(u, nbs, f))
       ),
       nbs.crosstable
@@ -37,7 +37,7 @@ object gamesContent:
               div(cls := "search__rows infinite-scroll")(
                 views.game
                   .widgets(pager.currentPageResults, notes, user = u.some, ownerLink = ctx.is(u)),
-                pagerNext(pager, np => routes.User.games(u.username, filterName, np).url)
+                pagerNext(pager, np => routes.User.games(u.id, filterName, np).url)
               )
             )
           else div(cls := "search__status")(strong(trans.site.noGameFound.txt()))
@@ -57,7 +57,7 @@ object gamesContent:
               views.game
                 .widgets(pager.currentPageResults, notes, user = u.some, ownerLink = ctx.is(u))
             ,
-            pagerNext(pager, np => routes.User.games(u.username, filterName, np).url)
+            pagerNext(pager, np => routes.User.games(u.id, filterName, np).url)
           )
       )
     )

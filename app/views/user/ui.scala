@@ -26,7 +26,7 @@ def mini(
     .map: cross =>
       a(
         cls   := "upt__score",
-        href  := s"${routes.User.games(u.username, "me")}#games",
+        href  := s"${routes.User.games(u.id, "me")}#games",
         title := trans.site.nbGames.pluralTxt(cross.nbGames, cross.nbGames.localize)
       ):
         trans.site.yourScore(raw:

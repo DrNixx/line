@@ -51,7 +51,7 @@ export function userComplete(opts: UserCompleteOpts): void {
         '" ' +
         (tag === 'a' ? '' : 'data-') +
         'href="/@/' +
-        o.name +
+        o.id +
         '">' +
         '<i class="line' +
         (o.patron ? ' patron' : '') +

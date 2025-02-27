@@ -8,12 +8,12 @@ import lila.insight.{ InsightDimension, InsightMetric }
 
 final class Insight(env: Env) extends LilaController(env):
 
-  def refresh(username: UserStr) = OpenOrScoped(): ctx ?=>
-    AccessibleApi(username): user =>
+  def refresh(userId: UserId) = OpenOrScoped(): ctx ?=>
+    AccessibleApi(userId): user =>
       env.insight.api.indexAll(user).inject(Ok)
 
-  def index(username: UserStr) = OpenOrScoped(): ctx ?=>
-    Accessible(username): user =>
+  def index(userId: UserId) = OpenOrScoped(): ctx ?=>
+    Accessible(userId): user =>
       negotiate(
         html = doPath(user, InsightMetric.MeanCpl.key, InsightDimension.Perf.key, ""),
         json = env.insight.api.userStatus(user).map { status =>
@@ -21,8 +21,8 @@ final class Insight(env: Env) extends LilaController(env):
         }
       )
 
-  def path(username: UserStr, metric: String, dimension: String, filters: String) = Open:
-    Accessible(username) { doPath(_, metric, dimension, ~lila.common.String.decodeUriPath(filters)) }
+  def path(userId: UserId, metric: String, dimension: String, filters: String) = Open:
+    Accessible(userId) { doPath(_, metric, dimension, ~lila.common.String.decodeUriPath(filters)) }
 
   private def doPath(user: lila.user.User, metric: String, dimension: String, filters: String)(using
       Context
@@ -48,9 +48,9 @@ final class Insight(env: Env) extends LilaController(env):
         yield Ok(page)
     }
 
-  def json(username: UserStr) =
+  def json(userId: UserId) =
     OpenOrScopedBody(parse.json)(): ctx ?=>
-      AccessibleApi(username) { processQuestion(_, ctx.body) }
+      AccessibleApi(userId) { processQuestion(_, ctx.body) }
 
   private def processQuestion(user: lila.user.User, body: Request[JsValue])(using Translate) =
     body.body
@@ -65,16 +65,16 @@ final class Insight(env: Env) extends LilaController(env):
             .map { Ok(_) }
       )
 
-  private def Accessible(username: UserStr)(f: lila.user.User => Fu[Result])(using Context) =
-    isAccessible(username)(f, u => Forbidden.page(views.insight.forbidden(u)))
+  private def Accessible(userId: UserId)(f: lila.user.User => Fu[Result])(using Context) =
+    isAccessible(userId)(f, u => Forbidden.page(views.insight.forbidden(u)))
 
-  private def AccessibleApi(username: UserStr)(f: lila.user.User => Fu[Result])(using Context) =
-    isAccessible(username)(f, _ => Forbidden)
+  private def AccessibleApi(userId: UserId)(f: lila.user.User => Fu[Result])(using Context) =
+    isAccessible(userId)(f, _ => Forbidden)
 
   private def isAccessible(
-      username: UserStr
+      userId: UserId
   )(f: lila.user.User => Fu[Result], fallback: lila.user.User => Fu[Result])(using Context): Fu[Result] =
-    Found(meOrFetch(username)): u =>
+    Found(meOrFetch(userId)): u =>
       env.insight.share
         .grant(u)(using ctx.me)
         .flatMap:

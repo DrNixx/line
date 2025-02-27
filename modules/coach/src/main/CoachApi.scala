@@ -21,8 +21,8 @@ final class CoachApi(
 
   def byId[U: UserIdOf](u: U): Fu[Option[Coach]] = coll.byId[Coach](u.id)
 
-  def find(username: UserStr): Fu[Option[Coach.WithUser]] =
-    userApi.byId(username).flatMapz(find)
+  def find(userId: UserId): Fu[Option[Coach.WithUser]] =
+    userApi.byId(userId).flatMapz(find)
 
   def canCoach = Granter.ofUser(_.Coach)
 
