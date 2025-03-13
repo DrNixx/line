@@ -7,7 +7,7 @@ import ScalatagsTemplate.{ *, given }
 object bits:
 
   lazy val stage = a(
-    href  := "https://lichess.org",
+    href  := "https://live.chess-online.com",
     style := """
 background: #7f1010;
 color: #fff;
@@ -19,7 +19,7 @@ border-top-right-radius: 3px;
 z-index: 99;
 """
   ):
-    "This is an empty Lichess preview website, go to lichess.org instead"
+    "This is an empty Chess-Online Arena preview website, go to live.chess-online.com instead"
 
   val connectLinks: Frag =
     div(cls := "connect-links")(
@@ -53,8 +53,8 @@ z-index: 99;
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; script-src https://cdn.jsdelivr.net blob:; child-src blob:; connect-src https://raw.githubusercontent.com; img-src data: https://lichess.org https://lichess1.org;">
-    <title>Lichess.org API reference</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; script-src https://cdn.jsdelivr.net blob:; child-src blob:; connect-src https://raw.githubusercontent.com; img-src data: https://live.chess-online.com https://cdn.chess-online.com;">
+    <title>Chess-Online.Com API reference</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>body { margin: 0; padding: 0; }</style>
   </head>

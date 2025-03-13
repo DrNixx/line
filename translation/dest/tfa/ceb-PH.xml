@@ -9,5 +9,5 @@
   <string name="disableTwoFactor">Dili mag two-factor authentication</string>
   <string name="twoFactorEnabled">Naka Two-factor authentication</string>
   <string name="openTwoFactorApp">Abrihi ang Two-factor authentication App sa imong celpon. Para makita imong authentication code ug para ma pamatud.an imong pagkatao.</string>
-  <string name="setupReminder">Palihog Pag Two-Factor Authentication para sa seguridad sa imong account dri sa website na https://lichess.org/account/twofactor. Nakuha nimo ning mensahe kay ang imong account may espesyal nga responsibilidad sama sa Team Lider, Coach, Titser, o Streamer.</string>
+  <string name="setupReminder">Palihog Pag Two-Factor Authentication para sa seguridad sa imong account dri sa website na https://chess-online.com/account/twofactor. Nakuha nimo ning mensahe kay ang imong account may espesyal nga responsibilidad sama sa Team Lider, Coach, Titser, o Streamer.</string>
 </resources>

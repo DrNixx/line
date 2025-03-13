@@ -46,7 +46,7 @@ Spieler C Spieler D
 Um einem Spieler ein Freilos (1 Punkt) statt einer Paarung zu geben, füge eine Zeile wie folgt ein:
 Spieler E 1
 Nicht gelistete Spieler werden als abwesend betrachtet und erhalten null Punkte.
-Lass dieses Feld leer, um von Lichess automatisch Paare erstellen zu lassen.</string>
+Lass dieses Feld leer, um von Chess-Online automatisch Paare erstellen zu lassen.</string>
   <string name="mustHavePlayedTheirLastSwissGame">Sie müssen ihre letzte Partie nach Schweizer System gespielt haben</string>
   <string name="mustHavePlayedTheirLastSwissGameHelp">Lass Spieler nur dann teilnehmen, wenn sie ihr letztes Spiel nach Schweizer System gespielt haben. Wenn sie bei einem vor kurzem stattgefundenen Turnier nach Schweizer System nicht erschienen sind, können sie an deinem Turnier nicht teilnehmen. Das führt zu mehr Erfahrung mit dem Schweizer System für Spieler, die tatsächlich erscheinen.</string>
   <string name="newSwiss">Neues Turnier nach Schweizer System</string>
@@ -78,7 +78,7 @@ Zusätzlich wird ein halber Punkt vergeben, wenn ein Spieler einem Turnier zu sp
  Er kann jederzeit wieder am Turnier teilnehmen.</string>
   <string name="protectionAgainstNoShowQ">Was wird bei Nichterscheinen unternommen?</string>
   <string name="protectionAgainstNoShowA" comment="By &quot;a game&quot; - we mean just one game. Missing even one game will prevent that player from joining a new Swiss event for a certain amount of time.">Spieler, die sich für ein Turnier nach dem Schweizer System anmelden, aber ihre Partien nicht spielen, können ein Problem darstellen.
-Um diesem Problem entgegenzuwirken, verhindert Lichess, dass Spieler, die es versäumt haben, eine Partie zu spielen, sich für eine bestimmte Zeit für ein neues Turnier nach dem Schweizer System anmelden können.
+Um diesem Problem entgegenzuwirken, verhindert Chess-Online, dass Spieler, die es versäumt haben, eine Partie zu spielen, sich für eine bestimmte Zeit für ein neues Turnier nach dem Schweizer System anmelden können.
 Der Initiator eines Turniers nach dem Schweizer System kann jedoch entscheiden, ihnen trotzdem die Teilnahme am Turnier zu ermöglichen.</string>
   <string name="lateJoinQ">Können Spieler im Nachhinein beitreten?</string>
   <string name="lateJoinA">Ja, bis mehr als die Hälfte der Runden begonnen wurden; so können Spieler zum Beispiel an einem elfründigen Turnier nach Schweizer System vor dem Beginn der Runde 6 und in einem zwölfründigen vor Beginn der Runde 7 beitreten. Späteinsteiger erhalten einen halben Punkt gutgeschrieben, auch wenn sie mehrere Runden verpasst haben.</string>
@@ -89,7 +89,7 @@ Der Initiator eines Turniers nach dem Schweizer System kann jedoch entscheiden, 
 Der Grund dafür ist, dass es keine faire Möglichkeit gibt, mit Leuten umzugehen, die das Turnier vorzeitig verlassen. Wir können nicht erwarten, dass alle Spieler in einem Online-Event alle ihre Spiele spielen. Das wird einfach nicht passieren, und dadurch wären die meisten Rundenturniere fehlerhaft und unfair, was ihren eigentlichen Sinn zunichte macht.
 Am nähesten an ein online Rundenturnier kommt, ein Turnier nach Schweizer System und einer sehr hohen Anzahl an Runden zu spielen. Dadurch werden alle möglichen Paarungen gespielt, bevor das Turnier endet.</string>
   <string name="otherSystemsQ">Was ist mit anderen Turniersystemen?</string>
-  <string name="otherSystemsA">Wir planen derzeit keine weiteren Turniersysteme zu Lichess hinzuzufügen.</string>
+  <string name="otherSystemsA">Wir planen derzeit keine weiteren Turniersysteme zu Chess-Online hinzuzufügen.</string>
   <string name="swissDescription">In einem Turnier nach Schweizer System %1$s spielt jeder Spieler nicht notwendigerweise gegen alle anderen Teilnehmer. Die Teilnehmer treffen in jeder Runde eins gegen eins aufeinander und werden mithilfe einer Reihe von Regeln einander zugelost, um sicherzustellen, dass jeder Wettbewerber gegen Gegner mit einem ähnlichen Punktestand spielt, aber nicht gegen den gleichen Gegner mehr als einmal. Der Gewinner ist der Teilnehmer mit den höchsten Gesamtpunkten, die aus allen Runden addiert werden. Alle Spieler spielen in jeder Runde, es sei denn, es gibt eine ungerade Anzahl an Teilnehmern.</string>
   <string name="teamOnly">Turniere nach Schweizer System können nur von Teamleitern erstellt werden und können nur von Teammitgliedern gespielt werden.           
 %1$s um an Turnieren nach Schweizer System teilzunehmen.</string>

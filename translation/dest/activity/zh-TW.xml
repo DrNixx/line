@@ -3,7 +3,7 @@
   <string name="activity">活動</string>
   <string name="hostedALiveStream">主持一個現場直播</string>
   <plurals name="supportedNbMonths">
-    <item quantity="other">以 %2$s 身分贊助 lichess.org %1$s 個月</item>
+    <item quantity="other">以 %2$s 身分贊助 chess-online.com %1$s 個月</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="other">在 %2$s 練習了 %1$s 個棋局</item>
@@ -44,7 +44,7 @@
   <plurals name="createdNbStudies">
     <item quantity="other">創造了%s個新的研究</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="other">完成了%s場錦標賽</item>
   </plurals>
   <plurals name="rankedInTournament">
@@ -54,7 +54,7 @@
     <item quantity="other">參與過 %s 場瑞士制錦標賽</item>
   </plurals>
   <string name="rankedInSwissTournament">在%2$s中排名 %1$s</string>
-  <string name="signedUp">在 lichess.org 中註冊</string>
+  <string name="signedUp">在 chess-online.com 中註冊</string>
   <plurals name="joinedNbTeams">
     <item quantity="other">加入 %s 團隊</item>
   </plurals>

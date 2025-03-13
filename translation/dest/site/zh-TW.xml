@@ -217,9 +217,9 @@
   <string name="forgotPassword">忘記密碼？</string>
   <string name="error.weakPassword">此密碼太常見，且很容易被猜到。</string>
   <string name="error.namePassword">請不要把密碼設為使用者名稱。</string>
-  <string name="blankedPassword">你在其他站點使用過相同的密碼，並且這些站點已經失效。為確保你的 Lichess 帳戶安全，你需要設置新密碼。感謝你的理解。</string>
-  <string name="youAreLeavingLichess">你正要離開 Lichess</string>
-  <string name="neverTypeYourPassword">不要在其他網站輸入你的 Lichess 密碼！</string>
+  <string name="blankedPassword">你在其他站點使用過相同的密碼，並且這些站點已經失效。為確保你的 Chess-Online 帳戶安全，你需要設置新密碼。感謝你的理解。</string>
+  <string name="youAreLeavingLichess">你正要離開 Chess-Online</string>
+  <string name="neverTypeYourPassword">不要在其他網站輸入你的 Chess-Online 密碼！</string>
   <string name="proceedToX">前往 %s</string>
   <string name="passwordSuggestion">不要使用他人建議的密碼，他們會用此密碼盜取你的帳戶。</string>
   <string name="emailSuggestion">不要使用他人提供的電子郵件，他們會用它盜取您的帳號。</string>
@@ -657,7 +657,7 @@
   <string name="simulHostExtraTime">主持人的額外時間</string>
   <string name="simulAddExtraTimePerPlayer">每有一個玩家加入車輪戰，您棋鐘的初始時間都將增加。</string>
   <string name="simulHostExtraTimePerPlayer">於每位玩家加入後棋鐘增加的額外時間</string>
-  <string name="lichessTournaments">Lichess 錦標賽</string>
+  <string name="lichessTournaments">Chess-Online 錦標賽</string>
   <string name="tournamentFAQ">競技場錦標賽常見問題</string>
   <string name="timeBeforeTournamentStarts">錦標賽準備時間</string>
   <string name="averageCentipawnLoss">平均厘兵損失</string>
@@ -706,7 +706,7 @@
   <string name="weHaveSentYouAnEmailTo">我們發送了一封郵件到 %s。點擊郵件中的連結來重置您的密碼。</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">註冊帳號表示同意並且遵守 %s</string>
   <string name="readAboutOur">閱讀我們的%s</string>
-  <string name="networkLagBetweenYouAndLichess">您和 Lichess 之間的網路停滯</string>
+  <string name="networkLagBetweenYouAndLichess">您和 Chess-Online 之間的網路停滯</string>
   <string name="timeToProcessAMoveOnLichessServer">lichess 伺服器上處理走棋的時間</string>
   <string name="downloadAnnotated">下載含有棋子走動方向的棋局</string>
   <string name="downloadRaw">下載純文字</string>
@@ -835,7 +835,7 @@
   <plurals name="andSaveNbPremoveLines">
     <item quantity="other">以省略%s個預走的棋步</item>
   </plurals>
-  <string name="showUnreadLichessMessage">你收到一個來自 Lichess 的私訊。</string>
+  <string name="showUnreadLichessMessage">你收到一個來自 Chess-Online 的私訊。</string>
   <string name="clickHereToReadIt">點擊以閱讀</string>
   <string name="sorry">抱歉：（</string>
   <string name="weHadToTimeYouOutForAWhile">我們必須將您暫時封鎖</string>
@@ -848,7 +848,7 @@
   <string name="tryToWin">試著在每個棋局裡獲勝(或至少平手)</string>
   <string name="resignLostGames">投降（不要讓時間耗盡）</string>
   <string name="temporaryInconvenience">我們對於給您帶來的不便深表歉意</string>
-  <string name="wishYouGreatGames">並祝您在 lichess.org 上玩得開心。</string>
+  <string name="wishYouGreatGames">並祝您在 chess-online.com 上玩得開心。</string>
   <string name="thankYouForReading">感謝您的閱讀！</string>
   <string name="lifetimeScore">帳戶總分</string>
   <string name="currentMatchScore">現時的對局分數</string>
@@ -937,7 +937,7 @@
   <string name="analysisOptions">分析局面</string>
   <string name="focusChat">聚焦聊天</string>
   <string name="showHelpDialog">顯示此說明欄</string>
-  <string name="reopenYourAccount" comment="Appears on the page where players can reopen their closed account - https://lichess.org/account/reopen (you can only see this when you logged out).">重新開啟帳戶</string>
+  <string name="reopenYourAccount" comment="Appears on the page where players can reopen their closed account - https://chess-online.com/account/reopen (you can only see this when you logged out).">重新開啟帳戶</string>
   <string name="emailAssociatedToaccount">和此帳號相關的電子信箱</string>
   <string name="sentEmailWithLink">我們已將網址寄送至你的信箱</string>
   <string name="tournamentEntryCode">錦標賽參賽碼</string>
@@ -948,7 +948,7 @@
   <string name="youCantStartNewGame">直到當下這局下完之前，你無法開始新的棋局</string>
   <string name="since">自</string>
   <string name="until">直到</string>
-  <string name="lichessDbExplanation">來自 Lichess 用戶的所有評分遊戲</string>
+  <string name="lichessDbExplanation">來自 Chess-Online 用戶的所有評分遊戲</string>
   <string name="switchSides">更換所持顏色</string>
   <string name="closingAccountWithdrawAppeal">關閉帳戶將會收回你的上訴</string>
   <string name="ourEventTips">舉辦賽事的小建議</string>

@@ -24,7 +24,7 @@ object embed:
 
   def lpv(pgn: PgnStr, orientation: Option[Color], getPgn: Boolean)(using ctx: EmbedContext) =
     views.base.embed.minimal(
-      title = "Lichess PGN viewer",
+      title = "Chess PGN viewer",
       cssKeys = List("bits.lpv.embed"),
       modules = Esm("site.lpvEmbed")
     )(

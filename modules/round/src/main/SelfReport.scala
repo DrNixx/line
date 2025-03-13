@@ -34,7 +34,7 @@ final class SelfReport(
       def doLog(): Unit =
         if name != "ceval" && logOnceEvery(ip.str) then
           lila.log("cheat").branch("jslog").info {
-            s"$ip https://lichess.org/$fullId ${user.fold("anon")(_.id)} $name"
+            s"$ip https://live.chess-online.com/$fullId ${user.fold("anon")(_.id)} $name"
           }
           lila.mon.cheat.selfReport(name, userId.isDefined).increment()
       if fullId.value == "____________" then doLog()

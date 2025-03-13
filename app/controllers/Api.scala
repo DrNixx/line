@@ -303,7 +303,7 @@ final class Api(
   val eventStream =
     Scoped(_.Bot.Play, _.Board.Play, _.Challenge.Read) { _ ?=> me ?=>
       def limited = rateLimited:
-        "Please don't poll this endpoint, it is intended to be streamed. See https://lichess.org/api#tag/Board/operation/apiStreamEvent."
+        "Please don't poll this endpoint, it is intended to be streamed. See https://live.chess-online.com/api#tag/Board/operation/apiStreamEvent."
       limit.eventStream(me, limited):
         env.round.proxyRepo
           .urgentGames(me)

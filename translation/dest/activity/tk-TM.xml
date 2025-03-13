@@ -41,7 +41,7 @@
     <item quantity="one">%s täze türgenleşik döretdi</item>
     <item quantity="other">%s täze türgenleşik döretdi</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="one">%s bäsleşige gatnaşdy</item>
     <item quantity="other">%s bäsleşige gatnaşdy</item>
   </plurals>
@@ -49,7 +49,7 @@
     <item quantity="one">%3$s oýun bilen %4$s bäsleşiginde %1$s. orun aldy (naýbaşy %2$s%%)</item>
     <item quantity="other">%3$s oýun bilen %4$s bäsleşiginde %1$s. orun aldy (naýbaşy %2$s%%)</item>
   </plurals>
-  <string name="signedUp">Lichess.org-a agza boldy</string>
+  <string name="signedUp">Chess-Online.Com-a agza boldy</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">%s topara agza boldy</item>
     <item quantity="other">%s topara agza boldy</item>

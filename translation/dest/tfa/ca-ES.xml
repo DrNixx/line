@@ -13,6 +13,6 @@
   <string name="twoFactorEnabled">Autenticació en dos passos habilitada</string>
   <string name="twoFactorToDisable">Necessites la teva contrasenya i un codi d\'autenticació de la teva aplicació d\'autenticació per a desactivar l\'autenticació en dos passos.</string>
   <string name="openTwoFactorApp">Obre al teu dispositiu l\'aplicació d\'autenticació de dos factors per veure el teu codi d\'autenticació verificar la teva identitat.</string>
-  <string name="setupReminder">Si us plau, activeu l\'autentificació en dues passes per augmentar la seguretat del vostre compte a https://lichess.org/account/twofactor.
+  <string name="setupReminder">Si us plau, activeu l\'autentificació en dues passes per augmentar la seguretat del vostre compte a https://chess-online.com/account/twofactor.
 Heu rebut aquest missatge perquè el vostre compte té responsabilitats especials com líder d\'un equip, entrenador, professor o streamer</string>
 </resources>

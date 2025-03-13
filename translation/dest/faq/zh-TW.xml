@@ -17,7 +17,7 @@
   <string name="areThereWebsitesBasedOnLichess">有基於Lichess的網頁嗎？</string>
   <string name="yesLichessInspiredOtherOpenSourceWebsites">有的，Lichess的確有啟發其他使用我們%1$s、%2$s或是%3$s的開源網站。</string>
   <string name="keyboardShortcuts">有哪些快捷鍵？</string>
-  <string name="keyboardShortcutsExplanation">某些 Lichess 頁面有快捷鍵。嘗試在研究、分析、謎題、或下棋頁面中按下「？」以查看可用快捷鍵。</string>
+  <string name="keyboardShortcutsExplanation">某些 Chess-Online 頁面有快捷鍵。嘗試在研究、分析、謎題、或下棋頁面中按下「？」以查看可用快捷鍵。</string>
   <string name="fairPlay">公平的下棋</string>
   <string name="whenAmIEligibleRatinRefund">我什麼時候可以有資格自動取回與作弊者對弈的積分？</string>
   <string name="ratingRefundExplanation" comment="In answer to the question 'When am I eligible for the automatic rating refund from cheaters?'">在一個棋手被標記的一分鐘後，他們最近的40局積分賽將在3天內無效。如過你是他們這幾局的對手並且積分不是浮動的狀態，你輸掉的積分(輸局或和局) 將會退回，退回的積分上限基於你的最高積分及在那些棋局之後的積分變化。
@@ -66,7 +66,7 @@ Lichess上的電腦分析是基於Stockfish的。</string>
 
 請查看 %3$s 練習這個著法。</string>
   <string name="goodIntroduction">好的自我介紹</string>
-  <string name="lichessTraining">Lichess 訓練</string>
+  <string name="lichessTraining">Chess-Online 訓練</string>
   <string name="watchIMRosenCheckmate">觀看國際大師 Eric Rosen 將死 %s</string>
   <string name="threefoldRepetition">三次重複局面</string>
   <string name="threefoldRepetitionExplanation">如果同一個局面出現了三次，玩家可以根據%1$s提和。Lichess執行FIDE官方規則，這些規則在 %2$s第9.2條中已有規定。</string>
@@ -78,7 +78,7 @@ Lichess上的電腦分析是基於Stockfish的。</string>
   <string name="threeFoldHasToBeClaimed">三次重復局面和棋需要由其中一個選手提出。您可以通過按下已顯示的按鈕，或者在您最後一次重復移動之前提出和棋。無論對方接不接受，根據三次重複規範，遊戲會以和棋結束。您也可以%1$sLichess為您自動提和重復局面。此外，五次重復局面總是立即結束游戲。</string>
   <string name="configure">配置</string>
   <string name="accounts">帳戶</string>
-  <string name="titlesAvailableOnLichess">Lichess 上有什麼頭銜?</string>
+  <string name="titlesAvailableOnLichess">Chess-Online 上有什麼頭銜?</string>
   <string name="lichessRecognizeAllOTBtitles">Lichess接受所有OTB (在棋盤上) 對局得到的國際象棋聯稱號，以及%1$s，以下列出：</string>
   <string name="showYourTitle">如果你有 OTB 頭銜（GM、IM、FM、CM）你可以完成%1$s以顯示在帳號中，包括上傳清晰的你與可辨識的身分卡、文件的照片。
 
@@ -86,10 +86,10 @@ Lichess上的電腦分析是基於Stockfish的。</string>
 認證成為頭銜玩家有助於躋身於頭銜競技場並且取得 %2$s 頭銜。</string>
   <string name="asWellAsManyNMtitles">眾多國家大師頭銜</string>
   <string name="verificationForm">驗證表格</string>
-  <string name="canIbecomeLM">我可以獲得 Lichess Master (LM) 頭銜嗎？</string>
+  <string name="canIbecomeLM">我可以獲得 Chess-Online Master (LM) 頭銜嗎？</string>
   <string name="noUpperCaseDot">不行</string>
-  <string name="lMtitleComesToYouDoNotRequestIt">這個尊稱是非官方的，只存在於 Lichess 上。
-我們很少根據自己的判斷將其授予作為 Lichess 好公民的知名玩家。你不能自行得到 LM 頭銜，是 LM 頭銜會過來給你。如果您符合條件，您將會收到我們關於它以及接受或拒絕選擇的消息。
+  <string name="lMtitleComesToYouDoNotRequestIt">這個尊稱是非官方的，只存在於 Chess-Online 上。
+我們很少根據自己的判斷將其授予作為 Chess-Online 好公民的知名玩家。你不能自行得到 LM 頭銜，是 LM 頭銜會過來給你。如果您符合條件，您將會收到我們關於它以及接受或拒絕選擇的消息。
 
 請問要求取得 LM 頭銜。</string>
   <string name="whatUsernameCanIchoose">我可以取甚麼樣的使用者名稱？</string>
@@ -98,12 +98,12 @@ Lichess上的電腦分析是基於Stockfish的。</string>
   <string name="canIChangeMyUsername">我可以更改我的使用者名稱嗎？</string>
   <string name="usernamesCannotBeChanged" comment="&quot;Materialised&quot; is a technical term: https://en.wikipedia.org/wiki/Materialized_view&#10;In this context, it means that it is used in many places and too significant to change, on a technical level. It also comments on the social perspective (&quot;people's minds&quot;).">因為某些技術性原因無法更改使用者名稱。使用者名稱已太被廣泛使用：資料庫、導出、日誌、與其他人的腦中。你可以更改大小寫一次。</string>
   <string name="uniqueTrophies">獨一無二的獎盃</string>
-  <string name="ownerUniqueTrophies">這個獎杯在 Lichess 的歷史上是獨一無二的，除了 %1$s 之外沒有人曾經擁有它。</string>
+  <string name="ownerUniqueTrophies">這個獎杯在 Chess-Online 的歷史上是獨一無二的，除了 %1$s 之外沒有人曾經擁有它。</string>
   <string name="wayOfBerserkExplanation">hiimgosu 為了贏得獎盃而以 berserk 比賽鍛鍊自己並且最終贏得每場%s</string>
   <string name="aHourlyBulletTournament">小時制Bullet模式錦標賽</string>
-  <string name="goldenZeeExplanation" comment="goldenZeeExplanation&#10;&#10;ZugAddict is a legendary player and streamer, do not translate his name.&#10;https://lichess.org/@/ZugAddict&#10;&#10;Thibault is the name of the founder of Lichess: https://lichess.org/@/thibault">當時，ZugAddict己經直播了兩個小時，但他仍未能在1+0的棋局中擊敗第八級人工智能。Thibault吿訴他，如果他能在直播上成功擊敗人工智能，便會獲得一個獨特的奬盃。一個小時後，他粉碎了Stockfish， Thibault也兌現了承諾。</string>
-  <string name="lichessRatings">Lichess 評分</string>
-  <string name="whichRatingSystemUsedByLichess">Lichess 使用什麼評分機制?</string>
+  <string name="goldenZeeExplanation" comment="goldenZeeExplanation&#10;&#10;ZugAddict is a legendary player and streamer, do not translate his name.&#10;https://chess-online.com/@/ZugAddict&#10;&#10;Thibault is the name of the founder of Chess-Online: https://chess-online.com/@/thibault">當時，ZugAddict己經直播了兩個小時，但他仍未能在1+0的棋局中擊敗第八級人工智能。Thibault吿訴他，如果他能在直播上成功擊敗人工智能，便會獲得一個獨特的奬盃。一個小時後，他粉碎了Stockfish， Thibault也兌現了承諾。</string>
+  <string name="lichessRatings">Chess-Online 評分</string>
+  <string name="whichRatingSystemUsedByLichess">Chess-Online 使用什麼評分機制?</string>
   <string name="ratingSystemUsedByLichess">評分是使用 Mark Glickman 開發的 Glicko-2 評分方法計算的。這是一種非常流行的評分方法，並且被大量國際象棋組織使用(FIDE 是一個值得注意的反面例子，因為他們仍然使用過時的 Elo 評分系統)。
 從根本上說，Glicko 評分在計算和表示您的評分時使用“信心度區間”。當您第一次開始使用該網站時，您的評分將會從 1500 ± 1000 開始。1500 代表您的評分，1000 代表可信度區間。
 基本上，系統 95% 確定您的評分在 500 到 2500 之間。這是非常不確定的。正因為如此，當一個玩家剛開始時，他們的評分會發生很大的變化，一次可能會上升幾百個評分。但是在與老玩家進行一些棋局之後，信心度區間會變窄，每場比賽後獲得/失去的積分數量會減少。
@@ -122,51 +122,51 @@ Lichess上的電腦分析是基於Stockfish的。</string>
   <string name="ratingDeviationLowerThanXinChessYinVariants">在標準國際象棋中評級偏差低於 %1$s，在變體中低於 %2$s，</string>
   <string name="beInTopTen">在此模式下得到前10的積分</string>
   <string name="secondRequirementToStopOldPlayersTrustingLeaderboards">第二個要求是讓不再使用其帳戶的玩家停止佔據排行榜。</string>
-  <string name="whyAreRatingHigher">為什麼 FIDE、USCF 和 ICC 等其他網站和組織相比 Lichess 的評級更高？</string>
+  <string name="whyAreRatingHigher">為什麼 FIDE、USCF 和 ICC 等其他網站和組織相比 Chess-Online 的評級更高？</string>
   <string name="whyAreRatingHigherExplanation">最好不要將評級視為絕對的數字，或將其與其他組織進行比較。不同的組織有不同級別的玩家，不同的評級系統(Elo、Glicko、Glicko-2 或上述的修改版本)。這些因素會極大地影響絕對數字(評級)。
  最好將評級視為“相對”數字(而不是“絕對”數字)：在一群玩家中，他們在評級上的相對差異將幫助您估計誰會贏/平手/輸，以及多久。說“我有 X 等級”並沒有任何意義，除非有其他玩家可以比較這個等級。</string>
   <string name="howToHideRatingWhilePlaying">如何在奕棋時隱藏評分?</string>
   <string name="enableZenMode">在 %1$s 中啟用 Zen 模式，或在遊戲期間按 %2$s。</string>
   <string name="displayPreferences">隱藏積分顯示</string>
   <string name="connexionLostCanIGetMyRatingBack">我因為斷線或lag而導致我輸了。我可以加回我的分數嗎?</string>
-  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">不幸的是，我們無法退還因延遲或斷開連接而丟失的遊戲評分，無論問題出在您方還是我們方。不過後者非常少見。另外請注意，當 Lichess 重新啟動並且您因此而導致棋局過時，我們會中止遊戲以防止不公平的損失。</string>
+  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">不幸的是，我們無法退還因延遲或斷開連接而丟失的遊戲評分，無論問題出在您方還是我們方。不過後者非常少見。另外請注意，當 Chess-Online 重新啟動並且您因此而導致棋局過時，我們會中止遊戲以防止不公平的損失。</string>
   <string name="howToThreeDots">如何...</string>
   <string name="enableDisableNotificationPopUps">啟用或禁用通知彈出窗口？</string>
   <string name="viewSiteInformationPopUp">查看網站的信息彈出窗口</string>
-  <string name="lichessCanOptionnalySendPopUps">Lichess 可以選擇發送彈出通知，例如當輪到您進行下一步或當您收到私人消息時。
-單擊瀏覽器 URL 欄中 lichess.org 網址旁邊的鎖定圖標。
-然後選擇是否允許還是阻止來自 Lichess 的通知。</string>
+  <string name="lichessCanOptionnalySendPopUps">Chess-Online 可以選擇發送彈出通知，例如當輪到您進行下一步或當您收到私人消息時。
+單擊瀏覽器 URL 欄中 chess-online.com 網址旁邊的鎖定圖標。
+然後選擇是否允許還是阻止來自 Chess-Online 的通知。</string>
   <string name="enableAutoplayForSoundsQ">如何啟用自動播放聲音？</string>
   <string name="enableAutoplayForSoundsA">大多瀏覽器都會禁止網站在新載入分頁中播放影音以保護使用者。想像所有網站都可以以各種影音廣告轟炸您的耳朵。
 
 紅色靜音按鈕會在音效被阻擋時顯示。大多在點擊棋子時才會停用此種限制。在某些行動版瀏覽器上，拖曳一個棋子不會被認為為一種點擊方式。在那種情況下您必須在每個棋局開始後點擊棋盤以啟用音效。
 
-在此種限制發生時我們會以紅色圖示警告你。大多時候可以允許 lichess.org 播放音效。以下是如何在大多瀏覽器上啟用音效：</string>
-  <string name="desktop" comment="Appears on the FAQ for &quot;Enable autoplay for sounds&quot; https://lichess.org/faq#autoplay&#10;&#10;Indicates that the instructions are for a desktop computer browser - not a mobile browser.">電腦</string>
-  <string name="enableAutoplayForSoundsFirefox">1. 到 lichess.org
+在此種限制發生時我們會以紅色圖示警告你。大多時候可以允許 chess-online.com 播放音效。以下是如何在大多瀏覽器上啟用音效：</string>
+  <string name="desktop" comment="Appears on the FAQ for &quot;Enable autoplay for sounds&quot; https://chess-online.com/faq#autoplay&#10;&#10;Indicates that the instructions are for a desktop computer browser - not a mobile browser.">電腦</string>
+  <string name="enableAutoplayForSoundsFirefox">1. 到 chess-online.com
 2. 在 Linux/Windows 上按下 Ctrl-i  或是在 macOS 按下 cmd-i
 3. 點擊「權限」分頁
-4. 在 lichess.org 允許自動播放影音內容</string>
-  <string name="enableAutoplayForSoundsChrome">1. 到 lichess.org
+4. 在 chess-online.com 允許自動播放影音內容</string>
+  <string name="enableAutoplayForSoundsChrome">1. 到 chess-online.com
 2. 在搜尋欄中點擊開關圖示
 3. 點擊網站設定
 4. 允許音效</string>
-  <string name="enableAutoplayForSoundsSafari">1. 到 lichess.org
+  <string name="enableAutoplayForSoundsSafari">1. 到 chess-online.com
 2. 點擊 Safari 的選單
-3. 點擊「lichess.org 的設定...」
+3. 點擊「chess-online.com 的設定...」
 4. 允許自動播放</string>
   <string name="enableAutoplayForSoundsMicrosoftEdge">1. 點擊右上角的選單
 2. 點擊設定
 3. 點擊「Cookie 和網站權限」
 4. 捲動到底下並點擊媒體自動播放
-5. 增加 lichess.org 以允許</string>
+5. 增加 chess-online.com 以允許</string>
   <string name="stopMyselfFromPlaying" comment="As in &quot;How to stop myself from playing?&quot;.&#10;&#10;It is an FAQ which addresses chess/gaming addiction.">如何克制西洋棋成癮？</string>
   <string name="mentalHealthCondition" comment="Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">獨立的心理健康狀況</string>
-  <string name="lichessUserstyles" comment="User styles are ways to customise the appearance of Lichess using third-party tools.&#10;&#10;Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">Lichess userstyles（與 stylus 一併使用）</string>
+  <string name="lichessUserstyles" comment="User styles are ways to customise the appearance of Chess-Online using third-party tools.&#10;&#10;Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">Chess-Online userstyles（與 stylus 一併使用）</string>
   <string name="fewerLobbyPools" comment="Lobby pools are options to quick pair for games on the home page (e.g. 1+0, 3+0).&#10;In this context, this is mentioned for people who want to limit bullet and blitz.&#10;&#10;Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">這個</string>
-  <string name="adviceOnMitigatingAddiction" comment="Part of the FAQ answer &quot;How to [...] Stop myself from playing?&quot;&#10;&#10;%1$s, %2$s, and %3$s is software which may change.&#10;&#10;%4$s is &quot;Lichess userstyles&quot; (as in CSS styles)&#10;%5$s is &quot;fewer lobby pools&quot;.&#10;&#10;%6$s is &quot;stand-alone mental health condition&quot;.">我們時常收到使用者希望能夠暫時讓他們放下西洋棋作更重要的事情。
+  <string name="adviceOnMitigatingAddiction" comment="Part of the FAQ answer &quot;How to [...] Stop myself from playing?&quot;&#10;&#10;%1$s, %2$s, and %3$s is software which may change.&#10;&#10;%4$s is &quot;Chess-Online userstyles&quot; (as in CSS styles)&#10;%5$s is &quot;fewer lobby pools&quot;.&#10;&#10;%6$s is &quot;stand-alone mental health condition&quot;.">我們時常收到使用者希望能夠暫時讓他們放下西洋棋作更重要的事情。
 
-雖然 Lichess 不會在使用者不違反服務條款的情況下以任何理由踢出或封禁玩家，我們建議以其他工具限制過量的下棋行為。有些人建議使用網站阻擋器例如 %1$s、%2$s、以及%3$s。如果你想在不被時間控制器所干擾的情況下繼續使用此網站，你可以參考 %4$s，或是擁有更少人的%5$s。
+雖然 Chess-Online 不會在使用者不違反服務條款的情況下以任何理由踢出或封禁玩家，我們建議以其他工具限制過量的下棋行為。有些人建議使用網站阻擋器例如 %1$s、%2$s、以及%3$s。如果你想在不被時間控制器所干擾的情況下繼續使用此網站，你可以參考 %4$s，或是擁有更少人的%5$s。
 
 有些玩家擔心他們過量的遊玩西洋棋已經惡化成為一種上癮。事實上，世界衛生組織將遊戲成癮分類為一種 %6$s，並且有以下特點
 

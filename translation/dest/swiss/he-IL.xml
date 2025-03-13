@@ -63,7 +63,7 @@ PlayerE 1
 
 שחקנים שלא יופיעו למשחק יוגדרו כלא נוכחים ולא יקבלו ניקוד.
 
-אם השדה הזה יושאר ריק, Lichess ישבץ את השחקנים באופן אוטומטי.</string>
+אם השדה הזה יושאר ריק, Chess-Online ישבץ את השחקנים באופן אוטומטי.</string>
   <string name="mustHavePlayedTheirLastSwissGame">רק שחקנים שהופיעו למשחק השוויצרי האחרון שלהם</string>
   <string name="mustHavePlayedTheirLastSwissGameHelp">אפשרו לשחקנים להשתתף רק אם נכחו במשחק השוויצרי האחרון שלהם. אם נעדרו מטורניר לאחרונה, הם לא יורשו להשתתף בטורניר שלך. ההגדרה הזו עשויה להוביל לחוויה נעימה יותר עבור השחקנים שמתמידים בהופעתם.</string>
   <string name="newSwiss">טורניר שוויצרי חדש</string>
@@ -89,7 +89,7 @@ PlayerE 1
   <string name="whatIfOneDoesntPlayQ">מה קורה אם שחקן לא משחק?</string>
   <string name="whatIfOneDoesntPlayA">השעון שלו יתקתק, ״יפול לו הדגל״ והוא יפסיד את המשחק. לאחר מכן הוא יוצא מהטורניר כדי לא להפסיד משחקנים נוספים. הוא יוכל להצטרף מחדש בכל שלב.</string>
   <string name="protectionAgainstNoShowQ">מה נעשה באשר לשחקים שלא מופיעים למשחק?</string>
-  <string name="protectionAgainstNoShowA" comment="By &quot;a game&quot; - we mean just one game. Missing even one game will prevent that player from joining a new Swiss event for a certain amount of time.">שחקנים שנרשמים לטורנירים שוויצריים אבל לא משחקים כנדרש יכולים להוות בעיה. כדי למנוע את זה, Lichess מונע משחקים שלא מופיעים להצטרף לטורנירים שוויצריים למשך זמן מסויים. היוצר של הטורניר יכול לבחור לאשר את הצטרפותם בכל זאת.</string>
+  <string name="protectionAgainstNoShowA" comment="By &quot;a game&quot; - we mean just one game. Missing even one game will prevent that player from joining a new Swiss event for a certain amount of time.">שחקנים שנרשמים לטורנירים שוויצריים אבל לא משחקים כנדרש יכולים להוות בעיה. כדי למנוע את זה, Chess-Online מונע משחקים שלא מופיעים להצטרף לטורנירים שוויצריים למשך זמן מסויים. היוצר של הטורניר יכול לבחור לאשר את הצטרפותם בכל זאת.</string>
   <string name="lateJoinQ">האם ניתן להצטרף באיחור?</string>
   <string name="lateJoinA">כן, עד אשר שוחקו יותר ממחצית הסבבים. לדוגמה, בטורניר של 11 סבבים ניתן להצטרף לפני שסיבוב 6 מתחיל ואם יש 12 סבבים ניתן להצטרף לפני שסיבוב 7 מתחיל. מצטרפים באיחור מקבלים חצי נקודה בלבד, אף אם החמיצו מספר סבבים.</string>
   <string name="willSwissReplaceArenasQ">האם טורנירים שוויצריים יחליפו את טורנירי הזירה?</string>
@@ -97,7 +97,7 @@ PlayerE 1
   <string name="roundRobinQ">ומה בנוגע לשיטת Round Robin?</string>
   <string name="roundRobinA">היינו רוצים להוסיף אותה, אך לצערנו שיטת Round Robin לא עובדת אונליין. אנו לא יכולים לצפות מכל השחקנים לשחק את כל המשחקים הדרושים באירוע מקוון, ולכן מרבית האירועים הללו יהיו פגומים ולא הוגנים, מה שחוטא למטרה שלשמה הם נועדו. הפורמט הכי קרוב שניתן לשחק אונליין הוא טורניר שוויצרי בו כל השיבוצים האפשריים ישוחקו טרם סיום הטורניר.</string>
   <string name="otherSystemsQ">ומה באשר לשיטות טורניר אחרות?</string>
-  <string name="otherSystemsA">נכון לכרגע אין לנו כוונה להוסיף ל־Lichess שיטות טורניר נוספות.</string>
+  <string name="otherSystemsA">נכון לכרגע אין לנו כוונה להוסיף ל־Chess-Online שיטות טורניר נוספות.</string>
   <string name="swissDescription">בטורניר שוויצרי %1$s, אין הכרח שכל משתתף ישחק נגד כל משתתף אחר. בכל סיבוב כל שחקן משחק נגד שחקן אחר, והשיבוצים נקבעים על פי הניקוד שנצבר לאורך הטורניר, מבלי ששני שחקנים ישחקו זה נגד זה יותר מפעם אחת. המנצח הוא בעל הניקוד הגבוה ביותר. כל המשתתפים משחקים בכל הסבבים, אלא אם מספרם אי־זוגי</string>
   <string name="teamOnly">רק מובילי קבוצות יכולים ליצור טורנירים שוויצריים, ורק חברי קבוצות יכולים להשתתף בהם. %1$s כדי להתחיל לשחק בטורנירים שוויצריים.</string>
   <string name="joinOrCreateTeam">הצטרפו לקבוצה או צרו קבוצה</string>

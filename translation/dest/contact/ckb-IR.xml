@@ -37,7 +37,7 @@
   <string name="reportBugInForum">لە بەشی کۆمێنتەکانی لیچێس لە مەکۆکەدا</string>
   <string name="reportWebsiteIssue">وەک کێشەیەک لە پێگەی لیچێس لەسەر GitHub</string>
   <string name="reportMobileIssue">وەک کێشەیەک لە ئەپڵیکەیشنی لیچێس لەسەر GitHub</string>
-  <string name="reportBugInDiscord">لە سێرڤەری Lichess Discord</string>
+  <string name="reportBugInDiscord">لە سێرڤەری Chess-Online Discord</string>
   <string name="howToReportBug">تکایە بە تەواوی باسی ئەوە بکە کە هەڵەکە چی بووە، لەبری ئەوە چاوەڕێی ئەوەتان دەکرد چی ڕووبدات و ئەو هەنگاوانەی کە بوونەتە هۆی هەڵەکە.</string>
   <string name="illegalPawnCapture">خواردنی داش لەلایەن سەرباز بە نایاسایی</string>
   <string name="calledEnPassant">پێی دەوترێت \"en passant\" و یەکێکە لە یاساکانی شەترەنج.</string>

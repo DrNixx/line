@@ -232,9 +232,9 @@
   <string name="forgotPassword">Şifremi unuttum</string>
   <string name="error.weakPassword">Bu parola çok yaygın, ve tahmin etmesi çok kolay.</string>
   <string name="error.namePassword">Lütfen kullanıcı adınızı parolanız olarak kullanmayın.</string>
-  <string name="blankedPassword">Şifreniz güvenlik açığı yaşanan başka bir sitede kullanılmış. Lichess hesabınızı güvende tutmak için yeni bir şifre seçmeniz gerekiyor. Anlayışınız için teşekkürler.</string>
-  <string name="youAreLeavingLichess">Lichess\'ten ayrılıyorsunuz</string>
-  <string name="neverTypeYourPassword">Lichess parolanızı asla başka bir site içerisinde yazmayın!</string>
+  <string name="blankedPassword">Şifreniz güvenlik açığı yaşanan başka bir sitede kullanılmış. Chess-Online hesabınızı güvende tutmak için yeni bir şifre seçmeniz gerekiyor. Anlayışınız için teşekkürler.</string>
+  <string name="youAreLeavingLichess">Chess-Online\'ten ayrılıyorsunuz</string>
+  <string name="neverTypeYourPassword">Chess-Online parolanızı asla başka bir site içerisinde yazmayın!</string>
   <string name="proceedToX">%s adresine devam et</string>
   <string name="passwordSuggestion">Başkaları tarafından önerilen bir parolayı kullanmayın. Bunu hesabınızı çalmak için kullanacaklardır.</string>
   <string name="emailSuggestion">Başkaları tarafından önerilen bir e-posta adresi kullanmayın. Bunu hesabınızı çalmak için kullanacaklardır.</string>
@@ -343,7 +343,7 @@
     <item quantity="one">%s saniye ver</item>
     <item quantity="other">%s saniye ver</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Bu hesap Lichess Hizmet Şartları\'nı ihlal etti</string>
+  <string name="thisAccountViolatedTos">Bu hesap Chess-Online Hizmet Şartları\'nı ihlal etti</string>
   <string name="openingExplorerAndTablebase">Açılış kâşifi &amp; oyunsonu analizi</string>
   <string name="takeback">Hamleyi geri al</string>
   <string name="proposeATakeback">Hamleyi geri almayı teklif et</string>
@@ -529,7 +529,7 @@
   <string name="inlineNotation">Notasyonu aynı satırda göster</string>
   <string name="makeAStudy">Bunları kaydetmek ve paylaşmak için çalışma oluşturabilirsiniz.</string>
   <string name="clearSavedMoves">Hamleleri sil</string>
-  <string name="previouslyOnLichessTV">Lichess TV\'de bunlar da vardı;</string>
+  <string name="previouslyOnLichessTV">Chess-Online TV\'de bunlar da vardı;</string>
   <string name="onlinePlayers">Çevrimiçi oyuncular</string>
   <string name="activePlayers">Aktif oyuncular</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Dikkat, oyun puanlı ama suresizdir.</string>
@@ -697,7 +697,7 @@
   <string name="simulHostExtraTime">Ev sahibinin fazladan süresi</string>
   <string name="simulAddExtraTimePerPlayer">Eş zamanlı gösteriye katılan her oyuncu için saatinize başlangıç süresi ekleyin.</string>
   <string name="simulHostExtraTimePerPlayer">Ev sahibi, katılan her oyuncu için ekstra süre alır</string>
-  <string name="lichessTournaments">Lichess turnuvaları</string>
+  <string name="lichessTournaments">Chess-Online turnuvaları</string>
   <string name="tournamentFAQ">Arena turnuvaları SSS</string>
   <string name="timeBeforeTournamentStarts">Turnuvaya kalan süre</string>
   <string name="averageCentipawnLoss">Ortalama santipiyon kaybı</string>
@@ -747,8 +747,8 @@
   <string name="weHaveSentYouAnEmailTo">%s adresine e-posta yolladık. Şifrenizi tekrar ayarlamak için e-postadaki linke tıklayın.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Kaydolarak, %s \'ı kabul etmiş sayılırsınız.</string>
   <string name="readAboutOur">%s hakkında bilgi edinin.</string>
-  <string name="networkLagBetweenYouAndLichess">Siz ve lichess.org arasındaki gecikme (ping)</string>
-  <string name="timeToProcessAMoveOnLichessServer">lichess.org üzerindeki hamle süreniz (ms)</string>
+  <string name="networkLagBetweenYouAndLichess">Siz ve chess-online.com arasındaki gecikme (ping)</string>
+  <string name="timeToProcessAMoveOnLichessServer">chess-online.com üzerindeki hamle süreniz (ms)</string>
   <string name="downloadAnnotated">Açıklamalarıyla beraber indirin</string>
   <string name="downloadRaw">Açıklamasız indirin.</string>
   <string name="downloadImported">İçeri aktarılmış oyunu indir</string>
@@ -765,7 +765,7 @@
   <string name="kidMode">Çocuk modu</string>
   <string name="kidModeIsEnabled">Çocuk modu etkin.</string>
   <string name="kidModeExplanation">Bu mod çocuğunuzun güvenliği ile ilgilidir. Tüm site bağlantıları devre dışı bırakılır. Eğer çocuklarınızı veya okul öğrencilerinizi diğer internet kullanıcılarına karşı korumak istiyorsanız, bu modu etkinleştirin.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">Çocuk modunda, lichess.org logosu yerine %s belirir, bilin ki çocuğunuz güvendedir :)</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">Çocuk modunda, chess-online.com logosu yerine %s belirir, bilin ki çocuğunuz güvendedir :)</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">Hesabınız kısıtlandı. Çocuk modunu kaldırmak için satranç öğretmeninize danışın.</string>
   <string name="enableKidMode">Çocuk modunu aktifleştir</string>
   <string name="disableKidMode">Çocuk modunu devre dışı bırak</string>
@@ -880,7 +880,7 @@
     <item quantity="one">ve %s önceki varyantları kaydedin</item>
     <item quantity="other">ve %s önceki varyantları kaydedin</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Lichess size bir özel mesaj gönderdi.</string>
+  <string name="showUnreadLichessMessage">Chess-Online size bir özel mesaj gönderdi.</string>
   <string name="clickHereToReadIt">Okumak için buraya tıklayın</string>
   <string name="sorry">Üzgünüz :(</string>
   <string name="weHadToTimeYouOutForAWhile">Sizi bir süreliğine oyunlardan men etmek zorunda kaldık.</string>
@@ -893,14 +893,14 @@
   <string name="tryToWin">Oynadığınız her oyunu kazanmaya çalışın (ya da en azından berabere kalmayı deneyin).</string>
   <string name="resignLostGames">Kaybettiğiniz oyunlardan çekilin (sürenin dolmasını beklemeyin).</string>
   <string name="temporaryInconvenience">Verdiğimiz geçici rahatsızlıktan dolayı özür dileriz,</string>
-  <string name="wishYouGreatGames">ve lichess.org\'da harika oyunlar dileriz.</string>
+  <string name="wishYouGreatGames">ve chess-online.com\'da harika oyunlar dileriz.</string>
   <string name="thankYouForReading">Okuduğunuz için teşekkür ederiz!</string>
   <string name="lifetimeScore">Toplam skor</string>
   <string name="currentMatchScore">Mevcut maç skoru</string>
   <string name="agreementAssistance">Maçlar esnasında hiçbir zaman dışarıdan yardım almayacağım (bilgisayardan, kitaptan, veri tabanından veya başka bir insandan).</string>
   <string name="agreementNice">Diğer oyunculara karşı her zaman iyi bir tutum içinde olacağım.</string>
   <string name="agreementMultipleAccounts" comment="%s will be replaced with the translation of 'termsOfService'">Birden fazla hesap oluşturmayacağımı onaylıyorum (%s\'da sıralanmış durumlar hariç).</string>
-  <string name="agreementPolicy">Lichess kurallarını takip edeceğim.</string>
+  <string name="agreementPolicy">Chess-Online kurallarını takip edeceğim.</string>
   <string name="searchOrStartNewDiscussion">Tartışma ara veya yenisini başlat</string>
   <string name="edit">Düzenle</string>
   <string name="bullet" comment="Probably best left untranslated. Leave it as 'Bullet' unless your language has a better word for it.">Bullet</string>
@@ -939,7 +939,7 @@
   <string name="congratsYouWon">Tebrikler, kazandınız!</string>
   <string name="gameVsX">%1$s ile oyun</string>
   <string name="resVsX">%1$s ile %2$s karşı karşıya</string>
-  <string name="lostAgainstTOSViolator">Lichess Kulanım Şartları\'nı ihlal eden birine kaybettiniz</string>
+  <string name="lostAgainstTOSViolator">Chess-Online Kulanım Şartları\'nı ihlal eden birine kaybettiniz</string>
   <string name="refundXpointsTimeControlY">%1$s %2$s puanı iade edildi.</string>
   <string name="timeAlmostUp">Zaman dolmak üzere!</string>
   <string name="clickToRevealEmailAddress">[E-posta adresini göstermek için tıklayın]</string>
@@ -992,13 +992,13 @@ Başlangıç pozisyonundan oynamak için boş bırakınız.</string>
   <string name="youCantStartNewGame">Mevcut oyun bitene kadar yeni bir oyuna başlayamazsın.</string>
   <string name="since">Seçili tarihten beri</string>
   <string name="until">Seçili tarihe kadar</string>
-  <string name="lichessDbExplanation">Tüm Lichess oyuncularının puanlı oyunlarından alınan örnekler</string>
+  <string name="lichessDbExplanation">Tüm Chess-Online oyuncularının puanlı oyunlarından alınan örnekler</string>
   <string name="switchSides">Renk değiştir</string>
   <string name="closingAccountWithdrawAppeal">Hesabınızı kapatırsanız başvurunuz geri çekilecektir</string>
   <string name="ourEventTips">Etkinlik düzenlemek için ipuçlarımız</string>
   <string name="instructions">Talimatlar</string>
   <string name="showMeEverything">Bana her şeyi göster</string>
-  <string name="lichessPatronInfo">Lichess bir yardım kuruluşudur ve tamamen özgür/açık kaynak kodlu bir yazılımdır. Tüm işletme maliyetleri, geliştirmeler ve içerikler yalnızca kullanıcı bağışları ile finanse edilmektedir.</string>
+  <string name="lichessPatronInfo">Chess-Online bir yardım kuruluşudur ve tamamen özgür/açık kaynak kodlu bir yazılımdır. Tüm işletme maliyetleri, geliştirmeler ve içerikler yalnızca kullanıcı bağışları ile finanse edilmektedir.</string>
   <string name="nothingToSeeHere">Şu anda görülebilecek bir şey yok.</string>
   <string name="stats">İstatistikler</string>
 </resources>

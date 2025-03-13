@@ -4,9 +4,9 @@
   <string name="friendBlogs">وبنوشت‌های دوستان</string>
   <string name="likedBlogs">وبنوشته‌های پسندیده</string>
   <string name="blogTopics">موضوع‌های وبنوشت</string>
-  <string name="lichessOfficialBlog">وبنوشت رسمی Lichess</string>
+  <string name="lichessOfficialBlog">وبنوشت رسمی Chess-Online</string>
   <string name="continueReadingPost">ادامهٔ خواندن این فرسته</string>
-  <string name="lichessBlogPostsFromXYear">وبنوشته‌های Lichess در %s</string>
+  <string name="lichessBlogPostsFromXYear">وبنوشته‌های Chess-Online در %s</string>
   <string name="previousBlogPosts">وبنوشته‌های پیشین</string>
   <string name="xBlog">وبنوشتِ %s</string>
   <string name="newPost">نوشتهٔ جدید</string>
@@ -48,7 +48,7 @@
   <string name="deleteBlog">بی‌دریغ این وبنوشته را پاک کنید</string>
   <string name="safeToUseImages">استفاده از تصویرهای وبگاه‌های زیر، ایمن است: </string>
   <string name="selectPostTopics">موضوع‌هایی که فرسته‌تان دربارهٔ آن‌ها است را، برگزینید</string>
-  <string name="useImagesYouMadeYourself">همچنین می‌توانید از تصویرهایی که خودتان ساخته‌اید، عکس‌هایی که گرفته‌اید، نماگرفت‌های Lichess... هر چیزی که حق‌نشرش برای دیگری نیست، بهرایید.</string>
+  <string name="useImagesYouMadeYourself">همچنین می‌توانید از تصویرهایی که خودتان ساخته‌اید، عکس‌هایی که گرفته‌اید، نماگرفت‌های Chess-Online... هر چیزی که حق‌نشرش برای دیگری نیست، بهرایید.</string>
   <string name="safeAndRespectfulContent">لطفا فقط محتوای ایمن و محترمانه منتشر کنید. محتوای دیگران را رونویسی نکنید.</string>
   <string name="inappropriateContentAccountClosed">هر چیز نامناسبی می تواند حساب شما را ببندد.</string>
   <string name="blogTips">نکته‌های ساده‌ٔ ما، برای نوشتن وبنوشته‌های عالی</string>

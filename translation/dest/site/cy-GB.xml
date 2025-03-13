@@ -272,7 +272,7 @@
   </plurals>
   <string name="exportGames">Allforio</string>
   <string name="ratingRange">Graddfa rhwng</string>
-  <string name="thisAccountViolatedTos">Mae\'r defnyddiwr y cyfrif yma wedi torri termau defnyddio Lichess</string>
+  <string name="thisAccountViolatedTos">Mae\'r defnyddiwr y cyfrif yma wedi torri termau defnyddio Chess-Online</string>
   <string name="openingExplorerAndTablebase">Porwr agoriadau &amp; bas tabl diweddglo</string>
   <string name="takeback">Cymryd yn ôl</string>
   <string name="proposeATakeback">Awgrymu cymryd yn ôl</string>
@@ -398,7 +398,7 @@
   <string name="thankYou">Diolch yn fawr!</string>
   <string name="socialMediaLinks">Dolenni cyfryngau cymdeithasol</string>
   <string name="inlineNotation">Nodiant mewnlin</string>
-  <string name="previouslyOnLichessTV">Ar Lichess TV yn barod</string>
+  <string name="previouslyOnLichessTV">Ar Chess-Online TV yn barod</string>
   <string name="onlinePlayers">Chwarewyr ar-lein</string>
   <string name="activePlayers">Chwaraewyr gweithredol</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Mae\'r gêm yn swyddogol ond nid oes cloc ganddi!</string>
@@ -619,7 +619,7 @@
   <string name="usernameSuffixInvalid">Rhaid i\'r enw defnyddiwr orffen efo rhif neu lythyren.</string>
   <string name="usernameCharsInvalid">Gall enw\'r defnyddiwr dim ond cynnwys llythrennu, rhifau, tanlinellai, a chysylltnodau. Ni chaniatáu cael tanlinellai neu gysylltnodau dilynol.</string>
   <string name="usernameUnacceptable">Nid yw enw defnyddiwr hwn yn dderbyniol.</string>
-  <string name="playChessInStyle">Edrychwch yn swanc efo Lichess</string>
+  <string name="playChessInStyle">Edrychwch yn swanc efo Chess-Online</string>
   <string name="chessBasics">Hanfodion gwyddbwyll</string>
   <string name="coaches">Hyfforddwyr</string>
   <string name="invalidPgn">PGN anilys</string>
@@ -673,7 +673,7 @@
   <string name="lifetimeScore">Sgôr hyd oes</string>
   <string name="agreementAssistance">Rwy\'n cytuno byddai\'n byth cael unrhyw cymorth yn ystod chwarae gem (wrth gyfrifiadur gwyddbwyll, llyfr, cronfa ddata neu berson arall).</string>
   <string name="agreementNice">Rwy\'n cytuno byddai\'n wastad yn barchus i chwaraewyr eraill.</string>
-  <string name="agreementPolicy">Rwy\'n cytuno byddai’n dilyn pob polisi Lichess.</string>
+  <string name="agreementPolicy">Rwy\'n cytuno byddai’n dilyn pob polisi Chess-Online.</string>
   <string name="searchOrStartNewDiscussion">Edrych am neu ddechrau sgwrs newydd</string>
   <string name="edit">Addasu</string>
   <string name="rapid">Chwim</string>

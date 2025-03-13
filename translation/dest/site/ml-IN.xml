@@ -227,9 +227,9 @@
   <string name="forgotPassword">പാസ്‌വേഡ് മറന്നുപോയോ?</string>
   <string name="error.weakPassword">ഈ രഹസ്യവാക്ക് ഊഹിക്കുകാൻ വളരെ എളുപ്പമാണ്.</string>
   <string name="error.namePassword">ദയവായി താങ്ങളുടെ ഉപയോക്തൃനാമം രഹസ്യവാക്കയായി ഉപയോഗിക്കരുത്.</string>
-  <string name="blankedPassword">താങ്ങൾ ഇതേ രഹസ്യവാക്കു് മറ്റൊരു വെബ്സ്ഥാനത്തിൽ ഉപയോഗിച്ചിട്ടുണ്ടു് പക്ഷേ ആ വെബ്സ്ഥാനത്തിന്റെ ഒത്തുതീർപ്പു് നടന്നിരിക്കുന്നു. താങ്ങളുടെ Lichess അക്കൗണ്ടിന്റെ സുരക്ഷക്കു വേണ്ടി താങ്ങൾക്കു് ഒരു പുതിയ രഹസ്യവാക്കു് ഇടണ്ടി വരും. സഹകരിക്കുന്നതിനു് നന്ദി.</string>
-  <string name="youAreLeavingLichess">താങ്ങൾ Lichess വിടുകയാണ്</string>
-  <string name="neverTypeYourPassword">ഒരിക്കലും താങ്ങളുടെ Lichess രഹസ്യവാക്കു് മറ്റെ വെബ്സ്ഥാനത്തിൽ എഴുതരുതു്!</string>
+  <string name="blankedPassword">താങ്ങൾ ഇതേ രഹസ്യവാക്കു് മറ്റൊരു വെബ്സ്ഥാനത്തിൽ ഉപയോഗിച്ചിട്ടുണ്ടു് പക്ഷേ ആ വെബ്സ്ഥാനത്തിന്റെ ഒത്തുതീർപ്പു് നടന്നിരിക്കുന്നു. താങ്ങളുടെ Chess-Online അക്കൗണ്ടിന്റെ സുരക്ഷക്കു വേണ്ടി താങ്ങൾക്കു് ഒരു പുതിയ രഹസ്യവാക്കു് ഇടണ്ടി വരും. സഹകരിക്കുന്നതിനു് നന്ദി.</string>
+  <string name="youAreLeavingLichess">താങ്ങൾ Chess-Online വിടുകയാണ്</string>
+  <string name="neverTypeYourPassword">ഒരിക്കലും താങ്ങളുടെ Chess-Online രഹസ്യവാക്കു് മറ്റെ വെബ്സ്ഥാനത്തിൽ എഴുതരുതു്!</string>
   <string name="proceedToX">%s വരെ ചെല്ലുക</string>
   <string name="passwordSuggestion">മറ്റാരെങ്കിലും പറഞ്ഞ രഹസ്യവാക്ക് ഉപയോഗിക്കരുത്. അവർ താങ്ങളുടെ അക്കൌണ്ട് തട്ടിയെടുക്കാൻ ശ്രമിക്കും.</string>
   <string name="emailSuggestion">മറ്റെയാരുടേ ഉപദേശ പ്രകാരം ഇമെയിൽ-വിലാസം തിരഞ്ഞെടുക്കരുതു്. അവർക്കു് പിന്നേ താങ്ങളുടെ അക്കൌണ്ടു് മോഷ്ടിക്കാൻ സാധിക്കും.</string>
@@ -523,7 +523,7 @@
   <string name="inlineNotation">ഇൻഫയൽ നോട്ടെഷൻ</string>
   <string name="makeAStudy">കരുതിവയ്ക്കാനും പങ്കിടാനും ഒരു പഠനം ഉണ്ടാക്കാൻ പരിഗണയിൽ എടുക്കുക.</string>
   <string name="clearSavedMoves">നീക്കങ്ങൾ കളയുക</string>
-  <string name="previouslyOnLichessTV">Lichess TV യിൽ നേരെത്തെയുള്ളത്</string>
+  <string name="previouslyOnLichessTV">Chess-Online TV യിൽ നേരെത്തെയുള്ളത്</string>
   <string name="onlinePlayers">തൽസമയ കളിക്കാർ</string>
   <string name="activePlayers">സജീവ കളിക്കാർ</string>
   <string name="bewareTheGameIsRatedButHasNoClock">നോക്കൂ, ഈ കളി ക്രമപ്പെടുത്തിയതാണ്. പക്ഷെ സമയ പരിധിയില്ല!</string>
@@ -672,7 +672,7 @@
   <string name="yourPendingSimuls">താങ്ങളുടെ തൂങ്ങുന്ന ഒരേവേളകളികൾ</string>
   <string name="createdSimuls">പുതിയ സിമുൽ</string>
   <string name="hostANewSimul">ഒരു പുതിയ സിമുലിന് ആതിഥ്യം നൽകൂ</string>
-  <string name="signUpToHostOrJoinASimul">ഒരേവേളകളിയിൽ കളിക്കുകാൻ അതോ നടുത്താൻ Lichess-ലേക്കു പ്രവേശിക്കൽ ചെയ്യുക</string>
+  <string name="signUpToHostOrJoinASimul">ഒരേവേളകളിയിൽ കളിക്കുകാൻ അതോ നടുത്താൻ Chess-Online-ലേക്കു പ്രവേശിക്കൽ ചെയ്യുക</string>
   <string name="noSimulFound">സിമുൽ കണ്ടെത്തിയില്ല</string>
   <string name="noSimulExplanation">ഈ ഒരേ സമയത്തുള്ള പ്രദര്ശനം നിലവിലില്ല.</string>
   <string name="returnToSimulHomepage">സിമുൽ ഹോംപേജിലേക്ക് മടക്കം</string>
@@ -689,7 +689,7 @@
   <string name="simulHostExtraTime">ഹോസ്റ്റിന്റെ കൂടുതൽ ക്ലോക്ക് സമയം</string>
   <string name="simulAddExtraTimePerPlayer">ഓരോ കളിക്കാരൻ ഒരേവേളകളിയിൽ കൂട്ടച്ചേരുമ്പോൾ താങ്ങളുടെ തുടക്കത്തിലുള്ള കളിസമയം കൂട്ടിക്കുക.</string>
   <string name="simulHostExtraTimePerPlayer">അതിഥേയനിനു് ഓരോ കളിക്കാരനുമധിക നാഴികമണിയിൽ സമയം</string>
-  <string name="lichessTournaments">Lichess പരമ്പരകൾ</string>
+  <string name="lichessTournaments">Chess-Online പരമ്പരകൾ</string>
   <string name="tournamentFAQ">അറീന പരമ്പര</string>
   <string name="timeBeforeTournamentStarts">പരമ്പര തുടങ്ങുന്നതിനു മുൻപുള്ള സമയം</string>
   <string name="averageCentipawnLoss">ശരാശരി centipawn നഷ്ടം</string>
@@ -739,7 +739,7 @@
   <string name="byRegisteringYouAgreeToBeBoundByOur">രജിസ്റ്റർ ചെയ്യുന്നത് വഴി നിങ്ങൾ ഞങ്ങളുടെ %s പിന്തുടരുമെന്നു സമ്മതിക്കുന്നു.</string>
   <string name="readAboutOur">%s ഇനി കുറിച്ച് വായിക്കുക.</string>
   <string name="networkLagBetweenYouAndLichess">നിങ്ങളും lichessഉം തമ്മിലുള്ള നെറ്റ്വർക്ക് കാലയളവ്</string>
-  <string name="timeToProcessAMoveOnLichessServer">Lichess സെർവറിൽ ഒരു നീക്കം വിശകലനം ചെയ്യാൻ എടുക്കുന്ന സമയം</string>
+  <string name="timeToProcessAMoveOnLichessServer">Chess-Online സെർവറിൽ ഒരു നീക്കം വിശകലനം ചെയ്യാൻ എടുക്കുന്ന സമയം</string>
   <string name="downloadAnnotated">Annotated ആയി ഡൗൺലോഡ് ചെയ്യുക</string>
   <string name="downloadRaw">അസംസ്കൃതമായി ഡൗൺലോഡ് ചെയ്യുക</string>
   <string name="downloadImported">Import ചെയ്തത് ഡൌൺലോഡ് ചെയ്യുക</string>
@@ -763,7 +763,7 @@
   <string name="sessions">പ്രവേശിക്കൽ ചെയ്ത ഉപകരണങ്ങൾ</string>
   <string name="revokeAllSessions">എല്ലാ സെഷനും പിൻവലിക്കാൻ</string>
   <string name="playChessEverywhere">എല്ലായിടത്തും ചതുരംഗം കളിക്കൂ</string>
-  <string name="asFreeAsLichess">Lichess തികച്ചും സ്വതന്ത്രമാണ്</string>
+  <string name="asFreeAsLichess">Chess-Online തികച്ചും സ്വതന്ത്രമാണ്</string>
   <string name="builtForTheLoveOfChessNotMoney">ചതുരംഗ പ്രേമികൾക്ക് മാത്രം രൂപപ്പെടുത്തിയതാണ്, പണത്തിനല്ല</string>
   <string name="everybodyGetsAllFeaturesForFree">എല്ലാ സൗകര്യവും എല്ലാവർക്കും സൗജന്യം</string>
   <string name="zeroAdvertisement">പരസ്യമുക്തം</string>
@@ -871,7 +871,7 @@
     <item quantity="one">എന്നിട്ട് %s premove ലൈൻ സേവ് ചെയ്യൂ</item>
     <item quantity="other">എന്നിട്ട് %s premove ലൈനുകൾ സേവ് ചെയ്യൂ</item>
   </plurals>
-  <string name="showUnreadLichessMessage">താങ്ങൾക്കു് Lichess നിന്നു് ഒരു സ്വകാര്യ അറിയിപ്പു് കിട്ടിയിരിക്കുന്നു.</string>
+  <string name="showUnreadLichessMessage">താങ്ങൾക്കു് Chess-Online നിന്നു് ഒരു സ്വകാര്യ അറിയിപ്പു് കിട്ടിയിരിക്കുന്നു.</string>
   <string name="clickHereToReadIt">വായ്ക്കാൻ ഇവിടെ അമർത്തിക്കുക</string>
   <string name="sorry">ക്ഷമിക്കുക :(</string>
   <string name="weHadToTimeYouOutForAWhile">ഞങ്ങൾക്ക് നിങ്ങളെ കുറച്ചു സമയം പുറത്തു നിർത്തേണ്ടി വന്നു.</string>
@@ -884,14 +884,14 @@
   <string name="tryToWin">നിങ്ങൾ കളിക്കുന്ന എല്ലാ കളികളും ജയിക്കാനോ (അല്ലെങ്കിൽ സമനിലയിലാക്കാനോ) ശ്രമിക്കുക.</string>
   <string name="resignLostGames">തോറ്റു എന്ന് ബോധ്യമായാൽ റിസൈന്‍ ചെയ്യുക (ക്ലോക്ക് തീരുന്ന വരെ കളി അവശേഷിപ്പിക്കാതിരിക്കുക).</string>
   <string name="temporaryInconvenience">താത്കാലികമായ ബുദ്ധിമുട്ടിനു ക്ഷമ ചോദിക്കുന്നു</string>
-  <string name="wishYouGreatGames">lichess.org-ൽ നല്ല കളികൾ ആശംസിക്കുന്നു.</string>
+  <string name="wishYouGreatGames">chess-online.com-ൽ നല്ല കളികൾ ആശംസിക്കുന്നു.</string>
   <string name="thankYouForReading">വായിച്ചതിനു നന്ദി!</string>
   <string name="lifetimeScore">ജീവിതകാല സ്കോർ</string>
   <string name="currentMatchScore">നിലവിലെ മത്സര സ്കോർ</string>
   <string name="agreementAssistance">എന്റെ കളികളിൽ ഞാൻ ഒരിക്കൽ പോലും മറ്റൊരാളുടെ സഹായം ഉപയോഗിക്കില്ലെന്ന് സമ്മതിക്കുന്നു (ഒരു ചെസ്സ് കംപ്യൂട്ടറിന്റെയോ പുസ്തകത്തിന്റെയോ ഡാറ്റാബേസിന്റെയോ മറ്റൊരാളുടെയോ അടുക്കൽ നിന്ന്).</string>
   <string name="agreementNice">ഞാൻ എല്ലായ്പ്പോഴും മറ്റു കളിക്കാരോട് മാന്യമായി പെരുമാറുമെന്ന് സമ്മതിക്കുന്നു.</string>
   <string name="agreementMultipleAccounts" comment="%s will be replaced with the translation of 'termsOfService'">പല അക്കൗണ്ടുകൾ ഉണ്ടാക്കത്തില്ലെന്നു് ഞാൻ സമ്മതിക്കുന്നു (%s-ൽ പറഞ്ഞിരിക്കുന്ന കാരണങ്ങൾ ഒഴികേ).</string>
-  <string name="agreementPolicy">ഞാൻ Lichess പോളിസികൾ അനുകൂലിക്കുന്നതായി സമ്മതിക്കുന്നു.</string>
+  <string name="agreementPolicy">ഞാൻ Chess-Online പോളിസികൾ അനുകൂലിക്കുന്നതായി സമ്മതിക്കുന്നു.</string>
   <string name="searchOrStartNewDiscussion">കണ്ടുപിടിക്കുക അല്ലെങ്കിൽ പുതിയൊരു സംഭാഷണം ആരംഭിക്കുക</string>
   <string name="edit">മാറ്റുക</string>
   <string name="bullet" comment="Probably best left untranslated. Leave it as 'Bullet' unless your language has a better word for it.">വെടിയുണ്ടകളി</string>
@@ -966,7 +966,7 @@
   <string name="analysisOptions">വിശകലനം സാധ്യതകൾ</string>
   <string name="focusChat">ഏകാഗ്രസല്ലാപമുറി</string>
   <string name="showHelpDialog">തുണസന്ദേശപെട്ടി കാണിക്കുക</string>
-  <string name="reopenYourAccount" comment="Appears on the page where players can reopen their closed account - https://lichess.org/account/reopen (you can only see this when you logged out).">അക്കൌണ്ട് വീണ്ടും തുറക്കുക</string>
+  <string name="reopenYourAccount" comment="Appears on the page where players can reopen their closed account - https://chess-online.com/account/reopen (you can only see this when you logged out).">അക്കൌണ്ട് വീണ്ടും തുറക്കുക</string>
   <string name="emailAssociatedToaccount">ഈ അക്കൌണ്ടുബന്ധിത ഇ-തപാൽ വിലാസം</string>
   <string name="sentEmailWithLink">ഞങ്ങൾ താങ്ങളേ ഒരു കണ്ണിയുള്ള ഇമെയിൽ അയച്ചിട്ടുണ്ട്.</string>
   <string name="tournamentEntryCode">മത്സരം പ്രവേശന സങ്കേതം</string>
@@ -977,13 +977,13 @@
   <string name="youCantStartNewGame">ഈ കളി പൂർത്തികരിക്കുന്നവരെ താങ്ങൾക്കു് പുതിയ കളി തുടങ്ങാൻ സാധിക്കത്തില്ല.</string>
   <string name="since">മുതൽ</string>
   <string name="until">വരേ</string>
-  <string name="lichessDbExplanation">Lichess-ൽ കളിച്ചതുള്ള റേറ്റിങ്ങുള്ള കളികൾ</string>
+  <string name="lichessDbExplanation">Chess-Online-ൽ കളിച്ചതുള്ള റേറ്റിങ്ങുള്ള കളികൾ</string>
   <string name="switchSides">പക്ഷം മാറുക</string>
   <string name="closingAccountWithdrawAppeal">താങ്ങളുടെ അക്കൌണ്ടു് അവസാനിച്ചാൽ താങ്ങളുടെ നിർവേദനം പിൻവലിക്കപെടും</string>
   <string name="ourEventTips">പരിപാടി നടുത്താൻ ഞങ്ങളുടെ ഉപദേശങ്ങൾ</string>
   <string name="instructions">നിർദേശങ്ങൾ</string>
   <string name="showMeEverything">എല്ലാം കാണിക്കുക</string>
-  <string name="lichessPatronInfo">Lichess ഒരു സൗജന്യവും/ലിബർ തുറന്ന ഉറവിട യന്ത്രാംശം ആണു്. 
+  <string name="lichessPatronInfo">Chess-Online ഒരു സൗജന്യവും/ലിബർ തുറന്ന ഉറവിട യന്ത്രാംശം ആണു്.
 നടത്തിപ്പിനും വികാസനത്തിനും ഉള്ളടക്കത്തിനും ചെലവു് എല്ലാം ഉപയോക്താവു് സംഭാവനതോടാണു് കഴിയുന്നതു്.</string>
   <string name="nothingToSeeHere">അല്പസമയത്തേക്കു് ഒന്നും കാണാനില്ല.</string>
   <string name="stats">സ്ഥിതിവിവരണങ്ങൾ</string>

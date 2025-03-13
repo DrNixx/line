@@ -4,9 +4,9 @@
   <string name="friendBlogs">Blog degli amici</string>
   <string name="likedBlogs">Post del blog che ti sono piaciuti</string>
   <string name="blogTopics">Argomenti del blog</string>
-  <string name="lichessOfficialBlog">Blog ufficiale di Lichess</string>
+  <string name="lichessOfficialBlog">Blog ufficiale di Chess-Online</string>
   <string name="continueReadingPost">Continua a leggere questo post</string>
-  <string name="lichessBlogPostsFromXYear">Post del blog di Lichess nel %s</string>
+  <string name="lichessBlogPostsFromXYear">Post del blog di Chess-Online nel %s</string>
   <string name="previousBlogPosts">Post del blog precedenti</string>
   <string name="xBlog">Blog di %s</string>
   <string name="newPost">Nuovo post</string>
@@ -46,7 +46,7 @@
   <string name="deleteBlog">Elimina questo messaggio permanentemente</string>
   <string name="safeToUseImages">Le immagini dai seguenti siti possono essere usate in sicurezza: </string>
   <string name="selectPostTopics">Seleziona l\'argomento del tuo messaggio</string>
-  <string name="useImagesYouMadeYourself">Puoi anche usare immagini create da te, foto che hai fatto, schermate di Lichess... Qualunque cosa che non sia protetta da copyright.</string>
+  <string name="useImagesYouMadeYourself">Puoi anche usare immagini create da te, foto che hai fatto, schermate di Chess-Online... Qualunque cosa che non sia protetta da copyright.</string>
   <string name="safeAndRespectfulContent">Per favore scrivi solo messaggi educati e rispettosi. Non copiare i contenuti di qualcun altro.</string>
   <string name="inappropriateContentAccountClosed">Qualsiasi contenuto inappropriato potrebbe portare alla chiusura del tuo account.</string>
   <string name="blogTips">I nostri suggerimenti per scrivere ottimi messaggi sul blog</string>

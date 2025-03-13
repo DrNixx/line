@@ -39,7 +39,7 @@
 如果轮空某位玩家不分配 (1分)，添加一行：
 玩家E 1
 缺失的玩家将被视为缺席并获得零分。
-将此字段留空以允许 Lichess 自动创建配对。</string>
+将此字段留空以允许 Chess-Online 自动创建配对。</string>
   <string name="mustHavePlayedTheirLastSwissGame">必须已经完成他们最近一轮Swiss游戏</string>
   <string name="mustHavePlayedTheirLastSwissGameHelp">只允许完成他们最近一轮Swiss游戏的玩家加入。如果他们未能在最近的Swiss赛事中出现，他们将无法进入您的比赛。 这给实际出现的玩家带来更好的Swiss体验。</string>
   <string name="newSwiss">新 Swiss 锦标赛</string>
@@ -72,7 +72,7 @@
 他们随时可以重新加入比赛。</string>
   <string name="protectionAgainstNoShowQ">对于没有参加的情况怎么办？</string>
   <string name="protectionAgainstNoShowA" comment="By &quot;a game&quot; - we mean just one game. Missing even one game will prevent that player from joining a new Swiss event for a certain amount of time.">报名参加瑞士锦标赛但不下棋的玩家可能导致问题。
-为了缓解这些麻烦，Lichess 会阻止未能在加入锦标赛一段时间内下出一盘棋的玩家。
+为了缓解这些麻烦，Chess-Online 会阻止未能在加入锦标赛一段时间内下出一盘棋的玩家。
 瑞士锦标赛的创建者也可以决定是否让他们加入。</string>
   <string name="lateJoinQ">玩家可以稍后加入吗？</string>
   <string name="lateJoinA">是的，直到一半的回合完成之前。比如一个有 11 轮的比赛，选手可以在第 6 轮开始前加入；一个 12 轮的比赛可以在第 7 轮开始前加入。
@@ -84,7 +84,7 @@
 原因是没有公平的方法处理玩家提前离开比赛的情况。我们不能指望所有玩家在线上完成所有的比赛，这不现实。结果是，大部分循环赛都存在缺陷和不公平问题，从而缺少存在的理由。
 在线上，最能达到和循环赛相近的方法是举办一场回合数很多的瑞士锦标赛，这样在比赛结束前所有可能的配对都将进行一场对局。</string>
   <string name="otherSystemsQ">会有其它的比赛系统吗？</string>
-  <string name="otherSystemsA">目前我们不打算为 Lichess 增加其它的比赛系统。</string>
+  <string name="otherSystemsA">目前我们不打算为 Chess-Online 增加其它的比赛系统。</string>
   <string name="swissDescription">在瑞士锦标赛（%1$s）中，选手们不需要依次面对所有其他参赛者。在每一轮比赛中，系统将根据一组规则来为选手配对，保证选手总是和得分相近的对手比赛，但相同的对手只会遇到一次。所有回合总得分最多的选手将获得比赛冠军。除非玩家仅剩奇数名，否则他们将参与每一轮比赛。</string>
   <string name="teamOnly">瑞士锦标赛只能由队长创建，并且只能由队员参与。%1$s 以开始瑞士锦标赛。</string>
   <string name="joinOrCreateTeam">加入或创建团队</string>

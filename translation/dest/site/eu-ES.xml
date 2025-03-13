@@ -232,8 +232,8 @@
   <string name="forgotPassword">Pasahitza ahaztu duzu?</string>
   <string name="error.weakPassword">Pasahitz hau oso arrunta eta asmatzeko erraza da.</string>
   <string name="error.namePassword">Ez erabili zure erabiltzaile-izena pasahitz gisa.</string>
-  <string name="blankedPassword">Pasahitz hau beste webgune baten erabili duzu eta publikoki ezaguna da hori. Lichess kontuaren segurtasuna bermatzeko beste pasahitz bat erabili behar duzu. Eskerrik asko.</string>
-  <string name="youAreLeavingLichess">Lichess uzten ari zara</string>
+  <string name="blankedPassword">Pasahitz hau beste webgune baten erabili duzu eta publikoki ezaguna da hori. Chess-Online kontuaren segurtasuna bermatzeko beste pasahitz bat erabili behar duzu. Eskerrik asko.</string>
+  <string name="youAreLeavingLichess">Chess-Online uzten ari zara</string>
   <string name="neverTypeYourPassword">Ez erabiili zure Lichesseko pasahitza beste inon!</string>
   <string name="proceedToX">Joan zaitez %s helbidera</string>
   <string name="passwordSuggestion">Ez erabili beste norbaitek esandako pasahitzak. Zure kontua lapurtzeko erabiliko dute.</string>
@@ -529,7 +529,7 @@
   <string name="inlineNotation">Lerroarteko oharrak</string>
   <string name="makeAStudy">Ondo gorde eta partekatzeko sortu azterlan bat.</string>
   <string name="clearSavedMoves">Garbitu jokaldiak</string>
-  <string name="previouslyOnLichessTV">Aurreko Lichess TV saioak</string>
+  <string name="previouslyOnLichessTV">Aurreko Chess-Online TV saioak</string>
   <string name="onlinePlayers">Konektatutako jokalariak</string>
   <string name="activePlayers">Jokalari aktiboak</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Kontuz!  erlojurik eduki ez arren, partida hau puntuagarria da!</string>
@@ -697,7 +697,7 @@
   <string name="simulHostExtraTime">Denbora gehitu erlojuan</string>
   <string name="simulAddExtraTimePerPlayer">Aldibereko partidara sartzen den jokalari bakoitzagatik denbora gehitu zure erlojuan.</string>
   <string name="simulHostExtraTimePerPlayer">Jokalari bakoitzeko denbora gehigarria</string>
-  <string name="lichessTournaments">Lichess txapelketak</string>
+  <string name="lichessTournaments">Chess-Online txapelketak</string>
   <string name="tournamentFAQ">Arena txapelketaren ohiko galderak</string>
   <string name="timeBeforeTournamentStarts">Txapelketa hasteko denbora</string>
   <string name="averageCentipawnLoss">Bataz besteko peoi-ehuneko galera</string>
@@ -748,7 +748,7 @@
   <string name="byRegisteringYouAgreeToBeBoundByOur">Izena ematean, gure %s onartzen dituzu.</string>
   <string name="readAboutOur">Irakurri gure %s.</string>
   <string name="networkLagBetweenYouAndLichess">Sarearen atzerapena Lichessen eta zure artean</string>
-  <string name="timeToProcessAMoveOnLichessServer">Lichess zerbitzariak jokaldi bat egiteko denbora</string>
+  <string name="timeToProcessAMoveOnLichessServer">Chess-Online zerbitzariak jokaldi bat egiteko denbora</string>
   <string name="downloadAnnotated">Oharrekin jaitsi</string>
   <string name="downloadRaw">Oharrik gabe jaitsi</string>
   <string name="downloadImported">Igo zen moduan jaitsi</string>
@@ -894,7 +894,7 @@
   <string name="tryToWin">Jokatutako partida guztiak irabazten saiatu (edo gutxienez berdindu).</string>
   <string name="resignLostGames">Galdutako partidetan amore eman (ez utzi denbora agortzen).</string>
   <string name="temporaryInconvenience">Barkatu eragozpenak,</string>
-  <string name="wishYouGreatGames">segi lichess.org-en jokatzen.</string>
+  <string name="wishYouGreatGames">segi chess-online.com-en jokatzen.</string>
   <string name="thankYouForReading">Eskerrik asko irakurtzeagatik!</string>
   <string name="lifetimeScore">Jokalari honekin duzun emaitza</string>
   <string name="currentMatchScore">Uneko partidetako emaitza</string>
@@ -982,8 +982,8 @@ Utzi hutsik partidak ohiko posizioarekin hasteko.</string>
   <string name="analysisOptions">Analisiaren aukerak</string>
   <string name="focusChat">Eraman fokua txatera</string>
   <string name="showHelpDialog">Erakutsi laguntza leiho hau</string>
-  <string name="reopenYourAccount" comment="Appears on the page where players can reopen their closed account - https://lichess.org/account/reopen (you can only see this when you logged out).">Berreskuratu zure kontua</string>
-  <string name="reopenYourAccountDescription" comment="Appears on the page where players can reopen their closed account - https://lichess.org/account/reopen (you can only see this when you logged out).">Zure kontua itxi bazenuen baina berreskuratu nahi baduzu, hori egiteko aukera duzu.</string>
+  <string name="reopenYourAccount" comment="Appears on the page where players can reopen their closed account - https://chess-online.com/account/reopen (you can only see this when you logged out).">Berreskuratu zure kontua</string>
+  <string name="reopenYourAccountDescription" comment="Appears on the page where players can reopen their closed account - https://chess-online.com/account/reopen (you can only see this when you logged out).">Zure kontua itxi bazenuen baina berreskuratu nahi baduzu, hori egiteko aukera duzu.</string>
   <string name="emailAssociatedToaccount">Posta elektronikoa ondo lotu da zure kontura</string>
   <string name="sentEmailWithLink">Posta elektroniko bat bidali dizugu lotura batekin.</string>
   <string name="tournamentEntryCode">Txapelketara sartzeko kodea</string>
@@ -1000,7 +1000,7 @@ Utzi hutsik partidak ohiko posizioarekin hasteko.</string>
   <string name="ourEventTips">Txapelketak antolatzeko gure aholkuak</string>
   <string name="instructions">Jarraibideak</string>
   <string name="showMeEverything">Erakutsi guztia</string>
-  <string name="lichessPatronInfo">Lichess software librea da.
+  <string name="lichessPatronInfo">Chess-Online software librea da.
 Garapen eta mantentze-kostu guztiak erabiltzaileen dohaintzekin ordaintzen dira.</string>
   <string name="nothingToSeeHere">Hemen ez dago ezer zuretzat.</string>
   <string name="stats">Estatistikak</string>

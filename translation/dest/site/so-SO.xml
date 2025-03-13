@@ -232,9 +232,9 @@
   <string name="forgotPassword">Ma ilowday furaha?</string>
   <string name="error.weakPassword">Furahani waa caan, si fidud baa loo nasiibin karaa.</string>
   <string name="error.namePassword">Fadlan magaca-akoonka boggaaga ha ka dhigan fure.</string>
-  <string name="blankedPassword">Fure la mid ah ayaad u isticmaashay bog kale. Bogaasna waa la jabsaday. Si ad u ilaaliso nabada akoonkaaga Lichess, waxad u baahantahay fure cusub. Waad ku mahadsantay in ad na fahantay.</string>
-  <string name="youAreLeavingLichess">Waad ka baxaysaa Lichess</string>
-  <string name="neverTypeYourPassword">Weligaa ha ku qorin furaha Lichess bog kale!</string>
+  <string name="blankedPassword">Fure la mid ah ayaad u isticmaashay bog kale. Bogaasna waa la jabsaday. Si ad u ilaaliso nabada akoonkaaga Chess-Online, waxad u baahantahay fure cusub. Waad ku mahadsantay in ad na fahantay.</string>
+  <string name="youAreLeavingLichess">Waad ka baxaysaa Chess-Online</string>
+  <string name="neverTypeYourPassword">Weligaa ha ku qorin furaha Chess-Online bog kale!</string>
   <string name="proceedToX">Ku sii soco %s</string>
   <string name="passwordSuggestion">Fure laguu sheegay ha ka dhigan fure. Waxay Kaa xadi karaan akoonka.</string>
   <string name="emailSuggestion">Wax laguu sheegay ha ka dhigan iimayl. Waxa lagaa xadi karaan akoonka.</string>
@@ -343,7 +343,7 @@
     <item quantity="one">Sii %s sikin</item>
     <item quantity="other">Sii %s sikin</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Akoonkani wuxu jabiyey xeerarka adeegga ee Lichess</string>
+  <string name="thisAccountViolatedTos">Akoonkani wuxu jabiyey xeerarka adeegga ee Chess-Online</string>
   <string name="yourOpponentProposesATakeback">Horjeedahaagu wuxuu kaa dalbaday ka noqosho</string>
   <plurals name="nbStudies">
     <item quantity="one">%s cashar</item>
@@ -421,6 +421,6 @@
   <string name="youCantStartNewGame">Ciyaar kale ma bilaabi kartid inta aanay tani fhamaan.</string>
   <string name="since">Ka dib</string>
   <string name="until">Ka hor</string>
-  <string name="lichessDbExplanation">Ciyaaraha qiimaysan ee ka dhacay Lichess</string>
+  <string name="lichessDbExplanation">Ciyaaraha qiimaysan ee ka dhacay Chess-Online</string>
   <string name="switchSides">Beddel kooxda</string>
 </resources>

@@ -4,9 +4,9 @@
   <string name="friendBlogs">Blogovi prijatelja</string>
   <string name="likedBlogs">Pozitivno ocjenjeni blogovi</string>
   <string name="blogTopics">Teme blogova</string>
-  <string name="lichessOfficialBlog">Službeni Lichess blog</string>
+  <string name="lichessOfficialBlog">Službeni Chess-Online blog</string>
   <string name="continueReadingPost">Nastavi čitati ovu objavu</string>
-  <string name="lichessBlogPostsFromXYear">Lichess blogovi u %s</string>
+  <string name="lichessBlogPostsFromXYear">Chess-Online blogovi u %s</string>
   <string name="previousBlogPosts">Prijašnji blogovi</string>
   <string name="xBlog">Blog korisnika %s</string>
   <string name="newPost">Nova objava</string>

@@ -77,7 +77,7 @@ Desse eigenskapane finn ein truleg heller innan lag enn i opne, globale turnerin
   <string name="whatIfOneDoesntPlayA">Klokka deira vil gå og dei vil tape partiet. System vil deretter fjerne spelaren frå turneringa slik at dei ikkje tapar fleire parti. Spelaren kan når som helst koma attende til turneringa.</string>
   <string name="protectionAgainstNoShowQ">Kva hender med spelarar som ikkje stiller opp (\"DNS\")?</string>
   <string name="protectionAgainstNoShowA" comment="By &quot;a game&quot; - we mean just one game. Missing even one game will prevent that player from joining a new Swiss event for a certain amount of time.">Spelarar som registrerer seg for sveitsarturneringar uten å delta, kan utgjera eit problem.
-For å forsøke å lindra dette problemet stenger Lichess slike spelarar ute frå sveitsarturneringar for eit visst tidsrom.
+For å forsøke å lindra dette problemet stenger Chess-Online slike spelarar ute frå sveitsarturneringar for eit visst tidsrom.
 Arrangørar av sveitsarturneringar kan på eiga hand like fullt akseptera dei som deltakarar i turneringa deira.</string>
   <string name="lateJoinQ">Kan spelarar koma til ei turnering etter at den har starta?</string>
   <string name="lateJoinA">Ja, heilt fram til halvparten av rundane har starta. Til dømes kan ein spelar koma inn i ein 11-rundars sveitsarturnering fram til sjette runde har starta og fram til sjuande runde i ein 12-rundars turnering.
@@ -88,7 +88,7 @@ Spelarar som kjem til turneringa etter at den er starta vert godskrivne med berr
   <string name="roundRobinA">Vi skulle gjerne hatt med Round Robin-turneringar, men diverre fungerar dei ikkje online.
 Grunnen er at det ikke finst ein rettvis måte å handtera spelarar som forlet turneringa før den er ferdigspela. Det er ikkje å forvente at alle online-spelarar vil spele alle sine parti, og difor vil dei fleste Round Robin-turneringar verte feilaktige og urettvise. Det næraste ein kjem Round Robin-spel online er i sveitsarturneringar med svært mange rundar. I slike høve vil alle moglege parsamansetjingar verte spela før turneringa endar.</string>
   <string name="otherSystemsQ">Kva med andre turneringssystem?</string>
-  <string name="otherSystemsA">Nett no går vi ikkje med planar om fleire turneringssystem enn dei som allereie finst på Lichess.</string>
+  <string name="otherSystemsA">Nett no går vi ikkje med planar om fleire turneringssystem enn dei som allereie finst på Chess-Online.</string>
   <string name="swissDescription">I ein sveitsarturnering %1$s, er det ikkje sikkert at kvar deltakar spelar mot alle andre som deltek. Deltakarane møter ein motspelar i kvar runde og samansetjinga vert bestemt ved hjelp av eit regelsett som er slik at ein set saman deltakarar med nærast mogleg poengtal, men slik at ein berre møter same spelar ein gong i kvar turnering. Vinnar er den med det høgaste poengalet i alle rundene. Alle deltakarar deltek i alle rundane så sant det er eit partal spelarar i runden.</string>
   <string name="teamOnly">Sveitsarturneringar kan berre arrangeras av lagleiarar og kan berre spelas av lagmedlemer.           
 %1$s for å starte å spele i sveitsarturneriangar.</string>

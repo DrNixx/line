@@ -4,9 +4,9 @@
   <string name="friendBlogs">Blogy přátel</string>
   <string name="likedBlogs">Oblíbené příspěvky blogu</string>
   <string name="blogTopics">Témata blogů</string>
-  <string name="lichessOfficialBlog">Oficiální blog Lichess</string>
+  <string name="lichessOfficialBlog">Oficiální blog Chess-Online</string>
   <string name="continueReadingPost">Pokračovat ve čtení tohoto příspěvku</string>
-  <string name="lichessBlogPostsFromXYear">Příspěvky blogu Lichess v %s</string>
+  <string name="lichessBlogPostsFromXYear">Příspěvky blogu Chess-Online v %s</string>
   <string name="previousBlogPosts">Předchozí příspěvky blogu</string>
   <string name="xBlog">Blog hráče %s</string>
   <string name="newPost">Nový příspěvek</string>

@@ -1653,10 +1653,10 @@ object Quote:
       "Mark Dvoretsky"
     ),
     // lichess facts
-    Quote("All features for free; for everyone; forever.", "lichess.org"),
-    Quote("We will never display ads.", "lichess.org"),
-    Quote("We do not track you. It's a rare feature, nowadays.", "lichess.org"),
-    Quote("Every chess player is a premium user.", "lichess.org"),
+    Quote("All features for free; for everyone; forever.", "live.chess-online.com"),
+    Quote("We will never display ads.", "live.chess-online.com"),
+    Quote("We do not track you. It's a rare feature, nowadays.", "live.chess-online.com"),
+    Quote("Every chess player is a premium user.", "live.chess-online.com"),
     Quote("I never lose. I either win or learn.", "Nelson Mandela")
   )
 

@@ -60,8 +60,8 @@
   <string name="notifyChallenge">Tantangan</string>
   <string name="notifyTournamentSoon">Turnamen akan segera dimulai</string>
   <string name="notifyTimeAlarm">Waktu korespondensi akan habis</string>
-  <string name="notifyBell">Notifikasi bel didalam Lichess</string>
-  <string name="notifyPush">Notifikasi perangkat saat anda tidak di Lichess</string>
+  <string name="notifyBell">Notifikasi bel didalam Chess-Online</string>
+  <string name="notifyPush">Notifikasi perangkat saat anda tidak di Chess-Online</string>
   <string name="notifyWeb">Browser</string>
   <string name="notifyDevice">Perangkat</string>
   <string name="bellNotificationSound">Suara pemberitahuan</string>

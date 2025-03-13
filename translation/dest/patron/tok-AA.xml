@@ -2,7 +2,7 @@
 <resources>
   <string name="donate">o pana e mani</string>
   <string name="donateAsX">o pana kepeken nimi %s</string>
-  <string name="xBecamePatron">jan %s li kama e jan Patron pi ilo Lichess</string>
+  <string name="xBecamePatron">jan %s li kama e jan Patron pi ilo Chess-Online</string>
   <string name="lifetime">tenpo kama ali</string>
   <string name="monthly">wan lon tenpo mun</string>
   <string name="onetime">tenpo wan</string>

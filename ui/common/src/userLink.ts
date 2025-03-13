@@ -50,7 +50,7 @@ export const userLine = (u: HasLine): VNode | undefined =>
   u.line !== false
     ? h('i.line', {
         class: { patron: !!u.patron, moderator: !!u.moderator },
-        attrs: u.patron ? { title: 'Lichess Patron' } : {},
+        attrs: u.patron ? { title: 'Chess-Online Patron' } : {},
       })
     : undefined;
 

@@ -13,7 +13,7 @@
   <string name="newBroadcast">הקרנה ישירה חדשה</string>
   <string name="subscribedBroadcasts">הקרנות שנרשמת אליהן</string>
   <string name="aboutBroadcasts">הסבר על הקרנות</string>
-  <string name="howToUseLichessBroadcasts">איך להשתמש בהקרנות ב־Lichess.</string>
+  <string name="howToUseLichessBroadcasts">איך להשתמש בהקרנות ב־Chess-Online.</string>
   <string name="theNewRoundHelp">הסבב החדש יכלול את אותם התורמים והחברים כמו בסבב הקודם.</string>
   <string name="addRound">הוספת סבב</string>
   <string name="ongoing">כרגע</string>
@@ -25,8 +25,8 @@
   <string name="fullDescription">תיאור מלא של הטורניר</string>
   <string name="fullDescriptionHelp">תיאור מפורט של הטורניר (אופציונאלי). %1$s זמין. אורך התיאור לא יעלה על %2$s תווים.</string>
   <string name="sourceSingleUrl">קישור המקור של ה־PGN</string>
-  <string name="sourceUrlHelp">הקישור ש־Lichess יבדוק כדי לקלוט עדכונים ב־PGN. הוא חייב להיות פומבי ונגיש דרך האינטרנט.</string>
-  <string name="sourceGameIds">עד 64 מזהי משחק של Lichess, מופרדים ברווחים.</string>
+  <string name="sourceUrlHelp">הקישור ש־Chess-Online יבדוק כדי לקלוט עדכונים ב־PGN. הוא חייב להיות פומבי ונגיש דרך האינטרנט.</string>
+  <string name="sourceGameIds">עד 64 מזהי משחק של Chess-Online, מופרדים ברווחים.</string>
   <string name="startDateTimeZone">שעת ההתחלה באזור הזמן המקומי של הטורניר: %s</string>
   <string name="startDateHelp">אופציונאלי, אם את/ה יודע/ת מתי האירוע צפוי להתחיל</string>
   <string name="currentGameUrl">הקישור למשחק הנוכחי</string>
@@ -49,7 +49,7 @@
   <string name="ageThisYear">גיל השנה</string>
   <string name="unrated">לא מדורג</string>
   <string name="recentTournaments">טורנירים אחרונים</string>
-  <string name="openLichess">פתיחה ב־Lichess</string>
+  <string name="openLichess">פתיחה ב־Chess-Online</string>
   <string name="teams">קבוצות</string>
   <string name="boards">לוחות</string>
   <string name="overview">מידע כללי</string>

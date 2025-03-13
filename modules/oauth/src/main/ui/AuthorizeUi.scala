@@ -92,7 +92,7 @@ final class AuthorizeUi(helpers: Helpers)(lightUserFallback: UserId => LightUser
       else
         frag(
           (!prompt.trusted).option(
-            p(cls := List("danger" -> isDanger))("Not owned or operated by lichess.org")
+            p(cls := List("danger" -> isDanger))("Not owned or operated by chess-online.com")
           ),
           p(cls := "oauth__redirect")("Will redirect to ", prompt.redirectUri.withoutQuery)
         )

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="contact">Liên hệ</string>
-  <string name="contactLichess">Liên hệ Lichess</string>
+  <string name="contactLichess">Liên hệ Chess-Online</string>
   <string name="whatCanWeHelpYouWith">Chúng tôi có thể giúp gì cho bạn?</string>
   <string name="visitThisPage">Truy cập trang này để giải quyết vấn đề</string>
   <string name="iCantLogIn">Tôi không thể đăng nhập được</string>
@@ -12,8 +12,8 @@
   <string name="lost2FA">Tôi bị mất quyền truy cập mã bảo mật 2 lớp của mình</string>
   <string name="doPasswordReset">Thực hiện đặt lại mật khẩu để xóa bỏ bảo mật 2 lớp</string>
   <string name="accountSupport">Tôi cần hỗ trợ tài khoản</string>
-  <string name="wantTitle">Tôi muốn danh hiệu của mình được hiển thị trên Lichess</string>
-  <string name="visitTitleConfirmation">Để hiện danh hiệu của bạn trên trang cá nhân Lichess của bạn và tham dự các giải Titled Arena, hãy truy cập đến trang xác nhận danh hiệu</string>
+  <string name="wantTitle">Tôi muốn danh hiệu của mình được hiển thị trên Chess-Online</string>
+  <string name="visitTitleConfirmation">Để hiện danh hiệu của bạn trên trang cá nhân Chess-Online của bạn và tham dự các giải Titled Arena, hãy truy cập đến trang xác nhận danh hiệu</string>
   <string name="wantCloseAccount">Tôi muốn đóng tài khoản của mình</string>
   <string name="closeYourAccount">Bạn có thể đóng tài khoản của mình tại trang này</string>
   <string name="doNotAskByEmail">Xin vui lòng không yêu cầu chúng tôi đóng tài khoản của bạn qua email, chúng tôi sẽ không giải quyết.</string>
@@ -34,10 +34,10 @@
   <string name="doNotMessageModerators">Vui lòng không gửi tin nhắn trực tiếp đến các điều hành viên.</string>
   <string name="onlyReports">Chỉ báo cáo những kỳ thủ thông qua biểu mẫu báo cáo mới có hiệu lực.</string>
   <string name="wantReportBug">Tôi muốn báo cáo một lỗi</string>
-  <string name="reportBugInForum">Trong diễn đàn Phản hồi của Lichess (Lichess Feedback)</string>
-  <string name="reportWebsiteIssue">Bằng một vấn đề (issue) về trang web Lichess trên GitHub</string>
-  <string name="reportMobileIssue">Bằng một vấn đề (issue) cho ứng dụng điện thoại của Lichess trên GitHub</string>
-  <string name="reportBugInDiscord">Trong máy chủ Discord của Lichess</string>
+  <string name="reportBugInForum">Trong diễn đàn Phản hồi của Chess-Online (Chess-Online Feedback)</string>
+  <string name="reportWebsiteIssue">Bằng một vấn đề (issue) về trang web Chess-Online trên GitHub</string>
+  <string name="reportMobileIssue">Bằng một vấn đề (issue) cho ứng dụng điện thoại của Chess-Online trên GitHub</string>
+  <string name="reportBugInDiscord">Trong máy chủ Discord của Chess-Online</string>
   <string name="howToReportBug">Vui lòng mô tả lỗi trông như thế nào, thay vào đó bạn mong đợi điều gì sẽ xảy ra và các bước để tái tạo lỗi.</string>
   <string name="illegalPawnCapture">Nước ăn tốt không hợp lệ</string>
   <string name="calledEnPassant">Đây được gọi là \"Bắt tốt qua đường\" và là một luật chơi của cờ vua.</string>
@@ -55,7 +55,7 @@
   <string name="botRatingAbuse">Trong một số trường hợp nhất định khi chơi với tài khoản Bot, ván cờ có xếp hạng có thể không trao điểm nếu xác định được rằng người chơi đang lạm dụng Bot để lấy điểm xếp hạng.</string>
   <string name="errorPage">Trang lỗi</string>
   <string name="reportErrorPage">Nếu bạn gặp một trang lỗi, bạn có thể báo cáo nó:</string>
-  <string name="learnHowToMakeBroadcasts">Tìm hiểu cách thức phát sóng trên Lichess</string>
+  <string name="learnHowToMakeBroadcasts">Tìm hiểu cách thức phát sóng trên Chess-Online</string>
   <string name="banAppeal">Khiếu nại lệnh cấm, hạn chế hoặc chặn IP</string>
   <string name="engineAppeal">Đánh dấu gian lận hoặc dùng động cơ máy tính</string>
   <string name="sendAppealTo">Bạn có thể gửi khiếu nại đến %s.</string>
@@ -65,13 +65,13 @@
   <string name="doNotDeny">Đừng phủ nhận đã gian lận. Nếu bạn muốn được phép tạo một tài khoản mới, chỉ cần thừa nhận những gì bạn đã làm và chứng tỏ bạn hiểu rằng đó là một sai lầm.</string>
   <string name="otherRestriction">Hạn chế khác</string>
   <string name="collaboration">Cộng tác, hợp pháp, thương mại</string>
-  <string name="monetizing">Kiếm tiền với Lichess</string>
-  <string name="buyingLichess">Mua Lichess</string>
-  <string name="authorizationToUse">Ủy quyền sử dụng Lichess</string>
-  <string name="welcomeToUse">Bạn được hoan nghênh xử dụng Lichess cho các hoạt động của mình, kể cả vì mục đích thương mại.</string>
-  <string name="videosAndBooks">Bạn có thể hiển thị nó trong thước phim của mình, và có thể in ảnh chụp Lichess trong sách của bạn.</string>
+  <string name="monetizing">Kiếm tiền với Chess-Online</string>
+  <string name="buyingLichess">Mua Chess-Online</string>
+  <string name="authorizationToUse">Ủy quyền sử dụng Chess-Online</string>
+  <string name="welcomeToUse">Bạn được hoan nghênh xử dụng Chess-Online cho các hoạt động của mình, kể cả vì mục đích thương mại.</string>
+  <string name="videosAndBooks">Bạn có thể hiển thị nó trong thước phim của mình, và có thể in ảnh chụp Chess-Online trong sách của bạn.</string>
   <string name="creditAppreciated">Tín dụng được đánh giá cao nhưng không bắt buộc.</string>
   <string name="noneOfTheAbove">Không phải các phương án trên</string>
   <string name="sendEmailAt">Hãy gửi email cho chúng tôi tại %s.</string>
-  <string name="explainYourRequest">Xin vui lòng giải thích yêu cầu của bạn một cách rõ ràng và thấu đáo. Đưa ra tên đang nhập Lichess của bạn, và bất cứ thông tin nào hữu ích có thể giúp chúng tôi giúp bạn.</string>
+  <string name="explainYourRequest">Xin vui lòng giải thích yêu cầu của bạn một cách rõ ràng và thấu đáo. Đưa ra tên đang nhập Chess-Online của bạn, và bất cứ thông tin nào hữu ích có thể giúp chúng tôi giúp bạn.</string>
 </resources>

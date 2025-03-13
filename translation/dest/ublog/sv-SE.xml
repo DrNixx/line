@@ -4,9 +4,9 @@
   <string name="friendBlogs">Vänners bloggar</string>
   <string name="likedBlogs">Gillade blogginlägg</string>
   <string name="blogTopics">Bloggämnen</string>
-  <string name="lichessOfficialBlog">Lichess officiella blogg</string>
+  <string name="lichessOfficialBlog">Chess-Online officiella blogg</string>
   <string name="continueReadingPost">Fortsätt läsa detta inlägg</string>
-  <string name="lichessBlogPostsFromXYear">Lichess blogginlägg i %s</string>
+  <string name="lichessBlogPostsFromXYear">Chess-Online blogginlägg i %s</string>
   <string name="previousBlogPosts">Föregående blogginlägg</string>
   <string name="xBlog">%ss blogg</string>
   <string name="newPost">Nytt inlägg</string>
@@ -46,7 +46,7 @@
   <string name="deleteBlog">Ta bort detta blogginlägg definitivt</string>
   <string name="safeToUseImages">Det är säkert att använda bilder från följande webbplatser: </string>
   <string name="selectPostTopics">Välj de ämnen som ditt inlägg handlar om</string>
-  <string name="useImagesYouMadeYourself">Du kan också använda bilder som du gjort själv, bilder du tagit, skärmdumpar från Lichess... allt som inte är upphovsrättsskyddat av någon annan.</string>
+  <string name="useImagesYouMadeYourself">Du kan också använda bilder som du gjort själv, bilder du tagit, skärmdumpar från Chess-Online... allt som inte är upphovsrättsskyddat av någon annan.</string>
   <string name="safeAndRespectfulContent">Vänligen lägg bara upp säkert och respektfullt innehåll. Kopiera inte någon annans innehåll.</string>
   <string name="inappropriateContentAccountClosed">Olämpligt innehåll kan göra att ditt konto stängs.</string>
   <string name="blogTips">Våra enkla tips för att skriva bra blogginlägg</string>

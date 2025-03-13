@@ -58,8 +58,8 @@
   <string name="notifyChallenge">Dúshláin</string>
   <string name="notifyTournamentSoon">Comórtas ag tosú go luath</string>
   <string name="notifyTimeAlarm">Clog comhfhreagrais ag rith amach</string>
-  <string name="notifyBell">Fógra cloig laistigh de Lichess</string>
-  <string name="notifyPush">Fógra gléis nuair nach bhfuil tú ar Lichess</string>
+  <string name="notifyBell">Fógra cloig laistigh de Chess-Online</string>
+  <string name="notifyPush">Fógra gléis nuair nach bhfuil tú ar Chess-Online</string>
   <string name="notifyWeb">Brabhsálaí</string>
   <string name="notifyDevice">Gléas</string>
 </resources>

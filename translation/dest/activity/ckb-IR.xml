@@ -3,8 +3,8 @@
   <string name="activity">چالاکی</string>
   <string name="hostedALiveStream">دەستی بە پەخشی راستەوخۆ کرد</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">پشتگیریکرد لە Lichess.org بۆ ماوەی %1$s مانگ وەک %2$s</item>
-    <item quantity="other">پشتگیریکرد لە Lichess.org بۆ ماوەی %1$s مانگ وەک %2$s</item>
+    <item quantity="one">پشتگیریکرد لە Chess-Online.Com بۆ ماوەی %1$s مانگ وەک %2$s</item>
+    <item quantity="other">پشتگیریکرد لە Chess-Online.Com بۆ ماوەی %1$s مانگ وەک %2$s</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">راهێنانیکرد لە %1$s بار لەسەر %2$s</item>
@@ -54,7 +54,7 @@
     <item quantity="one">%s فێرکاری نوێی دروستکرد</item>
     <item quantity="other">%s فێرکاری نوێی دروستکرد</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="one">پێشبرکێ ی کرد لە %s پاڵەوانیەتی</item>
     <item quantity="other">پێشبرکێی کرد لە %s پاڵەوانیەتی</item>
   </plurals>
@@ -67,7 +67,7 @@
     <item quantity="other">پێشبرکێی کرد لە %s پاڵەوانیەتی سویسری</item>
   </plurals>
   <string name="rankedInSwissTournament">پلەی #%1$s لە %2$s</string>
-  <string name="signedUp">ناوی تۆمار کردووە لە lichess.org</string>
+  <string name="signedUp">ناوی تۆمار کردووە لە chess-online.com</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">پەیوەندی بە تیپی %s کرد</item>
     <item quantity="other">پەیوەندی بە تیپی %s کرد</item>

@@ -3,8 +3,8 @@
   <string name="activity">Attività</string>
   <string name="hostedALiveStream">Erate l\' Ostu d\' un Direttu</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">Aiuta lichess.org dapoi %1$s mese tale un %2$s</item>
-    <item quantity="other">Aiuta lichess.org dapoi %1$s mesi tale un %2$s</item>
+    <item quantity="one">Aiuta chess-online.com dapoi %1$s mese tale un %2$s</item>
+    <item quantity="other">Aiuta chess-online.com dapoi %1$s mesi tale un %2$s</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">Hà risoltu %1$s pusizione in %2$s</item>
@@ -54,7 +54,7 @@
     <item quantity="one">Hà creatu %s studiu novu</item>
     <item quantity="other">Hà creatu %s studii novi</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="one">Hà participatu à %s ghjustra Arena</item>
     <item quantity="other">Hà participatu à %s ghjustre Arena</item>
   </plurals>
@@ -67,7 +67,7 @@
     <item quantity="other">Hà participatu à %s ghjustre Svizzere</item>
   </plurals>
   <string name="rankedInSwissTournament">Hè classificatu #%1$s in %2$s</string>
-  <string name="signedUp">S\' hè cunnettatu à lichess.org</string>
+  <string name="signedUp">S\' hè cunnettatu à chess-online.com</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">Hè ghjuntu in %s squadra</item>
     <item quantity="other">Hè ghjuntu in %s squadre</item>

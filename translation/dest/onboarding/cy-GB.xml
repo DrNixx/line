@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="welcome">Croeso!</string>
-  <string name="welcomeToLichess">Croeso i lichess.org!</string>
+  <string name="welcomeToLichess">Croeso i chess-online.com!</string>
   <string name="thisIsYourProfilePage">Dyma eich tudalen proffil.</string>
   <string name="enabledKidModeSuggestion">A fydd plentyn yn defnyddio\'r cyfrif hwn? Efallai yr hoffech chi alluogi %s.</string>
   <string name="whatNowSuggestions">Beth nawr? Dyma sawl awgrym:</string>

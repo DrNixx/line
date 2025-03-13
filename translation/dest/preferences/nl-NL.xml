@@ -63,8 +63,8 @@
   <string name="notifyChallenge">Uitdagingen</string>
   <string name="notifyTournamentSoon">Toernooi begint binnenkort</string>
   <string name="notifyTimeAlarm">Klok met correspondentie bijna leeg</string>
-  <string name="notifyBell">Bel melding binnen Lichess</string>
-  <string name="notifyPush">Apparaatmelding wanneer je niet op Lichess bent</string>
+  <string name="notifyBell">Bel melding binnen Chess-Online</string>
+  <string name="notifyPush">Apparaatmelding wanneer je niet op Chess-Online bent</string>
   <string name="notifyWeb">Browser</string>
   <string name="notifyDevice">Apparaat</string>
   <string name="bellNotificationSound">Meldingsgeluid</string>

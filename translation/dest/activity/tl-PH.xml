@@ -3,8 +3,8 @@
   <string name="activity">Aktibidad</string>
   <string name="hostedALiveStream">Nag-host ng live stream</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">Sinusuportahan ang lichess.org para sa %1$s buwan bilang isang %2$s</item>
-    <item quantity="other">Sinusuportahan ang lichess.org para sa %1$s buwan bilang isang %2$s</item>
+    <item quantity="one">Sinusuportahan ang chess-online.com para sa %1$s buwan bilang isang %2$s</item>
+    <item quantity="other">Sinusuportahan ang chess-online.com para sa %1$s buwan bilang isang %2$s</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">Nagsanay ng %1$s posisyon sa %2$s</item>
@@ -46,7 +46,7 @@
     <item quantity="one">Sumali sa %s sabay-sabay na eksibisyon</item>
     <item quantity="other">Sumali sa %s sabay-sabay na eksibisyon</item>
   </plurals>
-  <string name="signedUp">Sumali sa lichess.org</string>
+  <string name="signedUp">Sumali sa chess-online.com</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">Sumali ng %s grupo</item>
     <item quantity="other">Sumali ng %s mga grupo</item>

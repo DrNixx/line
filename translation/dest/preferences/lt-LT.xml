@@ -62,8 +62,8 @@
   <string name="notifyChallenge">Iššūkiai</string>
   <string name="notifyTournamentSoon">Greitai prasideda turnyras</string>
   <string name="notifyTimeAlarm">Baigiasi korespondencinės partijos laikmatis</string>
-  <string name="notifyBell">Varpelio pranešimai Lichess</string>
-  <string name="notifyPush">Pranešimai prietaisuose kai nesate Lichess</string>
+  <string name="notifyBell">Varpelio pranešimai Chess-Online</string>
+  <string name="notifyPush">Pranešimai prietaisuose kai nesate Chess-Online</string>
   <string name="notifyWeb">Naršyklėje</string>
   <string name="notifyDevice">Įrenginyje</string>
   <string name="bellNotificationSound">Pranešimų varpelio garsas</string>

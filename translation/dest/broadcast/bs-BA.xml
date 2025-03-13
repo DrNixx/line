@@ -12,7 +12,7 @@
   <string name="newBroadcast">Novo emitovanje uživo</string>
   <string name="subscribedBroadcasts">Pretplaćena emitovanja</string>
   <string name="aboutBroadcasts">O emitovanjima</string>
-  <string name="howToUseLichessBroadcasts">Kako koristiti Lichess emitovanje.</string>
+  <string name="howToUseLichessBroadcasts">Kako koristiti Chess-Online emitovanje.</string>
   <string name="theNewRoundHelp">Nova runda će imati isti broj članova i doprinositelja kao i prijašnja.</string>
   <string name="addRound">Dodajte kolo</string>
   <string name="ongoing">U toku</string>
@@ -24,8 +24,8 @@
   <string name="fullDescription">Potpuni opis događaja</string>
   <string name="fullDescriptionHelp">Neobavezni dugi opis događaja koji se emituje. %1$s je dostupan. Dužina mora biti manja od %2$s slova.</string>
   <string name="sourceSingleUrl">Izvorni URL PGN-a</string>
-  <string name="sourceUrlHelp">Link koji će Lichess koristiti kako bi redovno ažurirao PGN. Mora biti javno dostupan na internetu.</string>
-  <string name="sourceGameIds">Do 64 identifikacijska broja Lichess mečeva, odvojeni razmakom.</string>
+  <string name="sourceUrlHelp">Link koji će Chess-Online koristiti kako bi redovno ažurirao PGN. Mora biti javno dostupan na internetu.</string>
+  <string name="sourceGameIds">Do 64 identifikacijska broja Chess-Online mečeva, odvojeni razmakom.</string>
   <string name="startDateTimeZone">Datum početka u lokalnoj vremenskoj zoni turnira: %s</string>
   <string name="startDateHelp">Neobavezno, ukoliko znate kada počinje događaj</string>
   <string name="currentGameUrl">Link za trenutnu partiju</string>
@@ -48,7 +48,7 @@
   <string name="ageThisYear">Starost ove godine</string>
   <string name="unrated">Nema rejting</string>
   <string name="recentTournaments">Nedavni turniri</string>
-  <string name="openLichess">Otvori na Lichess-u</string>
+  <string name="openLichess">Otvori na Chess-Online-u</string>
   <string name="teams">Timovi</string>
   <string name="boards">Ploče</string>
   <string name="overview">Pregled</string>

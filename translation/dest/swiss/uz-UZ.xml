@@ -41,7 +41,7 @@ PlayerC PlayerD
 Juftlik o‘rniga o‘yinchiga xayrlashish (1 ball) uchun quyidagi qatorni qo‘shing:
 O\'yinchi E 1
 Yo\'qotilgan o\'yinchilar ishtirok etmagan deb hisoblanadi va nol ball oladi.
-Lichess avtomatik ravishda juftlik yaratishiga ruxsat berish uchun bu maydonni bo\'sh qoldiring.</string>
+Chess-Online avtomatik ravishda juftlik yaratishiga ruxsat berish uchun bu maydonni bo\'sh qoldiring.</string>
   <string name="mustHavePlayedTheirLastSwissGame">Shveytsariyadagi so\'nggi o\'yinini o\'tkazgan bo\'lishi kerak</string>
   <string name="mustHavePlayedTheirLastSwissGameHelp">O\'yinchilarga faqat oxirgi Shveytsariya o\'yinini o\'ynagan bo\'lsalar qo\'shilishga ruxsat bering. Agar ular yaqinda Shveytsariyadagi tadbirda ishtirok eta olmasalar, ular siznikiga kira olmaydi. Bu aslida paydo bo\'lgan o\'yinchilar uchun yaxshi Shveytsariya tajribasiga olib keladi.</string>
   <string name="newSwiss">Yangi Shveytsariya turniri</string>
@@ -75,7 +75,7 @@ Keyin tizim o\'yinchini turnirdan olib tashlaydi, shuning uchun ular ko\'proq o\
  Ular istalgan vaqtda turnirga qayta qo\'shilishlari mumkin.</string>
   <string name="protectionAgainstNoShowQ">Ko\'rsatilmaganlar bo\'yicha nima qilinadi?</string>
   <string name="protectionAgainstNoShowA" comment="By &quot;a game&quot; - we mean just one game. Missing even one game will prevent that player from joining a new Swiss event for a certain amount of time.">Shveytsariya tadbirlariga ro\'yxatdan o\'tgan, lekin o\'yinlarini o\'ynamaydigan o\'yinchilar muammoli bo\'lishi mumkin.
-Ushbu muammoni engillashtirish uchun Lichess o\'yinni o\'ynay olmagan o\'yinchilarni ma\'lum vaqt davomida yangi Shveytsariya tadbiriga qo\'shilishiga yo\'l qo\'ymaydi.
+Ushbu muammoni engillashtirish uchun Chess-Online o\'yinni o\'ynay olmagan o\'yinchilarni ma\'lum vaqt davomida yangi Shveytsariya tadbiriga qo\'shilishiga yo\'l qo\'ymaydi.
 Shveytsariya tadbirining yaratuvchisi baribir ularga tadbirga qo\'shilishga ruxsat berishga qaror qilishi mumkin.</string>
   <string name="lateJoinQ">O\'yinchilar kech qo\'shila oladimi?</string>
   <string name="lateJoinA">Ha, raundlarning yarmidan ko\'pi boshlanmaguncha; masalan, 11-raundlik Shveytsariyada o\'yinchilar 6-raund boshlanishidan oldin va 7-raund boshlanishidan oldin 12-raundda ishtirok etishlari mumkin.

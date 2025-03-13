@@ -247,9 +247,9 @@
   <string name="forgotPassword">Ți-ai uitat parola?</string>
   <string name="error.weakPassword">Această parolă este extrem de comună şi prea uşor de ghicit.</string>
   <string name="error.namePassword">Te rugăm să nu folosești numele tău de utilizator ca parolă.</string>
-  <string name="blankedPassword">Ați folosit aceeași parolă pe un alt site, iar acel site a fost compromis. Pentru a asigura siguranța contului dvs. Lichess, trebuie să setați o parolă nouă. Vă mulțumim pentru înțelegere.</string>
-  <string name="youAreLeavingLichess">Părăsești Lichess</string>
-  <string name="neverTypeYourPassword">Nu introduceți niciodată parola Lichess pe un alt site!</string>
+  <string name="blankedPassword">Ați folosit aceeași parolă pe un alt site, iar acel site a fost compromis. Pentru a asigura siguranța contului dvs. Chess-Online, trebuie să setați o parolă nouă. Vă mulțumim pentru înțelegere.</string>
+  <string name="youAreLeavingLichess">Părăsești Chess-Online</string>
+  <string name="neverTypeYourPassword">Nu introduceți niciodată parola Chess-Online pe un alt site!</string>
   <string name="proceedToX">Continuă către %s</string>
   <string name="passwordSuggestion">Nu seta o parolă sugerată de altcineva. O vor folosi pentru a vă fura contul.</string>
   <string name="emailSuggestion">Nu setați o adresă de e-mail sugerată de altcineva. O vor folosi pentru a vă fura contul.</string>
@@ -367,7 +367,7 @@
     <item quantity="few">Acordă %s secunde</item>
     <item quantity="other">Acordă %s de secunde</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Acest cont a încălcat condițiile de utilizare ale site-ului Lichess</string>
+  <string name="thisAccountViolatedTos">Acest cont a încălcat condițiile de utilizare ale site-ului Chess-Online</string>
   <string name="openingExplorerAndTablebase">Deschide exploratorul &amp; baza de date</string>
   <string name="takeback">Revocare</string>
   <string name="proposeATakeback">Propune revocarea mutării</string>
@@ -565,7 +565,7 @@
   <string name="inlineNotation">Notație integrată</string>
   <string name="makeAStudy">Pentru păstrare în siguranță și partajare, aveți în vedere crearea unui studiu.</string>
   <string name="clearSavedMoves">Șterge mutările</string>
-  <string name="previouslyOnLichessTV">Anterior pe Lichess TV</string>
+  <string name="previouslyOnLichessTV">Anterior pe Chess-Online TV</string>
   <string name="onlinePlayers">Jucători conectați</string>
   <string name="activePlayers">Jucători activi</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Atenție, partida este oficială, dar se joacă fără ceas!</string>
@@ -737,7 +737,7 @@
   <string name="simulHostExtraTime">Timp suplimentar pe ceasul gazdei</string>
   <string name="simulAddExtraTimePerPlayer">Adaugă timp inițial la ceasul tău pentru fiecare jucător care se alătură jocului simultan.</string>
   <string name="simulHostExtraTimePerPlayer">Timp suplimentar pentru ceasul gazdei, pentru fiecare jucător</string>
-  <string name="lichessTournaments">Turnee Lichess</string>
+  <string name="lichessTournaments">Turnee Chess-Online</string>
   <string name="tournamentFAQ">Întrebări și răspunsuri pentru turneu</string>
   <string name="timeBeforeTournamentStarts">Timp până la începerea turneului</string>
   <string name="averageCentipawnLoss">Medie pion-cenți pierduți</string>
@@ -788,8 +788,8 @@
   <string name="weHaveSentYouAnEmailTo">Am trimis un email la %s. Dă click pe link-ul trimis în acel email pentru a-ți reseta parola.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Înregistrându-te, ești de acord cu %s.</string>
   <string name="readAboutOur">Citește despre %s.</string>
-  <string name="networkLagBetweenYouAndLichess">Întârziere de rețea între tine și Lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Timpul necesar procesării unei mutări pe serverul Lichess</string>
+  <string name="networkLagBetweenYouAndLichess">Întârziere de rețea între tine și Chess-Online</string>
+  <string name="timeToProcessAMoveOnLichessServer">Timpul necesar procesării unei mutări pe serverul Chess-Online</string>
   <string name="downloadAnnotated">Descarcă cu note</string>
   <string name="downloadRaw">Descarcă brut</string>
   <string name="downloadImported">Descarcă importat</string>
@@ -814,7 +814,7 @@
   <string name="sessions">Sesiuni</string>
   <string name="revokeAllSessions">revocați toate sesiunile</string>
   <string name="playChessEverywhere">Joacă șah oriunde</string>
-  <string name="asFreeAsLichess">Gratis ca Lichess</string>
+  <string name="asFreeAsLichess">Gratis ca Chess-Online</string>
   <string name="builtForTheLoveOfChessNotMoney">Creat din dragoste pentru șah, nu pentru bani</string>
   <string name="everybodyGetsAllFeaturesForFree">Toată lumea are access la toate opțiunile, gratuit</string>
   <string name="zeroAdvertisement">Zero reclame</string>
@@ -926,7 +926,7 @@
     <item quantity="few">și salvează %s variațiile cu mutare anticipată</item>
     <item quantity="other">și salvează %s variațiile cu mutare anticipată</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Ați primit un mesaj privat de la Lichess.</string>
+  <string name="showUnreadLichessMessage">Ați primit un mesaj privat de la Chess-Online.</string>
   <string name="clickHereToReadIt">Click aici pentru a-l citi</string>
   <string name="sorry">Scuze :(</string>
   <string name="weHadToTimeYouOutForAWhile">Am fost nevoiți să suspendăm activitatea pentru puțin timp.</string>
@@ -939,14 +939,14 @@
   <string name="tryToWin">Încercați să câștigați (sau măcar să faceți remiză) fiecare meci pe care-l jucați.</string>
   <string name="resignLostGames">Abandonați partidele pierdute (nu lăsați timpul să expire).</string>
   <string name="temporaryInconvenience">Ne pare rău pentru neplăcerile temporare</string>
-  <string name="wishYouGreatGames">și vă dorim partide deosebite pe Lichess.org.</string>
+  <string name="wishYouGreatGames">și vă dorim partide deosebite pe Chess-Online.Com.</string>
   <string name="thankYouForReading">Îți mulțumim pentru atenție!</string>
   <string name="lifetimeScore">Scorul total</string>
   <string name="currentMatchScore">Scorul curent</string>
   <string name="agreementAssistance">Sunt de acord să nu primesc niciodată asistență în timpul partidelor mele (de la un calculator, o carte, o bază de date sau de la o altă persoană).</string>
   <string name="agreementNice">Sunt de acord să fiu mereu respectuos cu alți jucători.</string>
   <string name="agreementMultipleAccounts" comment="%s will be replaced with the translation of 'termsOfService'">Sunt de acord să nu creez conturi multiple (cu excepția motivelor declarate în %s).</string>
-  <string name="agreementPolicy">Sunt de acord cu respectarea tuturor politicilor Lichess.</string>
+  <string name="agreementPolicy">Sunt de acord cu respectarea tuturor politicilor Chess-Online.</string>
   <string name="searchOrStartNewDiscussion">Caută sau începe o nouă conversație</string>
   <string name="edit">Modifică</string>
   <string name="bullet" comment="Probably best left untranslated. Leave it as 'Bullet' unless your language has a better word for it.">Bullet</string>
@@ -985,7 +985,7 @@
   <string name="congratsYouWon">Felicitări, ați câștigat!</string>
   <string name="gameVsX">Joc vs %1$s</string>
   <string name="resVsX">%1$s vs %2$s</string>
-  <string name="lostAgainstTOSViolator">Ai pierdut în fața cuiva care a încălcat Termenii și Condițiile Lichess</string>
+  <string name="lostAgainstTOSViolator">Ai pierdut în fața cuiva care a încălcat Termenii și Condițiile Chess-Online</string>
   <string name="refundXpointsTimeControlY">Rambursare: %1$s puncte de evaluare %2$s.</string>
   <string name="timeAlmostUp">Timpul se apropie de sfârșit!</string>
   <string name="clickToRevealEmailAddress">[Click pentru a dezvălui adresa de e-mail]</string>
@@ -1028,8 +1028,8 @@ Lăsați gol pentru a începe jocurile din poziția inițială normală.</string
   <string name="analysisOptions">Opțiuni de analiză</string>
   <string name="focusChat">Focalizează conversația</string>
   <string name="showHelpDialog">Arată acest dialog de ajutor</string>
-  <string name="reopenYourAccount" comment="Appears on the page where players can reopen their closed account - https://lichess.org/account/reopen (you can only see this when you logged out).">Redeschide contul tău</string>
-  <string name="reopenYourAccountDescription" comment="Appears on the page where players can reopen their closed account - https://lichess.org/account/reopen (you can only see this when you logged out).">Dacă ți-ai închis contul, dar de atunci te-ai răzgândit, primești o șansă să-ți recuperezi contul.</string>
+  <string name="reopenYourAccount" comment="Appears on the page where players can reopen their closed account - https://chess-online.com/account/reopen (you can only see this when you logged out).">Redeschide contul tău</string>
+  <string name="reopenYourAccountDescription" comment="Appears on the page where players can reopen their closed account - https://chess-online.com/account/reopen (you can only see this when you logged out).">Dacă ți-ai închis contul, dar de atunci te-ai răzgândit, primești o șansă să-ți recuperezi contul.</string>
   <string name="emailAssociatedToaccount">Adresa de e-mail asociată contului</string>
   <string name="sentEmailWithLink">Ți-am trimis un e-mail cu un link.</string>
   <string name="tournamentEntryCode">Cod de intrare în turneu</string>
@@ -1040,13 +1040,13 @@ Lăsați gol pentru a începe jocurile din poziția inițială normală.</string
   <string name="youCantStartNewGame">Nu poți începe un joc nou până când acesta nu se termină.</string>
   <string name="since">De la</string>
   <string name="until">Până la</string>
-  <string name="lichessDbExplanation">Partide evaluate obținute de la toți jucătorii Lichess</string>
+  <string name="lichessDbExplanation">Partide evaluate obținute de la toți jucătorii Chess-Online</string>
   <string name="switchSides">Întoarce tabla</string>
   <string name="closingAccountWithdrawAppeal">Închiderea contului dvs. vă va retrage apelul</string>
   <string name="ourEventTips">Sfaturile noastre pentru organizarea evenimentelor</string>
   <string name="instructions">Instrucțiuni</string>
   <string name="showMeEverything">Afișează-mi tot</string>
-  <string name="lichessPatronInfo">Lichess este o asociație non-profit și un software gratuit și open-source.
+  <string name="lichessPatronInfo">Chess-Online este o asociație non-profit și un software gratuit și open-source.
 Toate costurile de operare și de dezvoltare sunt finanțate doar din donațiile utilizatorilor.</string>
   <string name="nothingToSeeHere">Nimic de văzut aici momentan.</string>
   <string name="stats">Statistici</string>

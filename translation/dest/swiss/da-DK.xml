@@ -46,7 +46,7 @@ SpillerC SpillerD
 Hvis du vil give en bye (1 point) til en spiller i stedet for en parring, skal du tilføje en linje som følger:
 SpillerE 1
 Manglende spillere vil blive betragtet som fraværende og få nul point.
-Lad dette felt være tomt for at lade Lichess oprette par automatisk.</string>
+Lad dette felt være tomt for at lade Chess-Online oprette par automatisk.</string>
   <string name="mustHavePlayedTheirLastSwissGame">Skal have spillet deres seneste schweizer-parti</string>
   <string name="mustHavePlayedTheirLastSwissGameHelp">Lad kun spillere deltage, hvis de har spillet deres seneste schweizer-parti. Hvis de ikke dukkede op til en nylig schweizer-begivenhed, kan de ikke deltage i din. Dette resulterer i en bedre schweizer-oplevelse for de spillere, der rent faktisk møder op.</string>
   <string name="newSwiss">Ny schweizerturnering</string>
@@ -80,7 +80,7 @@ Så vil systemet trække spilleren ud af turneringen, så de ikke taber flere pa
  De kan til enhver tid vende tilbage til turneringen.</string>
   <string name="protectionAgainstNoShowQ">Hvad gøres der med udeblivelser?</string>
   <string name="protectionAgainstNoShowA" comment="By &quot;a game&quot; - we mean just one game. Missing even one game will prevent that player from joining a new Swiss event for a certain amount of time.">At spillere tilmelder sig schweizerturneringer, men ikke spiller deres partier kan være problematisk.
-For at afbøde dette problem, forhindrer Lichess spillere, der undlod at spille et parti fra at deltage i en ny schweizerturnering i en given periode.
+For at afbøde dette problem, forhindrer Chess-Online spillere, der undlod at spille et parti fra at deltage i en ny schweizerturnering i en given periode.
 Skaberen af en schweizerturnering kan beslutte at lade dem deltage i turneringen alligevel.</string>
   <string name="lateJoinQ">Kan spillere melde sig til sent?</string>
   <string name="lateJoinA">Ja, indtil mere end halvdelen af runderne er startet: I en 11-runders schweitzer kan spillere for eksempel slutte sig til før runde 6 starter og i en 12-runders før runde 7 starter.</string>
@@ -91,7 +91,7 @@ Skaberen af en schweizerturnering kan beslutte at lade dem deltage i turneringen
 Grunden er, at det ikke har nogen fair måde at håndtere folk, der forlader turneringen tidligt. Vi kan ikke forvente, at alle spillere vil spille alle deres partier i en online begivenhed. Det vil simpelthen bare ikke ske, og som et resultat ville de fleste runde Robin turneringer være fejlbehæftede og uretfærdige, hvilket fjerner hele deres eksistensgrundlag.
 Det tætteste du kan komme på Round Robin online er at spille en schweizisk turnering med et meget højt antal runder. Så vil alle mulige parringer blive spillet, før turneringen slutter.</string>
   <string name="otherSystemsQ">Hvad med andre turneringssystemer?</string>
-  <string name="otherSystemsA">Vi planlægger ikke at tilføje flere turneringssystemer til Lichess i øjeblikket.</string>
+  <string name="otherSystemsA">Vi planlægger ikke at tilføje flere turneringssystemer til Chess-Online i øjeblikket.</string>
   <string name="swissDescription">I en schweizerturnering %1$s, spiller hver deltager ikke nødvendigvis mod alle andre deltagere. Deltagere mødes en-til-en i hver runde og parres ved hjælp af et sæt regler, der er designet til at sikre, at hver konkurrent får modstandere med en lignende rating, men ikke den samme modstander mere end én gang. Vinderen er deltageren med det højeste antal point optjent i alle runder. Alle deltagere spiller i hver runde, medmindre der er et ulige antal spillere.</string>
   <string name="teamOnly">Schweitzerturneringer kan kun oprettes af holdledere, og kan kun spilles af holdmedlemmer.           
 %1$s for at begynde at spille i schweitzerturneringer.</string>

@@ -61,7 +61,7 @@ $url
 
 ${trans.common_orPaste.txt()}
 
-${trans.emailConfirm_ignore.txt("https://lichess.org")}
+${trans.emailConfirm_ignore.txt("https://live.chess-online.com")}
 """),
             htmlBody = emailMessage(
               pDesc(trans.emailConfirm_click()),

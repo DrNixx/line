@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="lichessClasses">Tanulócsoportok</string>
-  <string name="teachClassesOfChessStudents">Taníts sakkozni diákokat a Lichess Tanulócsoportok funkciójával.</string>
+  <string name="teachClassesOfChessStudents">Taníts sakkozni diákokat a Chess-Online Tanulócsoportok funkciójával.</string>
   <string name="features">Funkciók</string>
   <string name="quicklyGenerateSafeUsernames">Gyorsan létrehozhatsz a tanulóknak biztonságos felhasználónevet és jelszót</string>
   <string name="trackStudentProgress">Nyomon követheted a tanulók fejlődését a játékaikban és feladványokban</string>
   <string name="messageAllStudents">Üzeneted küldhetsz minden tanulónak az új anyagokról</string>
   <string name="freeForAllForever" comment="The automated QA checker treats &quot;100%&quot; as if it is a variable, and will give a warning if you change it.&#10;It is not a variable.&#10;&#10;You can still save your translation writing it as &quot;%100&quot; for example, in case this is more valid in your language.">Teljesen ingyenes mindenkinek, örökre, hirdetések és nyomkövetők nélkül</string>
-  <string name="applyToBeLichessTeacher">Jelentkezz Lichess tanárnak</string>
+  <string name="applyToBeLichessTeacher">Jelentkezz Chess-Online tanárnak</string>
   <string name="noClassesYet">Még nincs tanulócsoportod.</string>
   <string name="teachersX">Tanár: %s</string>
   <string name="newClass">Új tanulócsoport</string>
@@ -23,7 +23,7 @@
   <string name="classDescription">Csoport leírása</string>
   <string name="visibleByBothStudentsAndTeachers">Látható mind a tanárok, mind az csoport tanulói számára</string>
   <string name="teachersOfTheClass">A csoport tanárai</string>
-  <string name="addLichessUsernames">Tanár meghívásához add meg a Lichess felhasználóneveket, soronként egyet.</string>
+  <string name="addLichessUsernames">Tanár meghívásához add meg a Chess-Online felhasználóneveket, soronként egyet.</string>
   <string name="resetPassword">Jelszó visszaállítása</string>
   <string name="makeSureToCopy">Jegyezd fel most a jelszót, mert többé nem jelenik meg!</string>
   <string name="passwordX">Jelszó: %s</string>
@@ -32,22 +32,22 @@
   <string name="realName">Valódi név</string>
   <string name="privateWillNeverBeShown">Rejtett. Soha nem jelenik meg a csoporton kívül. Segít fejben tartani, hogy ki a tanuló.</string>
   <string name="addStudent">Tanuló hozzáadása</string>
-  <string name="lichessProfileXCreatedForY">Létrehoztad %2$s Lichess profilját %1$s fióknévvel.</string>
+  <string name="lichessProfileXCreatedForY">Létrehoztad %2$s Chess-Online profilját %1$s fióknévvel.</string>
   <string name="studentCredentials">Tanuló: %1$s
 Felhasználónév: %2$s
 Jelszó: %3$s</string>
-  <string name="inviteALichessAccount">Hívj meg egy Lichess felhasználót</string>
-  <string name="inviteDesc1">Ha a tanulónak van már Lichess fiókja, meg tudod hívni őt a tanulócsoportba.</string>
-  <string name="inviteDesc2">A meghívott tanuló Lichess üzenetben kap egy linket, amellyel csatlakozhat a csoporthoz.</string>
+  <string name="inviteALichessAccount">Hívj meg egy Chess-Online felhasználót</string>
+  <string name="inviteDesc1">Ha a tanulónak van már Chess-Online fiókja, meg tudod hívni őt a tanulócsoportba.</string>
+  <string name="inviteDesc2">A meghívott tanuló Chess-Online üzenetben kap egy linket, amellyel csatlakozhat a csoporthoz.</string>
   <string name="inviteDesc3">Fontos: csak olyan tanulókat hívj meg, akiket ismersz, és szeretnének is csatlakozni az tanulócsoporthoz.</string>
   <string name="inviteDesc4">Soha ne küldj játékosoknak kéretlenül, önkényesen meghívókat.</string>
-  <string name="createANewLichessAccount">Új Lichess fiók létrehozása</string>
-  <string name="createDesc1">Ha a tanulónak még nincs Lichess fiókja, itt létre tudsz hozni neki egyet.</string>
+  <string name="createANewLichessAccount">Új Chess-Online fiók létrehozása</string>
+  <string name="createDesc1">Ha a tanulónak még nincs Chess-Online fiókja, itt létre tudsz hozni neki egyet.</string>
   <string name="createDesc2">Nincs szükség e-mail címre. Generálunk egy jelszót, amelyet el kell juttatnod a tanulónak, hogy be tudjon jelentkezni.</string>
   <string name="createDesc3">Fontos: egy tanulónak nem lehet több fiókja.</string>
   <string name="createDesc4">Ha már van fiókja, akkor küldj neki meghívót a csoportba.</string>
   <string name="createStudentWarning">Csak valódi tanulóknak hozz létre fiókot. Ne használd ezt a funkciót arra, hogy magadnak készíts több fiókot, mert ezért kitiltás jár.</string>
-  <string name="lichessUsername">Lichess felhasználónév</string>
+  <string name="lichessUsername">Chess-Online felhasználónév</string>
   <string name="generateANewUsername">Új felhasználónevet generál</string>
   <string name="welcomeToClass">Üdvözlünk az új tanulócsoportodban: %s.
 A csoportot az alábbi linken éred el.</string>
@@ -104,8 +104,8 @@ Itt egy vízszintes vonal fog megjelenni.</string>
   <string name="youAcceptedThisInvitation">Elfogadtad a meghívást.</string>
   <string name="youDeclinedThisInvitation">Visszautasítottad a meghívást.</string>
   <string name="orSeparator" comment="Used as separator between invite sections. Shown as large '~ or ~'.">vagy</string>
-  <string name="createMultipleAccounts">Egyszerre több Lichess fiók létrehozása</string>
-  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">%s létrehozhatsz egyszerre több Lichess fiókot a tanulók nevét tartalmazó listából.</string>
+  <string name="createMultipleAccounts">Egyszerre több Chess-Online fiók létrehozása</string>
+  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">%s létrehozhatsz egyszerre több Chess-Online fiókot a tanulók nevét tartalmazó listából.</string>
   <string name="useThisForm" comment="Link text in multipleAccsFromDescription">Ezen a felületen</string>
   <string name="maxStudentsNote" comment="%1$s will be replaced with a large number (currently 100).\n%2$s is a link and will be replaced with the translation of createMoreClasses. Make sure both strings fit together.">Figyelj rá, hogy egy tanulócsoport legfeljebb %1$s tanulóból állhat. Ennél több tanuló kezeléséhez %2$s.</string>
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">hozz létre több csoportot</string>

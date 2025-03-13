@@ -233,7 +233,7 @@ final private class PushApi(
             "invitedBy" -> invitedBy,
             "studyName" -> studyName.value,
             "studyId"   -> studyId.value,
-            "url"       -> s"https://lichess.org/study/$studyId"
+            "url"       -> s"https://live.chess-online.com/study/$studyId"
           )
         )
     )
@@ -328,7 +328,7 @@ final private class PushApi(
                 "mentionedBy" -> mentionedBy,
                 "topic"       -> topicName,
                 "postId"      -> postId.value,
-                "url"         -> s"https://lichess.org/forum/redirect/post/$postId"
+                "url"         -> s"https://live.chess-online.com/forum/redirect/post/$postId"
               )
             )
     )
@@ -343,7 +343,7 @@ final private class PushApi(
         payload = payload(
           "type"       -> "streamStart",
           "streamerId" -> streamerId.value,
-          "url"        -> s"https://lichess.org/streamer/$streamerId/redirect"
+          "url"        -> s"https://live.chess-online.com/streamer/$streamerId/redirect"
         ),
         mobileCompatible = false
       )

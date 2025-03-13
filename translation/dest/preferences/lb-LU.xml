@@ -62,8 +62,8 @@
   <string name="notifyChallenge">Erausfuerderungen</string>
   <string name="notifyTournamentSoon">Turnéier fänkt gleich un</string>
   <string name="notifyTimeAlarm">Zäit an Korrespondenzpartie leeft of</string>
-  <string name="notifyBell">Benoriichtegung ob Lichess</string>
-  <string name="notifyPush">Gerät Benoriichtegung wanns du net ob Lichess bass</string>
+  <string name="notifyBell">Benoriichtegung ob Chess-Online</string>
+  <string name="notifyPush">Gerät Benoriichtegung wanns du net ob Chess-Online bass</string>
   <string name="notifyWeb">Web-Browser</string>
   <string name="notifyDevice">Gerät</string>
   <string name="bellNotificationSound">Glacken-Notifikatiounstoun</string>

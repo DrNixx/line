@@ -63,8 +63,8 @@
   <string name="notifyChallenge">Utfordringar</string>
   <string name="notifyTournamentSoon">Turneringa startar snart</string>
   <string name="notifyTimeAlarm">Fjernsjakkuret er i ferd med å løpa ut</string>
-  <string name="notifyBell">Klokkemelding i Lichess</string>
-  <string name="notifyPush">Melding på eininga når du ikkje brukar Lichess</string>
+  <string name="notifyBell">Klokkemelding i Chess-Online</string>
+  <string name="notifyPush">Melding på eininga når du ikkje brukar Chess-Online</string>
   <string name="notifyWeb">Nettlesar</string>
   <string name="notifyDevice">Eining</string>
   <string name="bellNotificationSound">Varsellyd</string>

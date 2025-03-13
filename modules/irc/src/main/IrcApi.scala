@@ -207,7 +207,7 @@ object IrcApi:
 
   private object markdown:
     def link(url: String, name: String)             = s"[$name]($url)"
-    def lichessLink[N: Show](path: String, name: N) = show"[$name](https://lichess.org$path)"
+    def lichessLink[N: Show](path: String, name: N) = show"[$name](https://live.chess-online.com$path)"
     def userLink(name: UserName): String            = lichessLink(s"/@/$name?mod&notes", name.value)
     def userLink(user: LightUser): String           = userLink(user.name)
     def userLinkNoNotes(name: UserName): String     = lichessLink(s"/@/$name?mod", name.value)

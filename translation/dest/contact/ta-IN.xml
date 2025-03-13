@@ -12,8 +12,8 @@
   <string name="lost2FA">எனது இரு காரணி அங்கீகாரக் குறியீடுகளுக்கான அணுகலை இழந்தேன்</string>
   <string name="doPasswordReset">உங்கள் இரண்டாவது காரணியை அகற்ற கடவுச்சொல் மீட்டமைப்பை முடிக்கவும்</string>
   <string name="accountSupport">எனக்கு கணக்கு ஆதரவு தேவை</string>
-  <string name="wantTitle">எனது தலைப்பை Lichess இல் காட்ட வேண்டும்</string>
-  <string name="visitTitleConfirmation">உங்கள் Lichess சுயவிவரத்தில் உங்கள் தலைப்பைக் காட்டவும், தலைப்புள்ள அரங்கில் பங்கேற்கவும், தலைப்பு உறுதிப்படுத்தல் பக்கத்தைப் பார்வையிடவும்</string>
+  <string name="wantTitle">எனது தலைப்பை Chess-Online இல் காட்ட வேண்டும்</string>
+  <string name="visitTitleConfirmation">உங்கள் Chess-Online சுயவிவரத்தில் உங்கள் தலைப்பைக் காட்டவும், தலைப்புள்ள அரங்கில் பங்கேற்கவும், தலைப்பு உறுதிப்படுத்தல் பக்கத்தைப் பார்வையிடவும்</string>
   <string name="wantCloseAccount">எனது கணக்கை மூட விரும்புகிறேன்</string>
   <string name="closeYourAccount">இந்தப் பக்கத்தில் உங்கள் கணக்கை மூடலாம்</string>
   <string name="doNotAskByEmail">ஒரு கணக்கை மூடுமாறு மின்னஞ்சல் மூலம் எங்களிடம் கேட்க வேண்டாம், நாங்கள் அதைச் செய்ய மாட்டோம்.</string>
@@ -34,10 +34,10 @@
   <string name="doNotMessageModerators">மதிப்பீட்டாளர்களுக்கு நேரடியாக செய்திகளை அனுப்ப வேண்டாம்.</string>
   <string name="onlyReports">அறிக்கை படிவத்தின் மூலம் வீரர்களைப் புகாரளிப்பது மட்டுமே பயனுள்ளதாக இருக்கும்.</string>
   <string name="wantReportBug">ஒரு பிழையைப் புகாரளிக்க விரும்புகிறேன்</string>
-  <string name="reportBugInForum">மன்றத்தின் Lichess Feedback பிரிவில்</string>
-  <string name="reportWebsiteIssue">GitHub இல் Lichess இணையதளப் பிரச்சினையாக</string>
-  <string name="reportMobileIssue">GitHub இல் Lichess மொபைல் ஆப்ஸ் சிக்கலாக</string>
-  <string name="reportBugInDiscord">Lichess Discord சேவையகத்தில்</string>
+  <string name="reportBugInForum">மன்றத்தின் Chess-Online Feedback பிரிவில்</string>
+  <string name="reportWebsiteIssue">GitHub இல் Chess-Online இணையதளப் பிரச்சினையாக</string>
+  <string name="reportMobileIssue">GitHub இல் Chess-Online மொபைல் ஆப்ஸ் சிக்கலாக</string>
+  <string name="reportBugInDiscord">Chess-Online Discord சேவையகத்தில்</string>
   <string name="howToReportBug">பிழை எப்படி இருக்கும், அதற்கு பதிலாக என்ன நடக்கும் என்று நீங்கள் எதிர்பார்த்தீர்கள் மற்றும் பிழையை மீண்டும் உருவாக்குவதற்கான படிகளை விவரிக்கவும்.</string>
   <string name="illegalPawnCapture">சட்டவிரோத சிப்பாய் பிடிப்பு</string>
   <string name="calledEnPassant">இது \"en passant\" என்று அழைக்கப்படுகிறது மற்றும் சதுரங்கத்தின் விதிகளில் ஒன்றாகும்.</string>
@@ -55,7 +55,7 @@
   <string name="botRatingAbuse">சில சூழ்நிலைகளில் போட் கணக்கிற்கு எதிராக விளையாடும் போது, ​​ரேட்டிங் புள்ளிகளுக்காக ஆட்டக்காரர் போட்டை தவறாகப் பயன்படுத்துகிறார் எனத் தீர்மானிக்கப்பட்டால், மதிப்பிடப்பட்ட கேம் புள்ளிகளை வழங்காது.</string>
   <string name="errorPage">பிழை பக்கம்</string>
   <string name="reportErrorPage">நீங்கள் பிழைப் பக்கத்தை எதிர்கொண்டால், அதைப் புகாரளிக்கலாம்:</string>
-  <string name="learnHowToMakeBroadcasts">Lichess இல் உங்கள் சொந்த ஒளிபரப்புகளை எவ்வாறு உருவாக்குவது என்பதை அறிக</string>
+  <string name="learnHowToMakeBroadcasts">Chess-Online இல் உங்கள் சொந்த ஒளிபரப்புகளை எவ்வாறு உருவாக்குவது என்பதை அறிக</string>
   <string name="banAppeal">தடை அல்லது IP கட்டுப்பாடுக்கான மேல்முறையீடு</string>
   <string name="engineAppeal">இயந்திரம் அல்லது ஏமாற்று குறி</string>
   <string name="sendAppealTo">நீங்கள் %sக்கு மேல்முறையீட்டை அனுப்பலாம்.</string>
@@ -66,12 +66,12 @@
   <string name="otherRestriction">மற்ற கட்டுப்பாடு</string>
   <string name="collaboration">ஒத்துழைப்பு, சட்ட, வணிக</string>
   <string name="monetizing">பணமாக்குதல் லிச்சஸ்</string>
-  <string name="buyingLichess">Lichess வாங்குதல்</string>
-  <string name="authorizationToUse">Lichess ஐப் பயன்படுத்துவதற்கான அங்கீகாரம்</string>
-  <string name="welcomeToUse">உங்கள் செயல்பாட்டிற்காகவும், வணிக ரீதியாகவும் Lichess ஐப் பயன்படுத்த நீங்கள் வரவேற்கப்படுகிறீர்கள்.</string>
+  <string name="buyingLichess">Chess-Online வாங்குதல்</string>
+  <string name="authorizationToUse">Chess-Online ஐப் பயன்படுத்துவதற்கான அங்கீகாரம்</string>
+  <string name="welcomeToUse">உங்கள் செயல்பாட்டிற்காகவும், வணிக ரீதியாகவும் Chess-Online ஐப் பயன்படுத்த நீங்கள் வரவேற்கப்படுகிறீர்கள்.</string>
   <string name="videosAndBooks">நீங்கள் அதை உங்கள் வீடியோக்களில் காட்டலாம், மேலும் உங்கள் புத்தகங்களில் லிச்சஸின் ஸ்கிரீன்ஷாட்களை அச்சிடலாம்.</string>
   <string name="creditAppreciated">கடன் பாராட்டப்படுகிறது ஆனால் தேவையில்லை.</string>
   <string name="noneOfTheAbove">மேலே எதுவும் இல்லை</string>
   <string name="sendEmailAt">%s இல் எங்களுக்கு மின்னஞ்சல் அனுப்பவும்.</string>
-  <string name="explainYourRequest">உங்கள் கோரிக்கையை தெளிவாகவும் முழுமையாகவும் விளக்கவும். உங்கள் Lichess பயனர்பெயரையும், உங்களுக்கு உதவ எங்களுக்கு உதவக்கூடிய எந்த தகவலும் குறிப்பிடவும்.</string>
+  <string name="explainYourRequest">உங்கள் கோரிக்கையை தெளிவாகவும் முழுமையாகவும் விளக்கவும். உங்கள் Chess-Online பயனர்பெயரையும், உங்களுக்கு உதவ எங்களுக்கு உதவக்கூடிய எந்த தகவலும் குறிப்பிடவும்.</string>
 </resources>

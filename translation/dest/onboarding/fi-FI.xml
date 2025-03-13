@@ -2,7 +2,7 @@
 <resources>
   <string name="logInAsUsername">Kirjaudu sisään tunnuksella %s</string>
   <string name="welcome">Tervetuloa!</string>
-  <string name="welcomeToLichess">Tervetuloa lichess.orgiin!</string>
+  <string name="welcomeToLichess">Tervetuloa chess-online.comiin!</string>
   <string name="thisIsYourProfilePage">Tämä on profiilisivusi.</string>
   <string name="enabledKidModeSuggestion">Käyttääkö lapsi tätä tunnusta? Harkitse siinä tapauksessa %sn päälle laittamista.</string>
   <string name="whatNowSuggestions">Mitä seuraavaksi? Tässä pari ehdotusta:</string>
@@ -13,6 +13,6 @@
   <string name="followYourFriendsOnLichess">Seuraa ystäviäsi Lichessissä.</string>
   <string name="playInTournaments">Pelaa turnauksissa.</string>
   <string name="learnFromXAndY">Opi lisää: %1$s ja katso %2$s.</string>
-  <string name="configureLichess">Mukauta Lichess mieleiseksesi.</string>
+  <string name="configureLichess">Mukauta Chess-Online mieleiseksesi.</string>
   <string name="exploreTheSiteAndHaveFun">Tutustu sivustoon ja pidä hauskaa :)</string>
 </resources>

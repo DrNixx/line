@@ -4,9 +4,9 @@
   <string name="friendBlogs">Blogge vun de Kolleegen</string>
   <string name="likedBlogs">Geliket Blog-Bäiträg</string>
   <string name="blogTopics">Blog-Theemen</string>
-  <string name="lichessOfficialBlog">Offizielle Lichess-Blog</string>
+  <string name="lichessOfficialBlog">Offizielle Chess-Online-Blog</string>
   <string name="continueReadingPost">Virufuere mam Liese vun dësem Bäitrag</string>
-  <string name="lichessBlogPostsFromXYear">Lichess-Blog-Bäiträg vun %s</string>
+  <string name="lichessBlogPostsFromXYear">Chess-Online-Blog-Bäiträg vun %s</string>
   <string name="previousBlogPosts">Virege Blog-Bäitrag</string>
   <string name="xBlog">%s säi Blog</string>
   <string name="newPost">Neie Bäitrag</string>

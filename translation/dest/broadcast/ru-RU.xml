@@ -13,7 +13,7 @@
   <string name="newBroadcast">Новая прямая трансляция</string>
   <string name="subscribedBroadcasts">Подписанные рассылки</string>
   <string name="aboutBroadcasts">О трансляции</string>
-  <string name="howToUseLichessBroadcasts">Как пользоваться трансляциями Lichess.</string>
+  <string name="howToUseLichessBroadcasts">Как пользоваться трансляциями Chess-Online.</string>
   <string name="theNewRoundHelp">В новом туре примут участие те же участники и редакторы, что и в предыдущем туре.</string>
   <string name="addRound">Добавить тур</string>
   <string name="ongoing">Текущие</string>
@@ -25,8 +25,8 @@
   <string name="fullDescription">Полное описание события</string>
   <string name="fullDescriptionHelp">Необязательное полное описание трансляции. Доступна разметка %1$s. Длина должна быть меньше %2$s символов.</string>
   <string name="sourceSingleUrl">Исходный URL PGN</string>
-  <string name="sourceUrlHelp">URL-адрес, с которого Lichess будет получать обновление PGN. Он должен быть доступен для получения из Интернета.</string>
-  <string name="sourceGameIds">До 64 идентификаторов (ID) игр Lichess, разделённых пробелами.</string>
+  <string name="sourceUrlHelp">URL-адрес, с которого Chess-Online будет получать обновление PGN. Он должен быть доступен для получения из Интернета.</string>
+  <string name="sourceGameIds">До 64 идентификаторов (ID) игр Chess-Online, разделённых пробелами.</string>
   <string name="startDateTimeZone">Дата начала турнира в местном часовом поясе: %s</string>
   <string name="startDateHelp">Дополнительно, если вы знаете, когда событие начнётся</string>
   <string name="currentGameUrl">URL-адрес текущей партии</string>
@@ -49,7 +49,7 @@
   <string name="ageThisYear">Возраст в этом году</string>
   <string name="unrated">Без рейтинга</string>
   <string name="recentTournaments">Недавние турниры</string>
-  <string name="openLichess">Открыть в Lichess</string>
+  <string name="openLichess">Открыть в Chess-Online</string>
   <string name="teams">Клубы</string>
   <string name="boards">Доски</string>
   <string name="overview">Обзор</string>

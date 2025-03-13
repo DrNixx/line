@@ -18,14 +18,14 @@ object PgnFixtures:
 
   val pgn4 = """
 [Event "nt9's Study: Chapter 2"]
-[Site "https://lichess.org/study/Q41XcI0B/2LjSXwxW"]
+[Site "https://live.chess-online.com/study/Q41XcI0B/2LjSXwxW"]
 [Result "*"]
 [UTCDate "2023.04.22"]
 [UTCTime "20:41:25"]
 [Variant "Standard"]
 [ECO "?"]
 [Opening "?"]
-[Annotator "https://lichess.org/@/nt9"]
+[Annotator "https://live.chess-online.com/@/4"]
 
 { this is a study without moves }
 
@@ -33,14 +33,14 @@ object PgnFixtures:
 
   val pgn5 = """
 [Event "nt9's Study: Chapter 3"]
-[Site "https://lichess.org/study/Q41XcI0B/ypuKuiI4"]
+[Site "https://live.chess-online.com/study/Q41XcI0B/ypuKuiI4"]
 [Result "*"]
 [UTCDate "2023.04.30"]
 [UTCTime "14:43:04"]
 [Variant "Standard"]
 [ECO "A40"]
 [Opening "Queen's Pawn Game"]
-[Annotator "https://lichess.org/@/nt9"]
+[Annotator "https://live.chess-online.com/@/4"]
 
 { shape glyphs }
 1. d4 c6 (1... f6 2. c3?? $15 $138 $36 { jjjjjjjj } { [%csl Gd7,Re7,Bf6,Yh7,Yb7][%cal Gh4f4,Gf2e4] } (2. h4)) 2. f4 h5 3. h4 { [%csl Bd4,Gf4,Gf7][%cal Gc2c4,Gd2e4] }
@@ -50,14 +50,14 @@ object PgnFixtures:
 
   val pgn6 = """
 [Event "nt9's Study: Chapter 7"]
-[Site "https://lichess.org/study/Q41XcI0B/JHnNE9Oi"]
+[Site "https://live.chess-online.com/study/Q41XcI0B/JHnNE9Oi"]
 [Result "*"]
 [UTCDate "2023.05.23"]
 [UTCTime "18:15:30"]
 [Variant "Standard"]
 [ECO "?"]
 [Opening "?"]
-[Annotator "https://lichess.org/@/nt9"]
+[Annotator "https://live.chess-online.com/@/4"]
 [FEN "rnbqkbnr/pp1ppppp/2p5/8/3P1P2/8/PPP1P1PP/RNBQKBNR b KQkq - 0 2"]
 [SetUp "1"]
 
@@ -91,7 +91,7 @@ object PgnFixtures:
 
   val pgn8 =
     """[Event "Rated Crazyhouse game"]
-  [Site "https://lichess.org/tnA9XCCX"]
+  [Site "https://live.chess-online.com/tnA9XCCX"]
   [Date "2023.06.01"]
   [White "belowme"]
   [Black "Crazybugg"]
@@ -107,7 +107,7 @@ object PgnFixtures:
   [ECO "B01"]
   [Opening "Scandinavian Defense: Valencian Variation"]
   [Termination "Normal"]
-  [Annotator "lichess.org"]
+  [Annotator "live.chess-online.com"]
 
   1. e4 d5 2. exd5 Qxd5 3. Nc3 Qd8 { B01 Scandinavian Defense: Valencian Variation } 4. Bc4 e6 5. Qf3 Nf6 6. Nge2 Be7 7. d4 Bd7 8. Qxb7 Bc6 9. Bb5 O-O 10. Bxc6 Nxc6 11. Qxc6 P@b4 12. P@h6 bxc3 13. Qxc3 B@b4 14. hxg7 Bxc3+ 15. bxc3 Re8 16. B@e5 Ng4 17. B@f3 Nxe5 18. Bxa8 N@d3+ 19. cxd3 Nxd3+ 20. Kd2 B@h6+ 21. Kxd3 Qxa8 22. Bxh6 B@e4+ 23. Kd2 Q@b2+ 24. P@c2 Qxc2+ 25. Ke1 f6 26. R@h8+ Kf7 27. B@h5+ Bg6 28. N@g5+ fxg5 29. N@e5+ Kf6 30. N@g4+ Kf5 31. Ng3+ Kf4 32. P@e3# { White wins by checkmate. }"""
 
@@ -466,12 +466,12 @@ match is going to be dramatic, which is good for spectators! } 1-0
 """,
     """
 [Event "Chess World Championship 2023: Game 5 Nepomniachtchi Ian - Ding Liren"]
-[Site "https://lichess.org/study/QQO3VI7X/zXaNbbVH"]
+[Site "https://live.chess-online.com/study/QQO3VI7X/zXaNbbVH"]
 [Date "2023.04.15"]
 [White "Nepomniachtchi, Ian"]
 [Black "Ding, Liren"]
 [Result "1-0"]
-[Annotator "https://lichess.org/@/Harikrishnapentala"]
+[Annotator "https://live.chess-online.com/@/4"]
 [UTCDate "2023.04.17"]
 [UTCTime "07:07:55"]
 [Variant "Standard"]
@@ -496,12 +496,12 @@ away from any possible checks on g4. At the same time, preparing g5. } 35... Rc8
 """,
     """
 [Event "Chess World Championship 2023: Game 6: Ding, Liren - Nepomniachtchi, Ian"]
-[Site "https://lichess.org"]
+[Site "https://live.chess-online.com"]
 [Date "2023.04.16"]
 [White "Ding, Liren"]
 [Black "Nepomniachtchi, Ian"]
 [Result "1-0"]
-[Annotator "https://lichess.org/@/harikrishnapentala"]
+[Annotator "https://live.chess-online.com/@/4"]
 [UTCDate "2023.04.17"]
 [UTCTime "07:08:35"]
 [Variant "Standard"]
@@ -512,19 +512,19 @@ away from any possible checks on g4. At the same time, preparing g5. } 35... Rc8
 
 Naturally, every chess fan is curious about which opening and approach Ding will implement. I did not expect such an opening choice, and it must have been a shocker for Nepo! }
 1. d4 { [%eval 0.0] } 1... Nf6 { [%eval 0.28] } 2. Nf3 { [%eval 0.12] } 2... d5 { [%eval 0.25] } 3. Bf4 { [%eval 0.0] } { This is called the London system. This system has its die-hard fans and die-hard bashers! It is one of those systems, you cannot be objective, and the followers of it will push you to take a side! Jokes aside, with the current engines and enormous availability of knowledge, One can quickly pick up any opening and try it. We have to appreciate the courage of Ding for choosing a system which is seen as a quick format opening. } 3... c5 { [%eval 0.0] } { This is one of the main choices Black employs at the top level. I am mentioning the other equally popular options for Black. Each move has its system, and move orders are important. This is the reason why it works perfectly in shorter time controls! } (3... e6!?) (3... Bf5!?) 4. e3 { [%eval 0.0] } 4... Nc6 { [%eval 0.0] } 5. Nbd2 { [%eval 0.0] } 5... cxd4 { [%eval 0.37] } (5... Qb6 { For those of you who like to engage in a theoretical battle with quite forcing variations, you can dig deeper
-in this direction. I wouldn't recommend this for amateurs as many of the moves are not natural unless and of course you remember them. } 6. dxc5 Qxb2 7. Rb1 Qc3 8. Bb5 g6 { with complex play. } (8... e6!?)) 6. exd4 { [%eval 0.14] } 6... Bf5 { [%eval 0.36] } (6... Bg4 { Was the choice of Nepomniachtchi in his game against Aravindh, Chithambaram at the World Rapid and Blitz Championship 2022 (see https://lichess.org/broadcast/2022-fide-world-rapid-championship/round-2/SBR6tYqh/Eu8EtfaE#1 for the full game) } 7. c3 e6 8. Qb3 Qc8 9. h3 Bxf3 10. Nxf3 $14 { Even though the game was drawn eventually, it was a miracle for Nepo to save this game. White enjoys the advantage of pair of bishops. }) 7. c3 { [%eval 0.0] } (7. Bb5!? { Was played by many top players, including Vitiugov, one of Nepo's seconds. The idea is that White is aiming to put pressure on c6 by playing Ne5 and c4 etc. White scored quite nicely here. Ding was probably afraid that Nepo might have some new idea here. }) 7... e6 { [%eval 0.0] } 8. Bb5 { [%eval 0.04] } { With the idea of playing Ne5 putting pressure on c6. Simultaneously, g4 followed by h4 expansion is quite dangerous. } (8. Qb3 { Doesn't give much for White. } 8... Bd6! { I like this move as Black is sacrificing a pawn for piece activity. } 9. Qxb7 Bxf4 10. Qxc6+ Kf8 11. Ne5 Rb8 $13 { with excellent compensation for the pawn. Due to underdeveloped pieces of White, the King can have problems reaching safety. }) 8... Bd6 { [%eval 0.14] } 9. Bxd6 { [%eval 0.08] } 9... Qxd6 { [%eval 0.16] } 10. O-O { [%eval 0.1] } 10... O-O { [%eval 0.14] } 11. Re1 { [%eval 0.02] } { In my database, I can see five games of GM Kamsky! Even though many top players have employed the London system and analyzed it in depth, We have to credit GM Kamsky for playing it several times successfully for many years. } 11... h6 { [%eval 0.0] } 12. Ne5 { [%eval 0.09] } { This is the first new move in the game and the engine's top choice. } 12... Ne7 { [%eval 0.1] } (12... Qc7 { Moving the Queen away from the d6 square has a straightforward idea of exchanging the Knight on e5. } 13. Bxc6 bxc6 14. b4 { Stopping the c6 pawn from advancing. } 14... Ne4) 13. a4 { [%eval 0.19] } 13... a6 { [%eval 0.17] } { Although this move is by no means a mistake, Black will face several problems in the future. Placing the pawn on a6 is always a target for White's light square bishop in the endgame. It is also important to understand White's idea of making an outpost for their d2 Knight to c5 via b3. In this connection, it is wiser to leave the pawn on a7. } (13... Qb6!? { is an exciting try with the idea to play a6 and capture the b2 pawn. }) 14. Bf1 { [%eval 0.2] } 14... Nd7?! { [%eval 0.48] } { On one hand, Black moved the Knight from c6 with the intention of not exchanging and now Black is offering to trade. This is the start of a wrong plan, and White wants to plant the d2 knight on c5.
+in this direction. I wouldn't recommend this for amateurs as many of the moves are not natural unless and of course you remember them. } 6. dxc5 Qxb2 7. Rb1 Qc3 8. Bb5 g6 { with complex play. } (8... e6!?)) 6. exd4 { [%eval 0.14] } 6... Bf5 { [%eval 0.36] } (6... Bg4 { Was the choice of Nepomniachtchi in his game against Aravindh, Chithambaram at the World Rapid and Blitz Championship 2022 (see https://live.chess-online.com/broadcast/2022-fide-world-rapid-championship/round-2/SBR6tYqh/Eu8EtfaE#1 for the full game) } 7. c3 e6 8. Qb3 Qc8 9. h3 Bxf3 10. Nxf3 $14 { Even though the game was drawn eventually, it was a miracle for Nepo to save this game. White enjoys the advantage of pair of bishops. }) 7. c3 { [%eval 0.0] } (7. Bb5!? { Was played by many top players, including Vitiugov, one of Nepo's seconds. The idea is that White is aiming to put pressure on c6 by playing Ne5 and c4 etc. White scored quite nicely here. Ding was probably afraid that Nepo might have some new idea here. }) 7... e6 { [%eval 0.0] } 8. Bb5 { [%eval 0.04] } { With the idea of playing Ne5 putting pressure on c6. Simultaneously, g4 followed by h4 expansion is quite dangerous. } (8. Qb3 { Doesn't give much for White. } 8... Bd6! { I like this move as Black is sacrificing a pawn for piece activity. } 9. Qxb7 Bxf4 10. Qxc6+ Kf8 11. Ne5 Rb8 $13 { with excellent compensation for the pawn. Due to underdeveloped pieces of White, the King can have problems reaching safety. }) 8... Bd6 { [%eval 0.14] } 9. Bxd6 { [%eval 0.08] } 9... Qxd6 { [%eval 0.16] } 10. O-O { [%eval 0.1] } 10... O-O { [%eval 0.14] } 11. Re1 { [%eval 0.02] } { In my database, I can see five games of GM Kamsky! Even though many top players have employed the London system and analyzed it in depth, We have to credit GM Kamsky for playing it several times successfully for many years. } 11... h6 { [%eval 0.0] } 12. Ne5 { [%eval 0.09] } { This is the first new move in the game and the engine's top choice. } 12... Ne7 { [%eval 0.1] } (12... Qc7 { Moving the Queen away from the d6 square has a straightforward idea of exchanging the Knight on e5. } 13. Bxc6 bxc6 14. b4 { Stopping the c6 pawn from advancing. } 14... Ne4) 13. a4 { [%eval 0.19] } 13... a6 { [%eval 0.17] } { Although this move is by no means a mistake, Black will face several problems in the future. Placing the pawn on a6 is always a target for White's light square bishop in the endgame. It is also important to understand White's idea of making an outpost for their d2 Knight to c5 via b3. In this connection, it is wiser to leave the pawn on a7. } (13... Qb6!? { is an exciting try with the idea to play a6 and capture the b2 pawn. }) 14. Bf1 { [%eval 0.2] } 14... Nd7?! { [%eval 0.48] } { On one hand, Black moved the Knight from c6 with the intention of not exchanging and now Black is offering to trade. This is the start of a wrong plan, and White wants to plant the d2 knight on c5.
 With White having a5 and b4 pawns, it would be impossible to challenge the knight, and the weakness on a6 and b7 would remain a weakness forever. } 15. Nxd7 { [%eval 0.52] } 15... Qxd7 { [%eval 0.61] } 16. a5! { [%eval 0.52] } { Ding perfectly understands the nuances of the position. } 16... Qc7 { [%eval 0.63] } 17. Qf3! { [%eval 0.59] } { A simple but effective idea. Ding shows excellent understanding and rightly plans to exchange the queens at the right moment by playing Qg3. } 17... Rfc8 { [%eval 0.58] } 18. Ra3 { [%eval 0.57] } 18... Bg6 { [%eval 0.6] } 19. Nb3 { [%eval 0.61] } 19... Nc6 { [%eval 0.46] } 20. Qg3! { [%eval 0.56] } { Exchanging your opponent's active pieces is one of the ways to improve your positional advantage further. In this case, Black's queen can move freely and keep an eye on White's a5 pawn. } (20. Nc5 Nxa5 $15) 20... Qe7?! { [%eval 0.6] } { Moving the queen to e7 does not make much sense as Black does not have any sensible breakthrough. } (20... Qxg3!? 21. hxg3 Rc7 22. Nc5 Bf5 23. b4 $14 { Black should try to defend this position. }) 21. h4! { [%eval 0.74] } { When your opponent has no breakthrough or sensible way to improve his position, Make a square for the king. In this scenario, it removes back-rank issues and creates the threat of attacking the g6 bishop. } 21... Re8 { [%eval 1.04] } { The idea of making e5 doesn't work because White's Knight is too powerful on c5. White doesn't have any obvious weakness here. } 22. Nc5 { [%eval 1.01] } 22... e5 { [%eval 1.36] } 23. Rb3! { [%eval 1.02] } (23. b4! $16 { Although what Ding has played is quite good, I also like this simple move cementing the knight on c5. All White has to do is bring the rook on a3 into action, and Black's position will collapse. }) 23... Nxa5 { [%eval 1.08] } { Forced move. } (23... Rab8 24. Rb6! $18 { followed by b4. Imagine the monster on b6 which cannot be touched in near future! }) 24. Rxe5 { [%eval 1.01] } 24... Qf6 { [%eval 0.91] } 25. Ra3 { [%eval 1.01] } 25... Nc4 { [%eval 0.97] } (25... Nc6 { Nepo could have tried this variation. Having a knight might give some tricky jumps! } 26. Nd7! (26. Rxd5 { Greedy move gives Black nice counterplay with } 26... Re1) 26... Qd8 27. Rxe8+ Qxe8 28. Qc7 { This is the recommendation of the engine. Sure, White has a big advantage, but for the engine, this is completely winning! }) 26. Bxc4 { [%eval 1.03] } 26... dxc4 { [%eval 0.96] } 27. h5?! { [%eval 0.79] } { On one hand it feels nice to disturb the Bishop on g6, There is a nice retreat with which Black can fight back } 27... Bc2? { [%eval 1.17] } (27... Rxe5! { Exploiting the chance offered by Ding! } 28. dxe5 Qd8!! { Both players must have missed this retreat. I failed to understand why Nepo did not spend some time when the opportunity presented itself. } 29. Qf3 (29. hxg6 Qd1+ 30. Kh2 Qh5+ 31. Qh3 Qxe5+ { This concrete variation was relatively easy to calculate, but the main issue is Nepo not spending time in difficult moments. It could have been a strategy to put pressure on Ding as Ding was low on time. }) 29... Bc2 $14 { Although White has an advantage, This is the lesser evil compared to what has happened in the game. }) 28. Nxb7 { [%eval 1.14] } 28... Qb6 { [%eval 1.04] } 29. Nd6 { [%eval 1.05] } 29... Rxe5 { [%eval 1.19] } 30. Qxe5 { [%eval 1.24] } 30... Qxb2 { [%eval 1.22] } { So far, it is forcing a sequence of moves after 28.Nb7. } 31. Ra5!! { [%eval 1.16] } { White is bringing the rook into action via c5-c7. } (31. Nxc4 { It's always important to be alert in converting the advantage. It is easy to fall for such tricks and spoil the advantage in one move. } 31... Qc1+ 32. Kh2 Bd3 33. Qe3 Qd1 $14 { Winning the h5 pawn after White moves the Knight. }) 31... Kh7 { [%eval 1.18] } (31... Qxc3 { Loses at once after 32. Ne8 } 32. Ne8 { Threatening mate on g7 } 32... f6 33. Qd5+ $18) 32. Rc5 { [%eval 1.04] } (32. Qe1 { The engine points out the not-so-obvious winning move. White defends the c3 pawn while intending to take on c4 with the Knight on d6 } 32... Bd3 33. Nxc4! Bxc4 34. Qe4+ f5 35. Rxf5 $18 { Black's Rook on a8 is hanging. }) 32... Qc1+ { [%eval 1.4] } { This is the last mistake, and from here onwards, Ding did not give any chance to Nepo and played all the best moves. } (32... Qxc3! { I failed to understand why Nepo did not capture the pawn on c3. Even though there are a lot of complicated variations, Black is holding here according to the computer. }) 33. Kh2 { [%eval 1.42] } 33... f6 { [%eval 1.29] } 34. Qg3 { [%eval 1.49] } 34... a5 { [%eval 1.55] } 35. Nxc4 { [%eval 1.55] } 35... a4 { [%eval 1.53] } 36. Ne3 { [%eval 1.59] } { Now Rc7 is a serious threat as Black cannot bring his Queen to g5. } 36... Bb1?! { [%eval 2.71] } { Inaccuracy. Rg8 was best. } (36... Rg8) 37. Rc7 { [%eval 2.73] } 37... Rg8 { [%eval 2.62] } 38. Nd5 { [%eval 2.95] } { Threatening Nf6+ } 38... Kh8 { [%eval 2.64] } 39. Ra7 { [%eval 2.78] } 39... a3 { [%eval 2.88] } 40. Ne7 { [%eval 2.59] } 40... Rf8?! { [%eval 3.49] } { Inaccuracy. Re8 was best. } (40... Re8 41. Nf5 Qg5 42. Qxg5 fxg5 43. Nd6 Re6 44. Ra8+ Kh7 45. Nf7 g6 46. Rxa3 gxh5 47. Ne5) 41. d5? { [%eval 2.06] } { Mistake. Ng6+ was best. } (41. Rb7 { Here, many moves are winning for White. One of the moves which caught my attention is Rb7. It's unusual because we are moving from the a-file where it is keeping an eye on the a-file pawn. I am giving this line as I could not resist not showing the following checkmate. } 41... a2 42. Rb8 a1=Q 43. Rxf8+ Kh7 44. Qg6+ Bxg6 45. hxg6#) (41. Ng6+ Bxg6 42. hxg6 Qd1 43. Qf3 Qb3 44. Ra8 Rxa8 45. Qxa8+ Qg8 46. Qxa3 Qb8+ 47. g3 Qe8) 41... a2 { [%eval 1.31] } 42. Qc7 { [%eval 8.41] } 42... Kh7 { [%eval #10] } 43. Ng6 { [%eval 9.29] } 43... Rg8 { [%eval #9] } 44. Qf7 { [%eval #11] } { Nepo resigned here as Ding intends to take the Rook on g8 followed by Ra8+ and checkmate on f8 or h8
 with the Rook. The illustrative engine line below shows the mating pattern idea. } 44... a1=Q { [%eval 9.95] } 45. Rxa1 { [%eval 7.82] } 45... Rd8? { [%eval #7] } { Checkmate is now unavoidable. Ba2 was best. } (45... Ba2 46. Qxg8+ Kxg8 47. Rxc1 Kf7 48. c4 Ke8 49. Nf4 Bb3 50. c5 Kd8 51. Kh1 Kc7 52. f3) 46. Ra7 { [%eval #6] } { Various delaying moves are possible here but they all end in mate } 46... Rg8 { [%eval #3] } 47. Qxg8+ { [%eval #2] } 47... Kxg8 { [%eval #2] } 48. Ra8+ { [%eval #1] } 48... Kf7 { [%eval #1] } 49. Rf8# { 1-0 White wins. } 1-0
 
 """,
     """
 [Event "World Chess Championship: Game 7: Nepomniachtchi,I - Ding,Liren"]
-[Site "https://lichess.org/study/QQO3VI7X/BVXdcDe4"]
+[Site "https://live.chess-online.com/study/QQO3VI7X/BVXdcDe4"]
 [Date "2023.04.16"]
 [White "Nepomniachtchi, Ian"]
 [Black "Ding, Liren"]
 [Result "1-0"]
-[Annotator "https://lichess.org/@/Harikrishnapentala"]
+[Annotator "https://live.chess-online.com/@/4"]
 [UTCDate "2023.04.19"]
 [UTCTime "09:23:33"]
 [Variant "Standard"]
@@ -546,7 +546,7 @@ From today's game, We can learn that it is crucial to manage our time correctly.
 """,
     """
 [Event "World Chess Championship: Game 8 Ding,L - Nepomniachtchi,I"]
-[Site "https://lichess.org/study/QQO3VI7X/ssQ9OnkI"]
+[Site "https://live.chess-online.com/study/QQO3VI7X/ssQ9OnkI"]
 [Date "2023.04.16"]
 [White "Ding, Liren"]
 [Black "Nepomniachtchi, Ian"]
@@ -564,7 +564,7 @@ players. But we have to realise that when players are in a tense match, mistakes
 """,
     """
 [Event "Chess World Championship: Game 9 : Nepomniachtchi,I - Ding,L"]
-[Site "https://lichess.org/study/QQO3VI7X/kX6F5oyK"]
+[Site "https://live.chess-online.com/study/QQO3VI7X/kX6F5oyK"]
 [Date "2023.04.16"]
 [White "Nepomniachtchi, Ian"]
 [Black "Ding, Liren"]
@@ -588,7 +588,7 @@ no need to go here! }) 56. gxh3 Ke7 { Nepo tried for more moves before agreeing 
 """,
     """
 [Event "Chess World Championship: Game 10  Ding, Liren- Nepomniachtchi, Ian"]
-[Site "https://lichess.org/study/QQO3VI7X/voLwAqta"]
+[Site "https://live.chess-online.com/study/QQO3VI7X/voLwAqta"]
 [Date "2023.04.16"]
 [White "Ding, Liren"]
 [Black "Nepomniachtchi, Ian"]
@@ -613,7 +613,7 @@ On the other hand, the player who is trailing should put pressure from the white
 """,
     """
 [Event "Chess World Championship: Game 11 Nepomniachtchi, Ian- Ding, Liren"]
-[Site "https://lichess.org/study/QQO3VI7X/Z7l9u8pi"]
+[Site "https://live.chess-online.com/study/QQO3VI7X/Z7l9u8pi"]
 [Date "2023.04.24"]
 [White "Nepomniachtchi, Ian"]
 [Black "Ding, Liren"]
@@ -635,7 +635,7 @@ Ding rightly estimates that this is an easy draw and White is not able to keep t
 """,
     """
 [Event "Chess World Championship: Game 12 : Ding, Liren - Nepomniachtchi, Ian"]
-[Site "https://lichess.org/study/QQO3VI7X/gIp18EqO"]
+[Site "https://live.chess-online.com/study/QQO3VI7X/gIp18EqO"]
 [Date "2023.04.26"]
 [White "Ding, Liren"]
 [Black "Nepomniachtchi, Ian"]
@@ -658,7 +658,7 @@ Had Nepo taken 10 minutes to calculate, He would have won the game in the next 1
 """,
     """
 [Event "Chess World Championship: Game 13 : Nepomniachtchi, Ian - Ding, Liren"]
-[Site "https://lichess.org/study/QQO3VI7X/tbIApGji"]
+[Site "https://live.chess-online.com/study/QQO3VI7X/tbIApGji"]
 [Date "2023.04.26"]
 [White "Nepomniachtchi, Ian"]
 [Black "Ding, Liren"]
@@ -678,7 +678,7 @@ It is natural for the players to get tired after many days of intense games. But
 """,
     """
 [Event "Chess World Championship 2023: Round 14: Ding Liren - Ian Nepomniachtch"]
-[Site "lichess.org"]
+[Site "live.chess-online.com"]
 [Date "2023.04.29"]
 [White "Ding Liren"]
 [Black "Ian Nepomniachtchi"]

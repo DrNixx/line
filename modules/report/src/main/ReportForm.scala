@@ -24,7 +24,7 @@ final private[report] class ReportForm(lightUserAsync: LightUser.Getter)(using d
           u => !me.is(u.id)
         )
         .verifying(
-          "Don't report Lichess. Use lichess.org/contact instead.",
+          "Don't report Lichess. Use chess-online.com/feedback instead.",
           u => !UserId.isOfficial(u)
         ),
       "reason" -> text.verifying("error.required", Reason.keys contains _),

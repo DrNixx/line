@@ -11,7 +11,7 @@
   <string name="newBroadcast">Neue Liveübertragung</string>
   <string name="subscribedBroadcasts">Abonnierte Übertragungen</string>
   <string name="aboutBroadcasts">Über Übertragungen</string>
-  <string name="howToUseLichessBroadcasts">Wie man Lichess-Übertragungen benutzt.</string>
+  <string name="howToUseLichessBroadcasts">Wie man Chess-Online-Übertragungen benutzt.</string>
   <string name="theNewRoundHelp">Die nächste Runde wird die gleichen Mitspieler und Mitwirkende haben wie die vorhergehende.</string>
   <string name="addRound">Eine Runde hinzufügen</string>
   <string name="ongoing">Laufend</string>
@@ -23,8 +23,8 @@
   <string name="fullDescription">Vollständige Ereignisbeschreibung</string>
   <string name="fullDescriptionHelp">Optionale, ausführliche Beschreibung der Übertragung. %1$s ist verfügbar. Die Beschreibung muss kürzer als %2$s Zeichen sein.</string>
   <string name="sourceSingleUrl">PGN Quell-URL</string>
-  <string name="sourceUrlHelp">URL die Lichess abfragt um PGN Aktualisierungen zu erhalten. Sie muss öffentlich aus dem Internet zugänglich sein.</string>
-  <string name="sourceGameIds">Bis zu 64 Lichess Partie-IDs, getrennt durch Leerzeichen.</string>
+  <string name="sourceUrlHelp">URL die Chess-Online abfragt um PGN Aktualisierungen zu erhalten. Sie muss öffentlich aus dem Internet zugänglich sein.</string>
+  <string name="sourceGameIds">Bis zu 64 Chess-Online Partie-IDs, getrennt durch Leerzeichen.</string>
   <string name="startDateTimeZone">Startdatum in der Zeitzone des Tunierstandortes: %s</string>
   <string name="startDateHelp">Optional, falls du weißt wann das Ereignis beginnt</string>
   <string name="currentGameUrl">URL der aktuellen Partie</string>
@@ -47,7 +47,7 @@
   <string name="ageThisYear">Alter in diesem Jahr</string>
   <string name="unrated">Ungewertet</string>
   <string name="recentTournaments">Letzte Turniere</string>
-  <string name="openLichess">In Lichess öffnen</string>
+  <string name="openLichess">In Chess-Online öffnen</string>
   <string name="teams">Teams</string>
   <string name="boards">Bretter</string>
   <string name="overview">Überblick</string>

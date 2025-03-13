@@ -177,7 +177,7 @@
   <string name="playingRightNow">ବର୍ତ୍ତମାନ ଖେଳୁଛନ୍ତି</string>
   <string name="eventInProgress">ବର୍ତ୍ତମାନ ଖେଳୁଛନ୍ତି</string>
   <string name="send">ପଠାନ୍ତୁ</string>
-  <string name="thisAccountViolatedTos">ଏହି ଆକାଉଣ୍ଟ Lichess ସେବା ସର୍ତ୍ତାବଳୀର ଉଲ୍ଲଂଘନ କରିଛି</string>
+  <string name="thisAccountViolatedTos">ଏହି ଆକାଉଣ୍ଟ Chess-Online ସେବା ସର୍ତ୍ତାବଳୀର ଉଲ୍ଲଂଘନ କରିଛି</string>
   <plurals name="nbStudies">
     <item quantity="one">%sଟିଏ ଅଧ୍ୟୟନ</item>
     <item quantity="other">%sଟି ଅଧ୍ୟୟନ</item>
@@ -290,7 +290,7 @@
   <string name="thankYouForReading">ପଢ଼ିବା ପାଇଁ ଧନ୍ୟବାଦ!</string>
   <string name="lifetimeScore">ଆଜୀବନ ସ୍କୋର୍</string>
   <string name="agreementMultipleAccounts" comment="%s will be replaced with the translation of 'termsOfService'">ମୁଁ ସହମତ ଯେ ମୁଁ ଏକାଧିକ ଆକାଉଣ୍ଟ୍ ସୃଷ୍ଟି କରିବି ନାହିଁ (%sରେ ଦର୍ଶାଯାଇଥିବା କାରଣ ବ୍ୟତୀତ)।</string>
-  <string name="agreementPolicy">ମୁଁ ସହମତ ଯେ ମୁଁ ସମସ୍ତ Lichess ନୀତି ଅନୁସରଣ କରିବି।</string>
+  <string name="agreementPolicy">ମୁଁ ସହମତ ଯେ ମୁଁ ସମସ୍ତ Chess-Online ନୀତି ଅନୁସରଣ କରିବି।</string>
   <string name="searchOrStartNewDiscussion">ଖୋଜ କିମ୍ବା ନୂଆ ବାର୍ତ୍ତାଳାପ ଆରମ୍ଭ କର</string>
   <string name="edit">ସମ୍ପାଦନା</string>
   <string name="rapid">ଶୀଘ୍ର</string>

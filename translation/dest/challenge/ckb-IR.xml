@@ -22,5 +22,5 @@
   <string name="declineVariant">ئێستا ئەو جۆرە یارییە قبوڵناکەم.</string>
   <string name="declineNoBot">لە بۆت هیچ یارییەک قبوڵناکەم.</string>
   <string name="declineOnlyBot">تەنها لە بووت یاریکردن قبوڵ دەکەم.</string>
-  <string name="inviteLichessUser">یان بەکارهێنەرێکی Lichess بانگهێشت بکە:</string>
+  <string name="inviteLichessUser">یان بەکارهێنەرێکی Chess-Online بانگهێشت بکە:</string>
 </resources>

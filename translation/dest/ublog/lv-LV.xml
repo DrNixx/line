@@ -41,7 +41,7 @@
   <string name="deleteBlog">Neatgriezeniski dzēst bloga ierakstu</string>
   <string name="safeToUseImages">Izmantot attēlus ir droši no šādām mājaslapām: </string>
   <string name="selectPostTopics">Atlasiet tematus, kas saistīti ar jūsu ierakstu</string>
-  <string name="useImagesYouMadeYourself">Varat arī izmantot pašveidotus attēlus, fotogrāfijas ko uzņēmāt, Lichess ekrānuzņēmumus... jebko, kā autortiesības nepieder kādam citam.</string>
+  <string name="useImagesYouMadeYourself">Varat arī izmantot pašveidotus attēlus, fotogrāfijas ko uzņēmāt, Chess-Online ekrānuzņēmumus... jebko, kā autortiesības nepieder kādam citam.</string>
   <string name="safeAndRespectfulContent">Lūdzu, publicējiet tikai pieklājīgu saturu. Nepublicējiet kāda cita darbu.</string>
   <string name="inappropriateContentAccountClosed">Jebkas nepiedienīgs var novest pie jūsu konta slēgšanas.</string>
   <string name="blogTips">Mūsu ieteikumi, kā rakstīt lieliskus bloga ierakstus</string>

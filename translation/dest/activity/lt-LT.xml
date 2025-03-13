@@ -3,10 +3,10 @@
   <string name="activity">Veikla</string>
   <string name="hostedALiveStream">Organizavo transliaciją</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">Remia lichess.org %1$s mėn. kaip „%2$s“</item>
-    <item quantity="few">Remia lichess.org %1$s mėn. kaip „%2$s“</item>
-    <item quantity="many">Remia lichess.org %1$s mėn. kaip „%2$s“</item>
-    <item quantity="other">Remia lichess.org %1$s mėn. kaip „%2$s“</item>
+    <item quantity="one">Remia chess-online.com %1$s mėn. kaip „%2$s“</item>
+    <item quantity="few">Remia chess-online.com %1$s mėn. kaip „%2$s“</item>
+    <item quantity="many">Remia chess-online.com %1$s mėn. kaip „%2$s“</item>
+    <item quantity="other">Remia chess-online.com %1$s mėn. kaip „%2$s“</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">Praktikavosi %1$s poziciją per „%2$s“</item>
@@ -80,7 +80,7 @@
     <item quantity="many">Sukūrė %s naujų studijų</item>
     <item quantity="other">Sukūrė %s naujų studijų</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="one">Varžėsi %s-ame turnyre</item>
     <item quantity="few">Varžėsi %s-uose turnyruose</item>
     <item quantity="many">Varžėsi %s-yje turnyrų</item>
@@ -99,7 +99,7 @@
     <item quantity="other">Dalyvavo %s šveicariškų turnyrų</item>
   </plurals>
   <string name="rankedInSwissTournament">Reitinguotas #%1$s iš %2$s</string>
-  <string name="signedUp">Užsiregistravo „Lichess“</string>
+  <string name="signedUp">Užsiregistravo „Chess-Online“</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">Prisijungė prie %s komandos</item>
     <item quantity="few">Prisijungė prie %s komandų</item>

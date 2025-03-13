@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessStreamers">Lichess straumētāji</string>
-  <string name="lichessStreamer">Lichess straumētājs</string>
+  <string name="lichessStreamers">Chess-Online straumētāji</string>
+  <string name="lichessStreamer">Chess-Online straumētājs</string>
   <string name="live">TIEŠRAIDĒ!</string>
   <string name="offline">BEZSAISTĒ</string>
   <string name="currentlyStreaming">Pašlaik straumē: %s</string>
   <string name="lastStream">Pēdējā straumēšana %s</string>
-  <string name="becomeStreamer">Kļūt par Lichess straumētāju</string>
+  <string name="becomeStreamer">Kļūt par Chess-Online straumētāju</string>
   <string name="doYouHaveStream">Vai jums ir Twitch vai YouTube straume?</string>
   <string name="hereWeGo">Aiziet!</string>
   <string name="allStreamers">Visi straumētāji</string>
@@ -15,24 +15,24 @@
   <string name="downloadKit">Lejupielādēt straumētāja komplektu</string>
   <string name="xIsStreaming">%s straumē</string>
   <string name="rules">Straumēšanas noteikumi</string>
-  <string name="rule1">Iekļaujiet atslēgas vārdu \"lichess.org\", straumē, kad straumējat platformā Lichess.</string>
+  <string name="rule1">Iekļaujiet atslēgas vārdu \"chess-online.com\", straumē, kad straumējat platformā Chess-Online.</string>
   <string name="rule2">Noņemiet šo atslēgas vārdu, kad straumējat ko nesaistītu.</string>
-  <string name="rule3">Lichess automātiski uztvers jūsu straumi un iespējos šos labumus:</string>
+  <string name="rule3">Chess-Online automātiski uztvers jūsu straumi un iespējos šos labumus:</string>
   <string name="rule4" comment="the resulting message is: Read our streaming Fairplay FAQ to ensure a fair play for everyone in your stream">Lasiet mūsu %s, lai visiem nodrošinātu godīgu spēli straumēšanas laikā.</string>
   <string name="streamingFairplayFAQ">straumēšanas godīguma Bieži Uzdotos Jautājumus (BUJ)</string>
   <string name="perks">Priekšrocības, straumējot ar atslēgas vārdu</string>
-  <string name="perk1">Iegūstiet liesmojošu straumētāja ikonu savā Lichess profilā.</string>
+  <string name="perk1">Iegūstiet liesmojošu straumētāja ikonu savā Chess-Online profilā.</string>
   <string name="perk2">Nonāciet straumētāju saraksta augšā.</string>
-  <string name="perk3">Paziņojiet saviem Lichess sekotājiem.</string>
+  <string name="perk3">Paziņojiet saviem Chess-Online sekotājiem.</string>
   <string name="perk4">Rādiet straumi savās spēlēs, turnīros un izpētēs.</string>
   <string name="approved">Jūsu straume apstiprināta.</string>
   <string name="pendingReview">Jūsu straumi izskata moderatori.</string>
   <string name="pleaseFillIn">Lūdzu, aizpildiet staumētāja datus, un augšupielādējiet attēlu.</string>
-  <string name="whenReady" comment="whenReady&#10;&#10;%s is &quot;request a moderator review&quot;">Kad esiet gatavs iekļaušanai Lichess straumētāju sarakstā, %s</string>
-  <string name="streamerLanguageSettings">Lichess tiešraides lapa nosaka mērķauditoriju pēc valodas, ko norāda jūsu straumēšanas platforma. Iestatiet pareizo valodu savām tiešraidēm programmā vai pakalpojumā, ko izmantojat tiešraidei.</string>
+  <string name="whenReady" comment="whenReady&#10;&#10;%s is &quot;request a moderator review&quot;">Kad esiet gatavs iekļaušanai Chess-Online straumētāju sarakstā, %s</string>
+  <string name="streamerLanguageSettings">Chess-Online tiešraides lapa nosaka mērķauditoriju pēc valodas, ko norāda jūsu straumēšanas platforma. Iestatiet pareizo valodu savām tiešraidēm programmā vai pakalpojumā, ko izmantojat tiešraidei.</string>
   <string name="twitchUsername">Jūsu Twitch lietotājvārds vai URL</string>
   <string name="youTubeChannelId">Tavs YouTube kanāla ID</string>
-  <string name="streamerName">Jūsu straumētāja vārds Lichess</string>
+  <string name="streamerName">Jūsu straumētāja vārds Chess-Online</string>
   <plurals name="keepItShort">
     <item quantity="zero">Ierobežojiet garumu: ne vairāk kā %s rakstzīmes</item>
     <item quantity="one">Ierobežojiet garumu: ne vairāk kā %s rakstzīme</item>

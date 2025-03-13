@@ -227,9 +227,9 @@
   <string name="forgotPassword">Մոռացել ե՞ք գաղտնաբառը</string>
   <string name="error.weakPassword">Այդ գաղտնաբառը շատ տարածված է, և այն չափազանց հեշտ է գուշակել։</string>
   <string name="error.namePassword">Խնդրում ենք՝ Ձեր մասնակցային անունը մի՛ օգտագործեք որպես գաղտնաբառ։</string>
-  <string name="blankedPassword">Նույն գաղտնաբառը Դուք օգտագործել եք այլ կայքում, իսկ այդ կայքը վարկաբեկվել է։ Այժմ Lichess-ի Ձեր մասնակցային հաշվի անվտանգության համար անհրաժեշտ է սահմանել նոր գաղտնաբառ։ Շնորհակալություն ըմբռնումով մոտենալու համար։</string>
-  <string name="youAreLeavingLichess">Դուք լքում եք Lichess-ը</string>
-  <string name="neverTypeYourPassword">Երբեք մի՛ մուտքագրեք Lichess-ի գաղտնաբառը այլ կայքերում։</string>
+  <string name="blankedPassword">Նույն գաղտնաբառը Դուք օգտագործել եք այլ կայքում, իսկ այդ կայքը վարկաբեկվել է։ Այժմ Chess-Online-ի Ձեր մասնակցային հաշվի անվտանգության համար անհրաժեշտ է սահմանել նոր գաղտնաբառ։ Շնորհակալություն ըմբռնումով մոտենալու համար։</string>
+  <string name="youAreLeavingLichess">Դուք լքում եք Chess-Online-ը</string>
+  <string name="neverTypeYourPassword">Երբեք մի՛ մուտքագրեք Chess-Online-ի գաղտնաբառը այլ կայքերում։</string>
   <string name="proceedToX">Անցնել %s</string>
   <string name="passwordSuggestion">Մի՛ ընտրեք այլ անձանց առաջարկած գաղտնաբառը։ Նրանք դրա օգնությամբ կգողանան Ձեր մասնակցային հաշիվը։</string>
   <string name="emailSuggestion">Մի՛ ընտրեք այլ անձանց առաջարկած էլեկտրոնային փոստի հասցեն։ Նրանք դրա օգնությամբ կգողանան Ձեր մասնակցային հաշիվը։</string>
@@ -336,7 +336,7 @@
     <item quantity="one">Տալ %s վայրկան</item>
     <item quantity="other">Տալ %s վայրկան</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Այս օգտատերը խախտել է Lichess-ի օգտագործման պայմանները</string>
+  <string name="thisAccountViolatedTos">Այս օգտատերը խախտել է Chess-Online-ի օգտագործման պայմանները</string>
   <string name="openingExplorerAndTablebase">Սկզբնախաղերի և վերջնախաղերի բազա՝ &amp;</string>
   <string name="takeback">Քայլը հետ վերցնել</string>
   <string name="proposeATakeback">Քայլը հետ վերցնելու առաջարկ անել</string>
@@ -515,7 +515,7 @@
   <string name="inlineNotation">Տողային նոտագրություն</string>
   <string name="makeAStudy">Պահպանելու և կիսվելու համար դիտարկեք ստուդիա ստեղծելու հնարավորությունը։</string>
   <string name="clearSavedMoves">Մաքրել քայլերը</string>
-  <string name="previouslyOnLichessTV">Նախորդները Lichess TV-ով</string>
+  <string name="previouslyOnLichessTV">Նախորդները Chess-Online TV-ով</string>
   <string name="onlinePlayers">Առցանց խաղացողներ</string>
   <string name="activePlayers">Ակտիվ խաղացողներ</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Զգուշացում. խաղը վարկանիշային է, սակայն առանց ժամանակի</string>
@@ -674,7 +674,7 @@
   <string name="simulHostExtraTime">Խաղաշար անցկացնողի լրացուցիչ ժամանակը</string>
   <string name="simulAddExtraTimePerPlayer">Ձեր ժամացույցի վրա ավելացրեք մեկնարկային ժամանակը յուրաքանչյուր խաղացողի համար, ով մուտք է գործել Ձեր միաժամանակյա խաղի նստաշրջան:</string>
   <string name="simulHostExtraTimePerPlayer">Յուրաքանչյուր խաղացողի համար նստաշրջանի ժամանակի լրացում</string>
-  <string name="lichessTournaments">Lichess մրցաշարեր</string>
+  <string name="lichessTournaments">Chess-Online մրցաշարեր</string>
   <string name="tournamentFAQ">Հարցեր «Արենա» մրցաշարերի վերաբերյալ</string>
   <string name="timeBeforeTournamentStarts">Ժամանակ մինչև մրցաշարի սկսվելը</string>
   <string name="averageCentipawnLoss">Միջինը հարյուրերորդական զինվորի կորուստ</string>
@@ -691,7 +691,7 @@
   <string name="keyNextInaccuracy">Հաջորդ անճշտությունը</string>
   <string name="newTournament">Նոր մրցաշար</string>
   <string name="tournamentHomeTitle">Շախմատի զանազան տարբերակներով և ժամակարգերով մրցաշարեր</string>
-  <string name="tournamentHomeDescription">Մրցաշարում խաղացե՜ք արագ շախմատ։ Ընտրեք Lichess-ի պաշտոնական մրցաշարերից ցանկացածը կամ ստեղծեք ձերը։ Գնդակ (Bullet), կայծակնային (Blitz), դասական, շախմատ-960 (Ֆիշերի շախմատ, Chess960), արքան կենտրոնում (King of the Hill), երեք շախ (Threecheck) և խաղի այլ տարբերակներ. դրանք կապահովեն ձեր շախմատային հաճույքը։</string>
+  <string name="tournamentHomeDescription">Մրցաշարում խաղացե՜ք արագ շախմատ։ Ընտրեք Chess-Online-ի պաշտոնական մրցաշարերից ցանկացածը կամ ստեղծեք ձերը։ Գնդակ (Bullet), կայծակնային (Blitz), դասական, շախմատ-960 (Ֆիշերի շախմատ, Chess960), արքան կենտրոնում (King of the Hill), երեք շախ (Threecheck) և խաղի այլ տարբերակներ. դրանք կապահովեն ձեր շախմատային հաճույքը։</string>
   <string name="tournamentNotFound">Մրցաշարը չի գտնվել</string>
   <string name="tournamentDoesNotExist">Այդպիսի մրցաշար գոյություն չունի։</string>
   <string name="tournamentMayHaveBeenCanceled">Կարող է չեղարկվել այն դեպքում, եթե բոլոր խաղացողները լքել են այն մինչև մեկնարկը։</string>
@@ -714,8 +714,8 @@
   <string name="weHaveSentYouAnEmailTo">Մենք նամակ ենք ուղարկել %s։ Կտտացրեք դրա մեջ գտնվող հղմանը՝ ձեր գաղտնաբառը վերականգնելու համար։</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Գրանցվելով՝ Դուք ստանձնում եք մեր %s հետևելու պարտականությունը:</string>
   <string name="readAboutOur">Ծանոթացեք մեր %s։</string>
-  <string name="networkLagBetweenYouAndLichess">Ձեր և Lichess-ի սերվերների միջև տվյալների փոխանցման հետաձգում:</string>
-  <string name="timeToProcessAMoveOnLichessServer">Քայլի մշակման ժամանակը Lichess-ի սերվերում</string>
+  <string name="networkLagBetweenYouAndLichess">Ձեր և Chess-Online-ի սերվերների միջև տվյալների փոխանցման հետաձգում:</string>
+  <string name="timeToProcessAMoveOnLichessServer">Քայլի մշակման ժամանակը Chess-Online-ի սերվերում</string>
   <string name="downloadAnnotated">Ներբեռնել անոտացիաներով</string>
   <string name="downloadRaw">Ներբեռնել նախնական տեսքով</string>
   <string name="downloadImported">Ներբեռնել ներմուծվածը</string>
@@ -731,7 +731,7 @@
   <string name="withEverybody">Բոլորի հետ</string>
   <string name="kidMode">Մանկական ռեժիմ</string>
   <string name="kidModeExplanation">Սա անվտանգության համար է։ Մանկական ռեժիմում անջատված են կայքի հաղորդակցության բոլոր միջոցները։ Միացրեք այս ռեժիմը ձեր երեխաների և աշակերտների համար` նրանց այլ օգտատերերից պաշտպանելու համար։</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">Մանկական ռեժիմում Lichess-ի պատկերանշանին ավելանում է %s տեսքով նշան, որպեսզի Դուք իմանաք, որ Ձեր երեխաներն անվտանգության մեջ են։</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">Մանկական ռեժիմում Chess-Online-ի պատկերանշանին ավելանում է %s տեսքով նշան, որպեսզի Դուք իմանաք, որ Ձեր երեխաներն անվտանգության մեջ են։</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">Ձեր հաշիվը կառավարվում է: Հարցրեք ձեր շախմատի ուսուցիչին երեխաների ռեժիմը հեռացնելու մասին:</string>
   <string name="enableKidMode">Միացնել մանկական ռեժիմը</string>
   <string name="disableKidMode">Անջատել մանկական ռեժիմը</string>
@@ -739,7 +739,7 @@
   <string name="sessions">Սեսիաներ</string>
   <string name="revokeAllSessions">փակել բոլոր սեսիաները</string>
   <string name="playChessEverywhere">Խաղացեք շախմատ ամենուր</string>
-  <string name="asFreeAsLichess">Անվճար է Lichess-ի պես</string>
+  <string name="asFreeAsLichess">Անվճար է Chess-Online-ի պես</string>
   <string name="builtForTheLoveOfChessNotMoney">Սիրով շախմատի, այլ ոչ` փողի հանդեպ</string>
   <string name="everybodyGetsAllFeaturesForFree">Բոլոր հնարավորությունները բոլորի համար անվճար են</string>
   <string name="zeroAdvertisement">Ոչ մի գովազդ</string>
@@ -851,14 +851,14 @@
   <string name="tryToWin">Փորձեք հաղթել (կամ գոնե ոչ-ոքի խաղալ) յուրաքանչյուր խաղ։</string>
   <string name="resignLostGames">Հանձնվե՛ք պարտված խաղերում (մի\' թողեք ժամանակը սպառվի)։</string>
   <string name="temporaryInconvenience">Մենք հայցում ենք Ձեր ներողամտությունը անհարմարության համար,</string>
-  <string name="wishYouGreatGames">և մաղթում հաճելի հաղեր lichess.org-ում։</string>
+  <string name="wishYouGreatGames">և մաղթում հաճելի հաղեր chess-online.com-ում։</string>
   <string name="thankYouForReading">Շնորհակալություն կարդալու համար:</string>
   <string name="lifetimeScore">Հաշիվը ողջ ընթացքում</string>
   <string name="currentMatchScore">Հաշիվն ընթացիկ խաղում</string>
   <string name="agreementAssistance">Հաստատում եմ, որ իմ խաղերում երբեք չեմ օգտվի կողմնակի օգնությունից (շախմատային ծրագրերից, գրքերից, տվյալների բազաներից և այլ խաղացողներից)։</string>
   <string name="agreementNice">Հաստատում եմ, որ հարգանքով եմ վերաբերվելու այլ խաղացողներին։</string>
   <string name="agreementMultipleAccounts" comment="%s will be replaced with the translation of 'termsOfService'">Համաձայն եմ, որ չպետք է ստեղծեմ բազմաթիվ մասնակցային հաշիվներ (բացառությամբ %sում նշված պատճառների)։</string>
-  <string name="agreementPolicy">Հաստատում եմ, որ հետևելու եմ Lichess-ի բոլոր կանոններին։</string>
+  <string name="agreementPolicy">Հաստատում եմ, որ հետևելու եմ Chess-Online-ի բոլոր կանոններին։</string>
   <string name="searchOrStartNewDiscussion">Գտնել քննարկումը կամ ստեղծել նորը</string>
   <string name="edit">Խմբագրել</string>
   <string name="blitz" comment="Probably best left untranslated. Leave it as 'Blitz' unless your language has a better word for it.">Բլից</string>
@@ -896,7 +896,7 @@
   <string name="congratsYouWon">Շնորհավորո՜ւմ ենք, Դուք հաղթեցիք։</string>
   <string name="gameVsX">Խաղ ընդդեմ %1$s-ի</string>
   <string name="resVsX">%1$s-ն ընդդեմ %2$s-ի</string>
-  <string name="lostAgainstTOSViolator">Դուք պարտվել եք նրան, ով խախտել է Lichess-ի օգտվողի համաձայնագիրը</string>
+  <string name="lostAgainstTOSViolator">Դուք պարտվել եք նրան, ով խախտել է Chess-Online-ի օգտվողի համաձայնագիրը</string>
   <string name="refundXpointsTimeControlY">Վերադարձ. %1$s %2$s վարկանիշային միավոր</string>
   <string name="timeAlmostUp">Ժամանակը գրեթե սպառվել է</string>
   <string name="clickToRevealEmailAddress">[Սեղմեք՝ էլեկտրոնային փոստի հասցեն բացելու համար]</string>
@@ -949,10 +949,10 @@
   <string name="youCantStartNewGame">Դուք չեք կարող սկսել նոր խաղ, քանի դեռ չի ավարտվել ընթացիկը։</string>
   <string name="since">Սկսած</string>
   <string name="until">Մինչև</string>
-  <string name="lichessDbExplanation">Lichess-ի բոլոր խաղացողների վարկանիշային խաղեր</string>
+  <string name="lichessDbExplanation">Chess-Online-ի բոլոր խաղացողների վարկանիշային խաղեր</string>
   <string name="switchSides">Փոխել կողմը</string>
   <string name="closingAccountWithdrawAppeal">Ձեր մասնակցային հաշվի փակումը կչեղարկի Ձեր դիմումը</string>
   <string name="ourEventTips">Մեր խորհուրդները միջոցառումներ կազմակերպելու հարցում</string>
-  <string name="lichessPatronInfo">Lichess-ը բարեգործական կազմակերպություն է, որը տրամադրում է բաց նախնական կոդով ազատ և անվճար ծրագրային ապահովում։
+  <string name="lichessPatronInfo">Chess-Online-ը բարեգործական կազմակերպություն է, որը տրամադրում է բաց նախնական կոդով ազատ և անվճար ծրագրային ապահովում։
 Օպերացիոն բոլոր ծախսերը, մշակումները և կոնտենտը ֆինանսավորվում են բացառապես օգտատերերի նվիրաբերությունների հաշվին։</string>
 </resources>

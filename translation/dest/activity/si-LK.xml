@@ -3,8 +3,8 @@
   <string name="activity">ක්‍රියාකාරකම්</string>
   <string name="hostedALiveStream">සජීවී ප්‍රවාහයක් පැවැත්වීය</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">%2$s ලෙස මාස %1$s සඳහා lichess.org වෙත​ සහාය දක්වා ඇත​</item>
-    <item quantity="other">%2$s ලෙස මාස %1$s සඳහා lichess.org වෙත​ සහාය දක්වා ඇත​</item>
+    <item quantity="one">%2$s ලෙස මාස %1$s සඳහා chess-online.com වෙත​ සහාය දක්වා ඇත​</item>
+    <item quantity="other">%2$s ලෙස මාස %1$s සඳහා chess-online.com වෙත​ සහාය දක්වා ඇත​</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">%2$s හි %1$s position එක​ පුහුණු විය</item>
@@ -54,7 +54,7 @@
     <item quantity="one">%s නව අධ්‍යයනයක් සාදන ලදී</item>
     <item quantity="other">%s නව අධ්‍යයන සාදන ලදී</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="one">%s Arena තරඟාවලියට තරඟ කළා</item>
     <item quantity="other">%s Arena තරඟාවලි වලට තරඟ කළා</item>
   </plurals>
@@ -67,7 +67,7 @@
     <item quantity="other">%s ස්විස් තරඟාවලි වල තරඟ කළා</item>
   </plurals>
   <string name="rankedInSwissTournament">%2$s හි #%1$s ශ්‍රේණිගත කර ඇත</string>
-  <string name="signedUp">Lichess.org වෙත ලියාපදිංචි විය</string>
+  <string name="signedUp">Chess-Online.Com වෙත ලියාපදිංචි විය</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">%s කණ්ඩායමට එක් විය</item>
     <item quantity="other">කණ්ඩායම් %sකට සම්බන්ධ විය</item>

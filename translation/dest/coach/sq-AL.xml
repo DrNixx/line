@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessCoaches">Trajnerë Lichess-i</string>
-  <string name="lichessCoach">Trajner Lichess-i</string>
+  <string name="lichessCoaches">Trajnerë Chess-Online-i</string>
+  <string name="lichessCoach">Trajner Chess-Online-i</string>
   <string name="areYouCoach">Jeni një trajner i zoti shahu me një %s?</string>
-  <string name="nmOrFideTitle" comment="nmOrFideTitle&#10;&#10;Part of sentence &quot;Are you a great chess coach with a NM or FIDE title?&quot;&#10;&#10;The text links to our title verification page: https://lichess.org/help/master">Titull Mjeshtër Kombëtar ose titull FIDE</string>
+  <string name="nmOrFideTitle" comment="nmOrFideTitle&#10;&#10;Part of sentence &quot;Are you a great chess coach with a NM or FIDE title?&quot;&#10;&#10;The text links to our title verification page: https://chess-online.com/help/master">Titull Mjeshtër Kombëtar ose titull FIDE</string>
   <string name="confirmTitle">Ripohoni këtu titullin tuaj dhe do të shqyrtojmë aplikimin tuaj.</string>
   <string name="sendApplication" comment="sendApplication&#10;&#10;%s is the lichess email address">Dërgonani një email tek %s dhe do të shqyrtojmë aplikimin tuaj.</string>
   <string name="location">Vendndodhje</string>
@@ -14,7 +14,7 @@
   <string name="accepting">Pranon nxënës</string>
   <string name="notAccepting">Hëpërhë nuk pranon nxënës</string>
   <string name="xCoachesStudents">%s trajnon studente shahu</string>
-  <string name="viewXProfile">Shihni profilin Lichess të %s</string>
+  <string name="viewXProfile">Shihni profilin Chess-Online të %s</string>
   <string name="sendPM">Dërgojini një mesazh privat</string>
   <string name="aboutMe">Rreth meje</string>
   <string name="playingExperience">Përvojë lojërash</string>

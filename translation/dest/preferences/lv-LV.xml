@@ -59,8 +59,8 @@
   <string name="notifyChallenge">Izaicinājumi</string>
   <string name="notifyTournamentSoon">Turnīra sākums tuvojas</string>
   <string name="notifyTimeAlarm">Korespondencšaha laiks izsīkst</string>
-  <string name="notifyBell">Zvana paziņojumi Lichess programmā</string>
-  <string name="notifyPush">Ierīces paziņojumi, kad neesat platformā Lichess</string>
+  <string name="notifyBell">Zvana paziņojumi Chess-Online programmā</string>
+  <string name="notifyPush">Ierīces paziņojumi, kad neesat platformā Chess-Online</string>
   <string name="notifyWeb">Pārlūkprogrammā</string>
   <string name="notifyDevice">Ierīcē</string>
   <string name="bellNotificationSound">Paziņojumu skaņa</string>

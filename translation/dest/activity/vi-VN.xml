@@ -3,7 +3,7 @@
   <string name="activity">Hoạt động</string>
   <string name="hostedALiveStream">Đã phát trực tiếp</string>
   <plurals name="supportedNbMonths">
-    <item quantity="other">Đã ủng hộ lichess.org %1$s tháng với tư cách là một %2$s</item>
+    <item quantity="other">Đã ủng hộ chess-online.com %1$s tháng với tư cách là một %2$s</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="other">Đã luyện tập %1$s thế cờ trên %2$s</item>
@@ -44,7 +44,7 @@
   <plurals name="createdNbStudies">
     <item quantity="other">Đã tạo %s nghiên cứu mới</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="other">Đã hoàn thành %s giải đấu Đấu trường</item>
   </plurals>
   <plurals name="rankedInTournament">
@@ -54,7 +54,7 @@
     <item quantity="other">Đã hoàn thành %s giải đấu hệ Thụy Sĩ</item>
   </plurals>
   <string name="rankedInSwissTournament">Đứng hạng %1$s trong giải %2$s</string>
-  <string name="signedUp">Đã ghi danh tại lichess.org</string>
+  <string name="signedUp">Đã ghi danh tại chess-online.com</string>
   <plurals name="joinedNbTeams">
     <item quantity="other">Đã tham gia %s đội</item>
   </plurals>

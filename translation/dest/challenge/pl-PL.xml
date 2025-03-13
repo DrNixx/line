@@ -22,5 +22,5 @@
   <string name="declineVariant">Nie chcę grać teraz tego wariantu.</string>
   <string name="declineNoBot">Nie przyjmuję wyzwań od botów.</string>
   <string name="declineOnlyBot">Przyjmuję tylko wyzwania od botów.</string>
-  <string name="inviteLichessUser">Lub zaproś użytkownika Lichess:</string>
+  <string name="inviteLichessUser">Lub zaproś użytkownika Chess-Online:</string>
 </resources>

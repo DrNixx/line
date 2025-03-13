@@ -22,5 +22,5 @@
   <string name="declineVariant">මම දැන් මෙම ප්‍රභේදය වාදනය කිරීමට කැමති නැත.</string>
   <string name="declineNoBot">මම බොට් වලින් අභියෝග භාර ගන්නේ නැහැ.</string>
   <string name="declineOnlyBot">මම පිළිගන්නේ බොට් වලින් ලැබෙන අභියෝග පමණි.</string>
-  <string name="inviteLichessUser">නැත්නම් Lichess පරිශීලකයෙකුට ආරාධනා කරන්න​:</string>
+  <string name="inviteLichessUser">නැත්නම් Chess-Online පරිශීලකයෙකුට ආරාධනා කරන්න​:</string>
 </resources>

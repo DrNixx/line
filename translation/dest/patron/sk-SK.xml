@@ -2,16 +2,16 @@
 <resources>
   <string name="donate">Prispieť</string>
   <string name="donateAsX">Prispieť ako %s</string>
-  <string name="lichessPatron">Lichess Patrón</string>
+  <string name="lichessPatron">Chess-Online Patrón</string>
   <string name="patronSince" comment="string is a date">Patrónom od %s</string>
   <string name="freeAccount">Účet zdarma</string>
-  <string name="becomePatron">Staňte sa Lichess Patrónom</string>
-  <string name="xBecamePatron">%s sa stal Lichess Patronom</string>
+  <string name="becomePatron">Staňte sa Chess-Online Patrónom</string>
+  <string name="xBecamePatron">%s sa stal Chess-Online Patronom</string>
   <plurals name="xIsPatronForNbMonths">
-    <item quantity="one">%1$s je Lichess Patrónom na %2$s mesiac</item>
-    <item quantity="few">%1$s je Lichess Patrónom na %2$s mesiace</item>
-    <item quantity="many">%1$s je Lichess Patrónom na %2$s mesiacov</item>
-    <item quantity="other">%1$s je Lichess Patrónom na %2$s mesiacov</item>
+    <item quantity="one">%1$s je Chess-Online Patrónom na %2$s mesiac</item>
+    <item quantity="few">%1$s je Chess-Online Patrónom na %2$s mesiace</item>
+    <item quantity="many">%1$s je Chess-Online Patrónom na %2$s mesiacov</item>
+    <item quantity="other">%1$s je Chess-Online Patrónom na %2$s mesiacov</item>
   </plurals>
   <string name="newPatrons">Noví Patróni</string>
   <string name="freeChess">Šach zdarma pre všetkých, navždy!</string>
@@ -21,10 +21,10 @@
   <string name="patronUntil">Máš Patrón účet do %s.</string>
   <string name="ifNotRenewedThenAccountWillRevert">Ak to nebude obnovené, váš účet sa vráti na základnú formu.</string>
   <string name="weAreNonProfit">Sme neziskové združenie, pretože veríme, že každý by mal mať prístup k bezplatnej šachovej platforme svetového formátu.</string>
-  <string name="weRelyOnSupport">Pri umožňovaní sa spoliehame na podporu od ľudí ako ste vy. Ak radi používate Lichess, prosím zvážte našu podporu darovaním a že sa stanete Patronom!</string>
+  <string name="weRelyOnSupport">Pri umožňovaní sa spoliehame na podporu od ľudí ako ste vy. Ak radi používate Chess-Online, prosím zvážte našu podporu darovaním a že sa stanete Patronom!</string>
   <string name="lifetime">Doživotne</string>
   <string name="payLifetimeOnce">Zaplať %s raz. Buď Patrónom Lichessu navždy!</string>
-  <string name="lifetimePatron">Doživotný Lichess Patrón</string>
+  <string name="lifetimePatron">Doživotný Chess-Online Patrón</string>
   <string name="monthly">Mesačne</string>
   <string name="recurringBilling">Opakujúca sa platba, obnovujúca Vaše Patrónske krídla každý mesiac.</string>
   <string name="onetime">Jednorázovo</string>
@@ -34,32 +34,32 @@
   <string name="withCreditCard">Kreditná karta</string>
   <string name="logInToDonate">Pre darovanie sa prihláste</string>
   <string name="weAreSmallTeam">Sme malý tím, čiže Vaša podpora robí obrovský rozdiel!</string>
-  <string name="celebratedPatrons">Slávni Patróni, ktorí robia Lichess možným</string>
+  <string name="celebratedPatrons">Slávni Patróni, ktorí robia Chess-Online možným</string>
   <string name="whereMoneyGoes">Kam idú peniaze?</string>
   <string name="serversAndDeveloper">V prvom rade výkonné servery.
-Potom zaplatíme vývojárovi na plný úväzok: %s, zakladateľovi spoločnosti Lichess.</string>
+Potom zaplatíme vývojárovi na plný úväzok: %s, zakladateľovi spoločnosti Chess-Online.</string>
   <string name="costBreakdown">Pozrite si podrobný rozpis nákladov</string>
-  <string name="officialNonProfit">Je Lichess oficiálna nezisková organizácia?</string>
+  <string name="officialNonProfit">Je Chess-Online oficiálna nezisková organizácia?</string>
   <string name="actOfCreation">Áno, tu je popis ako vznikol tento projekt (vo francúzštine)</string>
   <string name="changeMonthlySupport">Môžem zmeniť / zrušiť svoju mesačnú podporu?</string>
   <string name="changeOrContact">Áno, kedykoľvek z tejto stránky.
 Alebo môžete %s.</string>
-  <string name="contactSupport">kontaktovať podporu Lichess</string>
+  <string name="contactSupport">kontaktovať podporu Chess-Online</string>
   <string name="otherMethods">Iné spôsoby podpory?</string>
-  <string name="lichessIsRegisteredWith">Lichess je registrovaný na %s.</string>
+  <string name="lichessIsRegisteredWith">Chess-Online je registrovaný na %s.</string>
   <string name="bankTransfers">Prijímame aj bankové prevody</string>
-  <string name="onlyDonationFromAbove">Upozorňujeme, že štatút Patróna získate iba darovaním prostredníctvom stránky Lichess.</string>
+  <string name="onlyDonationFromAbove">Upozorňujeme, že štatút Patróna získate iba darovaním prostredníctvom stránky Chess-Online.</string>
   <string name="patronFeatures">Sú niektoré funkcie vyhradené pre patrónov?</string>
-  <string name="noPatronFeatures">Nie, pretože Lichess je úplne zadarmo, navždy a pre každého. To Vám sľubujeme.
+  <string name="noPatronFeatures">Nie, pretože Chess-Online je úplne zadarmo, navždy a pre každého. To Vám sľubujeme.
 Patróni však získajú právo chváliť sa novými parádnymi patrónskymi krídlami, ktoré sa zobrazia vo Vašom profile.</string>
   <string name="featuresComparison">Pozrite si podrobné porovnanie funkcií</string>
   <plurals name="patronForMonths">
-    <item quantity="one">Lichess Patron na jeden mesiac</item>
-    <item quantity="few">Lichess Patron na %s mesiacov</item>
-    <item quantity="many">Lichess Patron na %s mesiacov</item>
-    <item quantity="other">Lichess Patron na %s mesiacov</item>
+    <item quantity="one">Chess-Online Patron na jeden mesiac</item>
+    <item quantity="few">Chess-Online Patron na %s mesiacov</item>
+    <item quantity="many">Chess-Online Patron na %s mesiacov</item>
+    <item quantity="other">Chess-Online Patron na %s mesiacov</item>
   </plurals>
-  <string name="youSupportWith">Podporujete web lichess.org %s s za mesiac.</string>
+  <string name="youSupportWith">Podporujete web chess-online.com %s s za mesiac.</string>
   <string name="tyvm">Veľmi pekne ďakujeme za Vašu pomoc. Ste skvelí!</string>
   <string name="currentStatus">Aktuálny stav</string>
   <string name="nextPayment">Ďalšia platba</string>
@@ -71,19 +71,19 @@ Patróni však získajú právo chváliť sa novými parádnymi patrónskymi kr�
   <string name="changeMonthlyAmount">Zmeniť mesačnú sumu (%s)</string>
   <string name="cancelSupport">zrušiť svoju podporu</string>
   <string name="xOrY">%1$s alebo %2$s</string>
-  <string name="decideHowMuch">Rozhodnite sa, čo pre vás Lichess znamená:</string>
+  <string name="decideHowMuch">Rozhodnite sa, čo pre vás Chess-Online znamená:</string>
   <string name="stopPayments">Vyberte svoju kreditnú kartu a zastavte platby:</string>
   <string name="stopPaymentsPayPal">Zrušiť PayPal predplatné a zastaviť platby:</string>
-  <string name="noLongerSupport">Nepodporovať Lichess</string>
-  <string name="viewOthers">Zobraziť iných Lichess Patronov</string>
+  <string name="noLongerSupport">Nepodporovať Chess-Online</string>
+  <string name="viewOthers">Zobraziť iných Chess-Online Patronov</string>
   <string name="date">Dátum</string>
   <string name="amount">Suma</string>
   <string name="transactionCompleted">Vaša transakcia bola dokončená a potvrdenie o dare vám bolo zaslané e-mailom.</string>
   <string name="permanentPatron">Teraz máte permanentný Patron účet.</string>
   <string name="checkOutProfile">Pozrite sa na svoju profilovú stránku!</string>
-  <string name="nowLifetime">Odteraz ste doživotný Lichess Patron!</string>
-  <string name="nowOneMonth">Odteraz ste Lichess Patron na jeden mesiac!</string>
-  <string name="downgradeNextMonth">Za jeden mesiac, vám NEBUDE zaúčtovaný poplatok znova, a váš Lichess účet sa obnoví na bežný účet.</string>
+  <string name="nowLifetime">Odteraz ste doživotný Chess-Online Patron!</string>
+  <string name="nowOneMonth">Odteraz ste Chess-Online Patron na jeden mesiac!</string>
+  <string name="downgradeNextMonth">Za jeden mesiac, vám NEBUDE zaúčtovaný poplatok znova, a váš Chess-Online účet sa obnoví na bežný účet.</string>
   <string name="changeCurrency">Zmeniť menu</string>
   <string name="paymentDetails">Platobné údaje</string>
   <string name="updatePaymentMethod">Aktualizovať spôsob platby</string>

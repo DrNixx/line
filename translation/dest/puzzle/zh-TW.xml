@@ -31,8 +31,8 @@
   <string name="byOpenings">以開局區分</string>
   <string name="puzzlesByOpenings">以開局區分謎題</string>
   <string name="openingsYouPlayedTheMost">您最常使用的開局</string>
-  <string name="useFindInPage" comment="useFindInPage&#10;&#10;Appears on https://lichess.org/training/openings for mobile and tablet users&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">在瀏覽器中使用「在頁面中尋找」以尋找你最喜歡的開局！</string>
-  <string name="useCtrlF" comment="Appears on https://lichess.org/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">按下 Ctrl+f 以找出您最喜歡的開局方式！</string>
+  <string name="useFindInPage" comment="useFindInPage&#10;&#10;Appears on https://chess-online.com/training/openings for mobile and tablet users&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">在瀏覽器中使用「在頁面中尋找」以尋找你最喜歡的開局！</string>
+  <string name="useCtrlF" comment="Appears on https://chess-online.com/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">按下 Ctrl+f 以找出您最喜歡的開局方式！</string>
   <string name="notTheMove">不是這步!</string>
   <string name="trySomethingElse">試試其他的移動</string>
   <string name="ratingX">評級：%s</string>
@@ -74,7 +74,7 @@
   <string name="lookupOfPlayer">尋找其他棋手的棋局謎題</string>
   <string name="fromXGames">來自%s棋局的謎題</string>
   <string name="searchPuzzles">尋找謎題</string>
-  <string name="fromMyGamesNone">你在資料庫中沒有謎題，但 Lichess 仍然非常愛你。
+  <string name="fromMyGamesNone">你在資料庫中沒有謎題，但 Chess-Online 仍然非常愛你。
 遊玩一些快速和經典遊戲，以增加從你的棋局中生成謎題的機會！</string>
   <string name="fromXGamesFound">在%2$s中找到%1$s個謎題</string>
   <string name="puzzleDashboardDescription">訓練、分析、改進</string>

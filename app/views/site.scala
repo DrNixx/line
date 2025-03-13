@@ -77,9 +77,9 @@ object variant:
       )
 
   def home(using Context) =
-    page(title = "Lichess variants", klass = "variants"):
+    page(title = "Chess variants", klass = "variants"):
       frag(
-        h1(cls := "box__top")("Lichess variants"),
+        h1(cls := "box__top")("Chess variants"),
         div(cls := "body box__pad")(
           "Chess variants introduce variations of or new mechanics in regular Chess that gives it a unique, compelling, or sophisticated gameplay. Are you ready to think outside the box?"
         ),

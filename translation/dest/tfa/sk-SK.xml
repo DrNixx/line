@@ -13,6 +13,6 @@
   <string name="twoFactorEnabled">Dvojfaktorové overovanie je zapnuté</string>
   <string name="twoFactorToDisable">Na vypnutie dvojfaktorového overovania potrebujete svoje heslo a overovací kód z aplikácie autentifikátora.</string>
   <string name="openTwoFactorApp">Otvorte aplikáciu na dvojstupňové overenie na Vašom zariadení, a zistite Váš overovací kód na overenie Vašej identity.</string>
-  <string name="setupReminder">Na zabezpečenie svojho konta zapnite prosím dvojfázové overovanie! Urobiť tak môžete tu https://lichess.org/account/twofactor.
+  <string name="setupReminder">Na zabezpečenie svojho konta zapnite prosím dvojfázové overovanie! Urobiť tak môžete tu https://chess-online.com/account/twofactor.
 Túto správu ste dostali, pretože vaše konto má špeciálne povinnosti, ako napríklad vedúci tímu, tréner, učiteľ alebo streamer</string>
 </resources>

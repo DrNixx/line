@@ -4,7 +4,7 @@
   <string name="hostedALiveStream">Emitió en directu</string>
   <plurals name="supportedNbMonths">
     <item quantity="one">Collaboró con *lichess.*org mientres %1$s mes como %2$s</item>
-    <item quantity="other">Collaboró con *lichess.org mientres %1$s meses como %2$s</item>
+    <item quantity="other">Collaboró con *chess-online.com mientres %1$s meses como %2$s</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">Practicó %1$s posición en %2$s</item>
@@ -58,7 +58,7 @@
     <item quantity="one">Creó %s estudiu</item>
     <item quantity="other">Creó %s estudios</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="one">Compitió en %s tornéu</item>
     <item quantity="other">Compitió en %s torneos</item>
   </plurals>
@@ -71,7 +71,7 @@
     <item quantity="other">Compitió en %s torneos suizos</item>
   </plurals>
   <string name="rankedInSwissTournament">#%1$s Na *Clasificatoria de %2$s</string>
-  <string name="signedUp">Rexistráu en *Lichess</string>
+  <string name="signedUp">Rexistráu en *Chess-Online</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">Miembru de %s equipu</item>
     <item quantity="other">Miembru de %s equipos</item>

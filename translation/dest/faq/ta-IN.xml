@@ -6,16 +6,16 @@
   <string name="lichessCombinationLiveLightLibrePronounced">லைச்சஸ் என்பது லைவ்/லைட்/லிப்ரே மற்றும் செஸ் ஆகியவற்றின் கலவையாகும். இது %1$s என உச்சரிக்கப்படுகிறது.</string>
   <string name="leechess">லீ- ச்செஸ்</string>
   <string name="hearItPronouncedBySpecialist">ஒரு நிபுணரால் உச்சரிக்கப்படுவதைக் கேளுங்கள்.</string>
-  <string name="whyLiveLightLibre">நேரலை, ஏனெனில் விளையாட்டுகள் 24/7 நிகழ்நேரத்தில் விளையாடப்பட்டு பார்க்கப்படுகின்றன; Lichess என்பது திறந்த மூலமானது மற்றும் பிற வலைத்தளங்களைப் பாதிக்கும் தனியுரிம குப்பைகளால் சுமையற்றது என்பதற்கு இது இலகுவானது மற்றும் இலவசமானது.</string>
-  <string name="whyIsLilaCalledLila">இதேபோல், Lichess-க்கான மூலக் குறியீடு, %1$s, li[chess in sca]la என்பதைக் குறிக்கிறது, ஏனெனில் Lichess-ன் பெரும்பகுதி %2$s-இல் எழுதப்பட்டுள்ளது, இது ஒரு உள்ளுணர்வு நிரலாக்க மொழியாகும்.</string>
+  <string name="whyLiveLightLibre">நேரலை, ஏனெனில் விளையாட்டுகள் 24/7 நிகழ்நேரத்தில் விளையாடப்பட்டு பார்க்கப்படுகின்றன; Chess-Online என்பது திறந்த மூலமானது மற்றும் பிற வலைத்தளங்களைப் பாதிக்கும் தனியுரிம குப்பைகளால் சுமையற்றது என்பதற்கு இது இலகுவானது மற்றும் இலவசமானது.</string>
+  <string name="whyIsLilaCalledLila">இதேபோல், Chess-Online-க்கான மூலக் குறியீடு, %1$s, li[chess in sca]la என்பதைக் குறிக்கிறது, ஏனெனில் Chess-Online-ன் பெரும்பகுதி %2$s-இல் எழுதப்பட்டுள்ளது, இது ஒரு உள்ளுணர்வு நிரலாக்க மொழியாகும்.</string>
   <string name="howCanIContributeToLichess">எவ்வாறு நான் லீசெஸ்சிற்கு பங்களிப்பது?</string>
   <string name="lichessPoweredByDonationsAndVolunteers">லீச்செஸ், வாடிக்கையாளர்களின் நன்கொடைகளாலும், தன்னார்வலர்கள் குழுவின் முயற்சிகளாலும் இயக்கப்படுகிறது.</string>
   <string name="findMoreAndSeeHowHelp">%1$s பற்றி நீங்கள் மேலும் அறியலாம் (%2$s உட்பட). உங்கள் நேரத்தையும் திறமைகளையும் தன்னார்வத் தொண்டு செய்து லிச்செஸுக்கு உதவ விரும்பினால், பல %3$s உள்ளன.</string>
   <string name="beingAPatron">ஒரு புரவலராக இருப்பது</string>
   <string name="breakdownOfOurCosts">எங்கள் செலவுகளின் பிரிவு</string>
   <string name="otherWaysToHelp">உதவுவதற்கு மற்ற வழிகள்</string>
-  <string name="areThereWebsitesBasedOnLichess">Lichess அடிப்படையிலான வலைத்தளங்கள் ஏதேனும் உள்ளதா?</string>
-  <string name="yesLichessInspiredOtherOpenSourceWebsites">ஆம். எங்கள் %1$s, %2$s அல்லது %3$s ஐப் பயன்படுத்தும் பிற திறந்த மூல தளங்களை Lichess உண்மையில் ஊக்கப்படுத்தியுள்ளது.</string>
+  <string name="areThereWebsitesBasedOnLichess">Chess-Online அடிப்படையிலான வலைத்தளங்கள் ஏதேனும் உள்ளதா?</string>
+  <string name="yesLichessInspiredOtherOpenSourceWebsites">ஆம். எங்கள் %1$s, %2$s அல்லது %3$s ஐப் பயன்படுத்தும் பிற திறந்த மூல தளங்களை Chess-Online உண்மையில் ஊக்கப்படுத்தியுள்ளது.</string>
   <string name="keyboardShortcuts">என்னென்ன விசைப்பலகை குறுக்குவழிகள் உள்ளன?</string>
   <string name="keyboardShortcutsExplanation">சில லைச்சஸ் பக்கங்களில் நீங்கள் பயன்படுத்தக்கூடிய விசைப்பலகை குறுக்குவழிகள் உள்ளன. கிடைக்கக்கூடிய விசைப்பலகை குறுக்குவழிகளைப் பட்டியலிட, ஆய்வு, பகுப்பாய்வு, புதிர் அல்லது விளையாட்டுப் பக்கத்தில் \'?\' விசையை அழுத்த முயற்சிக்கவும்.</string>
   <string name="fairPlay">நியாயமான விளையாட்டு</string>
@@ -73,23 +73,23 @@
   <string name="repeatedPositionsThatMatters">மூன்று முறை திரும்பத் திரும்பச் செய்வது என்பது நகர்வுகள் அல்ல, %1$s மீண்டும் மீண்டும் செய்வதைப் பற்றியது. திரும்பத் திரும்பச் செய்வது தொடர்ச்சியாக நிகழ வேண்டியதில்லை.</string>
   <string name="positions">நிலைகள்</string>
   <string name="weRepeatedthreeTimesPosButNoDraw">நாங்கள் ஒரே நிலையை மூன்று முறை திரும்பத் திரும்பப் பெற்றோம். ஏன் ஆட்டம் டிரா ஆகவில்லை?</string>
-  <string name="threeFoldHasToBeClaimed">வீரர்களில் ஒருவர் மீண்டும் மீண்டும் விளையாடுவதை உரிமை கோர வேண்டும். காட்டப்பட்டுள்ள பொத்தானை அழுத்துவதன் மூலமோ அல்லது உங்கள் இறுதி மீண்டும் மீண்டும் விளையாடுவதற்கு முன் டிராவை வழங்குவதன் மூலமோ நீங்கள் அவ்வாறு செய்யலாம், உங்கள் எதிராளி டிரா சலுகையை நிராகரித்தாலும் பரவாயில்லை, மூன்று மடங்கு மீண்டும் மீண்டும் விளையாடும் டிரா எப்படியும் கோரப்படும். உங்களுக்காக தானாகவே மீண்டும் மீண்டும் விளையாட %1$s Lichess ஐயும் கோரலாம். கூடுதலாக, ஐந்து மடங்கு மீண்டும் விளையாடுவது எப்போதும் உடனடியாக விளையாட்டை முடிக்கும்.</string>
+  <string name="threeFoldHasToBeClaimed">வீரர்களில் ஒருவர் மீண்டும் மீண்டும் விளையாடுவதை உரிமை கோர வேண்டும். காட்டப்பட்டுள்ள பொத்தானை அழுத்துவதன் மூலமோ அல்லது உங்கள் இறுதி மீண்டும் மீண்டும் விளையாடுவதற்கு முன் டிராவை வழங்குவதன் மூலமோ நீங்கள் அவ்வாறு செய்யலாம், உங்கள் எதிராளி டிரா சலுகையை நிராகரித்தாலும் பரவாயில்லை, மூன்று மடங்கு மீண்டும் மீண்டும் விளையாடும் டிரா எப்படியும் கோரப்படும். உங்களுக்காக தானாகவே மீண்டும் மீண்டும் விளையாட %1$s Chess-Online ஐயும் கோரலாம். கூடுதலாக, ஐந்து மடங்கு மீண்டும் விளையாடுவது எப்போதும் உடனடியாக விளையாட்டை முடிக்கும்.</string>
   <string name="configure">உள்ளமை</string>
   <string name="accounts">கணக்குகள்</string>
   <string name="titlesAvailableOnLichess">லைச்செஸில் என்ன தலைப்புகள் உள்ளன?</string>
   <string name="lichessRecognizeAllOTBtitles">OTB (பலகையின் மேல்) நாடகத்திலிருந்து பெறப்பட்ட அனைத்து FIDE தலைப்புகளையும், %1$s ஐயும் லைசெஸ் அங்கீகரிக்கிறது. FIDE தலைப்புகளின் பட்டியல் இங்கே:</string>
   <string name="showYourTitle">உங்களிடம் OTB பட்டம் இருந்தால், %1$s ஐ நிரப்புவதன் மூலம் உங்கள் கணக்கில் இதைக் காண்பிக்க விண்ணப்பிக்கலாம், அதில் ஒரு அடையாள ஆவணம்/அட்டையின் தெளிவான படம் மற்றும் ஆவணம்/அட்டையை நீங்கள் வைத்திருக்கும் செல்ஃபி ஆகியவை அடங்கும்.
 
-Lichess இல் ஒரு தலைப்பு பெற்ற வீரராகச் சரிபார்ப்பது Titled Arena நிகழ்வுகளில் விளையாட அணுகலை வழங்குகிறது.
+Chess-Online இல் ஒரு தலைப்பு பெற்ற வீரராகச் சரிபார்ப்பது Titled Arena நிகழ்வுகளில் விளையாட அணுகலை வழங்குகிறது.
 
 இறுதியாக ஒரு கௌரவ %2$s பட்டம் உள்ளது.</string>
   <string name="asWellAsManyNMtitles">பல தேசிய மாஸ்டர் பட்டங்கள்</string>
   <string name="verificationForm">சரிபார்ப்பு படிவம்</string>
   <string name="canIbecomeLM">எனக்கு லைச்சஸ் மாஸ்டர் (LM) பட்டம் கிடைக்குமா?</string>
   <string name="noUpperCaseDot">இல்லை.</string>
-  <string name="lMtitleComesToYouDoNotRequestIt">இந்த கௌரவப் பட்டம் அதிகாரப்பூர்வமற்றது மற்றும் Lichess இல் மட்டுமே உள்ளது.
+  <string name="lMtitleComesToYouDoNotRequestIt">இந்த கௌரவப் பட்டம் அதிகாரப்பூர்வமற்றது மற்றும் Chess-Online இல் மட்டுமே உள்ளது.
 
-எங்கள் விருப்பப்படி, Lichess இன் நல்ல குடிமக்களாக இருக்கும் மிகவும் குறிப்பிடத்தக்க வீரர்களுக்கு நாங்கள் இதை அரிதாகவே வழங்குகிறோம். உங்களுக்கு LM பட்டம் கிடைக்காது, LM பட்டம் உங்களையே சேரும். நீங்கள் தகுதி பெற்றால், அது குறித்தும், அதை ஏற்பது அல்லது நிராகரிப்பது குறித்தும் எங்களிடமிருந்து ஒரு செய்தியைப் பெறுவீர்கள்.
+எங்கள் விருப்பப்படி, Chess-Online இன் நல்ல குடிமக்களாக இருக்கும் மிகவும் குறிப்பிடத்தக்க வீரர்களுக்கு நாங்கள் இதை அரிதாகவே வழங்குகிறோம். உங்களுக்கு LM பட்டம் கிடைக்காது, LM பட்டம் உங்களையே சேரும். நீங்கள் தகுதி பெற்றால், அது குறித்தும், அதை ஏற்பது அல்லது நிராகரிப்பது குறித்தும் எங்களிடமிருந்து ஒரு செய்தியைப் பெறுவீர்கள்.
 
 LM பட்டத்தைக் கேட்க வேண்டாம்.</string>
   <string name="whatUsernameCanIchoose">என்னுடைய பயனர்பெயர் என்னவாக இருக்கலாம்?</string>
@@ -101,7 +101,7 @@ LM பட்டத்தைக் கேட்க வேண்டாம்.</str
   <string name="ownerUniqueTrophies">அந்த கோப்பை லைச்செஸ் வரலாற்றில் தனித்துவமானது, %1$s ஐத் தவிர வேறு யாரும் அதை ஒருபோதும் பெற மாட்டார்கள்.</string>
   <string name="wayOfBerserkExplanation">அதைப் பெற, ஹைம்கோசு தன்னைத்தானே வெறித்தனமாகச் சவால் செய்து %s இன் அனைத்து விளையாட்டுகளையும் வெல்லச் சொன்னார்.</string>
   <string name="aHourlyBulletTournament">ஒரு மணி நேரத்திற்கு ஒரு முறை புல்லட் போட்டி</string>
-  <string name="goldenZeeExplanation" comment="goldenZeeExplanation&#10;&#10;ZugAddict is a legendary player and streamer, do not translate his name.&#10;https://lichess.org/@/ZugAddict&#10;&#10;Thibault is the name of the founder of Lichess: https://lichess.org/@/thibault">ZugAddict ஸ்ட்ரீமிங் செய்து கொண்டிருந்தார், கடந்த 2 மணி நேரமாக அவர் A.I. லெவல் 8-ஐ 1+0 ஆட்டத்தில் தோற்கடிக்க முயற்சி செய்து கொண்டிருந்தார், ஆனால் வெற்றி பெறவில்லை. ஸ்ட்ரீமில் அதை வெற்றிகரமாகச் செய்தால், அவருக்கு ஒரு தனித்துவமான கோப்பை கிடைக்கும் என்று திபோ அவரிடம் கூறினார். ஒரு மணி நேரம் கழித்து, அவர் ஸ்டாக்ஃபிஷை அடித்து நொறுக்கினார், வாக்குறுதி நிறைவேற்றப்பட்டது.</string>
+  <string name="goldenZeeExplanation" comment="goldenZeeExplanation&#10;&#10;ZugAddict is a legendary player and streamer, do not translate his name.&#10;https://chess-online.com/@/ZugAddict&#10;&#10;Thibault is the name of the founder of Chess-Online: https://chess-online.com/@/thibault">ZugAddict ஸ்ட்ரீமிங் செய்து கொண்டிருந்தார், கடந்த 2 மணி நேரமாக அவர் A.I. லெவல் 8-ஐ 1+0 ஆட்டத்தில் தோற்கடிக்க முயற்சி செய்து கொண்டிருந்தார், ஆனால் வெற்றி பெறவில்லை. ஸ்ட்ரீமில் அதை வெற்றிகரமாகச் செய்தால், அவருக்கு ஒரு தனித்துவமான கோப்பை கிடைக்கும் என்று திபோ அவரிடம் கூறினார். ஒரு மணி நேரம் கழித்து, அவர் ஸ்டாக்ஃபிஷை அடித்து நொறுக்கினார், வாக்குறுதி நிறைவேற்றப்பட்டது.</string>
   <string name="lichessRatings">லீசெஸ் மதிப்பீடுகள்</string>
   <string name="whichRatingSystemUsedByLichess">லிச்செஸ் எந்த மதிப்பீட்டு முறையைப் பயன்படுத்துகிறது?</string>
   <string name="ratingSystemUsedByLichess">மதிப்பீடுகள் மார்க் க்ளிக்மேன் உருவாக்கிய க்ளிக்கோ-2 மதிப்பீட்டு முறையைப் பயன்படுத்தி கணக்கிடப்படுகின்றன. இது மிகவும் பிரபலமான மதிப்பீட்டு முறையாகும், மேலும் இது கணிசமான எண்ணிக்கையிலான சதுரங்க அமைப்புகளால் பயன்படுத்தப்படுகிறது (FIDE ஒரு குறிப்பிடத்தக்க எதிர்-உதாரணமாகும், ஏனெனில் அவை இன்னும் காலாவதியான எலோ மதிப்பீட்டு முறையைப் பயன்படுத்துகின்றன).
@@ -137,42 +137,42 @@ LM பட்டத்தைக் கேட்க வேண்டாம்.</str
   <string name="howToThreeDots">எப்படி...</string>
   <string name="enableDisableNotificationPopUps">அறிவிப்பு பாப்-அப்களை இயக்கவா அல்லது முடக்கவா?</string>
   <string name="viewSiteInformationPopUp">தளத் தகவல் பாப்-அப்பைக் காண்க</string>
-  <string name="lichessCanOptionnalySendPopUps">Lichess விருப்பமாக பாப்-அப் அறிவிப்புகளை அனுப்பலாம், எடுத்துக்காட்டாக உங்கள் முறை வரும்போது அல்லது உங்களுக்கு ஒரு தனிப்பட்ட செய்தி வரும்போது.
+  <string name="lichessCanOptionnalySendPopUps">Chess-Online விருப்பமாக பாப்-அப் அறிவிப்புகளை அனுப்பலாம், எடுத்துக்காட்டாக உங்கள் முறை வரும்போது அல்லது உங்களுக்கு ஒரு தனிப்பட்ட செய்தி வரும்போது.
 
-உங்கள் உலாவியின் URL பட்டியில் lichess.org முகவரிக்கு அடுத்துள்ள பூட்டு ஐகானைக் கிளிக் செய்யவும்.
+உங்கள் உலாவியின் URL பட்டியில் chess-online.com முகவரிக்கு அடுத்துள்ள பூட்டு ஐகானைக் கிளிக் செய்யவும்.
 
-பின்னர் Lichess இலிருந்து அறிவிப்புகளை அனுமதிக்க வேண்டுமா அல்லது தடுக்க வேண்டுமா என்பதைத் தேர்ந்தெடுக்கவும்.</string>
+பின்னர் Chess-Online இலிருந்து அறிவிப்புகளை அனுமதிக்க வேண்டுமா அல்லது தடுக்க வேண்டுமா என்பதைத் தேர்ந்தெடுக்கவும்.</string>
   <string name="enableAutoplayForSoundsQ">ஒலிகளுக்கு தானியங்கி இயக்கத்தை இயக்கவா?</string>
   <string name="enableAutoplayForSoundsA">பெரும்பாலான உலாவிகள் பயனர்களைப் பாதுகாக்க புதிதாக ஏற்றப்பட்ட பக்கத்தில் ஒலி இயங்குவதைத் தடுக்கலாம். ஒவ்வொரு வலைத்தளமும் உடனடியாக ஆடியோ விளம்பரங்களால் உங்களைத் தாக்க முடியுமா என்று கற்பனை செய்து பாருங்கள்.
 
-உங்கள் உலாவி lichess.org ஒலியை இயக்குவதைத் தடுக்கும்போது சிவப்பு மியூட் ஐகான் தோன்றும். பொதுவாக நீங்கள் ஏதாவது ஒன்றைக் கிளிக் செய்தவுடன் இந்தக் கட்டுப்பாடு நீக்கப்படும். சில மொபைல் உலாவிகளில், ஒரு பகுதியை இழுப்பதைத் தொடுவது ஒரு கிளிக்காகக் கணக்கிடப்படாது. அந்தச் சூழ்நிலையில், ஒவ்வொரு விளையாட்டின் தொடக்கத்திலும் ஒலியை அனுமதிக்க நீங்கள் பலகையைத் தட்ட வேண்டும்.
+உங்கள் உலாவி chess-online.com ஒலியை இயக்குவதைத் தடுக்கும்போது சிவப்பு மியூட் ஐகான் தோன்றும். பொதுவாக நீங்கள் ஏதாவது ஒன்றைக் கிளிக் செய்தவுடன் இந்தக் கட்டுப்பாடு நீக்கப்படும். சில மொபைல் உலாவிகளில், ஒரு பகுதியை இழுப்பதைத் தொடுவது ஒரு கிளிக்காகக் கணக்கிடப்படாது. அந்தச் சூழ்நிலையில், ஒவ்வொரு விளையாட்டின் தொடக்கத்திலும் ஒலியை அனுமதிக்க நீங்கள் பலகையைத் தட்ட வேண்டும்.
 
-இது நிகழும்போது உங்களை எச்சரிக்க சிவப்பு ஐகானைக் காட்டுகிறோம். பெரும்பாலும் நீங்கள் lichess.org ஒலிகளை இயக்க வெளிப்படையாக அனுமதிக்கலாம். சில பிரபலமான உலாவிகளின் சமீபத்திய பதிப்புகளில் அவ்வாறு செய்வதற்கான வழிமுறைகள் இங்கே.</string>
-  <string name="desktop" comment="Appears on the FAQ for &quot;Enable autoplay for sounds&quot; https://lichess.org/faq#autoplay&#10;&#10;Indicates that the instructions are for a desktop computer browser - not a mobile browser.">டெஸ்க்டாப்</string>
-  <string name="enableAutoplayForSoundsFirefox">1. lichess.org க்குச் செல்லவும்
+இது நிகழும்போது உங்களை எச்சரிக்க சிவப்பு ஐகானைக் காட்டுகிறோம். பெரும்பாலும் நீங்கள் chess-online.com ஒலிகளை இயக்க வெளிப்படையாக அனுமதிக்கலாம். சில பிரபலமான உலாவிகளின் சமீபத்திய பதிப்புகளில் அவ்வாறு செய்வதற்கான வழிமுறைகள் இங்கே.</string>
+  <string name="desktop" comment="Appears on the FAQ for &quot;Enable autoplay for sounds&quot; https://chess-online.com/faq#autoplay&#10;&#10;Indicates that the instructions are for a desktop computer browser - not a mobile browser.">டெஸ்க்டாப்</string>
+  <string name="enableAutoplayForSoundsFirefox">1. chess-online.com க்குச் செல்லவும்
 2. Linux/Windows இல் Ctrl-i ஐ அழுத்தவும் அல்லது MacOS இல் cmd-i ஐ அழுத்தவும்
 3. அனுமதிகள் தாவலைக் கிளிக் செய்யவும்
-4. lichess.org இல் ஆடியோ மற்றும் வீடியோவை அனுமதிக்கவும்</string>
-  <string name="enableAutoplayForSoundsChrome">1. lichess.org க்குச் செல்லவும்
+4. chess-online.com இல் ஆடியோ மற்றும் வீடியோவை அனுமதிக்கவும்</string>
+  <string name="enableAutoplayForSoundsChrome">1. chess-online.com க்குச் செல்லவும்
 2. முகவரிப் பட்டியில் உள்ள பூட்டு ஐகானைக் கிளிக் செய்யவும்
 3. தள அமைப்புகள் என்பதைக் கிளிக் செய்யவும்
 4. ஒலியை அனுமதி</string>
-  <string name="enableAutoplayForSoundsSafari">1. lichess.org க்குச் செல்லவும்
+  <string name="enableAutoplayForSoundsSafari">1. chess-online.com க்குச் செல்லவும்
 2. மெனு பட்டியில் Safari என்பதைக் கிளிக் செய்யவும்
-3. lichess.org க்கான அமைப்புகளைக் கிளிக் செய்யவும்...
+3. chess-online.com க்கான அமைப்புகளைக் கிளிக் செய்யவும்...
 4. அனைத்து ஆட்டோ-பிளேவையும் அனுமதிக்கவும்</string>
   <string name="enableAutoplayForSoundsMicrosoftEdge">1. மேல் வலது மூலையில் உள்ள மூன்று புள்ளிகளைக் கிளிக் செய்யவும்
 2. அமைப்புகள் என்பதைக் கிளிக் செய்யவும்
 3. குக்கீகள் மற்றும் தள அனுமதிகளைக் கிளிக் செய்யவும்
 4. கீழே உருட்டி மீடியா ஆட்டோபிளே என்பதைக் கிளிக் செய்யவும்
-5. அனுமதிக்க lichess.org ஐச் சேர்க்கவும்</string>
+5. அனுமதிக்க chess-online.com ஐச் சேர்க்கவும்</string>
   <string name="stopMyselfFromPlaying" comment="As in &quot;How to stop myself from playing?&quot;.&#10;&#10;It is an FAQ which addresses chess/gaming addiction.">நான் விளையாடுவதை நிறுத்தவா?</string>
   <string name="mentalHealthCondition" comment="Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">தனித்த மனநல நிலை</string>
-  <string name="lichessUserstyles" comment="User styles are ways to customise the appearance of Lichess using third-party tools.&#10;&#10;Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">லைச்சஸ் பயனர் பாணிகள்</string>
+  <string name="lichessUserstyles" comment="User styles are ways to customise the appearance of Chess-Online using third-party tools.&#10;&#10;Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">லைச்சஸ் பயனர் பாணிகள்</string>
   <string name="fewerLobbyPools" comment="Lobby pools are options to quick pair for games on the home page (e.g. 1+0, 3+0).&#10;In this context, this is mentioned for people who want to limit bullet and blitz.&#10;&#10;Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">குறைவான லாபி நீச்சல் குளங்கள்</string>
-  <string name="adviceOnMitigatingAddiction" comment="Part of the FAQ answer &quot;How to [...] Stop myself from playing?&quot;&#10;&#10;%1$s, %2$s, and %3$s is software which may change.&#10;&#10;%4$s is &quot;Lichess userstyles&quot; (as in CSS styles)&#10;%5$s is &quot;fewer lobby pools&quot;.&#10;&#10;%6$s is &quot;stand-alone mental health condition&quot;.">பயனர்கள் அதிகமாக விளையாடுவதைத் தடுக்க எங்களிடம் உதவி கேட்டு நாங்கள் தொடர்ந்து செய்திகளைப் பெறுகிறோம்.
+  <string name="adviceOnMitigatingAddiction" comment="Part of the FAQ answer &quot;How to [...] Stop myself from playing?&quot;&#10;&#10;%1$s, %2$s, and %3$s is software which may change.&#10;&#10;%4$s is &quot;Chess-Online userstyles&quot; (as in CSS styles)&#10;%5$s is &quot;fewer lobby pools&quot;.&#10;&#10;%6$s is &quot;stand-alone mental health condition&quot;.">பயனர்கள் அதிகமாக விளையாடுவதைத் தடுக்க எங்களிடம் உதவி கேட்டு நாங்கள் தொடர்ந்து செய்திகளைப் பெறுகிறோம்.
 
-சேவை விதிமுறைகளை மீறும் சந்தர்ப்பங்களில் தவிர, Lichess வீரர்களைத் தடை செய்யவோ அல்லது தடுக்கவோ இல்லை என்றாலும், அதிகப்படியான விளையாட்டு நடத்தையைக் கட்டுப்படுத்த வெளிப்புற கருவிகளைப் பயன்படுத்த பரிந்துரைக்கிறோம். வலைத்தளத் தடுப்பாளர்களுக்கான சில பொதுவான பரிந்துரைகளில் %1$s, %2$s மற்றும் %3$s ஆகியவை அடங்கும். நீங்கள் தளத்தைத் தொடர்ந்து பயன்படுத்த விரும்பினால், ஆனால் வேகமான நேரக் கட்டுப்பாடுகளால் சோதிக்கப்படாமல் இருக்க விரும்பினால், நீங்கள் %4$s இல் ஆர்வமாக இருக்கலாம், இங்கே %5$s உடன் ஒன்று உள்ளது.
+சேவை விதிமுறைகளை மீறும் சந்தர்ப்பங்களில் தவிர, Chess-Online வீரர்களைத் தடை செய்யவோ அல்லது தடுக்கவோ இல்லை என்றாலும், அதிகப்படியான விளையாட்டு நடத்தையைக் கட்டுப்படுத்த வெளிப்புற கருவிகளைப் பயன்படுத்த பரிந்துரைக்கிறோம். வலைத்தளத் தடுப்பாளர்களுக்கான சில பொதுவான பரிந்துரைகளில் %1$s, %2$s மற்றும் %3$s ஆகியவை அடங்கும். நீங்கள் தளத்தைத் தொடர்ந்து பயன்படுத்த விரும்பினால், ஆனால் வேகமான நேரக் கட்டுப்பாடுகளால் சோதிக்கப்படாமல் இருக்க விரும்பினால், நீங்கள் %4$s இல் ஆர்வமாக இருக்கலாம், இங்கே %5$s உடன் ஒன்று உள்ளது.
 
 சில வீரர்கள் தங்கள் விளையாட்டு நடத்தை ஒரு போதைப்பொருளாக மாறுவது போல் உணரலாம். உண்மையில், WHO கேமிங் கோளாறுகளை %6$s என வகைப்படுத்துகிறது, இதில் அத்தியாவசிய அம்சங்கள் 1) கேமிங்கின் மீதான கட்டுப்பாட்டை மீறுதல், 2) கேமிங்கிற்கு முன்னுரிமை வழங்குதல் மற்றும் 3) எதிர்மறையான விளைவுகள் இருந்தபோதிலும் கேமிங்கை அதிகரித்தல். உங்கள் சதுரங்க விளையாட்டு நடத்தை இந்த முறையைப் பின்பற்றுகிறது என்று நீங்கள் நினைத்தால், அதைப் பற்றி ஒரு நண்பர் அல்லது குடும்ப உறுப்பினர் மற்றும்/அல்லது ஒரு நிபுணரிடம் பேச நாங்கள் உங்களை ஊக்குவிக்கிறோம்.</string>
 </resources>

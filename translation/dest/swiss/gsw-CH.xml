@@ -46,7 +46,7 @@ SchpilerC SchpilerD
 Wänn en Schpiler es Freilos hät (1 Punkt) machsch e Zile wie folgt...
 SchpilerE 1
 Fehlendi Schpiler werded als abwesend betrachtet und kassiered en Nuller.
-Lass das Fäld leer, dass Lichess automatisch Paarige erschtellt.</string>
+Lass das Fäld leer, dass Chess-Online automatisch Paarige erschtellt.</string>
   <string name="mustHavePlayedTheirLastSwissGame">Muess scho Turnier nach Schweizer System g\'schpillt ha</string>
   <string name="mustHavePlayedTheirLastSwissGameHelp">Lass nur Schpiler mitmache, wo scho Turnier nach Schweizer System g\'schpillt händ. Wänn sie das no nöd händ, sötteds au nöd bi dim Turnier mitschpille. Das hilft debi, dass die usgwählte Teilnehmer besseri Erfahrig mit em Schweizer System händ.</string>
   <string name="newSwiss">Neus Turnier nach \"Schweizer System\"</string>
@@ -67,7 +67,7 @@ die sogenannti \"SB-Zahl\" (Sonneborn Zahl). Bi Punktglichheit entscheidet die h
   <string name="pairingsA">Mit em %1$s, umgsetzt mit %2$s, in Übereinschtimmig mit em %3$s.</string>
   <string name="moreRoundsThanPlayersQ">Was passiert, wänn es Turnier meh Runde hät, als Schpiller?</string>
   <string name="moreRoundsThanPlayersA">Wänn alli mögliche Paarige gschpillt sind, ischs Turnier fertig und de Sieger wird ermittlet.</string>
-  <string name="restrictedToTeamsQ">Wieso isch es (bi Lichess) nur uf Teams beschränkt?</string>
+  <string name="restrictedToTeamsQ">Wieso isch es (bi Chess-Online) nur uf Teams beschränkt?</string>
   <string name="restrictedToTeamsA">Turnier nach \"Schweizer System\" sind nöd fürs Online-Schach konzipiert. 
 Vu de Schpiller wird Pünktlichkeit, Durchhaltevermöge und Geduld verlangt. 
 Mir glaubed, dass so Bedingige vu Teammitglieder/Teams eher erfüllt werded, 
@@ -84,7 +84,7 @@ De Schpiller wird vum Syschtem us em Tunrier gnah, dass er nöd no meh verlürt.
 Doch er chann jederzit wieder is Turnier ischtige.</string>
   <string name="protectionAgainstNoShowQ">Was passiert bi nöd am Turnier erschine?</string>
   <string name="protectionAgainstNoShowA" comment="By &quot;a game&quot; - we mean just one game. Missing even one game will prevent that player from joining a new Swiss event for a certain amount of time.">Schpiller, wo sich für es Turnier nach \"Schweizer System\" amälded, aber nöd schpilled, chönd Problem bereite.
-Um das Problem z\'entschärfe, laht Lichess so Schpiller für e beschtimmti Zit nöd ame neue Turnier nach \"Schweizer System\" mitschpille.
+Um das Problem z\'entschärfe, laht Chess-Online so Schpiller für e beschtimmti Zit nöd ame neue Turnier nach \"Schweizer System\" mitschpille.
 En Organisator vume Turnier nach \"Schweizer System\" chann aber entscheide, ob er so Schpiller trotzdem akzeptiert.</string>
   <string name="lateJoinQ">Chönd Schpiller au schpöter is Turnier ischtige?</string>
   <string name="lateJoinA">Ja - sogar dänn no, wänn bereits die halb Azahl Runde gschpillt isch! So cha me in es Turnier 
@@ -101,7 +101,7 @@ was dänn de eigentlichi Sinn vu \"Round Robin\" verunmöglicht.
 Am ähnlichschte wie \"Round Robin\" isch s\"Schweizer System\", wo e möglichscht höchi Azahl 
 vu Runde gschpillt wird. So werded, bis am Schluss, die meischte, mögliche Paarige gschpillt.</string>
   <string name="otherSystemsQ">Was isch mit andere Turniersystem?</string>
-  <string name="otherSystemsA">Mir händ im Momänt nöd planet bi Lichess no meh Turnier Variante oder System zuezfüege.</string>
+  <string name="otherSystemsA">Mir händ im Momänt nöd planet bi Chess-Online no meh Turnier Variante oder System zuezfüege.</string>
   <string name="swissDescription">Ime Turnier nach \"Schweizer System\" %1$s schpillt jede Schpiller nöd notwändigerwis gäge alli andere Schpiller. Sie träffed bi jedere Rundi eis zu eis ufenand und werded mit Hilf vunere Reihe vu Regle enand zueglost, zum sicher schtelle, dass Jede immer en Gägner mit ähnlichem Punkteschtand hät, aber nöd zweimal uf de glich Gägner trifft. De Sieger isch am Schluss de Schpiller, mit de höchschte Azahl Pünkt, wo us allne Runde erzielt worde sind. Alli Schpiller schpilled i jedere Rundi, usser es git e ungradi Azahl vu Schpiller.</string>
   <string name="teamOnly">Turnier nach \"Schweizer System\" chönd nur vu Teamleiter erschtellt werde.
 Und nur Teammitglieder chönd im Turnier mitschpille.

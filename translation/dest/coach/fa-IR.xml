@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessCoaches">مربیان Lichess</string>
-  <string name="lichessCoach">مربی Lichess</string>
+  <string name="lichessCoaches">مربیان Chess-Online</string>
+  <string name="lichessCoach">مربی Chess-Online</string>
   <string name="areYouCoach">آیا یک مربی بزرگ شطرنج با %s هستید؟</string>
-  <string name="nmOrFideTitle" comment="nmOrFideTitle&#10;&#10;Part of sentence &quot;Are you a great chess coach with a NM or FIDE title?&quot;&#10;&#10;The text links to our title verification page: https://lichess.org/help/master">عنوان NM یا FIDE</string>
+  <string name="nmOrFideTitle" comment="nmOrFideTitle&#10;&#10;Part of sentence &quot;Are you a great chess coach with a NM or FIDE title?&quot;&#10;&#10;The text links to our title verification page: https://chess-online.com/help/master">عنوان NM یا FIDE</string>
   <string name="confirmTitle">اینجا عنوان خود را تایید کنید و ما پرونده شما را بررسی خواهیم کرد.</string>
   <string name="sendApplication" comment="sendApplication&#10;&#10;%s is the lichess email address">برای ما یک رایانامه به آدرس %s ارسال کنید و ما پرونده شما را بررسی خواهیم کرد.</string>
   <string name="location">موقعیت مکانی</string>
@@ -14,7 +14,7 @@
   <string name="accepting">دانشجوها را قبول می‌کنم</string>
   <string name="notAccepting">در حال حاضر پذیرای دانشجویان نیستم</string>
   <string name="xCoachesStudents">%s مربی شطرنج‌آموزان است</string>
-  <string name="viewXProfile">رُخ‌نمای %s در Lichess را ببینید</string>
+  <string name="viewXProfile">رُخ‌نمای %s در Chess-Online را ببینید</string>
   <string name="sendPM">یک پیام خصوصی ارسال کنید</string>
   <string name="aboutMe">درباره من</string>
   <string name="playingExperience">سابقه بازی</string>

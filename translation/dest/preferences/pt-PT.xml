@@ -63,8 +63,8 @@
   <string name="notifyChallenge">Desafios</string>
   <string name="notifyTournamentSoon">O torneio começará em breve</string>
   <string name="notifyTimeAlarm">Está a acabar o tempo no jogo por correspondência</string>
-  <string name="notifyBell">Notificação do sino no Lichess</string>
-  <string name="notifyPush">Notificação do dispositivo quando não está no Lichess</string>
+  <string name="notifyBell">Notificação do sino no Chess-Online</string>
+  <string name="notifyPush">Notificação do dispositivo quando não está no Chess-Online</string>
   <string name="notifyWeb">Navegador</string>
   <string name="notifyDevice">Dispositivo</string>
   <string name="bellNotificationSound">Som da notificação</string>

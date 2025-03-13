@@ -31,8 +31,8 @@
   <string name="byOpenings">Par ouverture</string>
   <string name="puzzlesByOpenings">Problèmes par ouverture</string>
   <string name="openingsYouPlayedTheMost">Ouvertures que vous avez le plus jouées dans des parties classées</string>
-  <string name="useFindInPage" comment="useFindInPage&#10;&#10;Appears on https://lichess.org/training/openings for mobile and tablet users&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Utilisez la fonction « Rechercher dans la page » du navigateur pour trouver votre ouverture préférée !</string>
-  <string name="useCtrlF" comment="Appears on https://lichess.org/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Appuyez sur les touches Ctrl+f pour trouver votre ouverture préférée !</string>
+  <string name="useFindInPage" comment="useFindInPage&#10;&#10;Appears on https://chess-online.com/training/openings for mobile and tablet users&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Utilisez la fonction « Rechercher dans la page » du navigateur pour trouver votre ouverture préférée !</string>
+  <string name="useCtrlF" comment="Appears on https://chess-online.com/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Appuyez sur les touches Ctrl+f pour trouver votre ouverture préférée !</string>
   <string name="notTheMove">Ce n\'est pas le coup !</string>
   <string name="trySomethingElse">Essayez autre chose.</string>
   <string name="ratingX">Classement : %s</string>
@@ -76,7 +76,7 @@
   <string name="lookupOfPlayer">Rechercher des problèmes à partir des parties d\'un joueur</string>
   <string name="fromXGames">Problèmes tirés des parties de %s\'</string>
   <string name="searchPuzzles">Rechercher des problèmes</string>
-  <string name="fromMyGamesNone">Vous n\'avez pas de problèmes dans la base de données, mais Lichess vous aime toujours.
+  <string name="fromMyGamesNone">Vous n\'avez pas de problèmes dans la base de données, mais Chess-Online vous aime toujours.
 Jouez des parties rapides et classiques pour augmenter vos chances qu\'une de vos parties soit utilisée comme problème !</string>
   <string name="fromXGamesFound">%1$s problèmes trouvés dans %2$s parties</string>
   <string name="puzzleDashboardDescription">S\'entraîner, analyser, s\'améliorer</string>

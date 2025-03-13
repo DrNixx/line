@@ -11,7 +11,7 @@
   <string name="newBroadcast">Nuova diretta</string>
   <string name="subscribedBroadcasts">Trasmissioni abbonate</string>
   <string name="aboutBroadcasts">Informazioni sulle trasmissioni</string>
-  <string name="howToUseLichessBroadcasts">Istruzioni delle trasmissioni Lichess.</string>
+  <string name="howToUseLichessBroadcasts">Istruzioni delle trasmissioni Chess-Online.</string>
   <string name="theNewRoundHelp">Il nuovo turno avrà gli stessi membri e contributori del precedente.</string>
   <string name="addRound">Aggiungi un turno</string>
   <string name="ongoing">In corso</string>
@@ -23,8 +23,8 @@
   <string name="fullDescription">Descrizione completa dell\'evento</string>
   <string name="fullDescriptionHelp">(Facoltativo) Descrizione completa dell\'evento. %1$s è disponibile. La lunghezza deve essere inferiore a %2$s caratteri.</string>
   <string name="sourceSingleUrl">Sorgente URL PGN</string>
-  <string name="sourceUrlHelp">L\'URL che Lichess utilizzerà per ottenere gli aggiornamenti dei PGN. Deve essere accessibile pubblicamente su Internet.</string>
-  <string name="sourceGameIds">Fino a 64 ID di partite Lichess, separati da spazi.</string>
+  <string name="sourceUrlHelp">L\'URL che Chess-Online utilizzerà per ottenere gli aggiornamenti dei PGN. Deve essere accessibile pubblicamente su Internet.</string>
+  <string name="sourceGameIds">Fino a 64 ID di partite Chess-Online, separati da spazi.</string>
   <string name="startDateTimeZone">Data d\'inizio nel fuso orario locale del torneo: %s</string>
   <string name="startDateHelp">Facoltativo, se sai quando inizia l\'evento</string>
   <string name="currentGameUrl">URL della partita corrente</string>
@@ -47,7 +47,7 @@
   <string name="ageThisYear">Età quest\'anno</string>
   <string name="unrated">Non classificato</string>
   <string name="recentTournaments">Tornei recenti</string>
-  <string name="openLichess">Apri con Lichess</string>
+  <string name="openLichess">Apri con Chess-Online</string>
   <string name="teams">Squadre</string>
   <string name="boards">Scacchiere</string>
   <string name="overview">Panoramica</string>

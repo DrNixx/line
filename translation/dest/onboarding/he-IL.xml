@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="welcome">ברוכים הבאים!</string>
-  <string name="welcomeToLichess">ברוכים הבאים ל־lichess.org!</string>
+  <string name="welcomeToLichess">ברוכים הבאים ל־chess-online.com!</string>
   <string name="thisIsYourProfilePage">זה עמוד הפרופיל שלך.</string>
   <string name="enabledKidModeSuggestion">אם החשבון הזה מיועד לילד/ה, מומלץ להפעיל את %s.</string>
   <string name="whatNowSuggestions">מה עכשיו? הנה כמה הצעות:</string>
@@ -9,9 +9,9 @@
   <string name="improveWithChessTacticsPuzzles">השתפרו על ידי פתירת חידות שחמט.</string>
   <string name="playTheArtificialIntelligence">שחקו נגד בינה מלאכותית.</string>
   <string name="playOpponentsFromAroundTheWorld">שחקו נגד יריבים מרחבי העולם.</string>
-  <string name="followYourFriendsOnLichess">עקבו אחר חבריכם ב־Lichess.</string>
+  <string name="followYourFriendsOnLichess">עקבו אחר חבריכם ב־Chess-Online.</string>
   <string name="playInTournaments">שחקו בטורנירים.</string>
   <string name="learnFromXAndY">למדו מ%1$s ומ%2$s.</string>
-  <string name="configureLichess">התאימו את Lichess להעדפותיכם.</string>
+  <string name="configureLichess">התאימו את Chess-Online להעדפותיכם.</string>
   <string name="exploreTheSiteAndHaveFun">שוטטו ברחבי האתר ותהנו :)</string>
 </resources>

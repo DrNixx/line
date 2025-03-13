@@ -63,8 +63,8 @@
   <string name="notifyChallenge">Wyzwania</string>
   <string name="notifyTournamentSoon">Turniej rozpocznie się wkrótce</string>
   <string name="notifyTimeAlarm">Czas w partii korespondencyjnej dobiega końca</string>
-  <string name="notifyBell">Powiadomienie dźwiękowe gdy jesteś na Lichess</string>
-  <string name="notifyPush">Powiadomienie na urządzenie, gdy nie jesteś na Lichess</string>
+  <string name="notifyBell">Powiadomienie dźwiękowe gdy jesteś na Chess-Online</string>
+  <string name="notifyPush">Powiadomienie na urządzenie, gdy nie jesteś na Chess-Online</string>
   <string name="notifyWeb">Przeglądarka</string>
   <string name="notifyDevice">Urządzenie</string>
   <string name="bellNotificationSound">Dźwięk powiadomień</string>

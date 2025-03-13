@@ -15,7 +15,7 @@
   <string name="downloadKit">স্ট্রিমারকিট ডাউনলোড করুন</string>
   <string name="xIsStreaming">%s স্ট্রিমিং করছেন</string>
   <string name="rules">স্ট্রিমিং এর নিয়ম-কানুন</string>
-  <string name="rule1">লিচেসে স্ট্রিমিং করার সময় অবশ্যই \"lichess.org\" কথাটি টাইটেলে এবং cetagory তে chess ব্যাবহার করতে হবে যখন লিচেসে স্ট্রিমিং করছেন.</string>
+  <string name="rule1">লিচেসে স্ট্রিমিং করার সময় অবশ্যই \"chess-online.com\" কথাটি টাইটেলে এবং cetagory তে chess ব্যাবহার করতে হবে যখন লিচেসে স্ট্রিমিং করছেন.</string>
   <string name="rule2">যখন লিচেসের কোনো কাজ করছেন না স্ট্রিমিং এর ভেতর তখন দাবার কোনো keyword ব্যাবহার করবেন না.</string>
   <string name="rule3">স্বয়ংক্রিয়ভাবে লিচেস আপনার স্ট্রিমিং এর ভেতর এই বিষয়গুলো ধরে ফেলবে:</string>
   <string name="rule4" comment="the resulting message is: Read our streaming Fairplay FAQ to ensure a fair play for everyone in your stream">আমাদের %s পড়ুন, এটি স্ট্রিমিং এর মধ্যকালীন সময়ে প্রযোজ্য.</string>

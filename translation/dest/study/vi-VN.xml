@@ -65,7 +65,7 @@
   <string name="downloadGame">Tải về ván cờ</string>
   <string name="studyUrl">URL nghiên cứu</string>
   <string name="currentChapterUrl">URL chương hiện tại</string>
-  <string name="youCanPasteThisInTheForumToEmbed">Bạn có thể dán cái này để nhúng vào diễn đàn hoặc blog Lichess cá nhân của bạn</string>
+  <string name="youCanPasteThisInTheForumToEmbed">Bạn có thể dán cái này để nhúng vào diễn đàn hoặc blog Chess-Online cá nhân của bạn</string>
   <string name="startAtInitialPosition">Bắt đầu từ thế cờ ban đầu</string>
   <string name="startAtX">Bắt đầu tại nước %s</string>
   <string name="embedInYourWebsite">Nhúng vào trang web của bạn</string>
@@ -136,7 +136,7 @@
   <string name="interestingMove">Nước đi hay</string>
   <string name="dubiousMove" comment="dubiousMove&#10;A questionable move.">Nước đi mơ hồ</string>
   <string name="onlyMove" comment="onlyMove&#10;The only possible move. This is a label that can be placed in a study of a past game. It may not technically be the only move, but the only feasible one.">Nước duy nhất</string>
-  <string name="zugzwang" comment="zugzwang&#10;What zugzwang is: https://lichess.org/practice/intermediate-tactics/zugzwang/9cKgYrHb/ybYJ9gNa&#10;&#10;This specific string is a label that can be applied to a position in a study, to indicate one side is in zugzwang.">Zugzwang</string>
+  <string name="zugzwang" comment="zugzwang&#10;What zugzwang is: https://chess-online.com/practice/intermediate-tactics/zugzwang/9cKgYrHb/ybYJ9gNa&#10;&#10;This specific string is a label that can be applied to a position in a study, to indicate one side is in zugzwang.">Zugzwang</string>
   <string name="equalPosition">Thế trận cân bằng</string>
   <string name="unclearPosition" comment="unclearPosition&#10;It is unclear who is winning or losing.">Thế cờ không rõ ràng</string>
   <string name="whiteIsSlightlyBetter">Bên trắng có một chút lợi thế</string>
@@ -148,11 +148,11 @@
   <string name="novelty" comment="novelty&#10;&#10;A move in the opening that has not been played before.&#10;https://en.wikipedia.org/wiki/Glossary_of_chess#theoretical_novelty">Mới lạ</string>
   <string name="development" comment="development&#10;Used in studies - shows that the player made a developing move (e.g. pushing pawns to open their bishops in the opening).">Phát triển</string>
   <string name="initiative">Chủ động</string>
-  <string name="attack" comment="attack&#10;A label that can be applied to a position in a Lichess study. Noun.">Tấn công</string>
-  <string name="counterplay" comment="counterplay&#10;A label that can be applied to a position in a Lichess study. Noun.&#10;&#10;Generally describes a defending player who is under attack, and makes an attacking move elsewhere.">Phản công</string>
-  <string name="timeTrouble" comment="timeTrouble&#10;A label that can be applied to a position in a Lichess study. Noun. Indicates that a player had little time to think and make this move (clock was running low).">Sắp hết thời gian</string>
+  <string name="attack" comment="attack&#10;A label that can be applied to a position in a Chess-Online study. Noun.">Tấn công</string>
+  <string name="counterplay" comment="counterplay&#10;A label that can be applied to a position in a Chess-Online study. Noun.&#10;&#10;Generally describes a defending player who is under attack, and makes an attacking move elsewhere.">Phản công</string>
+  <string name="timeTrouble" comment="timeTrouble&#10;A label that can be applied to a position in a Chess-Online study. Noun. Indicates that a player had little time to think and make this move (clock was running low).">Sắp hết thời gian</string>
   <string name="withCompensation" comment="withCompensation&#10;&#10;Compensation is the short-term positional advantage a player has in exchange for typically material disadvantage. Short term advantages involve initiative and attack.&#10;https://en.wikipedia.org/wiki/Compensation_(chess)">Có bù đắp</string>
-  <string name="withTheIdea" comment="withTheIdea&#10;A label that can be applied to a position in a Lichess study. Noun.&#10;&#10;Shows that the player was following the theory around an opening, even after the initial opening moves.">Với ý tưởng</string>
+  <string name="withTheIdea" comment="withTheIdea&#10;A label that can be applied to a position in a Chess-Online study. Noun.&#10;&#10;Shows that the player was following the theory around an opening, even after the initial opening moves.">Với ý tưởng</string>
   <string name="nextChapter">Chương tiếp theo</string>
   <string name="prevChapter">Chương trước</string>
   <string name="studyActions">Các thao tác trong nghiên cứu</string>

@@ -67,7 +67,7 @@
   <string name="lookupOfPlayer">Пребарувај загатки од игрите на други играчи</string>
   <string name="fromXGames">Загатки од игрите на %s\'</string>
   <string name="searchPuzzles">Пребарувај загатки</string>
-  <string name="fromMyGamesNone">Немате загатки во базата на податоци, но Lichess сè уште многу ве сака.
+  <string name="fromMyGamesNone">Немате загатки во базата на податоци, но Chess-Online сè уште многу ве сака.
 
 Играјте брзи и класични игри за да ги зголемите шансите ваша загатка да биде додадена!</string>
   <string name="fromXGamesFound">%1$s загатки пронајдени во %2$s игри</string>

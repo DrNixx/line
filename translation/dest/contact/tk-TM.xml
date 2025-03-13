@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="contact">Habarlaş</string>
-  <string name="contactLichess">Lichess bilen habarlaş</string>
+  <string name="contactLichess">Chess-Online bilen habarlaş</string>
   <string name="whatCanWeHelpYouWith">Size näme komek edip bileris?</string>
   <string name="iCantLogIn">Şahsy sahypama girip bilemok</string>
   <string name="noConfirmationEmail">Dogrulama hatyny almadym</string>

@@ -278,9 +278,9 @@
   <string name="forgotPassword">Забыли пароль?</string>
   <string name="error.weakPassword">Этот пароль очень распространён, и его слишком легко угадать.</string>
   <string name="error.namePassword">Пожалуйста, не используйте свой логин в качестве пароля.</string>
-  <string name="blankedPassword">Вы использовали такой же пароль на другом сайте, а тот сайт был скомпрометирован. Теперь для безопасности вашей учётной записи на Lichess необходимо установить новый пароль. Спасибо за ваше понимание.</string>
-  <string name="youAreLeavingLichess">Вы покидаете Lichess</string>
-  <string name="neverTypeYourPassword">Никогда не вводите свой пароль Lichess на другом сайте!</string>
+  <string name="blankedPassword">Вы использовали такой же пароль на другом сайте, а тот сайт был скомпрометирован. Теперь для безопасности вашей учётной записи на Chess-Online необходимо установить новый пароль. Спасибо за ваше понимание.</string>
+  <string name="youAreLeavingLichess">Вы покидаете Chess-Online</string>
+  <string name="neverTypeYourPassword">Никогда не вводите свой пароль Chess-Online на другом сайте!</string>
   <string name="proceedToX">Перейти на %s</string>
   <string name="passwordSuggestion">Не устанавливайте пароль, предложенный другими людьми. Они с его помощью украдут вашу учётную запись.</string>
   <string name="emailSuggestion">Не устанавливайте адрес электронной почты, предложенный другими людьми. Они с его помощью украдут вашу учётную запись.</string>
@@ -617,7 +617,7 @@
   <string name="inlineNotation">Строчная нотация</string>
   <string name="makeAStudy">Чтобы сохранить и поделиться, рассмотрите возможность создания студии.</string>
   <string name="clearSavedMoves">Очистить ходы</string>
-  <string name="previouslyOnLichessTV">Ранее на Lichess TV</string>
+  <string name="previouslyOnLichessTV">Ранее на Chess-Online TV</string>
   <string name="onlinePlayers">Игроки в сети</string>
   <string name="activePlayers">Активные игроки</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Внимание, это рейтинговая игра, хотя и без ограничения по времени!</string>
@@ -793,7 +793,7 @@
   <string name="simulHostExtraTime">Дополнительное время сеансёра</string>
   <string name="simulAddExtraTimePerPlayer">Добавьте начальное время на ваших часах для каждого игрока, вошедшего в ваш сеанс одновременной игры.</string>
   <string name="simulHostExtraTimePerPlayer">Добавка времени сеансёра для каждого игрока</string>
-  <string name="lichessTournaments">Турниры Lichess</string>
+  <string name="lichessTournaments">Турниры Chess-Online</string>
   <string name="tournamentFAQ">Вопросы и ответы про Арену</string>
   <string name="timeBeforeTournamentStarts">Время до начала турнира</string>
   <string name="averageCentipawnLoss">Потери сантипешек в среднем</string>
@@ -819,7 +819,7 @@
   <string name="playSelectedMove">сыграть выбранный ход</string>
   <string name="newTournament">Новый турнир</string>
   <string name="tournamentHomeTitle">Шахматный турнир по различным вариантам шахмат и контролем времени</string>
-  <string name="tournamentHomeDescription">Играйте в быстрые шахматы на турнире! Выбирайте любой из официальных турниров Lichess или создайте свой собственный. Пуля, блиц, классика, шахматы Фишера, король в центре, три шаха и другие варианты игры обеспечат вам бесконечное шахматное удовольствие!</string>
+  <string name="tournamentHomeDescription">Играйте в быстрые шахматы на турнире! Выбирайте любой из официальных турниров Chess-Online или создайте свой собственный. Пуля, блиц, классика, шахматы Фишера, король в центре, три шаха и другие варианты игры обеспечат вам бесконечное шахматное удовольствие!</string>
   <string name="tournamentNotFound">Турнир не найден</string>
   <string name="tournamentDoesNotExist">Такого турнира не существует.</string>
   <string name="tournamentMayHaveBeenCanceled">Может быть отменён в том случае, если все игроки покинули турнир до его старта.</string>
@@ -871,7 +871,7 @@
   <string name="sessions">Сессии</string>
   <string name="revokeAllSessions">закрыть все сессии</string>
   <string name="playChessEverywhere">Играйте в шахматы везде</string>
-  <string name="asFreeAsLichess">Бесплатен, как Lichess</string>
+  <string name="asFreeAsLichess">Бесплатен, как Chess-Online</string>
   <string name="builtForTheLoveOfChessNotMoney">С любовью к шахматам, а не к деньгам</string>
   <string name="everybodyGetsAllFeaturesForFree">Все возможности для всех бесплатно</string>
   <string name="zeroAdvertisement">Никакой рекламы</string>
@@ -987,7 +987,7 @@
     <item quantity="many">и сохранить %s последовательностей</item>
     <item quantity="other">и сохранить %s последовательностей</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Вы получили личное сообщение от Lichess.</string>
+  <string name="showUnreadLichessMessage">Вы получили личное сообщение от Chess-Online.</string>
   <string name="clickHereToReadIt">Нажмите здесь, чтобы прочитать его</string>
   <string name="sorry">Извините :(</string>
   <string name="weHadToTimeYouOutForAWhile">Мы вынуждены прервать вас на время.</string>
@@ -1000,14 +1000,14 @@
   <string name="tryToWin">Попытайтесь выиграть (или хотя бы свести вничью) каждую свою партию.</string>
   <string name="resignLostGames">Сдавайтесь в безнадёжной позиции (а не ждите, когда время закончится).</string>
   <string name="temporaryInconvenience">Приносим извинения за временные неудобства,</string>
-  <string name="wishYouGreatGames">и желаем вам отличной игры на lichess.org.</string>
+  <string name="wishYouGreatGames">и желаем вам отличной игры на chess-online.com.</string>
   <string name="thankYouForReading">Спасибо за внимание!</string>
   <string name="lifetimeScore">Счёт за всё время</string>
   <string name="currentMatchScore">Счёт в текущем матче</string>
   <string name="agreementAssistance">Подтверждаю, что я никогда не воспользуюсь посторонней помощью в своих играх (из шахматных программ, книг, баз данных и от других игроков).</string>
   <string name="agreementNice">Подтверждаю, что я буду с уважением относиться к другим игрокам.</string>
   <string name="agreementMultipleAccounts" comment="%s will be replaced with the translation of 'termsOfService'">Я согласен с тем, что не должен создавать множество учётных записей (за исключением причин, указанных в %s).</string>
-  <string name="agreementPolicy">Подтверждаю, что я буду следовать всем правилам Lichess.</string>
+  <string name="agreementPolicy">Подтверждаю, что я буду следовать всем правилам Chess-Online.</string>
   <string name="searchOrStartNewDiscussion">Найти обсуждение или начать новое</string>
   <string name="edit">Изменить</string>
   <string name="bullet" comment="Probably best left untranslated. Leave it as 'Bullet' unless your language has a better word for it.">Пуля</string>
@@ -1046,7 +1046,7 @@
   <string name="congratsYouWon">Поздравляем, вы выиграли!</string>
   <string name="gameVsX">Игра против %1$s</string>
   <string name="resVsX">%1$s против %2$s</string>
-  <string name="lostAgainstTOSViolator">Вы проиграли тому, кто нарушил пользовательское соглашение Lichess</string>
+  <string name="lostAgainstTOSViolator">Вы проиграли тому, кто нарушил пользовательское соглашение Chess-Online</string>
   <string name="refundXpointsTimeControlY">Возврат: %1$s %2$s рейтинговых очков.</string>
   <string name="timeAlmostUp">Время почти истекло!</string>
   <string name="clickToRevealEmailAddress">[Нажмите, чтобы раскрыть адрес электронной почты]</string>
@@ -1101,13 +1101,13 @@
   <string name="youCantStartNewGame">Вы не можете начать новую игру, пока не завершена текущая.</string>
   <string name="since">С</string>
   <string name="until">До</string>
-  <string name="lichessDbExplanation">Рейтинговые игры по всем игрокам Lichess</string>
+  <string name="lichessDbExplanation">Рейтинговые игры по всем игрокам Chess-Online</string>
   <string name="switchSides">Сменить сторону</string>
   <string name="closingAccountWithdrawAppeal">Закрытие вашей учётной записи отменит ваше обращение</string>
   <string name="ourEventTips">Наши советы по организации мероприятий</string>
   <string name="instructions">Руководство</string>
   <string name="showMeEverything">Показать всё</string>
-  <string name="lichessPatronInfo">Lichess - это благотворительное и полностью бесплатное программное обеспечение с открытым исходным кодом.
+  <string name="lichessPatronInfo">Chess-Online - это благотворительное и полностью бесплатное программное обеспечение с открытым исходным кодом.
 Все эксплуатационные расходы, разработка и контент финансируются исключительно за счет пожертвований пользователей.</string>
   <string name="nothingToSeeHere">Здесь ничего нет пока.</string>
   <string name="stats">Статистика</string>

@@ -2,7 +2,7 @@
 <resources>
   <string name="realName">Жинхэнэ нэр</string>
   <string name="createANewLichessAccount">Шинэ хаяг нээе</string>
-  <string name="lichessUsername">Lichess нэр</string>
+  <string name="lichessUsername">Chess-Online нэр</string>
   <string name="lastActiveDate">Идэвхтэй</string>
   <string name="teachers">Багш нар</string>
   <string name="winrate">Ялчих магадлал</string>

@@ -31,8 +31,8 @@
   <string name="byOpenings">Por abertura</string>
   <string name="puzzlesByOpenings">Quebra-cabeças por abertura</string>
   <string name="openingsYouPlayedTheMost">Aberturas que você mais jogou em partidas valendo pontos</string>
-  <string name="useFindInPage" comment="useFindInPage&#10;&#10;Appears on https://lichess.org/training/openings for mobile and tablet users&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Use a ferramenta \"Encontrar na página\" do navegador para encontrar sua abertura favorita!</string>
-  <string name="useCtrlF" comment="Appears on https://lichess.org/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Aperte Ctrl + F para encontrar sua abertura favorita!</string>
+  <string name="useFindInPage" comment="useFindInPage&#10;&#10;Appears on https://chess-online.com/training/openings for mobile and tablet users&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Use a ferramenta \"Encontrar na página\" do navegador para encontrar sua abertura favorita!</string>
+  <string name="useCtrlF" comment="Appears on https://chess-online.com/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Aperte Ctrl + F para encontrar sua abertura favorita!</string>
   <string name="notTheMove">O movimento não é este!</string>
   <string name="trySomethingElse">Tente algo diferente.</string>
   <string name="ratingX">Rating: %s</string>
@@ -76,7 +76,7 @@
   <string name="lookupOfPlayer">Pesquise quebra-cabeças de um jogador específico</string>
   <string name="fromXGames">Problemas de %s\' jogos</string>
   <string name="searchPuzzles">Procurar quebra-cabeças</string>
-  <string name="fromMyGamesNone">Você não tem nenhum quebra-cabeça no banco de dados, mas o Lichess ainda te ama muito.
+  <string name="fromMyGamesNone">Você não tem nenhum quebra-cabeça no banco de dados, mas o Chess-Online ainda te ama muito.
 Jogue partidas rápidas e clássicas para aumentar suas chances de ter um desafio seu adicionado!</string>
   <string name="fromXGamesFound">%1$s quebra-cabeças encontrados em %2$s partidas</string>
   <string name="puzzleDashboardDescription">Treine, analise, melhore</string>

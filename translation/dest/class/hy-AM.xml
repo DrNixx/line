@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="lichessClasses">Խմբեր</string>
-  <string name="teachClassesOfChessStudents">Շախմատն աշակերտներին դասավանդեք «Lichess-ի դասեր» գործիքների օգնությամբ։</string>
+  <string name="teachClassesOfChessStudents">Շախմատն աշակերտներին դասավանդեք «Chess-Online-ի դասեր» գործիքների օգնությամբ։</string>
   <string name="features">Հնարավորություններ</string>
   <string name="quicklyGenerateSafeUsernames">Արագ ստեղծեք անվտանգ անուններ և գաղտնաբառեր աշակերտների համար։</string>
   <string name="trackStudentProgress">Հետևեք աշակերտների առաջընթացին պարտիաներում և խնդիրներում</string>
   <string name="messageAllStudents">Հայտնեք բոլոր աշակերտներին խմբերի նոր նյութերի մասին</string>
   <string name="freeForAllForever" comment="The automated QA checker treats &quot;100%&quot; as if it is a variable, and will give a warning if you change it.&#10;It is not a variable.&#10;&#10;You can still save your translation writing it as &quot;%100&quot; for example, in case this is more valid in your language.">Անվճար է բոլորի համար, ընդմիշտ, 100 տոկոսով առանց գովազդի և հետևման</string>
-  <string name="applyToBeLichessTeacher">Ներկայացնել հայտ՝ Lichess-ի ուսուցիչ դառնալու համար</string>
+  <string name="applyToBeLichessTeacher">Ներկայացնել հայտ՝ Chess-Online-ի ուսուցիչ դառնալու համար</string>
   <string name="noClassesYet">Խմբեր դեռ չկան։</string>
   <string name="teachersX">Ուսուցիչներ՝ %s</string>
   <string name="newClass">Նոր խումբ</string>
@@ -23,7 +23,7 @@
   <string name="classDescription">Խմբի նկարագրությունը</string>
   <string name="visibleByBothStudentsAndTeachers">Երևում է ինչպես մարզչին, այնպես էլ խմբի աշակերտներին</string>
   <string name="teachersOfTheClass">Խմբի մարզիչները</string>
-  <string name="addLichessUsernames">Ավելացրեք Lichess-ի օգտատերերի անունները` նրանց որպես մարզիչ հրավիրելու համար։ Ամեն տողում` մեկին։</string>
+  <string name="addLichessUsernames">Ավելացրեք Chess-Online-ի օգտատերերի անունները` նրանց որպես մարզիչ հրավիրելու համար։ Ամեն տողում` մեկին։</string>
   <string name="resetPassword">Չեղարկել գաղտնաբառը</string>
   <string name="makeSureToCopy">Համոզվեք, որ գաղտնաբառը պատճենված է կամ գրված։ Դուք այն այլևս չեք կարող տեսնել։</string>
   <string name="passwordX">Գաղտնաբառն է %s</string>
@@ -31,18 +31,18 @@
   <string name="invitedToXByY">Հրավերը %1$s ստացված է %2$sից</string>
   <string name="realName">Իսկական անունը</string>
   <string name="addStudent">Ավելացնել աշակերտ</string>
-  <string name="inviteALichessAccount">Հրավիրել Lichess-ի մասնակցային հաշիվ</string>
-  <string name="inviteDesc1">Եթե աշակերտն արդեն ունի Lichess-ի մասնակցային հաշիվ, Դուք կարող եք նրան հրավիրել դասարան։</string>
-  <string name="inviteDesc2">Նրանք Lichess-ում կստանան դասարան մտնելու հղումով հաղորդագրություն։</string>
+  <string name="inviteALichessAccount">Հրավիրել Chess-Online-ի մասնակցային հաշիվ</string>
+  <string name="inviteDesc1">Եթե աշակերտն արդեն ունի Chess-Online-ի մասնակցային հաշիվ, Դուք կարող եք նրան հրավիրել դասարան։</string>
+  <string name="inviteDesc2">Նրանք Chess-Online-ում կստանան դասարան մտնելու հղումով հաղորդագրություն։</string>
   <string name="inviteDesc3">Կարևոր է. հրավիրեք միայն այն մասնակիցներին, որոնց ճանաչում եք, և որոնք իրոք ցանկանում են պարապել դասարանում։</string>
   <string name="inviteDesc4">Երբեք մի՛ ուղարկեք անցանկալի հրավերներ պատահական խաղացողներին։</string>
-  <string name="createANewLichessAccount">Ստեղծել նոր հաշիվ Lichess-ում</string>
-  <string name="createDesc1">Եթե աշակերտը դեռևս չունի Lichess-ի մասնակցային հաշիվ, Դուք այն կարող եք ստեղծել այստեղ։</string>
+  <string name="createANewLichessAccount">Ստեղծել նոր հաշիվ Chess-Online-ում</string>
+  <string name="createDesc1">Եթե աշակերտը դեռևս չունի Chess-Online-ի մասնակցային հաշիվ, Դուք այն կարող եք ստեղծել այստեղ։</string>
   <string name="createDesc2">Էլեկտրոնային փոստի հասցե պետք չէ։ Կձևավորվի պատահական գաղտնաբառ, որը պետք է ուղարկեք աշակերտին, որպեսզի նա կարողանա մուտք գործել համակարգ։</string>
   <string name="createDesc3">Կարևոր է. աշակերտը չպետք է ունենա մի քանի մասնակցային հաշիվ։</string>
   <string name="createDesc4">Եթե նրանք արդեն ունեն, օգտագործեք հրավերի ձևանմուշը։</string>
   <string name="createStudentWarning">Ստեղծեք մասնակցային հաշիվներ միայն իրական աշակերտների համար։ Այդ հնարավորությունը մի՛ օգտագործեք անձնական նպատակներով մասնակցային հաշիվներ ստեղծելու համար, այլապես կարգելափակվեք։</string>
-  <string name="lichessUsername">Մասնակցային անունը Lichess-ում</string>
+  <string name="lichessUsername">Մասնակցային անունը Chess-Online-ում</string>
   <string name="generateANewUsername">Ստեղծել նոր մասնակցային անուն</string>
   <string name="welcomeToClass">Բարի՜ գալուստ Ձեր դասարան՝ %s։
 Ահա դասարանի մուտքի հղումը։</string>
@@ -98,7 +98,7 @@
   <string name="youAcceptedThisInvitation">Դուք ընդունեցիք այս հրավերը։</string>
   <string name="youDeclinedThisInvitation">Դուք մերժեցիք այս հրավերը։</string>
   <string name="orSeparator" comment="Used as separator between invite sections. Shown as large '~ or ~'.">կամ</string>
-  <string name="createMultipleAccounts">Միաժամանակ ստեղծել Lichess-ի մի քանի հաշիվ</string>
+  <string name="createMultipleAccounts">Միաժամանակ ստեղծել Chess-Online-ի մի քանի հաշիվ</string>
   <string name="useThisForm" comment="Link text in multipleAccsFromDescription">օգտագործեք այս ձևը</string>
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">ստեղծեք ավելի շատ դասարաններ</string>
   <string name="studentsRealNamesOnePerLine">Աշակերտների իրական անունները․ մեկական յուրաքանչյուր տողում</string>

@@ -4,7 +4,7 @@
   <string name="liveBroadcasts">Emisions de torneyos en directo</string>
   <string name="newBroadcast">Nueva emisión en directo</string>
   <string name="aboutBroadcasts">Sobre las retransmisions</string>
-  <string name="howToUseLichessBroadcasts">Cómo fer servir las retransmisions de Lichess.</string>
+  <string name="howToUseLichessBroadcasts">Cómo fer servir las retransmisions de Chess-Online.</string>
   <string name="theNewRoundHelp">La nueva ronda habrá de tener los mesmos miembros y contribuidors que l\'anterior.</string>
   <string name="addRound">Anyadir una ronda</string>
   <string name="ongoing">En curso</string>
@@ -14,7 +14,7 @@
   <string name="tournamentName">Nombre d\'o torneyo</string>
   <string name="fullDescription">Descripción completa de l\'evento</string>
   <string name="fullDescriptionHelp">Descripción larga opcional d\'a emisión. %1$s ye disponible. La largaria ha d\'estar inferior a %2$s caracters.</string>
-  <string name="sourceUrlHelp">URL que Lichess comprebará pa obtener actualizacions PGN. Ha d\'estar publicament accesible dende Internet.</string>
+  <string name="sourceUrlHelp">URL que Chess-Online comprebará pa obtener actualizacions PGN. Ha d\'estar publicament accesible dende Internet.</string>
   <string name="startDateHelp">Opcional, si sabes quan prencipia l\'evento</string>
   <string name="currentGameUrl">Vinclo d\'a partida actual</string>
 </resources>

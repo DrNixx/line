@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="lichessClasses">Classes</string>
-  <string name="teachClassesOfChessStudents">Teach classes of chess students with the Lichess Classes tool suite.</string>
+  <string name="teachClassesOfChessStudents">Teach classes of chess students with the Chess-Online Classes tool suite.</string>
   <string name="features">Features</string>
   <string name="quicklyGenerateSafeUsernames">Quickly generate safe usernames and passwords for students</string>
   <string name="trackStudentProgress">Track student progress in games and puzzles</string>
   <string name="messageAllStudents">Message all students about new class material</string>
   <string name="freeForAllForever" comment="The automated QA checker treats &quot;100%&quot; as if it is a variable, and will give a warning if you change it.&#10;It is not a variable.&#10;&#10;You can still save your translation writing it as &quot;%100&quot; for example, in case this is more valid in your language.">100% free for all, forever, with no ads or trackers</string>
-  <string name="applyToBeLichessTeacher">Apply to be a Lichess Teacher</string>
+  <string name="applyToBeLichessTeacher">Apply to be a Chess-Online Teacher</string>
   <string name="noClassesYet">No classes yet.</string>
   <string name="teachersX">Teachers: %s</string>
   <string name="newClass">New class</string>
@@ -23,7 +23,7 @@
   <string name="classDescription">Class description</string>
   <string name="visibleByBothStudentsAndTeachers">Visible by both teachers and students of the class</string>
   <string name="teachersOfTheClass">Teachers of the class</string>
-  <string name="addLichessUsernames">Add Lichess usernames to invite them as teachers. One per line.</string>
+  <string name="addLichessUsernames">Add Chess-Online usernames to invite them as teachers. One per line.</string>
   <string name="resetPassword">Reset password</string>
   <string name="makeSureToCopy">Make sure to copy or write down the password now. You won’t be able to see it again!</string>
   <string name="passwordX">Password: %s</string>
@@ -32,22 +32,22 @@
   <string name="realName">Real name</string>
   <string name="privateWillNeverBeShown">Private. Will never be shown outside the class. Helps you remember who the student is.</string>
   <string name="addStudent">Add student</string>
-  <string name="lichessProfileXCreatedForY">Lichess profile %1$s created for %2$s.</string>
+  <string name="lichessProfileXCreatedForY">Chess-Online profile %1$s created for %2$s.</string>
   <string name="studentCredentials">Student:  %1$s
 Username: %2$s
 Password: %3$s</string>
-  <string name="inviteALichessAccount">Invite a Lichess account</string>
-  <string name="inviteDesc1">If the student already has a Lichess account, you can invite them to the class.</string>
-  <string name="inviteDesc2">They will receive a message on Lichess with a link to join the class.</string>
+  <string name="inviteALichessAccount">Invite a Chess-Online account</string>
+  <string name="inviteDesc1">If the student already has a Chess-Online account, you can invite them to the class.</string>
+  <string name="inviteDesc2">They will receive a message on Chess-Online with a link to join the class.</string>
   <string name="inviteDesc3">Important: only invite students you know, and who actively want to join the class.</string>
   <string name="inviteDesc4">Never send unsolicited invites to arbitrary players.</string>
-  <string name="createANewLichessAccount">Create a new Lichess account</string>
-  <string name="createDesc1">If the student doesn\'t have a Lichess account yet, you can create one for them here.</string>
+  <string name="createANewLichessAccount">Create a new Chess-Online account</string>
+  <string name="createDesc1">If the student doesn\'t have a Chess-Online account yet, you can create one for them here.</string>
   <string name="createDesc2">No email address is required. A password will be generated, and you will have to transmit it to the student, so they can log in.</string>
   <string name="createDesc3">Important: a student must not have multiple accounts.</string>
   <string name="createDesc4">If they already have one, use the invite form instead.</string>
   <string name="createStudentWarning">Only create accounts for real students. Do not use this to make multiple accounts for yourself. You would get banned.</string>
-  <string name="lichessUsername">Lichess username</string>
+  <string name="lichessUsername">Chess-Online username</string>
   <string name="generateANewUsername">Generate a new username</string>
   <string name="welcomeToClass">Welcome to your class: %s. 
 Here is the link to access the class.</string>
@@ -106,8 +106,8 @@ It will display a horizontal line.</string>
   <string name="youAcceptedThisInvitation">You accepted this invitation.</string>
   <string name="youDeclinedThisInvitation">You declined this invitation.</string>
   <string name="orSeparator" comment="Used as separator between invite sections. Shown as large '~ or ~'.">or</string>
-  <string name="createMultipleAccounts">Create multiple Lichess accounts at once</string>
-  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">You can also %s to create multiple Lichess accounts from a list of student names.</string>
+  <string name="createMultipleAccounts">Create multiple Chess-Online accounts at once</string>
+  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">You can also %s to create multiple Chess-Online accounts from a list of student names.</string>
   <string name="useThisForm" comment="Link text in multipleAccsFromDescription">use this form</string>
   <string name="maxStudentsNote" comment="%1$s will be replaced with a large number (currently 100).\n%2$s is a link and will be replaced with the translation of createMoreClasses. Make sure both strings fit together.">Note that a class can have up to %1$s students. To manage more students, %2$s.</string>
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">create more classes</string>

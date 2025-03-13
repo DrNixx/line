@@ -3,8 +3,8 @@
   <string name="activity">कार्यकलाप</string>
   <string name="hostedALiveStream">एक लाइव स्ट्रीम होस्ट किया गया</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">%2$s के रूप में %1$s महीने के लिए lichess.org का समर्थन किया।</item>
-    <item quantity="other">%2$s के रूप में %1$s महीने के लिए lichess.org का समर्थन किया।</item>
+    <item quantity="one">%2$s के रूप में %1$s महीने के लिए chess-online.com का समर्थन किया।</item>
+    <item quantity="other">%2$s के रूप में %1$s महीने के लिए chess-online.com का समर्थन किया।</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">%2$s पर %1$s स्थिति का अभ्यास किया</item>
@@ -54,7 +54,7 @@
     <item quantity="one">%s नया अध्ययन का निर्माण किया</item>
     <item quantity="other">%s नए अध्ययनों का निर्माण किया</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="one">%s arena टूर्नामेंट में भाग लिया</item>
     <item quantity="other">%s arena टूर्नामेटों में भाग लिया</item>
   </plurals>
@@ -67,7 +67,7 @@
     <item quantity="other">%s स्विस टुर्नामेंटों में भाग लिया</item>
   </plurals>
   <string name="rankedInSwissTournament">#%1$s स्थान %2$s मे</string>
-  <string name="signedUp">lichess.org पर साइन अप किया गया</string>
+  <string name="signedUp">chess-online.com पर साइन अप किया गया</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">%s टीम में शामिल हुए</item>
     <item quantity="other">%s टीमों में शामिल हुए</item>

@@ -68,7 +68,7 @@
   <string name="downloadGame">Descargar partida</string>
   <string name="studyUrl">URL del estudio</string>
   <string name="currentChapterUrl">URL del capítulo actual</string>
-  <string name="youCanPasteThisInTheForumToEmbed">Puedes pegar esto en el foro o tu blog de Lichess para insertar la partida</string>
+  <string name="youCanPasteThisInTheForumToEmbed">Puedes pegar esto en el foro o tu blog de Chess-Online para insertar la partida</string>
   <string name="startAtInitialPosition">Comenzar desde la posición inicial</string>
   <string name="startAtX">Comenzar en %s</string>
   <string name="embedInYourWebsite">Insértalo en tu página o blog</string>
@@ -140,7 +140,7 @@
   <string name="interestingMove">Jugada interesante</string>
   <string name="dubiousMove" comment="dubiousMove&#10;A questionable move.">Jugada dudosa</string>
   <string name="onlyMove" comment="onlyMove&#10;The only possible move. This is a label that can be placed in a study of a past game. It may not technically be the only move, but the only feasible one.">Única jugada</string>
-  <string name="zugzwang" comment="zugzwang&#10;What zugzwang is: https://lichess.org/practice/intermediate-tactics/zugzwang/9cKgYrHb/ybYJ9gNa&#10;&#10;This specific string is a label that can be applied to a position in a study, to indicate one side is in zugzwang.">Zugzwang</string>
+  <string name="zugzwang" comment="zugzwang&#10;What zugzwang is: https://chess-online.com/practice/intermediate-tactics/zugzwang/9cKgYrHb/ybYJ9gNa&#10;&#10;This specific string is a label that can be applied to a position in a study, to indicate one side is in zugzwang.">Zugzwang</string>
   <string name="equalPosition">Posición igualada</string>
   <string name="unclearPosition" comment="unclearPosition&#10;It is unclear who is winning or losing.">Posición poco clara</string>
   <string name="whiteIsSlightlyBetter">Las blancas están ligeramente mejor</string>
@@ -152,11 +152,11 @@
   <string name="novelty" comment="novelty&#10;&#10;A move in the opening that has not been played before.&#10;https://en.wikipedia.org/wiki/Glossary_of_chess#theoretical_novelty">Novedad</string>
   <string name="development" comment="development&#10;Used in studies - shows that the player made a developing move (e.g. pushing pawns to open their bishops in the opening).">Desarrollo</string>
   <string name="initiative">Iniciativa</string>
-  <string name="attack" comment="attack&#10;A label that can be applied to a position in a Lichess study. Noun.">Ataque</string>
-  <string name="counterplay" comment="counterplay&#10;A label that can be applied to a position in a Lichess study. Noun.&#10;&#10;Generally describes a defending player who is under attack, and makes an attacking move elsewhere.">Contrajuego</string>
-  <string name="timeTrouble" comment="timeTrouble&#10;A label that can be applied to a position in a Lichess study. Noun. Indicates that a player had little time to think and make this move (clock was running low).">Problema de tiempo</string>
+  <string name="attack" comment="attack&#10;A label that can be applied to a position in a Chess-Online study. Noun.">Ataque</string>
+  <string name="counterplay" comment="counterplay&#10;A label that can be applied to a position in a Chess-Online study. Noun.&#10;&#10;Generally describes a defending player who is under attack, and makes an attacking move elsewhere.">Contrajuego</string>
+  <string name="timeTrouble" comment="timeTrouble&#10;A label that can be applied to a position in a Chess-Online study. Noun. Indicates that a player had little time to think and make this move (clock was running low).">Problema de tiempo</string>
   <string name="withCompensation" comment="withCompensation&#10;&#10;Compensation is the short-term positional advantage a player has in exchange for typically material disadvantage. Short term advantages involve initiative and attack.&#10;https://en.wikipedia.org/wiki/Compensation_(chess)">Con compensación</string>
-  <string name="withTheIdea" comment="withTheIdea&#10;A label that can be applied to a position in a Lichess study. Noun.&#10;&#10;Shows that the player was following the theory around an opening, even after the initial opening moves.">Con la idea</string>
+  <string name="withTheIdea" comment="withTheIdea&#10;A label that can be applied to a position in a Chess-Online study. Noun.&#10;&#10;Shows that the player was following the theory around an opening, even after the initial opening moves.">Con la idea</string>
   <string name="nextChapter">Capítulo siguiente</string>
   <string name="prevChapter">Capítulo anterior</string>
   <string name="studyActions">Acciones de estudio</string>

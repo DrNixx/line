@@ -49,7 +49,7 @@ final class SitePages(helpers: Helpers):
       active = "webmasters",
       contentCls = "page force-ltr"
     ).css("bits.page")
-      .csp(_.copy(frameSrc = "https://lichess.org" :: Nil)):
+      .csp(_.copy(frameSrc = "https://live.chess-online.com" :: Nil)):
         frag(
           st.section(cls := "box box-pad developers")(
             h1(cls := "box__top")("HTTP API"),
@@ -72,7 +72,7 @@ final class SitePages(helpers: Helpers):
                 parameters,
                 p(
                   "You can also show the channel for a specific variant or time control by adding the channel key to the URL, corresponding to the channels available at ",
-                  a(href := "/tv")("lichess.org/tv"),
+                  a(href := "/tv")("live.chess-online.com/tv"),
                   ". If not included, the top rated game will be shown."
                 ),
                 copyMeInput(
@@ -153,7 +153,7 @@ final class SitePages(helpers: Helpers):
               div(cls := "body")(
                 div(cls := "center"):
                   raw(
-                    s"""<iframe src="https://lichess.org/embed/broadcast/fide-world-rapidblitz-team-championships-2024--rapid-matches-1-10/G1YjiG7j" $args></iframe>"""
+                    s"""<iframe src="https://live.chess-online.com/embed/broadcast/fide-world-rapidblitz-team-championships-2024--rapid-matches-1-10/G1YjiG7j" $args></iframe>"""
                   )
                 ,
                 p(
@@ -252,7 +252,7 @@ final class SitePages(helpers: Helpers):
           div(cls := "body")(
             p(
               "Spice up your Slack workspace with a daily chess puzzle from ",
-              a(href := "/")("lichess.org"),
+              a(href := "/")("live.chess-online.com"),
               "."
             ),
             a(

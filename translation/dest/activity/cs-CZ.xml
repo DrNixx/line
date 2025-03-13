@@ -3,10 +3,10 @@
   <string name="activity">Aktivita</string>
   <string name="hostedALiveStream">Hostoval živý stream</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">Podporuje lichess.org %1$s měsíc jako %2$s</item>
-    <item quantity="few">Podporuje lichess.org %1$s měsíce jako %2$s</item>
-    <item quantity="many">Podporuje lichess.org %1$s měsíců jako %2$s</item>
-    <item quantity="other">Podporuje lichess.org %1$s měsíců jako %2$s</item>
+    <item quantity="one">Podporuje chess-online.com %1$s měsíc jako %2$s</item>
+    <item quantity="few">Podporuje chess-online.com %1$s měsíce jako %2$s</item>
+    <item quantity="many">Podporuje chess-online.com %1$s měsíců jako %2$s</item>
+    <item quantity="other">Podporuje chess-online.com %1$s měsíců jako %2$s</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">Procvičena %1$s pozice v %2$s</item>
@@ -86,7 +86,7 @@
     <item quantity="many">Vytvořeno %s studií</item>
     <item quantity="other">Vytvořeno %s studií</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="one">Účast v %s turnaji</item>
     <item quantity="few">Účast ve %s turnajích</item>
     <item quantity="many">Účast v %s turnajích</item>

@@ -4,9 +4,9 @@
   <string name="friendBlogs">Arkadaş blogları</string>
   <string name="likedBlogs">Beğenilen blog gönderileri</string>
   <string name="blogTopics">Blog konuları</string>
-  <string name="lichessOfficialBlog">Lichess Resmi Blog</string>
+  <string name="lichessOfficialBlog">Chess-Online Resmi Blog</string>
   <string name="continueReadingPost">Bu gönderiyi okumaya devam et</string>
-  <string name="lichessBlogPostsFromXYear">%s yılından Lichess blog gönderileri</string>
+  <string name="lichessBlogPostsFromXYear">%s yılından Chess-Online blog gönderileri</string>
   <string name="previousBlogPosts">Önceki blog gönderileri</string>
   <string name="xBlog">%s Bloğu</string>
   <string name="newPost">Yeni gönderi</string>
@@ -46,7 +46,7 @@
   <string name="deleteBlog">Bu blog gönderisini kalıcı olarak sil</string>
   <string name="safeToUseImages">Aşağıda verilen sitelerde bulunan resimleri dilediğiniz gibi kullanabilirsiniz: </string>
   <string name="selectPostTopics">Gönderinizin ilgili olduğu konuları seçin</string>
-  <string name="useImagesYouMadeYourself">Kendi oluşturduğunuz görseller, çektiğiniz fotoğraflar veya Lichess ekran görüntüleri gibi telif hakkı başkasına ait olmayan herhangi bir resmi de kullanabilirsiniz.</string>
+  <string name="useImagesYouMadeYourself">Kendi oluşturduğunuz görseller, çektiğiniz fotoğraflar veya Chess-Online ekran görüntüleri gibi telif hakkı başkasına ait olmayan herhangi bir resmi de kullanabilirsiniz.</string>
   <string name="safeAndRespectfulContent">Paylaştığınız içeriklerin uygun ve orijinal olmasına lütfen dikkat edin. Başka bir kullanıcının içeriğini kopyalamayın.</string>
   <string name="inappropriateContentAccountClosed">Uygunsuz herhangi bir içerik paylaşmak hesabınızın kapatılmasına yol açacaktır.</string>
   <string name="blogTips">Harika blog gönderileri yazmanın püf noktaları</string>

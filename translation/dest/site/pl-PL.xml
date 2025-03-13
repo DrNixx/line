@@ -262,9 +262,9 @@
   <string name="forgotPassword">Nie pamiętasz hasła?</string>
   <string name="error.weakPassword">To hasło jest bardzo popularne i zbyt łatwe do odgadnięcia.</string>
   <string name="error.namePassword">Nie używaj nazwy użytkownika jako hasła.</string>
-  <string name="blankedPassword">Użyłeś/aś tego samego hasła w innym serwisie, który został zaatakowany. Aby zapewnić bezpieczeństwo Twojego konta Lichess, musisz ustawić nowe hasło. Dziękujemy za wyrozumiałość.</string>
-  <string name="youAreLeavingLichess">Opuszczasz Lichess</string>
-  <string name="neverTypeYourPassword">Nigdy nie wpisuj hasła Lichess na innej stronie!</string>
+  <string name="blankedPassword">Użyłeś/aś tego samego hasła w innym serwisie, który został zaatakowany. Aby zapewnić bezpieczeństwo Twojego konta Chess-Online, musisz ustawić nowe hasło. Dziękujemy za wyrozumiałość.</string>
+  <string name="youAreLeavingLichess">Opuszczasz Chess-Online</string>
+  <string name="neverTypeYourPassword">Nigdy nie wpisuj hasła Chess-Online na innej stronie!</string>
   <string name="proceedToX">Przejdź do %s</string>
   <string name="passwordSuggestion">Nie ustawiaj hasła zasugerowanego przez kogoś innego. Wykorzystają je do kradzieży Twojego konta.</string>
   <string name="emailSuggestion">Nie ustawiaj adresu e-mail zasugerowanego przez kogoś innego. Wykorzystają go do kradzieży Twojego konta.</string>
@@ -391,7 +391,7 @@
     <item quantity="many">Dodaj %s sekund</item>
     <item quantity="other">Dodaj %s sekund</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Użytkownik tego konta naruszył warunki korzystania z Lichess</string>
+  <string name="thisAccountViolatedTos">Użytkownik tego konta naruszył warunki korzystania z Chess-Online</string>
   <string name="openingExplorerAndTablebase">Biblioteka otwarć i końcówek</string>
   <string name="takeback">Cofnij ruch</string>
   <string name="proposeATakeback">Poproś o cofnięcie ruchu</string>
@@ -601,7 +601,7 @@
   <string name="inlineNotation">Notacja ciągła</string>
   <string name="makeAStudy">Aby bezpiecznie zapamiętać i udostępniać, rozważ stworzenie opracowania.</string>
   <string name="clearSavedMoves">Usuń ruchy</string>
-  <string name="previouslyOnLichessTV">Poprzednio w Lichess TV</string>
+  <string name="previouslyOnLichessTV">Poprzednio w Chess-Online TV</string>
   <string name="onlinePlayers">Gracze online</string>
   <string name="activePlayers">Aktywni gracze</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Miej na uwadze, że partia jest rankingowa, ale nie ma limitu czasu!</string>
@@ -777,7 +777,7 @@
   <string name="simulHostExtraTime">Dodatkowy czas dla symultanisty</string>
   <string name="simulAddExtraTimePerPlayer">Dodaj początkowy czas do zegara dla każdego gracza dołączającego do symultany.</string>
   <string name="simulHostExtraTimePerPlayer">Dodatkowy czas dla symultanisty za każdego gracza</string>
-  <string name="lichessTournaments">Turnieje Lichess</string>
+  <string name="lichessTournaments">Turnieje Chess-Online</string>
   <string name="tournamentFAQ">Turnieje typu Arena FAQ</string>
   <string name="timeBeforeTournamentStarts">Czas do rozpoczęcia turnieju</string>
   <string name="averageCentipawnLoss">Średnia strata w centypionach</string>
@@ -971,7 +971,7 @@
     <item quantity="many">i zapisz %s wariantów warunkowych</item>
     <item quantity="other">i zapisz %s wariantów warunkowych</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Otrzymałeś prywatną wiadomość od Lichess.</string>
+  <string name="showUnreadLichessMessage">Otrzymałeś prywatną wiadomość od Chess-Online.</string>
   <string name="clickHereToReadIt">Kliknij tutaj, aby ją odczytać</string>
   <string name="sorry">Przykro nam :(</string>
   <string name="weHadToTimeYouOutForAWhile">Na pewien czas musieliśmy wykluczyć Cię z gry.</string>
@@ -984,14 +984,14 @@
   <string name="tryToWin">Staraj się wygrywać (lub przynajmniej remisować) każdą rozgrywaną partię.</string>
   <string name="resignLostGames">Poddawaj przegrane partie (nie czekaj na upłynięcie czasu gry).</string>
   <string name="temporaryInconvenience">Przepraszamy za chwilowe niedogodności,</string>
-  <string name="wishYouGreatGames">i życzymy Ci samych udanych partii na lichess.org.</string>
+  <string name="wishYouGreatGames">i życzymy Ci samych udanych partii na chess-online.com.</string>
   <string name="thankYouForReading">Dziękujemy za przeczytanie!</string>
   <string name="lifetimeScore">Wynik wszystkich partii</string>
   <string name="currentMatchScore">Wynik bieżącego meczu</string>
   <string name="agreementAssistance">Zgadzam się nie korzystać z pomocy podczas gry (programów szachowych, książek, baz danych, czy innych osób).</string>
   <string name="agreementNice">Zgadzam się odnosić zawsze z szacunkiem do innych graczy.</string>
   <string name="agreementMultipleAccounts" comment="%s will be replaced with the translation of 'termsOfService'">Zgadzam się, że nie będę tworzyć wielu kont (z wyjątkiem powodów podanych w %s).</string>
-  <string name="agreementPolicy">Zgadzam się przestrzegać wszystkich zasad Lichess.</string>
+  <string name="agreementPolicy">Zgadzam się przestrzegać wszystkich zasad Chess-Online.</string>
   <string name="searchOrStartNewDiscussion">Szukaj lub rozpocznij nową rozmowę</string>
   <string name="edit">Edytuj</string>
   <string name="bullet" comment="Probably best left untranslated. Leave it as 'Bullet' unless your language has a better word for it.">Bullet</string>
@@ -1030,7 +1030,7 @@
   <string name="congratsYouWon">Gratulacje, wygrałeś/aś!</string>
   <string name="gameVsX">Partia przeciwko %1$s</string>
   <string name="resVsX">%1$s vs %2$s</string>
-  <string name="lostAgainstTOSViolator">Przegrałeś/aś z kimś, kto naruszył warunki użytkowania Lichess</string>
+  <string name="lostAgainstTOSViolator">Przegrałeś/aś z kimś, kto naruszył warunki użytkowania Chess-Online</string>
   <string name="refundXpointsTimeControlY">Zwrot: %1$s %2$s punktów rankingu.</string>
   <string name="timeAlmostUp">Czas prawie minął!</string>
   <string name="clickToRevealEmailAddress">[Kliknij, aby ujawnić adres e-mail]</string>
@@ -1085,13 +1085,13 @@ Pozostaw puste, aby rozpoczynać partie z normalnej pozycji początkowej.</strin
   <string name="youCantStartNewGame">Nie możesz rozpocząć nowej partii, dopóki ta nie zostanie zakończona.</string>
   <string name="since">Od</string>
   <string name="until">Do</string>
-  <string name="lichessDbExplanation">Partie rankingowe pobrane od wszystkich graczy Lichess</string>
+  <string name="lichessDbExplanation">Partie rankingowe pobrane od wszystkich graczy Chess-Online</string>
   <string name="switchSides">Zmień kolor</string>
   <string name="closingAccountWithdrawAppeal">Zamknięcie konta spowoduje wycofanie Twojego odwołania</string>
   <string name="ourEventTips">Nasze wskazówki dotyczące organizacji wydarzeń</string>
   <string name="instructions">Instrukcje</string>
   <string name="showMeEverything">Pokaż mi wszystko</string>
-  <string name="lichessPatronInfo">Lichess jest organizacją niedochodową i całkowicie darmowym otwartym oprogramowaniem.
+  <string name="lichessPatronInfo">Chess-Online jest organizacją niedochodową i całkowicie darmowym otwartym oprogramowaniem.
 Wszystkie koszty operacyjne, rozwój i treści są finansowane wyłącznie z darowizn użytkowników.</string>
   <string name="nothingToSeeHere">W tej chwili nie ma nic do zobaczenia.</string>
   <string name="stats">Statystyki</string>

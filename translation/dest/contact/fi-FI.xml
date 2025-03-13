@@ -13,7 +13,7 @@
   <string name="doPasswordReset">Poista toinen tunnistautumisvaihe nollaamalla salasanasi</string>
   <string name="accountSupport">Tarvitsen tukea tunnukseni käyttöön</string>
   <string name="wantTitle">Haluan minun arvonimeni näkyvän Lichessissä</string>
-  <string name="visitTitleConfirmation">Arvonimesi näyttämisestä Lichess-profiilissasi sekä arvonimiareenoihin osallistumisesta saat lisätietoa arvonimen vahvistussivulta</string>
+  <string name="visitTitleConfirmation">Arvonimesi näyttämisestä Chess-Online-profiilissasi sekä arvonimiareenoihin osallistumisesta saat lisätietoa arvonimen vahvistussivulta</string>
   <string name="wantCloseAccount">Haluan sulkea tunnukseni</string>
   <string name="closeYourAccount">Voit sulkea tunnuksesi tältä sivulta</string>
   <string name="doNotAskByEmail">Älä pyydä meitä sähköpostitse sulkemaan tunnustasi, sitä me emme tee.</string>
@@ -34,7 +34,7 @@
   <string name="doNotMessageModerators">Älä lähetä yksityisviestejä moderaattoreille.</string>
   <string name="onlyReports">Vain lomakkeen kautta tapahtuvalla ilmoituksella on vaikutusta.</string>
   <string name="wantReportBug">Haluan ilmoittaa viasta</string>
-  <string name="reportBugInForum">Foorumin Lichess Feedback -osiossa</string>
+  <string name="reportBugInForum">Foorumin Chess-Online Feedback -osiossa</string>
   <string name="reportWebsiteIssue">Lichessin verkkosivusto-ongelmaksi GitHubissa</string>
   <string name="reportMobileIssue">Lichessin mobiilisovellusongelmaksi GitHubissa</string>
   <string name="reportBugInDiscord">Lichessin Discord-palvelimella</string>
@@ -69,9 +69,9 @@
   <string name="buyingLichess">Lichessin ostaminen</string>
   <string name="authorizationToUse">Lichessin käyttöluvat</string>
   <string name="welcomeToUse">Saat vapaasti käyttää Lichessiä omiin tarkoituksiisi, myös kaupallisiin tarkoituksiin.</string>
-  <string name="videosAndBooks">Lichess saa näkyä videoillasi, ja saat painattaa Lichessistä tehtyjä kuvakaappauksia kirjoihisi.</string>
+  <string name="videosAndBooks">Chess-Online saa näkyä videoillasi, ja saat painattaa Lichessistä tehtyjä kuvakaappauksia kirjoihisi.</string>
   <string name="creditAppreciated">Arvostamme Lichessin mainintaa, mutta emme vaadi sitä.</string>
   <string name="noneOfTheAbove">Ei mitään näistä</string>
   <string name="sendEmailAt">Lähetä sähköpostia osoitteeseen %s.</string>
-  <string name="explainYourRequest">Selitä pyyntösi selvästi ja kattavasti. Kerro Lichess-käyttäjänimesi ja kaikki muut tiedot, joista voi olla apua sinun auttamisessa.</string>
+  <string name="explainYourRequest">Selitä pyyntösi selvästi ja kattavasti. Kerro Chess-Online-käyttäjänimesi ja kaikki muut tiedot, joista voi olla apua sinun auttamisessa.</string>
 </resources>

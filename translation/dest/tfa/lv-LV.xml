@@ -10,5 +10,5 @@
   <string name="disableTwoFactor">Atspējot divfaktoru autentifikāciju</string>
   <string name="twoFactorEnabled">Iespējota divfaktoru autentifikācija</string>
   <string name="openTwoFactorApp">Atveriet divu faktoru autentifikācijas aplikāciju savā ierīcē, lai skatītu autentifikācijas kodu un apliecinātu savu identitāti.</string>
-  <string name="setupReminder">Lai nodrošinātu sava konta drošību, lūdzu ieslēdziet divfaktoru autentifikāciju lapā https://lichess.org/account/twofactor. Šo ziņu saņemat tādēļ, ka jūsu kontam ir īpaša atbildība, piemēram, kā komandas vadītājam, trenerim, vai straumētājam.</string>
+  <string name="setupReminder">Lai nodrošinātu sava konta drošību, lūdzu ieslēdziet divfaktoru autentifikāciju lapā https://chess-online.com/account/twofactor. Šo ziņu saņemat tādēļ, ka jūsu kontam ir īpaša atbildība, piemēram, kā komandas vadītājam, trenerim, vai straumētājam.</string>
 </resources>

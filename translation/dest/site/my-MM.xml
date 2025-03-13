@@ -108,11 +108,11 @@
   <string name="usernameOrEmail">ကစားသူအမည် သို့မဟုတ် email လိပ်စာ</string>
   <string name="signupUsernameHint">မရိုင်းစိုင်းသော အသုံးပြုသူ အမည်ကို ရွေးချယ်ပါ။  နောင်တွင် ပြင်ဆင်၍ မရတော့သည့် အပြင်၊ မလျော်ကန်သည့် အသုံးပြုသူအမည်ဖြင့် အကောင့်များကို ပိတ်ပစ်မည် ဖြစ်ပါသည်။</string>
   <string name="signupEmailHint">စကားဝှက် ပြောင်းရန် အတွက်သာ အသုံးပြုမည် ဖြစ်ပါသည်။</string>
-  <string name="neverTypeYourPassword">လူကြီးမင်း၏ Lichess ဝင်ရန် သုံးသည့် စကားဝှက်ကို အခြား မည်သည့် ဝက်ဗ်ဆိုက်တွင်မျှ ရိုက်ထည့်ခြင်း မပြုပါနှင့်။</string>
+  <string name="neverTypeYourPassword">လူကြီးမင်း၏ Chess-Online ဝင်ရန် သုံးသည့် စကားဝှက်ကို အခြား မည်သည့် ဝက်ဗ်ဆိုက်တွင်မျှ ရိုက်ထည့်ခြင်း မပြုပါနှင့်။</string>
   <string name="whiteTimeOut">အဖြူ အချိန်ကုန်</string>
   <string name="blackTimeOut">အနက် အချိန်ကုန်</string>
   <string name="play">ကစားမည်</string>
-  <string name="thisAccountViolatedTos">ဤအကောင့်က Lichess ၏ ဝန်ဆောင်မှု ဆိုင်ရာ စည်းကမ်းသတ်မှတ်ချက်များကို ဖောက်ဖျက်ခဲ့ပါသည်</string>
+  <string name="thisAccountViolatedTos">ဤအကောင့်က Chess-Online ၏ ဝန်ဆောင်မှု ဆိုင်ရာ စည်းကမ်းသတ်မှတ်ချက်များကို ဖောက်ဖျက်ခဲ့ပါသည်</string>
   <string name="mustBeInTeam">Must be in team %s</string>
   <string name="screenshotCurrentPosition">ဖန်သားပြင်မှ လက်ရှိ အနေအထားကို ရိုက်ကူးပါ</string>
   <string name="gameAsGIF">ပွဲ အစအဆုံးကို GIF အဖြစ် ရယူမည်</string>
@@ -176,6 +176,6 @@
   <string name="sentEmailWithLink">လင့်ခ် ပါဝင်သော အီးမေးလ် တစ်စောင် သင့်ထံ ပို့လိုက်ပါပြီ။</string>
   <string name="since">မှ</string>
   <string name="until">ထိ</string>
-  <string name="lichessDbExplanation">Lichess ရှိ ကစားသမား အားလုံးထံမှ ကျပန်း ရွေးချယ်ထားသည့် လက်ရည်တွက် ကစားပွဲများ</string>
+  <string name="lichessDbExplanation">Chess-Online ရှိ ကစားသမား အားလုံးထံမှ ကျပန်း ရွေးချယ်ထားသည့် လက်ရည်တွက် ကစားပွဲများ</string>
   <string name="switchSides">ဘက်ပြောင်း</string>
 </resources>

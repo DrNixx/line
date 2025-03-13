@@ -232,9 +232,9 @@
   <string name="forgotPassword">Unohditko salasanasi?</string>
   <string name="error.weakPassword">Tämä salasana on erittäin yleinen ja liian helppo arvata.</string>
   <string name="error.namePassword">Älä laita salasanaksesi käyttäjänimeäsi.</string>
-  <string name="blankedPassword">Olet käyttänyt samaa salasanaa toisella sivustolla, ja kyseinen sivusto on vaarantunut. Sinun on asetettava uusi salasana Lichess-tunnuksesi turvallisuuden varmistamiseksi. Kiitokset ymmärtäväisyydestäsi.</string>
+  <string name="blankedPassword">Olet käyttänyt samaa salasanaa toisella sivustolla, ja kyseinen sivusto on vaarantunut. Sinun on asetettava uusi salasana Chess-Online-tunnuksesi turvallisuuden varmistamiseksi. Kiitokset ymmärtäväisyydestäsi.</string>
   <string name="youAreLeavingLichess">Olet poistumassa Lichessistä</string>
-  <string name="neverTypeYourPassword">Älä koskaan kirjoita Lichess-salasanaasi toiselle sivustolle!</string>
+  <string name="neverTypeYourPassword">Älä koskaan kirjoita Chess-Online-salasanaasi toiselle sivustolle!</string>
   <string name="proceedToX">Siirry %s</string>
   <string name="passwordSuggestion">Älä ota käyttöön jonkun toisen ehdottamaa salasanaa. Hän voi varastaa sen avulla käyttäjätunnuksesi.</string>
   <string name="emailSuggestion">Älä ota käyttöön jonkun toisen ehdottamaa sähköpostiosoitetta. Hän voi varastaa sen avulla käyttäjätunnuksesi.</string>
@@ -529,7 +529,7 @@
   <string name="inlineNotation">Rivinsisäinen kommentointi</string>
   <string name="makeAStudy">Tallenna analyysisi tutkielmaksi, jos haluat säilyttää sen tai jakaa sen muiden kanssa.</string>
   <string name="clearSavedMoves">Tyhjennä siirrot</string>
-  <string name="previouslyOnLichessTV">Viimeksi Lichess TV:ssä</string>
+  <string name="previouslyOnLichessTV">Viimeksi Chess-Online TV:ssä</string>
   <string name="onlinePlayers">Paikalla olevat pelaajat</string>
   <string name="activePlayers">Aktiiviset pelaajat</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Huomaa, että peli on pisteytetty, vaikka siinä ei olekaan aikarajoitetta!</string>
@@ -894,7 +894,7 @@
   <string name="tryToWin">Yritä voittaa (tai edes pelata tasan) jokainen pelisi.</string>
   <string name="resignLostGames">Luovuta hävityt pelit (äläkä anna ajan kulua loppuun).</string>
   <string name="temporaryInconvenience">Pahoittelemme tilapäistä harmia,</string>
-  <string name="wishYouGreatGames">ja toivotamme hyviä pelejä lichess.org -sivustolla.</string>
+  <string name="wishYouGreatGames">ja toivotamme hyviä pelejä chess-online.com -sivustolla.</string>
   <string name="thankYouForReading">Kiitos, että luit tämän!</string>
   <string name="lifetimeScore">Kaikkien aikojen yhteistilanne</string>
   <string name="currentMatchScore">Nykyisen ottelun tilanne</string>
@@ -1001,7 +1001,7 @@ Jätä kenttä tyhjäksi, jos haluat pelien alkavan normaalista alkuasemasta.</s
   <string name="ourEventTips">Meidän vinkkimme tapahtumien järjestämiseen</string>
   <string name="instructions">Ohjeet</string>
   <string name="showMeEverything">Näytä kaikki</string>
-  <string name="lichessPatronInfo">Lichess on hyväntekeväisyysjärjestö ja täysin ilmainen avoimen lähdekoodin ohjelmisto.
+  <string name="lichessPatronInfo">Chess-Online on hyväntekeväisyysjärjestö ja täysin ilmainen avoimen lähdekoodin ohjelmisto.
 Kaikki toimintakustannukset, kehitystyö ja sisältö rahoitetaan yksinomaan käyttäjien lahjoituksilla.</string>
   <string name="nothingToSeeHere">Täällä ei ole tällä hetkellä mitään nähtävää.</string>
   <string name="stats">Tilastot</string>

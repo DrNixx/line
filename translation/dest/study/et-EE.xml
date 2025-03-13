@@ -134,7 +134,7 @@
   <string name="interestingMove">Huvitav käik</string>
   <string name="dubiousMove" comment="dubiousMove&#10;A questionable move.">Kahtlane käik</string>
   <string name="onlyMove" comment="onlyMove&#10;The only possible move. This is a label that can be placed in a study of a past game. It may not technically be the only move, but the only feasible one.">Ainus käik</string>
-  <string name="zugzwang" comment="zugzwang&#10;What zugzwang is: https://lichess.org/practice/intermediate-tactics/zugzwang/9cKgYrHb/ybYJ9gNa&#10;&#10;This specific string is a label that can be applied to a position in a study, to indicate one side is in zugzwang.">Sundkäik</string>
+  <string name="zugzwang" comment="zugzwang&#10;What zugzwang is: https://chess-online.com/practice/intermediate-tactics/zugzwang/9cKgYrHb/ybYJ9gNa&#10;&#10;This specific string is a label that can be applied to a position in a study, to indicate one side is in zugzwang.">Sundkäik</string>
   <string name="equalPosition">Võrdne positsioon</string>
   <string name="unclearPosition" comment="unclearPosition&#10;It is unclear who is winning or losing.">Ebaselge positsioon</string>
   <string name="whiteIsSlightlyBetter">Valgel on kerge eelis</string>
@@ -146,8 +146,8 @@
   <string name="novelty" comment="novelty&#10;&#10;A move in the opening that has not been played before.&#10;https://en.wikipedia.org/wiki/Glossary_of_chess#theoretical_novelty">Uudsus</string>
   <string name="development" comment="development&#10;Used in studies - shows that the player made a developing move (e.g. pushing pawns to open their bishops in the opening).">Arendus</string>
   <string name="initiative">Algatus</string>
-  <string name="attack" comment="attack&#10;A label that can be applied to a position in a Lichess study. Noun.">Rünnak</string>
-  <string name="counterplay" comment="counterplay&#10;A label that can be applied to a position in a Lichess study. Noun.&#10;&#10;Generally describes a defending player who is under attack, and makes an attacking move elsewhere.">Vastumäng</string>
+  <string name="attack" comment="attack&#10;A label that can be applied to a position in a Chess-Online study. Noun.">Rünnak</string>
+  <string name="counterplay" comment="counterplay&#10;A label that can be applied to a position in a Chess-Online study. Noun.&#10;&#10;Generally describes a defending player who is under attack, and makes an attacking move elsewhere.">Vastumäng</string>
   <string name="nextChapter">Järgmine peatükk</string>
   <string name="prevChapter">Eelmine peatükk</string>
   <string name="studyActions">Uuringu toimingud</string>

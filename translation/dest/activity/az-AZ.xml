@@ -3,8 +3,8 @@
   <string name="activity">Aktivlik</string>
   <string name="hostedALiveStream">Canlı yayım etdi</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">Lichess.org\'u %1$s aylığına %2$s olaraq dəstəklədi</item>
-    <item quantity="other">Lichess.org\'u %1$s aylığına %2$s olaraq dəstəklədi</item>
+    <item quantity="one">Chess-Online.com\'u %1$s aylığına %2$s olaraq dəstəklədi</item>
+    <item quantity="other">Chess-Online.com\'u %1$s aylığına %2$s olaraq dəstəklədi</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">%2$s mövzusunda %1$s pozisiya məşq etdi</item>
@@ -54,7 +54,7 @@
     <item quantity="one">%s yeni çalışma yaratdı</item>
     <item quantity="other">%s yeni çalışma yaratdı</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="one">%s turnirə qatıldı</item>
     <item quantity="other">%s taktiki tapmaca həll etdi</item>
   </plurals>
@@ -67,7 +67,7 @@
     <item quantity="other">%s İsveçrə sistemli turnirə qatıldı</item>
   </plurals>
   <string name="rankedInSwissTournament">%2$s turnirində %1$s-ci oldu</string>
-  <string name="signedUp">lichess.org\'a üzv oldu</string>
+  <string name="signedUp">chess-online.com\'a üzv oldu</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">%s komandasına qatıldı</item>
     <item quantity="other">%s komandasına qatıldı</item>

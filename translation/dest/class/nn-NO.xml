@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessClasses">Lichess-klasser</string>
-  <string name="teachClassesOfChessStudents">Undervis sjakkelev-klasser med undervisningsverktya til Lichess.</string>
+  <string name="lichessClasses">Chess-Online-klasser</string>
+  <string name="teachClassesOfChessStudents">Undervis sjakkelev-klasser med undervisningsverktya til Chess-Online.</string>
   <string name="features">Funksjonar</string>
   <string name="quicklyGenerateSafeUsernames">Generer raskt sikre brukarnamn og passord til elevane</string>
   <string name="trackStudentProgress">Følg utviklinga til elevane i parti og løysing av sjakkproblem</string>
   <string name="messageAllStudents">Gje alle elevar melding om nytt undervisningsmateriale</string>
   <string name="freeForAllForever" comment="The automated QA checker treats &quot;100%&quot; as if it is a variable, and will give a warning if you change it.&#10;It is not a variable.&#10;&#10;You can still save your translation writing it as &quot;%100&quot; for example, in case this is more valid in your language.">100% gratis for alle, for alltid, fri for reklame og sporing</string>
-  <string name="applyToBeLichessTeacher">Søk om å bli Lichess-lærar</string>
+  <string name="applyToBeLichessTeacher">Søk om å bli Chess-Online-lærar</string>
   <string name="noClassesYet">Så langt ingen klasser.</string>
   <string name="teachersX">Lærarar: %s</string>
   <string name="newClass">Ny klasse</string>
@@ -32,22 +32,22 @@
   <string name="realName">Verkeleg namn</string>
   <string name="privateWillNeverBeShown">Privat. Vil aldri bli vist utanfor klassen. Hjelper deg med å hugse kven eleven er.</string>
   <string name="addStudent">Legg til elev</string>
-  <string name="lichessProfileXCreatedForY">Lichess-profil %1$s oppretta til %2$s.</string>
+  <string name="lichessProfileXCreatedForY">Chess-Online-profil %1$s oppretta til %2$s.</string>
   <string name="studentCredentials">Elev:  %1$s
 Brukarnamn: %2$s
 Passord: %3$s</string>
-  <string name="inviteALichessAccount">Invitér ein Lichess-konto</string>
-  <string name="inviteDesc1">Elevar som allereie har en Lichess-konto kan inviterast til klassen.</string>
-  <string name="inviteDesc2">Dei vil få ei melding på Lichess med ei lenke dei kan bruke for å melde seg på klassen.</string>
+  <string name="inviteALichessAccount">Invitér ein Chess-Online-konto</string>
+  <string name="inviteDesc1">Elevar som allereie har en Chess-Online-konto kan inviterast til klassen.</string>
+  <string name="inviteDesc2">Dei vil få ei melding på Chess-Online med ei lenke dei kan bruke for å melde seg på klassen.</string>
   <string name="inviteDesc3">Viktig: Invitér berre elevar du kjenner og som har eit aktivt ønske om å delta i klassen.</string>
   <string name="inviteDesc4">Send aldri uoppfordra invitasjonar til tilfeldige spelarar.</string>
-  <string name="createANewLichessAccount">Opprett ein ny Lichess-konto</string>
-  <string name="createDesc1">Du kan her opprette Lichess-kontoar for elevar som ikkje allereie har eigen konto.</string>
+  <string name="createANewLichessAccount">Opprett ein ny Chess-Online-konto</string>
+  <string name="createDesc1">Du kan her opprette Chess-Online-kontoar for elevar som ikkje allereie har eigen konto.</string>
   <string name="createDesc2">E-post-adresse er ikke påkravd. Eit passord blir generert og det må du gje vidare til eleven.</string>
   <string name="createDesc3">Viktig: ein elev kan ikkje ha fleire konti.</string>
   <string name="createDesc4">Bruk invitasjonsskjemaet dersom dei allereie har ein brukarkonto.</string>
   <string name="createStudentWarning">Opprett kontoar berre for reelle elevar. Ikkje opprett fleire kontoar til deg sjølv. Då vert du utestengd.</string>
-  <string name="lichessUsername">Lichess-brukarnamn</string>
+  <string name="lichessUsername">Chess-Online-brukarnamn</string>
   <string name="generateANewUsername">Generer eit nytt brukarnamn</string>
   <string name="welcomeToClass">Velkomen til klassen din: %s.
 Her er lenka som gir deg tilgjenge til klassen.</string>
@@ -106,7 +106,7 @@ Her er lenka som gir deg tilgjenge til klassen.</string>
   <string name="youDeclinedThisInvitation">Du avviste denne invitasjonen.</string>
   <string name="orSeparator" comment="Used as separator between invite sections. Shown as large '~ or ~'.">eller</string>
   <string name="createMultipleAccounts">Opprett fleire Lichesskontoar på ein gong</string>
-  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Du kan òg %s for å oppretta fleire Lichess-kontoar frå ei liste med elevnamn.</string>
+  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Du kan òg %s for å oppretta fleire Chess-Online-kontoar frå ei liste med elevnamn.</string>
   <string name="useThisForm" comment="Link text in multipleAccsFromDescription">bruk dette skjemaet</string>
   <string name="maxStudentsNote" comment="%1$s will be replaced with a large number (currently 100).\n%2$s is a link and will be replaced with the translation of createMoreClasses. Make sure both strings fit together.">Legg merke til at klassen kan ha opp til %1$s elevar. For å administrera fleire elevar, %2$s.</string>
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">opprett flere klassar</string>

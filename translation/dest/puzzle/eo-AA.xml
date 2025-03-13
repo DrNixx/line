@@ -31,8 +31,8 @@
   <string name="byOpenings">Laŭ malfermoj</string>
   <string name="puzzlesByOpenings">Puzloj laŭ malfermoj</string>
   <string name="openingsYouPlayedTheMost">Malfermoj kiujn vi plej ludis en rangaj ludoj</string>
-  <string name="useFindInPage" comment="useFindInPage&#10;&#10;Appears on https://lichess.org/training/openings for mobile and tablet users&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Uzu \"Serĉi ĉi tiun paĝon\" de la retumila menuo por trovi vian plej favora malfermo!</string>
-  <string name="useCtrlF" comment="Appears on https://lichess.org/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Uzu Ctrl+f por trovi vian plej ŝatatan malfermon!</string>
+  <string name="useFindInPage" comment="useFindInPage&#10;&#10;Appears on https://chess-online.com/training/openings for mobile and tablet users&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Uzu \"Serĉi ĉi tiun paĝon\" de la retumila menuo por trovi vian plej favora malfermo!</string>
+  <string name="useCtrlF" comment="Appears on https://chess-online.com/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Uzu Ctrl+f por trovi vian plej ŝatatan malfermon!</string>
   <string name="notTheMove">Tiu ne estas la movo!</string>
   <string name="trySomethingElse">Provu ion alian.</string>
   <string name="ratingX">Taksado: %s</string>
@@ -76,7 +76,7 @@
   <string name="lookupOfPlayer">Elserĉi puzlojn el ludoj de ludanto</string>
   <string name="fromXGames">Puzloj el %s\' ludoj</string>
   <string name="searchPuzzles">Serĉi puzlojn</string>
-  <string name="fromMyGamesNone">Vi ne havas puzlojn en la datumbazo, sed Lichess ankoraŭ tre amas vin.
+  <string name="fromMyGamesNone">Vi ne havas puzlojn en la datumbazo, sed Chess-Online ankoraŭ tre amas vin.
 
 Ludu rapidaj kaj klasikaj ludoj por pliigi viajn ŝancojn de aldoni puzlon de vi!</string>
   <string name="fromXGamesFound">%1$s puzlojn trovis en %2$s ludoj</string>

@@ -3,7 +3,7 @@
   <string name="activity">Эшчәнлек</string>
   <string name="hostedALiveStream">Стрим хуҗасы</string>
   <plurals name="supportedNbMonths">
-    <item quantity="other">lichess.org сайтына %1$s айга %2$s буларак ярдәм күрсәтте</item>
+    <item quantity="other">chess-online.com сайтына %1$s айга %2$s буларак ярдәм күрсәтте</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="other">%2$s-да %1$s күнегү ясады</item>
@@ -41,7 +41,7 @@
   <plurals name="createdNbStudies">
     <item quantity="other">Яңа %s өйрәнеш оештырды</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="other">Тәмам колынды %s Мәйдан бәйгеләре</item>
   </plurals>
   <plurals name="rankedInTournament">
@@ -51,7 +51,7 @@
     <item quantity="other">Тәмам колындылар %s швецар бәйгесе</item>
   </plurals>
   <string name="rankedInSwissTournament">Ранкы #%1$s %2$s өчендә</string>
-  <string name="signedUp">Lichess.org ка кергән</string>
+  <string name="signedUp">Chess-Online.Com ка кергән</string>
   <plurals name="joinedNbTeams">
     <item quantity="other">%s җәмәга кушылды</item>
   </plurals>

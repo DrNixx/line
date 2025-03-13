@@ -4,9 +4,9 @@
   <string name="friendBlogs">Blogi prijateljev</string>
   <string name="likedBlogs">Všečkane objave v spletnem dnevniku</string>
   <string name="blogTopics">Teme bloga</string>
-  <string name="lichessOfficialBlog">Uradni blog Lichess</string>
+  <string name="lichessOfficialBlog">Uradni blog Chess-Online</string>
   <string name="continueReadingPost">Nadaljujte z branjem te objave</string>
-  <string name="lichessBlogPostsFromXYear">Objave v spletnem dnevniku Lichess v %s</string>
+  <string name="lichessBlogPostsFromXYear">Objave v spletnem dnevniku Chess-Online v %s</string>
   <string name="previousBlogPosts">Prejšnje objave v spletnem dnevniku</string>
   <string name="xBlog">%s blog</string>
   <string name="newPost">Nova objava</string>
@@ -54,7 +54,7 @@
   <string name="deleteBlog">Izbriši ta blog post dokončno</string>
   <string name="safeToUseImages">Varno je uporabljati slike z naslednjih spletnih mest:</string>
   <string name="selectPostTopics">Izberite teme, o katerih govori vaša objava</string>
-  <string name="useImagesYouMadeYourself">Uporabite lahko tudi slike, ki ste jih naredili sami, slike, ki ste jih posneli, posnetke zaslona Lichess... vse, kar ni avtorsko zaščiteno s strani nekoga drugega.</string>
+  <string name="useImagesYouMadeYourself">Uporabite lahko tudi slike, ki ste jih naredili sami, slike, ki ste jih posneli, posnetke zaslona Chess-Online... vse, kar ni avtorsko zaščiteno s strani nekoga drugega.</string>
   <string name="safeAndRespectfulContent">Prosimo, objavite samo varno in spoštljivo vsebino. Ne kopirajte vsebine nekoga drugega.</string>
   <string name="inappropriateContentAccountClosed">Vse, kar je neprimerno, lahko zapre vaš račun.</string>
   <string name="blogTips">Naši preprosti nasveti za pisanje odličnih objav v blogu</string>

@@ -5,9 +5,9 @@
   <string name="studentCredentials">Mag-aaral: %1$s
 Username: %2$s
 Password: %3$s</string>
-  <string name="inviteALichessAccount">Imbitahin ang isang Lichess akawnt</string>
-  <string name="inviteDesc1">Kapag mayroon nang Lichess akawnt ang mag-aaral, maaari mo silang imbitahin sa klase.</string>
-  <string name="lichessUsername">Lichess username</string>
+  <string name="inviteALichessAccount">Imbitahin ang isang Chess-Online akawnt</string>
+  <string name="inviteDesc1">Kapag mayroon nang Chess-Online akawnt ang mag-aaral, maaari mo silang imbitahin sa klase.</string>
+  <string name="lichessUsername">Chess-Online username</string>
   <string name="invitationToClass">Inimbita ka na sumali sa klaseng \"%s\" bilang isang mag-aaral.</string>
   <string name="clickToViewInvitation">Pindutin ang link para matingnan ang imbitasyon:</string>
   <plurals name="nbPendingInvitations">

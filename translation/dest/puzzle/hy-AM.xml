@@ -31,8 +31,8 @@
   <string name="byOpenings">Ըստ դեբյուտների</string>
   <string name="puzzlesByOpenings">Դեբյուտային խնդիրներ</string>
   <string name="openingsYouPlayedTheMost">Դեբյուտներ, որոնք դուք խաղացել եք վարկանիշային կուսակցությունների մեծ մասում</string>
-  <string name="useFindInPage" comment="useFindInPage&#10;&#10;Appears on https://lichess.org/training/openings for mobile and tablet users&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Օգտագործեք \"Գտել էջում \" զննարկչի ընտրացանկում՝ ձեր նախընտրած դեբյուտը գտնելու՛ համար:</string>
-  <string name="useCtrlF" comment="Appears on https://lichess.org/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Օգտագործեք Ctrl + f ՝ Ձեր նախընտրած դեբյուտը գտնելու՛ համար։</string>
+  <string name="useFindInPage" comment="useFindInPage&#10;&#10;Appears on https://chess-online.com/training/openings for mobile and tablet users&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Օգտագործեք \"Գտել էջում \" զննարկչի ընտրացանկում՝ ձեր նախընտրած դեբյուտը գտնելու՛ համար:</string>
+  <string name="useCtrlF" comment="Appears on https://chess-online.com/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Օգտագործեք Ctrl + f ՝ Ձեր նախընտրած դեբյուտը գտնելու՛ համար։</string>
   <string name="notTheMove">Վատ քայլ է</string>
   <string name="trySomethingElse">Փորձեք այլ կերպ։</string>
   <string name="ratingX">Վարկանիշ՝ %s</string>
@@ -76,7 +76,7 @@
   <string name="lookupOfPlayer">Փնտրել խնդիրներ խաղացողի պարտիաներից</string>
   <string name="fromXGames">Խնդիրներ %s-ի պարտիաներից</string>
   <string name="searchPuzzles">Փնտրել խնդիրներ</string>
-  <string name="fromMyGamesNone">Տվյալների բազայում Ձեր պարտիաներից խնդիրներ չկան, բայց Lichess-ը Ձեզ հետ հույսեր է կապում։ Խաղացե՛ք ավելի շատ արագ կամ դասական ժամակարգով պարտիաներ, և խնդիրներ ունեցող խաղացողների ցանկում հայտնվելու Ձեր հնարավորությունները կմեծանան։</string>
+  <string name="fromMyGamesNone">Տվյալների բազայում Ձեր պարտիաներից խնդիրներ չկան, բայց Chess-Online-ը Ձեզ հետ հույսեր է կապում։ Խաղացե՛ք ավելի շատ արագ կամ դասական ժամակարգով պարտիաներ, և խնդիրներ ունեցող խաղացողների ցանկում հայտնվելու Ձեր հնարավորությունները կմեծանան։</string>
   <string name="fromXGamesFound">Գտնվել է %1$s խնդիր %2$s պարտիաներում</string>
   <string name="puzzleDashboardDescription">Մարզվե՛ք, վերլուծե՛ք, բարելավե՛ք</string>
   <plurals name="nbPlayed">

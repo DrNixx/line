@@ -227,9 +227,9 @@
   <string name="forgotPassword">Заборавили сте лозинку?</string>
   <string name="error.weakPassword">Ова лозинка је изузетно честа и сувише лака да се погоди.</string>
   <string name="error.namePassword">Не користите своје корисничко име као шифру.</string>
-  <string name="blankedPassword">Користио си исту лозинку на другом сајту и тај сајт је био хакован. Да бисмо обезбедили сигурност твог Lichess налога, неопходно је да поставимо нову лозинку. Хвала на разумевању.</string>
+  <string name="blankedPassword">Користио си исту лозинку на другом сајту и тај сајт је био хакован. Да бисмо обезбедили сигурност твог Chess-Online налога, неопходно је да поставимо нову лозинку. Хвала на разумевању.</string>
   <string name="youAreLeavingLichess">Напуштате Личесс</string>
-  <string name="neverTypeYourPassword">Никада немој користити своју Lichess лозинку на неком другом сајту!</string>
+  <string name="neverTypeYourPassword">Никада немој користити своју Chess-Online лозинку на неком другом сајту!</string>
   <string name="proceedToX">Настаби до %s</string>
   <string name="passwordSuggestion">Немој користити лозинку коју ти је предложио неко други. Он ће је искористити да преузме твој налог.</string>
   <string name="emailSuggestion">Немој користити мејл адресу коју ти је предложио неко други. Он ће је искористити да преузме твој налог.</string>
@@ -347,7 +347,7 @@
     <item quantity="few">Додај %s секунде</item>
     <item quantity="other">Додај %s секунди</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Овај налог није поштовао Lichess услове коришћења</string>
+  <string name="thisAccountViolatedTos">Овај налог није поштовао Chess-Online услове коришћења</string>
   <string name="openingExplorerAndTablebase">Претраживач отварања &amp; база података</string>
   <string name="takeback">Повлачење потеза</string>
   <string name="proposeATakeback">Предложи повлачење потеза</string>
@@ -901,7 +901,7 @@
   <string name="tryToWin">Пробај да победиш (или барем изједначиш) сваку партију коју одиграш.</string>
   <string name="resignLostGames">Предај изгубљене игре (немој пуштати да време истекне).</string>
   <string name="temporaryInconvenience">Извињавамо се на привременој нелагодности,</string>
-  <string name="wishYouGreatGames">и желимо вам одличне партије на lichess.org.</string>
+  <string name="wishYouGreatGames">и желимо вам одличне партије на chess-online.com.</string>
   <string name="thankYouForReading">Хвала на читању!</string>
   <string name="lifetimeScore">Животни скор</string>
   <string name="currentMatchScore">Скор тренутног меча</string>
@@ -956,7 +956,7 @@
   <string name="navigateMoveTree">Кретање кроз листу потеза</string>
   <string name="mouseTricks">Покрети мишем</string>
   <string name="toggleLocalAnalysis">Одабери анализу на свом компјутеру</string>
-  <string name="toggleAllAnalysis">Одабери анализу на свом компјутеру и на Lichess серверима</string>
+  <string name="toggleAllAnalysis">Одабери анализу на свом компјутеру и на Chess-Online серверима</string>
   <string name="playComputerMove">Одиграј најбољи потез који сугерише компјутер</string>
   <string name="analysisOptions">Опције при анализи</string>
   <string name="focusChat">Пређи на чет</string>
@@ -972,7 +972,7 @@
   <string name="youCantStartNewGame">Не можеш започети нову партију све док ову не завршиш.</string>
   <string name="since">Од</string>
   <string name="until">До</string>
-  <string name="lichessDbExplanation">Бодоване партије одигране на Lichess</string>
+  <string name="lichessDbExplanation">Бодоване партије одигране на Chess-Online</string>
   <string name="switchSides">Промени страну</string>
   <string name="closingAccountWithdrawAppeal">Ако затвриш налог, твоја жалба ће бити поништена</string>
   <string name="ourEventTips">Наши савети за организовање догађаја</string>

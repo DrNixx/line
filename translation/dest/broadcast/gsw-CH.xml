@@ -11,7 +11,7 @@
   <string name="newBroadcast">Neui Live-Überträgige</string>
   <string name="subscribedBroadcasts">Abonnierti Überträgige</string>
   <string name="aboutBroadcasts">Über Überträgige</string>
-  <string name="howToUseLichessBroadcasts">Wie mer Lichess-Überträgige benutzt.</string>
+  <string name="howToUseLichessBroadcasts">Wie mer Chess-Online-Überträgige benutzt.</string>
   <string name="theNewRoundHelp">Die neu Runde wird us de gliche Mitglieder und Mitwürkende beschtah, wie die Vorherig.</string>
   <string name="addRound">E Rundi zuefüege</string>
   <string name="ongoing">Laufend</string>
@@ -23,8 +23,8 @@
   <string name="fullDescription">Vollschtändigi Ereignisbeschribig</string>
   <string name="fullDescriptionHelp">Optionali, usfüehrlichi Beschribig vu de Überträgig. %1$s isch verfügbar. Die Beschribig muess chürzer als %2$s Zeiche si.</string>
   <string name="sourceSingleUrl">PGN Quälle URL</string>
-  <string name="sourceUrlHelp">URL wo Lichess abfrögt, für PGN Aktualisierige z\'erhalte. Sie muess öffentlich im Internet zuegänglich si.</string>
-  <string name="sourceGameIds">Bis zu 64 Lichess Schpiel-IDs, trännt dur en Leerschlag.</string>
+  <string name="sourceUrlHelp">URL wo Chess-Online abfrögt, für PGN Aktualisierige z\'erhalte. Sie muess öffentlich im Internet zuegänglich si.</string>
+  <string name="sourceGameIds">Bis zu 64 Chess-Online Schpiel-IDs, trännt dur en Leerschlag.</string>
   <string name="startDateTimeZone">Startdatum i de lokale Zitzone vum Turnier: %s</string>
   <string name="startDateHelp">Optional, falls du weisch, wänn das Ereignis afangt</string>
   <string name="currentGameUrl">URL vom laufende Schpiel</string>
@@ -47,7 +47,7 @@
   <string name="ageThisYear">Alter i dem Jahr</string>
   <string name="unrated">Ungwertet</string>
   <string name="recentTournaments">Aktuellschti Turnier</string>
-  <string name="openLichess">In Lichess öffne</string>
+  <string name="openLichess">In Chess-Online öffne</string>
   <string name="teams">Teams</string>
   <string name="boards">Brätter</string>
   <string name="overview">Überblick</string>

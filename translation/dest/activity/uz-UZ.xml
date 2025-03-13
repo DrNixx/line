@@ -3,8 +3,8 @@
   <string name="activity">Amallar</string>
   <string name="hostedALiveStream">Jonli ijro hostlandi</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">%1$s oy uchun %2$s tarzida lichess.org qo\'llab quvvatlanadi</item>
-    <item quantity="other">%1$s oylar uchun %2$s tarzida lichess.org qo\'llab quvvatlanadi</item>
+    <item quantity="one">%1$s oy uchun %2$s tarzida chess-online.com qo\'llab quvvatlanadi</item>
+    <item quantity="other">%1$s oylar uchun %2$s tarzida chess-online.com qo\'llab quvvatlanadi</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">Amaliyot %2$s dan %1$s o\'rinda</item>
@@ -58,7 +58,7 @@
     <item quantity="one">%s ta yangi ta\'lim yaratildi</item>
     <item quantity="other">%s ta yangi ta\'limlar yaratildi</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="one">%s turnirda ishtirok etilgan</item>
     <item quantity="other">%s turnirlarda ishtirok etilgan</item>
   </plurals>
@@ -71,7 +71,7 @@
     <item quantity="other">%s turnirlar shveytsarcha tizimda yakunlangan</item>
   </plurals>
   <string name="rankedInSwissTournament">O‘rin: #%1$s ishtirok etgan %2$s lar ichidan</string>
-  <string name="signedUp">Lichess.org dan chiqildi</string>
+  <string name="signedUp">Chess-Online.Com dan chiqildi</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">%s jamoaga qo\'shildi</item>
     <item quantity="other">%s jamoalarga qo\'shildi</item>

@@ -289,7 +289,7 @@ final class TeamApi(
     val users  = parseTagifyInput(json).toList
     val client = lila.common.HTTPRequest.printClient(req)
     logger.info:
-      s"kick members ${users.size} by ${me.username} from lichess.org/team/${team.slug} $client | ${users.map(_.id).mkString(" ")}"
+      s"kick members ${users.size} by ${me.username} from live.chess-online.com/team/${team.slug} $client | ${users.map(_.id).mkString(" ")}"
     users.sequentiallyVoid(kick(team, _))
 
   object blocklist:

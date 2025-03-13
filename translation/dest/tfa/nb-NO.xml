@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="twoFactorAuth">Tofaktorautentisering</string>
-  <string name="twoFactorHelp">Tofaktorautentisering er et ekstra lag med sikkerhet for Lichess-kontoen din.</string>
+  <string name="twoFactorHelp">Tofaktorautentisering er et ekstra lag med sikkerhet for Chess-Online-kontoen din.</string>
   <string name="twoFactorAppRecommend">Skaff deg en app for tofaktorautentisering. Vi anbefaler følgende apper:</string>
   <string name="scanTheCode">Skann QR-koden med appen.</string>
   <string name="enterPassword">Skriv inn passordet ditt og autentiseringskoden generert av appen for å fullføre oppsettet. Du må bruke en ny autentiseringskode hver gang du logger inn.</string>
@@ -13,5 +13,5 @@
   <string name="twoFactorEnabled">Tofaktorautentisering skrudd på</string>
   <string name="twoFactorToDisable">Du trenger passordet ditt og en autentiseringskode fra autentiseringsappen din for å deaktivere tofaktorautentisering.</string>
   <string name="openTwoFactorApp">Åpne tofaktorautentiseringsappen på enheten din for å vise autentiseringskoden og bekrefte identiteten din.</string>
-  <string name="setupReminder">Sikre kontoen din ved å skru på tofaktorautentisering på https://lichess.org/account/twofactor. Du mottar denne meldingen fordi kontoen din har særskilte ansvarsområder, slik som lagleder, trener, lærer eller strømmer.</string>
+  <string name="setupReminder">Sikre kontoen din ved å skru på tofaktorautentisering på https://chess-online.com/account/twofactor. Du mottar denne meldingen fordi kontoen din har særskilte ansvarsområder, slik som lagleder, trener, lærer eller strømmer.</string>
 </resources>

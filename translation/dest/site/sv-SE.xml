@@ -233,8 +233,8 @@
   <string name="error.weakPassword">Detta lösenord är extremt vanligt, och alltför lätt att gissa.</string>
   <string name="error.namePassword">Använd inte ditt användarnamn som lösenord.</string>
   <string name="blankedPassword">Du har använt samma lösenord på en annan hemsida, och den hemsidan har blivit hackad. För att säkra ditt Lichesskonto måste du välja ett nytt lösenord. Tack för din förståelse.</string>
-  <string name="youAreLeavingLichess">Du lämnar Lichess</string>
-  <string name="neverTypeYourPassword">Skriv aldrig ditt Lichess-lösenord på en annan webbplats!</string>
+  <string name="youAreLeavingLichess">Du lämnar Chess-Online</string>
+  <string name="neverTypeYourPassword">Skriv aldrig ditt Chess-Online-lösenord på en annan webbplats!</string>
   <string name="proceedToX">Gå vidare till %s</string>
   <string name="passwordSuggestion">Ange inte ett lösenord som föreslagits av någon annan. De kommer att använda det för att stjäla ditt konto.</string>
   <string name="emailSuggestion">Ange inte en e-postadress som föreslagits av någon annan. De kommer att använda den för att stjäla ditt konto.</string>
@@ -343,7 +343,7 @@
     <item quantity="one">Ge %s sekund</item>
     <item quantity="other">Ge %s sekunder</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Detta konto bröt mot användarvillkoren för Lichess</string>
+  <string name="thisAccountViolatedTos">Detta konto bröt mot användarvillkoren för Chess-Online</string>
   <string name="openingExplorerAndTablebase">Öppningsutforskare &amp; slutspelsteori</string>
   <string name="takeback">Gör om drag</string>
   <string name="proposeATakeback">Fråga om du får göra om draget</string>
@@ -529,7 +529,7 @@
   <string name="inlineNotation">Visa notation</string>
   <string name="makeAStudy">För förvaring och delning, överväg att göra en studie.</string>
   <string name="clearSavedMoves">Rensa schack drag</string>
-  <string name="previouslyOnLichessTV">Föregående Lichess-TV</string>
+  <string name="previouslyOnLichessTV">Föregående Chess-Online-TV</string>
   <string name="onlinePlayers">Inloggade spelare</string>
   <string name="activePlayers">Mest aktiva spelare</string>
   <string name="bewareTheGameIsRatedButHasNoClock">OBS! Partiet är rankat men har ingen tidsgräns.</string>
@@ -667,7 +667,7 @@
   <string name="streamersMenu">Videosändningar</string>
   <string name="mobileApp">Mobilapp</string>
   <string name="webmasters">Webbmasters</string>
-  <string name="about">Om Lichess</string>
+  <string name="about">Om Chess-Online</string>
   <string name="aboutX">Om %s</string>
   <string name="xIsAFreeYLibreOpenSourceChessServer">%1$s är en gratis (%2$s), oberoende och reklamfri schackserver med öppen källkod.</string>
   <string name="really">på riktigt</string>
@@ -697,7 +697,7 @@
   <string name="simulHostExtraTime">Värdens extratid</string>
   <string name="simulAddExtraTimePerPlayer">Lägg till en starttid på klockan för varje spelare som går med i simultanmatchen.</string>
   <string name="simulHostExtraTimePerPlayer">Extratid för värden för varje spelare som deltar</string>
-  <string name="lichessTournaments">Lichess-turneringar</string>
+  <string name="lichessTournaments">Chess-Online-turneringar</string>
   <string name="tournamentFAQ">Turnering: Vanliga frågor</string>
   <string name="timeBeforeTournamentStarts">Tid tills turneringen börjar</string>
   <string name="averageCentipawnLoss">Genomsnittligt förlorad hundradelsbonde</string>
@@ -880,7 +880,7 @@
     <item quantity="one">och spara %s linje av förhandsdrag</item>
     <item quantity="other">och spara %s linje av förhandsdrag</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Du har fått ett privat meddelande från Lichess.</string>
+  <string name="showUnreadLichessMessage">Du har fått ett privat meddelande från Chess-Online.</string>
   <string name="clickHereToReadIt">Klicka här för att läsa den</string>
   <string name="sorry">Beklagar :(</string>
   <string name="weHadToTimeYouOutForAWhile">Vi är tvugna att stänga av dig en stund.</string>
@@ -893,14 +893,14 @@
   <string name="tryToWin">Försök vinna (eller åtminstone nå remi i) varje parti som du spelar.</string>
   <string name="resignLostGames">Ge upp förlorade partier (i stället för att låta tiden rinna ut).</string>
   <string name="temporaryInconvenience">Vi ber om ursäkt för den tillfälliga olägenheten,</string>
-  <string name="wishYouGreatGames">och önskar dig bra partier på lichess.org.</string>
+  <string name="wishYouGreatGames">och önskar dig bra partier på chess-online.com.</string>
   <string name="thankYouForReading">Tack för att du läste!</string>
   <string name="lifetimeScore">Livstidspoäng</string>
   <string name="currentMatchScore">Nuvarande matchpoäng</string>
   <string name="agreementAssistance">Jag lovar att jag inte kommer att få hjälp under mina partier (från en schackdator, bok, databas eller annan person).</string>
   <string name="agreementNice">Jag lovar att jag alltid kommer att vara respektfull mot andra spelare.</string>
   <string name="agreementMultipleAccounts" comment="%s will be replaced with the translation of 'termsOfService'">Jag godkänner att jag inte kommer att skapa flera konton (förutom av de skäl som anges i %s).</string>
-  <string name="agreementPolicy">Jag instämmer med att jag kommer att följa alla Lichess-regler.</string>
+  <string name="agreementPolicy">Jag instämmer med att jag kommer att följa alla Chess-Online-regler.</string>
   <string name="searchOrStartNewDiscussion">Sök eller starta ny konversation</string>
   <string name="edit">Redigera</string>
   <string name="bullet" comment="Probably best left untranslated. Leave it as 'Bullet' unless your language has a better word for it.">Bullet</string>
@@ -939,7 +939,7 @@
   <string name="congratsYouWon">Grattis, du vann!</string>
   <string name="gameVsX">Parti mot %1$s</string>
   <string name="resVsX">%1$s mot %2$s</string>
-  <string name="lostAgainstTOSViolator">Du förlorade mot någon som bröt mot Lichess TOS</string>
+  <string name="lostAgainstTOSViolator">Du förlorade mot någon som bröt mot Chess-Online TOS</string>
   <string name="refundXpointsTimeControlY">Ersättning: %1$s %2$s rankingpoäng.</string>
   <string name="timeAlmostUp">Tiden är nästan slut!</string>
   <string name="clickToRevealEmailAddress">[Klicka för att visa mailadress]</string>
@@ -993,13 +993,13 @@ Lämna tomt för att starta spel från den normala startpositionen.</string>
   <string name="youCantStartNewGame">Du kan inte starta ett nytt parti förräm detta är klart.</string>
   <string name="since">Sedan</string>
   <string name="until">Tills</string>
-  <string name="lichessDbExplanation">Rankade spel från alla Lichess spelare</string>
+  <string name="lichessDbExplanation">Rankade spel från alla Chess-Online spelare</string>
   <string name="switchSides">Växla sida</string>
   <string name="closingAccountWithdrawAppeal">Att avsluta ditt konto kommer att dra tillbaka ditt överklagande</string>
   <string name="ourEventTips">Våra tips för anordnande av evenemang</string>
   <string name="instructions">Instruktioner</string>
   <string name="showMeEverything">Visa mig allt</string>
-  <string name="lichessPatronInfo">Lichess är en välgörenhet och helt gratis/fri programvara med öppen källkod.
+  <string name="lichessPatronInfo">Chess-Online är en välgörenhet och helt gratis/fri programvara med öppen källkod.
 Alla driftskostnader, utveckling och innehåll finansieras enbart av användardonationer.</string>
   <string name="nothingToSeeHere">Här finns ingenting att se för tillfället.</string>
   <string name="stats">Statistik</string>

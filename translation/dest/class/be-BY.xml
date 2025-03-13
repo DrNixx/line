@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="lichessClasses">Заняткі</string>
-  <string name="teachClassesOfChessStudents">Выкладайце шахматныя заняткі студэнтам з інструментамі заняткаў Lichess.</string>
+  <string name="teachClassesOfChessStudents">Выкладайце шахматныя заняткі студэнтам з інструментамі заняткаў Chess-Online.</string>
   <string name="features">Магчымасці</string>
   <string name="quicklyGenerateSafeUsernames">Хутка стварайце імёны карыстальнікаў і паролі для студэнтаў</string>
   <string name="trackStudentProgress">Адсочвайце прагрэс студэнтаў у гульнях і задачах</string>
   <string name="messageAllStudents">Паведамляйце ўсім студэнтам аб новым матэрыяле занятка</string>
   <string name="freeForAllForever" comment="The automated QA checker treats &quot;100%&quot; as if it is a variable, and will give a warning if you change it.&#10;It is not a variable.&#10;&#10;You can still save your translation writing it as &quot;%100&quot; for example, in case this is more valid in your language.">100% бясплатна для ўсіх, назаўсёды, без рэкламы і трэкінгу</string>
-  <string name="applyToBeLichessTeacher">Падаць заяўку, каб стаць Lichess выкладчыкам</string>
+  <string name="applyToBeLichessTeacher">Падаць заяўку, каб стаць Chess-Online выкладчыкам</string>
   <string name="noClassesYet">Пакуль няма ніякіх заняткаў.</string>
   <string name="teachersX">Выкладчыкі: %s</string>
   <string name="newClass">Новы занятак</string>
@@ -23,7 +23,7 @@
   <string name="classDescription">Апісанне занятку</string>
   <string name="visibleByBothStudentsAndTeachers">Бачна выкладчыкам і студэнтам занятку</string>
   <string name="teachersOfTheClass">Выкладчыкі занятку</string>
-  <string name="addLichessUsernames">Дадайце імёны карыстальнікаў Lichess, каб запрасіць іх у якасці выкладчыкаў. Адзін на радок.</string>
+  <string name="addLichessUsernames">Дадайце імёны карыстальнікаў Chess-Online, каб запрасіць іх у якасці выкладчыкаў. Адзін на радок.</string>
   <string name="resetPassword">Скасаваць пароль</string>
   <string name="makeSureToCopy">Абавязкова скапіруйце альбо запішыце пароль зараз. Вы не зможаце яго больш пабачыць!</string>
   <string name="passwordX">Пароль: %s</string>
@@ -32,22 +32,22 @@
   <string name="realName">Сапраўднае імя</string>
   <string name="privateWillNeverBeShown">Прыватны. Ніколі не адлюструеце па за межамі занятку. Дапамагае памятаць хто студэнт.</string>
   <string name="addStudent">Дадаць студэнта</string>
-  <string name="lichessProfileXCreatedForY">Профіль Lichess %1$s створаны %2$s.</string>
+  <string name="lichessProfileXCreatedForY">Профіль Chess-Online %1$s створаны %2$s.</string>
   <string name="studentCredentials">Студэнт(ка):  %1$s
 Імя карыстальніка(цы): %2$s
 Пароль: %3$s</string>
-  <string name="inviteALichessAccount">Запрасіць карыстальніка Lichess</string>
-  <string name="inviteDesc1">Калі студэнт(ка) ужо мае ўліковы запіс Lichess, вы можаце запрасіць іх на занятак.</string>
-  <string name="inviteDesc2">Яны атрымаюць паведамленне на Lichess са спасылкай на далучэнне да занятку.</string>
+  <string name="inviteALichessAccount">Запрасіць карыстальніка Chess-Online</string>
+  <string name="inviteDesc1">Калі студэнт(ка) ужо мае ўліковы запіс Chess-Online, вы можаце запрасіць іх на занятак.</string>
+  <string name="inviteDesc2">Яны атрымаюць паведамленне на Chess-Online са спасылкай на далучэнне да занятку.</string>
   <string name="inviteDesc3">Важна: запрашайце толькі студэнтаў, якіх ведаеце, і якія актыўна хочуць далучыцца да занятку.</string>
   <string name="inviteDesc4">Ніколі не адпраўляйце непажаданыя запрашэнні выпадковым людзям.</string>
-  <string name="createANewLichessAccount">Стварыць новы ўліковы запіс Lichess</string>
-  <string name="createDesc1">Калі ў студэнта(кі) яшчэ нямае ўліковага запісу Lichess, вы можаце ўласнаруч стварыць яго тут.</string>
+  <string name="createANewLichessAccount">Стварыць новы ўліковы запіс Chess-Online</string>
+  <string name="createDesc1">Калі ў студэнта(кі) яшчэ нямае ўліковага запісу Chess-Online, вы можаце ўласнаруч стварыць яго тут.</string>
   <string name="createDesc2">Электронная пошта не патрэбна. Пароль будзе згенераваны, і вы зможаце перадаць яго студэнту(цы) для ўвахода на сайт.</string>
   <string name="createDesc3">Важна: студэнт(ка) не павінен мець некалькі ўліковых запісаў.</string>
   <string name="createDesc4">Калі ён/яна ўжо мае ўліковы запіс, тады замест выкарыстоўвайце запрашальную форму.</string>
   <string name="createStudentWarning">Стварайце ўліковыя запісы толькі для рэальных студэнтаў. Не выкарыстоўвайце для стварэння некалькіх ўліковых запісаў для сябе, інакш вы будзіце забанены.</string>
-  <string name="lichessUsername">Імя карыстальніка Lichess</string>
+  <string name="lichessUsername">Імя карыстальніка Chess-Online</string>
   <string name="generateANewUsername">Стварыць новае імя карыстальніка</string>
   <string name="welcomeToClass">Вітаем на вашым занятку: %s.
 Вось спасылка з доступам на занятак.</string>
@@ -110,8 +110,8 @@
   <string name="youAcceptedThisInvitation">Вы прынялі запрашэнне.</string>
   <string name="youDeclinedThisInvitation">Вы адхілілі запрашэнне.</string>
   <string name="orSeparator" comment="Used as separator between invite sections. Shown as large '~ or ~'.">або</string>
-  <string name="createMultipleAccounts">Адначасова стварыць некалькі ўліковых запісаў Lichess</string>
-  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Вы таксама можаце %s каб стварыць некалькі ўліковых запісаў Lichess са спісу імён студэнтаў.</string>
+  <string name="createMultipleAccounts">Адначасова стварыць некалькі ўліковых запісаў Chess-Online</string>
+  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Вы таксама можаце %s каб стварыць некалькі ўліковых запісаў Chess-Online са спісу імён студэнтаў.</string>
   <string name="useThisForm" comment="Link text in multipleAccsFromDescription">выкарыстаць гэту форму</string>
   <string name="maxStudentsNote" comment="%1$s will be replaced with a large number (currently 100).\n%2$s is a link and will be replaced with the translation of createMoreClasses. Make sure both strings fit together.">Звярніце ўвагу, што на занятку можа прысутнічаць не больш за %1$s студэнтаў. Каб выкладаць большай колькасці студэнтаў - %2$s.</string>
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">стварыце яшчэ некалькі заняткаў</string>

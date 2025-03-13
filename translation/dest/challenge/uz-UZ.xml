@@ -22,5 +22,5 @@
   <string name="declineVariant">Ayni damda ushbu variantda oʻynashga men tayyor emasman.</string>
   <string name="declineNoBot">Ayni damda men botlardan chorlovlarni qabul qila olmayman.</string>
   <string name="declineOnlyBot">Men faqat botlardan chorlovlarni qabul qila olaman.</string>
-  <string name="inviteLichessUser">Yoki Lichess foydalanuvchisini taklif eting:</string>
+  <string name="inviteLichessUser">Yoki Chess-Online foydalanuvchisini taklif eting:</string>
 </resources>

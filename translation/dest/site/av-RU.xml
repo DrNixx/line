@@ -227,9 +227,9 @@
   <string name="forgotPassword">Парол кӀочонищ тараб?</string>
   <string name="error.weakPassword">Гьеб парол кутакалда тӀибитӀараб буго, гьединго гьелда нахъгӀунтӀизе цӀакъ бигьаго буго.</string>
   <string name="error.namePassword">Дур хӀалтӀизабулесда цӀар пароллъун хӀалтӀизабуге.</string>
-  <string name="blankedPassword">Дуца гьебго парол цогидаб сайталда хъвана, гьеб сайт къимат хвараб хӀалалда ккун буго. Дур Lichess аккаунталъул хъинкъи гьечӀебали ракӀчӀун лъазе, нижее къваригӀуна дуца цӀияб парол чӀезабизе. БичӀчӀулелъухъ баркала.</string>
-  <string name="youAreLeavingLichess">Мун Lichess-алдаса унев вуго</string>
-  <string name="neverTypeYourPassword">БатӀияб сайталда дур Lichess парол киданиги хъваге!</string>
+  <string name="blankedPassword">Дуца гьебго парол цогидаб сайталда хъвана, гьеб сайт къимат хвараб хӀалалда ккун буго. Дур Chess-Online аккаунталъул хъинкъи гьечӀебали ракӀчӀун лъазе, нижее къваригӀуна дуца цӀияб парол чӀезабизе. БичӀчӀулелъухъ баркала.</string>
+  <string name="youAreLeavingLichess">Мун Chess-Online-алдаса унев вуго</string>
+  <string name="neverTypeYourPassword">БатӀияб сайталда дур Chess-Online парол киданиги хъваге!</string>
   <string name="proceedToX">%s-алде вахъине</string>
   <string name="passwordSuggestion">Цогидаз абураб парол чӀезабуге. Доз дур аккаунт бикъизе гьеб хӀалтӀизабизе буго.</string>
   <string name="emailSuggestion">Цогидаз абураб электронияб поч чӀезабуге. Доз дур аккаунт бикъизе гьеб хӀалтӀизабизе буго.</string>
@@ -337,7 +337,7 @@
     <item quantity="one">%s секунд кьезе</item>
     <item quantity="other">%s секунд кьезе</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Гьаб аккаунталъ Lichess-алъул Сервисазул шартӀал хвезаруна</string>
+  <string name="thisAccountViolatedTos">Гьаб аккаунталъ Chess-Online-алъул Сервисазул шартӀал хвезаруна</string>
   <string name="openingExplorerAndTablebase">Байбихьиялъулги ахиралъулги база</string>
   <string name="takeback">ТӀадбуссинабизе</string>
   <string name="proposeATakeback">Тlадбуссинабизе биччаян абизе</string>
@@ -517,7 +517,7 @@
   <string name="inlineNotation">Мухъилаб нотация</string>
   <string name="makeAStudy">ЦӀунизеги гӀахьал гьабизеги, цӀех-рех гьабизе бегьула.</string>
   <string name="clearSavedMoves">Хъурщиял нахъе росизе</string>
-  <string name="previouslyOnLichessTV">Lichess TV-ялда цебе букӀараб</string>
+  <string name="previouslyOnLichessTV">Chess-Online TV-ялда цебе букӀараб</string>
   <string name="onlinePlayers">Онлайн ругел хӀалел чагӀи</string>
   <string name="activePlayers">ХӀаракатал хӀалел чагӀи</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Воре, хӀай рейтингалъул буго амма гьелъул сагӀат гьечӀо!</string>
@@ -672,7 +672,7 @@
   <string name="whenCreateSimul">Дуца сеанс гьабуни, мун чангоязда данде цого заманалда хӀазе ккола.</string>
   <string name="simulHostExtraTime">Хосталъул тӀаде жубалеб заман</string>
   <string name="simulHostExtraTimePerPlayer">Щивав хӀалесе хосталъул тӀаде жубалеб заман</string>
-  <string name="lichessTournaments">Lichess турнирал</string>
+  <string name="lichessTournaments">Chess-Online турнирал</string>
   <string name="tournamentFAQ">Аренаялъул суалалги жавабалги</string>
   <string name="timeBeforeTournamentStarts">Турнир байбихьизегӀан заман</string>
   <string name="averageCentipawnLoss">Пешкабазул гьоркьохъеб ками</string>
@@ -714,8 +714,8 @@
   <string name="weHaveSentYouAnEmailTo">Нижеца %s-(и)хъе кагъатӀ битӀана. Дур парол цӀидасан чӀезабизе почалда бухьеналда тӀаде цуй.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">ХӀисабалде воси гьабиялъ, мун %sда разилъула.</string>
   <string name="readAboutOur">Нижер %s-ялъул цӀале.</string>
-  <string name="networkLagBetweenYouAndLichess">Дудаги Lichess-алдаги гьоркьоб интернеталъе квекӀен ккун буго</string>
-  <string name="timeToProcessAMoveOnLichessServer">Хъурщи Lichess-алъул сервералда мухӀкан гьабизе заман</string>
+  <string name="networkLagBetweenYouAndLichess">Дудаги Chess-Online-алдаги гьоркьоб интернеталъе квекӀен ккун буго</string>
+  <string name="timeToProcessAMoveOnLichessServer">Хъурщи Chess-Online-алъул сервералда мухӀкан гьабизе заман</string>
   <string name="downloadAnnotated">Аннотациягун рещтӀинабизе</string>
   <string name="downloadRaw">Бугеб куцалъ рещтӀинабизе</string>
   <string name="downloadImported">Жаниб лъураб рещтӀинабизе</string>
@@ -737,7 +737,7 @@
   <string name="sessions">Сессияби</string>
   <string name="revokeAllSessions">киналго сессияби къазе</string>
   <string name="playChessEverywhere">Шахматал кибго хӀай</string>
-  <string name="asFreeAsLichess">Lichess гӀадин мугь босулареб буго</string>
+  <string name="asFreeAsLichess">Chess-Online гӀадин мугь босулареб буго</string>
   <string name="builtForTheLoveOfChessNotMoney">Шахматазде рокьиялъ гьабуна, гӀарцуде гуро</string>
   <string name="everybodyGetsAllFeaturesForFree">Киназего киналго алатал чӀобого щола</string>
   <string name="zeroAdvertisement">Реклама гьечӀо</string>
@@ -850,13 +850,13 @@
   <string name="tryToWin">Дур щибаб хӀаялда бергьине (яги ващад ккезениги) хӀалбихье.</string>
   <string name="resignLostGames">Хьул къотӀарал хӀаязда къун чӀа (заман лъугӀизегӀан чӀоге).</string>
   <string name="temporaryInconvenience">Заманаялъе бугеб къварилъиялда нижеда тӀаса лъугьа,</string>
-  <string name="wishYouGreatGames">цӀакъал хӀаял кьеги дуе lichess.org-алда.</string>
+  <string name="wishYouGreatGames">цӀакъал хӀаял кьеги дуе chess-online.com-алда.</string>
   <string name="thankYouForReading">ЦӀаларалъухъ баркала!</string>
   <string name="currentMatchScore">Гьанжесеб мачалъул рикӀкӀин</string>
   <string name="agreementAssistance">Дун рази вуго дица дир хӀаязда квербакъи босичӀого тезе (шахматазул компутералдаса, тӀехьалдаса, яги цогидав чиясдаса).</string>
   <string name="agreementNice">Дун рузи вуго цогидал хӀалезул хӀурмат гьабулев вукӀине.</string>
   <string name="agreementMultipleAccounts" comment="%s will be replaced with the translation of 'termsOfService'">Дун рази вуго дица чанги аккаунт гьабичӀого тезе (%s-да рехсарал гӀиллабаз гурони).</string>
-  <string name="agreementPolicy">Дун рази вуго Lichess-алъул къагӀидаби цӀунизе.</string>
+  <string name="agreementPolicy">Дун рази вуго Chess-Online-алъул къагӀидаби цӀунизе.</string>
   <string name="edit">Хисизе</string>
   <string name="bullet" comment="Probably best left untranslated. Leave it as 'Bullet' unless your language has a better word for it.">Гулла</string>
   <string name="blitz" comment="Probably best left untranslated. Leave it as 'Blitz' unless your language has a better word for it.">Блиц</string>
@@ -942,12 +942,12 @@
   <string name="youCantStartNewGame">Гьеб хӀан лъугӀичӀого дуда цӀияб хӀай байбихьизе кӀоларо.</string>
   <string name="since">-даса</string>
   <string name="until">ЩвезегӀан</string>
-  <string name="lichessDbExplanation">Lichess-алда хӀарал рейтингалъул хӀаял</string>
+  <string name="lichessDbExplanation">Chess-Online-алда хӀарал рейтингалъул хӀаял</string>
   <string name="switchSides">Рахъ хизисе</string>
   <string name="closingAccountWithdrawAppeal">Дур аккаунт къаялъ дур хитӀаб нахъе ахӀула</string>
   <string name="ourEventTips">Тадбирал гьабизелъун нижер гӀакълаби</string>
   <string name="instructions">Нухмалъи</string>
   <string name="showMeEverything">Кинабго бихьизабизе</string>
-  <string name="lichessPatronInfo">Lichess ккола лъикӀаб гьариги ругеб тӀубанго мухьги босулареб рагьараб кьучӀаб код бугеб программаялдалъун хьезари.
+  <string name="lichessPatronInfo">Chess-Online ккола лъикӀаб гьариги ругеб тӀубанго мухьги босулареб рагьараб кьучӀаб код бугеб программаялдалъун хьезари.
 Садакъа кьолел хӀалтӀизабулез киналго харжал, разработка, контент гӀарцудалъун хьезарула.</string>
 </resources>

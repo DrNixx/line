@@ -2,22 +2,22 @@
 <resources>
   <string name="faqAbbreviation">Perguntas Frequentes</string>
   <string name="frequentlyAskedQuestions">Perguntas Frequentes</string>
-  <string name="whyIsLichessCalledLichess">Por que o Lichess se chama Lichess?</string>
-  <string name="lichessCombinationLiveLightLibrePronounced">Lichess é uma combinação de live/light/livre e chess. Pronuncia-se %1$s.</string>
+  <string name="whyIsLichessCalledLichess">Por que o Chess-Online se chama Chess-Online?</string>
+  <string name="lichessCombinationLiveLightLibrePronounced">Chess-Online é uma combinação de live/light/livre e chess. Pronuncia-se %1$s.</string>
   <string name="leechess">li-tiés</string>
   <string name="hearItPronouncedBySpecialist">Escute a pronúncia por um especialista.</string>
-  <string name="whyLiveLightLibre">Live, porque partidas são jogadas e assistidas em tempo real 24/7; light e livre pelo fato de que Lichess é de código-aberto e livre de lixo eletrônico que atormenta em outros sites.</string>
-  <string name="whyIsLilaCalledLila">Da mesma forma, o código fonte do Lichess, %1$s, significa li[chess em sca]la, visto que a maior parte do Lichess é escrita em %2$s, uma linguagem de programação intuitiva.</string>
-  <string name="howCanIContributeToLichess">Como posso contribuir para o Lichess?</string>
-  <string name="lichessPoweredByDonationsAndVolunteers">Lichess se mantém no ar com doações de clientes e através dos esforços de uma equipe de voluntários.</string>
-  <string name="findMoreAndSeeHowHelp">Você pode saber mais sobre %1$s (incluindo uma %2$s). Se você quiser ajudar o Lichess voluntariando seu tempo e habilidades, há muitas %3$s.</string>
+  <string name="whyLiveLightLibre">Live, porque partidas são jogadas e assistidas em tempo real 24/7; light e livre pelo fato de que Chess-Online é de código-aberto e livre de lixo eletrônico que atormenta em outros sites.</string>
+  <string name="whyIsLilaCalledLila">Da mesma forma, o código fonte do Chess-Online, %1$s, significa li[chess em sca]la, visto que a maior parte do Chess-Online é escrita em %2$s, uma linguagem de programação intuitiva.</string>
+  <string name="howCanIContributeToLichess">Como posso contribuir para o Chess-Online?</string>
+  <string name="lichessPoweredByDonationsAndVolunteers">Chess-Online se mantém no ar com doações de clientes e através dos esforços de uma equipe de voluntários.</string>
+  <string name="findMoreAndSeeHowHelp">Você pode saber mais sobre %1$s (incluindo uma %2$s). Se você quiser ajudar o Chess-Online voluntariando seu tempo e habilidades, há muitas %3$s.</string>
   <string name="beingAPatron">ser um Patrono</string>
   <string name="breakdownOfOurCosts">lista detalhada dos nossos custos</string>
   <string name="otherWaysToHelp">outras formas de ajudar</string>
-  <string name="areThereWebsitesBasedOnLichess">Existem sites baseados no Lichess?</string>
-  <string name="yesLichessInspiredOtherOpenSourceWebsites">Sim. Lichess de fato inspirou outros sites de código aberto que usam nossos %1$s, %2$s ou %3$s.</string>
+  <string name="areThereWebsitesBasedOnLichess">Existem sites baseados no Chess-Online?</string>
+  <string name="yesLichessInspiredOtherOpenSourceWebsites">Sim. Chess-Online de fato inspirou outros sites de código aberto que usam nossos %1$s, %2$s ou %3$s.</string>
   <string name="keyboardShortcuts">Quais são os atalhos de teclado?</string>
-  <string name="keyboardShortcutsExplanation">Em certas páginas do site Lichess, você pode usar atalhos de teclado. Pressione o botão \"?\" nas páginas de estudo, análise, quebra-cabeça ou partida para ver os atalhos de teclado disponíveis.</string>
+  <string name="keyboardShortcutsExplanation">Em certas páginas do site Chess-Online, você pode usar atalhos de teclado. Pressione o botão \"?\" nas páginas de estudo, análise, quebra-cabeça ou partida para ver os atalhos de teclado disponíveis.</string>
   <string name="fairPlay">Jogo Limpo</string>
   <string name="whenAmIEligibleRatinRefund">Quando tenho direito a reembolso automático de pontuação de trapaceiros?</string>
   <string name="ratingRefundExplanation" comment="In answer to the question 'When am I eligible for the automatic rating refund from cheaters?'">Um minuto após um(a) jogador(a) ser reportado(a), suas últimas 40 partidas valendo pontuação nos últimos 5 dias são invalidadas. Se você foi oponente dele(a) nessas partidas, você perdeu pontuação (por derrota ou empate) e sua pontuação não era provisória, então você recebe um reembolso de pontuação. O reembolso é limitado baseado no seu pico de pontuação e no seu progresso de pontuação após o jogo. (Por exemplo, se sua pontuação aumentou significativamente após essas partidas, você pode não receber reembolso ou apenas reembolsar parcialmente.) Um reembolso nunca excederá 150 pontos.</string>
@@ -28,16 +28,16 @@
   <string name="isCorrespondenceDifferent">Os jogos por correspondência são diferentes do xadrez normal?</string>
   <string name="pleaseReadFairPlayPage">Para mais informações, leia nossa %s</string>
   <string name="fairPlayPage">página de fair-play</string>
-  <string name="youCanUseOpeningBookNoEngine">No Lichess, a principal diferença nas regras para jogos por correspondência é que é permitido utilizar um livro de aberturas. A ajuda de computadores continua a ser proibida e resultará em ser reportado(a) por utilizar ajuda de computadores. Embora a ICCF permita a ajuda de computadores, o Lichess não a permite.</string>
+  <string name="youCanUseOpeningBookNoEngine">No Chess-Online, a principal diferença nas regras para jogos por correspondência é que é permitido utilizar um livro de aberturas. A ajuda de computadores continua a ser proibida e resultará em ser reportado(a) por utilizar ajuda de computadores. Embora a ICCF permita a ajuda de computadores, o Chess-Online não a permite.</string>
   <string name="gameplay">Jogabilidade</string>
   <string name="howBulletBlitzEtcDecided">Como é que Bullet, Blitz e outros ritmos de jogo são decididos?</string>
-  <string name="basedOnGameDuration">Os ritmos de jogo do Lichess baseiam-se na duração estimada do jogo = %1$s
+  <string name="basedOnGameDuration">Os ritmos de jogo do Chess-Online baseiam-se na duração estimada do jogo = %1$s
 Por exemplo, a duração estimada de um jogo 5+3 é 5 × 60 + 40 × 3 = 420 segundos.</string>
   <string name="durationFormula" comment="durationFormula&#10;&#10;Part of the larger string 'basedOnGameDuration'&#10;&#10;Note: this string did not use to say 'in seconds'. Please update if necessary.">(tempo inicial no relógio) + 40 × (incremento no relógio)</string>
   <string name="inferiorThanXsEqualYtimeControl">&lt; %1$ss = %2$s</string>
   <string name="superiorThanXsEqualYtimeControl">≥ %1$ss = %2$s</string>
-  <string name="whatVariantsCanIplay">Quais variantes eu posso jogar no Lichess?</string>
-  <string name="lichessSupportChessAnd">O Lichess suporta o xadrez normal e %1$s.</string>
+  <string name="whatVariantsCanIplay">Quais variantes eu posso jogar no Chess-Online?</string>
+  <string name="lichessSupportChessAnd">O Chess-Online suporta o xadrez normal e %1$s.</string>
   <string name="eightVariants">8 variantes de xadrez</string>
   <string name="whatIsACPL">O que é a perda média de centésimas de peão (ACPL)?</string>
   <string name="acplExplanation">Uma centésima de peão é a unidade de medida usada no xadrez para a representação da vantagem. Uma centésima de peão é igual a 1/100 de um peão. Portanto, 100 centésimas de peão = 1 peão. Estes valores não têm um papel formal no jogo mas são úteis para os jogadores e essenciais para muitos computadores de xadrez ao avaliar posições.
@@ -46,7 +46,7 @@ O lance considerado melhor pelo computador corresponde a uma perda de zero cent�
 
 Este valor pode ser utilizado como indicador da qualidade do jogo. Quando menos centésimas de peão alguém perder por jogada, mais forte o jogo.
 
-A análise de xadrez no Lichess é feita pelo Stockfish.</string>
+A análise de xadrez no Chess-Online é feita pelo Stockfish.</string>
   <string name="insufficientMaterial">Perder por tempo, empatar e material insuficiente</string>
   <string name="lichessFollowFIDErules">Ao ficar sem tempo, um jogador norlmamente perderá o jogo. Contudo, o jogo é considerado empatado se a posição for uma tal que o oponente não consegue fazer xeque-mate por qualquer sequência legal de movimentos (%1$s).
 
@@ -64,33 +64,33 @@ O movimento é descrito na seção 3. (d) do %2$s:
 
 Veja o %3$s sobre este movimento para praticá-lo.</string>
   <string name="goodIntroduction">boa introdução</string>
-  <string name="lichessTraining">treino do Lichess</string>
+  <string name="lichessTraining">treino do Chess-Online</string>
   <string name="watchIMRosenCheckmate">Assista ao Mestre Internacional Eric Rosen dar xeque-mate em %s.</string>
   <string name="threefoldRepetition">Repetição tripla</string>
-  <string name="threefoldRepetitionExplanation">Se uma posição ocorrer três vezes, os jogadores podem reivindicar um empate por %1$s. O Lichess implementa as regras oficiais da FIDE, como estão descritas no Artigo 9.2 do %2$s.</string>
+  <string name="threefoldRepetitionExplanation">Se uma posição ocorrer três vezes, os jogadores podem reivindicar um empate por %1$s. O Chess-Online implementa as regras oficiais da FIDE, como estão descritas no Artigo 9.2 do %2$s.</string>
   <string name="threefoldRepetitionLowerCase">repetição tripla</string>
   <string name="notRepeatedMoves">Não repetimos movimentos, então porque o jogo ainda foi empatado por repetição?</string>
   <string name="repeatedPositionsThatMatters">A repetição tripla é sobre %1$s repetidas, não lances. A repetição não precisa ocorrer consecutivamente.</string>
   <string name="positions">posições</string>
   <string name="weRepeatedthreeTimesPosButNoDraw">Nós repetimos uma posição três vezes. Por que o jogo não foi empatado?</string>
-  <string name="threeFoldHasToBeClaimed">A repetição precisa ser reivindicada por um dos jogadores. Você pode fazê-lo pressionando o botão que é mostrado, ou oferecendo um empate antes do seu passo final de repetição. Não importa se seu oponente rejeitar a oferta de empate, o empate por três repetições será reivindicado mesmo assim. Você também pode %1$s o Lichess para reivindicar automaticamente repetições para você. Além disso, uma repetição quíntupla sempre termina o jogo imediatamente.</string>
+  <string name="threeFoldHasToBeClaimed">A repetição precisa ser reivindicada por um dos jogadores. Você pode fazê-lo pressionando o botão que é mostrado, ou oferecendo um empate antes do seu passo final de repetição. Não importa se seu oponente rejeitar a oferta de empate, o empate por três repetições será reivindicado mesmo assim. Você também pode %1$s o Chess-Online para reivindicar automaticamente repetições para você. Além disso, uma repetição quíntupla sempre termina o jogo imediatamente.</string>
   <string name="configure">configurar</string>
   <string name="accounts">Contas</string>
-  <string name="titlesAvailableOnLichess">Que títulos existem no Lichess?</string>
-  <string name="lichessRecognizeAllOTBtitles">O Lichess reconhece todos os título FIDE obtidos OTB (\"over the board\", em jogos presenciais), assim como %1$s.
+  <string name="titlesAvailableOnLichess">Que títulos existem no Chess-Online?</string>
+  <string name="lichessRecognizeAllOTBtitles">O Chess-Online reconhece todos os título FIDE obtidos OTB (\"over the board\", em jogos presenciais), assim como %1$s.
 Aqui está uma lista dos títulos FIDE:</string>
   <string name="showYourTitle">Se você tem um título OTB, você pode se candidatar para tê-lo exibido na sua conta, completando o %1$s, incluindo uma imagem nítida de um documento/cartão de identificação e uma selfie de você segurando o documento/cartão.
 
-Verificar-se como um jogador com título no Lichess dá acesso a jogos nos eventos da Arena Titular.
+Verificar-se como um jogador com título no Chess-Online dá acesso a jogos nos eventos da Arena Titular.
 
 Finalmente há um título honorário %2$s.</string>
   <string name="asWellAsManyNMtitles">muitos títulos de mestres nacionais</string>
   <string name="verificationForm">formulário de verificação</string>
-  <string name="canIbecomeLM">Posso obter o título de Mestre do Lichess (LM)?</string>
+  <string name="canIbecomeLM">Posso obter o título de Mestre do Chess-Online (LM)?</string>
   <string name="noUpperCaseDot">Não.</string>
-  <string name="lMtitleComesToYouDoNotRequestIt">Este título honorífico não é oficial e só existe no Lichess.
+  <string name="lMtitleComesToYouDoNotRequestIt">Este título honorífico não é oficial e só existe no Chess-Online.
 
-Raramente, recompensamos ele a jogadores altamente notáveis que são bons cidadãos do Lichess, a nosso critério. Você não vai até título de LM, o título de LM vai até você. Caso se qualifique, receberá uma mensagem nossa a respeito da nossa escolha e poderá aceitar ou recusar.
+Raramente, recompensamos ele a jogadores altamente notáveis que são bons cidadãos do Chess-Online, a nosso critério. Você não vai até título de LM, o título de LM vai até você. Caso se qualifique, receberá uma mensagem nossa a respeito da nossa escolha e poderá aceitar ou recusar.
 
 Não peça pelo título de LM.</string>
   <string name="whatUsernameCanIchoose">Qual pode ser o meu nome de usuário?</string>
@@ -99,12 +99,12 @@ Não peça pelo título de LM.</string>
   <string name="canIChangeMyUsername">Posso mudar meu nome de usuário?</string>
   <string name="usernamesCannotBeChanged" comment="&quot;Materialised&quot; is a technical term: https://en.wikipedia.org/wiki/Materialized_view&#10;In this context, it means that it is used in many places and too significant to change, on a technical level. It also comments on the social perspective (&quot;people's minds&quot;).">Não, nomes de usuário não podem ser alterados por razões técnicas e práticas. Nomes de usuário são gravados em muitos lugares: banco de dados, exportações, registros e na mente das pessoas. Você pode ajustar a letra maiúscula uma vez.</string>
   <string name="uniqueTrophies">Troféus únicos</string>
-  <string name="ownerUniqueTrophies">Esse troféu é único na história dos Lichess, ninguém mais o terá além de %1$s.</string>
+  <string name="ownerUniqueTrophies">Esse troféu é único na história dos Chess-Online, ninguém mais o terá além de %1$s.</string>
   <string name="wayOfBerserkExplanation">Para obtê-lo, hiimgosu desafiou-se a ganhar freneticamente 100%% dos jogos de %s.</string>
   <string name="aHourlyBulletTournament">um torneio horário de Bullet</string>
-  <string name="goldenZeeExplanation" comment="goldenZeeExplanation&#10;&#10;ZugAddict is a legendary player and streamer, do not translate his name.&#10;https://lichess.org/@/ZugAddict&#10;&#10;Thibault is the name of the founder of Lichess: https://lichess.org/@/thibault">ZugAddict estava realizando uma stream e, pelas últimas 2 horas, tentava derrotar a I.A. nível 8 numa partida de 1+0, sem sucesso. Thibault disse-a ele que, se ele conseguisse vencer na stream, ganharia um troféu único. Uma hora depois, ele esmagou o Stockfish e a promessa foi honrada.</string>
-  <string name="lichessRatings">Ratings no Lichess</string>
-  <string name="whichRatingSystemUsedByLichess">Qual é o sistema de rating que o Lichess utiliza?</string>
+  <string name="goldenZeeExplanation" comment="goldenZeeExplanation&#10;&#10;ZugAddict is a legendary player and streamer, do not translate his name.&#10;https://chess-online.com/@/ZugAddict&#10;&#10;Thibault is the name of the founder of Chess-Online: https://chess-online.com/@/thibault">ZugAddict estava realizando uma stream e, pelas últimas 2 horas, tentava derrotar a I.A. nível 8 numa partida de 1+0, sem sucesso. Thibault disse-a ele que, se ele conseguisse vencer na stream, ganharia um troféu único. Uma hora depois, ele esmagou o Stockfish e a promessa foi honrada.</string>
+  <string name="lichessRatings">Ratings no Chess-Online</string>
+  <string name="whichRatingSystemUsedByLichess">Qual é o sistema de rating que o Chess-Online utiliza?</string>
   <string name="ratingSystemUsedByLichess">As pontuações são calculadas utilizando o sistema de pontuaçao Glicko-2, desenvolvido por Mark Glickman. Este é um sistema de pontuação muito popular e é utilizado por um número considerável de organizações de xadrez (a FIDE é um contraexemplo notável, já que eles ainda usam o sistema de pontuação Elo).
 
 Fundamentalmente, as pontuações do Glicko usam \"intervalos de confiança\" quando calculam e representam sua pontuação. Ao começar a usar o site, sua pontuação começa em 1500 ± 700. O \"1500\" representa sua pontuação e o \"700\" representa o intervalo de confiança.
@@ -134,46 +134,46 @@ Outro ponto importante é que, à medida que o tempo passa, o intervalo de confi
   <string name="enableZenMode">Ative o Zen-mode em %1$s, ou pressionando %2$s durante uma partida.</string>
   <string name="displayPreferences">preferências de exibição</string>
   <string name="connexionLostCanIGetMyRatingBack">Perdi uma partida por atraso/desconexão. Posso ter a minha pontuação de volta?</string>
-  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">Infelizmente, não podemos devolver a pontuação para jogos perdidos devido ao lag ou à desconexão, independente se o problema aconteceu do seu lado ou do nosso. No entanto, um problema do nosso lado é muito raro. Repare também que quando o Lichess reinicia e você perde tempo por causa disso, abortamos o jogo para evitar uma perda injusta.</string>
+  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">Infelizmente, não podemos devolver a pontuação para jogos perdidos devido ao lag ou à desconexão, independente se o problema aconteceu do seu lado ou do nosso. No entanto, um problema do nosso lado é muito raro. Repare também que quando o Chess-Online reinicia e você perde tempo por causa disso, abortamos o jogo para evitar uma perda injusta.</string>
   <string name="howToThreeDots">Como...</string>
   <string name="enableDisableNotificationPopUps">Ativar ou desativar pop-ups de notificação?</string>
   <string name="viewSiteInformationPopUp">Ver pop-up de informações do site</string>
-  <string name="lichessCanOptionnalySendPopUps">O Lichess pode opcionalmente enviar notificações pop-up, por exemplo, quando for sua vez de jogar ou quando você receber uma mensagem privada.
+  <string name="lichessCanOptionnalySendPopUps">O Chess-Online pode opcionalmente enviar notificações pop-up, por exemplo, quando for sua vez de jogar ou quando você receber uma mensagem privada.
 
-Clique no ícone de cadeado ao lado do endereço do lichess.org na barra de endereço do seu navegador.
+Clique no ícone de cadeado ao lado do endereço do chess-online.com na barra de endereço do seu navegador.
 
 Em seguida, selecione se deve permitir ou bloquear notificações de Lichhess.</string>
   <string name="enableAutoplayForSoundsQ">Ativar reprodução automática de som?</string>
   <string name="enableAutoplayForSoundsA">A maioria dos navegadores bloqueia o som de uma página recém aberta para proteger o usuário. Imagine se todo site pudesse imediatamente te bombardear com áudios de anúncios.
 
-O ícone vermelho de silêncio indica que seu navegador está bloqueando o som do lichess.org. Ao clicar em alguma coisa, geralmente isso se resolve. No mobile, arrastar uma peça às vezes não conta como um clique. Nesse caso, você precisa mover com um clique para ativar o som a cada partida nova.
+O ícone vermelho de silêncio indica que seu navegador está bloqueando o som do chess-online.com. Ao clicar em alguma coisa, geralmente isso se resolve. No mobile, arrastar uma peça às vezes não conta como um clique. Nesse caso, você precisa mover com um clique para ativar o som a cada partida nova.
 
-O ícone serve para você saber quando isso acontece. Você também pode alterar as permissões do lichess.org. Aqui estão as instruções para as versões atuais de alguns navegadores populares.</string>
-  <string name="desktop" comment="Appears on the FAQ for &quot;Enable autoplay for sounds&quot; https://lichess.org/faq#autoplay&#10;&#10;Indicates that the instructions are for a desktop computer browser - not a mobile browser.">desktop</string>
-  <string name="enableAutoplayForSoundsFirefox">1. Acesse o lichess.org
+O ícone serve para você saber quando isso acontece. Você também pode alterar as permissões do chess-online.com. Aqui estão as instruções para as versões atuais de alguns navegadores populares.</string>
+  <string name="desktop" comment="Appears on the FAQ for &quot;Enable autoplay for sounds&quot; https://chess-online.com/faq#autoplay&#10;&#10;Indicates that the instructions are for a desktop computer browser - not a mobile browser.">desktop</string>
+  <string name="enableAutoplayForSoundsFirefox">1. Acesse o chess-online.com
 2. Pressione Ctrl-i em Linux/Windows ou cmd-i em MacOS
 3. Clique na página Permissões
-4. Ative Áudio e Vídeo em lichess.org</string>
-  <string name="enableAutoplayForSoundsChrome">1. Acesse o lichess.org
+4. Ative Áudio e Vídeo em chess-online.com</string>
+  <string name="enableAutoplayForSoundsChrome">1. Acesse o chess-online.com
 2. Clique no ícone de cadeado na barra de Url
 3. Clique em Configurações do site
 4. Ative Som</string>
-  <string name="enableAutoplayForSoundsSafari">1. Acesse o lichess.org
+  <string name="enableAutoplayForSoundsSafari">1. Acesse o chess-online.com
 2. Clique em Safari no menu
-3. Clique em Configurações de lichess.org ...
+3. Clique em Configurações de chess-online.com ...
 4. Ative Reprodução automática</string>
   <string name="enableAutoplayForSoundsMicrosoftEdge">1. Clique nos três pontos no canto superior direito
 2. Clique em Configurações
 3. Clique em Cookies e permissões de site
 4. Clique em Reprodução automática
-5. Adicione lichess.org a Permitir</string>
+5. Adicione chess-online.com a Permitir</string>
   <string name="stopMyselfFromPlaying" comment="As in &quot;How to stop myself from playing?&quot;.&#10;&#10;It is an FAQ which addresses chess/gaming addiction.">Como parar de jogar?</string>
   <string name="mentalHealthCondition" comment="Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">distúrbio mental</string>
-  <string name="lichessUserstyles" comment="User styles are ways to customise the appearance of Lichess using third-party tools.&#10;&#10;Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">temas de site do Lichess</string>
+  <string name="lichessUserstyles" comment="User styles are ways to customise the appearance of Chess-Online using third-party tools.&#10;&#10;Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">temas de site do Chess-Online</string>
   <string name="fewerLobbyPools" comment="Lobby pools are options to quick pair for games on the home page (e.g. 1+0, 3+0).&#10;In this context, this is mentioned for people who want to limit bullet and blitz.&#10;&#10;Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">menos opções de partidas</string>
-  <string name="adviceOnMitigatingAddiction" comment="Part of the FAQ answer &quot;How to [...] Stop myself from playing?&quot;&#10;&#10;%1$s, %2$s, and %3$s is software which may change.&#10;&#10;%4$s is &quot;Lichess userstyles&quot; (as in CSS styles)&#10;%5$s is &quot;fewer lobby pools&quot;.&#10;&#10;%6$s is &quot;stand-alone mental health condition&quot;.">Frequentemente recebemos mensagens de usuários pedindo ajuda para parar de jogar em excesso.
+  <string name="adviceOnMitigatingAddiction" comment="Part of the FAQ answer &quot;How to [...] Stop myself from playing?&quot;&#10;&#10;%1$s, %2$s, and %3$s is software which may change.&#10;&#10;%4$s is &quot;Chess-Online userstyles&quot; (as in CSS styles)&#10;%5$s is &quot;fewer lobby pools&quot;.&#10;&#10;%6$s is &quot;stand-alone mental health condition&quot;.">Frequentemente recebemos mensagens de usuários pedindo ajuda para parar de jogar em excesso.
 
-Apesar de o Lichess só banir ou bloquear usuários por violações aos Termos de Serviço, recomendamos algumas ferramentas para limitar o tempo excessivo de jogo. Sugerimos alguns softwares conhecidos, como %1$s, %2$s e %3$s. Se não quiser ser incomodado por controles de tempo muito rápidos, talvez se interesse pelos %4$s. Por exemplo, este tem %5$s.
+Apesar de o Chess-Online só banir ou bloquear usuários por violações aos Termos de Serviço, recomendamos algumas ferramentas para limitar o tempo excessivo de jogo. Sugerimos alguns softwares conhecidos, como %1$s, %2$s e %3$s. Se não quiser ser incomodado por controles de tempo muito rápidos, talvez se interesse pelos %4$s. Por exemplo, este tem %5$s.
 
 Alguns jogadores podem pensar que estão ficando viciados. De fato, a OMS classifica o vício em jogos como um %6$s, cujos principais aspectos são: 1) vontade de jogar incontrolável; 2) maior prioridade dada aos jogos; e 3) aumento do tempo de jogo apesar das consequências negativas. Se você acredita que seu comportamento segue esses padrões, recomendamos que converse com alguém próximo e/ou com um profissional.</string>
 </resources>

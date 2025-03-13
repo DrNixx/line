@@ -3,7 +3,7 @@
   <string name="faqAbbreviation">FAQ</string>
   <string name="frequentlyAskedQuestions">প্রায়ই জিজ্ঞাসিত প্রশ্নাবলী</string>
   <string name="whyIsLichessCalledLichess">লিচেজের নাম কেনো লিচেজ?</string>
-  <string name="lichessCombinationLiveLightLibrePronounced">Lichess মানে হলো Live/Light/Libre and Chess. তাই এটার উচ্চারান %1$s.</string>
+  <string name="lichessCombinationLiveLightLibrePronounced">Chess-Online মানে হলো Live/Light/Libre and Chess. তাই এটার উচ্চারান %1$s.</string>
   <string name="leechess">লি-চেজ</string>
   <string name="hearItPronouncedBySpecialist">বিশেষজ্ঞের থেকে উচ্চারন শুনুন.</string>
   <string name="whyLiveLightLibre">লাইভ, কারণ গেমগুলি 24/7 রিয়েল-টাইমে খেলা এবং দেখা হয়; লিচেস ওপেন সোর্স এবং মালিকানা জাঙ্ক দ্বারা ভারমুক্ত যা অন্যান্য ওয়েবসাইটগুলিকে আঘাত করে তার জন্য হালকা এবং মুক্ত.</string>
@@ -17,7 +17,7 @@
   <string name="areThereWebsitesBasedOnLichess">লিচেজের আরো ওয়েবসাইট আছে?</string>
   <string name="yesLichessInspiredOtherOpenSourceWebsites">হ্যা. লিচেজের আরো উন্মুক্ত ওয়েবসাইট রয়েছে যা %1$s,%2$s অথবা %3$s.</string>
   <string name="keyboardShortcuts">কি কি কীবোর্ড শর্টকাট আছে?</string>
-  <string name="keyboardShortcutsExplanation">কিছু Lichess পৃষ্ঠাগুলিতে কীবোর্ড শর্টকাট রয়েছে যা আপনি ব্যবহার করতে পারেন। \'?\' চাপার চেষ্টা করুন উপলব্ধ কীবোর্ড শর্টকাট তালিকাভুক্ত করতে একটি অধ্যয়ন, বিশ্লেষণ, ধাঁধা বা গেম পৃষ্ঠার কী.</string>
+  <string name="keyboardShortcutsExplanation">কিছু Chess-Online পৃষ্ঠাগুলিতে কীবোর্ড শর্টকাট রয়েছে যা আপনি ব্যবহার করতে পারেন। \'?\' চাপার চেষ্টা করুন উপলব্ধ কীবোর্ড শর্টকাট তালিকাভুক্ত করতে একটি অধ্যয়ন, বিশ্লেষণ, ধাঁধা বা গেম পৃষ্ঠার কী.</string>
   <string name="fairPlay">সুষ্ঠ নিয়মে খেলা</string>
   <string name="whenAmIEligibleRatinRefund">আমি কখন প্রতারকদের থেকে স্বয়ংক্রিয় রেটিং ফেরতের জন্য যোগ্য?</string>
   <string name="ratingRefundExplanation" comment="In answer to the question 'When am I eligible for the automatic rating refund from cheaters?'">একজন খেলোয়াড়কে চিহ্নিত করার এক মিনিট পর, গত 5 দিনে তাদের 40টি সর্বশেষ রেট করা গেম নেওয়া হয়। আপনি যদি এই গেমগুলির একটিতে তাদের প্রতিপক্ষ হয়ে থাকেন, আপনি রেটিং হারিয়েছেন (হারানো বা ড্রয়ের কারণে), এবং আপনার রেটিং অস্থায়ী ছিল না, আপনি একটি রেটিং ফেরত পাবেন। রিফান্ড আপনার সর্বোচ্চ রেটিং এবং গেমের পরে আপনার রেটিং অগ্রগতির উপর ভিত্তি করে সীমাবদ্ধ.(উদাহরণস্বরূপ, সেই খেলার পরে যদি আপনার রেটিং অনেক বেড়ে যায়, আপনি হয়ত কোনো ফেরত পাবেন না বা শুধুমাত্র একটি আংশিক ফেরত পাবেন.) একটি ফেরত কখনই 150 পয়েন্টের বেশি হবে না.</string>
@@ -33,7 +33,7 @@
   <string name="configure">কনফিগার</string>
   <string name="accounts">অ্যাকাউন্ট</string>
   <string name="titlesAvailableOnLichess">লিচেজে কি কি টাইটেল রয়েছে?</string>
-  <string name="canIbecomeLM">আমি কি Lichess Master (LM) টাইটেল পাবো?</string>
+  <string name="canIbecomeLM">আমি কি Chess-Online Master (LM) টাইটেল পাবো?</string>
   <string name="noUpperCaseDot">না.</string>
   <string name="whatUsernameCanIchoose">আমার ইউজারনেম কেমন হতে হবে?</string>
   <string name="guidelines">নিয়মকানুন</string>
@@ -51,5 +51,5 @@
   <string name="howToThreeDots">কিভাবে...</string>
   <string name="enableDisableNotificationPopUps">নোটিফিকেশনের পপআপ চালু অথবা বন্ধ?</string>
   <string name="viewSiteInformationPopUp">ওয়েবসাইটের পপআপ তথ্য দেখুন</string>
-  <string name="desktop" comment="Appears on the FAQ for &quot;Enable autoplay for sounds&quot; https://lichess.org/faq#autoplay&#10;&#10;Indicates that the instructions are for a desktop computer browser - not a mobile browser.">ডেস্কটপ</string>
+  <string name="desktop" comment="Appears on the FAQ for &quot;Enable autoplay for sounds&quot; https://chess-online.com/faq#autoplay&#10;&#10;Indicates that the instructions are for a desktop computer browser - not a mobile browser.">ডেস্কটপ</string>
 </resources>

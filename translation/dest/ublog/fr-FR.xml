@@ -8,9 +8,9 @@
     <item quantity="one">%s article de blogue</item>
     <item quantity="other">%s articles de blogue</item>
   </plurals>
-  <string name="lichessOfficialBlog">Blogue officiel de Lichess</string>
+  <string name="lichessOfficialBlog">Blogue officiel de Chess-Online</string>
   <string name="continueReadingPost">Continuer à lire cet article</string>
-  <string name="lichessBlogPostsFromXYear">Articles de blogue de Lichess publiés en %s</string>
+  <string name="lichessBlogPostsFromXYear">Articles de blogue de Chess-Online publiés en %s</string>
   <string name="previousBlogPosts">Articles de blogue précédents</string>
   <string name="xBlog">Blogue de %s</string>
   <string name="newPost">Nouvel article</string>
@@ -52,7 +52,7 @@
   <string name="deleteBlog">Supprimer définitivement ce message</string>
   <string name="safeToUseImages">Il est sécuritaire d\'utiliser des images des sites Web suivants : </string>
   <string name="selectPostTopics">Choisir les sujets de votre message</string>
-  <string name="useImagesYouMadeYourself">Vous pouvez également utiliser des images que vous avez faites vous-même, des photos que vous avez prises, des captures d\'écran de Lichess... tout ce qui n\'est pas protégé par des droits d\'auteur.</string>
+  <string name="useImagesYouMadeYourself">Vous pouvez également utiliser des images que vous avez faites vous-même, des photos que vous avez prises, des captures d\'écran de Chess-Online... tout ce qui n\'est pas protégé par des droits d\'auteur.</string>
   <string name="safeAndRespectfulContent">Veuillez ne publier que du contenu sûr et respectueux. Ne copiez pas le contenu de quelqu\'un d\'autre.</string>
   <string name="inappropriateContentAccountClosed">Toute conduite inappropriée peut aboutir à la fermeture de votre compte.</string>
   <string name="blogTips">Conseils pratiques pour rédiger de bons messages</string>

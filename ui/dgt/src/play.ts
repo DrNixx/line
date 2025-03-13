@@ -541,7 +541,7 @@ export default function (token: string): void {
    * Initialize a ChessBoard when connecting or re-connecting to a game
    *
    * @param {string} gameId - The gameId of the game to store on the board
-   * @param {Object} data - The gameFull event from lichess.org
+   * @param {Object} data - The gameFull event from live.chess-online.com
    */
   function initializeChessBoard(gameId: string, data: { initialFen: string; state: { moves: string } }) {
     try {
@@ -987,7 +987,7 @@ export default function (token: string): void {
                 //Invalid Adjustment. Move was legal but does not match last move received from Lichess
                 console.error('onmessage - Invalid Adjustment was made');
                 if (compareMoves(lastMove.move, moveObject)) {
-                  console.error('onmessage - Played move has not been received by Lichess.');
+                  console.error('onmessage - Played move has not been received by Chess-Online.');
                 } else {
                   console.error('onmessage - Expected:' + lastMove.move + ' by ' + lastMove.player);
                   console.error('onmessage - Detected:' + makeUci(moveObject) + ' by ' + localBoard.turn);
@@ -1284,7 +1284,7 @@ export default function (token: string): void {
     console.log('  ;::|   _.=`\\                   ░ ░       ░  ░  ░   ░  ░      ░        ░      ');
     console.log('  `;:|.=` _.=`\\                  ░                                             ');
     console.log("    '|_.=`   __\\                                                               ");
-    console.log('    `\\_..==`` /                 Lichess.org - DGT Electronic Board Connector   ');
+    console.log('    `\\_..==`` /       Licess & Chess-Online - DGT Electronic Board Connector   ');
     console.log("     .'.___.-'.                Developed by Andres Cavallin and Juan Cavallin  ");
     console.log('    /          \\                                  v1.0.7                       ');
     console.log("jgs('--......--')                                                             ");

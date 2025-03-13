@@ -4,9 +4,9 @@
   <string name="friendBlogs">Блоги друзів</string>
   <string name="likedBlogs">Вподобані дописи</string>
   <string name="blogTopics">Теми дописів</string>
-  <string name="lichessOfficialBlog">Офіційний блог Lichess</string>
+  <string name="lichessOfficialBlog">Офіційний блог Chess-Online</string>
   <string name="continueReadingPost">Продовжити читання цієї історії</string>
-  <string name="lichessBlogPostsFromXYear">Дописи блогу Lichess за %s</string>
+  <string name="lichessBlogPostsFromXYear">Дописи блогу Chess-Online за %s</string>
   <string name="previousBlogPosts">Попередні дописи блогу</string>
   <string name="xBlog">Блог %s</string>
   <string name="newPost">Новий допис</string>
@@ -54,7 +54,7 @@
   <string name="deleteBlog">Остаточно видалити цей допис</string>
   <string name="safeToUseImages">Можна безпечно використовувати зображення з наступних сайтів: </string>
   <string name="selectPostTopics">Виберіть тему вашого допису</string>
-  <string name="useImagesYouMadeYourself">Також, ви можете використовувати зображення, які ви зробили власноруч, знімок з екрана Lichess. Все що немає авторських прав.</string>
+  <string name="useImagesYouMadeYourself">Також, ви можете використовувати зображення, які ви зробили власноруч, знімок з екрана Chess-Online. Все що немає авторських прав.</string>
   <string name="safeAndRespectfulContent">Будь ласка, публікуйте тільки безпечний і шанобливий контент. Не копіюйте чужий контент.</string>
   <string name="inappropriateContentAccountClosed">Невідповідності в дописі можуть спричинити блокування профілю.</string>
   <string name="blogTips">Наші прості поради для написання хороших дописів</string>

@@ -591,8 +591,8 @@
   <string name="weHaveSentYouAnEmailTo">Безнең %s җибәрдек. Серсүзне яңадан урнаштыру өчен электрон почтадагы сылтамага басыгыз.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Теркәлү белән сез %s белән ризалашасыз.</string>
   <string name="readAboutOur">Безнең %s турында укыгыз.</string>
-  <string name="networkLagBetweenYouAndLichess">Челтәр сезнең белән Lichess арасында артта калды</string>
-  <string name="timeToProcessAMoveOnLichessServer">Lichess серверында хәрәкәтне эшкәртү вакыты</string>
+  <string name="networkLagBetweenYouAndLichess">Челтәр сезнең белән Chess-Online арасында артта калды</string>
+  <string name="timeToProcessAMoveOnLichessServer">Chess-Online серверында хәрәкәтне эшкәртү вакыты</string>
   <string name="downloadAnnotated">Өзешлене йөкләү</string>
   <string name="downloadRaw">Чималны иңдер</string>
   <string name="downloadImported">Импортны йөкләү</string>
@@ -606,7 +606,7 @@
   <string name="withEverybody">Барысы белән</string>
   <string name="kidMode">Сабыйлар осулы</string>
   <string name="kidModeExplanation">Бу куркынычсызлык турында. Балалар режимында барлык сайт элемтәләре дә сүндерелгән. Моны балаларыгыз һәм мәктәп укучылары өчен рөхсәт итегез, аларны бүтән интернет кулланучылардан саклагыз.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">Балалар усулында Lichess тамгасы %s иконасын ала, шуңа күрә сез балаларыгызның куркынычсыз булуын беләсез.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">Балалар усулында Chess-Online тамгасы %s иконасын ала, шуңа күрә сез балаларыгызның куркынычсыз булуын беләсез.</string>
   <string name="enableKidMode">Балалар осулын куй</string>
   <string name="disableKidMode">Сабый осулын кирегә куй</string>
   <string name="security">Хәвефсезлек</string>
@@ -720,13 +720,13 @@
   <string name="tryToWin">Сез уйнаган һәр уенда җиңәргә (яки ким дигәндә җиңүсезлеккә) тырышыгыз.</string>
   <string name="resignLostGames">Истифа ителгән җиңелгән уеннар (сәгать эшләмәсен).</string>
   <string name="temporaryInconvenience">Вакытлыча уңайсызлыклар өчен гафу үтенәбез,</string>
-  <string name="wishYouGreatGames">һәм сезгә lichess.org сайтында зур уеннар телим.</string>
+  <string name="wishYouGreatGames">һәм сезгә chess-online.com сайтында зур уеннар телим.</string>
   <string name="thankYouForReading">Укыган өчен ташаккур!</string>
   <string name="lifetimeScore">Гомер буе исәпләү</string>
   <string name="currentMatchScore">Хәзерге матч исәбе</string>
   <string name="agreementAssistance">Минем уеннар вакытында теләсә кайсы вакытта ярдәм алуыма ризалашам (шахмат компьютерыннан, китаптан, мәгълүмат базасыннан яки бүтән кешедән).</string>
   <string name="agreementNice">Мин башка уенчыларга һәрвакыт хөрмәт күрсәтермен дип килешәм.</string>
-  <string name="agreementPolicy">Мин барлык Lichess сәясәтен үтәрмен дип килешәм.</string>
+  <string name="agreementPolicy">Мин барлык Chess-Online сәясәтен үтәрмен дип килешәм.</string>
   <string name="searchOrStartNewDiscussion">Яңа сөйләшүне эзләү яки башлау</string>
   <string name="edit">Үзгәртү</string>
   <string name="bullet" comment="Probably best left untranslated. Leave it as 'Bullet' unless your language has a better word for it.">Bullet</string>
@@ -763,7 +763,7 @@
   <string name="congratsYouWon">Тәбриклийбез, сез җиңдегез!</string>
   <string name="gameVsX">%1$s каршы уен</string>
   <string name="resVsX">%1$s vs %2$s</string>
-  <string name="lostAgainstTOSViolator">Сез Lichess TOS кагыйдәләрене бозган кешегә оттырдыгыз</string>
+  <string name="lostAgainstTOSViolator">Сез Chess-Online TOS кагыйдәләрене бозган кешегә оттырдыгыз</string>
   <string name="refundXpointsTimeControlY">Кире кайтару %1$s %2$s рейтинг накате.</string>
   <string name="timeAlmostUp">Вакыт тугады диярлек!</string>
   <string name="download">Йөкләп алу</string>

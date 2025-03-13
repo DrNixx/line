@@ -47,7 +47,7 @@
   <string name="deleteBlog">Scrios an blagphost seo go cinntitheach</string>
   <string name="safeToUseImages">Tá sé sábháilte íomhánna a úsáid ó na suíomhanna gréasáin seo a leanas: </string>
   <string name="selectPostTopics">Roghnaigh na hábhair a bhaineann le do phostáil</string>
-  <string name="useImagesYouMadeYourself">Is féidir leat freisin úsáid a bhaint as íomhánna a rinne tú féin, pictiúir a ghlac tú, scáilghraif de Lichess... rud ar bith nach bhfuil cóipcheart ag duine éigin eile.</string>
+  <string name="useImagesYouMadeYourself">Is féidir leat freisin úsáid a bhaint as íomhánna a rinne tú féin, pictiúir a ghlac tú, scáilghraif de Chess-Online... rud ar bith nach bhfuil cóipcheart ag duine éigin eile.</string>
   <string name="safeAndRespectfulContent">Ná postáil ach ábhar atá sábháilte agus measúil. Ná cóipeáil ábhar duine eile.</string>
   <string name="inappropriateContentAccountClosed">D\'fhéadfadh aon rud míchuí do chuntas a dhúnadh.</string>
   <string name="blogTips">Ár leideanna simplí chun postálacha blag iontacha a scríobh</string>

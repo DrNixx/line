@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="lichessClasses">Часови</string>
-  <string name="teachClassesOfChessStudents">Одржувајте часови по шах со вашите ученици, преку пакетот алатки „Lichess Часови“.</string>
+  <string name="teachClassesOfChessStudents">Одржувајте часови по шах со вашите ученици, преку пакетот алатки „Chess-Online Часови“.</string>
   <string name="features">Главни карактеристики</string>
   <string name="quicklyGenerateSafeUsernames">Брзо создавајте безбедни кориснички имиња и лозинки за учениците</string>
   <string name="trackStudentProgress">Следете го напредокот на вашите ученици во партиите и загатките</string>
   <string name="messageAllStudents">Известете ги сите ученици за нов учебен материјал</string>
   <string name="freeForAllForever" comment="The automated QA checker treats &quot;100%&quot; as if it is a variable, and will give a warning if you change it.&#10;It is not a variable.&#10;&#10;You can still save your translation writing it as &quot;%100&quot; for example, in case this is more valid in your language.">100% бесплатно за сите, засекогаш, без реклами и следење</string>
-  <string name="applyToBeLichessTeacher">Аплицирај за да станеш Lichess инструктор</string>
+  <string name="applyToBeLichessTeacher">Аплицирај за да станеш Chess-Online инструктор</string>
   <string name="noClassesYet">Сеуште нема часови.</string>
   <string name="teachersX">Инструктори: %s</string>
   <string name="newClass">Нов час</string>
@@ -23,7 +23,7 @@
   <string name="classDescription">Опис на часот</string>
   <string name="visibleByBothStudentsAndTeachers">Видливо од инструкторите и учениците на часот</string>
   <string name="teachersOfTheClass">Инструктори на часот</string>
-  <string name="addLichessUsernames">Додадете Lichess корисници за да ги поканите како инструктори. По еден корисник во ред.</string>
+  <string name="addLichessUsernames">Додадете Chess-Online корисници за да ги поканите како инструктори. По еден корисник во ред.</string>
   <string name="resetPassword">Обнови ја лозинката</string>
   <string name="makeSureToCopy">Ископирајте ја или запишете ја лозинката сега. Нема да можете да ја видите повторно!</string>
   <string name="passwordX">Лозинка: %s</string>
@@ -32,22 +32,22 @@
   <string name="realName">Вистинско име</string>
   <string name="privateWillNeverBeShown">Приватно. Никогаш нема да се прикажува надвор од часот. Помага да го запаметите ученикот.</string>
   <string name="addStudent">Додади ученик</string>
-  <string name="lichessProfileXCreatedForY">Lichess профилот %1$s е создаден за %2$s.</string>
+  <string name="lichessProfileXCreatedForY">Chess-Online профилот %1$s е создаден за %2$s.</string>
   <string name="studentCredentials">Ученик: %1$s
 Корисничко име: %2$s
 Лозинка: %3$s</string>
-  <string name="inviteALichessAccount">Покани Lichess корисник</string>
-  <string name="inviteDesc1">Ако ученикот веќе има Lichess корисничко име, можете да го поканите на часот.</string>
-  <string name="inviteDesc2">Ќе добијат порака од Lichess со врска за да се придружат на часот.</string>
+  <string name="inviteALichessAccount">Покани Chess-Online корисник</string>
+  <string name="inviteDesc1">Ако ученикот веќе има Chess-Online корисничко име, можете да го поканите на часот.</string>
+  <string name="inviteDesc2">Ќе добијат порака од Chess-Online со врска за да се придружат на часот.</string>
   <string name="inviteDesc3">Важно: поканувајте само ученици кои ги познавате, и кои активно сакаат да се придружат на часот.</string>
   <string name="inviteDesc4">Никогаш не праќајте несакани покани на непознати играчи.</string>
-  <string name="createANewLichessAccount">Создади нова Lichess сметка</string>
-  <string name="createDesc1">Ако ученикот сѐ уште нема Lichess сметка, тука можете да направите сметка за нив.</string>
+  <string name="createANewLichessAccount">Создади нова Chess-Online сметка</string>
+  <string name="createDesc1">Ако ученикот сѐ уште нема Chess-Online сметка, тука можете да направите сметка за нив.</string>
   <string name="createDesc2">Не е потребна е-пошта. Ќе биде создадена лозинка, која ќе морате да ја испратите на ученикот за да може да се пријави.</string>
   <string name="createDesc3">Важно: ученикот не смее да има повеќе сметки.</string>
   <string name="createDesc4">Ако тие веќе имаат сметка, употребете го образецот за покани.</string>
   <string name="createStudentWarning">Креирајте сметки само за вистински студенти. Не го злоупотребувајте ова за да креирате неколку сметки за Вас. Така ќе бидете блокирани.</string>
-  <string name="lichessUsername">Lichess корисничко име</string>
+  <string name="lichessUsername">Chess-Online корисничко име</string>
   <string name="generateANewUsername">Создади ново корисничко име</string>
   <string name="welcomeToClass">Добредојтовте на вашиот час: %s.
 Еве ви врска за пристап на часот.</string>
@@ -104,8 +104,8 @@
   <string name="youAcceptedThisInvitation">Ја прифативте оваа покана.</string>
   <string name="youDeclinedThisInvitation">Ја одбивте оваа покана.</string>
   <string name="orSeparator" comment="Used as separator between invite sections. Shown as large '~ or ~'.">или</string>
-  <string name="createMultipleAccounts">Креирајте неколку Lichess сметки наеднаш</string>
-  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Можете и да ја %s за да креирате неколку Lichess сметки од листа со имиња на студенти.</string>
+  <string name="createMultipleAccounts">Креирајте неколку Chess-Online сметки наеднаш</string>
+  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Можете и да ја %s за да креирате неколку Chess-Online сметки од листа со имиња на студенти.</string>
   <string name="useThisForm" comment="Link text in multipleAccsFromDescription">искористете оваа форма</string>
   <string name="maxStudentsNote" comment="%1$s will be replaced with a large number (currently 100).\n%2$s is a link and will be replaced with the translation of createMoreClasses. Make sure both strings fit together.">Внимание, класот може да има до %1$s студенти. За повеќе студенти, %2$s.</string>
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">креирајте повеќе класови</string>

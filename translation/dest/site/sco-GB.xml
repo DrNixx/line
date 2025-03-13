@@ -199,9 +199,9 @@
   <string name="forgotPassword">Forgat trystwird?</string>
   <string name="error.weakPassword">Yon trystwird is uncolies common, and ower eith tae guess.</string>
   <string name="error.namePassword">Please dinnae uise yer uisername as yer trystwird.</string>
-  <string name="blankedPassword">Ye hiv uised the same trystwird on anither site, and yon sites been compromiset. Tae enshuir the sauftie o yer Lichess accoont, we behuive ye set a new trystwird. We\'re bethankit for yer unnerstaundin.</string>
-  <string name="youAreLeavingLichess">Yer \'wa-gaun Lichess</string>
-  <string name="neverTypeYourPassword">Niver type yer Lichess trystwird on anithee site!</string>
+  <string name="blankedPassword">Ye hiv uised the same trystwird on anither site, and yon sites been compromiset. Tae enshuir the sauftie o yer Chess-Online accoont, we behuive ye set a new trystwird. We\'re bethankit for yer unnerstaundin.</string>
+  <string name="youAreLeavingLichess">Yer \'wa-gaun Chess-Online</string>
+  <string name="neverTypeYourPassword">Niver type yer Chess-Online trystwird on anithee site!</string>
   <string name="proceedToX">Cairy awa tae %s</string>
   <string name="passwordSuggestion">Dinnae set a trystwird proponit fae some ither body. They\'ll uise it tae cleek yer accoont.</string>
   <string name="emailSuggestion">Dinnae set an email address proponit fae some ither body. They will uise it tae cleek yer accoont.</string>
@@ -271,7 +271,7 @@
   <string name="freeOnlineChess">Free Oanline Chess</string>
   <string name="exportGames">Export gemms</string>
   <string name="ratingRange">Ratin range</string>
-  <string name="thisAccountViolatedTos">This accoont abuised the Lichess Terms o Service</string>
+  <string name="thisAccountViolatedTos">This accoont abuised the Chess-Online Terms o Service</string>
   <string name="takeback">Back-tak</string>
   <string name="proposeATakeback">Bid a back-tak</string>
   <string name="takebackPropositionSent">Back-tak sent</string>

@@ -94,7 +94,7 @@ Nato bo sistem igralca umaknil s turnirja, da ne bo izgubil več iger.
  Lahko se ponovno pridružijo turnirju kadarkoli.</string>
   <string name="protectionAgainstNoShowQ">Kaj se naredi v zvezi z neprihodom?</string>
   <string name="protectionAgainstNoShowA" comment="By &quot;a game&quot; - we mean just one game. Missing even one game will prevent that player from joining a new Swiss event for a certain amount of time.">Igralci, ki se prijavijo na švicarske dogodke, vendar ne igrajo njihovih iger, so lahko problematični.
-Da bi ublažil to težavo, Lichess igralcem, ki niso igrali igre, prepreči, da bi se za določen čas pridružili novemu švicarskemu dogodku.
+Da bi ublažil to težavo, Chess-Online igralcem, ki niso igrali igre, prepreči, da bi se za določen čas pridružili novemu švicarskemu dogodku.
 Ustvarjalec švicarskega dogodka se lahko vseeno odloči, da mu dovoli, da se dogodku pridruži.</string>
   <string name="lateJoinQ">Ali se lahko igralci pozno pridružijo?</string>
   <string name="lateJoinA">Da, dokler se ne začne več kot polovica krogov; na primer v Švicarjih z 11 krogi se lahko igralci pridružijo pred začetkom 6.kroga in v 12 krogih pred začetkom 7. kroga.
@@ -106,7 +106,7 @@ Pozni mizarji dobijo en sam adijo, tudi če so zamudili več krogov.</string>
 Razlog je v tem, da nima poštenega načina ravnanja z ljudmi, ki predčasno zapustijo turnir. Ne moremo pričakovati, da bodo vsi igralci igrali vse svoje igre na spletnem dogodku. To se preprosto ne bo zgodilo in posledično bi bila večina turnirjev v krogu napačna in nepoštena, kar premaga njihov razlog za obstoj.
 Najbližje, kar lahko pridete do Round Robina na spletu, je igranje švicarskega turnirja z zelo velikim številom krogov. Nato se bodo pred koncem turnirja odigrali vsi možni pari.</string>
   <string name="otherSystemsQ">Kaj pa drugi turnirski sistemi?</string>
-  <string name="otherSystemsA">Trenutno Lichess ne nameravamo dodati več turnirskih sistemov.</string>
+  <string name="otherSystemsA">Trenutno Chess-Online ne nameravamo dodati več turnirskih sistemov.</string>
   <string name="swissDescription">Na švicarskem turnirju %1$s Vsak tekmovalec ne igra nujno z vsemi drugimi udeleženci. Tekmovalci se v vsakem krogu srečajo en proti enemu in se parijo z uporabo pravil, ki zagotavljajo, da vsak tekmovalec igra z nasprotniki z podobnim rezultatom tekmovanja, vendar ne z istim nasprotnikom več kot enkrat. Zmagovalec je tekmovalec z najvišjimi skupnimi točkami v vseh krogih. Vsi tekmovalci igrajo v vsakem krogu, razen če je neparavno število igralcev.</string>
   <string name="teamOnly">Švicarske turnirje lahko ustvarijo samo voditelji ekip in jih lahko igrajo samo člani ekipe.
 %1$s za začetek igranja na Švicarskih turnirjih.</string>

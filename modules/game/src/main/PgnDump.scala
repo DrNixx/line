@@ -66,8 +66,8 @@ final class PgnDump(baseUrl: BaseUrl, lightUserApi: lila.core.user.LightUserApiM
   private def eventOf(game: Game) =
     val perf = game.perfType.nameKey
     game.tournamentId
-      .map(id => s"${game.mode} $perf tournament https://lichess.org/tournament/$id")
-      .orElse(game.simulId.map(id => s"$perf simul https://lichess.org/simul/$id"))
+      .map(id => s"${game.mode} $perf tournament https://live.chess-online.com/tournament/$id")
+      .orElse(game.simulId.map(id => s"$perf simul https://live.chess-online.com/simul/$id"))
       .getOrElse(s"${game.mode} $perf game")
 
   private def ratingDiffTag(p: Player, tag: Tag.type => TagType) =

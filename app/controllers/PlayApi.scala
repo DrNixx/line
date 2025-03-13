@@ -129,7 +129,7 @@ final class PlayApi(env: Env)(using akka.stream.Materializer) extends LilaContro
       if me.noBot then
         BadRequest:
           jsonError:
-            "This endpoint can only be used with a Bot account. See https://lichess.org/api#operation/botAccountUpgrade"
+            "This endpoint can only be used with a Bot account. See https://live.chess-online.com/api#operation/botAccountUpgrade"
       else
         isReallyBotCompatible(pov.game).flatMap:
           if _ then f(pov)

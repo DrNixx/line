@@ -232,9 +232,9 @@
   <string name="forgotPassword">Passwuert vergiess?</string>
   <string name="error.weakPassword">Dëst Passwuert ass extrem heefeg an einfach ze roden.</string>
   <string name="error.namePassword">Wannechgelifft benotz net däin Benotzernumm als Passwuert.</string>
-  <string name="blankedPassword">Du hues dat selwecht Passwuert ob enger anerer Säit benotzt déi kompromettéiert gouf. Fir d\'Secherheet vun dengem Lichess Konto ze assuréieren muss du en neit Passwuert wielen. Merci fir däi Versteesdemech.</string>
-  <string name="youAreLeavingLichess">Du verléiss Lichess</string>
-  <string name="neverTypeYourPassword">Gëff däin Lichess Passwuert nie ob enger anerer Säit an!</string>
+  <string name="blankedPassword">Du hues dat selwecht Passwuert ob enger anerer Säit benotzt déi kompromettéiert gouf. Fir d\'Secherheet vun dengem Chess-Online Konto ze assuréieren muss du en neit Passwuert wielen. Merci fir däi Versteesdemech.</string>
+  <string name="youAreLeavingLichess">Du verléiss Chess-Online</string>
+  <string name="neverTypeYourPassword">Gëff däin Chess-Online Passwuert nie ob enger anerer Säit an!</string>
   <string name="proceedToX">Weider op %s</string>
   <string name="passwordSuggestion">Benotz kee Passwuert, dat een aneren dir virschleit. Et kéint probéiert ginn däin Konto ze klauen.</string>
   <string name="emailSuggestion">Benotz keng Email-Adress, déi een aneren dir virschleit. Et kéint probéiert ginn däin Konto ze klauen.</string>
@@ -342,7 +342,7 @@
     <item quantity="one">Dem Géigner %s Sekonn bäiginn</item>
     <item quantity="other">Dem Géigner %s Sekonne bäiginn</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Dësen Konto huet géint d\'Lichess-Notzungsbedingungen verstouss</string>
+  <string name="thisAccountViolatedTos">Dësen Konto huet géint d\'Chess-Online-Notzungsbedingungen verstouss</string>
   <string name="openingExplorerAndTablebase">Eröffnungsdatenbank &amp; Tablebase</string>
   <string name="takeback">Zeréckhuelen</string>
   <string name="proposeATakeback">Zeréckhuelen virschloen</string>
@@ -524,7 +524,7 @@
   <string name="inlineNotation">Inline-Notatioun</string>
   <string name="makeAStudy">Fir Varianten laangfristeg ze haalen an ze deelen, consideréier eng Etüd ze kreéieren.</string>
   <string name="clearSavedMoves">Zich läschen</string>
-  <string name="previouslyOnLichessTV">Virdrun op Lichess TV</string>
+  <string name="previouslyOnLichessTV">Virdrun op Chess-Online TV</string>
   <string name="onlinePlayers">Online Spiller</string>
   <string name="activePlayers">Aktiv Spiller</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Pass op, d\'Partie ass gewäert mee huet keng Auer!</string>
@@ -686,7 +686,7 @@
   <string name="simulHostExtraTime">Host extra Zäit</string>
   <string name="simulAddExtraTimePerPlayer">Gëff denger Auer zousätzlech Zäit fir all Spiller deen der Simultan bäitrëtt.</string>
   <string name="simulHostExtraTimePerPlayer">Gëff all Spiller zousätzlech Bedenkzäit</string>
-  <string name="lichessTournaments">Lichess Turnéier</string>
+  <string name="lichessTournaments">Chess-Online Turnéier</string>
   <string name="tournamentFAQ">Arena Turnéier FAQ</string>
   <string name="timeBeforeTournamentStarts">Zäit bis den Turnéier ufänkt</string>
   <string name="averageCentipawnLoss">Ø-Verloscht vun 1/100-Bauer p. Zuch</string>
@@ -727,8 +727,8 @@
   <string name="weHaveSentYouAnEmailTo">Mir hun eng Email un %s geschéckt. Klick den Link an der Email fir däin Passwuert zeréckzesetzen.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Mam Registréieren akzeptéiers du %s.</string>
   <string name="readAboutOur">Lies iwwer eis %s.</string>
-  <string name="networkLagBetweenYouAndLichess">Netzwierk Lag zwëschen dir an Lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Zäit fir en Zuch um Lichess Server ze veraarbechten</string>
+  <string name="networkLagBetweenYouAndLichess">Netzwierk Lag zwëschen dir an Chess-Online</string>
+  <string name="timeToProcessAMoveOnLichessServer">Zäit fir en Zuch um Chess-Online Server ze veraarbechten</string>
   <string name="downloadAnnotated">Download kommentéiert</string>
   <string name="downloadRaw">Download onkommentéiert</string>
   <string name="downloadImported">Importéiert Partie eroflueden</string>
@@ -745,7 +745,7 @@
   <string name="kidMode">Kannermodus</string>
   <string name="kidModeIsEnabled">De Kannermodus ass aktiv.</string>
   <string name="kidModeExplanation">Eng Sécherheetsastellung. Am Kannermodus sin all Kommunikatiounsweeër blockéiert. Aktivéier dës Optioun fir Kanner an Schüler virun Internetbenotzer ze schützen.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">Am Kannermodus huet den Lichess logo en %s Icon, sou weess du dass däin Kand sécher ass.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">Am Kannermodus huet den Chess-Online logo en %s Icon, sou weess du dass däin Kand sécher ass.</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">Däin Konto gëtt verwalt. Fro däin Schachtrainer fir den Kannermodus opzehiewen.</string>
   <string name="enableKidMode">Kannermodus aktivéieren</string>
   <string name="disableKidMode">Kannermodus desaktivéieren</string>
@@ -753,7 +753,7 @@
   <string name="sessions">Sitzungen</string>
   <string name="revokeAllSessions">All Sitzungen ofschléissen</string>
   <string name="playChessEverywhere">Spill iwwerall Schach</string>
-  <string name="asFreeAsLichess">Sou gratis wéi Lichess</string>
+  <string name="asFreeAsLichess">Sou gratis wéi Chess-Online</string>
   <string name="builtForTheLoveOfChessNotMoney">Aus Léift zum Schach, net Suen</string>
   <string name="everybodyGetsAllFeaturesForFree">Jiddereen kritt all Features fir näischt</string>
   <string name="zeroAdvertisement">Keng Reklamm</string>
@@ -861,7 +861,7 @@
     <item quantity="one">an späicher %s bedingten Virauszuch</item>
     <item quantity="other">an späicher %s bedingt Virauszich</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Du krus eng privat Noriicht vu Lichess.</string>
+  <string name="showUnreadLichessMessage">Du krus eng privat Noriicht vu Chess-Online.</string>
   <string name="clickHereToReadIt">Klick hei fir se ze liesen</string>
   <string name="sorry">Sorry :(</string>
   <string name="weHadToTimeYouOutForAWhile">Mir missten dir eng Auszeit ginn.</string>
@@ -874,14 +874,14 @@
   <string name="tryToWin">Probéier all Partie ze gewannen (oder op mannst Remis ze spillen).</string>
   <string name="resignLostGames">Gëff verlueren Partien op (looss net d\'Auer roflafen).</string>
   <string name="temporaryInconvenience">Mir entschëllege ons fir d\'temporär Onannehmlechkeeten,</string>
-  <string name="wishYouGreatGames">an wënschen dir flott Partien op lichess.org.</string>
+  <string name="wishYouGreatGames">an wënschen dir flott Partien op chess-online.com.</string>
   <string name="thankYouForReading">Merci fir d\'Liesen!</string>
   <string name="lifetimeScore">Éiwegen Spillstand</string>
   <string name="currentMatchScore">Aktuellen Match Score</string>
   <string name="agreementAssistance">Ech stëmmen zou dass ech zu kengem Zäitpunkt wärend mengen Partien Hëllef an Usproch huelen (duerch Computer, Buch, Datenbank oder eng aner Persoun).</string>
   <string name="agreementNice">Ech stëmmen zou dass ech aneren Spiller géigeniwwer ëmmer respektvoll agéieren wäert.</string>
   <string name="agreementMultipleAccounts" comment="%s will be replaced with the translation of 'termsOfService'">Ech stëmmen zou dass ech net puer Konten kreéieren wäert (außer fir Zwecker genannt an den %s).</string>
-  <string name="agreementPolicy">Ech stëmmen zou dass ech den Lichess-Richtlinnen folgen wäert.</string>
+  <string name="agreementPolicy">Ech stëmmen zou dass ech den Chess-Online-Richtlinnen folgen wäert.</string>
   <string name="searchOrStartNewDiscussion">Sichen oder nei Konversatioun starten</string>
   <string name="edit">Änneren</string>
   <string name="bullet" comment="Probably best left untranslated. Leave it as 'Bullet' unless your language has a better word for it.">Bullet</string>
@@ -920,7 +920,7 @@
   <string name="congratsYouWon">Felicitatioun, du hues gewonn!</string>
   <string name="gameVsX">Partie géint %1$s</string>
   <string name="resVsX">%1$s vs %2$s</string>
-  <string name="lostAgainstTOSViolator">Du hues géint een verluer deen géint Lichess-Richtlinnen vertouss huet</string>
+  <string name="lostAgainstTOSViolator">Du hues géint een verluer deen géint Chess-Online-Richtlinnen vertouss huet</string>
   <string name="refundXpointsTimeControlY">Réckerstattung: %1$s %2$s Wäertungspunkten.</string>
   <string name="timeAlmostUp">Deng Zäit ass baal ofgelaf!</string>
   <string name="clickToRevealEmailAddress">[Klick fir Email Adress ze weisen]</string>
@@ -963,7 +963,7 @@ Looss et eidel, fir Partie aus der normaler Ausgangspositioun ze starten.</strin
   <string name="analysisOptions">Analysoptiounen</string>
   <string name="focusChat">Chat fokusséieren</string>
   <string name="showHelpDialog">Dësen Hëllefdialog weisen</string>
-  <string name="reopenYourAccount" comment="Appears on the page where players can reopen their closed account - https://lichess.org/account/reopen (you can only see this when you logged out).">Konto nei opmaachen</string>
+  <string name="reopenYourAccount" comment="Appears on the page where players can reopen their closed account - https://chess-online.com/account/reopen (you can only see this when you logged out).">Konto nei opmaachen</string>
   <string name="emailAssociatedToaccount">Email Adress associéiert mam Konto</string>
   <string name="sentEmailWithLink">Mir hun dir eng Email mat engem Link geschéckt.</string>
   <string name="tournamentEntryCode">Turnéier Zougangscode</string>
@@ -974,13 +974,13 @@ Looss et eidel, fir Partie aus der normaler Ausgangspositioun ze starten.</strin
   <string name="youCantStartNewGame">Du kanns keng nei Partie ufänken bis déi do fäerdeg ass.</string>
   <string name="since">Säit</string>
   <string name="until">Bis</string>
-  <string name="lichessDbExplanation">Gewäert Partien vun allen Lichess Spiller</string>
+  <string name="lichessDbExplanation">Gewäert Partien vun allen Chess-Online Spiller</string>
   <string name="switchSides">Faarf wiesselen</string>
   <string name="closingAccountWithdrawAppeal">Däin Benotzerkonto zou ze maachen wäert och däin Asproch zeréckzéihen</string>
   <string name="ourEventTips">Eis Tipps fir d\'Organiséieren vun Turnéier</string>
   <string name="instructions">Instruktiounen</string>
   <string name="showMeEverything">Alles weisen</string>
-  <string name="lichessPatronInfo">Lichess ass eng Wohltätegkeetsorganisatioun an eng komplett kostenfrei/open source Software.
+  <string name="lichessPatronInfo">Chess-Online ass eng Wohltätegkeetsorganisatioun an eng komplett kostenfrei/open source Software.
 All Betriebskäschten, Entwécklung an Inhalter ginn ausschließlech vun Benotzerspenden finanzéiert.</string>
   <string name="nothingToSeeHere">Fir de Moment gëtt et hei näischt ze gesinn.</string>
   <string name="stats">Statistiken</string>

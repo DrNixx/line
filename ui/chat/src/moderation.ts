@@ -143,7 +143,7 @@ export function moderationView(ctrl?: ModerationCtrl): VNode[] | undefined {
                   ctrl.timeout(ctrl.opts.reasons[0], data.text);
                 }),
               },
-              'Timeout and report to Lichess',
+              'Timeout and report to Chess-Online',
             ),
           ],
         ]);

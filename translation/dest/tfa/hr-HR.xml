@@ -13,6 +13,6 @@
   <string name="twoFactorEnabled">Dvofaktorska provjera autentičnosti je uključena</string>
   <string name="twoFactorToDisable">Trebate Vašu lozinku i autentifikacijski kod s Vaše autentifikacijske aplikacije da bi isključili dvofaktorsku autentifikaciju.</string>
   <string name="openTwoFactorApp">Otvori aplikaciju dvofaktorske autentifikacije na svom uređaju da bi mogli vidjeti svoj autentifikacijski kod i potvrditi svoj identitet.</string>
-  <string name="setupReminder">Omogućite dvostruku autentifikaciju kako biste zaštitili svoj račun na https://lichess.org/account/twofactor.
+  <string name="setupReminder">Omogućite dvostruku autentifikaciju kako biste zaštitili svoj račun na https://chess-online.com/account/twofactor.
 Primili ste ovu poruku jer vaš račun ima posebne odgovornosti kao što su voditelj tima, trener, učitelj ili streamer</string>
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="contactLichess">Kontakin ang Lichess</string>
+  <string name="contactLichess">Kontakin ang Chess-Online</string>
   <string name="whatCanWeHelpYouWith">Ano ang maari naming maitulong?</string>
   <string name="iCantLogIn">Hindi ako makapag-log-in</string>
   <string name="closeYourAccount">Maaari mong isarado ang iyong account sa page na ito</string>

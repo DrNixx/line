@@ -80,7 +80,7 @@ Systemet vil så fjerne spilleren fra turneringen for å unngå flere tap.
 Spilleren kan når som helst komme tilbake til turneringen.</string>
   <string name="protectionAgainstNoShowQ">Hva blir gjort ved manglende oppmøte?</string>
   <string name="protectionAgainstNoShowA" comment="By &quot;a game&quot; - we mean just one game. Missing even one game will prevent that player from joining a new Swiss event for a certain amount of time.">Spillere som melder seg på sveitserturneringer uten å spille partiene sine, kan være utfordrende.
-Lichess avhjelper dette ved å forhindre spillere som ikke spilte et eneste parti, fra å delta i nye sveitserturneringer et gitt tidsrom.
+Chess-Online avhjelper dette ved å forhindre spillere som ikke spilte et eneste parti, fra å delta i nye sveitserturneringer et gitt tidsrom.
 Den som oppretter en sveitserturnering, kan velge å la dem få delta likevel.</string>
   <string name="lateJoinQ">Kan spillere delta sent?</string>
   <string name="lateJoinA">Ja, før over halvparten av rundene har begynt. Spillere kan for eksempel delta før runde 6 starter i en sveitserturnering med 11 runder og før runde 7 med 12 runder.
@@ -92,7 +92,7 @@ Spillere som deltar sent, får et halvt fripoeng én gang, selv om de har gått 
 Grunnen er at det ikke finnes noen rettferdig måte å håndtere dem som forlater turneringen før tiden. Vi kan ikke forvente at alle spillerne vil spille alle partiene sine i en turnering på nett. Det skjer bare ikke, og derfor vil de fleste alle-mot-alle-turneringene være feilaktige og urettferdige, noe som fjerner eksistensgrunnlaget.
 Det nærmeste man kommer en alle-mot-alle-turnering på nett, er å spille en sveitserturnering med et høyt antall runder. Da kan alle mulige par spilles før turneringen avsluttes.</string>
   <string name="otherSystemsQ">Hva med andre turneringssystemer?</string>
-  <string name="otherSystemsA">Vi planlegger ikke flere turneringssystemer hos Lichess nå.</string>
+  <string name="otherSystemsA">Vi planlegger ikke flere turneringssystemer hos Chess-Online nå.</string>
   <string name="swissDescription">I en sveitserturnering %1$s spiller ikke nødvendigvis alle deltakerne mot alle andre. Deltakere møtes to og to i hver runde. De settes opp i par ved hjelp av regler som skal sikre at hver deltaker spiller mot en motstander med tilsvarende oppnådd poengsum, men uten å spille mot samme motstander flere ganger. Vinneren er den deltakeren med høyest oppnådd poengsum gjennom alle rundene. Alle deltakerne spiller i hver runde med mindre antall spillere er et oddetall.</string>
   <string name="teamOnly">Sveitserturneringer kan bare opprettes av lagledere, og kan bare spilles av lagmedlemmer.
 %1$s for å begynne å spille i sveitserturneringer.</string>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="dgtBoard">DGT дъска</string>
-  <string name="lichessAndDgt">Lichess &amp; DGT</string>
+  <string name="lichessAndDgt">Chess-Online &amp; DGT</string>
   <string name="downloadHere">Може да изтеглите софтуера тук: %s.</string>
   <string name="reloadThisPage">Презареждане на страницата</string>
   <string name="dgtConfigure">DGT - настройване</string>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="lichessClasses">Lớp học</string>
-  <string name="teachClassesOfChessStudents">Dạy các lớp học viên chơi cờ với bộ công cụ Lớp học Lichess.</string>
+  <string name="teachClassesOfChessStudents">Dạy các lớp học viên chơi cờ với bộ công cụ Lớp học Chess-Online.</string>
   <string name="features">Tính năng</string>
   <string name="quicklyGenerateSafeUsernames">Tạo nhanh tên người dùng và mật khẩu an toàn cho các học viên</string>
   <string name="trackStudentProgress">Theo dõi sự tiến bộ của học viên trong các ván đấu và giải đố</string>
   <string name="messageAllStudents">Thông báo cho tất cả học viên về tài liệu lớp học mới</string>
   <string name="freeForAllForever" comment="The automated QA checker treats &quot;100%&quot; as if it is a variable, and will give a warning if you change it.&#10;It is not a variable.&#10;&#10;You can still save your translation writing it as &quot;%100&quot; for example, in case this is more valid in your language.">Miễn phí 100% cho tất cả, mãi mãi, không có quảng cáo hay theo dõi</string>
-  <string name="applyToBeLichessTeacher">Đăng ký để trở thành một Giáo viên Lichess</string>
+  <string name="applyToBeLichessTeacher">Đăng ký để trở thành một Giáo viên Chess-Online</string>
   <string name="noClassesYet">Chưa có lớp nào.</string>
   <string name="teachersX">Giáo viên: %s</string>
   <string name="newClass">Lớp học mới</string>
@@ -23,7 +23,7 @@
   <string name="classDescription">Mô tả lớp</string>
   <string name="visibleByBothStudentsAndTeachers">Có thể xem bởi cả giáo viên và học viên của lớp</string>
   <string name="teachersOfTheClass">Giáo viên của lớp</string>
-  <string name="addLichessUsernames">Thêm tên người dùng Lichess để mời họ làm giáo viên. Mỗi người một dòng.</string>
+  <string name="addLichessUsernames">Thêm tên người dùng Chess-Online để mời họ làm giáo viên. Mỗi người một dòng.</string>
   <string name="resetPassword">Đặt lại mật khẩu</string>
   <string name="makeSureToCopy">Hãy chắc chắn sao chép hoặc ghi lại mật khẩu ngay bây giờ. Bạn sẽ không bao giờ có thể nhìn thấy nó nữa!</string>
   <string name="passwordX">Mật khẩu: %s</string>
@@ -32,22 +32,22 @@
   <string name="realName">Tên thật</string>
   <string name="privateWillNeverBeShown">Riêng tư. Sẽ không bao giờ được hiển thị bên ngoài lớp học. Giúp bạn nhớ học viên là ai.</string>
   <string name="addStudent">Thêm học viên</string>
-  <string name="lichessProfileXCreatedForY">Đã tạo %1$s làm hồ sơ Lichess cho %2$s.</string>
+  <string name="lichessProfileXCreatedForY">Đã tạo %1$s làm hồ sơ Chess-Online cho %2$s.</string>
   <string name="studentCredentials">Học viên: %1$s
 Tên người dùng: %2$s
 Mật khẩu: %3$s</string>
-  <string name="inviteALichessAccount">Mời một tài khoản Lichess</string>
-  <string name="inviteDesc1">Nếu học viên đã có tài khoản Lichess, bạn có thể mời họ vào lớp.</string>
-  <string name="inviteDesc2">Họ sẽ nhận được một tin nhắn trên Lichess với một liên kết để tham gia lớp học.</string>
+  <string name="inviteALichessAccount">Mời một tài khoản Chess-Online</string>
+  <string name="inviteDesc1">Nếu học viên đã có tài khoản Chess-Online, bạn có thể mời họ vào lớp.</string>
+  <string name="inviteDesc2">Họ sẽ nhận được một tin nhắn trên Chess-Online với một liên kết để tham gia lớp học.</string>
   <string name="inviteDesc3">Quan trọng: chỉ mời những học viên mà bạn biết và là những người thực sự muốn tham gia lớp học.</string>
   <string name="inviteDesc4">Không bao giờ gửi lời mời không mong muốn đến người chơi tùy ý.</string>
-  <string name="createANewLichessAccount">Tạo một tài khoản Lichess mới</string>
-  <string name="createDesc1">Nếu học viên chưa có tài khoản Lichess, bạn có thể tạo một tài khoản cho họ tại đây.</string>
+  <string name="createANewLichessAccount">Tạo một tài khoản Chess-Online mới</string>
+  <string name="createDesc1">Nếu học viên chưa có tài khoản Chess-Online, bạn có thể tạo một tài khoản cho họ tại đây.</string>
   <string name="createDesc2">Không yêu cầu địa chỉ email. Một mật khẩu sẽ được tạo và bạn sẽ phải gửi nó cho học viên để họ có thể đăng nhập.</string>
   <string name="createDesc3">Quan trọng: một học viên không được có nhiều tài khoản.</string>
   <string name="createDesc4">Nếu họ đã có, hãy sử dụng biểu mẫu mời thay thế.</string>
   <string name="createStudentWarning">Chỉ được tạo tài khoản cho học viên có thật. Không được lợi dụng để tạo nhiều tài khoản cho bản thân. Bạn sẽ bị cấm.</string>
-  <string name="lichessUsername">Tên người dùng Lichess</string>
+  <string name="lichessUsername">Tên người dùng Chess-Online</string>
   <string name="generateANewUsername">Gợi ý tạo một tên người dùng mới</string>
   <string name="welcomeToClass">Chào mừng đến với lớp học của bạn: %s.
 Đây là đường link để tham gia lớp học.</string>
@@ -102,8 +102,8 @@ Mật khẩu: %3$s</string>
   <string name="youAcceptedThisInvitation">Bạn đã chấp nhận lời mời.</string>
   <string name="youDeclinedThisInvitation">Bạn đã từ chối lời mời.</string>
   <string name="orSeparator" comment="Used as separator between invite sections. Shown as large '~ or ~'.">hoặc</string>
-  <string name="createMultipleAccounts">Tạo nhiều tài khoản Lichess cùng lúc</string>
-  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Bạn cũng có thể %s để tạo nhiều tài khoản Lichess từ một danh sách chứa tên các học viên.</string>
+  <string name="createMultipleAccounts">Tạo nhiều tài khoản Chess-Online cùng lúc</string>
+  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Bạn cũng có thể %s để tạo nhiều tài khoản Chess-Online từ một danh sách chứa tên các học viên.</string>
   <string name="useThisForm" comment="Link text in multipleAccsFromDescription">dùng biểu mẫu này</string>
   <string name="maxStudentsNote" comment="%1$s will be replaced with a large number (currently 100).\n%2$s is a link and will be replaced with the translation of createMoreClasses. Make sure both strings fit together.">Chú ý rằng một lớp học chỉ có thể có tối đa %1$s học viên. Để quản lý nhiều học viên hơn, %2$s.</string>
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">tạo thêm nhiều lớp học</string>

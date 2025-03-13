@@ -3,8 +3,8 @@
   <string name="activity">Atividade</string>
   <string name="hostedALiveStream">Iniciou uma transmissão ao vivo</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">Contribuiu para o lichess.org por %1$s mês como %2$s</item>
-    <item quantity="other">Contribuiu para o lichess.org por %1$s meses como %2$s</item>
+    <item quantity="one">Contribuiu para o chess-online.com por %1$s mês como %2$s</item>
+    <item quantity="other">Contribuiu para o chess-online.com por %1$s meses como %2$s</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">Praticou %1$s posição em %2$s</item>
@@ -58,7 +58,7 @@
     <item quantity="one">Criou %s novo estudo</item>
     <item quantity="other">Criou %s novos estudos</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="one">Competiu em %s torneio arena</item>
     <item quantity="other">Competiu em %s torneios arena</item>
   </plurals>

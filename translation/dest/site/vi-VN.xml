@@ -217,9 +217,9 @@
   <string name="forgotPassword">Quên mật khẩu?</string>
   <string name="error.weakPassword">Mật khẩu này quá phổ biến và quá dễ đoán.</string>
   <string name="error.namePassword">Vui lòng không sử dụng tên đăng nhập làm mật khẩu.</string>
-  <string name="blankedPassword">Bạn đã sử dụng cùng một mật khẩu trên một trang web khác và trang web đó đã bị xâm nhập. Để đảm bảo an toàn cho tài khoản Lichess của bạn, chúng tôi cần bạn đặt mật khẩu mới. Cảm ơn vì bạn đã thông cảm.</string>
-  <string name="youAreLeavingLichess">Bạn đang thoát Lichess</string>
-  <string name="neverTypeYourPassword">Không bao giờ nhập mật khẩu Lichess của bạn trên bất kì trang web nào khác!</string>
+  <string name="blankedPassword">Bạn đã sử dụng cùng một mật khẩu trên một trang web khác và trang web đó đã bị xâm nhập. Để đảm bảo an toàn cho tài khoản Chess-Online của bạn, chúng tôi cần bạn đặt mật khẩu mới. Cảm ơn vì bạn đã thông cảm.</string>
+  <string name="youAreLeavingLichess">Bạn đang thoát Chess-Online</string>
+  <string name="neverTypeYourPassword">Không bao giờ nhập mật khẩu Chess-Online của bạn trên bất kì trang web nào khác!</string>
   <string name="proceedToX">Chuyển tới trang %s</string>
   <string name="passwordSuggestion">Đừng sử dụng mật khẩu được đề xuất bởi người khác. Họ có thể dùng nó để đánh cắp tài khoản của bạn.</string>
   <string name="emailSuggestion">Đừng đặt địa chỉ email được gợi ý bởi người khác. Họ có thể dùng nó để đánh cắp tài khoản của bạn.</string>
@@ -319,7 +319,7 @@
   <plurals name="giveNbSeconds">
     <item quantity="other">Cho thêm %s giây</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Tài khoản này đã vi phạm Điều khoản Dịch vụ của Lichess</string>
+  <string name="thisAccountViolatedTos">Tài khoản này đã vi phạm Điều khoản Dịch vụ của Chess-Online</string>
   <string name="openingExplorerAndTablebase">Sách khai cuộc &amp; tàn cuộc</string>
   <string name="takeback">Đi lại</string>
   <string name="proposeATakeback">Đề nghị lùi một nước</string>
@@ -494,7 +494,7 @@ trò chuyện trong ván đấu và có một URL có thể chia sẻ công khai
   <string name="inlineNotation">Ký hiệu bên trong bàn cờ</string>
   <string name="makeAStudy">Để bảo vệ và chia sẻ an toàn, hãy xem xét thực hiện một nghiên cứu.</string>
   <string name="clearSavedMoves">Xóa nước cờ</string>
-  <string name="previouslyOnLichessTV">Ván trước được lên Lichess TV</string>
+  <string name="previouslyOnLichessTV">Ván trước được lên Chess-Online TV</string>
   <string name="onlinePlayers">Các kỳ thủ trực tuyến</string>
   <string name="activePlayers">Các kỳ thủ tích cực</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Lưu ý, ván cờ có xếp hạng nhưng không tính thời gian!</string>
@@ -622,7 +622,7 @@ trò chuyện trong ván đấu và có một URL có thể chia sẻ công khai
   </plurals>
   <string name="tpTimeSpentPlaying">Thời gian đã chơi: %s</string>
   <string name="watchGames">Xem các ván đấu</string>
-  <string name="tpTimeSpentOnTV">Thời gian được lên Lichess TV: %s</string>
+  <string name="tpTimeSpentOnTV">Thời gian được lên Chess-Online TV: %s</string>
   <string name="watch">Xem</string>
   <string name="videoLibrary">Thư viện video</string>
   <string name="streamersMenu">Các Streamer</string>
@@ -658,7 +658,7 @@ trò chuyện trong ván đấu và có một URL có thể chia sẻ công khai
   <string name="simulHostExtraTime">Thời gian thêm ban đầu cho người chủ trì</string>
   <string name="simulAddExtraTimePerPlayer">Thêm thời gian ban đầu vào đồng hồ của bạn cho mỗi người chơi tham gia sự kiện đồng loạt.</string>
   <string name="simulHostExtraTimePerPlayer">Thời gian thêm cho người chủ trì theo số người tham gia</string>
-  <string name="lichessTournaments">Các giải đấu của Lichess</string>
+  <string name="lichessTournaments">Các giải đấu của Chess-Online</string>
   <string name="tournamentFAQ">Các câu hỏi hay gặp về giải đấu Đấu trường</string>
   <string name="timeBeforeTournamentStarts">Thời gian trước khi giải đấu bắt đầu</string>
   <string name="averageCentipawnLoss">Tỉ lệ mất tốt trung bình (ACPL)</string>
@@ -707,8 +707,8 @@ trò chuyện trong ván đấu và có một URL có thể chia sẻ công khai
   <string name="weHaveSentYouAnEmailTo">Chúng tôi đã gửi một email đến %s. Nhấp vào liên kết trong email để đặt lại mật khẩu của bạn.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">Bằng cách đăng ký, bạn đồng ý tuân thủ %s của chúng tôi.</string>
   <string name="readAboutOur">Đọc về %s của chúng tôi.</string>
-  <string name="networkLagBetweenYouAndLichess">Độ trễ mạng giữa bạn và Lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Thời gian để tiến hành một nước đi trên máy chủ Lichess</string>
+  <string name="networkLagBetweenYouAndLichess">Độ trễ mạng giữa bạn và Chess-Online</string>
+  <string name="timeToProcessAMoveOnLichessServer">Thời gian để tiến hành một nước đi trên máy chủ Chess-Online</string>
   <string name="downloadAnnotated">Tải về kèm chú thích</string>
   <string name="downloadRaw">Tải về bản thô</string>
   <string name="downloadImported">Tải về tệp đã được nhập</string>
@@ -725,7 +725,7 @@ trò chuyện trong ván đấu và có một URL có thể chia sẻ công khai
   <string name="kidMode">Chế độ trẻ em</string>
   <string name="kidModeIsEnabled">Chế độ trẻ em đã được bật.</string>
   <string name="kidModeExplanation">Điều này là để an toàn. Trong chế độ trẻ em, tất cả mọi giao tiếp trên trang web đều bị tắt. Kích hoạt điều này cho con của bạn và học viên trong lớp để bảo vệ chúng khỏi những người dùng khác trên Internet.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">Trong chế độ trẻ em, biểu tượng Lichess có một biểu tượng %s, từ đó bạn biết con bạn được an toàn.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">Trong chế độ trẻ em, biểu tượng Chess-Online có một biểu tượng %s, từ đó bạn biết con bạn được an toàn.</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">Tài khoản của bạn đang bị quản lý. Hỏi giáo viên dạy cờ của bạn để lấy lại quyền điều khiển.</string>
   <string name="enableKidMode">Kích hoạt chế độ Trẻ em</string>
   <string name="disableKidMode">Tắt chế độ Trẻ em</string>
@@ -733,7 +733,7 @@ trò chuyện trong ván đấu và có một URL có thể chia sẻ công khai
   <string name="sessions">Phiên</string>
   <string name="revokeAllSessions">xóa toàn bộ phiên đăng nhập</string>
   <string name="playChessEverywhere">Chơi cờ ở bất cứ đâu</string>
-  <string name="asFreeAsLichess">Miễn phí như Lichess</string>
+  <string name="asFreeAsLichess">Miễn phí như Chess-Online</string>
   <string name="builtForTheLoveOfChessNotMoney">Được xây dựng trên nền tảng tình yêu dành cho cờ vua, không phải vì tiền bạc</string>
   <string name="everybodyGetsAllFeaturesForFree">Mọi người đều được sử dụng tất cả các tính năng hoàn toàn miễn phí</string>
   <string name="zeroAdvertisement">Không có quảng cáo</string>
@@ -837,7 +837,7 @@ trò chuyện trong ván đấu và có một URL có thể chia sẻ công khai
   <plurals name="andSaveNbPremoveLines">
     <item quantity="other">và lưu %s nước đi trước</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Bạn đã nhận được một tin nhắn riêng từ Lichess.</string>
+  <string name="showUnreadLichessMessage">Bạn đã nhận được một tin nhắn riêng từ Chess-Online.</string>
   <string name="clickHereToReadIt">Nhấn vào đây để đọc nó</string>
   <string name="sorry">Rất tiếc :(</string>
   <string name="weHadToTimeYouOutForAWhile">Chúng tôi phải ngừng bạn lại một thời gian.</string>
@@ -850,14 +850,14 @@ trò chuyện trong ván đấu và có một URL có thể chia sẻ công khai
   <string name="tryToWin">Cố gắng thắng (hoặc ít nhất hòa) mỗi ván mà bạn chơi.</string>
   <string name="resignLostGames">Chịu thua những ván chắc chắn thua (đừng để đồng hồ chạy đến hết giờ).</string>
   <string name="temporaryInconvenience">Chúng tôi rất tiếc vì những bất tiện tạm thời này,</string>
-  <string name="wishYouGreatGames">và chúc bạn có những ván cờ tuyệt vời trên lichess.org.</string>
+  <string name="wishYouGreatGames">và chúc bạn có những ván cờ tuyệt vời trên chess-online.com.</string>
   <string name="thankYouForReading">Cảm ơn bạn vì đã đọc!</string>
   <string name="lifetimeScore">Tổng điểm đối đầu</string>
   <string name="currentMatchScore">Tỷ số của lần đối đầu hiện tại</string>
   <string name="agreementAssistance">Tôi đồng ý rằng, tôi sẽ không nhận sự trợ giúp trong lúc chơi (từ máy tính, sách, các cơ sở dữ liệu hoặc từ người khác).</string>
   <string name="agreementNice">Tôi đồng ý rằng, tôi sẽ luôn luôn tôn trọng người chơi khác.</string>
   <string name="agreementMultipleAccounts" comment="%s will be replaced with the translation of 'termsOfService'">Tôi đồng ý rằng, tôi sẽ không tạo nhiều tài khoản (trừ các lý do nêu trong %s).</string>
-  <string name="agreementPolicy">Tôi đồng ý rằng, tôi sẽ luôn tuân thủ các chính sách của Lichess.</string>
+  <string name="agreementPolicy">Tôi đồng ý rằng, tôi sẽ luôn tuân thủ các chính sách của Chess-Online.</string>
   <string name="searchOrStartNewDiscussion">Tìm hoặc bắt đầu một cuộc trò chuyện</string>
   <string name="edit">Chỉnh sửa</string>
   <string name="bullet" comment="Probably best left untranslated. Leave it as 'Bullet' unless your language has a better word for it.">Cờ đạn</string>
@@ -896,7 +896,7 @@ trò chuyện trong ván đấu và có một URL có thể chia sẻ công khai
   <string name="congratsYouWon">Chúc mừng, bạn đã giành chiến thắng!</string>
   <string name="gameVsX">Ván đấu với %1$s</string>
   <string name="resVsX">%1$s với %2$s</string>
-  <string name="lostAgainstTOSViolator">Bạn đã mất điểm hệ số vào người vi phạm Điều khoản Dịch vụ của Lichess</string>
+  <string name="lostAgainstTOSViolator">Bạn đã mất điểm hệ số vào người vi phạm Điều khoản Dịch vụ của Chess-Online</string>
   <string name="refundXpointsTimeControlY">Hoàn lại: %1$s điểm hệ số %2$s.</string>
   <string name="timeAlmostUp">Thời gian sắp hết!</string>
   <string name="clickToRevealEmailAddress">[Nhấp để tiết lộ địa chỉ email]</string>
@@ -950,13 +950,13 @@ Bỏ trống để bắt đầu tất cả ván đấu bằng thế trận ban �
   <string name="youCantStartNewGame">Bạn không thể chơi ván mới cho đến khi xong ván này.</string>
   <string name="since">Từ</string>
   <string name="until">Cho tới</string>
-  <string name="lichessDbExplanation">Các ván đấu có xếp hạng được lấy từ tất cả các kỳ thủ trên Lichess</string>
+  <string name="lichessDbExplanation">Các ván đấu có xếp hạng được lấy từ tất cả các kỳ thủ trên Chess-Online</string>
   <string name="switchSides">Đổi bên</string>
   <string name="closingAccountWithdrawAppeal">Việc đóng tài khoản sẽ rút lại kháng cáo của bạn</string>
   <string name="ourEventTips">Lời khuyên của chúng tôi để tổ chức các sự kiện</string>
   <string name="instructions">Hướng dẫn</string>
   <string name="showMeEverything">Cho tôi xem mọi thứ nào</string>
-  <string name="lichessPatronInfo">Lichess là một tổ chức phi lợi nhuận và là phần mềm hoàn toàn miễn phí/mã nguồn mở.
+  <string name="lichessPatronInfo">Chess-Online là một tổ chức phi lợi nhuận và là phần mềm hoàn toàn miễn phí/mã nguồn mở.
 Mọi chi phí vận hành, phát triển, và nội dung được tài trợ bởi những đóng góp của người dùng.</string>
   <string name="nothingToSeeHere">Không có gì để xem ở đây vào lúc này.</string>
   <string name="stats">Thống kê</string>

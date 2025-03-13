@@ -7,7 +7,7 @@
   <string name="trackStudentProgress">روند پیشرفت شطرنج‌آموزان را در بازی‌ها و معماها دنبال کنید</string>
   <string name="messageAllStudents">به تمام دانش آموزان درباره شرایط جدید کلاس پیام دهید</string>
   <string name="freeForAllForever" comment="The automated QA checker treats &quot;100%&quot; as if it is a variable, and will give a warning if you change it.&#10;It is not a variable.&#10;&#10;You can still save your translation writing it as &quot;%100&quot; for example, in case this is more valid in your language.">صد درصد رایگان برای همه و بدون تبلیغات</string>
-  <string name="applyToBeLichessTeacher">برای آنکه معلمِ Lichess باشید درخواست بدهید</string>
+  <string name="applyToBeLichessTeacher">برای آنکه معلمِ Chess-Online باشید درخواست بدهید</string>
   <string name="noClassesYet">هنوز کلاسی موجود نیست.</string>
   <string name="teachersX">معلم‌ها: %s</string>
   <string name="newClass">کلاس جدید</string>
@@ -47,7 +47,7 @@
   <string name="createDesc3">مهم: یک دانش‌جو نباید حسابهای کاربری متعدد داشته باشد.</string>
   <string name="createDesc4">اگر قبلاً یکی دارند، به جای آن از فرم دعوت استفاده کنید.</string>
   <string name="createStudentWarning">فقط برای شطرنج‌آموزان واقعی حساب بسازید. جهت ساخت حساب‌های چندگانه برای خودتان استفاده نکنید. حساب‌تان بسته می‌شود.</string>
-  <string name="lichessUsername">نام کاربریِ Lichess</string>
+  <string name="lichessUsername">نام کاربریِ Chess-Online</string>
   <string name="generateANewUsername">یک نام کاربری جدید تولید کنید</string>
   <string name="welcomeToClass">به کلاس %s خوش آمدید.
 این لینک برای ورود به کلاس است.</string>
@@ -106,8 +106,8 @@
   <string name="youAcceptedThisInvitation">دعوتنامه را پذیرفتید.</string>
   <string name="youDeclinedThisInvitation">دعوتنامه را رد کردید.</string>
   <string name="orSeparator" comment="Used as separator between invite sections. Shown as large '~ or ~'.">یا</string>
-  <string name="createMultipleAccounts">ایجاد همزمان چند حساب Lichess</string>
-  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">همچنین می‌توانید %s کنید برای ایجاد چندین حساب Lichess از فهرست نام‌های دانش‌آموزان.</string>
+  <string name="createMultipleAccounts">ایجاد همزمان چند حساب Chess-Online</string>
+  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">همچنین می‌توانید %s کنید برای ایجاد چندین حساب Chess-Online از فهرست نام‌های دانش‌آموزان.</string>
   <string name="useThisForm" comment="Link text in multipleAccsFromDescription">از این فرم استفاده کنید</string>
   <string name="maxStudentsNote" comment="%1$s will be replaced with a large number (currently 100).\n%2$s is a link and will be replaced with the translation of createMoreClasses. Make sure both strings fit together.">توجه داشته باشید که یک کلاس می‌تواند تا %1$s دانش‌آموز داشته باشد. برای مدیریت دانش‌آموزان بیشتر، %2$s.</string>
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">کلاس های بیشتری ایجاد کنید</string>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessCoaches">Lichess 的教練們</string>
-  <string name="lichessCoach">Lichess 的教練</string>
+  <string name="lichessCoaches">Chess-Online 的教練們</string>
+  <string name="lichessCoach">Chess-Online 的教練</string>
   <string name="areYouCoach">你是一位擁有 %s 頭銜的西洋棋教練嗎？</string>
-  <string name="nmOrFideTitle" comment="nmOrFideTitle&#10;&#10;Part of sentence &quot;Are you a great chess coach with a NM or FIDE title?&quot;&#10;&#10;The text links to our title verification page: https://lichess.org/help/master">NM或FIRD頭銜</string>
+  <string name="nmOrFideTitle" comment="nmOrFideTitle&#10;&#10;Part of sentence &quot;Are you a great chess coach with a NM or FIDE title?&quot;&#10;&#10;The text links to our title verification page: https://chess-online.com/help/master">NM或FIRD頭銜</string>
   <string name="confirmTitle">在這裡認證頭銜，之後我們會審核您的回覆</string>
   <string name="sendApplication" comment="sendApplication&#10;&#10;%s is the lichess email address">在 %s 發給我們郵件我們就會審核您的回覆</string>
   <string name="location">所在地</string>

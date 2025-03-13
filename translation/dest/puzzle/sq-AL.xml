@@ -29,8 +29,8 @@
   <string name="puzzleComplete">Ushtrimi u plotësua!</string>
   <string name="byOpenings">Sipas hapjesh</string>
   <string name="openingsYouPlayedTheMost">Hapje që bëtë në lojërat më të vlerësuara</string>
-  <string name="useFindInPage" comment="useFindInPage&#10;&#10;Appears on https://lichess.org/training/openings for mobile and tablet users&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Që të gjeni hapen tuaj të parapëlqyer, përdorni “Gjej në faqe” te menuja e shfletuesit!</string>
-  <string name="useCtrlF" comment="Appears on https://lichess.org/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Që të gjeni hapjen tuaj të parapëlqyer, përdorni Ctrl+f!</string>
+  <string name="useFindInPage" comment="useFindInPage&#10;&#10;Appears on https://chess-online.com/training/openings for mobile and tablet users&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Që të gjeni hapen tuaj të parapëlqyer, përdorni “Gjej në faqe” te menuja e shfletuesit!</string>
+  <string name="useCtrlF" comment="Appears on https://chess-online.com/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Që të gjeni hapjen tuaj të parapëlqyer, përdorni Ctrl+f!</string>
   <string name="notTheMove">S’është lëvizja e duhur!</string>
   <string name="trySomethingElse">Provoni diçka tjetër.</string>
   <string name="ratingX">Vlerësimi: %s</string>
@@ -74,7 +74,7 @@
   <string name="lookupOfPlayer">Kërkoni te ushtrime prej lojërave të një lojtari</string>
   <string name="fromXGames">Ushtrime nga lojërat e %s</string>
   <string name="searchPuzzles">Kërkoni në ushtrime</string>
-  <string name="fromMyGamesNone">S’keni ushtrime te baza e të dhënave, por Lichess-i prapë ju do fort.
+  <string name="fromMyGamesNone">S’keni ushtrime te baza e të dhënave, por Chess-Online-i prapë ju do fort.
 
 Luani lojëra të shpejta dhe klasike, që të rriten shanset tuaja për të pasur një ushtrim nga tuajt të shtuar atje!</string>
   <string name="fromXGamesFound">U gjetën %1$s ushtrime në %2$s lojëra</string>

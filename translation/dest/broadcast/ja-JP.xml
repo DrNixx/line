@@ -10,7 +10,7 @@
   <string name="newBroadcast">新しいライブ中継</string>
   <string name="subscribedBroadcasts">登録した配信</string>
   <string name="aboutBroadcasts">中継について</string>
-  <string name="howToUseLichessBroadcasts">Lichess 中継の使い方。</string>
+  <string name="howToUseLichessBroadcasts">Chess-Online 中継の使い方。</string>
   <string name="theNewRoundHelp">新ラウンドには前回と同じメンバーと投稿者が参加します。</string>
   <string name="addRound">ラウンドを追加</string>
   <string name="ongoing">配信中</string>
@@ -22,8 +22,8 @@
   <string name="fullDescription">長い説明</string>
   <string name="fullDescriptionHelp">内容の詳しい説明（オプション）。%1$s が利用できます。長さは [欧文換算で] %2$s 字まで。</string>
   <string name="sourceSingleUrl">PGN のソース URL</string>
-  <string name="sourceUrlHelp">Lichess が PGN を取得するための URL。インターネット上に公表されているもののみ。</string>
-  <string name="sourceGameIds">Lichess ゲーム ID、半角スペースで区切って最大 64 個まで。</string>
+  <string name="sourceUrlHelp">Chess-Online が PGN を取得するための URL。インターネット上に公表されているもののみ。</string>
+  <string name="sourceGameIds">Chess-Online ゲーム ID、半角スペースで区切って最大 64 個まで。</string>
   <string name="startDateTimeZone">スタートデート%s</string>
   <string name="startDateHelp">イベント開始時刻（オプション）</string>
   <string name="currentGameUrl">現在のゲームの URL</string>
@@ -46,7 +46,7 @@
   <string name="ageThisYear">今年時点の年齢</string>
   <string name="unrated">レーティングなし</string>
   <string name="recentTournaments">最近のトーナメント</string>
-  <string name="openLichess">Lichess で開く</string>
+  <string name="openLichess">Chess-Online で開く</string>
   <string name="teams">チーム</string>
   <string name="boards">ボード</string>
   <string name="overview">概要</string>

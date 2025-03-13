@@ -8,9 +8,9 @@
     <item quantity="one">%s blogginnlegg</item>
     <item quantity="other">%s blogginnlegg</item>
   </plurals>
-  <string name="lichessOfficialBlog">Offisiell blogg for Lichess</string>
+  <string name="lichessOfficialBlog">Offisiell blogg for Chess-Online</string>
   <string name="continueReadingPost">Fortsett å lese dette innlegget</string>
-  <string name="lichessBlogPostsFromXYear">Blogginnlegg fra Lichess i %s</string>
+  <string name="lichessBlogPostsFromXYear">Blogginnlegg fra Chess-Online i %s</string>
   <string name="previousBlogPosts">Tidligere blogginnlegg</string>
   <string name="xBlog">Bloggen til %s</string>
   <string name="newPost">Nytt innlegg</string>
@@ -52,7 +52,7 @@
   <string name="deleteBlog">Slett dette blogginnlegget for godt</string>
   <string name="safeToUseImages">Det er trygt å bruke bilder fra disse nettstedene: </string>
   <string name="selectPostTopics">Velg emnene for innlegget ditt</string>
-  <string name="useImagesYouMadeYourself">Du kan også bruke bilder du har laget selv, fotografier du har tatt, skjermbilder fra Lichess... alt som andre ikke har opphavsretten til.</string>
+  <string name="useImagesYouMadeYourself">Du kan også bruke bilder du har laget selv, fotografier du har tatt, skjermbilder fra Chess-Online... alt som andre ikke har opphavsretten til.</string>
   <string name="safeAndRespectfulContent">Legg bare ut innlegg som er trygge og respektfulle. Ikke kopier andres innhold.</string>
   <string name="inappropriateContentAccountClosed">Upassende innhold kan føre til at brukerkontoen din blir stengt.</string>
   <string name="blogTips">Våre enkle tips for å skrive gode blogginnlegg</string>

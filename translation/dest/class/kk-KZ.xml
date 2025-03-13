@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessClasses" comment="Lichess Classes are a feature that lets a teacher create virtual classes and check out students' progress.&#10;&#10;This text used to be &quot;Lichess Classes&quot;, which has since been shortened to &quot;Classes&quot;.">Үйірме</string>
+  <string name="lichessClasses" comment="Chess-Online Classes are a feature that lets a teacher create virtual classes and check out students' progress.&#10;&#10;This text used to be &quot;Chess-Online Classes&quot;, which has since been shortened to &quot;Classes&quot;.">Үйірме</string>
   <string name="teachClassesOfChessStudents">Личес Үйірме құралын пайдаланып, шәкірттерге шахматты үйретіңіз.</string>
   <string name="features">Ерекшеліктері</string>
   <string name="quicklyGenerateSafeUsernames">Шәкірттерге қауіпсіз тіркеулі ат пен құпиясөздерді құрастыру</string>
@@ -62,7 +62,7 @@
   <string name="managed">Байлаулы</string>
   <string name="thisStudentAccountIsManaged">Бұл шәкірт тіркелгісі – байлаулы</string>
   <string name="upgradeFromManaged">Байлаулы күйден тәуелсіз күйге ауыстыру</string>
-  <string name="release" comment="This used to be 'release'. It is now called 'graduate', and the term is used here as a verb.&#10;&#10;'Releasing' an account means making it a full Lichess account. It will no longer be tied to the teacher that created it.">Босату</string>
+  <string name="release" comment="This used to be 'release'. It is now called 'graduate', and the term is used here as a verb.&#10;&#10;'Releasing' an account means making it a full Chess-Online account. It will no longer be tied to the teacher that created it.">Босату</string>
   <string name="releaseTheAccount">Тіркелгіні босатсаңыз, оны шәкірт дара өзі басқаратын болады.</string>
   <string name="releaseDesc1">Босатылған тіркелгіні қайттан басқару мүмкін емес. Шәкірт Личестің балалық нұсқасын қосуға, құпиясөзді қайта орнатуға қабілетті болады.</string>
   <string name="releaseDesc2">Тіркелгі босатылған соң шәкірт үйірмеде қала береді.</string>
@@ -111,7 +111,7 @@
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">тағы үйірмелер жасаңыз</string>
   <string name="studentsRealNamesOnePerLine" comment="An instruction on how to enter students' names when creating new accounts for them.">Шәкірттің шын аты, әр жолға бір-бірден</string>
   <string name="xisNowAStudentOfTheClass" comment="%s is the player's name">%s енді үйірменің шәкірті</string>
-  <string name="anInvitationHasBeenSentToX" comment="%s is the username of a player already registered on Lichess.">%s - ға шақыру жіберілген</string>
-  <string name="xAlreadyHasAPendingInvitation" comment="An error message. %s is the username of a player already registered on Lichess.">%s-тың шақыруы бар, әлі жауапсыз</string>
+  <string name="anInvitationHasBeenSentToX" comment="%s is the username of a player already registered on Chess-Online.">%s - ға шақыру жіберілген</string>
+  <string name="xAlreadyHasAPendingInvitation" comment="An error message. %s is the username of a player already registered on Chess-Online.">%s-тың шақыруы бар, әлі жауапсыз</string>
   <string name="xIsAKidAccountWarning" comment="%1$s is the username&#10;%2$s is a link.">%1$s бұл балалық тіркелгі болғандықтан сіздің хабарыңызды ала алмайды. Шақыру URL-дің өзін жіберуіңіз керек: %2$s</string>
 </resources>

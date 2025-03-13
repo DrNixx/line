@@ -15,7 +15,7 @@
   <string name="keepGoing">Ipagpatuloy…</string>
   <string name="puzzleSuccess">Tagumpay!</string>
   <string name="puzzleComplete">Tapos na ang palaisipan!</string>
-  <string name="useCtrlF" comment="Appears on https://lichess.org/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Gamitin ang Crtl+f para mahanap ang iyong paboritong opening!</string>
+  <string name="useCtrlF" comment="Appears on https://chess-online.com/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Gamitin ang Crtl+f para mahanap ang iyong paboritong opening!</string>
   <string name="notTheMove">Hindi iyan ang tira!</string>
   <string name="trySomethingElse">Subukan mo iba.</string>
   <string name="ratingX">Marka: %s</string>
@@ -44,7 +44,7 @@
   <string name="fromMyGames">Mula sa aking mga laro</string>
   <string name="lookupOfPlayer">Maghanap ng mga palaisipan mula sa mga laro ng manlalaro</string>
   <string name="searchPuzzles">Maghanap ng mga palaisipan</string>
-  <string name="fromMyGamesNone">Wala kang mga palaisipan sa database, pero mahal na mahal ka parin ng Lichess.
+  <string name="fromMyGamesNone">Wala kang mga palaisipan sa database, pero mahal na mahal ka parin ng Chess-Online.
 
 Maglaro ng mabilisan at mga klasikong laro para tumaas ang iyong mga tsansa na madagdag ang iyong mga palaisipan!</string>
   <string name="puzzleDashboardDescription">Magsanay, pagsusuri, magpabuti</string>

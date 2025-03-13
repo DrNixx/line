@@ -14,9 +14,9 @@
   <string name="studentCredentials">വിദ്യാൎത്ഥി: %1$s
 ഉപയോക്തൃപ്പേരു്: %2$s
 രഹസ്യവാക്കു്: %3$s</string>
-  <string name="inviteALichessAccount">Lichess അക്കൌണ്ടിനെ ക്ഷണിക്കുക</string>
-  <string name="createANewLichessAccount" comment="The person who would see this would always be a teacher.&#10;In this context, it is to create a new account for a student of their class.">പുതിയ Lichess അക്കൌണ്ട് ഉണ്ടാക്കുക</string>
-  <string name="lichessUsername">Lichess ഉപയോക്തൃപേര്</string>
+  <string name="inviteALichessAccount">Chess-Online അക്കൌണ്ടിനെ ക്ഷണിക്കുക</string>
+  <string name="createANewLichessAccount" comment="The person who would see this would always be a teacher.&#10;In this context, it is to create a new account for a student of their class.">പുതിയ Chess-Online അക്കൌണ്ട് ഉണ്ടാക്കുക</string>
+  <string name="lichessUsername">Chess-Online ഉപയോക്തൃപേര്</string>
   <string name="generateANewUsername" comment="A button which lets teachers create a random username for students they are registering.">പുതിയ ഉപയോക്തൃപേര് ഉണ്ടാക്കുക</string>
   <string name="pending" comment="Appears in a table of students. Refers to invitation by a teacher to join a class, which the student has not yet responded to.">ശേഷിക്കുന്ന</string>
   <string name="declined" comment="Appears in a table of students. Refers to invitation by a teacher to join a class, which the student declined.">വേണ്ടവച്ചതു്</string>

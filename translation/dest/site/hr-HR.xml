@@ -247,9 +247,9 @@
   <string name="forgotPassword">Zaboravio/la si lozinku?</string>
   <string name="error.weakPassword">Ova je lozinka iznimno česta i previše ju je lako pogoditi.</string>
   <string name="error.namePassword">Molimo Vas da ne koristite svoje korisničko ime kao lozinku.</string>
-  <string name="blankedPassword">Koristili ste istu lozinku na drugom mjestu, a to je mjesto ugroženo. Kako bismo osigurali sigurnost Vašeg Lichess računa, potrebno je da postavite novu lozinku. Hvala na razumijevanju.</string>
-  <string name="youAreLeavingLichess">Odlazite s Lichess-a</string>
-  <string name="neverTypeYourPassword">Nikada nemojte upisivati svoju Lichess lozinku na drugom mjestu!</string>
+  <string name="blankedPassword">Koristili ste istu lozinku na drugom mjestu, a to je mjesto ugroženo. Kako bismo osigurali sigurnost Vašeg Chess-Online računa, potrebno je da postavite novu lozinku. Hvala na razumijevanju.</string>
+  <string name="youAreLeavingLichess">Odlazite s Chess-Online-a</string>
+  <string name="neverTypeYourPassword">Nikada nemojte upisivati svoju Chess-Online lozinku na drugom mjestu!</string>
   <string name="proceedToX">Nastavi do %s</string>
   <string name="passwordSuggestion">Ne postavljajte lozinku koju je predložio netko drugi. Iskoristit će je da Vam ukradu račun.</string>
   <string name="emailSuggestion">Ne postavljajte adresu e-pošte koju je predložio netko drugi. Iskoristit će je da Vam ukradu račun.</string>
@@ -367,7 +367,7 @@
     <item quantity="few">Dodaj protivniku %s sekunde</item>
     <item quantity="other">Dodaj protivniku %s sekundi</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Korisnički račun je prekršio Lichess Uvjete Pružanja Usluge</string>
+  <string name="thisAccountViolatedTos">Korisnički račun je prekršio Chess-Online Uvjete Pružanja Usluge</string>
   <string name="openingExplorerAndTablebase">Pretraživač otvaranja &amp; baza pozicija u završnici</string>
   <string name="takeback">Vrati potez</string>
   <string name="proposeATakeback">Predloži vraćanje poteza</string>
@@ -565,7 +565,7 @@ računalnu analizu, chat partije i URL za dijeljenje.</string>
   <string name="inlineNotation">Kompaktnija notacija</string>
   <string name="makeAStudy">Za čuvanje i dijeljenje razmislite o izradi studije.</string>
   <string name="clearSavedMoves">Očisti poteze</string>
-  <string name="previouslyOnLichessTV">Prethodno na Lichess TV-u</string>
+  <string name="previouslyOnLichessTV">Prethodno na Chess-Online TV-u</string>
   <string name="onlinePlayers">Online igrači</string>
   <string name="activePlayers">Aktivni igrači</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Oprez, igra se za bodove ali ne i na vrijeme!</string>
@@ -736,7 +736,7 @@ računalnu analizu, chat partije i URL za dijeljenje.</string>
   <string name="simulHostExtraTime">Dodatno vrijeme domaćina</string>
   <string name="simulAddExtraTimePerPlayer">Dodaj početno vrijeme svom satu za svakog igrača koji se pridruži simultanki.</string>
   <string name="simulHostExtraTimePerPlayer">Održi dodatno vrijeme po igraču</string>
-  <string name="lichessTournaments">Lichess turniri</string>
+  <string name="lichessTournaments">Chess-Online turniri</string>
   <string name="tournamentFAQ">Najčešće postavljana pitanja o Arena turnirima</string>
   <string name="timeBeforeTournamentStarts">Vrijeme prije nego turnir započne</string>
   <string name="averageCentipawnLoss">Prosječni gubitak u stotim dijelovima pješaka</string>
@@ -922,7 +922,7 @@ računalnu analizu, chat partije i URL za dijeljenje.</string>
     <item quantity="few">i uštedi %s predpoteza</item>
     <item quantity="other">i uštedi %s predpoteza</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Primili ste privatnu poruku od Lichess-a</string>
+  <string name="showUnreadLichessMessage">Primili ste privatnu poruku od Chess-Online-a</string>
   <string name="clickHereToReadIt">Klikni ovdje da pročitaš</string>
   <string name="sorry">Oprosti :(</string>
   <string name="weHadToTimeYouOutForAWhile">Trebali smo te na neko vrijeme izbaciti.</string>
@@ -935,7 +935,7 @@ računalnu analizu, chat partije i URL za dijeljenje.</string>
   <string name="tryToWin">Pokušajte pobijediti (ili barem igrati neriješeno) svaku igru ​​koju igrate.</string>
   <string name="resignLostGames">Predajte izgubljene igre (ne dopustite da vam vrijeme istekne).</string>
   <string name="temporaryInconvenience">Ispričavamo se zbog privremene neugodnosti,</string>
-  <string name="wishYouGreatGames">i želimo vam sjajne igre na lichess.org.</string>
+  <string name="wishYouGreatGames">i želimo vam sjajne igre na chess-online.com.</string>
   <string name="thankYouForReading">Hvala na čitanju!</string>
   <string name="lifetimeScore">Ukupni rezultat</string>
   <string name="currentMatchScore">Trenutni rezultat meča</string>
@@ -981,7 +981,7 @@ računalnu analizu, chat partije i URL za dijeljenje.</string>
   <string name="congratsYouWon">Čestitamo, pobijedili ste!</string>
   <string name="gameVsX">Partija protiv %1$s</string>
   <string name="resVsX">%1$s protiv %2$s</string>
-  <string name="lostAgainstTOSViolator">Izgubio si od nekoga tko je prekršio Lichess TOS</string>
+  <string name="lostAgainstTOSViolator">Izgubio si od nekoga tko je prekršio Chess-Online TOS</string>
   <string name="refundXpointsTimeControlY">Povrat: %1$s %2$s rejting bodova.</string>
   <string name="timeAlmostUp">Vrijeme uskoro ističe!</string>
   <string name="clickToRevealEmailAddress">[Klikni za prikaz e-mail adrese]</string>
@@ -1041,7 +1041,7 @@ Ostavite prazno za početak igre s normalne početne pozicije.</string>
   <string name="ourEventTips">Naši savjeti za organizaciju događaja</string>
   <string name="instructions">Upute</string>
   <string name="showMeEverything">Pokaži mi sve</string>
-  <string name="lichessPatronInfo">Lichess je dobrotvorni i potpuno besplatan softver otvorenog koda.
+  <string name="lichessPatronInfo">Chess-Online je dobrotvorni i potpuno besplatan softver otvorenog koda.
 Svi operativni troškovi, razvoj i sadržaj financiraju se isključivo donacijama korisnika.</string>
   <string name="nothingToSeeHere">Trenutno ovdje nema ništa za vidjeti.</string>
   <string name="stats">Statistika</string>

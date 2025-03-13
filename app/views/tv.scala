@@ -21,9 +21,9 @@ def index(
     .js(PageModule("round", Json.obj("data" -> data)))
     .css("bits.tv.single")
     .graph(
-      title = s"Watch the best ${channel.name.toLowerCase} games of lichess.org",
+      title = s"Watch the best ${channel.name.toLowerCase} games of Chess-Online.Com",
       description =
-        s"Sit back, relax, and watch the best ${channel.name.toLowerCase} Lichess players compete on Lichess TV",
+        s"Sit back, relax, and watch the best ${channel.name.toLowerCase} Chess-Online players compete on Lichess TV",
       url = s"$netBaseUrl${routes.Tv.onChannel(channel.key)}"
     )
     .flag(_.zen)
@@ -64,12 +64,12 @@ def games(channel: lila.tv.Tv.Channel, povs: List[Pov], champions: lila.tv.Tv.Ch
 def embed(pov: Pov, channelKey: Option[String])(using EmbedContext) =
   val dataStreamUrl = channelKey.fold("/tv/feed?bc=1")(key => s"/tv/${key}/feed?bc=1")
   views.base.embed.minimal(
-    title = "lichess.org chess TV",
+    title = "Chess-Online.Com chess TV",
     cssKeys = List("bits.tv.embed"),
     modules = Esm("site.tvEmbed")
   )(
     attr("data-stream-url") := dataStreamUrl,
-    div(id := "featured-game", cls := "embedded", title := "lichess.org TV")(
+    div(id := "featured-game", cls := "embedded", title := "Chess-Online.Com TV")(
       views.game.mini.noCtx(pov, tv = true, channelKey)(targetBlank)
     ),
     cashTag,

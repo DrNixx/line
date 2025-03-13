@@ -31,8 +31,8 @@
   <string name="byOpenings">Nach Eröffnige</string>
   <string name="puzzlesByOpenings">Ufgabe nach Eröffnige</string>
   <string name="openingsYouPlayedTheMost">Dini meischt-gschpillte Eröffnige, i g\'wertete Schpiel</string>
-  <string name="useFindInPage" comment="useFindInPage&#10;&#10;Appears on https://lichess.org/training/openings for mobile and tablet users&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Benutz im Browser \"Suchen...\", um dini bevorzugti Eröffnig z\'finde!</string>
-  <string name="useCtrlF" comment="Appears on https://lichess.org/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Find dini bevorzugti Eröffnig mit Ctrl+F !</string>
+  <string name="useFindInPage" comment="useFindInPage&#10;&#10;Appears on https://chess-online.com/training/openings for mobile and tablet users&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Benutz im Browser \"Suchen...\", um dini bevorzugti Eröffnig z\'finde!</string>
+  <string name="useCtrlF" comment="Appears on https://chess-online.com/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Find dini bevorzugti Eröffnig mit Ctrl+F !</string>
   <string name="notTheMove">Das isch nöd de Zug!</string>
   <string name="trySomethingElse">Probier öppis Anders.</string>
   <string name="ratingX">Wertig: %s</string>
@@ -76,7 +76,7 @@
   <string name="lookupOfPlayer">Suech Ufgabe us de Schpiel vu me Schpiller</string>
   <string name="fromXGames">Ufgabe us Schpiel vu %s</string>
   <string name="searchPuzzles">Suech Ufgabe</string>
-  <string name="fromMyGamesNone">Du häsch kei Ufgabe i de Datäbank, aber Lichess schätzt dich immerno sehr.
+  <string name="fromMyGamesNone">Du häsch kei Ufgabe i de Datäbank, aber Chess-Online schätzt dich immerno sehr.
 
 Schpill schnälli und au klassischi Schpiel, will so erhöht sich d\'Chance, dass Ufgabe vu dine eigene Schpiel zuegfüegt werded!</string>
   <string name="fromXGamesFound">%1$s Ufgabe in Schpiel vu %2$s gfunde</string>

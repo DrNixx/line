@@ -11,7 +11,7 @@
   <string name="newBroadcast">Nova emisión en directo</string>
   <string name="subscribedBroadcasts">Emisións subscritas</string>
   <string name="aboutBroadcasts">Sobre as retransmisións</string>
-  <string name="howToUseLichessBroadcasts">Como usar as Retransmisións de Lichess.</string>
+  <string name="howToUseLichessBroadcasts">Como usar as Retransmisións de Chess-Online.</string>
   <string name="theNewRoundHelp">A nova rolda terá os mesmos membros e colaboradores cá rolda anterior.</string>
   <string name="addRound">Engadir unha rolda</string>
   <string name="ongoing">En curso</string>
@@ -23,8 +23,8 @@
   <string name="fullDescription">Descrición completa do torneo</string>
   <string name="fullDescriptionHelp">Descrición longa opcional do torneo. %1$s está dispoñíbel. A lonxitude debe ser menor de %2$s caracteres.</string>
   <string name="sourceSingleUrl">URL de orixe do arquivo PGN</string>
-  <string name="sourceUrlHelp">Ligazón que Lichess comprobará para obter actualizacións dos PGN. Debe ser publicamente accesíbel desde a Internet.</string>
-  <string name="sourceGameIds">Até 64 identificadores de partidas de Lichess, separados por espazos.</string>
+  <string name="sourceUrlHelp">Ligazón que Chess-Online comprobará para obter actualizacións dos PGN. Debe ser publicamente accesíbel desde a Internet.</string>
+  <string name="sourceGameIds">Até 64 identificadores de partidas de Chess-Online, separados por espazos.</string>
   <string name="startDateTimeZone">Data de inicio do torneo (na zona horaria local): %s</string>
   <string name="startDateHelp">Opcional, se sabes cando comeza o evento</string>
   <string name="currentGameUrl">Ligazón da partida actual</string>
@@ -47,7 +47,7 @@
   <string name="ageThisYear">Idade actual</string>
   <string name="unrated">Sen puntuar</string>
   <string name="recentTournaments">Torneos recentes</string>
-  <string name="openLichess">Abrir en Lichess</string>
+  <string name="openLichess">Abrir en Chess-Online</string>
   <string name="teams">Equipos</string>
   <string name="boards">Taboleiros</string>
   <string name="overview">Visión de conxunto</string>

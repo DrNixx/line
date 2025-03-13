@@ -203,9 +203,9 @@
   <string name="forgotPassword">Нэвтрэх үгээ мартсан уу?</string>
   <string name="error.weakPassword">Энэ нууц үг аймшигтай амархан байна хха, бас таахад ч амархан.</string>
   <string name="error.namePassword">Нууц үгэндээ нэвтрэх нэрээ оруулахгүй.</string>
-  <string name="blankedPassword">Та өөр сайтан дээр ижил нууц үг ашигласан байна. Тэрхүү сайтын мэдээллийн хадгалалт сайн биш бөгөөд, та Lichess бүртгэлийнхээ хамгаалалтыг сайжруулахын тулд шинэ нууц үг оруулна уу. </string>
+  <string name="blankedPassword">Та өөр сайтан дээр ижил нууц үг ашигласан байна. Тэрхүү сайтын мэдээллийн хадгалалт сайн биш бөгөөд, та Chess-Online бүртгэлийнхээ хамгаалалтыг сайжруулахын тулд шинэ нууц үг оруулна уу. </string>
   <string name="youAreLeavingLichess">Чи lichessыг орхиж байна гомдлоо шүү</string>
-  <string name="neverTypeYourPassword">Lichess нууц үгээ өөр сайтанд хэзээ ч бүр хэзээ ч битгий хий!</string>
+  <string name="neverTypeYourPassword">Chess-Online нууц үгээ өөр сайтанд хэзээ ч бүр хэзээ ч битгий хий!</string>
   <string name="proceedToX">%s ийшээ дарна уу</string>
   <string name="passwordSuggestion">Нууц үгээ бусдын санал болгосноор хийж тэнэгтэв. Тэд хаягыг чинь хулгайлах гэж байгаа юм.</string>
   <string name="emailSuggestion">Битгий цахим шуудангийн хаягаа бусдын санал болгосноор хий хийх юм бол. Тэд чиний хаягыг хулгайлна.</string>
@@ -303,7 +303,7 @@
     <item quantity="one">%s секунд нэмж өгөх</item>
     <item quantity="other">%s секунд нэмж өгөх</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Энэхүү бүртгэлийн эзэмшигч нь Lichess-ийн Үйлчилгээний Нөхцлийг зөрчсөн байна</string>
+  <string name="thisAccountViolatedTos">Энэхүү бүртгэлийн эзэмшигч нь Chess-Online-ийн Үйлчилгээний Нөхцлийг зөрчсөн байна</string>
   <string name="openingExplorerAndTablebase">Шатрын гараа болон төгсгөлүүдийг судлах</string>
   <string name="takeback">Нүүдэл буцаалт</string>
   <string name="proposeATakeback">Нүүдэл буцаах хүсэлт илгээх</string>
@@ -784,7 +784,7 @@
   <string name="tryToWin">Тоглолт бүрээ ялахын төлөө (ядаж тэнцэхийн төлөө) тоглоорой.</string>
   <string name="resignLostGames">Ялагдсан нь тодорхой тоглолтууд дээр бууж өгж байгаарай (цагыг дуустал хүлээж өрсөлдөгчийнхөө цагийг бас үрэхээ больё).</string>
   <string name="temporaryInconvenience">Түр зуурын асуудалд уучлал хүсье,</string>
-  <string name="wishYouGreatGames">та lichess.org дээр олон сайхан тоглолтуудыг тоглоно гэж найдъя.</string>
+  <string name="wishYouGreatGames">та chess-online.com дээр олон сайхан тоглолтуудыг тоглоно гэж найдъя.</string>
   <string name="thankYouForReading">Уншсанд баярлалаа</string>
   <string name="lifetimeScore">Амьдралын оноо</string>
   <string name="agreementPolicy">Личесс-н дүрмээ баримталж байхаа зөвшөөр ч байна уу?</string>

@@ -2,10 +2,10 @@
 <resources>
   <string name="donate">Menderma</string>
   <string name="donateAsX">Derma sebagai %s</string>
-  <string name="lichessPatron">Penaung Lichess</string>
+  <string name="lichessPatron">Penaung Chess-Online</string>
   <string name="freeAccount">Akaun Percuma</string>
-  <string name="becomePatron">Menjadi Penaung Lichess</string>
-  <string name="xBecamePatron">%s menjadi Penaung Lichess</string>
+  <string name="becomePatron">Menjadi Penaung Chess-Online</string>
+  <string name="xBecamePatron">%s menjadi Penaung Chess-Online</string>
   <string name="newPatrons">Penaung Baru</string>
   <string name="freeChess">Catur percuma untuk semua orang, selama-lamanya!</string>
 </resources>

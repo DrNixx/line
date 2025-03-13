@@ -32,29 +32,29 @@
   <string name="withCreditCard">Luottokortti</string>
   <string name="logInToDonate">Kirjaudu sisään lahjoittaaksesi</string>
   <string name="weAreSmallTeam">Olemme pieni ryhmä, joten tuellasi on suuri vaikutus!</string>
-  <string name="celebratedPatrons">Maineikkaat tukijat, joiden ansiosta Lichess on olemassa</string>
+  <string name="celebratedPatrons">Maineikkaat tukijat, joiden ansiosta Chess-Online on olemassa</string>
   <string name="whereMoneyGoes">Mihin raha käytetään?</string>
   <string name="serversAndDeveloper">Ensinnäkin tehokkaisiin palvelimiin.
 Lisäksi maksamme täysipäiväiselle kehittäjälle: %s:lle, Lichessin perustajalle.</string>
   <string name="costBreakdown">Katso yksityiskohtainen kuluerittely</string>
-  <string name="officialNonProfit">Onko Lichess virallisesti yleishyödyllinen yhteisö?</string>
+  <string name="officialNonProfit">Onko Chess-Online virallisesti yleishyödyllinen yhteisö?</string>
   <string name="actOfCreation">On. Tässä on perustamiskirja (ranskan kielellä)</string>
   <string name="changeMonthlySupport">Voinko muuttaa/perua kuukausittaisen tukeni?</string>
   <string name="changeOrContact">Voit, milloin vain tällä sivulla.
 Tai voit %s.</string>
   <string name="contactSupport">ottaa yhteyttä Lichessin tukipalveluun</string>
   <string name="otherMethods">Muita lahjoitustapoja?</string>
-  <string name="lichessIsRegisteredWith">Lichess on rekisteröity %syn.</string>
+  <string name="lichessIsRegisteredWith">Chess-Online on rekisteröity %syn.</string>
   <string name="bankTransfers">Hyväksymme myös pankkisiirtoja</string>
   <string name="onlyDonationFromAbove">Otathan huomioon, että tukijan aseman voi saada vain käyttämällä yllä olevaa lahjoituslomaketta.</string>
   <string name="patronFeatures">Onko joitakin toimintoja rajattu vain tukijoille?</string>
-  <string name="noPatronFeatures">Ei, koska Lichess on täysin ilmainen, aina ja kaikille. Sen lupaamme. Tukijat pääsevät kuitenkin ylpeilemään uudella hienolla profiilikuvakkeellaan.</string>
+  <string name="noPatronFeatures">Ei, koska Chess-Online on täysin ilmainen, aina ja kaikille. Sen lupaamme. Tukijat pääsevät kuitenkin ylpeilemään uudella hienolla profiilikuvakkeellaan.</string>
   <string name="featuresComparison">Katso toimintojen yksityiskohtainen vertailu</string>
   <plurals name="patronForMonths">
     <item quantity="one">Lichessin tukijana yhden kuukauden ajan</item>
     <item quantity="other">Lichessin Patron %s kuukauden ajan</item>
   </plurals>
-  <string name="youSupportWith">Tuet lichess.orgia summalla %s joka kuukausi.</string>
+  <string name="youSupportWith">Tuet chess-online.comia summalla %s joka kuukausi.</string>
   <string name="tyvm">Kiitos paljon avustasi. Olet huippu!</string>
   <string name="currentStatus">Nykyinen tila</string>
   <string name="nextPayment">Seuraava maksu</string>
@@ -66,7 +66,7 @@ Tai voit %s.</string>
   <string name="changeMonthlyAmount">Muuta kuukausittaista summaa (%s)</string>
   <string name="cancelSupport">peru tukesi</string>
   <string name="xOrY">%1$s tai %2$s</string>
-  <string name="decideHowMuch">Päätä, minkä arvoinen Lichess on sinulle:</string>
+  <string name="decideHowMuch">Päätä, minkä arvoinen Chess-Online on sinulle:</string>
   <string name="stopPayments">Vedä takaisin luottokorttitietosi ja pysäytä veloitukset:</string>
   <string name="stopPaymentsPayPal">Peruuta PayPal-tilaus ja pysäytä maksut:</string>
   <string name="noLongerSupport">Ei enempää tukea Lichessille</string>
@@ -78,7 +78,7 @@ Tai voit %s.</string>
   <string name="checkOutProfile">Katsohan profiilisivuasi!</string>
   <string name="nowLifetime">Olet nyt elinikäinen Lichessin tukija!</string>
   <string name="nowOneMonth">Olet nyt Lichessin tukija kuukauden ajan!</string>
-  <string name="downgradeNextMonth">Kuukauden päästä sinua EI veloiteta uudelleen, ja Lichess-tunnuksesi palautuu ilmaistunnukseksi.</string>
+  <string name="downgradeNextMonth">Kuukauden päästä sinua EI veloiteta uudelleen, ja Chess-Online-tunnuksesi palautuu ilmaistunnukseksi.</string>
   <string name="changeCurrency">Vaihda valuutta</string>
   <string name="paymentDetails">Maksun tiedot</string>
   <string name="updatePaymentMethod">Päivitä maksutapa</string>

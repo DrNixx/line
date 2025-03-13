@@ -63,8 +63,8 @@
   <string name="notifyChallenge">Utfordringer</string>
   <string name="notifyTournamentSoon">Turnering starter snart</string>
   <string name="notifyTimeAlarm">Fjernsjakkur i ferd med å løpe ut</string>
-  <string name="notifyBell">Bjellevarsel innenfor Lichess</string>
-  <string name="notifyPush">Enhetsvarsel utenfor Lichess</string>
+  <string name="notifyBell">Bjellevarsel innenfor Chess-Online</string>
+  <string name="notifyPush">Enhetsvarsel utenfor Chess-Online</string>
   <string name="notifyWeb">Nettleser</string>
   <string name="notifyDevice">Enhet</string>
   <string name="bellNotificationSound">Bjellevarsel med lyd</string>

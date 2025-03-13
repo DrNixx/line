@@ -2,22 +2,22 @@
 <resources>
   <string name="faqAbbreviation">GYIK</string>
   <string name="frequentlyAskedQuestions">Gyakran ismételt kérdések</string>
-  <string name="whyIsLichessCalledLichess">Miért hívják Lichess-nek a Lichess-t?</string>
-  <string name="lichessCombinationLiveLightLibrePronounced">A Lichess a \"live/light/libre\" (élő/könnyed/szabad) és \"chess\" (sakk) szavakból ered. Ìgy ejtsd ki: %1$s.</string>
+  <string name="whyIsLichessCalledLichess">Miért hívják Chess-Online-nek a Chess-Online-t?</string>
+  <string name="lichessCombinationLiveLightLibrePronounced">A Chess-Online a \"live/light/libre\" (élő/könnyed/szabad) és \"chess\" (sakk) szavakból ered. Ìgy ejtsd ki: %1$s.</string>
   <string name="leechess">lí-csessz</string>
   <string name="hearItPronouncedBySpecialist">Így ejti egy hozzáértő.</string>
   <string name="whyLiveLightLibre">Élő, mert a játszmák valós időben játszhatók és követhetők 24/7; könnyed és szabad, mert nyílt forráskódra épül és mentes a többi weboldalon pestisként terjedő jogvédett szeméttől.</string>
-  <string name="whyIsLilaCalledLila">Hasonlóképpen, a Lichess forráskódja a %1$s, a \"li[chess in sca]la\" szójátékból ered, mivel a Lichess zöme %2$s-ban, egy intuitív programozási nyelvben íródott.</string>
-  <string name="howCanIContributeToLichess">Hogyan támogathatom a Lichess-t?</string>
-  <string name="lichessPoweredByDonationsAndVolunteers">A Lichess működését patronok adományai és önkéntesek munkája teszik lehetővé.</string>
+  <string name="whyIsLilaCalledLila">Hasonlóképpen, a Chess-Online forráskódja a %1$s, a \"li[chess in sca]la\" szójátékból ered, mivel a Chess-Online zöme %2$s-ban, egy intuitív programozási nyelvben íródott.</string>
+  <string name="howCanIContributeToLichess">Hogyan támogathatom a Chess-Online-t?</string>
+  <string name="lichessPoweredByDonationsAndVolunteers">A Chess-Online működését patronok adományai és önkéntesek munkája teszik lehetővé.</string>
   <string name="findMoreAndSeeHowHelp">Többet is megtudhatsz arról hogyan %1$s (beleértve a %2$s). Ha önkéntes munkával vagy időd és tudásod ráfordításával segítenél arról %3$s.</string>
   <string name="beingAPatron">legyél patron</string>
   <string name="breakdownOfOurCosts">költségeink lebontása</string>
   <string name="otherWaysToHelp">még így segíthetsz</string>
-  <string name="areThereWebsitesBasedOnLichess">Vannak Lichess-en alapuló weboldalak?</string>
-  <string name="yesLichessInspiredOtherOpenSourceWebsites">Igen. Lichess valóban inspirált más nyílt forrású oldalakat amik használják a %1$s, %2$s vagy %3$s-t.</string>
+  <string name="areThereWebsitesBasedOnLichess">Vannak Chess-Online-en alapuló weboldalak?</string>
+  <string name="yesLichessInspiredOtherOpenSourceWebsites">Igen. Chess-Online valóban inspirált más nyílt forrású oldalakat amik használják a %1$s, %2$s vagy %3$s-t.</string>
   <string name="keyboardShortcuts">Melyek az elérhető gyorsbilllentyűk?</string>
-  <string name="keyboardShortcutsExplanation">A Lichess oldalain gyorsbillentyűket is használhatsz. Nyomd meg a \'?\' billentyűt a tanulmány, elemzés, feladvány és játszma oldalakon az elérhető gyorsbillentyűk listájához.</string>
+  <string name="keyboardShortcutsExplanation">A Chess-Online oldalain gyorsbillentyűket is használhatsz. Nyomd meg a \'?\' billentyűt a tanulmány, elemzés, feladvány és játszma oldalakon az elérhető gyorsbillentyűk listájához.</string>
   <string name="fairPlay">Sportszerűség</string>
   <string name="whenAmIEligibleRatinRefund">Mikor vagyok jogosult értékszám kompenzációra a csalók miatt?</string>
   <string name="ratingRefundExplanation" comment="In answer to the question 'When am I eligible for the automatic rating refund from cheaters?'">Egy percel azután, hogy a játékost jelentik, megvizsgáljuk az utolsó 40 értékelt játszmáit az elmúlt 3 napból. Ha egyike vagy a játékos ellenfeleinek, a pontszámod csökkent (mert vesztettél vagy döntetlent játszottál) és a pontszámod nem becsült, visszajár az elvesztett pontokból. A pontos érték változhat az eddigi legmagasabb pontszámod és annak alakulása alapján.
@@ -29,16 +29,16 @@
   <string name="isCorrespondenceDifferent">Van-e különbség a levelezési és hagyományos sakk között?</string>
   <string name="pleaseReadFairPlayPage">További információkért kérjük olvasd el a %s</string>
   <string name="fairPlayPage">sportszerűség oldalt</string>
-  <string name="youCanUseOpeningBookNoEngine">A Lichess-en a legnagyobb különbség levelezési sakk szabályaiban, hogy megengedett a megnyitások könyvének használata. Sakkprogramok igénybevétele továbbra is tilos, aminek megszegéséért a felhasználót ezért megjelölik. Hiába lehet az ICCF-en, a Lichess-en nem.</string>
+  <string name="youCanUseOpeningBookNoEngine">A Chess-Online-en a legnagyobb különbség levelezési sakk szabályaiban, hogy megengedett a megnyitások könyvének használata. Sakkprogramok igénybevétele továbbra is tilos, aminek megszegéséért a felhasználót ezért megjelölik. Hiába lehet az ICCF-en, a Chess-Online-en nem.</string>
   <string name="gameplay">Játékmenet</string>
   <string name="howBulletBlitzEtcDecided">Mi alapján történik a különböző játékidők (Bullet, Blitz, stb.) besorolása?</string>
-  <string name="basedOnGameDuration">A Lichess-en ez a játszma hozzávetőleges hossza alapján történik = %1$s
+  <string name="basedOnGameDuration">A Chess-Online-en ez a játszma hozzávetőleges hossza alapján történik = %1$s
 Például egy 5+3 játszma körülbelül 5 × 60 + 40 × 3 = 420 másodpercig tart.</string>
   <string name="durationFormula" comment="durationFormula&#10;&#10;Part of the larger string 'basedOnGameDuration'&#10;&#10;Note: this string did not use to say 'in seconds'. Please update if necessary.">(kiindulási idő) + 40 × (növekmény)</string>
   <string name="inferiorThanXsEqualYtimeControl">&lt; %1$ss = %2$s</string>
   <string name="superiorThanXsEqualYtimeControl">≥ %1$ss = %2$s</string>
-  <string name="whatVariantsCanIplay">Milyen variánsokat játszhatok a Lichess-en?</string>
-  <string name="lichessSupportChessAnd">Lichess-en a hagyományos sakk mellett %1$s támogatott.</string>
+  <string name="whatVariantsCanIplay">Milyen variánsokat játszhatok a Chess-Online-en?</string>
+  <string name="lichessSupportChessAnd">Chess-Online-en a hagyományos sakk mellett %1$s támogatott.</string>
   <string name="eightVariants">8 variáns</string>
   <string name="whatIsACPL">Mi az átlagos századgyalog-veszteség (ACPL)?</string>
   <string name="acplExplanation">A századgyalog az előny mértékegysége a sakkban. Egy századgyalog egyenlő egy gyalog értékének századrészével. Tehát 1 gyalog = 100 századgyalog. Ezek az értékek nem hivatalos mérőszámok és a játékmenethez sincs közük, csupán hasznos iránymutatás a játékosoknak és elengedhetetlen a sakkprogramoknak egy állás kiértékelésekor.
@@ -47,7 +47,7 @@ A legjobb gépi lépés nulla századgyalog veszteséget okoz, ugyanakkor kevese
 
 Ezzel a számmal lehet a lépések erősségét mérni. Minél kevesebb a századgyalog veszteség a játékos annál jobban játszik.
 
-A számítógépes elemzéshez a Lichess Stockfish-t használ.</string>
+A számítógépes elemzéshez a Chess-Online Stockfish-t használ.</string>
   <string name="insufficientMaterial">Lejárt az idő, döntetlen és túl kevés anyag</string>
   <string name="lichessFollowFIDErules">Ha egy játékosnak lejár az ideje, akkor általában elveszti a játszmát. Azonban a játszma eredménye döntetlen, ha az állásból nincs olyan szabályos lépéssorozat amivel az ellenfél mattot tudna adni (lásd %1$s).
 
@@ -65,20 +65,20 @@ A %2$s a 3.7 (d) pontban tárgyalja:
 
 Lásd még az erről készült %3$s-t.</string>
   <string name="goodIntroduction">jó bevezetés</string>
-  <string name="lichessTraining">Lichess gyakorlás</string>
+  <string name="lichessTraining">Chess-Online gyakorlás</string>
   <string name="watchIMRosenCheckmate">Tekintsd meg Eric Rosen Nemzetközi Mester %s mattját.</string>
   <string name="threefoldRepetition">Háromszori állásismétlés</string>
-  <string name="threefoldRepetitionExplanation">Ha a táblán egy állás háromszor megismétlődik a játékosok döntetlent igényelhetnek %1$s szerint. A Lichess a hivatalos FIDE szabályokat követi, a %2$s 9.2 bekezdés alapján.</string>
+  <string name="threefoldRepetitionExplanation">Ha a táblán egy állás háromszor megismétlődik a játékosok döntetlent igényelhetnek %1$s szerint. A Chess-Online a hivatalos FIDE szabályokat követi, a %2$s 9.2 bekezdés alapján.</string>
   <string name="threefoldRepetitionLowerCase">állásismétlés szabályai</string>
   <string name="notRepeatedMoves">Nem is ismétlődtek meg a lépések. Miért lett a játszma mégis döntetlen?</string>
   <string name="repeatedPositionsThatMatters">A szabály %1$s ismétlődésén alapszik, nem lépésekén. Az ismétlődés nem szükségszerűen egymást követő lépésekből adódik.</string>
   <string name="positions">állások</string>
   <string name="weRepeatedthreeTimesPosButNoDraw">Háromszor megismétlődött egy állás. Miért nem lett a játszma döntetlen?</string>
-  <string name="threeFoldHasToBeClaimed">Állásismétlések esetén a döntetlent valamelyik félnek igényelnie kell. Ezt megteheted az ilyenkor megjelenő gomb megnyomásával, vagy döntetlen ajánlás tételével, mielőtt az utolsó lépést megtennéd ami az ismétléshez vezet. Ilyenkor nem számít, hogy az ellenfél elfogadja vagy visszautasítja a döntetlent, a szabályok szerint ilyenkor döntetlen lesz a játszma. Van rá külön %1$s amivel a Lichess automatikusan döntetlent igényel. Továbbá, ötszöri ismétlődés esetén a játszma azonnal véget ér.</string>
+  <string name="threeFoldHasToBeClaimed">Állásismétlések esetén a döntetlent valamelyik félnek igényelnie kell. Ezt megteheted az ilyenkor megjelenő gomb megnyomásával, vagy döntetlen ajánlás tételével, mielőtt az utolsó lépést megtennéd ami az ismétléshez vezet. Ilyenkor nem számít, hogy az ellenfél elfogadja vagy visszautasítja a döntetlent, a szabályok szerint ilyenkor döntetlen lesz a játszma. Van rá külön %1$s amivel a Chess-Online automatikusan döntetlent igényel. Továbbá, ötszöri ismétlődés esetén a játszma azonnal véget ér.</string>
   <string name="configure">beállítás</string>
   <string name="accounts">Fiókok</string>
-  <string name="titlesAvailableOnLichess">Milyen címek vannak a Lichess-en?</string>
-  <string name="lichessRecognizeAllOTBtitles">A Lichess elismer minden FIDE címet amit a játékosok OTB (over the board - táblán játszva) szereztek, beleértve %1$s. A FIDE címek listája:</string>
+  <string name="titlesAvailableOnLichess">Milyen címek vannak a Chess-Online-en?</string>
+  <string name="lichessRecognizeAllOTBtitles">A Chess-Online elismer minden FIDE címet amit a játékosok OTB (over the board - táblán játszva) szereztek, beleértve %1$s. A FIDE címek listája:</string>
   <string name="showYourTitle">Ha van OTB címed, kérheted annak megjelenítését a profilodon, miután kitöltöd ezt az %1$s, mellékelve egy jól kivehető fényképet a dokumentumról/kártyáról és egy önarcképet amin tartod a dokumentumot/kártyát.
 
 Ezután lehetőséged lesz csatlakozni a Mester Arénákba.
@@ -86,11 +86,11 @@ Ezután lehetőséged lesz csatlakozni a Mester Arénákba.
 Végül, ott a tiszteletbeli %2$s cím.</string>
   <string name="asWellAsManyNMtitles">számos nemzeti mester címet</string>
   <string name="verificationForm">igazoló űrlapot</string>
-  <string name="canIbecomeLM">Szerezhetek én is Lichess Mester (LM) címet?</string>
+  <string name="canIbecomeLM">Szerezhetek én is Chess-Online Mester (LM) címet?</string>
   <string name="noUpperCaseDot">Nem.</string>
-  <string name="lMtitleComesToYouDoNotRequestIt">Ez egy tiszteletbeli és nemhivatalos cím, amely csak a Lichess-en létezik.
+  <string name="lMtitleComesToYouDoNotRequestIt">Ez egy tiszteletbeli és nemhivatalos cím, amely csak a Chess-Online-en létezik.
 
-Ritkán tüntetünk ki vele olyan figyelemre méltó játékosokat, akik példamutató Lichess polgárok, mindezt bizalmasan. Nem tudsz LM címet szerezni, az talál meg téged. Ha megfelelsz, fogsz tőlünk kapni erről egy üzenetet, amit elfogadhatsz vagy visszautasíthatsz.
+Ritkán tüntetünk ki vele olyan figyelemre méltó játékosokat, akik példamutató Chess-Online polgárok, mindezt bizalmasan. Nem tudsz LM címet szerezni, az talál meg téged. Ha megfelelsz, fogsz tőlünk kapni erről egy üzenetet, amit elfogadhatsz vagy visszautasíthatsz.
 
 Ne kérj LM címet.</string>
   <string name="whatUsernameCanIchoose">Mi lehet a felhasználói nevem?</string>
@@ -99,12 +99,12 @@ Ne kérj LM címet.</string>
   <string name="canIChangeMyUsername">Megváltoztathatom a felhasználói nevem?</string>
   <string name="usernamesCannotBeChanged" comment="&quot;Materialised&quot; is a technical term: https://en.wikipedia.org/wiki/Materialized_view&#10;In this context, it means that it is used in many places and too significant to change, on a technical level. It also comments on the social perspective (&quot;people's minds&quot;).">Nem, a felhasználói nevek nem módosíthatók technikai és gyakorlati okok miatt. A felhasználói nevek jelen vannak adatbázisokban, exportált fájlokban, naplófájlokban és az emberek fejében. Kis- és nagybetűt változtathatsz egyszer.</string>
   <string name="uniqueTrophies">Egyedi trófeák</string>
-  <string name="ownerUniqueTrophies">Ezek a trófeák egyediek a Lichess történelmében, %1$s kivéve senki más nem szerezhet ilyet.</string>
+  <string name="ownerUniqueTrophies">Ezek a trófeák egyediek a Chess-Online történelmében, %1$s kivéve senki más nem szerezhet ilyet.</string>
   <string name="wayOfBerserkExplanation">Megszerzéséhez, hiimgosu bevállalta, hogy berserkel és megnyeri 100%%-át az %s.</string>
   <string name="aHourlyBulletTournament">óránkénti Bullet arénának</string>
-  <string name="goldenZeeExplanation" comment="goldenZeeExplanation&#10;&#10;ZugAddict is a legendary player and streamer, do not translate his name.&#10;https://lichess.org/@/ZugAddict&#10;&#10;Thibault is the name of the founder of Lichess: https://lichess.org/@/thibault">ZugAddict élő közvetítés közben két órán keresztül próbálta megverni a 8-as szintű gépet, sikertelenül. Erre Thibault mondta neki, ha mégis sikerül a közvetítés ideje alatt, kap érte egy egyedi trófeát. Egy órával később lealázta Stockfish-t és az ígéret megvalósult.</string>
-  <string name="lichessRatings">Lichess értékszámok</string>
-  <string name="whichRatingSystemUsedByLichess">Milyen értékelő rendszert használ a Lichess?</string>
+  <string name="goldenZeeExplanation" comment="goldenZeeExplanation&#10;&#10;ZugAddict is a legendary player and streamer, do not translate his name.&#10;https://chess-online.com/@/ZugAddict&#10;&#10;Thibault is the name of the founder of Chess-Online: https://chess-online.com/@/thibault">ZugAddict élő közvetítés közben két órán keresztül próbálta megverni a 8-as szintű gépet, sikertelenül. Erre Thibault mondta neki, ha mégis sikerül a közvetítés ideje alatt, kap érte egy egyedi trófeát. Egy órával később lealázta Stockfish-t és az ígéret megvalósult.</string>
+  <string name="lichessRatings">Chess-Online értékszámok</string>
+  <string name="whichRatingSystemUsedByLichess">Milyen értékelő rendszert használ a Chess-Online?</string>
   <string name="ratingSystemUsedByLichess">Az értékszámok a Glicko-2 módszer alapján számolódnak, amit Mark Glickman dolgozott ki. Ez egy igen népszerű értékelési rendszer, számos sakkszövetség használja (a FIDE a legismertebb ellenpélda, ahol még mindig az Élő-pont rendszer használatos).
 
 Alapvetően a Glicko-2 rendszer \"bizonytalansági sávot\" használ a játékosok értékpontjának meghatározására. Mikor regisztrálsz az oldalra 1500 ± 700 értékszámmal indulsz. 1500 az értékszám, 700 a bizonytalanság.
@@ -134,41 +134,41 @@ Jobb csak relatív összehasonlítási alapként tekinteni ezekre a számokra: a
   <string name="enableZenMode">Engedélyezd a Zen-módot a %1$s, vagy nyomd meg a %2$s billentyűt.</string>
   <string name="displayPreferences">játék megjelenésében</string>
   <string name="connexionLostCanIGetMyRatingBack">Elvesztettem egy játszmát szétkapcsolás miatt. Visszakaphatom a pontjaimat?</string>
-  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">Sajnos nem áll módunkban visszatéríteni értékszámot, amennyiben a játszmát lag vagy szétkapcsolás miatt veszítetted el, függetlenül attól, hogy a hiba a te végedről származik vagy a miénkről. Utóbbi azonban igen ritka. Megjegyzendő, ha a Lichess valamiért újraindul a folyamatban lévő játszmák félbeszakadnak az igazságtalan vereségeket elkerülendő.</string>
+  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">Sajnos nem áll módunkban visszatéríteni értékszámot, amennyiben a játszmát lag vagy szétkapcsolás miatt veszítetted el, függetlenül attól, hogy a hiba a te végedről származik vagy a miénkről. Utóbbi azonban igen ritka. Megjegyzendő, ha a Chess-Online valamiért újraindul a folyamatban lévő játszmák félbeszakadnak az igazságtalan vereségeket elkerülendő.</string>
   <string name="howToThreeDots">Hogyan...</string>
   <string name="enableDisableNotificationPopUps">Engedélyezem vagy tiltom a felbukkanó értesítéseket?</string>
   <string name="viewSiteInformationPopUp">Oldal információk megjelenítése</string>
-  <string name="lichessCanOptionnalySendPopUps">A Lichess küldhet felbukkanó értesítéseket, például ha te következel egy játszmában vagy üzenet érkezésekor.
+  <string name="lichessCanOptionnalySendPopUps">A Chess-Online küldhet felbukkanó értesítéseket, például ha te következel egy játszmában vagy üzenet érkezésekor.
 
-Kattints a lakat ikonra a böngésző címsorában, a lichess.org mellett.
+Kattints a lakat ikonra a böngésző címsorában, a chess-online.com mellett.
 
-Utána válaszd ki, hogy engedélyezed vagy tiltod az Lichess értesítéseit.</string>
+Utána válaszd ki, hogy engedélyezed vagy tiltod az Chess-Online értesítéseit.</string>
   <string name="enableAutoplayForSoundsQ">Engedélyezed hangok automatikus lejátszását?</string>
   <string name="enableAutoplayForSoundsA">A legtöbb böngésző a felhasználók védelme érdekében megakadályozhatja a hang lejátszását a frissen betöltött oldalakon. Képzeld el, milyen lenne, ha minden weboldal azonnal hanghirdetésekkel bombázhatna... 
 
-A piros némító ikon akkor jelenik meg, ha a böngésző megakadályozta a lichess.org hangjainak lejátszását. Általában ez a korlátozás feloldódik, amint rákattintasz valamire. Egyes mobilböngészőkben egy bábu érintéssel történő húzása nem számít kattintásnak. Ebben az esetben minden játék kezdetén meg kell érintened a táblát, hogy engedélyezd a hangok lejátszását. 
+A piros némító ikon akkor jelenik meg, ha a böngésző megakadályozta a chess-online.com hangjainak lejátszását. Általában ez a korlátozás feloldódik, amint rákattintasz valamire. Egyes mobilböngészőkben egy bábu érintéssel történő húzása nem számít kattintásnak. Ebben az esetben minden játék kezdetén meg kell érintened a táblát, hogy engedélyezd a hangok lejátszását.
 
-A piros ikont azért mutatjuk, hogy figyelmeztessünk, amikor ez történik. Sok esetben lehetséges külön engedélyezni a lichess.org számára a hangok lejátszását. Itt találod az erre vonatkozó utasításokat néhány népszerű böngésző legújabb verziójához.</string>
-  <string name="desktop" comment="Appears on the FAQ for &quot;Enable autoplay for sounds&quot; https://lichess.org/faq#autoplay&#10;&#10;Indicates that the instructions are for a desktop computer browser - not a mobile browser.">asztali</string>
-  <string name="enableAutoplayForSoundsFirefox">1. Nyisd meg a lichess.org weboldalt
+A piros ikont azért mutatjuk, hogy figyelmeztessünk, amikor ez történik. Sok esetben lehetséges külön engedélyezni a chess-online.com számára a hangok lejátszását. Itt találod az erre vonatkozó utasításokat néhány népszerű böngésző legújabb verziójához.</string>
+  <string name="desktop" comment="Appears on the FAQ for &quot;Enable autoplay for sounds&quot; https://chess-online.com/faq#autoplay&#10;&#10;Indicates that the instructions are for a desktop computer browser - not a mobile browser.">asztali</string>
+  <string name="enableAutoplayForSoundsFirefox">1. Nyisd meg a chess-online.com weboldalt
 2. Használd a Ctrl-i billentyűkombinációt Linuxon és Windowson vagy a cmd-i billentyűkombinációt MacOS-en
 3. Nyisd meg az Engedélyek oldalt
 4. Engedélyezd a videó- és hanglejátszást a lichess. org oldalon</string>
-  <string name="enableAutoplayForSoundsChrome">1. Nyisd meg a lichess.org weboldalt
+  <string name="enableAutoplayForSoundsChrome">1. Nyisd meg a chess-online.com weboldalt
 2. Kattints a lakat ikonra a címsor mellett
 3. Kattints az Oldalbeállításokra
 4. Engedélyezd a hangok lejátszását</string>
-  <string name="enableAutoplayForSoundsSafari">1. Nyisd meg a lichess.org weboldalt
+  <string name="enableAutoplayForSoundsSafari">1. Nyisd meg a chess-online.com weboldalt
 2. Kattints a Safari-ra a menüsorban
-3. Nyisd meg a lichess.org weboldalra vonatkozó beállításokat
+3. Nyisd meg a chess-online.com weboldalra vonatkozó beállításokat
 4. Engedélyezd a mindenre vonatkozó automatikus lejátszást</string>
   <string name="enableAutoplayForSoundsMicrosoftEdge">1. Kattints a három pontra a jobb felső sarokban a menü megnyitásához
 2. Nyisd meg a Beállításokat
 3. Nyisd meg a Sütik és oldalengedélyek menüpontot
 4. Görgess lejjebb és nyisd meg a Média automatikus lejátszása menüpontot
-5. Add hozzá a lichess.org weboldalt az engedélyezéshez</string>
+5. Add hozzá a chess-online.com weboldalt az engedélyezéshez</string>
   <string name="stopMyselfFromPlaying" comment="As in &quot;How to stop myself from playing?&quot;.&#10;&#10;It is an FAQ which addresses chess/gaming addiction.">Hagyjam abba a játékot?</string>
   <string name="mentalHealthCondition" comment="Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">mentális betegség</string>
-  <string name="lichessUserstyles" comment="User styles are ways to customise the appearance of Lichess using third-party tools.&#10;&#10;Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">Lichess egyéni stílusok</string>
+  <string name="lichessUserstyles" comment="User styles are ways to customise the appearance of Chess-Online using third-party tools.&#10;&#10;Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">Chess-Online egyéni stílusok</string>
   <string name="fewerLobbyPools" comment="Lobby pools are options to quick pair for games on the home page (e.g. 1+0, 3+0).&#10;In this context, this is mentioned for people who want to limit bullet and blitz.&#10;&#10;Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">kevesebb lobbival</string>
 </resources>

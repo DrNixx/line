@@ -2,22 +2,22 @@
 <resources>
   <string name="faqAbbreviation">Частыя пытанні</string>
   <string name="frequentlyAskedQuestions">Частыя пытанні</string>
-  <string name="whyIsLichessCalledLichess">Чаму Lichess называецца Lichess?</string>
-  <string name="lichessCombinationLiveLightLibrePronounced">Lichess — гэта камбінацыя live/light/libre(жывы/лёгкі/вольны) і chess(шахматы). Lichess вымаўляцца як %1$s.</string>
+  <string name="whyIsLichessCalledLichess">Чаму Chess-Online называецца Chess-Online?</string>
+  <string name="lichessCombinationLiveLightLibrePronounced">Chess-Online — гэта камбінацыя live/light/libre(жывы/лёгкі/вольны) і chess(шахматы). Chess-Online вымаўляцца як %1$s.</string>
   <string name="leechess">лі-чэсс</string>
   <string name="hearItPronouncedBySpecialist">Праслухайце, як гэта вымаўляе спецыяліст.</string>
-  <string name="whyLiveLightLibre">Live(жывы), бо партыі граюцца і глядзяцца ў рэальным часе 24/7; light(лёгкі) і libre(вольны), бо Lichess мае адкрыты зыходны код та неабяцяжараны чыёйсці непажаданай рэкламай, як на шмат якіх сайтах.</string>
-  <string name="whyIsLilaCalledLila">Аналагічна, зыходны код Lichess, %1$s, расшыфроўваецца як li [chess на sca] la, бо асноўная частка Lichess напісана на %2$s, інтуітыўна зразумелай мове праграмавання.</string>
-  <string name="howCanIContributeToLichess">Як я магу дапамагчы Lichess?</string>
-  <string name="lichessPoweredByDonationsAndVolunteers">Lichess працуе, дзякуючы ахвяраванням спонсараў та намаганнямі каманды валанцёраў.</string>
-  <string name="findMoreAndSeeHowHelp">Вы можаце даведацца больш пра тое як %1$s (уключаючы %2$s). Калі вы хочаце дапамагчы Lichess ахверуючы свае навыкі і час, то ёсць шмат %3$s.</string>
+  <string name="whyLiveLightLibre">Live(жывы), бо партыі граюцца і глядзяцца ў рэальным часе 24/7; light(лёгкі) і libre(вольны), бо Chess-Online мае адкрыты зыходны код та неабяцяжараны чыёйсці непажаданай рэкламай, як на шмат якіх сайтах.</string>
+  <string name="whyIsLilaCalledLila">Аналагічна, зыходны код Chess-Online, %1$s, расшыфроўваецца як li [chess на sca] la, бо асноўная частка Chess-Online напісана на %2$s, інтуітыўна зразумелай мове праграмавання.</string>
+  <string name="howCanIContributeToLichess">Як я магу дапамагчы Chess-Online?</string>
+  <string name="lichessPoweredByDonationsAndVolunteers">Chess-Online працуе, дзякуючы ахвяраванням спонсараў та намаганнямі каманды валанцёраў.</string>
+  <string name="findMoreAndSeeHowHelp">Вы можаце даведацца больш пра тое як %1$s (уключаючы %2$s). Калі вы хочаце дапамагчы Chess-Online ахверуючы свае навыкі і час, то ёсць шмат %3$s.</string>
   <string name="beingAPatron">стаць спонсарам</string>
   <string name="breakdownOfOurCosts">дэтальнае апісанне нашых затрат</string>
   <string name="otherWaysToHelp">іншых спосабаў дапамогі</string>
-  <string name="areThereWebsitesBasedOnLichess">Ёсць лі іншыя сайты, якія былі заснаваныя на Lichess?</string>
-  <string name="yesLichessInspiredOtherOpenSourceWebsites">Так. Lichess натхніў многія сайты, якія цяпер выкарыстоўваюць наш %1$s, %2$s и %3$s.</string>
+  <string name="areThereWebsitesBasedOnLichess">Ёсць лі іншыя сайты, якія былі заснаваныя на Chess-Online?</string>
+  <string name="yesLichessInspiredOtherOpenSourceWebsites">Так. Chess-Online натхніў многія сайты, якія цяпер выкарыстоўваюць наш %1$s, %2$s и %3$s.</string>
   <string name="keyboardShortcuts">Якія ёсць спалучэнні клавіш?</string>
-  <string name="keyboardShortcutsExplanation">На некаторых старонках Lichess ёсць спалучэнні клавіш, якія можна выкарыстоўваць. Паспрабуйце націснуць «?» клавішу на старонцы даследавання, аналізу, галаваломкі або гульні, каб пералічыць даступныя спалучэнні клавіш.</string>
+  <string name="keyboardShortcutsExplanation">На некаторых старонках Chess-Online ёсць спалучэнні клавіш, якія можна выкарыстоўваць. Паспрабуйце націснуць «?» клавішу на старонцы даследавання, аналізу, галаваломкі або гульні, каб пералічыць даступныя спалучэнні клавіш.</string>
   <string name="fairPlay">Сумленная гульня</string>
   <string name="whenAmIEligibleRatinRefund">Калі я магу разлічваць на аўтаматычную кампенсацыю рэйтынга, згубленага чыцеру?</string>
   <string name="ratingRefundExplanation" comment="In answer to the question 'When am I eligible for the automatic rating refund from cheaters?'">Праз хвіліну пасля выяўлення такога гульца, 40 апошніх рэйтынгавых гульняў за апошнія 3 дні бяруцца. Калі вы адзін з супернікаў у гэтых гульнях, вы згубілі рэйтынг (праз паразу або нічыю), і ваш рэйтынг не быў умоўным, вы атрымліваецце кампенсацыю рэйтынгу. Кампенсацыя абмежавана вашым пікавым рэйтынгам і вашым прагрэсам рэйтынгу пасля гульні.
@@ -29,16 +29,16 @@
   <string name="isCorrespondenceDifferent">Ліставаная гульня адрозніваецца ад звычайных шахмат?</string>
   <string name="pleaseReadFairPlayPage">Каб даведацца больш, калі ласка, прачытайце нашу %s</string>
   <string name="fairPlayPage">старонку сумленнай гульні</string>
-  <string name="youCanUseOpeningBookNoEngine">На Lichess, галоўнае адрозненне ў правілах шахмат па ліставанні з\'яўляецца магчымасць карыстацца кнігай Дэбітаў. Выкарыстанне шахматных рухавікоў усё яшчэ забаронена і, пры карыстанні, гулец будзе пазначэнны як карыстальнік рухавіка. Хоць ICCF дазваляе выкарыстанне рухавікоў у шахматах па ліставанні, Lichess - не.</string>
+  <string name="youCanUseOpeningBookNoEngine">На Chess-Online, галоўнае адрозненне ў правілах шахмат па ліставанні з\'яўляецца магчымасць карыстацца кнігай Дэбітаў. Выкарыстанне шахматных рухавікоў усё яшчэ забаронена і, пры карыстанні, гулец будзе пазначэнны як карыстальнік рухавіка. Хоць ICCF дазваляе выкарыстанне рухавікоў у шахматах па ліставанні, Chess-Online - не.</string>
   <string name="gameplay">Геймплэй</string>
   <string name="howBulletBlitzEtcDecided">Як кантролі часу Кулі, Бліцу ды іншых вырашаны?</string>
-  <string name="basedOnGameDuration">Кантролі часу на Lichess заснаваны на чаканай працягласці гульні = %1$s
+  <string name="basedOnGameDuration">Кантролі часу на Chess-Online заснаваны на чаканай працягласці гульні = %1$s
 Напрыклад, чаканая працягласць гульні 5+3 = 5 × 60 + 40 × 3 = 420 сякунд.</string>
   <string name="durationFormula" comment="durationFormula&#10;&#10;Part of the larger string 'basedOnGameDuration'&#10;&#10;Note: this string did not use to say 'in seconds'. Please update if necessary.">(пачатковы час) + 40 * (прыбаўка часу)</string>
   <string name="inferiorThanXsEqualYtimeControl">&lt; %1$s с = %2$s</string>
   <string name="superiorThanXsEqualYtimeControl">≥ %1$s с = %2$s</string>
-  <string name="whatVariantsCanIplay">У якія разнастайнасці шахмат магчыма згуляць на Lichess?</string>
-  <string name="lichessSupportChessAnd">Lichess падтрымлівае класічныя шахматы і %1$s.</string>
+  <string name="whatVariantsCanIplay">У якія разнастайнасці шахмат магчыма згуляць на Chess-Online?</string>
+  <string name="lichessSupportChessAnd">Chess-Online падтрымлівае класічныя шахматы і %1$s.</string>
   <string name="eightVariants">8 разнастайнасцей гэтай гульні</string>
   <string name="whatIsACPL">Што такое сярэдняя страта санціпешкі (ACPL)?</string>
   <string name="acplExplanation">Санціпешка - адзінка вымярэння, якая выкарыстоўваецца ў шахматах для адлюстравання перавагі. Санціпешка = 1/100 пешкі. Таму 100 санціпешак = 1 пешка. Гэтыя значэнні не граюць аніякай афіцыйнай ролі ў гульні, але карысныя гульцам і асабліва ў кампутарных шахматах, каб ацаніць пазіцыю.
@@ -47,7 +47,7 @@
 
 Гэта значэнне таксама можа выкарыстоўвацца ў якасці паказчыка якасці гульні. Чым менш губляецца санціпешак за ход, тым мацней гульня.
 
-Капмутарны аналіз на Lichess выкарыстоўвае Stockfish.</string>
+Капмутарны аналіз на Chess-Online выкарыстоўвае Stockfish.</string>
   <string name="insufficientMaterial">Параза па часе, нічыя і недастатковы матэрыял</string>
   <string name="lichessFollowFIDErules">Звычайна, калі ў гульца скончваецца час, то ён прайграе. Аднак, гульня можа быць прызнана нічыёй, калі пазіцыя такая, што супернік не можа паставіць мат ніякай легальнай паслядоўнасцю хадоў (%1$s).
 
@@ -65,32 +65,32 @@
 
 Паспрабуйце %3$s для гэтага ходу, каб папрактывацца.</string>
   <string name="goodIntroduction">добрае тлумачэнне</string>
-  <string name="lichessTraining">Lichess практыку</string>
+  <string name="lichessTraining">Chess-Online практыку</string>
   <string name="watchIMRosenCheckmate">Паглядзіце, як міжнародны майстар Эрык Розен ставіць мат %s.</string>
   <string name="threefoldRepetition">Трохразовае паўтарэнне</string>
-  <string name="threefoldRepetitionExplanation">Калі пазіцыя з\'яўляецца тройчы, гульцы могуць запатрабаваць нічыю праз %1$s. Lichess рэалізуе афіцыйныя правілы ФІДЭ, як апісана ў артыкуле 9.2 %2$s.</string>
+  <string name="threefoldRepetitionExplanation">Калі пазіцыя з\'яўляецца тройчы, гульцы могуць запатрабаваць нічыю праз %1$s. Chess-Online рэалізуе афіцыйныя правілы ФІДЭ, як апісана ў артыкуле 9.2 %2$s.</string>
   <string name="threefoldRepetitionLowerCase">трохразовае паўтарэнне</string>
   <string name="notRepeatedMoves">Мы не паўтаралі хады. Чаму гульня скончылася ўнічыю праз паўтарэнне?</string>
   <string name="repeatedPositionsThatMatters">Трохразовае паўтарэнне гэта пра паўтораныя %1$s, не хады. Паўтарэнні могуць адбыцца і не запар.</string>
   <string name="positions">пазіцыі</string>
   <string name="weRepeatedthreeTimesPosButNoDraw">Мы паўторылі хады тры разы. Чаму гульня не была скончана ўнічыю?</string>
-  <string name="threeFoldHasToBeClaimed">Паўтарэнне патрабна быць зафіксавана адным з гульцоў. Гэта магчыма зрабіць націснуўшы на адлюстраваную кнопку, альбо прапанаваўшы нічыю перад фінальным паўтарэннем хода, не мае значэнне калі ваш супер адхіліць прапанову, нічыя будзе зафіксавана ўсёроўна. Вы таксама можаце %1$s Lichess, каб аўтаматычна фіксаваць нічыю пры паўтарэннях. Дадаткова, пры 5 разовым паўтарэнні гульня скончваецца ў нічыю аўтаматычна.</string>
+  <string name="threeFoldHasToBeClaimed">Паўтарэнне патрабна быць зафіксавана адным з гульцоў. Гэта магчыма зрабіць націснуўшы на адлюстраваную кнопку, альбо прапанаваўшы нічыю перад фінальным паўтарэннем хода, не мае значэнне калі ваш супер адхіліць прапанову, нічыя будзе зафіксавана ўсёроўна. Вы таксама можаце %1$s Chess-Online, каб аўтаматычна фіксаваць нічыю пры паўтарэннях. Дадаткова, пры 5 разовым паўтарэнні гульня скончваецца ў нічыю аўтаматычна.</string>
   <string name="configure">наладзіць</string>
   <string name="accounts">Уліковыя запісы</string>
-  <string name="titlesAvailableOnLichess">Якія тытулы існуюць на Lichess?</string>
-  <string name="lichessRecognizeAllOTBtitles">Lichess прызнае ўсе тытулы ФІДЭ, атрыманыя ў рэальным жыцці, а таксама %1$s. Вось спіс тытулаў ФІДЭ:</string>
+  <string name="titlesAvailableOnLichess">Якія тытулы існуюць на Chess-Online?</string>
+  <string name="lichessRecognizeAllOTBtitles">Chess-Online прызнае ўсе тытулы ФІДЭ, атрыманыя ў рэальным жыцці, а таксама %1$s. Вось спіс тытулаў ФІДЭ:</string>
   <string name="showYourTitle">Калі вы маеце тытул у жыцці, каб адлюстроўваць яго ў акаўнце, вы можаце падаць запыт праз %1$s, дадаўшы выразнае фота пацвярджаючага дакумента/карткі та сэлфі, дзе вы трымаеце дакумент/картку.
 
-Пацвярджэнне тытулу на Lichess даст магчымасць гульц у Тытуляваных Арэнах.
+Пацвярджэнне тытулу на Chess-Online даст магчымасць гульц у Тытуляваных Арэнах.
 
 Нарэшце, ёсць ганаровы тытул %2$s.</string>
   <string name="asWellAsManyNMtitles">розныя нацыянальныя тытулы майстроў</string>
   <string name="verificationForm">форму верыфікацыі</string>
-  <string name="canIbecomeLM">Магу я атрымаць тытул Lichess Майстар (LM)?</string>
+  <string name="canIbecomeLM">Магу я атрымаць тытул Chess-Online Майстар (LM)?</string>
   <string name="noUpperCaseDot">Не.</string>
-  <string name="lMtitleComesToYouDoNotRequestIt">Гэты ганаровы тытул неафіцыйны та існу толькі на Lichess.
+  <string name="lMtitleComesToYouDoNotRequestIt">Гэты ганаровы тытул неафіцыйны та існу толькі на Chess-Online.
 
-Мы зрэдку ўзнагароджваем адметных гульцоў, якія на наша меркаванне з\'яўляюцца добрымі грамадзянамі Lichess. Не вы прыходзіце за тытулам LM, тытул LM прыходзіць да вас. Калі вы будзеце варты, вы атрымаеце паведамленне ад нас пра гэта, з магчымасцю прыняць або адмовіцца ад яго.
+Мы зрэдку ўзнагароджваем адметных гульцоў, якія на наша меркаванне з\'яўляюцца добрымі грамадзянамі Chess-Online. Не вы прыходзіце за тытулам LM, тытул LM прыходзіць да вас. Калі вы будзеце варты, вы атрымаеце паведамленне ад нас пра гэта, з магчымасцю прыняць або адмовіцца ад яго.
 
 Не выпрошвайце тытул LM.</string>
   <string name="whatUsernameCanIchoose">Якім можа быць маё імя карыстальніка?</string>
@@ -99,12 +99,12 @@
   <string name="canIChangeMyUsername">Ці магу я змяніць сваё імя карыстальніка?</string>
   <string name="usernamesCannotBeChanged" comment="&quot;Materialised&quot; is a technical term: https://en.wikipedia.org/wiki/Materialized_view&#10;In this context, it means that it is used in many places and too significant to change, on a technical level. It also comments on the social perspective (&quot;people's minds&quot;).">Не, імя карыстальніка нельга змяніць па тэхнічных та прыктычных прычынах. Імя карыстальнікаў выкарыстоўваюцца шмат дзе: базах дадзеных, выгрузках, логах і ў памяці людзей. Вы можаце наладзіць рэгістр літар аднаразова.</string>
   <string name="uniqueTrophies">Унікальныя трафеі</string>
-  <string name="ownerUniqueTrophies">Гэта трэфей унікальны ў гісторыі Lichess, ніхто акрамя %1$s ніколі не будзе маць такі.</string>
+  <string name="ownerUniqueTrophies">Гэта трэфей унікальны ў гісторыі Chess-Online, ніхто акрамя %1$s ніколі не будзе маць такі.</string>
   <string name="wayOfBerserkExplanation">Каб атрымаць яго, hiimgosu кінуў сабе выклік і ў шаленым рэжыме выйграў усе гульні %s.</string>
   <string name="aHourlyBulletTournament">у штогадзінным Куля турніры</string>
-  <string name="goldenZeeExplanation" comment="goldenZeeExplanation&#10;&#10;ZugAddict is a legendary player and streamer, do not translate his name.&#10;https://lichess.org/@/ZugAddict&#10;&#10;Thibault is the name of the founder of Lichess: https://lichess.org/@/thibault">ZugAddict стрыміў і на працягу 2 гадзін спрабаваў перамагчы штучны інтэлект 8 узроўня ў гульне 1+0, беспаспяхова. Thibault прапанаваў яму, калі ён пераможа на працягу страма, то ён атрымае ўнікальны трафей. Гадзіну апасля, ён разбіў Stockfish, і абяцанне было выканана.</string>
-  <string name="lichessRatings">Рэйтынгавая сістэма Lichess</string>
-  <string name="whichRatingSystemUsedByLichess">Якую рэйтынг сыстэму выкарыстоўвае Lichess?</string>
+  <string name="goldenZeeExplanation" comment="goldenZeeExplanation&#10;&#10;ZugAddict is a legendary player and streamer, do not translate his name.&#10;https://chess-online.com/@/ZugAddict&#10;&#10;Thibault is the name of the founder of Chess-Online: https://chess-online.com/@/thibault">ZugAddict стрыміў і на працягу 2 гадзін спрабаваў перамагчы штучны інтэлект 8 узроўня ў гульне 1+0, беспаспяхова. Thibault прапанаваў яму, калі ён пераможа на працягу страма, то ён атрымае ўнікальны трафей. Гадзіну апасля, ён разбіў Stockfish, і абяцанне было выканана.</string>
+  <string name="lichessRatings">Рэйтынгавая сістэма Chess-Online</string>
+  <string name="whichRatingSystemUsedByLichess">Якую рэйтынг сыстэму выкарыстоўвае Chess-Online?</string>
   <string name="ratingSystemUsedByLichess">Рэйтынгі падлючваюцца з дапамогай метада Glicko-2, распрацаванага Маркам Глікманам. Гэта вельмі папулярны метад падліку, які выкарыстоўваецца значнай колькасцю шахматных арганізацый (заўважальны працілеглы прыклад - ФІДЭ, яны працягваюць выкарыстанне састарэлай сістэмы Эло).
 
 Па сутнасці, рэйтынгі Glicko выкарыстоўваюць \"інтэрвалы даверу\" пры разліку і адлюстравання вашага рэйтынгу. Калі вы ўпершыню пачынаеце карыстацца сайтам, ваш рэйтынг пачынаецца з 1500 ± 1000. 1500 - гэта ваш рэйтынг, а 1000 - інтэрвал даверу.
@@ -134,37 +134,37 @@
   <string name="enableZenMode">Уключыць рэжым Дзэн у %1$s або націснуць %2$s падчас гульні.</string>
   <string name="displayPreferences">наладках адлюстравання</string>
   <string name="connexionLostCanIGetMyRatingBack">Я прайграў праз затрымку/адключэнне сеткі. Магчыма вярнуць страчаны рэйтынг?</string>
-  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">На жаль, мы не вяртаем страчаны рэйтынг, у гульнях прайграных праз затрымку/адключэнне сеткі, нязалежна ад таго на чыім баку была праблема, вашым або нашым. Апошянее, аднак, малаверагодна. Заўважце, што, калі Lichess перазапускаецца і вы праз гэта прайграваеце па часе, мы скасоўваем гульню, каб прадухіліць несправядлівую паразу.</string>
+  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">На жаль, мы не вяртаем страчаны рэйтынг, у гульнях прайграных праз затрымку/адключэнне сеткі, нязалежна ад таго на чыім баку была праблема, вашым або нашым. Апошянее, аднак, малаверагодна. Заўважце, што, калі Chess-Online перазапускаецца і вы праз гэта прайграваеце па часе, мы скасоўваем гульню, каб прадухіліць несправядлівую паразу.</string>
   <string name="howToThreeDots">Як...</string>
   <string name="enableDisableNotificationPopUps">Уключыць ці адключыць усплывальныя апавяшчэнні?</string>
   <string name="viewSiteInformationPopUp">Праглядзець усплывальнае інфармацыйнае акенца сайта</string>
-  <string name="lichessCanOptionnalySendPopUps">Lichess можа па вашаму жаданню дасылаць усплываючыя паведамленні, напрыклад, калі ваш ход або вы атрымалі асабістае паведамленне.
+  <string name="lichessCanOptionnalySendPopUps">Chess-Online можа па вашаму жаданню дасылаць усплываючыя паведамленні, напрыклад, калі ваш ход або вы атрымалі асабістае паведамленне.
 
-Націсніце на значок замка насупраць lichess.org у адрасным полі вашага браўзера.
+Націсніце на значок замка насупраць chess-online.com у адрасным полі вашага браўзера.
 
-Затым абярыце, дазваляць ці блакаваць паведамленні ад Lichess.</string>
+Затым абярыце, дазваляць ці блакаваць паведамленні ад Chess-Online.</string>
   <string name="enableAutoplayForSoundsQ">Уключыць аўтазапуск для гукаў?</string>
   <string name="enableAutoplayForSoundsA">Большасць браўзераў могуць прадухіліць прайграванне гуку на толькі што загружанай старонцы, каб абараніць карыстальнікаў. Уявіце сабе, што кожны вэб-сайт можа неадкладна засыпаць вас аўдыярэкламай.
 
-Чырвоны значок адключэння гуку з\'яўляецца, калі ваш браўзер не дазваляе lichess.org прайграваць гук. Звычайна гэтае абмежаванне здымаецца, як толькі вы нешта націснеце. У некаторых мабільных браўзерах перацягванне фрагмента дотыкам не лічыцца клікам. У такім выпадку вы павінны дакрануцца да дошкі, каб уключыць гук у пачатку кожнай гульні.
+Чырвоны значок адключэння гуку з\'яўляецца, калі ваш браўзер не дазваляе chess-online.com прайграваць гук. Звычайна гэтае абмежаванне здымаецца, як толькі вы нешта націснеце. У некаторых мабільных браўзерах перацягванне фрагмента дотыкам не лічыцца клікам. У такім выпадку вы павінны дакрануцца да дошкі, каб уключыць гук у пачатку кожнай гульні.
 
-Мы паказваем чырвоны значок, каб папярэдзіць вас, калі гэта адбудзецца. Часта вы можаце яўна дазволіць lichess.org прайграваць гукі. Вось інструкцыі, як зрабіць гэта ў апошніх версіях некаторых папулярных браўзераў.</string>
-  <string name="desktop" comment="Appears on the FAQ for &quot;Enable autoplay for sounds&quot; https://lichess.org/faq#autoplay&#10;&#10;Indicates that the instructions are for a desktop computer browser - not a mobile browser.">працоўны стол</string>
-  <string name="enableAutoplayForSoundsFirefox">1. Перайдзіце на lichess.org
+Мы паказваем чырвоны значок, каб папярэдзіць вас, калі гэта адбудзецца. Часта вы можаце яўна дазволіць chess-online.com прайграваць гукі. Вось інструкцыі, як зрабіць гэта ў апошніх версіях некаторых папулярных браўзераў.</string>
+  <string name="desktop" comment="Appears on the FAQ for &quot;Enable autoplay for sounds&quot; https://chess-online.com/faq#autoplay&#10;&#10;Indicates that the instructions are for a desktop computer browser - not a mobile browser.">працоўны стол</string>
+  <string name="enableAutoplayForSoundsFirefox">1. Перайдзіце на chess-online.com
 2. Націсніце Ctrl-i на Linux/Windows або cmd-i на MacOS
 3. Націсніце ўкладку Дазволы
-4. Дазволіць аўдыё і відэа на lichess.org</string>
-  <string name="enableAutoplayForSoundsChrome">1. Перайдзіце на lichess.org
+4. Дазволіць аўдыё і відэа на chess-online.com</string>
+  <string name="enableAutoplayForSoundsChrome">1. Перайдзіце на chess-online.com
 2. Націсніце на значок замка ў адрасным радку
 3. Націсніце Налады сайта
 4. Дазволіць гук</string>
-  <string name="enableAutoplayForSoundsSafari">1. Перайдзіце на lichess.org
+  <string name="enableAutoplayForSoundsSafari">1. Перайдзіце на chess-online.com
 2. Націсніце Safari у радку меню
-3. Націсніце Налады для lichess.org ...
+3. Націсніце Налады для chess-online.com ...
 4. Дазволіць усё аўтаматычнае прайграванне</string>
   <string name="enableAutoplayForSoundsMicrosoftEdge">1. Націсніце на тры кропкі ў правым верхнім куце.
 2. Націсніце Налады.
 3. Націсніце Cookies і дазволы сайта
 4. Пракруціце ўніз і націсніце Аўтапрайграванне мультымедыя.
-5. Дадайце lichess.org у раздзел «Дазволіць».</string>
+5. Дадайце chess-online.com у раздзел «Дазволіць».</string>
 </resources>

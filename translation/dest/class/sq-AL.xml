@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="lichessClasses">Mësimet</string>
-  <string name="teachClassesOfChessStudents">Jepni mësim për kurse nxënësish të shahut, me suitën e mjeteve Lichess Classes.</string>
+  <string name="teachClassesOfChessStudents">Jepni mësim për kurse nxënësish të shahut, me suitën e mjeteve Chess-Online Classes.</string>
   <string name="features">Veçori</string>
   <string name="quicklyGenerateSafeUsernames">Prodhoni shpejt e shpejt për nxënësit emra përdoruesish dhe fjalëkalime të parrezik</string>
   <string name="trackStudentProgress">Ndiqni ecurinë e nxënësve në lojëra dhe ushtrime</string>
   <string name="messageAllStudents">Dërgojuni mesazh krejt nxënësve mbi lëndë të re mësimi</string>
   <string name="freeForAllForever" comment="The automated QA checker treats &quot;100%&quot; as if it is a variable, and will give a warning if you change it.&#10;It is not a variable.&#10;&#10;You can still save your translation writing it as &quot;%100&quot; for example, in case this is more valid in your language.">100% e lirë për gjithkënd, përgjithmonë, pa reklama dhe gjurmues</string>
-  <string name="applyToBeLichessTeacher">Aplikoni për t’u bërë Mësues i Lichess-it</string>
+  <string name="applyToBeLichessTeacher">Aplikoni për t’u bërë Mësues i Chess-Online-it</string>
   <string name="noClassesYet">Ende pa klasë.</string>
   <string name="teachersX">Mësues: %s</string>
   <string name="newClass">Kurs i ri</string>
@@ -23,7 +23,7 @@
   <string name="classDescription">Përshkrim i kursit</string>
   <string name="visibleByBothStudentsAndTeachers">I dukshëm si për mësuesit, ashtu edhe për nxënësit e kursit</string>
   <string name="teachersOfTheClass">Mësues të kursit</string>
-  <string name="addLichessUsernames">Shtoni emra përdoruesish të Lichess-it për t’i ftuar si mësues. Një për rresht.</string>
+  <string name="addLichessUsernames">Shtoni emra përdoruesish të Chess-Online-it për t’i ftuar si mësues. Një për rresht.</string>
   <string name="resetPassword">Ricaktoni fjalëkalimin</string>
   <string name="makeSureToCopy">Sigurohuni të kopjoni ose mbani shënim fjalëkalimin tani. S’do të jeni në gjendje ta shihni sërish!</string>
   <string name="passwordX">Fjalëkalimi: %s</string>
@@ -32,22 +32,22 @@
   <string name="realName">Emri i vërtetë</string>
   <string name="privateWillNeverBeShown">Privat. S’do të shfaqet kurrë jashtë kursit. Ndihmon të mbahet mend se cili është denti.</string>
   <string name="addStudent">Shtoni student</string>
-  <string name="lichessProfileXCreatedForY">Profil Lichess-ii %1$s krijuar për %2$s.</string>
+  <string name="lichessProfileXCreatedForY">Profil Chess-Online-ii %1$s krijuar për %2$s.</string>
   <string name="studentCredentials">Studenti: %1$s
 Emër përdoruesi: %2$s
 Fjalëkalimi: %3$s</string>
-  <string name="inviteALichessAccount">Ftoni një llogari Lichess</string>
-  <string name="inviteDesc1">Nëse studenti ka tashmë një llogari Lichess, mund ta ftoni te kursi.</string>
-  <string name="inviteDesc2">Do të marrin një mesazh në Lichess, me një lidhje për pjesëmarrje në kurs.</string>
+  <string name="inviteALichessAccount">Ftoni një llogari Chess-Online</string>
+  <string name="inviteDesc1">Nëse studenti ka tashmë një llogari Chess-Online, mund ta ftoni te kursi.</string>
+  <string name="inviteDesc2">Do të marrin një mesazh në Chess-Online, me një lidhje për pjesëmarrje në kurs.</string>
   <string name="inviteDesc3">E rëndësishme: ftoni vetëm nxënës që i njihni dhe duan vërtet të bëhen pjesë e kursit.</string>
   <string name="inviteDesc4">Mos dërgoni kurrë ftesa të pakërkuara për lojtarë në tym.</string>
-  <string name="createANewLichessAccount">Krijoni një llogari të re Lichess-i</string>
-  <string name="createDesc1">Nëse nxënësi s’ka ende një llogari Lichess-ii, mund të krijoni një për të nga këtu.</string>
+  <string name="createANewLichessAccount">Krijoni një llogari të re Chess-Online-i</string>
+  <string name="createDesc1">Nëse nxënësi s’ka ende një llogari Chess-Online-ii, mund të krijoni një për të nga këtu.</string>
   <string name="createDesc2">S’ka nevojë për adresë email. Do të prodhohet një fjalëkalim dhe do t’ju duhet t’ia kaloni nxënësit, që të mund të bëjë hyrjen në sistem.</string>
   <string name="createDesc3">E rëndësishme: nxënësi s’duhet të ketë disa llogari.</string>
   <string name="createDesc4">Nëse ka një tashmë, përdorni formularin për ftesë.</string>
   <string name="createStudentWarning">Krijo llogari vetëm për nxënës të njëmendtë. Mos e përdorni këtë për të krijuar llogari të shumëfishta për veten. Mund të dëboheni.</string>
-  <string name="lichessUsername">Emër përdoruesi Lichess</string>
+  <string name="lichessUsername">Emër përdoruesi Chess-Online</string>
   <string name="generateANewUsername">Prodho një emër të ri përdoruesi</string>
   <string name="welcomeToClass">Mirë se vini në kursin tuaj: %s.
 Ja një lidhje për t’u futur te kursi.</string>
@@ -106,8 +106,8 @@ Do të shfaqë një vijë horizontale.</string>
   <string name="youAcceptedThisInvitation">E pranuat këtë ftesë.</string>
   <string name="youDeclinedThisInvitation">E hodhët postë këtë ftesë.</string>
   <string name="orSeparator" comment="Used as separator between invite sections. Shown as large '~ or ~'.">ose</string>
-  <string name="createMultipleAccounts">Krijoni një numër llogarish Lichess njëherësh</string>
-  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Mundeni edhe të %s që të krijoni disa llogari Lichess që nga një listë emrash nxënësish.</string>
+  <string name="createMultipleAccounts">Krijoni një numër llogarish Chess-Online njëherësh</string>
+  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">Mundeni edhe të %s që të krijoni disa llogari Chess-Online që nga një listë emrash nxënësish.</string>
   <string name="useThisForm" comment="Link text in multipleAccsFromDescription">përdorni këtë formular</string>
   <string name="maxStudentsNote" comment="%1$s will be replaced with a large number (currently 100).\n%2$s is a link and will be replaced with the translation of createMoreClasses. Make sure both strings fit together.">Kin parasysh se klasa mund të ketë deri në %1$s nxënës. Që të administroni më tepër nxënës, %2$s.</string>
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">krijoni më tepër klasa</string>

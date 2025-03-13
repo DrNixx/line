@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="contact">Əlaqə</string>
-  <string name="contactLichess">Lichess ilə əlaqə</string>
+  <string name="contactLichess">Chess-Online ilə əlaqə</string>
   <string name="whatCanWeHelpYouWith">Sizə nədə kömək edə bilərik?</string>
   <string name="visitThisPage">Problemi həll etmək üçün bu səhifəyə keçin</string>
   <string name="iCantLogIn">Daxil ola bilmirəm</string>
@@ -13,7 +13,7 @@
   <string name="doPasswordReset">İkinci doğrulamanı silmək üçün şifrənizi sıfırlayın</string>
   <string name="accountSupport">Hesabımla əlaqədar köməyə ehtiyacım var</string>
   <string name="wantTitle">Titulumun Lichessdə göstərilməsini istəyirəm</string>
-  <string name="visitTitleConfirmation">Lichess profilinizdə titulunuzu göstərmək və Titullu Arenada iştirak etmək üçün titul təsdiq səhifəsini ziyarət edin</string>
+  <string name="visitTitleConfirmation">Chess-Online profilinizdə titulunuzu göstərmək və Titullu Arenada iştirak etmək üçün titul təsdiq səhifəsini ziyarət edin</string>
   <string name="wantCloseAccount">Hesabımı bağlamaq istəyirəm</string>
   <string name="closeYourAccount">Bu səhifədəki hesabınızı bağlaya bilərsiniz</string>
   <string name="doNotAskByEmail">Bizdən bir hesabı bağlamağımızı e-poçtlə istəməyin, bunu etməyəcəyik.</string>
@@ -34,9 +34,9 @@
   <string name="doNotMessageModerators">Moderatorlara birbaşa mesaj göndərməyin.</string>
   <string name="onlyReports">Yalnız şikayət formu ilə oyunçuları şikayət etmək təsirli olur.</string>
   <string name="wantReportBug">Bir səhv barədə məlumat vermək istəyirəm</string>
-  <string name="reportBugInForum">Forumun Lichess Rəy bölməsində</string>
-  <string name="reportWebsiteIssue">Lichess sayt problemləri GitHubda</string>
-  <string name="reportMobileIssue">Lichess mobil tətbiqi problemləri GitHubda</string>
+  <string name="reportBugInForum">Forumun Chess-Online Rəy bölməsində</string>
+  <string name="reportWebsiteIssue">Chess-Online sayt problemləri GitHubda</string>
+  <string name="reportMobileIssue">Chess-Online mobil tətbiqi problemləri GitHubda</string>
   <string name="reportBugInDiscord">Lichessin Discord serverində</string>
   <string name="howToReportBug">Lütfən, xətanın necə göründüyünü, bunun əvəzində nə olacağını gözlədiyinizi və xətanı yaradan addımları təsvir edin.</string>
   <string name="illegalPawnCapture">Səhv piyada vurma hərəkəti</string>
@@ -65,11 +65,11 @@
   <string name="collaboration">Əməkdaşlıq, hüquqi, kommersiya</string>
   <string name="monetizing">Lichessdən pul qazanmaq</string>
   <string name="buyingLichess">Lichessi almaq</string>
-  <string name="authorizationToUse">Lichess istifadə icazəsi</string>
-  <string name="welcomeToUse">Biznes məqsədilə olsa belə fəaliyyətiniz üçün Lichess istifadə edə bilərsiniz.</string>
-  <string name="videosAndBooks">Bunu videolarınızda göstərə və kitablarınıza Lichess ekran görüntülərini çap edə bilərsiniz.</string>
+  <string name="authorizationToUse">Chess-Online istifadə icazəsi</string>
+  <string name="welcomeToUse">Biznes məqsədilə olsa belə fəaliyyətiniz üçün Chess-Online istifadə edə bilərsiniz.</string>
+  <string name="videosAndBooks">Bunu videolarınızda göstərə və kitablarınıza Chess-Online ekran görüntülərini çap edə bilərsiniz.</string>
   <string name="creditAppreciated">Tərif qiymətləndirilir, lakin tələb olunmur.</string>
   <string name="noneOfTheAbove">Yuxarıdakıların heç biri</string>
   <string name="sendEmailAt">Bizə %s vasitəsilə bir e-poçt göndərin.</string>
-  <string name="explainYourRequest">Lütfən tələbinizi aydın və hərtərəfli izah edin. Lichess istifadəçi adınızı və sizə kömək etməyimizə yarayacaq məlumatları bildirin.</string>
+  <string name="explainYourRequest">Lütfən tələbinizi aydın və hərtərəfli izah edin. Chess-Online istifadəçi adınızı və sizə kömək etməyimizə yarayacaq məlumatları bildirin.</string>
 </resources>

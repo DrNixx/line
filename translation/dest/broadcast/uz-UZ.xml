@@ -11,7 +11,7 @@
   <string name="newBroadcast">Yangi jonli eshittirish</string>
   <string name="subscribedBroadcasts">Obuna bo\'lgan translyatsiyalar</string>
   <string name="aboutBroadcasts">Translyatsiyalar haqida</string>
-  <string name="howToUseLichessBroadcasts">Lichess eshittirishlaridan qanday foydalanish kerak.</string>
+  <string name="howToUseLichessBroadcasts">Chess-Online eshittirishlaridan qanday foydalanish kerak.</string>
   <string name="theNewRoundHelp">Yangi turda avvalgisiga o\'xshash a\'zolar va hissa qo\'shuvchilar bo\'ladi.</string>
   <string name="addRound">Bir tur qo\'shing</string>
   <string name="ongoing">Joriy</string>
@@ -23,8 +23,8 @@
   <string name="fullDescription">Tadbir haqida toʻliq izoh</string>
   <string name="fullDescriptionHelp">Eshittirish tanlanuvchan uzun izohi. %1$s mumkin. Uzunlik %2$s ta belgidan kam boʻlishi kerak.</string>
   <string name="sourceSingleUrl">PGN manba URL manzili</string>
-  <string name="sourceUrlHelp">PGN yangilanishlarini olish uchun Lichess tekshiradigan URL. U \"Inter\"dan hamma uchun ochiq bo\'lishi kerak</string>
-  <string name="sourceGameIds">Bo\'shliqlar bilan ajratilgan 64 tagacha Lichess o\'yin identifikatorlari.</string>
+  <string name="sourceUrlHelp">PGN yangilanishlarini olish uchun Chess-Online tekshiradigan URL. U \"Inter\"dan hamma uchun ochiq bo\'lishi kerak</string>
+  <string name="sourceGameIds">Bo\'shliqlar bilan ajratilgan 64 tagacha Chess-Online o\'yin identifikatorlari.</string>
   <string name="startDateTimeZone">Turnirning mahalliy vaqt mintaqasida boshlanish sanasi: %s</string>
   <string name="startDateHelp">Majburiy emas, agar tadbir qachon boshlanishini bilsangiz</string>
   <string name="currentGameUrl">Joriy oʻyin URL manzili</string>

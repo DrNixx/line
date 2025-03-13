@@ -11,7 +11,7 @@
   <string name="newBroadcast">Transmetim i ri i drejtpërdrejtë</string>
   <string name="subscribedBroadcasts">Transmetime me pajtim</string>
   <string name="aboutBroadcasts">Rreth transmetimeve</string>
-  <string name="howToUseLichessBroadcasts">Si të përdoren Transmetimet Lichess.</string>
+  <string name="howToUseLichessBroadcasts">Si të përdoren Transmetimet Chess-Online.</string>
   <string name="theNewRoundHelp">Raundi i ri do të ketë të njëjtën anëtarë dhe kontribues si i mëparshmi.</string>
   <string name="addRound">Shtoni një raund</string>
   <string name="ongoing">Në zhvillim</string>
@@ -23,8 +23,8 @@
   <string name="fullDescription">Përshkrim i plotë i turneut</string>
   <string name="fullDescriptionHelp">Përshkrim i gjatë opsional i turneut. %1$s është e disponueshme. Gjatësia duhet të jetë më pak se %2$s shenja.</string>
   <string name="sourceSingleUrl">URL Burimi PGN-je</string>
-  <string name="sourceUrlHelp">URL-ja që do të kontrollojë Lichess-i për të marrë përditësime PGN-sh. Duhet të jetë e përdorshme publikisht që nga Interneti.</string>
-  <string name="sourceGameIds">Deri në 64 ID lojërash Lichess, ndarë me hapësira.</string>
+  <string name="sourceUrlHelp">URL-ja që do të kontrollojë Chess-Online-i për të marrë përditësime PGN-sh. Duhet të jetë e përdorshme publikisht që nga Interneti.</string>
+  <string name="sourceGameIds">Deri në 64 ID lojërash Chess-Online, ndarë me hapësira.</string>
   <string name="startDateTimeZone">Datë fillimi në zonën kohore vendore të turneut: %s</string>
   <string name="startDateHelp">Opsionale, nëse e dini kur fillon veprimtaria</string>
   <string name="currentGameUrl">URL e lojës së tanishme</string>
@@ -46,7 +46,7 @@
   <string name="ageThisYear">Moshë këtë vit</string>
   <string name="unrated">Pa pikë</string>
   <string name="recentTournaments">Turne së fundi</string>
-  <string name="openLichess">Hape në Lichess</string>
+  <string name="openLichess">Hape në Chess-Online</string>
   <string name="teams">Ekipe</string>
   <string name="boards">Fusha</string>
   <string name="overview">Përmbledhje</string>

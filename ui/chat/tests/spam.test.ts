@@ -3,7 +3,7 @@ import { selfReport } from '../src/spam';
 import * as xhr from 'common/xhr';
 
 test('self report', () => {
-  vi.stubGlobal('window', { location: { href: 'https://lichess.org/abcdef123456' } });
+  vi.stubGlobal('window', { location: { href: 'https://live.chess-online.com/abcdef123456' } });
 
   vi.stubGlobal('site', {
     storage: {

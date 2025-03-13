@@ -20,8 +20,8 @@
   <string name="fullDescription">Пълно описание на събитието</string>
   <string name="fullDescriptionHelp">Незадължително дълго описание на излъчването. %1$s е налично. Дължината трябва да по-малка от %2$s знака.</string>
   <string name="sourceSingleUrl">URL на PGN източника</string>
-  <string name="sourceUrlHelp">Уебадресът, който Lichess ще проверява, за да получи осъвременявания на PGN. Той трябва да е публично достъпен от интернет.</string>
-  <string name="sourceGameIds">До 64 идентификатора на игри в Lichess, разделени с празни места.</string>
+  <string name="sourceUrlHelp">Уебадресът, който Chess-Online ще проверява, за да получи осъвременявания на PGN. Той трябва да е публично достъпен от интернет.</string>
+  <string name="sourceGameIds">До 64 идентификатора на игри в Chess-Online, разделени с празни места.</string>
   <string name="startDateHelp">По избор, ако знаете, кога започва събитието</string>
   <string name="currentGameUrl">URL на настоящата партия</string>
   <string name="downloadAllRounds">Изтегли всички рундове</string>
@@ -36,7 +36,7 @@
   <string name="fideProfile">ФИДЕ профил</string>
   <string name="federation">Федерация</string>
   <string name="ageThisYear">Възраст (тази година)</string>
-  <string name="openLichess">Отвори в Lichess</string>
+  <string name="openLichess">Отвори в Chess-Online</string>
   <string name="teams">Отбори</string>
   <string name="boards">Дъски</string>
   <string name="overview">Общ преглед</string>

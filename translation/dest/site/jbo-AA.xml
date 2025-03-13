@@ -261,7 +261,7 @@
   <plurals name="giveNbSeconds">
     <item quantity="other">dunda %s snidu</item>
   </plurals>
-  <string name="thisAccountViolatedTos">lo se jaspu be ti cu zerjonse la .litces. zo\'e la\'o ly. Lichess Terms of Service ly.</string>
+  <string name="thisAccountViolatedTos">lo se jaspu be ti cu zerjonse la .litces. zo\'e la\'o ly. Chess-Online Terms of Service ly.</string>
   <string name="openingExplorerAndTablebase">ge cfari kelka\'u sispe\'i gi ci\'erkei fanmo selcmi</string>
   <string name="takeback">kelka\'u xruti</string>
   <string name="proposeATakeback">kelka\'u xruti stidi</string>

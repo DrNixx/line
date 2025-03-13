@@ -7,9 +7,9 @@
   <plurals name="blogPosts">
     <item quantity="other">%s則貼文</item>
   </plurals>
-  <string name="lichessOfficialBlog">Lichess 官方部落格</string>
+  <string name="lichessOfficialBlog">Chess-Online 官方部落格</string>
   <string name="continueReadingPost">繼續閱讀此貼文</string>
-  <string name="lichessBlogPostsFromXYear">位於 %s 的 Lichess 部落格貼文</string>
+  <string name="lichessBlogPostsFromXYear">位於 %s 的 Chess-Online 部落格貼文</string>
   <string name="previousBlogPosts">上一則貼文</string>
   <string name="xBlog">%s的部落格</string>
   <string name="newPost">新文章</string>

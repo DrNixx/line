@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="lichessClasses">Kelas</string>
-  <string name="teachClassesOfChessStudents">Mengajar kelas pelajar catur dengan set alat Kelas Lichess.</string>
+  <string name="teachClassesOfChessStudents">Mengajar kelas pelajar catur dengan set alat Kelas Chess-Online.</string>
   <string name="features">Ciri-ciri</string>
   <string name="quicklyGenerateSafeUsernames">Cepat menjana nama pengguna dan kata laluan yang selamat untuk pelajar</string>
   <string name="trackStudentProgress">Jejaki kemajuan pelajar dalam permainan dan teka-teki</string>
   <string name="messageAllStudents">Mesej semua pelajar tentang bahan kelas baharu</string>
   <string name="freeForAllForever" comment="The automated QA checker treats &quot;100%&quot; as if it is a variable, and will give a warning if you change it.&#10;It is not a variable.&#10;&#10;You can still save your translation writing it as &quot;%100&quot; for example, in case this is more valid in your language.">100% percuma untuk semua, selama-lamanya, tanpa iklan atau penjejak</string>
-  <string name="applyToBeLichessTeacher">Memohon untuk menjadi Guru Lichess</string>
+  <string name="applyToBeLichessTeacher">Memohon untuk menjadi Guru Chess-Online</string>
   <string name="noClassesYet">Tiada kelas lagi.</string>
-  <string name="lichessUsername">Nama Pengguna Lichess</string>
+  <string name="lichessUsername">Nama Pengguna Chess-Online</string>
 </resources>

@@ -2,7 +2,7 @@
 <resources>
   <string name="logInAsUsername">Log in as %s</string>
   <string name="welcome">Welcome!</string>
-  <string name="welcomeToLichess">Welcome to lichess.org!</string>
+  <string name="welcomeToLichess">Welcome to chess-online.com!</string>
   <string name="thisIsYourProfilePage">This is your profile page.</string>
   <string name="enabledKidModeSuggestion">Will a child use this account? You might want to enable %s.</string>
   <string name="whatNowSuggestions">What now? Here are a few suggestions:</string>
@@ -10,9 +10,9 @@
   <string name="improveWithChessTacticsPuzzles">Improve with chess tactics puzzles.</string>
   <string name="playTheArtificialIntelligence">Play the Artificial Intelligence.</string>
   <string name="playOpponentsFromAroundTheWorld">Play opponents from around the world.</string>
-  <string name="followYourFriendsOnLichess">Follow your friends on Lichess.</string>
+  <string name="followYourFriendsOnLichess">Follow your friends on Chess-Online.</string>
   <string name="playInTournaments">Play in tournaments.</string>
   <string name="learnFromXAndY">Learn from %1$s and %2$s.</string>
-  <string name="configureLichess">Configure Lichess to your liking.</string>
+  <string name="configureLichess">Configure Chess-Online to your liking.</string>
   <string name="exploreTheSiteAndHaveFun">Explore the site and have fun :)</string>
 </resources>

@@ -8,7 +8,7 @@
     <item quantity="one">%s postagem de blog</item>
     <item quantity="other">%s postagens de blog</item>
   </plurals>
-  <string name="lichessOfficialBlog">Blog oficial do Lichess</string>
+  <string name="lichessOfficialBlog">Blog oficial do Chess-Online</string>
   <string name="continueReadingPost">Continuar lendo a postagem</string>
   <string name="lichessBlogPostsFromXYear">Posts do lichess blog em %s</string>
   <string name="previousBlogPosts">Postagens anteriores de blogs</string>
@@ -52,7 +52,7 @@
   <string name="deleteBlog">Excluir esta postagem definitivamente</string>
   <string name="safeToUseImages">É seguro utilizar imagens dos seguintes sites: </string>
   <string name="selectPostTopics">Selecione os assuntos da sua postagem</string>
-  <string name="useImagesYouMadeYourself">Você também pode utilizar imagens feitas por você, fotografias que tirou, capturas de tela do Lichess... qualquer coisa que não esteja protegida por direitos autorais de outra pessoa.</string>
+  <string name="useImagesYouMadeYourself">Você também pode utilizar imagens feitas por você, fotografias que tirou, capturas de tela do Chess-Online... qualquer coisa que não esteja protegida por direitos autorais de outra pessoa.</string>
   <string name="safeAndRespectfulContent">Publique apenas conteúdo seguro e respeitoso. Não copie o conteúdo de outra pessoa.</string>
   <string name="inappropriateContentAccountClosed">Qualquer coisa inapropriada pode levar ao encerramento da sua conta.</string>
   <string name="blogTips">Nossas dicas simples para escrever ótimas postagens</string>

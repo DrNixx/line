@@ -13,6 +13,6 @@
   <string name="twoFactorEnabled">التوثيق ذو العاملين مفعل</string>
   <string name="twoFactorToDisable">تحتاج إلى كلمة المرور الخاصة بحسابك ورمز التفعيل من التطبيق الذي تستخدمه لتعطيل التوثيق ذو العاملين.</string>
   <string name="openTwoFactorApp">افتح تطبيق التوثيق ذو العاملين على جهازك لعرض رمز التوثيق الخاص بك والتحقق من هويتك.</string>
-  <string name="setupReminder">يرجى تمكين التوثيق ذو العاملين لتأمين حسابك على https://lichess.org/account/twofactor.
+  <string name="setupReminder">يرجى تمكين التوثيق ذو العاملين لتأمين حسابك على https://chess-online.com/account/twofactor.
 لقد تلقيت هذه الرسالة لأن حسابك لديه صلاحيات خاصة مثل قائد الفريق أو المدرب أو المعلم أو صاحب بث.</string>
 </resources>

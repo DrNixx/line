@@ -88,7 +88,7 @@ final class Account(
 
   val apiMe = Scoped() { ctx ?=> me ?=>
     def limited = rateLimited:
-      "Please don't poll this endpoint. Stream https://lichess.org/api#tag/Board/operation/apiStreamEvent instead."
+      "Please don't poll this endpoint. Stream https://live.chess-online.com/api#tag/Board/operation/apiStreamEvent instead."
     val wikiGranted = getBool("wiki") && isGranted(_.LichessTeam) && ctx.scopes.has(_.Web.Mod)
     if getBool("wiki") && !wikiGranted then Unauthorized(jsonError("Wiki access not granted"))
     else
@@ -394,6 +394,6 @@ final class Account(
         if getBool("text") then
           apiC.GlobalConcurrencyLimitUser(me)(env.api.personalDataExport(user)): source =>
             Ok.chunked(source.map(_ + "\n"))
-              .pipe(asAttachmentStream(s"lichess_${user.username}.txt"))
+              .pipe(asAttachmentStream(s"chess_${user.username}.txt"))
         else Ok.page(pages.data(user))
   }

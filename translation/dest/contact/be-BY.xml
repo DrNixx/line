@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="contact">Звязацца</string>
-  <string name="contactLichess">Звязацца з Lichess</string>
+  <string name="contactLichess">Звязацца з Chess-Online</string>
   <string name="whatCanWeHelpYouWith">Чым мы можам вам дапамагчы?</string>
   <string name="visitThisPage">Наведайце гэтую старонку каб вырашыць праблему</string>
   <string name="iCantLogIn">Не магу ўвайсці</string>
@@ -12,8 +12,8 @@
   <string name="lost2FA">Страціў доступ да кадоў двухфактарнаў аўтарызацыі</string>
   <string name="doPasswordReset">Скасуйце пароль, каб пазбавіцца двухфактарнай аўтарызацыі</string>
   <string name="accountSupport">Мне патрэбна дапамога з уліковым запісам</string>
-  <string name="wantTitle">Хачу, каб мой тытул адлюстроўвася на Lichess</string>
-  <string name="visitTitleConfirmation">Каб адлюстроўваць тытул на вашай староке Lichess та ўдзельнічаць у Тытуляваных Арэнах, наведайце старонку пацверджання тытулу</string>
+  <string name="wantTitle">Хачу, каб мой тытул адлюстроўвася на Chess-Online</string>
+  <string name="visitTitleConfirmation">Каб адлюстроўваць тытул на вашай староке Chess-Online та ўдзельнічаць у Тытуляваных Арэнах, наведайце старонку пацверджання тытулу</string>
   <string name="wantCloseAccount">Хачу зачыніць свой уліковы запіс</string>
   <string name="closeYourAccount">Вы можаце зачыніць свой уліковы запіс на гэтай старонцы</string>
   <string name="doNotAskByEmail">Не прасіце нас зачыніць уліковы запіс праз электроныя лісты, мы не будзем гэтага рабіць.</string>
@@ -34,10 +34,10 @@
   <string name="doNotMessageModerators">Калі ласка, не дасылайце асабістыя паведамленні мадэратарам.</string>
   <string name="onlyReports">Толькі скарга на гульцоў праз форму скаргі эфектыўна.</string>
   <string name="wantReportBug">Хачу паведаміць пра памылку</string>
-  <string name="reportBugInForum">У раздзеле \"Зваротная сувязь Lichess\" на форуме</string>
-  <string name="reportWebsiteIssue">Як памылку сайта Lichess на GitHub</string>
-  <string name="reportMobileIssue">Як памылку мабільнай прылады Lichess на GitHub</string>
-  <string name="reportBugInDiscord">Ва Discord cерверы Lichess</string>
+  <string name="reportBugInForum">У раздзеле \"Зваротная сувязь Chess-Online\" на форуме</string>
+  <string name="reportWebsiteIssue">Як памылку сайта Chess-Online на GitHub</string>
+  <string name="reportMobileIssue">Як памылку мабільнай прылады Chess-Online на GitHub</string>
+  <string name="reportBugInDiscord">Ва Discord cерверы Chess-Online</string>
   <string name="howToReportBug">Калі ласка, апішыце што гэта за памылка, як яна выгядае, што на вашу думку павінна было адбыцца, а таксама крокі каб аднавіць памылку.</string>
   <string name="illegalPawnCapture">Недазволенае ўзяцце пешкі</string>
   <string name="calledEnPassant">Гэта называецца \"ўзяцце на праходзе\" і з\'яўляецца адным з правіл шахмат.</string>
@@ -55,7 +55,7 @@
   <string name="botRatingAbuse">У пэўных абставінах, калі гуляючы супраць уліковых запісаў ботаў, рэйтангавая партыя можа не прыводзіць да змены рэйтынгу. Калі ўстаноўлена, што гулец злоўжывае бота дзеля павялячэння рэйтынгу.</string>
   <string name="errorPage">Старонка памылкі</string>
   <string name="reportErrorPage">Калі вы траміце на старонку з памылкай, вы можаце паведаміць пра яе:</string>
-  <string name="learnHowToMakeBroadcasts">Дазнайцеся, як карыстацца трансляцыямі Lichess</string>
+  <string name="learnHowToMakeBroadcasts">Дазнайцеся, як карыстацца трансляцыямі Chess-Online</string>
   <string name="banAppeal">Абскарджанне бана ўліковага запісу ці абмежавання IP-адраса</string>
   <string name="engineAppeal">Выкарыстанне рухавіка або несумленная гульня</string>
   <string name="sendAppealTo">Вы можаце накіраваць апеляцыю праз %s.</string>
@@ -65,13 +65,13 @@
   <string name="doNotDeny">Не адмаўляйце, што падманвалі. Калі вы хочаце мець магчымасць стварыць новы ўліковы запіс, наўпрост прызнайце, што зрабілі, і пакажыце, што разумееце сваю памылку.</string>
   <string name="otherRestriction">Іншыя абмежаванні</string>
   <string name="collaboration">Супрацоўніцтва, юрыдычнае, камерцыйнае</string>
-  <string name="monetizing">Манетызацыя Lichess</string>
-  <string name="buyingLichess">Купіць Lichess</string>
-  <string name="authorizationToUse">Аўтарызацыя на Lichess</string>
-  <string name="welcomeToUse">Мы заклікаем выкарыстоўваць Lichess у вашай дзейнасці, нават камерцыйнай.</string>
-  <string name="videosAndBooks">Вы можаце выкарыстоўваце яе для вашых відэа та другаваць скрыншоты Lichess у вашых кнігах.</string>
+  <string name="monetizing">Манетызацыя Chess-Online</string>
+  <string name="buyingLichess">Купіць Chess-Online</string>
+  <string name="authorizationToUse">Аўтарызацыя на Chess-Online</string>
+  <string name="welcomeToUse">Мы заклікаем выкарыстоўваць Chess-Online у вашай дзейнасці, нават камерцыйнай.</string>
+  <string name="videosAndBooks">Вы можаце выкарыстоўваце яе для вашых відэа та другаваць скрыншоты Chess-Online у вашых кнігах.</string>
   <string name="creditAppreciated">Падзяка вітаецца, але не з\'яўляецца абавязковай.</string>
   <string name="noneOfTheAbove">Нічога з пералічанага</string>
   <string name="sendEmailAt">Даслаць нам ліст на %s.</string>
-  <string name="explainYourRequest">Калі ласка, апішыце свой запыт зразумела і дасканала. Пазначце ваша імя карыстальніка Lichess і ўсю іншыў інфармацыю, якая можа быць карыснай у нашай вам дапамозе.</string>
+  <string name="explainYourRequest">Калі ласка, апішыце свой запыт зразумела і дасканала. Пазначце ваша імя карыстальніка Chess-Online і ўсю іншыў інфармацыю, якая можа быць карыснай у нашай вам дапамозе.</string>
 </resources>

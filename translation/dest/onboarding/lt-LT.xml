@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="welcome">Sveiki!</string>
-  <string name="welcomeToLichess">Sveiki atvykę į lichess.org!</string>
+  <string name="welcomeToLichess">Sveiki atvykę į chess-online.com!</string>
   <string name="thisIsYourProfilePage">Tai jūsų profilio puslapis.</string>
   <string name="enabledKidModeSuggestion">Šia paskyra naudosis vaikas? Galite įjungti %s.</string>
   <string name="whatNowSuggestions">Kas toliau? Štai keli pasiūlymai:</string>
@@ -9,9 +9,9 @@
   <string name="improveWithChessTacticsPuzzles">Tobulėkite su šachmatų taktikos galvosūkiais.</string>
   <string name="playTheArtificialIntelligence">Žaiskite prieš dirbtinį intelektą.</string>
   <string name="playOpponentsFromAroundTheWorld">Žaiskite prieš varžovus iš viso pasaulio.</string>
-  <string name="followYourFriendsOnLichess">Sekite savo draugus Lichess.</string>
+  <string name="followYourFriendsOnLichess">Sekite savo draugus Chess-Online.</string>
   <string name="playInTournaments">Žaiskite turnyruose.</string>
   <string name="learnFromXAndY">Mokykitės iš %1$s ir %2$s.</string>
-  <string name="configureLichess">Pritaikykite Lichess sau.</string>
+  <string name="configureLichess">Pritaikykite Chess-Online sau.</string>
   <string name="exploreTheSiteAndHaveFun">Tyrinėkite svetainę ir sėkmės :)</string>
 </resources>

@@ -4,7 +4,7 @@ import lila.core.config.BaseUrl
 
 class ReferrerRedirectTest extends munit.FunSuite:
 
-  def r = new ReferrerRedirect(BaseUrl("https://lichess.org"))
+  def r = new ReferrerRedirect(BaseUrl("https://live.chess-online.com"))
 
   test("be valid") {
     assertEquals(r.valid("/tournament"), Some("https://lichess.org/tournament"))

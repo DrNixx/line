@@ -7,17 +7,17 @@
   <string name="leechess">ಲೀ-ಚೆಸ್</string>
   <string name="hearItPronouncedBySpecialist">ತಜ್ಞರಿಂದ ಉಚ್ಚರಿಸಲಾಗುತ್ತದೆ ಎಂದು ಕೇಳಿ.</string>
   <string name="whyLiveLightLibre">ಲೈವ್, ಏಕೆಂದರೆ ನೈಜ ಸಮಯದಲ್ಲಿ 24/7 ಆಟಗಳನ್ನು ಆಡಲಾಗುತ್ತದೆ ಮತ್ತು ವೀಕ್ಷಿಸಲಾಗುತ್ತದೆ; ಲಿಚೆಸ್ ಮುಕ್ತ ಮೂಲವಾಗಿದೆ ಮತ್ತು ಇತರ ವೆಬ್‌ಸೈಟ್‌ಗಳನ್ನು ಹಾವಳಿ ಮಾಡುವ ಸ್ವಾಮ್ಯದ ಜಂಕ್‌ನಿಂದ ಹೊರೆಯಾಗುವುದಿಲ್ಲ ಎಂಬ ಅಂಶಕ್ಕೆ ಬೆಳಕು ಮತ್ತು ಮುಕ್ತವಾಗಿದೆ.</string>
-  <string name="whyIsLilaCalledLila">ಅದೇ ರೀತಿ, Lichess ನ ಮೂಲ ಕೋಡ್, %1$s, li[chess in sca]la ಅನ್ನು ಸೂಚಿಸುತ್ತದೆ, Lichess ನ ಬಹುಭಾಗವನ್ನು %2$s ನಲ್ಲಿ ಬರೆಯಲಾಗಿದೆ, ಇದು ಅರ್ಥಗರ್ಭಿತ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಭಾಷೆಯಾಗಿದೆ.</string>
-  <string name="howCanIContributeToLichess">Lichess ಗೆ ನಾನು ಹೇಗೆ ಕೊಡುಗೆ ನೀಡಬಹುದು?</string>
+  <string name="whyIsLilaCalledLila">ಅದೇ ರೀತಿ, Chess-Online ನ ಮೂಲ ಕೋಡ್, %1$s, li[chess in sca]la ಅನ್ನು ಸೂಚಿಸುತ್ತದೆ, Chess-Online ನ ಬಹುಭಾಗವನ್ನು %2$s ನಲ್ಲಿ ಬರೆಯಲಾಗಿದೆ, ಇದು ಅರ್ಥಗರ್ಭಿತ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಭಾಷೆಯಾಗಿದೆ.</string>
+  <string name="howCanIContributeToLichess">Chess-Online ಗೆ ನಾನು ಹೇಗೆ ಕೊಡುಗೆ ನೀಡಬಹುದು?</string>
   <string name="lichessPoweredByDonationsAndVolunteers">ಲಿಚೆಸ್ ಪೋಷಕರಿಂದ ದೇಣಿಗೆ ಮತ್ತು ಸ್ವಯಂಸೇವಕರ ತಂಡದ ಪ್ರಯತ್ನಗಳಿಂದ ನಡೆಸಲ್ಪಡುತ್ತದೆ.</string>
   <string name="findMoreAndSeeHowHelp">ನೀವು %1$s (%2$s ಸೇರಿದಂತೆ) ಕುರಿತು ಇನ್ನಷ್ಟು ತಿಳಿದುಕೊಳ್ಳಬಹುದು. ನಿಮ್ಮ ಸಮಯ ಮತ್ತು ಕೌಶಲ್ಯಗಳನ್ನು ಸ್ವಯಂಸೇವಕರಾಗಿ ಲಿಚೆಸ್‌ಗೆ ಸಹಾಯ ಮಾಡಲು ನೀವು ಬಯಸಿದರೆ, ಹಲವು %3$s ಇವೆ.</string>
   <string name="beingAPatron">ಪೋಷಕನಾಗಿರುವುದು</string>
   <string name="breakdownOfOurCosts">ನಮ್ಮ ವೆಚ್ಚಗಳ ಸ್ಥಗಿತ</string>
   <string name="otherWaysToHelp">ಸಹಾಯ ಮಾಡಲು ಇತರ ಮಾರ್ಗಗಳು</string>
-  <string name="areThereWebsitesBasedOnLichess">Lichess ಆಧಾರಿತ ವೆಬ್‌ಸೈಟ್‌ಗಳಿವೆಯೇ?</string>
+  <string name="areThereWebsitesBasedOnLichess">Chess-Online ಆಧಾರಿತ ವೆಬ್‌ಸೈಟ್‌ಗಳಿವೆಯೇ?</string>
   <string name="yesLichessInspiredOtherOpenSourceWebsites">ಹೌದು. ನಮ್ಮ %1$s, %2$s, ಅಥವಾ %3$s ಅನ್ನು ಬಳಸುವ ಇತರ ತೆರೆದ ಮೂಲ ಸೈಟ್‌ಗಳಿಗೆ ಲೈಚೆಸ್ ನಿಜವಾಗಿಯೂ ಸ್ಫೂರ್ತಿ ನೀಡಿದೆ.</string>
   <string name="keyboardShortcuts">ಯಾವ ಕೀಬೋರ್ಡ್ ಶಾರ್ಟ್‌ಕಟ್‌ಗಳಿವೆ?</string>
-  <string name="keyboardShortcutsExplanation">ಕೆಲವು Lichess ಪುಟಗಳು ನೀವು ಬಳಸಬಹುದಾದ ಕೀಬೋರ್ಡ್ ಶಾರ್ಟ್‌ಕಟ್‌ಗಳನ್ನು ಹೊಂದಿವೆ. \'?\' ಅನ್ನು ಒತ್ತಲು ಪ್ರಯತ್ನಿಸಿ ಲಭ್ಯವಿರುವ ಕೀಬೋರ್ಡ್ ಶಾರ್ಟ್‌ಕಟ್‌ಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಲು ಅಧ್ಯಯನ, ವಿಶ್ಲೇಷಣೆ, ಒಗಟು ಅಥವಾ ಆಟದ ಪುಟದಲ್ಲಿ ಕೀ.</string>
+  <string name="keyboardShortcutsExplanation">ಕೆಲವು Chess-Online ಪುಟಗಳು ನೀವು ಬಳಸಬಹುದಾದ ಕೀಬೋರ್ಡ್ ಶಾರ್ಟ್‌ಕಟ್‌ಗಳನ್ನು ಹೊಂದಿವೆ. \'?\' ಅನ್ನು ಒತ್ತಲು ಪ್ರಯತ್ನಿಸಿ ಲಭ್ಯವಿರುವ ಕೀಬೋರ್ಡ್ ಶಾರ್ಟ್‌ಕಟ್‌ಗಳನ್ನು ಪಟ್ಟಿ ಮಾಡಲು ಅಧ್ಯಯನ, ವಿಶ್ಲೇಷಣೆ, ಒಗಟು ಅಥವಾ ಆಟದ ಪುಟದಲ್ಲಿ ಕೀ.</string>
   <string name="fairPlay">ಫೇರ್ ಪ್ಲೇ</string>
   <string name="whenAmIEligibleRatinRefund">ಮೋಸಗಾರರಿಂದ ಸ್ವಯಂಚಾಲಿತ ರೇಟಿಂಗ್ ಮರುಪಾವತಿಗೆ ನಾನು ಯಾವಾಗ ಅರ್ಹನಾಗುತ್ತೇನೆ?</string>
   <string name="ratingRefundExplanation" comment="In answer to the question 'When am I eligible for the automatic rating refund from cheaters?'">ಆಟಗಾರನನ್ನು ಗುರುತಿಸಿದ ಒಂದು ನಿಮಿಷದ ನಂತರ, ಕಳೆದ 3 ದಿನಗಳಲ್ಲಿ ಅವರ 40 ಇತ್ತೀಚಿನ ರೇಟಿಂಗ್ ಆಟಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಲಾಗುತ್ತದೆ. ಆ ಆಟಗಳಲ್ಲಿ ಒಂದರಲ್ಲಿ ನೀವು ಅವರ ಎದುರಾಳಿಯಾಗಿದ್ದರೆ, ನೀವು ರೇಟಿಂಗ್ ಅನ್ನು ಕಳೆದುಕೊಂಡಿದ್ದೀರಿ (ನಷ್ಟ ಅಥವಾ ಡ್ರಾದ ಕಾರಣ), ಮತ್ತು ನಿಮ್ಮ ರೇಟಿಂಗ್ ತಾತ್ಕಾಲಿಕವಾಗಿಲ್ಲ, ನೀವು ರೇಟಿಂಗ್ ಮರುಪಾವತಿಯನ್ನು ಪಡೆಯುತ್ತೀರಿ. ನಿಮ್ಮ ಗರಿಷ್ಠ ರೇಟಿಂಗ್ ಮತ್ತು ಆಟದ ನಂತರ ನಿಮ್ಮ ರೇಟಿಂಗ್ ಪ್ರಗತಿಯನ್ನು ಆಧರಿಸಿ ಮರುಪಾವತಿಯನ್ನು ಮಿತಿಗೊಳಿಸಲಾಗಿದೆ. (ಉದಾಹರಣೆಗೆ, ಆ ಆಟದ ನಂತರ ನಿಮ್ಮ ರೇಟಿಂಗ್ ಹೆಚ್ಚು ಹೆಚ್ಚಾದರೆ, ನೀವು ಮರುಪಾವತಿಯನ್ನು ಪಡೆಯುವುದಿಲ್ಲ ಅಥವಾ ಭಾಗಶಃ ಮರುಪಾವತಿಯನ್ನು ಮಾತ್ರ ಪಡೆಯಬಹುದು.) ಮರುಪಾವತಿಯು ಎಂದಿಗೂ 150 ಅಂಕಗಳನ್ನು ಮೀರುವುದಿಲ್ಲ.</string>
@@ -36,7 +36,7 @@
   <string name="durationFormula" comment="durationFormula&#10;&#10;Part of the larger string 'basedOnGameDuration'&#10;&#10;Note: this string did not use to say 'in seconds'. Please update if necessary.">(ಗಡಿಯಾರ ಆರಂಭಿಕ ಸಮಯ ಸೆಕೆಂಡುಗಳಲ್ಲಿ) + 40 × (ಗಡಿಯಾರ ಹೆಚ್ಚಳ)</string>
   <string name="inferiorThanXsEqualYtimeControl">≤ %1$ss = %2$s</string>
   <string name="superiorThanXsEqualYtimeControl">≥ %1$ss = %2$s</string>
-  <string name="whatVariantsCanIplay">Lichess ನಲ್ಲಿ ನಾನು ಯಾವ ರೂಪಾಂತರಗಳನ್ನು ಆಡಬಹುದು?</string>
+  <string name="whatVariantsCanIplay">Chess-Online ನಲ್ಲಿ ನಾನು ಯಾವ ರೂಪಾಂತರಗಳನ್ನು ಆಡಬಹುದು?</string>
   <string name="lichessSupportChessAnd">ಲಿಚೆಸ್ ಪ್ರಮಾಣಿತ ಚೆಸ್ ಮತ್ತು %1$s ಅನ್ನು ಬೆಂಬಲಿಸುತ್ತದೆ.</string>
   <string name="eightVariants">8 ಚೆಸ್ ರೂಪಾಂತರಗಳು</string>
   <string name="whatIsACPL">ಸರಾಸರಿ ಸೆಂಟಿಪಾನ್ ನಷ್ಟ (ACPL) ಎಂದರೇನು?</string>
@@ -66,20 +66,20 @@
   <string name="lichessTraining">ಲಿಚೆಸ್ ತರಬೇತಿ</string>
   <string name="watchIMRosenCheckmate">ಇಂಟರ್ನ್ಯಾಷನಲ್ ಮಾಸ್ಟರ್ ಎರಿಕ್ ರೋಸೆನ್ ಚೆಕ್ಮೇಟ್ %s ಅನ್ನು ವೀಕ್ಷಿಸಿ.</string>
   <string name="threefoldRepetition">ಮೂರು ಪಟ್ಟು ಪುನರಾವರ್ತನೆ</string>
-  <string name="threefoldRepetitionExplanation">ಸ್ಥಾನವು ಮೂರು ಬಾರಿ ಸಂಭವಿಸಿದರೆ, ಆಟಗಾರರು %1$s ರಷ್ಟು ಡ್ರಾವನ್ನು ಪಡೆಯಬಹುದು. %2$s ನ ಆರ್ಟಿಕಲ್ 9.2 ನಲ್ಲಿ ವಿವರಿಸಿದಂತೆ Lichess ಅಧಿಕೃತ FIDE ನಿಯಮಗಳನ್ನು ಅಳವಡಿಸುತ್ತದೆ.</string>
+  <string name="threefoldRepetitionExplanation">ಸ್ಥಾನವು ಮೂರು ಬಾರಿ ಸಂಭವಿಸಿದರೆ, ಆಟಗಾರರು %1$s ರಷ್ಟು ಡ್ರಾವನ್ನು ಪಡೆಯಬಹುದು. %2$s ನ ಆರ್ಟಿಕಲ್ 9.2 ನಲ್ಲಿ ವಿವರಿಸಿದಂತೆ Chess-Online ಅಧಿಕೃತ FIDE ನಿಯಮಗಳನ್ನು ಅಳವಡಿಸುತ್ತದೆ.</string>
   <string name="threefoldRepetitionLowerCase">ಮೂರು ಪಟ್ಟು ಪುನರಾವರ್ತನೆ</string>
   <string name="notRepeatedMoves">ನಾವು ಚಲನೆಯನ್ನು ಪುನರಾವರ್ತಿಸಲಿಲ್ಲ. ಆಟವನ್ನು ಇನ್ನೂ ಪುನರಾವರ್ತನೆಯಿಂದ ಏಕೆ ಸೆಳೆಯಲಾಯಿತು?</string>
   <string name="repeatedPositionsThatMatters">ಮೂರು ಪಟ್ಟು ಪುನರಾವರ್ತನೆಯು ಪುನರಾವರ್ತಿತ %1$s ಆಗಿದೆ, ಚಲನೆಗಳಲ್ಲ. ಪುನರಾವರ್ತನೆಯು ಸತತವಾಗಿ ಸಂಭವಿಸಬೇಕಾಗಿಲ್ಲ.</string>
   <string name="positions">ಸ್ಥಾನಗಳು</string>
   <string name="weRepeatedthreeTimesPosButNoDraw">ನಾವು ಸ್ಥಾನವನ್ನು ಮೂರು ಬಾರಿ ಪುನರಾವರ್ತಿಸುತ್ತೇವೆ. ಆಟ ಏಕೆ ಡ್ರಾ ಆಗಲಿಲ್ಲ?</string>
-  <string name="threeFoldHasToBeClaimed">ಪುನರಾವರ್ತನೆಯನ್ನು ಆಟಗಾರರಲ್ಲಿ ಒಬ್ಬರು ಕ್ಲೈಮ್ ಮಾಡಬೇಕಾಗಿದೆ. ತೋರಿಸಿರುವ ಬಟನ್ ಅನ್ನು ಒತ್ತುವ ಮೂಲಕ ಅಥವಾ ನಿಮ್ಮ ಅಂತಿಮ ಪುನರಾವರ್ತನೆಯ ಚಲನೆಯ ಮೊದಲು ಡ್ರಾವನ್ನು ನೀಡುವ ಮೂಲಕ ನೀವು ಹಾಗೆ ಮಾಡಬಹುದು, ನಿಮ್ಮ ಎದುರಾಳಿಯು ಡ್ರಾ ಪ್ರಸ್ತಾಪವನ್ನು ತಿರಸ್ಕರಿಸಿದರೆ ಪರವಾಗಿಲ್ಲ, ಮೂರು ಪಟ್ಟು ಪುನರಾವರ್ತನೆಯ ಡ್ರಾವನ್ನು ಹೇಗಾದರೂ ಕ್ಲೈಮ್ ಮಾಡಲಾಗುತ್ತದೆ. ನಿಮಗಾಗಿ ಪುನರಾವರ್ತನೆಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಕ್ಲೈಮ್ ಮಾಡಲು ನೀವು %1$s Lichess ಅನ್ನು ಸಹ ಮಾಡಬಹುದು. ಹೆಚ್ಚುವರಿಯಾಗಿ, ಐದು ಪಟ್ಟು ಪುನರಾವರ್ತನೆ ಯಾವಾಗಲೂ ಆಟವನ್ನು ತಕ್ಷಣವೇ ಕೊನೆಗೊಳಿಸುತ್ತದೆ.</string>
+  <string name="threeFoldHasToBeClaimed">ಪುನರಾವರ್ತನೆಯನ್ನು ಆಟಗಾರರಲ್ಲಿ ಒಬ್ಬರು ಕ್ಲೈಮ್ ಮಾಡಬೇಕಾಗಿದೆ. ತೋರಿಸಿರುವ ಬಟನ್ ಅನ್ನು ಒತ್ತುವ ಮೂಲಕ ಅಥವಾ ನಿಮ್ಮ ಅಂತಿಮ ಪುನರಾವರ್ತನೆಯ ಚಲನೆಯ ಮೊದಲು ಡ್ರಾವನ್ನು ನೀಡುವ ಮೂಲಕ ನೀವು ಹಾಗೆ ಮಾಡಬಹುದು, ನಿಮ್ಮ ಎದುರಾಳಿಯು ಡ್ರಾ ಪ್ರಸ್ತಾಪವನ್ನು ತಿರಸ್ಕರಿಸಿದರೆ ಪರವಾಗಿಲ್ಲ, ಮೂರು ಪಟ್ಟು ಪುನರಾವರ್ತನೆಯ ಡ್ರಾವನ್ನು ಹೇಗಾದರೂ ಕ್ಲೈಮ್ ಮಾಡಲಾಗುತ್ತದೆ. ನಿಮಗಾಗಿ ಪುನರಾವರ್ತನೆಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಕ್ಲೈಮ್ ಮಾಡಲು ನೀವು %1$s Chess-Online ಅನ್ನು ಸಹ ಮಾಡಬಹುದು. ಹೆಚ್ಚುವರಿಯಾಗಿ, ಐದು ಪಟ್ಟು ಪುನರಾವರ್ತನೆ ಯಾವಾಗಲೂ ಆಟವನ್ನು ತಕ್ಷಣವೇ ಕೊನೆಗೊಳಿಸುತ್ತದೆ.</string>
   <string name="configure">ಕಾನ್ಫಿಗರ್ ಮಾಡಿ</string>
   <string name="accounts">ಖಾತೆಗಳು</string>
   <string name="titlesAvailableOnLichess">ಲಿಚೆಸ್‌ನಲ್ಲಿ ಯಾವ ಶೀರ್ಷಿಕೆಗಳಿವೆ?</string>
-  <string name="lichessRecognizeAllOTBtitles">Lichess ಎಲ್ಲಾ FIDE ಶೀರ್ಷಿಕೆಗಳನ್ನು OTB (ಬೋರ್ಡ್‌ನಲ್ಲಿ) ಪ್ಲೇಯಿಂದ ಪಡೆದುಕೊಂಡಿದೆ, ಹಾಗೆಯೇ %1$s ಅನ್ನು ಗುರುತಿಸುತ್ತದೆ. FIDE ಶೀರ್ಷಿಕೆಗಳ ಪಟ್ಟಿ ಇಲ್ಲಿದೆ:</string>
+  <string name="lichessRecognizeAllOTBtitles">Chess-Online ಎಲ್ಲಾ FIDE ಶೀರ್ಷಿಕೆಗಳನ್ನು OTB (ಬೋರ್ಡ್‌ನಲ್ಲಿ) ಪ್ಲೇಯಿಂದ ಪಡೆದುಕೊಂಡಿದೆ, ಹಾಗೆಯೇ %1$s ಅನ್ನು ಗುರುತಿಸುತ್ತದೆ. FIDE ಶೀರ್ಷಿಕೆಗಳ ಪಟ್ಟಿ ಇಲ್ಲಿದೆ:</string>
   <string name="showYourTitle">ನೀವು OTB ಶೀರ್ಷಿಕೆಯನ್ನು ಹೊಂದಿದ್ದರೆ, ಗುರುತಿಸುವ ಡಾಕ್ಯುಮೆಂಟ್/ಕಾರ್ಡ್‌ನ ಸ್ಪಷ್ಟ ಚಿತ್ರ ಮತ್ತು ಡಾಕ್ಯುಮೆಂಟ್/ಕಾರ್ಡ್ ಹೊಂದಿರುವ ನಿಮ್ಮ ಸೆಲ್ಫಿ ಸೇರಿದಂತೆ %1$s ಅನ್ನು ಪೂರ್ಣಗೊಳಿಸುವ ಮೂಲಕ ನಿಮ್ಮ ಖಾತೆಯಲ್ಲಿ ಇದನ್ನು ಪ್ರದರ್ಶಿಸಲು ನೀವು ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು.
 
-Lichess ನಲ್ಲಿ ಶೀರ್ಷಿಕೆಯ ಆಟಗಾರ ಎಂದು ಪರಿಶೀಲಿಸುವುದರಿಂದ ಶೀರ್ಷಿಕೆಯ ಅರೆನಾ ಈವೆಂಟ್‌ಗಳಲ್ಲಿ ಆಡಲು ಪ್ರವೇಶವನ್ನು ನೀಡುತ್ತದೆ.
+Chess-Online ನಲ್ಲಿ ಶೀರ್ಷಿಕೆಯ ಆಟಗಾರ ಎಂದು ಪರಿಶೀಲಿಸುವುದರಿಂದ ಶೀರ್ಷಿಕೆಯ ಅರೆನಾ ಈವೆಂಟ್‌ಗಳಲ್ಲಿ ಆಡಲು ಪ್ರವೇಶವನ್ನು ನೀಡುತ್ತದೆ.
 
 ಅಂತಿಮವಾಗಿ ಗೌರವ %2$s ಶೀರ್ಷಿಕೆ ಇದೆ.</string>
   <string name="asWellAsManyNMtitles">ಅನೇಕ ರಾಷ್ಟ್ರೀಯ ಮಾಸ್ಟರ್ ಶೀರ್ಷಿಕೆಗಳು</string>
@@ -98,9 +98,9 @@ Lichess ನಲ್ಲಿ ಶೀರ್ಷಿಕೆಯ ಆಟಗಾರ ಎಂದು
   <string name="ownerUniqueTrophies">ಲಿಚೆಸ್‌ನ ಇತಿಹಾಸದಲ್ಲಿ ಆ ಟ್ರೋಫಿ ಅನನ್ಯವಾಗಿದೆ, %1$s ಹೊರತುಪಡಿಸಿ ಬೇರೆ ಯಾರೂ ಅದನ್ನು ಹೊಂದಿರುವುದಿಲ್ಲ.</string>
   <string name="wayOfBerserkExplanation">ಅದನ್ನು ಪಡೆಯಲು, hiimgosu %s ನ ಎಲ್ಲಾ ಆಟಗಳನ್ನು ಗೆಲ್ಲಲು ಮತ್ತು ಗೆಲ್ಲಲು ಸ್ವತಃ ಸವಾಲು ಹಾಕಿದರು.</string>
   <string name="aHourlyBulletTournament">ಒಂದು ಗಂಟೆಯ ಬುಲೆಟ್ ಪಂದ್ಯಾವಳಿ</string>
-  <string name="goldenZeeExplanation" comment="goldenZeeExplanation&#10;&#10;ZugAddict is a legendary player and streamer, do not translate his name.&#10;https://lichess.org/@/ZugAddict&#10;&#10;Thibault is the name of the founder of Lichess: https://lichess.org/@/thibault">ZugAddict ಸ್ಟ್ರೀಮಿಂಗ್ ಮಾಡುತ್ತಿದ್ದರು ಮತ್ತು ಕಳೆದ 2 ಗಂಟೆಗಳ ಕಾಲ ಅವರು A.I ಅನ್ನು ಸೋಲಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತಿದ್ದರು. 1+0 ಆಟದಲ್ಲಿ 8 ನೇ ಹಂತ, ಯಶಸ್ವಿಯಾಗಲಿಲ್ಲ. ಅವರು ಅದನ್ನು ಸ್ಟ್ರೀಮ್‌ನಲ್ಲಿ ಯಶಸ್ವಿಯಾಗಿ ಮಾಡಿದರೆ, ಅವರು ಅನನ್ಯ ಟ್ರೋಫಿಯನ್ನು ಪಡೆಯುತ್ತಾರೆ ಎಂದು ಥಿಬಾಲ್ಟ್ ಅವರಿಗೆ ಹೇಳಿದರು. ಒಂದು ಗಂಟೆಯ ನಂತರ, ಅವರು ಸ್ಟಾಕ್ಫಿಶ್ ಅನ್ನು ಒಡೆದರು ಮತ್ತು ಭರವಸೆಯನ್ನು ಗೌರವಿಸಲಾಯಿತು.</string>
+  <string name="goldenZeeExplanation" comment="goldenZeeExplanation&#10;&#10;ZugAddict is a legendary player and streamer, do not translate his name.&#10;https://chess-online.com/@/ZugAddict&#10;&#10;Thibault is the name of the founder of Chess-Online: https://chess-online.com/@/thibault">ZugAddict ಸ್ಟ್ರೀಮಿಂಗ್ ಮಾಡುತ್ತಿದ್ದರು ಮತ್ತು ಕಳೆದ 2 ಗಂಟೆಗಳ ಕಾಲ ಅವರು A.I ಅನ್ನು ಸೋಲಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತಿದ್ದರು. 1+0 ಆಟದಲ್ಲಿ 8 ನೇ ಹಂತ, ಯಶಸ್ವಿಯಾಗಲಿಲ್ಲ. ಅವರು ಅದನ್ನು ಸ್ಟ್ರೀಮ್‌ನಲ್ಲಿ ಯಶಸ್ವಿಯಾಗಿ ಮಾಡಿದರೆ, ಅವರು ಅನನ್ಯ ಟ್ರೋಫಿಯನ್ನು ಪಡೆಯುತ್ತಾರೆ ಎಂದು ಥಿಬಾಲ್ಟ್ ಅವರಿಗೆ ಹೇಳಿದರು. ಒಂದು ಗಂಟೆಯ ನಂತರ, ಅವರು ಸ್ಟಾಕ್ಫಿಶ್ ಅನ್ನು ಒಡೆದರು ಮತ್ತು ಭರವಸೆಯನ್ನು ಗೌರವಿಸಲಾಯಿತು.</string>
   <string name="lichessRatings">ಲಿಚೆಸ್ ರೇಟಿಂಗ್‌ಗಳು</string>
-  <string name="whichRatingSystemUsedByLichess">Lichess ಯಾವ ರೇಟಿಂಗ್ ವ್ಯವಸ್ಥೆಯನ್ನು ಬಳಸುತ್ತದೆ?</string>
+  <string name="whichRatingSystemUsedByLichess">Chess-Online ಯಾವ ರೇಟಿಂಗ್ ವ್ಯವಸ್ಥೆಯನ್ನು ಬಳಸುತ್ತದೆ?</string>
   <string name="ratingSystemUsedByLichess">ಮಾರ್ಕ್ ಗ್ಲಿಕ್‌ಮ್ಯಾನ್ ಅಭಿವೃದ್ಧಿಪಡಿಸಿದ ಗ್ಲಿಕ್ಕೊ-2 ರೇಟಿಂಗ್ ವಿಧಾನವನ್ನು ಬಳಸಿಕೊಂಡು ರೇಟಿಂಗ್‌ಗಳನ್ನು ಲೆಕ್ಕಹಾಕಲಾಗುತ್ತದೆ. ಇದು ಅತ್ಯಂತ ಜನಪ್ರಿಯ ರೇಟಿಂಗ್ ವಿಧಾನವಾಗಿದೆ ಮತ್ತು ಇದನ್ನು ಗಮನಾರ್ಹ ಸಂಖ್ಯೆಯ ಚೆಸ್ ಸಂಸ್ಥೆಗಳು ಬಳಸುತ್ತವೆ (FIDE ಒಂದು ಗಮನಾರ್ಹವಾದ ಪ್ರತಿ-ಉದಾಹರಣೆಯಾಗಿದೆ, ಏಕೆಂದರೆ ಅವರು ಇನ್ನೂ ದಿನಾಂಕದ ಎಲೋ ರೇಟಿಂಗ್ ವ್ಯವಸ್ಥೆಯನ್ನು ಬಳಸುತ್ತಾರೆ).
 
 ಮೂಲಭೂತವಾಗಿ, ಗ್ಲಿಕ್ಕೊ ರೇಟಿಂಗ್‌ಗಳು ನಿಮ್ಮ ರೇಟಿಂಗ್ ಅನ್ನು ಲೆಕ್ಕಾಚಾರ ಮಾಡುವಾಗ ಮತ್ತು ಪ್ರತಿನಿಧಿಸುವಾಗ \"ವಿಶ್ವಾಸ ಮಧ್ಯಂತರಗಳನ್ನು\" ಬಳಸುತ್ತವೆ. ನೀವು ಮೊದಲು ಸೈಟ್ ಅನ್ನು ಬಳಸಲು ಪ್ರಾರಂಭಿಸಿದಾಗ, ನಿಮ್ಮ ರೇಟಿಂಗ್ 1500 ± 1000 ರಿಂದ ಪ್ರಾರಂಭವಾಗುತ್ತದೆ. 1500 ನಿಮ್ಮ ರೇಟಿಂಗ್ ಅನ್ನು ಪ್ರತಿನಿಧಿಸುತ್ತದೆ ಮತ್ತು 1000 ವಿಶ್ವಾಸಾರ್ಹ ಮಧ್ಯಂತರವನ್ನು ಪ್ರತಿನಿಧಿಸುತ್ತದೆ.
@@ -134,9 +134,9 @@ Lichess ನಲ್ಲಿ ಶೀರ್ಷಿಕೆಯ ಆಟಗಾರ ಎಂದು
   <string name="howToThreeDots">ಹೇಗೆ...</string>
   <string name="enableDisableNotificationPopUps">ಅಧಿಸೂಚನೆ ಪಾಪ್‌ಅಪ್‌ಗಳನ್ನು ಸಕ್ರಿಯಗೊಳಿಸುವುದೇ ಅಥವಾ ನಿಷ್ಕ್ರಿಯಗೊಳಿಸುವುದೇ?</string>
   <string name="viewSiteInformationPopUp">ಸೈಟ್ ಮಾಹಿತಿ ಪಾಪ್ಅಪ್ ವೀಕ್ಷಿಸಿ</string>
-  <string name="lichessCanOptionnalySendPopUps">Lichess ಐಚ್ಛಿಕವಾಗಿ ಪಾಪ್ಅಪ್ ಅಧಿಸೂಚನೆಗಳನ್ನು ಕಳುಹಿಸಬಹುದು, ಉದಾಹರಣೆಗೆ ನಿಮ್ಮ ಸರದಿ ಬಂದಾಗ ಅಥವಾ ನೀವು ಖಾಸಗಿ ಸಂದೇಶವನ್ನು ಸ್ವೀಕರಿಸಿದ್ದೀರಿ.
+  <string name="lichessCanOptionnalySendPopUps">Chess-Online ಐಚ್ಛಿಕವಾಗಿ ಪಾಪ್ಅಪ್ ಅಧಿಸೂಚನೆಗಳನ್ನು ಕಳುಹಿಸಬಹುದು, ಉದಾಹರಣೆಗೆ ನಿಮ್ಮ ಸರದಿ ಬಂದಾಗ ಅಥವಾ ನೀವು ಖಾಸಗಿ ಸಂದೇಶವನ್ನು ಸ್ವೀಕರಿಸಿದ್ದೀರಿ.
 
-ನಿಮ್ಮ ಬ್ರೌಸರ್‌ನ URL ಬಾರ್‌ನಲ್ಲಿ lichess.org ವಿಳಾಸದ ಪಕ್ಕದಲ್ಲಿರುವ ಲಾಕ್ ಐಕಾನ್ ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ.
+ನಿಮ್ಮ ಬ್ರೌಸರ್‌ನ URL ಬಾರ್‌ನಲ್ಲಿ chess-online.com ವಿಳಾಸದ ಪಕ್ಕದಲ್ಲಿರುವ ಲಾಕ್ ಐಕಾನ್ ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ.
 
-ನಂತರ Lichess ನಿಂದ ಅಧಿಸೂಚನೆಗಳನ್ನು ಅನುಮತಿಸಬೇಕೆ ಅಥವಾ ನಿರ್ಬಂಧಿಸಬೇಕೆ ಎಂಬುದನ್ನು ಆಯ್ಕೆಮಾಡಿ.</string>
+ನಂತರ Chess-Online ನಿಂದ ಅಧಿಸೂಚನೆಗಳನ್ನು ಅನುಮತಿಸಬೇಕೆ ಅಥವಾ ನಿರ್ಬಂಧಿಸಬೇಕೆ ಎಂಬುದನ್ನು ಆಯ್ಕೆಮಾಡಿ.</string>
 </resources>

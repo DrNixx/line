@@ -10,6 +10,6 @@
   <string name="disableTwoFactor">Isključite dvofaktorsku provjeru autentičnosti</string>
   <string name="twoFactorEnabled">Dvofaktorska provjera autentičnosti uključena</string>
   <string name="openTwoFactorApp">Otvorite aplikaciju za autentikaciju s dva faktora na Vašem uređaju da vidite Vaš kod za autentikaciju i potvrdite Vaš identitet.</string>
-  <string name="setupReminder">Molimo da omogućite autentifikaciju s dva faktora radi osiguravanja Vašeg računa na https://lichess.org/account/twofactor. 
+  <string name="setupReminder">Molimo da omogućite autentifikaciju s dva faktora radi osiguravanja Vašeg računa na https://chess-online.com/account/twofactor.
 Primili ste ovu poruku zato što Vaš račun ima posebne odgovornosti, kao što su vođa tima, trener, učitelj ili strimer</string>
 </resources>

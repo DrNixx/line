@@ -5,7 +5,7 @@
   <string name="live">OTSE!</string>
   <string name="currentlyStreaming">Praegu striimivad: %s</string>
   <string name="lastStream">Viimane striim %s</string>
-  <string name="becomeStreamer">Hakka Lichess-striimijaks</string>
+  <string name="becomeStreamer">Hakka Chess-Online-striimijaks</string>
   <string name="doYouHaveStream">Kas sul on Twitch- või Youtube-kanal?</string>
   <string name="hereWeGo">Hakkame pihta!</string>
   <string name="allStreamers">Kõik striimijad</string>

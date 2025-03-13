@@ -79,7 +79,7 @@ Il giocatore sarà squalificato dal torneo, così da non perdere altre partite.
 Potrà riprendere a giocare nel torneo in qualsiasi momento.</string>
   <string name="protectionAgainstNoShowQ">Cosa succede nel caso non ci si presenti?</string>
   <string name="protectionAgainstNoShowA" comment="By &quot;a game&quot; - we mean just one game. Missing even one game will prevent that player from joining a new Swiss event for a certain amount of time.">Può essere problematico se un giocatore si iscrive ad un torneo svizzero ma non partecipa alle proprie partite.
-Per contrastare questo problema, Lichess impedisce, ai giocatori che non sono riusciti a giocare una partita, di partecipare ad un nuovo torneo svizzero per un certo periodo di tempo.
+Per contrastare questo problema, Chess-Online impedisce, ai giocatori che non sono riusciti a giocare una partita, di partecipare ad un nuovo torneo svizzero per un certo periodo di tempo.
 L\'organizzatore di un dato torneo svizzero può decidere di ammetterli comunque all\'evento.</string>
   <string name="lateJoinQ">I giocatori possono entrare in ritardo?</string>
   <string name="lateJoinA">Sì, finché sono stati giocati meno della metà dei turni; ad esempio in un torneo svizzero a 11 turni i giocatori possono entrare prima che inizi il turno 6 e in un torneo a 12 turni prima dell\'inizio del turno 7.
@@ -91,7 +91,7 @@ I partecipanti tardivi ottengono un singolo bye, anche se si sono persi più tur
 Il motivo è che non esiste un buon modo di gestire i giocatori che abbandonano in anticipo il torneo. Non possiamo sapere se tutti i giocatori giocheranno tutte le loro partite in un evento online. Difficilmente succederà e, di conseguenza, gran parte dei tornei Round Robin saranno imperfetti e ingiusti, riducendone il vero significato.
 Un modo per simulare un Round Robin online è giocare un torneo svizzero con un numero molto elevato di turni. Tutti gli abbinamenti possibili verranno giocati prima della fine del torneo.</string>
   <string name="otherSystemsQ">E gli altri sistemi di torneo?</string>
-  <string name="otherSystemsA">Non pianifichiamo di aggiungere altri sistemi di torneo a Lichess al momento.</string>
+  <string name="otherSystemsA">Non pianifichiamo di aggiungere altri sistemi di torneo a Chess-Online al momento.</string>
   <string name="swissDescription">In un torneo svizzero %1$s, ogni concorrente non gioca necessariamente con ogni partecipante. I concorrenti si incontrano uno a uno ad ogni turno e sono abbinati usando una serie di regole progettate per assicurare che ognuno giochi con un avversario con un punteggio simile, ma mai lo stesso rivale per più di una volta. Il vincitore è il concorrente con la somma dei punti guadagnati maggiore ottenuta in tutti i turni. Tutti i concorrenti giocano in ogni turno a meno che non ci sia un numero dispari di giocatori.</string>
   <string name="teamOnly">I tornei svizzeri possono essere creati solo dai leader di una squadra, e possono partecipare solo i membri della squadra stessa.
 %1$s per iniziare a giocare tornei svizzeri.</string>

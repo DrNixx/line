@@ -66,7 +66,7 @@
   <string name="downloadGame">ක්‍රීඩාව බාගන්න</string>
   <string name="studyUrl">අධ්‍යයන URL</string>
   <string name="currentChapterUrl">වත්මන් පරිච්ඡේද URL</string>
-  <string name="youCanPasteThisInTheForumToEmbed">ඔබට මෙය සංසදයේ හෝ ඔබේ Lichess බ්ලොග් අඩවියේ ඇලවිය හැක</string>
+  <string name="youCanPasteThisInTheForumToEmbed">ඔබට මෙය සංසදයේ හෝ ඔබේ Chess-Online බ්ලොග් අඩවියේ ඇලවිය හැක</string>
   <string name="startAtInitialPosition">ආරම්භක ස්ථානයේ සිට ආරම්භ කරන්න</string>
   <string name="startAtX">%s ට අරඹන්න</string>
   <string name="embedInYourWebsite">ඔබේ වෙබ් අඩවියට ඇතුළත් කරන්න</string>
@@ -132,7 +132,7 @@
   <string name="interestingMove">සිත්ගන්නා ඇදීම​</string>
   <string name="dubiousMove" comment="dubiousMove&#10;A questionable move.">සැක සහිත ඇදීම​</string>
   <string name="onlyMove" comment="onlyMove&#10;The only possible move. This is a label that can be placed in a study of a past game. It may not technically be the only move, but the only feasible one.">එකම ඇදීම​</string>
-  <string name="zugzwang" comment="zugzwang&#10;What zugzwang is: https://lichess.org/practice/intermediate-tactics/zugzwang/9cKgYrHb/ybYJ9gNa&#10;&#10;This specific string is a label that can be applied to a position in a study, to indicate one side is in zugzwang.">Zugzwang</string>
+  <string name="zugzwang" comment="zugzwang&#10;What zugzwang is: https://chess-online.com/practice/intermediate-tactics/zugzwang/9cKgYrHb/ybYJ9gNa&#10;&#10;This specific string is a label that can be applied to a position in a study, to indicate one side is in zugzwang.">Zugzwang</string>
   <string name="equalPosition">සමාන පොසිශනය​</string>
   <string name="unclearPosition" comment="unclearPosition&#10;It is unclear who is winning or losing.">අපැහැදිලි පොසිශනය​</string>
   <string name="whiteIsSlightlyBetter">සුදු ටිකක් හොඳයි</string>

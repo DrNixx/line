@@ -2,7 +2,7 @@
 <resources>
   <string name="logInAsUsername">Entrar como %s</string>
   <string name="welcome">Bem-vindo(a)!</string>
-  <string name="welcomeToLichess">Bem-vindo(a) ao lichess.org!</string>
+  <string name="welcomeToLichess">Bem-vindo(a) ao chess-online.com!</string>
   <string name="thisIsYourProfilePage">Esta é a tua página de perfil.</string>
   <string name="enabledKidModeSuggestion">Uma criança usará esta conta? Podes querer habilitar %s.</string>
   <string name="whatNowSuggestions">E agora? Aqui estão algumas sugestões:</string>
@@ -10,9 +10,9 @@
   <string name="improveWithChessTacticsPuzzles">Melhorar com problemas de táticas de xadrez.</string>
   <string name="playTheArtificialIntelligence">Jogar contra a Inteligência Artificial.</string>
   <string name="playOpponentsFromAroundTheWorld">Jogar contra adversários de todo o mundo.</string>
-  <string name="followYourFriendsOnLichess">Seguir os teus amigos no Lichess.</string>
+  <string name="followYourFriendsOnLichess">Seguir os teus amigos no Chess-Online.</string>
   <string name="playInTournaments">Jogar em torneios.</string>
   <string name="learnFromXAndY">Aprender com %1$s e %2$s.</string>
-  <string name="configureLichess">Configurar o Lichess ao teu gosto.</string>
+  <string name="configureLichess">Configurar o Chess-Online ao teu gosto.</string>
   <string name="exploreTheSiteAndHaveFun">Explorar o site e divirta-te :)</string>
 </resources>

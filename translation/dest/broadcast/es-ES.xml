@@ -11,7 +11,7 @@
   <string name="newBroadcast">Nueva emisión en directo</string>
   <string name="subscribedBroadcasts">Transmisiones suscritas</string>
   <string name="aboutBroadcasts">Acerca de las transmisiones</string>
-  <string name="howToUseLichessBroadcasts">Como utilizar las transmisiones de Lichess.</string>
+  <string name="howToUseLichessBroadcasts">Como utilizar las transmisiones de Chess-Online.</string>
   <string name="theNewRoundHelp">La nueva ronda tendrá los mismos miembros y contribuyentes que la anterior.</string>
   <string name="addRound">Añadir una ronda</string>
   <string name="ongoing">En curso</string>
@@ -23,8 +23,8 @@
   <string name="fullDescription">Descripción completa del evento</string>
   <string name="fullDescriptionHelp">Descripción larga opcional de la emisión. %1$s está disponible. La longitud debe ser inferior a %2$s caracteres.</string>
   <string name="sourceSingleUrl">Enlace de origen del archivo PGN</string>
-  <string name="sourceUrlHelp">URL que Lichess comprobará para obtener actualizaciones PGN. Debe ser públicamente accesible desde Internet.</string>
-  <string name="sourceGameIds">Hasta 64 identificadores de partidas de Lichess, separados por espacios.</string>
+  <string name="sourceUrlHelp">URL que Chess-Online comprobará para obtener actualizaciones PGN. Debe ser públicamente accesible desde Internet.</string>
+  <string name="sourceGameIds">Hasta 64 identificadores de partidas de Chess-Online, separados por espacios.</string>
   <string name="startDateTimeZone">Fecha de inicio en la zona horaria local del torneo: %s</string>
   <string name="startDateHelp">Opcional, si sabes cuando comienza el evento</string>
   <string name="currentGameUrl">Enlace de la partida actual</string>
@@ -47,7 +47,7 @@
   <string name="ageThisYear">Edad</string>
   <string name="unrated">Sin puntuación</string>
   <string name="recentTournaments">Torneos recientes</string>
-  <string name="openLichess">Abrir en Lichess</string>
+  <string name="openLichess">Abrir en Chess-Online</string>
   <string name="teams">Equipos</string>
   <string name="boards">Tableros</string>
   <string name="overview">Resumen</string>

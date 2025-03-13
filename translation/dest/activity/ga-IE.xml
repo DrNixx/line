@@ -3,11 +3,11 @@
   <string name="activity">Gníomhaíocht</string>
   <string name="hostedALiveStream">Bhí sruth beo faoi cúram</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">Thacaíodh le lichess.org ar feadh mí amháin mar %2$s</item>
-    <item quantity="two">Thacaíodh le lichess.org ar feadh %1$s mhí mar %2$s</item>
-    <item quantity="few">Thacaigh lichess.org ar feadh %1$s mí mar %2$s</item>
-    <item quantity="many">Thacaíodh le lichess.org ar feadh %1$s mhí mar %2$s</item>
-    <item quantity="other">Thacaíodh le lichess.org ar feadh %1$s mhí mar %2$s</item>
+    <item quantity="one">Thacaíodh le chess-online.com ar feadh mí amháin mar %2$s</item>
+    <item quantity="two">Thacaíodh le chess-online.com ar feadh %1$s mhí mar %2$s</item>
+    <item quantity="few">Thacaigh chess-online.com ar feadh %1$s mí mar %2$s</item>
+    <item quantity="many">Thacaíodh le chess-online.com ar feadh %1$s mhí mar %2$s</item>
+    <item quantity="other">Thacaíodh le chess-online.com ar feadh %1$s mhí mar %2$s</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">Rinneadh cleachtadh ar suíomh amháin de chuid %2$s</item>
@@ -93,7 +93,7 @@
     <item quantity="many">Chruthaigh %s staidéar nua</item>
     <item quantity="other">Chruthaigh %s staidéar nua</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="one">San iomaíocht i gcomórtas Airéine amháin</item>
     <item quantity="two">San iomaíocht i %s chomórtas Airéine</item>
     <item quantity="few">San iomaíocht i %s gcomórtas Airéine</item>
@@ -115,7 +115,7 @@
     <item quantity="other">San iomaíocht i %s comórtas swiss</item>
   </plurals>
   <string name="rankedInSwissTournament">Céim #%1$s as %2$s</string>
-  <string name="signedUp">Sínithe suas le lichess.org</string>
+  <string name="signedUp">Sínithe suas le chess-online.com</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">Isteach i bhfoireann amháin</item>
     <item quantity="two">Isteach i %s fhoireann</item>

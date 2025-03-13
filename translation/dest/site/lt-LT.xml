@@ -262,9 +262,9 @@
   <string name="forgotPassword">Pamiršote slaptažodį?</string>
   <string name="error.weakPassword">Šis slaptažodis itin dažnas ir jį pernelyg lengva atspėti.</string>
   <string name="error.namePassword">Prašome nenaudoti savo vartotojo vardo kaip slaptažodžio.</string>
-  <string name="blankedPassword">Jūs jau panaudojote šį slaptažodį kitoje svetainėje, kurios saugumas buvo pažeistas. Norėdami užtikrinti jūsų Lichess paskyros saugumą turime paprašyti nustatyti naują slaptažodį. Dėkojame už supratingumą.</string>
-  <string name="youAreLeavingLichess">Jūs paliekate Lichess</string>
-  <string name="neverTypeYourPassword">Niekada netalpinkite savo Lichess slaptažodžio kitoje svetainėje!</string>
+  <string name="blankedPassword">Jūs jau panaudojote šį slaptažodį kitoje svetainėje, kurios saugumas buvo pažeistas. Norėdami užtikrinti jūsų Chess-Online paskyros saugumą turime paprašyti nustatyti naują slaptažodį. Dėkojame už supratingumą.</string>
+  <string name="youAreLeavingLichess">Jūs paliekate Chess-Online</string>
+  <string name="neverTypeYourPassword">Niekada netalpinkite savo Chess-Online slaptažodžio kitoje svetainėje!</string>
   <string name="proceedToX">Eiti į %s</string>
   <string name="passwordSuggestion">Nenaudokite slaptažodžio, kurį jums pasiūlė kas nors kitas. Tuo galima pasinaudoti pavogiant jūsų paskyrą.</string>
   <string name="emailSuggestion">Nenaudokite el. pašto adreso, kurį jums pasiūlė kas nors kitas. Tuo galima pasinaudoti pavogiant jūsų paskyrą.</string>
@@ -391,7 +391,7 @@
     <item quantity="many">Duoti %s sekundžių</item>
     <item quantity="other">Duoti %s sekundžių</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Ši paskyra pažeidė „Lichess“ naudojimo sąlygas</string>
+  <string name="thisAccountViolatedTos">Ši paskyra pažeidė „Chess-Online“ naudojimo sąlygas</string>
   <string name="openingExplorerAndTablebase">Debiutų naršyklė ir pozicijų duomenų bazė</string>
   <string name="takeback">Atsiimti ėjimą</string>
   <string name="proposeATakeback">Prašyti leidimo atšaukti ėjimą</string>
@@ -971,7 +971,7 @@ kompiuterinę analizę, partijos pokalbį bei URL dalinimuisi.</string>
     <item quantity="many">ir sutaupykite %s išankstinio ėjimo linijų</item>
     <item quantity="other">ir sutaupykite %s išankstinio ėjimo linijų</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Jūs gavote privačią žinutę iš Lichess.</string>
+  <string name="showUnreadLichessMessage">Jūs gavote privačią žinutę iš Chess-Online.</string>
   <string name="clickHereToReadIt">Spustelėkite čia, kad peržiūrėtumėte</string>
   <string name="sorry">Atsiprašome :(</string>
   <string name="weHadToTimeYouOutForAWhile">Turėjome jus laikinai apriboti.</string>
@@ -984,14 +984,14 @@ kompiuterinę analizę, partijos pokalbį bei URL dalinimuisi.</string>
   <string name="tryToWin">Kiekvieną kartą stenkitės laimėti, ar bent sužaisti lygiosiomis.</string>
   <string name="resignLostGames">Pasiduokite pralaimėtose partijose (nelaukite kol pasibaigs laikas).</string>
   <string name="temporaryInconvenience">Atsiprašome dėl laikinų nepatogumų,</string>
-  <string name="wishYouGreatGames">ir linkime jums puikių partijų per lichess.org.</string>
+  <string name="wishYouGreatGames">ir linkime jums puikių partijų per chess-online.com.</string>
   <string name="thankYouForReading">Ačiū, kad perskaitėte!</string>
   <string name="lifetimeScore">Visų laikų rezultatas</string>
   <string name="currentMatchScore">Dabartinės partijos rezultatas</string>
   <string name="agreementAssistance">Pasižadu niekada savo partijų metu nesinaudoti kompiuterio, knygos, duomenų bazės ar kito žmogaus pagalba.</string>
   <string name="agreementNice">Pasižadu visada būti pagarbus kitiems žaidėjams.</string>
   <string name="agreementMultipleAccounts" comment="%s will be replaced with the translation of 'termsOfService'">Aš sutinku, kad nekursiu daugiau nei vienos paskyros (išskyrus priežastis nurodytas %s).</string>
-  <string name="agreementPolicy">Pasižadu laikytis visų „Lichess“ nuostatų.</string>
+  <string name="agreementPolicy">Pasižadu laikytis visų „Chess-Online“ nuostatų.</string>
   <string name="searchOrStartNewDiscussion">Ieškokite, arba pradėkite naują diskusiją</string>
   <string name="edit">Keisti</string>
   <string name="bullet" comment="Probably best left untranslated. Leave it as 'Bullet' unless your language has a better word for it.">Kulka</string>
@@ -1030,7 +1030,7 @@ kompiuterinę analizę, partijos pokalbį bei URL dalinimuisi.</string>
   <string name="congratsYouWon">Sveikiname, jūs laimėjote!</string>
   <string name="gameVsX">Žaidimas prieš %1$s</string>
   <string name="resVsX">%1$s prieš %2$s</string>
-  <string name="lostAgainstTOSViolator">Jūs pralaimėjote prieš žmogų, kuris pažeidė Lichess taisykles</string>
+  <string name="lostAgainstTOSViolator">Jūs pralaimėjote prieš žmogų, kuris pažeidė Chess-Online taisykles</string>
   <string name="refundXpointsTimeControlY">Grąžinimas: %1$s %2$s reitingo taškų.</string>
   <string name="timeAlmostUp">Laikas beveik baigėsi!</string>
   <string name="clickToRevealEmailAddress">[spustelėkite norėdami pamatyti el. pašto adresą]</string>
@@ -1084,13 +1084,13 @@ Palikite tuščią norėdami pradėti žaidimą nuo įprastos pradinės pozicijo
   <string name="youCantStartNewGame">Jūs negalite pradėti naujos partijos kol nepabaigta ši.</string>
   <string name="since">Nuo</string>
   <string name="until">Iki</string>
-  <string name="lichessDbExplanation">Reitinguoti žaidimai paimti iš visų Lichess žaidėjų</string>
+  <string name="lichessDbExplanation">Reitinguoti žaidimai paimti iš visų Chess-Online žaidėjų</string>
   <string name="switchSides">Pakeisti puses</string>
   <string name="closingAccountWithdrawAppeal">paskyras</string>
   <string name="ourEventTips">Mūsų patarimai organizuojant renginius</string>
   <string name="instructions">Instrukcijos</string>
   <string name="showMeEverything">Rodyti viską</string>
-  <string name="lichessPatronInfo">Lichess yra labdara ir pilnai atviro kodo/libre projektas.
+  <string name="lichessPatronInfo">Chess-Online yra labdara ir pilnai atviro kodo/libre projektas.
 Visos veikimo išlaidos, programavimas ir turinys yra padengti išskirtinai tik vartotojų parama.</string>
   <string name="nothingToSeeHere">Nieko naujo.</string>
   <string name="stats">Statistika</string>

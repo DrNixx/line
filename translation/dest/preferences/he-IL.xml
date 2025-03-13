@@ -63,8 +63,8 @@
   <string name="notifyChallenge">הזמנות למשחקים</string>
   <string name="notifyTournamentSoon">טורניר מתחיל בקרוב</string>
   <string name="notifyTimeAlarm">אוזל הזמן במשחק התכתבות</string>
-  <string name="notifyBell">התראות פעמון ב־Lichess</string>
-  <string name="notifyPush">התראה למכשיר גם כשאינך מחובר/ת ל־Lichess</string>
+  <string name="notifyBell">התראות פעמון ב־Chess-Online</string>
+  <string name="notifyPush">התראה למכשיר גם כשאינך מחובר/ת ל־Chess-Online</string>
   <string name="notifyWeb">דפדפן</string>
   <string name="notifyDevice">מכשיר</string>
   <string name="bellNotificationSound">השמע צליל עבור התראות פעמון</string>

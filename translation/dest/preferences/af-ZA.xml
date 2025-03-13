@@ -60,8 +60,8 @@
   <string name="notifyChallenge">Uitdagings</string>
   <string name="notifyTournamentSoon">Toernooi begin binnekort</string>
   <string name="notifyTimeAlarm">Korrespondensietyd raak min</string>
-  <string name="notifyBell">Klokkie kennisgewing binne Lichess</string>
-  <string name="notifyPush">Toetstel kennisgewing wanneer jy nie op Lichess is nie</string>
+  <string name="notifyBell">Klokkie kennisgewing binne Chess-Online</string>
+  <string name="notifyPush">Toetstel kennisgewing wanneer jy nie op Chess-Online is nie</string>
   <string name="notifyWeb">Blaaier</string>
   <string name="notifyDevice">Toestel</string>
   <string name="bellNotificationSound">Klokkie kennisgewing klank</string>

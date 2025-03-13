@@ -7,9 +7,9 @@
   <plurals name="blogPosts">
     <item quantity="other">%s bài đăng blog</item>
   </plurals>
-  <string name="lichessOfficialBlog">Blog Chính thức của Lichess</string>
+  <string name="lichessOfficialBlog">Blog Chính thức của Chess-Online</string>
   <string name="continueReadingPost">Tiếp tục đọc bài đăng này</string>
-  <string name="lichessBlogPostsFromXYear">Bài blog của Lichess đăng trong năm %s</string>
+  <string name="lichessBlogPostsFromXYear">Bài blog của Chess-Online đăng trong năm %s</string>
   <string name="previousBlogPosts">Những bài blog trước</string>
   <string name="xBlog">Bài viết của %s</string>
   <string name="newPost">Bài đăng mới</string>
@@ -48,7 +48,7 @@
   <string name="deleteBlog">Xóa dứt khoát bài blog này</string>
   <string name="safeToUseImages">Sử dụng các hình ảnh an toàn từ các trang web: </string>
   <string name="selectPostTopics">Chọn các chủ đề mà bài đăng của bạn liên quan</string>
-  <string name="useImagesYouMadeYourself">Bạn cũng có thể dùng hình ảnh của riêng bạn, những bức ảnh bạn chụp, ảnh chụp màn hình của Lichess... bất kỳ thứ gì miễn là không vi phạm bản quyền của ai.</string>
+  <string name="useImagesYouMadeYourself">Bạn cũng có thể dùng hình ảnh của riêng bạn, những bức ảnh bạn chụp, ảnh chụp màn hình của Chess-Online... bất kỳ thứ gì miễn là không vi phạm bản quyền của ai.</string>
   <string name="safeAndRespectfulContent">Vui lòng chỉ đăng những nội dung an toàn và có tính tôn trọng. Không được phép sao chép nội dung của bất kì ai.</string>
   <string name="inappropriateContentAccountClosed">Chỉ một hành động không phù hợp, tài khoản của bạn có thể bị đóng.</string>
   <string name="blogTips">Vài mẹo đơn giản để giúp viết ra một bài blog tuyệt vời</string>

@@ -11,7 +11,7 @@
   <string name="newBroadcast">Nouvelle diffusion en direct</string>
   <string name="subscribedBroadcasts">Diffusions suivies</string>
   <string name="aboutBroadcasts">À propos des diffusions</string>
-  <string name="howToUseLichessBroadcasts">Comment utiliser les diffusions dans Lichess.</string>
+  <string name="howToUseLichessBroadcasts">Comment utiliser les diffusions dans Chess-Online.</string>
   <string name="theNewRoundHelp">La nouvelle ronde aura les mêmes participants et contributeurs que la précédente.</string>
   <string name="addRound">Ajouter une ronde</string>
   <string name="ongoing">En cours</string>
@@ -23,8 +23,8 @@
   <string name="fullDescription">Description complète de l\'événement</string>
   <string name="fullDescriptionHelp">Description détaillée et optionnelle de la diffusion. %1$s est disponible. La longueur doit être inférieure à %2$s caractères.</string>
   <string name="sourceSingleUrl">URL source de la partie en PGN</string>
-  <string name="sourceUrlHelp">URL que Lichess interrogera pour obtenir les mises à jour du PGN. Elle doit être accessible publiquement depuis Internet.</string>
-  <string name="sourceGameIds">Jusqu\'à 64 ID de partie Lichess séparés par des espaces.</string>
+  <string name="sourceUrlHelp">URL que Chess-Online interrogera pour obtenir les mises à jour du PGN. Elle doit être accessible publiquement depuis Internet.</string>
+  <string name="sourceGameIds">Jusqu\'à 64 ID de partie Chess-Online séparés par des espaces.</string>
   <string name="startDateTimeZone">Date de début du tournoi (fuseau horaire local) : %s</string>
   <string name="startDateHelp">Facultatif, si vous savez quand l\'événement commence</string>
   <string name="currentGameUrl">URL de la partie en cours</string>
@@ -47,7 +47,7 @@
   <string name="ageThisYear">Âge cette année</string>
   <string name="unrated">Non classé</string>
   <string name="recentTournaments">Tournois récents</string>
-  <string name="openLichess">Ouvrir dans Lichess</string>
+  <string name="openLichess">Ouvrir dans Chess-Online</string>
   <string name="teams">Équipes</string>
   <string name="boards">Échiquiers</string>
   <string name="overview">Survol</string>

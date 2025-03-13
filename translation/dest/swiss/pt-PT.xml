@@ -79,7 +79,7 @@ Além disso, é atribuído um único bye de meio ponto quando um jogador entra a
 Então o sistema irá retirar o jogador do torneio, para não perder mais jogos. Podem entrar novamente no torneio a qualquer momento.</string>
   <string name="protectionAgainstNoShowQ">O que é feito em relação aos que não comparecem?</string>
   <string name="protectionAgainstNoShowA" comment="By &quot;a game&quot; - we mean just one game. Missing even one game will prevent that player from joining a new Swiss event for a certain amount of time.">Jogadores que se inscreveram para eventos suíços, mas não jogam os seus jogos podem se tornar problemáticos.
-Para amenizar este problema, o Lichess impede os jogadores que não participaram de uma partida de participar de um novo evento suíço por um determinado período.
+Para amenizar este problema, o Chess-Online impede os jogadores que não participaram de uma partida de participar de um novo evento suíço por um determinado período.
 O criador de um evento suíço pode permitir que eles participem de qualquer maneira.</string>
   <string name="lateJoinQ">Os jogadores podem juntar-se tardiamente?</string>
   <string name="lateJoinA">Sim, até que mais de metade das rondas tenham começado; por exemplo: num torneio suiço de 11 rondas, os jogadores podem entrar antes que a ronda 6 comece, e num torneio de 12 pessoas, até antes que a ronda 7 comece.
@@ -91,7 +91,7 @@ Jogadores que entraram mais tarde só têm um bye, mesmo que tenham perdido vár
 A razão é porque não há maneira justa de ligar com pessoas a abandonar o torneio mais cedo. Não podemos esperar que todos jogadores joguem todas as suas partidas num evento online. Simplesmente não vai acontecer, e como resultado, a maior parte dos torneios Round Robin seriam injustos, o que vai contra a sua existência.
 O mais perto que podes ter do Round Robin é jogar um torneio suiço com um número muito elevado de rondas. Depois todos os emparelhamentos possíveis serão jogadas antes do torneio acabar.</string>
   <string name="otherSystemsQ">E quanto a outros sistemas de torneio?</string>
-  <string name="otherSystemsA">De momento não planeamos adicionar mais sistemas de torneio ao Lichess.</string>
+  <string name="otherSystemsA">De momento não planeamos adicionar mais sistemas de torneio ao Chess-Online.</string>
   <string name="swissDescription">Num torneio suíço %1$s, cada competidor não joga necessariamente contra todos os outros participantes. Os competidores encontram-se individualmente em cada ronda e são emparelhados usando um conjunto de regras destinadas a garantir que cada um jogue contra adversários com uma pontuação semelhante, mas não com o mesmo adversário mais de uma vez. O vencedor é o competidor com o maior número de pontos acumulados conquistados em todas as rondas. Todos os concorrentes jogam em cada ronda, excepto se existir um número ímpar de jogadores.\"</string>
   <string name="teamOnly">Os torneios Suíços só podem ser criados por líderes de equipa e só podem ser jogados por membros da equipa.           
 %1$s para começar a jogar em torneios Suíços.</string>

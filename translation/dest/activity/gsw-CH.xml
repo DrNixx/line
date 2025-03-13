@@ -3,8 +3,8 @@
   <string name="activity">Aktivitäte</string>
   <string name="hostedALiveStream">Hät en Live Stream gmacht</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">Underschtüzt lichess.org sit %1$s Monet als %2$s</item>
-    <item quantity="other">Underschtützt lichess.org sit %1$s Mönet als %2$s</item>
+    <item quantity="one">Underschtüzt chess-online.com sit %1$s Monet als %2$s</item>
+    <item quantity="other">Underschtützt chess-online.com sit %1$s Mönet als %2$s</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">Hät %1$s Schtellig bi %2$s güebt</item>
@@ -58,7 +58,7 @@
     <item quantity="one">Hät %s neui Schtudie erschtellt</item>
     <item quantity="other">Hät %s neui Schtudie erschtellt</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="one">Hät a %s Turnier teilgnah</item>
     <item quantity="other">Hät a %s Turnier teilgnah</item>
   </plurals>
@@ -71,7 +71,7 @@
     <item quantity="other">Hät a %s Turnier nach \"Schweizer System\" teilgnah</item>
   </plurals>
   <string name="rankedInSwissTournament">Hät Rang #%1$s im Turnier %2$s erreicht</string>
-  <string name="signedUp">Hät sich bi lichess.org agmäldet</string>
+  <string name="signedUp">Hät sich bi chess-online.com agmäldet</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">Isch %s Team biträte</item>
     <item quantity="other">Isch %s Teams biträte</item>

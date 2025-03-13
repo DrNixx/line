@@ -2,14 +2,14 @@
 <resources>
   <string name="donate">Schpände</string>
   <string name="donateAsX">Schpänd als %s</string>
-  <string name="lichessPatron">Lichess Gönner</string>
+  <string name="lichessPatron">Chess-Online Gönner</string>
   <string name="patronSince" comment="%s is a date">Gönner sit %s</string>
   <string name="freeAccount">Gratis Konto</string>
-  <string name="becomePatron">Wird en Lichess Gönner</string>
-  <string name="xBecamePatron">%s isch en Lichess Gönner worde</string>
+  <string name="becomePatron">Wird en Chess-Online Gönner</string>
+  <string name="xBecamePatron">%s isch en Chess-Online Gönner worde</string>
   <plurals name="xIsPatronForNbMonths">
-    <item quantity="one">%1$s underschtützt Lichess sit %2$s Monet als Gönner</item>
-    <item quantity="other">%1$s underschtützt Lichess sit %2$s Mönet als Gönner</item>
+    <item quantity="one">%1$s underschtützt Chess-Online sit %2$s Monet als Gönner</item>
+    <item quantity="other">%1$s underschtützt Chess-Online sit %2$s Mönet als Gönner</item>
   </plurals>
   <string name="newPatrons">Neui Gönner</string>
   <string name="freeChess">Gratis Schach für alli - für immer!</string>
@@ -19,10 +19,10 @@
   <string name="patronUntil">Du häsch es Gönnerkonto bis %s.</string>
   <string name="ifNotRenewedThenAccountWillRevert">Falls du nöd erneuere tuesch, wird dis Konto in es Regulärs umgwandlet.</string>
   <string name="weAreNonProfit">Als \"Non-Profit-Organisation\" glaubed mir, dass jedi und jede wo Schach schpillt, sött gratis Zuegang zu ere \"Wältklass-Schach-Plattform\" ha!</string>
-  <string name="weRelyOnSupport">Mir sind uf d\'Underschtützig vu Lüt wie du agwise, um das z\'ermögliche. Wänn dir Lichess g\'fallt, chasch du eus underschtütze, indem du öppis schpändsch und so en Lichess-Gönner wirsch!</string>
+  <string name="weRelyOnSupport">Mir sind uf d\'Underschtützig vu Lüt wie du agwise, um das z\'ermögliche. Wänn dir Chess-Online g\'fallt, chasch du eus underschtütze, indem du öppis schpändsch und so en Chess-Online-Gönner wirsch!</string>
   <string name="lifetime">Läbeslang</string>
-  <string name="payLifetimeOnce">Zahl eimal %s und wird für immer en Lichess Gönner!</string>
-  <string name="lifetimePatron">Läbeslange Lichess Gönner</string>
+  <string name="payLifetimeOnce">Zahl eimal %s und wird für immer en Chess-Online Gönner!</string>
+  <string name="lifetimePatron">Läbeslange Chess-Online Gönner</string>
   <string name="monthly">Monetlich</string>
   <string name="recurringBilling">Regelmässigi Zahlig, wo din Gönner Flügel jede Monet erneueret.</string>
   <string name="onetime">Eimalig</string>
@@ -32,31 +32,31 @@
   <string name="withCreditCard">Kreditcharte</string>
   <string name="logInToDonate">Amälde zum Schpände</string>
   <string name="weAreSmallTeam">Mir sind es chlises Team, drum hät dini Underschtützig e grossi Würkig!</string>
-  <string name="celebratedPatrons">Gönner wo Lichess möglich mached</string>
+  <string name="celebratedPatrons">Gönner wo Chess-Online möglich mached</string>
   <string name="whereMoneyGoes">Wohi flüsst das Gäld?</string>
   <string name="serversAndDeveloper">Ganz zerscht in leischtigsstarchi Server. 
-Dänn zahled mir en Vollzit-Entwickler: %s, de Gründer vu Lichess.</string>
+Dänn zahled mir en Vollzit-Entwickler: %s, de Gründer vu Chess-Online.</string>
   <string name="costBreakdown">Da die detailliert Choschte-Ufteilig</string>
-  <string name="officialNonProfit">Isch Lichess e offizielli Non-Profit-Organisation?</string>
+  <string name="officialNonProfit">Isch Chess-Online e offizielli Non-Profit-Organisation?</string>
   <string name="actOfCreation">Ja, da isch d\'Gründigsurkund (uf französisch)</string>
   <string name="changeMonthlySupport">Chann ich mini monetlichi Underschtützig ändere/chünde?</string>
   <string name="changeOrContact">Ja - jederzit - vu dere Site us oder
 du chasch %s.</string>
-  <string name="contactSupport">de Lichess Support kontaktiere</string>
+  <string name="contactSupport">de Chess-Online Support kontaktiere</string>
   <string name="otherMethods">Anderi Schpändemöglichkeite?</string>
-  <string name="lichessIsRegisteredWith">Lichess isch regischtriert bi %s.</string>
+  <string name="lichessIsRegisteredWith">Chess-Online isch regischtriert bi %s.</string>
   <string name="bankTransfers">Mir akzeptiered au Überwisige</string>
   <string name="onlyDonationFromAbove">Du erreichsch de Gönnerstatus aber nur mit dem obere Formular.</string>
   <string name="patronFeatures">Gits zuesätzlichi Funktione
 für en Gönner?</string>
-  <string name="noPatronFeatures">Nei - Lichess isch komplett gratis, für immer und für jedermann; das isch es Verschpräche.
-Aber en Lichess-Gönner chann sis Profil mit dem coole Flügel-Icon schmücke.</string>
+  <string name="noPatronFeatures">Nei - Chess-Online isch komplett gratis, für immer und für jedermann; das isch es Verschpräche.
+Aber en Chess-Online-Gönner chann sis Profil mit dem coole Flügel-Icon schmücke.</string>
   <string name="featuresComparison">Check de Detailverglich vu de Funktione</string>
   <plurals name="patronForMonths">
-    <item quantity="one">Lichess Gönner für 1 Monet</item>
-    <item quantity="other">Lichess Gönner für %s Mönet</item>
+    <item quantity="one">Chess-Online Gönner für 1 Monet</item>
+    <item quantity="other">Chess-Online Gönner für %s Mönet</item>
   </plurals>
-  <string name="youSupportWith">Du underschtützisch lichess.org mit %s pro Monet.</string>
+  <string name="youSupportWith">Du underschtützisch chess-online.com mit %s pro Monet.</string>
   <string name="tyvm">Danke vill Mal für dini Underschtützig. Du bisch super!</string>
   <string name="currentStatus">Aktuelle Schtatus</string>
   <string name="nextPayment">Nächschti Zahlig</string>
@@ -68,19 +68,19 @@ Aber en Lichess-Gönner chann sis Profil mit dem coole Flügel-Icon schmücke.</
   <string name="changeMonthlyAmount">Veränder de monetlich Betrag (%s)</string>
   <string name="cancelSupport">beänd dini Underschtützig</string>
   <string name="xOrY">%1$s oder %2$s</string>
-  <string name="decideHowMuch">Entscheid wie vill dir Lichess wert isch:</string>
+  <string name="decideHowMuch">Entscheid wie vill dir Chess-Online wert isch:</string>
   <string name="stopPayments">Dini Kreditcharte zruggzieh und Zahlige beände:</string>
   <string name="stopPaymentsPayPal">De PayPal Uftrag anulliere und d\'Zahlige stoppe:</string>
-  <string name="noLongerSupport">Lichess nöd witer underschtütze</string>
-  <string name="viewOthers">Lueg dir anderi Lichess Gönner a</string>
+  <string name="noLongerSupport">Chess-Online nöd witer underschtütze</string>
+  <string name="viewOthers">Lueg dir anderi Chess-Online Gönner a</string>
   <string name="date">Datum</string>
   <string name="amount">Betrag</string>
   <string name="transactionCompleted">Dini Transaktion isch erfolgrich gsi und e Schpändequittig isch dir per E-Mail zuegschickt worde.</string>
   <string name="permanentPatron">Du häsch jetzt es durhafts Gönner Konto.</string>
   <string name="checkOutProfile">Lueg dir dini Profilsite a!</string>
-  <string name="nowLifetime">Du bisch jetzt läbeslange Lichess Gönner!</string>
-  <string name="nowOneMonth">Du bisch jetzt für 1 Monet Lichess Gönner!</string>
-  <string name="downgradeNextMonth">Nach 1 Monet wird dir nüt meh berächnet und dis Lichess Konto wird wieder in es regulärs Gratis Konto umgwandlet.</string>
+  <string name="nowLifetime">Du bisch jetzt läbeslange Chess-Online Gönner!</string>
+  <string name="nowOneMonth">Du bisch jetzt für 1 Monet Chess-Online Gönner!</string>
+  <string name="downgradeNextMonth">Nach 1 Monet wird dir nüt meh berächnet und dis Chess-Online Konto wird wieder in es regulärs Gratis Konto umgwandlet.</string>
   <string name="changeCurrency">Anderi Währig</string>
   <string name="paymentDetails">Zahligs-Details</string>
   <string name="updatePaymentMethod">Zahligsmodus aktualisiere</string>

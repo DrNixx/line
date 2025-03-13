@@ -136,7 +136,7 @@ final class UserList(helpers: Helpers, bits: UserBits):
                     h1("Community bots"),
                     a(
                       cls  := "bots__about",
-                      href := "https://lichess.org/blog/WvDNticAAMu_mHKP/welcome-lichess-bots"
+                      href := "https://live.chess-online.com/blog/WvDNticAAMu_mHKP/welcome-lichess-bots"
                     )("About Lichess Bots")
                   ),
                   botTable(all, bestPerfs)

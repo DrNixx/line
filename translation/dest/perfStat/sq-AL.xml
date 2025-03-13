@@ -6,7 +6,7 @@
   <string name="notEnoughRatedGames">S’janë luajtur lojëra të mjaftueshme për të vendosur një klasifikim të besueshëm.</string>
   <string name="progressOverLastXGames">Ecuria përgjatë %s lojërave të fundit:</string>
   <string name="ratingDeviation">Shmangie vlerësimi: %s.</string>
-  <string name="ratingDeviationTooltip" comment="ratingDeviationTooltip&#10;&#10;This is a tooltip (appears on mouseover) for the rating deviation. Appears on performance statistics pages such as https://lichess.org/@/thibault/perf/ultraBullet&#10;&#10;As of 2021-05-19, $1%s is set to 110.">Një vlerë e ulët do të thotë se vlerësimi është më i qëndrueshëm. Mbi %1$s, vlerësimi konsiderohet i përkohshëm. Që të përfshiheni në klasifikime, kjo vlerë duhet të jetë %2$s (shah standard), ose %3$s (variante).</string>
+  <string name="ratingDeviationTooltip" comment="ratingDeviationTooltip&#10;&#10;This is a tooltip (appears on mouseover) for the rating deviation. Appears on performance statistics pages such as https://chess-online.com/@/thibault/perf/ultraBullet&#10;&#10;As of 2021-05-19, $1%s is set to 110.">Një vlerë e ulët do të thotë se vlerësimi është më i qëndrueshëm. Mbi %1$s, vlerësimi konsiderohet i përkohshëm. Që të përfshiheni në klasifikime, kjo vlerë duhet të jetë %2$s (shah standard), ose %3$s (variante).</string>
   <string name="totalGames">Lojëra gjithsej</string>
   <string name="ratedGames">Lojë të vlerësuara</string>
   <string name="tournamentGames">Lojëra turneu</string>

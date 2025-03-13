@@ -11,7 +11,7 @@
   <string name="newBroadcast">پخش زنده جدید</string>
   <string name="subscribedBroadcasts">پخش‌های دنبالیده</string>
   <string name="aboutBroadcasts">درباره پخش‌های همگانی</string>
-  <string name="howToUseLichessBroadcasts">نحوه استفاده از پخش همگانی Lichess.</string>
+  <string name="howToUseLichessBroadcasts">نحوه استفاده از پخش همگانی Chess-Online.</string>
   <string name="theNewRoundHelp">دور جدید، همان اعضا و مشارکت‌کنندگان دور قبلی را خواهد داشت.</string>
   <string name="addRound">اضافه کردن یک دور</string>
   <string name="ongoing">ادامه‌دار</string>
@@ -23,8 +23,8 @@
   <string name="fullDescription">توضیحات کامل مسابقات</string>
   <string name="fullDescriptionHelp">توضیحات بلند و اختیاری پخش همگانی. %1$s قابل‌استفاده است. طول متن باید کمتر از %2$s نویسه باشد.</string>
   <string name="sourceSingleUrl">وب‌نشانیِ PGN</string>
-  <string name="sourceUrlHelp">وب‌نشانی‌ای که Lichess برای دریافت به‌روزرسانی‌های PGN می‌بررسد. آن باید از راه اینترنت در دسترس همگان باشد.</string>
-  <string name="sourceGameIds">تا ۶۴ شناسهٔ بازی Lichess، جداشده با فاصله.</string>
+  <string name="sourceUrlHelp">وب‌نشانی‌ای که Chess-Online برای دریافت به‌روزرسانی‌های PGN می‌بررسد. آن باید از راه اینترنت در دسترس همگان باشد.</string>
+  <string name="sourceGameIds">تا ۶۴ شناسهٔ بازی Chess-Online، جداشده با فاصله.</string>
   <string name="startDateTimeZone">تاریخ آغاز در زمان-یانه محلی مسابقات: %s</string>
   <string name="startDateHelp">اختیاری است، اگر می‌دانید چه زمانی رویداد شروع می‌شود</string>
   <string name="currentGameUrl">نشانی بازی کنونی</string>
@@ -47,7 +47,7 @@
   <string name="ageThisYear">سنِ امسال</string>
   <string name="unrated">بی‌درجه‌بندی</string>
   <string name="recentTournaments">مسابقاتِ اخیر</string>
-  <string name="openLichess">آزاد در Lichess</string>
+  <string name="openLichess">آزاد در Chess-Online</string>
   <string name="teams">یَران‌ها</string>
   <string name="boards">میز‌ها</string>
   <string name="overview">نمای کلی</string>

@@ -3,8 +3,8 @@
   <string name="activity">Aktiviteti</string>
   <string name="hostedALiveStream">Priti një transmetim të drejtpërdrejtë</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">Mbështeti lichess.org për %1$s muaj si %2$s</item>
-    <item quantity="other">Mbështeti lichess.org për %1$s muaj si %2$s</item>
+    <item quantity="one">Mbështeti chess-online.com për %1$s muaj si %2$s</item>
+    <item quantity="other">Mbështeti chess-online.com për %1$s muaj si %2$s</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">U praktikua pozicioni %1$s në %2$s</item>
@@ -54,7 +54,7 @@
     <item quantity="one">Krijoi %s studim të ri</item>
     <item quantity="other">Krijoi %s mësime të reja</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="one">Konkuroi në turneun %s Arena</item>
     <item quantity="other">Ndeshur në %s turne Arenë</item>
   </plurals>
@@ -67,7 +67,7 @@
     <item quantity="other">Ndeshur në %s turne zviceranë</item>
   </plurals>
   <string name="rankedInSwissTournament">Renditur #%1$s në %2$s</string>
-  <string name="signedUp">Regjistruar në lichess.org</string>
+  <string name="signedUp">Regjistruar në chess-online.com</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">U bashkua me ekipin %s</item>
     <item quantity="other">U bë pjesë e %s ekipive</item>

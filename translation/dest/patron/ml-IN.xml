@@ -2,7 +2,7 @@
 <resources>
   <string name="donate">സംഭാവന ചെയ്യുക</string>
   <string name="donateAsX">%s പേരിൽ സംഭാവന ചെയ്യുക</string>
-  <string name="lichessPatron">Lichess രക്ഷാധികാരി</string>
+  <string name="lichessPatron">Chess-Online രക്ഷാധികാരി</string>
   <string name="freeAccount">സൌജന്യ അക്കൌണ്ടു്</string>
   <string name="lifetime">ജീവിതകാലം</string>
   <string name="monthly">പ്രതിമാസം</string>

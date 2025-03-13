@@ -2,7 +2,7 @@
 <resources>
   <string name="donate">দান করুন</string>
   <string name="donateAsX">%s হিসাবে দান করুন</string>
-  <string name="lichessPatron">Lichess অভিভাবক</string>
+  <string name="lichessPatron">Chess-Online অভিভাবক</string>
   <string name="freeAccount">বিনামূল্যের একাউন্ট</string>
   <string name="becomePatron">লিচেসে অভিভাবক হন</string>
   <plurals name="xIsPatronForNbMonths">
@@ -20,7 +20,7 @@
   <string name="withCreditCard">ক্রেডিট কার্ড</string>
   <string name="whereMoneyGoes">টাকা কোথায় ব্যবহার করা হয়?</string>
   <string name="serversAndDeveloper">প্রথমত, শক্তিশালী সার্ভার এর জন্য।
-তারপর আমরা একজন পূর্ণ-সময়ের ডেভেলপারকে অর্থ প্রদান করি: %s, Lichess এর প্রতিষ্ঠাতা.</string>
+তারপর আমরা একজন পূর্ণ-সময়ের ডেভেলপারকে অর্থ প্রদান করি: %s, Chess-Online এর প্রতিষ্ঠাতা.</string>
   <string name="costBreakdown">বিস্তারিত খরচ ভাঙ্গন গঠন দেখুন</string>
   <string name="changeMonthlySupport">আমি কি আমার মাসিক সহায়তা পরিবর্তন/বাতিল করতে পারি?</string>
   <string name="changeOrContact">হ্যাঁ, যেকোনো সময়, এই পেজ থেকে।
@@ -31,7 +31,7 @@
     <item quantity="one">1 মাসের জন্য একজন লিচেস অভিভাবক৷</item>
     <item quantity="other">%s মাসের জন্য একজন লিচেস অভিভাবক৷</item>
   </plurals>
-  <string name="youSupportWith">আপনি lichess.org কে প্রতিমাসে %s দিয়ে সহায়তা করছেন।</string>
+  <string name="youSupportWith">আপনি chess-online.com কে প্রতিমাসে %s দিয়ে সহায়তা করছেন।</string>
   <string name="tyvm">আপনার সাহায্যের জন্য আপনাকে অনেক ধন্যবাদ। আপনি অসাধারণ!</string>
   <string name="nextPayment">পরবর্তী পেমেন্ট</string>
   <string name="date">তারিখ</string>

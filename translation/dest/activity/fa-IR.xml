@@ -3,8 +3,8 @@
   <string name="activity">فعالیت</string>
   <string name="hostedALiveStream">میزبان پخش زنده بود</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">به عنوان %2$s برای %1$s ماه از lichess.org حمایت کرد</item>
-    <item quantity="other">به عنوان %2$s برای %1$s ماه از lichess.org حمایت کرد</item>
+    <item quantity="one">به عنوان %2$s برای %1$s ماه از chess-online.com حمایت کرد</item>
+    <item quantity="other">به عنوان %2$s برای %1$s ماه از chess-online.com حمایت کرد</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">%1$s وضعیت تمرین‌شده در %2$s</item>
@@ -58,7 +58,7 @@
     <item quantity="one">%s درس جدید ساخت</item>
     <item quantity="other">%s درس جدید ساخت</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="one">در %s مسابقهٔ راوان رقابت کرد</item>
     <item quantity="other">در %s مسابقهٔ راوان رقابت کرد</item>
   </plurals>
@@ -71,7 +71,7 @@
     <item quantity="other">در %s مسابقه سوئیسی رقابت کرد</item>
   </plurals>
   <string name="rankedInSwissTournament">رتبه #%1$s را در %2$s به دست آورد</string>
-  <string name="signedUp">در lichess.org نام‌نوشت</string>
+  <string name="signedUp">در chess-online.com نام‌نوشت</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">به %s تیم پیوست</item>
     <item quantity="other">به %s تیم پیوست</item>

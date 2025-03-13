@@ -22,5 +22,5 @@
   <string name="declineVariant">Mi ne volas ludi ĉi tiun variaĵon nun.</string>
   <string name="declineNoBot">Mi ne akceptas defiojn de robotoj.</string>
   <string name="declineOnlyBot">Mi nur akceptas defiojn de robotoj.</string>
-  <string name="inviteLichessUser">Aŭ invitu Lichess uzanton:</string>
+  <string name="inviteLichessUser">Aŭ invitu Chess-Online uzanton:</string>
 </resources>

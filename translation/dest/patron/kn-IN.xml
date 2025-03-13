@@ -18,7 +18,7 @@
   <string name="patronUntil">ನೀವು %s ವರೆಗೆ ಪೋಷಕ ಖಾತೆಯನ್ನು ಹೊಂದಿರುವಿರಿ.</string>
   <string name="ifNotRenewedThenAccountWillRevert">ನವೀಕರಿಸದಿದ್ದರೆ, ನಿಮ್ಮ ಖಾತೆಯು ಸಾಮಾನ್ಯ ಖಾತೆಗೆ ಹಿಂತಿರುಗುತ್ತದೆ.</string>
   <string name="weAreNonProfit">ನಾವು ಲಾಭರಹಿತ ಸಂಘವಾಗಿದೆ ಏಕೆಂದರೆ ಪ್ರತಿಯೊಬ್ಬರೂ ಉಚಿತ, ವಿಶ್ವ ದರ್ಜೆಯ ಚೆಸ್ ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗೆ ಪ್ರವೇಶವನ್ನು ಹೊಂದಿರಬೇಕು ಎಂದು ನಾವು ನಂಬುತ್ತೇವೆ.</string>
-  <string name="weRelyOnSupport">ಅದನ್ನು ಸಾಧ್ಯವಾಗಿಸಲು ನಾವು ನಿಮ್ಮಂತಹ ಜನರ ಬೆಂಬಲವನ್ನು ಅವಲಂಬಿಸಿದ್ದೇವೆ. ನೀವು Lichess ಅನ್ನು ಬಳಸುವುದನ್ನು ಆನಂದಿಸುತ್ತಿದ್ದರೆ, ದಯವಿಟ್ಟು ದೇಣಿಗೆ ನೀಡುವ ಮೂಲಕ ಮತ್ತು ಪೋಷಕರಾಗುವ ಮೂಲಕ ನಮ್ಮನ್ನು ಬೆಂಬಲಿಸುವುದನ್ನು ಪರಿಗಣಿಸಿ!</string>
+  <string name="weRelyOnSupport">ಅದನ್ನು ಸಾಧ್ಯವಾಗಿಸಲು ನಾವು ನಿಮ್ಮಂತಹ ಜನರ ಬೆಂಬಲವನ್ನು ಅವಲಂಬಿಸಿದ್ದೇವೆ. ನೀವು Chess-Online ಅನ್ನು ಬಳಸುವುದನ್ನು ಆನಂದಿಸುತ್ತಿದ್ದರೆ, ದಯವಿಟ್ಟು ದೇಣಿಗೆ ನೀಡುವ ಮೂಲಕ ಮತ್ತು ಪೋಷಕರಾಗುವ ಮೂಲಕ ನಮ್ಮನ್ನು ಬೆಂಬಲಿಸುವುದನ್ನು ಪರಿಗಣಿಸಿ!</string>
   <string name="lifetime">ಜೀವಮಾನ</string>
   <string name="payLifetimeOnce">ಒಮ್ಮೆ %s ಪಾವತಿಸಿ. ಶಾಶ್ವತವಾಗಿ ಲಿಚೆಸ್ ಪೋಷಕರಾಗಿರಿ!</string>
   <string name="lifetimePatron">ಜೀವಮಾನದ ಲಿಚೆಸ್ ಪೋಷಕ</string>
@@ -43,7 +43,7 @@
 ಅಥವಾ ನೀವು %s ಮಾಡಬಹುದು.</string>
   <string name="contactSupport">lichess ಬೆಂಬಲವನ್ನು ಸಂಪರ್ಕಿಸಿ</string>
   <string name="otherMethods">ದಾನದ ಇತರ ವಿಧಾನಗಳು?</string>
-  <string name="lichessIsRegisteredWith">Lichess ಅನ್ನು %s ಜೊತೆಗೆ ನೋಂದಾಯಿಸಲಾಗಿದೆ.</string>
+  <string name="lichessIsRegisteredWith">Chess-Online ಅನ್ನು %s ಜೊತೆಗೆ ನೋಂದಾಯಿಸಲಾಗಿದೆ.</string>
   <string name="bankTransfers">ನಾವು ಬ್ಯಾಂಕ್ ವರ್ಗಾವಣೆಗಳನ್ನು ಸಹ ಸ್ವೀಕರಿಸುತ್ತೇವೆ</string>
   <string name="onlyDonationFromAbove">ಮೇಲಿನ ದೇಣಿಗೆ ನಮೂನೆಯು ಮಾತ್ರ ಪೋಷಕ ಸ್ಥಿತಿಯನ್ನು ನೀಡುತ್ತದೆ ಎಂಬುದನ್ನು ದಯವಿಟ್ಟು ಗಮನಿಸಿ.</string>
   <string name="patronFeatures">ಕೆಲವು ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಪೋಷಕರಿಗೆ ಕಾಯ್ದಿರಿಸಲಾಗಿದೆಯೇ?</string>
@@ -54,7 +54,7 @@
     <item quantity="one">ಒಂದು ತಿಂಗಳ ಕಾಲ ಲಿಚೆಸ್ ಪೋಷಕ</item>
     <item quantity="other">%s ತಿಂಗಳವರೆಗೆ ಲಿಚೆಸ್ ಪೋಷಕ</item>
   </plurals>
-  <string name="youSupportWith">ನೀವು ತಿಂಗಳಿಗೆ %s ನೊಂದಿಗೆ lichess.org ಅನ್ನು ಬೆಂಬಲಿಸುತ್ತೀರಿ.</string>
+  <string name="youSupportWith">ನೀವು ತಿಂಗಳಿಗೆ %s ನೊಂದಿಗೆ chess-online.com ಅನ್ನು ಬೆಂಬಲಿಸುತ್ತೀರಿ.</string>
   <string name="tyvm">ನಿಮ್ಮ ಸಹಾಯಕ್ಕಾಗಿ ತುಂಬಾ ಧನ್ಯವಾದಗಳು. ನೀವು ರಾಕ್!</string>
   <string name="currentStatus">ಪ್ರಸ್ತುತ ಸ್ಥಿತಿ</string>
   <string name="nextPayment">ಮುಂದಿನ ಪಾವತಿ</string>
@@ -69,7 +69,7 @@
   <string name="decideHowMuch">ಲಿಚೆಸ್ ನಿಮಗೆ ಯಾವುದು ಯೋಗ್ಯವಾಗಿದೆ ಎಂಬುದನ್ನು ನಿರ್ಧರಿಸಿ:</string>
   <string name="stopPayments">ನಿಮ್ಮ ಕ್ರೆಡಿಟ್ ಕಾರ್ಡ್ ಅನ್ನು ಹಿಂತೆಗೆದುಕೊಳ್ಳಿ ಮತ್ತು ಪಾವತಿಗಳನ್ನು ನಿಲ್ಲಿಸಿ:</string>
   <string name="stopPaymentsPayPal">PayPal ಚಂದಾದಾರಿಕೆಯನ್ನು ರದ್ದುಗೊಳಿಸಿ ಮತ್ತು ಪಾವತಿಗಳನ್ನು ನಿಲ್ಲಿಸಿ:</string>
-  <string name="noLongerSupport">ಇನ್ನು ಮುಂದೆ Lichess ಅನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ</string>
+  <string name="noLongerSupport">ಇನ್ನು ಮುಂದೆ Chess-Online ಅನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ</string>
   <string name="viewOthers">ಇತರ ಲಿಚೆಸ್ ಪೋಷಕರನ್ನು ವೀಕ್ಷಿಸಿ</string>
   <string name="date">ದಿನಾಂಕ</string>
   <string name="amount">ಮೊತ್ತ</string>
@@ -78,6 +78,6 @@
   <string name="checkOutProfile">ನಿಮ್ಮ ಪ್ರೊಫೈಲ್ ಪುಟವನ್ನು ಪರಿಶೀಲಿಸಿ!</string>
   <string name="nowLifetime">ನೀವು ಈಗ ಜೀವಮಾನದ ಲಿಚೆಸ್ ಪೋಷಕರಾಗಿದ್ದೀರಿ!</string>
   <string name="nowOneMonth">ನೀವು ಈಗ ಒಂದು ತಿಂಗಳ ಕಾಲ ಲಿಚೆಸ್ ಪೋಷಕರಾಗಿದ್ದೀರಿ!</string>
-  <string name="downgradeNextMonth">ಒಂದು ತಿಂಗಳಲ್ಲಿ, ನಿಮಗೆ ಮತ್ತೆ ಶುಲ್ಕ ವಿಧಿಸಲಾಗುವುದಿಲ್ಲ ಮತ್ತು ನಿಮ್ಮ Lichess ಖಾತೆಯು ಸಾಮಾನ್ಯ ಖಾತೆಗೆ ಹಿಂತಿರುಗುತ್ತದೆ.</string>
+  <string name="downgradeNextMonth">ಒಂದು ತಿಂಗಳಲ್ಲಿ, ನಿಮಗೆ ಮತ್ತೆ ಶುಲ್ಕ ವಿಧಿಸಲಾಗುವುದಿಲ್ಲ ಮತ್ತು ನಿಮ್ಮ Chess-Online ಖಾತೆಯು ಸಾಮಾನ್ಯ ಖಾತೆಗೆ ಹಿಂತಿರುಗುತ್ತದೆ.</string>
   <string name="changeCurrency">ಕರೆನ್ಸಿ ಬದಲಾಯಿಸಿ</string>
 </resources>

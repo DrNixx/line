@@ -63,8 +63,8 @@
   <string name="notifyChallenge">Useforderige</string>
   <string name="notifyTournamentSoon">Turnier schtarted bald</string>
   <string name="notifyTimeAlarm">Korreschpondänzzit lauft ab</string>
-  <string name="notifyBell">Akustischi Mäldig, innerhalb Lichess</string>
-  <string name="notifyPush">Mäldig vum Grät, wänn du nöd uf Lichess bisch</string>
+  <string name="notifyBell">Akustischi Mäldig, innerhalb Chess-Online</string>
+  <string name="notifyPush">Mäldig vum Grät, wänn du nöd uf Chess-Online bisch</string>
   <string name="notifyWeb">Browser</string>
   <string name="notifyDevice">Grät</string>
   <string name="bellNotificationSound">Ton für Benachrichtige</string>

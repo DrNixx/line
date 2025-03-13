@@ -94,8 +94,8 @@ site.load.then(() => {
         $(this)
           .html()
           .replace(
-            /(?:https:\/\/)?lichess\.org\/((?:[\w\/:(&;)=@-]|[?.]\w)+)/gi,
-            '<a href="/$1">lichess.org/$1</a>',
+            /(?:https:\/\/)?live\.chess-online\.com\/((?:[\w\/:(&;)=@-]|[?.]\w)+)/gi,
+            '<a href="/$1">live.chess-online.com/$1</a>',
           ),
       ),
     );

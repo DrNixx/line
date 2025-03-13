@@ -73,7 +73,7 @@ const storageProxy: { [key: string]: { storageKey: string; validate: (val?: stri
   },
   wsHost: {
     storageKey: 'socket.host',
-    validate: (val?: string) => val?.endsWith('.lichess.org') ?? false,
+    validate: (val?: string) => val?.endsWith('.chess-online.com') ?? false,
   },
   logWindow: {
     storageKey: 'log.window',

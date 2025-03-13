@@ -54,7 +54,7 @@
   <string name="notifyGameEvent">Նամակագրական խաղին առնչվող թարմացումներ</string>
   <string name="notifyTournamentSoon">Մրցաշարը շուտով կսկսվի</string>
   <string name="notifyTimeAlarm">Նամակագրական խաղում ժամանակը շուտով կսպառվի</string>
-  <string name="notifyBell">Lichess-ի ձայնային տեղեկացում</string>
+  <string name="notifyBell">Chess-Online-ի ձայնային տեղեկացում</string>
   <string name="notifyWeb">Դիտարկիչ</string>
   <string name="notifyDevice">Սարք</string>
   <string name="bellNotificationSound">Ծանուցումների զանգակի ձայնը</string>

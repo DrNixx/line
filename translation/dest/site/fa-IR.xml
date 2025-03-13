@@ -529,7 +529,7 @@
   <string name="inlineNotation">نشانه‌گذاری خطی</string>
   <string name="makeAStudy">برای نگهداری مطمئن و همرسانی، ساخت یک مطالعه را در نظر بگیرید.</string>
   <string name="clearSavedMoves">حرکت های واضح</string>
-  <string name="previouslyOnLichessTV">بازی پیشین در Lichess</string>
+  <string name="previouslyOnLichessTV">بازی پیشین در Chess-Online</string>
   <string name="onlinePlayers">بازیکنان بَرخط</string>
   <string name="activePlayers">بازیکنان فعال</string>
   <string name="bewareTheGameIsRatedButHasNoClock">مراقب باشید،این بازی رتبه بندی میشود اما بدون ساعت!</string>
@@ -697,7 +697,7 @@
   <string name="simulHostExtraTime">زمان اضافی میزبان</string>
   <string name="simulAddExtraTimePerPlayer">به ازای پیوستن هر بازیکن، به زمان اولیه خود اضافه کنید.</string>
   <string name="simulHostExtraTimePerPlayer">زمان اضافه میزبان به ازای بازیکن</string>
-  <string name="lichessTournaments">مسابقات Lichess</string>
+  <string name="lichessTournaments">مسابقات Chess-Online</string>
   <string name="tournamentFAQ">پرسش‌های پربسامد مسابقات راوان</string>
   <string name="timeBeforeTournamentStarts">زمان باقی مانده به شروع مسابقه</string>
   <string name="averageCentipawnLoss">میانگین سرباز از دست داده</string>
@@ -747,7 +747,7 @@
   <string name="weHaveSentYouAnEmailTo">ما یک رایانامه به %s فرستاده‌ایم. برای بازنشانی گذرواژه‌تان، روی پیوند موجود در رایانامه بزنید.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">با ثبت‌نام، با %s موافقت می‌کنید.</string>
   <string name="readAboutOur">درباره %s ما بخوانید.</string>
-  <string name="networkLagBetweenYouAndLichess">تاخیر شبکه میان شما و Lichess</string>
+  <string name="networkLagBetweenYouAndLichess">تاخیر شبکه میان شما و Chess-Online</string>
   <string name="timeToProcessAMoveOnLichessServer">زمان سپری شده برای پردازش یک حرکت</string>
   <string name="downloadAnnotated">بارگیری حرکت‌نویسی</string>
   <string name="downloadRaw">بارگیری خام</string>
@@ -765,7 +765,7 @@
   <string name="kidMode">حالت کودک</string>
   <string name="kidModeIsEnabled">حالت کودک فعال است.</string>
   <string name="kidModeExplanation">این دربارهٔ ایمنی است. در حالت کودک، همهٔ ارتباط‌های وبگاه نافعال است. این را برای فرزندان و شطرنج‌آموزان مدرسه خود فعال کنید تا از آنها در برابر دیگر کاربران اینترنت حفاظت کنید.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">در حالت کودک، نماد Lichess نقشک %s را می‌گیرد، بنابراین می‌دانید کودکان‌تان در امانند.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">در حالت کودک، نماد Chess-Online نقشک %s را می‌گیرد، بنابراین می‌دانید کودکان‌تان در امانند.</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">حسابتان مدیریت می‌شود. از آموزگار شطرنج‌تان درباره برداشتن حالت کودک بپرسید.</string>
   <string name="enableKidMode">فعال‌سازی حالت کودک</string>
   <string name="disableKidMode">ازکاراندازی حالت کودک</string>
@@ -881,7 +881,7 @@
     <item quantity="one">و پیش حرکت %s را حفظ کنید</item>
     <item quantity="other">و پیش حرکت های %s را حفظ کنید</item>
   </plurals>
-  <string name="showUnreadLichessMessage">شما یک پیام خصوصی از Lichess دریافت کرده‌اید.</string>
+  <string name="showUnreadLichessMessage">شما یک پیام خصوصی از Chess-Online دریافت کرده‌اید.</string>
   <string name="clickHereToReadIt">برای خواندن، این را بزنید</string>
   <string name="sorry">متاسفم :(</string>
   <string name="weHadToTimeYouOutForAWhile">شما برای مدتی مسدود شدید.</string>
@@ -894,14 +894,14 @@
   <string name="tryToWin">در هر بازی برای پیروزی (یا حداقل تساوی) تلاش کنید.</string>
   <string name="resignLostGames">بازی های از دست رفته را انصراف دهید(نگذارید زمان تمام شود).</string>
   <string name="temporaryInconvenience">ما برای این مشکل موقت عذرخواهی می کنیم،</string>
-  <string name="wishYouGreatGames">و برای شما بازیهای عالی در lichess.org آرزو می کنیم.</string>
+  <string name="wishYouGreatGames">و برای شما بازیهای عالی در chess-online.com آرزو می کنیم.</string>
   <string name="thankYouForReading">از اینکه متن را خواندید متشکریم!</string>
   <string name="lifetimeScore">امتیاز کل</string>
   <string name="currentMatchScore">امتیاز بازی فعلی</string>
   <string name="agreementAssistance">من موافقم که در طول بازی‌هایم هیچگاه کمکی نخواهم گرفت (از یک رایانه شطرنج، کتاب، دادگان یا شخص دیگری).</string>
   <string name="agreementNice">می‌پذیرم که همواره به بازیکنان دیگر احترام گزارم.</string>
   <string name="agreementMultipleAccounts" comment="%s will be replaced with the translation of 'termsOfService'">موافقم که چندین حساب نخواهم ساخت (جز به دلیل‌های ذکر شده در %s).</string>
-  <string name="agreementPolicy">با پیروی از همهٔ خط‌مشی‌های Lichess، موافقم.</string>
+  <string name="agreementPolicy">با پیروی از همهٔ خط‌مشی‌های Chess-Online، موافقم.</string>
   <string name="searchOrStartNewDiscussion">جستجو یا شروع کردن مکالمه جدید</string>
   <string name="edit">ویرایش</string>
   <string name="bullet" comment="Probably best left untranslated. Leave it as 'Bullet' unless your language has a better word for it.">گلوله‌ای</string>
@@ -940,7 +940,7 @@
   <string name="congratsYouWon">شادباش، شما بُردید!</string>
   <string name="gameVsX">بازی در برابر %1$s</string>
   <string name="resVsX">%1$s در برابر %2$s</string>
-  <string name="lostAgainstTOSViolator">شما برابر کسی که قانون‌های Lichess را نقض کرده، امتیاز درجه‌بندی از دست دادید</string>
+  <string name="lostAgainstTOSViolator">شما برابر کسی که قانون‌های Chess-Online را نقض کرده، امتیاز درجه‌بندی از دست دادید</string>
   <string name="refundXpointsTimeControlY">پس‌دادن: %1$s امتیاز به درجه‌بندی %2$s.</string>
   <string name="timeAlmostUp">زمان نزدیک به پایان است!</string>
   <string name="clickToRevealEmailAddress">[برای آشکارسازی نشانیِ رایانامه بتِلیکید]</string>
@@ -984,8 +984,8 @@
   <string name="analysisOptions">امکاناتِ تحلیل</string>
   <string name="focusChat">به گپ برو</string>
   <string name="showHelpDialog">نمایش این پنجره راهنما</string>
-  <string name="reopenYourAccount" comment="Appears on the page where players can reopen their closed account - https://lichess.org/account/reopen (you can only see this when you logged out).">باز کردن مجدد حساب کاربری</string>
-  <string name="reopenYourAccountDescription" comment="Appears on the page where players can reopen their closed account - https://lichess.org/account/reopen (you can only see this when you logged out).">اگر حسابتان را بسته اید ولی نظرتان عوض شده، فرصت بازپس‌گیری آن را دارید.</string>
+  <string name="reopenYourAccount" comment="Appears on the page where players can reopen their closed account - https://chess-online.com/account/reopen (you can only see this when you logged out).">باز کردن مجدد حساب کاربری</string>
+  <string name="reopenYourAccountDescription" comment="Appears on the page where players can reopen their closed account - https://chess-online.com/account/reopen (you can only see this when you logged out).">اگر حسابتان را بسته اید ولی نظرتان عوض شده، فرصت بازپس‌گیری آن را دارید.</string>
   <string name="emailAssociatedToaccount">آدرس ایمیلی که به حساب کاربری مربوط شده است</string>
   <string name="sentEmailWithLink">ما رایانامه‌ای شامل یک پیوند را به شما فرستاده‌ایم.</string>
   <string name="tournamentEntryCode">کد ورودی مسابقه</string>
@@ -996,7 +996,7 @@
   <string name="youCantStartNewGame">تا وقتی که این بازی تمام نشده، نمی‌توانید بازی جدیدی را بیاغازید.</string>
   <string name="since">از وقتی که</string>
   <string name="until">تا وقتی که</string>
-  <string name="lichessDbExplanation">بازی‌های رسمی برگزاریده در Lichess</string>
+  <string name="lichessDbExplanation">بازی‌های رسمی برگزاریده در Chess-Online</string>
   <string name="switchSides">تعویض سمت</string>
   <string name="closingAccountWithdrawAppeal">با بستن حساب خود درخواست تجدید نظر خود را پس خواهید گرفت</string>
   <string name="ourEventTips">پیشنهادهای ما برای برگزاری رویدادها</string>

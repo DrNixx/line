@@ -62,8 +62,8 @@
   <string name="notifyChallenge">Выклікі</string>
   <string name="notifyTournamentSoon">У хуткім часе пачынаецца турнір</string>
   <string name="notifyTimeAlarm">Час зыходзіць у гульні па перепісцы</string>
-  <string name="notifyBell">Гукавое паведамленне ад Lichess</string>
-  <string name="notifyPush">Паведамленне на прыладу, калі Вы не на Lichess</string>
+  <string name="notifyBell">Гукавое паведамленне ад Chess-Online</string>
+  <string name="notifyPush">Паведамленне на прыладу, калі Вы не на Chess-Online</string>
   <string name="notifyWeb">Браўзер</string>
   <string name="notifyDevice">Прылада</string>
   <string name="bellNotificationSound">Гукавое паведамленне</string>

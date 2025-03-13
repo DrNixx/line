@@ -7,8 +7,8 @@ import { destsToUcis, sanWriter } from 'chess';
 // - tests will often require a FEN position and a map of legal moves, e.g.:
 //     legalSans: fenDestsToSans(startingFen, { e2: ['e4'] }),
 // - you need not actually supply all of the legal moves, just a relevant subset for the test
-// - use https://lichess.org/editor to create positions and get their FENs
-// - use https://lichess.org/editor/<FEN> to check what FENs look like
+// - use https://live.chess-online.com/editor to create positions and get their FENs
+// - use https://live.chess-online.com/editor/<FEN> to check what FENs look like
 
 const startingFen = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
 const toDestsMap = (obj: object) => new Map(Object.entries(obj)) as Dests;

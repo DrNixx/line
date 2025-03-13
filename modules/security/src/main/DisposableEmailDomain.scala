@@ -64,7 +64,7 @@ private object DisposableEmailDomain:
     Set(Domain("simplelogin.co"), Domain("simplelogin.com"), Domain("anonaddy.me"), Domain("iljmail.com"))
 
   private val staticBlacklist = Set(
-    "lichess.org",
+    "live.chess-online.com",
     "gamil.com",
     "gmeil.com",
     "gmali.com",

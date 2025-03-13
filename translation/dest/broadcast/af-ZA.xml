@@ -18,7 +18,7 @@
   <string name="fullDescription">Volle geleentheid beskrywing</string>
   <string name="fullDescriptionHelp">Opsionele lang beskrywing van die uitsending. %1$s is beskikbaar. Lengte moet minder as %2$s karakters.</string>
   <string name="sourceSingleUrl">PGN-Bronskakel</string>
-  <string name="sourceUrlHelp">URL wat Lichess sal nagaan vir PGN opdaterings. Dit moet openbaar beskikbaar wees vanaf die Internet.</string>
+  <string name="sourceUrlHelp">URL wat Chess-Online sal nagaan vir PGN opdaterings. Dit moet openbaar beskikbaar wees vanaf die Internet.</string>
   <string name="startDateHelp">Optioneel, indien jy weet wanner die geleentheid begin</string>
   <string name="currentGameUrl">Huidige spel se bronadres</string>
   <string name="downloadAllRounds">Laai al die rondes af</string>

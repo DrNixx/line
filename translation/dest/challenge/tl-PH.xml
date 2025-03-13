@@ -12,5 +12,5 @@
   <string name="declineLater">Hindi ito ang tamang oras para sa akin, maaaring magtanong ka muli mamaya.</string>
   <string name="declineNoBot">Hindi ako tumatanggap ng mga hamon mula sa mga bot.</string>
   <string name="declineOnlyBot">Tumatanggap lang ako ng mga hamon mula sa mga bot.</string>
-  <string name="inviteLichessUser">O mag-imbita ng isang Lichess user:</string>
+  <string name="inviteLichessUser">O mag-imbita ng isang Chess-Online user:</string>
 </resources>

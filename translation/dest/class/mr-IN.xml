@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="lichessClasses">शिकवणी</string>
-  <string name="teachClassesOfChessStudents">Lichess Class साधनॆचा वापर करुन विद्यार्थ्यांना शिकवा.</string>
+  <string name="teachClassesOfChessStudents">Chess-Online Class साधनॆचा वापर करुन विद्यार्थ्यांना शिकवा.</string>
   <string name="features">वैशिष्ट्ये</string>
   <string name="quicklyGenerateSafeUsernames">विद्यार्थ्यांसाठी त्वरीत सुरक्षित वापरकर्तानाव आणि पासवर्ड तयार करा</string>
   <string name="trackStudentProgress">खेळ आणि कोड्यांमध्ये विद्यार्थ्यांच्या प्रगतीचा मोगावा घ्या</string>
@@ -38,11 +38,11 @@
 परवलीचा शब्द: %3$s</string>
   <string name="inviteALichessAccount">लिचेस खात्याला निमंत्रित करा</string>
   <string name="inviteDesc1">विद्यार्थ्याकडे आधीपासूनच लिचेस खाते असल्यास, तुम्ही त्यांना वर्गात आमंत्रित करू शकता.</string>
-  <string name="inviteDesc2">त्यांना वर्गात सामील होण्यासाठी लिंकसह Lichess वर संदेश प्राप्त होईल.</string>
+  <string name="inviteDesc2">त्यांना वर्गात सामील होण्यासाठी लिंकसह Chess-Online वर संदेश प्राप्त होईल.</string>
   <string name="inviteDesc3">महत्त्वाचे: केवळ तुमच्या ओळखीच्या विद्यार्थ्यांना आमंत्रित करा आणि ज्यांना सक्रियपणे वर्गात सामील व्हायचे आहे.</string>
   <string name="inviteDesc4">अनियंत्रित खेळाडूंना कधीही अनपेक्षित आमंत्रणे पाठवू नका.</string>
   <string name="createANewLichessAccount">नविन लिचेस खाते तयार करा</string>
-  <string name="createDesc1">विद्यार्थ्याकडे अद्याप Lichess खाते नसल्यास, तुम्ही त्यांच्यासाठी येथे एक तयार करू शकता.</string>
+  <string name="createDesc1">विद्यार्थ्याकडे अद्याप Chess-Online खाते नसल्यास, तुम्ही त्यांच्यासाठी येथे एक तयार करू शकता.</string>
   <string name="createDesc2">कोणताही ईमेल पत्ता आवश्यक नाही. एक पासवर्ड व्युत्पन्न केला जाईल, आणि तुम्हाला तो विद्यार्थ्याला पाठवावा लागेल जेणेकरून ते लॉग इन करू शकतील.</string>
   <string name="createDesc3">महत्त्वाचे: विद्यार्थ्याकडे एकाधिक खाती नसावीत.</string>
   <string name="createDesc4">त्यांच्याकडे आधीपासूनच एखादे असल्यास, त्याऐवजी आमंत्रण फॉर्म वापरा.</string>

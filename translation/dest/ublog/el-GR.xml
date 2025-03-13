@@ -4,9 +4,9 @@
   <string name="friendBlogs">Μπλογκ φίλων</string>
   <string name="likedBlogs">Αναρτήσεις που σας άρεσαν</string>
   <string name="blogTopics">Ιστολόγια ανά θεματολογία</string>
-  <string name="lichessOfficialBlog">Επίσημο Ιστολόγιο του Lichess</string>
+  <string name="lichessOfficialBlog">Επίσημο Ιστολόγιο του Chess-Online</string>
   <string name="continueReadingPost">Συνεχίστε εδώ για να διαβάσετε αυτή την ανάρτηση</string>
-  <string name="lichessBlogPostsFromXYear">Αναρτήσεις στο ιστολόγιο του Lichess το \"%s\"</string>
+  <string name="lichessBlogPostsFromXYear">Αναρτήσεις στο ιστολόγιο του Chess-Online το \"%s\"</string>
   <string name="previousBlogPosts">Προηγούμενες αναρτήσεις ιστολογίου</string>
   <string name="xBlog">Ιστολόγιο του χρήστη %s</string>
   <string name="newPost">Νέα ανάρτηση</string>
@@ -48,7 +48,7 @@
   <string name="deleteBlog">Οριστική διαγραφή δημοσίευσης</string>
   <string name="safeToUseImages">Είναι ασφαλές να χρησιμοποιείτε εικόνες από τις ακόλουθες ιστοσελίδες: </string>
   <string name="selectPostTopics">Επιλέξτε τα θέματα που είναι σχετικά με τη δημοσίευσή σας</string>
-  <string name="useImagesYouMadeYourself">Μπορείτε επίσης να χρησιμοποιήσετε δικές σας εικόνες, φωτογραφίες που τραβήξατε, στιγμιότυπα οθόνης από το Lichess... με λίγα λόγια οτιδήποτε δεν έχει κατοχυρωμένα δικαιώματα πνευματικής ιδιοκτησίας.</string>
+  <string name="useImagesYouMadeYourself">Μπορείτε επίσης να χρησιμοποιήσετε δικές σας εικόνες, φωτογραφίες που τραβήξατε, στιγμιότυπα οθόνης από το Chess-Online... με λίγα λόγια οτιδήποτε δεν έχει κατοχυρωμένα δικαιώματα πνευματικής ιδιοκτησίας.</string>
   <string name="safeAndRespectfulContent">Το περιεχόμενο που δημοσιεύετε πρέπει να είναι ασφαλές, με σεβασμό προς όλους και να μην αντιγράφει δημοσιεύσεις άλλων χρηστών.</string>
   <string name="inappropriateContentAccountClosed">Ο λογαριασμός σας ενδεχομένως να κλείσει αν εντοπίσουμε οτιδήποτε ακατάλληλο.</string>
   <string name="blogTips">Απλές συμβουλές μας για να γράψει φανταστικές δημοσιεύσεις</string>

@@ -31,8 +31,8 @@
   <string name="byOpenings">Po otvorima</string>
   <string name="puzzlesByOpenings">Zagonetke po otvorima</string>
   <string name="openingsYouPlayedTheMost">Otvaranja koja ste najviše igrali u ocenjenim igrama</string>
-  <string name="useFindInPage" comment="useFindInPage&#10;&#10;Appears on https://lichess.org/training/openings for mobile and tablet users&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Koristite \"Pronađi na stranici\" u meniju pretraživača da pronađete svoje omiljeno otvaranje!</string>
-  <string name="useCtrlF" comment="Appears on https://lichess.org/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Koristite Ctrl+f da pronađete svoj omiljeni otvor!</string>
+  <string name="useFindInPage" comment="useFindInPage&#10;&#10;Appears on https://chess-online.com/training/openings for mobile and tablet users&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Koristite \"Pronađi na stranici\" u meniju pretraživača da pronađete svoje omiljeno otvaranje!</string>
+  <string name="useCtrlF" comment="Appears on https://chess-online.com/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Koristite Ctrl+f da pronađete svoj omiljeni otvor!</string>
   <string name="notTheMove">To nije traženi potez!</string>
   <string name="trySomethingElse">Pokušajte nešto drugo.</string>
   <string name="ratingX">Rejting: %s</string>
@@ -79,7 +79,7 @@
   <string name="lookupOfPlayer">Potražite probleme u igračevim partijama</string>
   <string name="fromXGames">Problemi iz partija %s</string>
   <string name="searchPuzzles">Pretražite probleme</string>
-  <string name="fromMyGamesNone">Nemate probleme u bazi podataka, ali Vas Lichess i dalje mnogo voli.
+  <string name="fromMyGamesNone">Nemate probleme u bazi podataka, ali Vas Chess-Online i dalje mnogo voli.
 Igrajte ubrzani i klasični šah kako biste povećali šanse da bude dodan Vaš problem!</string>
   <string name="fromXGamesFound">Pronađeno %1$s problema u partijama %2$s</string>
   <string name="puzzleDashboardDescription">Trenirajte, analizirajte, usavršavajte se</string>

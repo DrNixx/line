@@ -3,10 +3,10 @@
   <string name="activity">Aktivita</string>
   <string name="hostedALiveStream">Vysielal naživo</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">Podporuje lichess.org %1$s mesiac ako %2$s</item>
-    <item quantity="few">Podporuje lichess.org %1$s mesiace ako %2$s</item>
-    <item quantity="many">Podporuje lichess.org %1$s mesiacov ako %2$s</item>
-    <item quantity="other">Podporuje lichess.org %1$s mesiacov ako %2$s</item>
+    <item quantity="one">Podporuje chess-online.com %1$s mesiac ako %2$s</item>
+    <item quantity="few">Podporuje chess-online.com %1$s mesiace ako %2$s</item>
+    <item quantity="many">Podporuje chess-online.com %1$s mesiacov ako %2$s</item>
+    <item quantity="other">Podporuje chess-online.com %1$s mesiacov ako %2$s</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">Precvičená %1$s pozícia v %2$s</item>
@@ -86,7 +86,7 @@
     <item quantity="many">Vytvorenie %s nových štúdií</item>
     <item quantity="other">Vytvorenie %s nových štúdií</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="one">Zúčastnil sa v %s turnaji</item>
     <item quantity="few">Zúčastnil sa v %s turnajoch</item>
     <item quantity="many">Zúčastnil sa v %s turnajoch</item>
@@ -105,7 +105,7 @@
     <item quantity="other">Odohraných %s turnajov švajčiarskym systémom</item>
   </plurals>
   <string name="rankedInSwissTournament">Umiestnený ako #%1$s v %2$s</string>
-  <string name="signedUp">Registrácia na lichess.org</string>
+  <string name="signedUp">Registrácia na chess-online.com</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">Vstup do %s družstva</item>
     <item quantity="few">Vstup do %s družstiev</item>

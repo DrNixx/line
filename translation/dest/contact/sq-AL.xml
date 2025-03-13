@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="contact">Kontakt</string>
-  <string name="contactLichess">Kontaktoni me Lichess-in</string>
+  <string name="contactLichess">Kontaktoni me Chess-Online-in</string>
   <string name="whatCanWeHelpYouWith">Si mund t’ju ndihmojmë?</string>
   <string name="visitThisPage">Vizitoni këtë faqe për të zgjidhur problemin</string>
   <string name="iCantLogIn">S’bëj dot hyrjen</string>
@@ -12,8 +12,8 @@
   <string name="lost2FA">Humba hyrje te kodet e mi për mirëfilltësim dyfaktorësh</string>
   <string name="doPasswordReset">Që të hiqni faktorin tuaj të dytë, plotësoni hapat e ricaktimit të fjalëkalimit</string>
   <string name="accountSupport">Më duhet asistencë për llogarinë</string>
-  <string name="wantTitle">Dua që titulli im të shfaqet në Lichess</string>
-  <string name="visitTitleConfirmation">Që të shfaqni titullin tuaj në profilin tuaj në Lichess, si dhe për të marrë pjesë Arena Me Titull, vizitoni faqen e ripohimit të titullit</string>
+  <string name="wantTitle">Dua që titulli im të shfaqet në Chess-Online</string>
+  <string name="visitTitleConfirmation">Që të shfaqni titullin tuaj në profilin tuaj në Chess-Online, si dhe për të marrë pjesë Arena Me Titull, vizitoni faqen e ripohimit të titullit</string>
   <string name="wantCloseAccount">Dua të mbyll llogarinë time</string>
   <string name="closeYourAccount">Llogarinë tuaj mund ta mbyllni në këtë faqe</string>
   <string name="doNotAskByEmail">Mos na kërkoni me email të fshijmë një llogari, s’kemi për ta bërë.</string>
@@ -34,10 +34,10 @@
   <string name="doNotMessageModerators">Ju lutemi, mos dërgoni mesazhe të drejtpërdrejtë te moderatorët.</string>
   <string name="onlyReports">Është efikas vetëm raportimi i lojtarëve përmes formularit të raportimeve.</string>
   <string name="wantReportBug">Dua të raportoj një të metë</string>
-  <string name="reportBugInForum">Te ndarja Përshtypje Për Lichess-in, te forumi</string>
-  <string name="reportWebsiteIssue">Si një problem sajti Lichess në GitHub</string>
-  <string name="reportMobileIssue">Si një problem aplikacioni Lichess për celular në GitHub</string>
-  <string name="reportBugInDiscord">Te shërbyesi Discord i Lichess-it</string>
+  <string name="reportBugInForum">Te ndarja Përshtypje Për Chess-Online-in, te forumi</string>
+  <string name="reportWebsiteIssue">Si një problem sajti Chess-Online në GitHub</string>
+  <string name="reportMobileIssue">Si një problem aplikacioni Chess-Online për celular në GitHub</string>
+  <string name="reportBugInDiscord">Te shërbyesi Discord i Chess-Online-it</string>
   <string name="howToReportBug">Ju lutemi, përshkruani se si duket e meta, ç’prisnit të ndodhte në vend të saj, si dhe hapat për të riprodhuar të metën.</string>
   <string name="illegalPawnCapture">Ngrënie e paligjshme e ushtarit</string>
   <string name="calledEnPassant">Quhet “prerje” dhe është një nga rregullat e shahut.</string>
@@ -55,7 +55,7 @@
   <string name="botRatingAbuse">Në ca rrethana, kur luhet kundër një llogarie robot, një lojë me pikë mund të mos sjellë pikë, nëse përcaktohet se lojtari po abuzon robotin për pikë vlerësimi.</string>
   <string name="errorPage">Faqe gabimi</string>
   <string name="reportErrorPage">Nëse hasët një faqe gabimi, mund ta raportoni:</string>
-  <string name="learnHowToMakeBroadcasts">Mësoni se si të krijoni transmetimet tuaja në Lichess</string>
+  <string name="learnHowToMakeBroadcasts">Mësoni se si të krijoni transmetimet tuaja në Chess-Online</string>
   <string name="banAppeal">Apeloni për dëbim ose kufizim IP-je</string>
   <string name="engineAppeal">Program ose shenje hileje</string>
   <string name="sendAppealTo">Mund të dërgoni një apel tek %s.</string>
@@ -65,13 +65,13 @@
   <string name="doNotDeny">Mos e mohoni që keni bërë hile. Nëse doni të lejoheni të krijoni një llogari të re, thjesht pranoni atë që bëtë dhe tregoni se e kuptuat që qe gabim.</string>
   <string name="otherRestriction">Kufizime të tjera</string>
   <string name="collaboration">Bashkëpunim, ligjore, komerciale</string>
-  <string name="monetizing">Nxjerrje Parash Nga Lichess-i</string>
-  <string name="buyingLichess">Blini Lichess</string>
-  <string name="authorizationToUse">Autorizim për të përdorur Lichess</string>
-  <string name="welcomeToUse">Jeni i mirëpritur ta përdorni Lichess-in për veprimtaritë tuaja, madje edhe komerciale.</string>
-  <string name="videosAndBooks">Mund ta shfaqni në videot tuaja dhe mund të shtypni foto ekrani nga Lichess për librat tuaja.</string>
+  <string name="monetizing">Nxjerrje Parash Nga Chess-Online-i</string>
+  <string name="buyingLichess">Blini Chess-Online</string>
+  <string name="authorizationToUse">Autorizim për të përdorur Chess-Online</string>
+  <string name="welcomeToUse">Jeni i mirëpritur ta përdorni Chess-Online-in për veprimtaritë tuaja, madje edhe komerciale.</string>
+  <string name="videosAndBooks">Mund ta shfaqni në videot tuaja dhe mund të shtypni foto ekrani nga Chess-Online për librat tuaja.</string>
   <string name="creditAppreciated">Çmohet dhënia e meritës, por s’është e domosdoshme.</string>
   <string name="noneOfTheAbove">Asnjë nga sa më sipër</string>
   <string name="sendEmailAt">Dërgonani një email tek %s.</string>
-  <string name="explainYourRequest">Ju lutemi, shpjegoni kërkesën tuaj qartë dhe plotësisht. Jepni emrin tuaj të përdoruesit në Lichess dhe çfarëdo hollësish që mund të na ndihmojnë t’ju ndihmojmë.</string>
+  <string name="explainYourRequest">Ju lutemi, shpjegoni kërkesën tuaj qartë dhe plotësisht. Jepni emrin tuaj të përdoruesit në Chess-Online dhe çfarëdo hollësish që mund të na ndihmojnë t’ju ndihmojmë.</string>
 </resources>

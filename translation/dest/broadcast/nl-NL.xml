@@ -10,7 +10,7 @@
   <string name="broadcastCalendar">Uitzendkalender</string>
   <string name="newBroadcast">Nieuwe live uitzending</string>
   <string name="aboutBroadcasts">Over uitzending</string>
-  <string name="howToUseLichessBroadcasts">Hoe Lichess Uitzendingen te gebruiken.</string>
+  <string name="howToUseLichessBroadcasts">Hoe Chess-Online Uitzendingen te gebruiken.</string>
   <string name="theNewRoundHelp">De nieuwe ronde zal dezelfde leden en bijdragers hebben als de vorige.</string>
   <string name="addRound">Ronde toevoegen</string>
   <string name="ongoing">Lopend</string>
@@ -22,8 +22,8 @@
   <string name="fullDescription">Volledige beschrijving evenement</string>
   <string name="fullDescriptionHelp">Optionele lange beschrijving van de uitzending. %1$s is beschikbaar. Totale lengte moet minder zijn dan %2$s tekens.</string>
   <string name="sourceSingleUrl">URL van PGN-bron</string>
-  <string name="sourceUrlHelp">Link die Lichess gebruikt om PGN updates te krijgen. Deze moet openbaar toegankelijk zijn via internet.</string>
-  <string name="sourceGameIds">Tot 64 Lichess partij-ID\'\'s, gescheiden door spaties.</string>
+  <string name="sourceUrlHelp">Link die Chess-Online gebruikt om PGN updates te krijgen. Deze moet openbaar toegankelijk zijn via internet.</string>
+  <string name="sourceGameIds">Tot 64 Chess-Online partij-ID\'\'s, gescheiden door spaties.</string>
   <string name="startDateTimeZone">Startdatum in de lokale tijdzone van het tornooi: %s</string>
   <string name="startDateHelp">Optioneel, als je weet wanneer het evenement start</string>
   <string name="currentGameUrl">Huidige partij-link</string>
@@ -46,7 +46,7 @@
   <string name="ageThisYear">Leeftijd dit jaar</string>
   <string name="unrated">Zonder rating</string>
   <string name="recentTournaments">Recente toernooien</string>
-  <string name="openLichess">Openen in Lichess</string>
+  <string name="openLichess">Openen in Chess-Online</string>
   <string name="teams">Teams</string>
   <string name="boards">Borden</string>
   <string name="overview">Overzicht</string>

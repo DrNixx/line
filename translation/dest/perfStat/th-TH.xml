@@ -6,7 +6,7 @@
   <string name="notEnoughRatedGames">จำนวนเกมที่ได้เล่นแบบคิดคะแนน ไม่เพียงพอในการสร้างระดับคะแนนที่เชื่อถือได้</string>
   <string name="progressOverLastXGames">ความคืบหน้าใน %s เกมล่าสุด:</string>
   <string name="ratingDeviation">ค่าเบี่ยงเบนระดับคะแนน: %s</string>
-  <string name="ratingDeviationTooltip" comment="ratingDeviationTooltip&#10;&#10;This is a tooltip (appears on mouseover) for the rating deviation. Appears on performance statistics pages such as https://lichess.org/@/thibault/perf/ultraBullet&#10;&#10;As of 2021-05-19, $1%s is set to 110.">ถ้าค่าเบี่ยงเบนยิ่งต่ำหมายความว่าเรดติ้งมีความคงที่ ถ้ามากกว่า %1$s เรดติ้งจะเป็นแบบชั่วคราว ถ้าคุณอยากจะถูกจัดลำดับคะแนน ค่าควรจะต่ำกว่า %2$s (หมากรุกธรรมดา) หรือ %3$s (หมากรุกแปรกติกา)</string>
+  <string name="ratingDeviationTooltip" comment="ratingDeviationTooltip&#10;&#10;This is a tooltip (appears on mouseover) for the rating deviation. Appears on performance statistics pages such as https://chess-online.com/@/thibault/perf/ultraBullet&#10;&#10;As of 2021-05-19, $1%s is set to 110.">ถ้าค่าเบี่ยงเบนยิ่งต่ำหมายความว่าเรดติ้งมีความคงที่ ถ้ามากกว่า %1$s เรดติ้งจะเป็นแบบชั่วคราว ถ้าคุณอยากจะถูกจัดลำดับคะแนน ค่าควรจะต่ำกว่า %2$s (หมากรุกธรรมดา) หรือ %3$s (หมากรุกแปรกติกา)</string>
   <string name="totalGames">เกมทั้งหมด</string>
   <string name="ratedGames">เกมที่คิดคะแนน</string>
   <string name="tournamentGames">เกมทัวร์นาเมนต์</string>

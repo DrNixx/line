@@ -63,7 +63,7 @@
   <string name="notifyChallenge">Izzivi</string>
   <string name="notifyTournamentSoon">Turnir se bo kmalu začel</string>
   <string name="notifyTimeAlarm">Potekel vam bo čas</string>
-  <string name="notifyBell">Zvočno obvestilo znotraj Lichess</string>
+  <string name="notifyBell">Zvočno obvestilo znotraj Chess-Online</string>
   <string name="notifyPush">Obvestilo naprave, ko niste na Lichessu</string>
   <string name="notifyWeb">Brskalnik</string>
   <string name="notifyDevice">Naprava</string>

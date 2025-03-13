@@ -436,7 +436,7 @@
   <string name="biography">Biographia</string>
   <string name="countryRegion" comment="flag&#10;Appears when you edit your profile. Lets a player add a country/flag (not all flags are for countries) to their profile">Patria aut regio</string>
   <string name="thankYou">Gratias tibi!</string>
-  <string name="previouslyOnLichessTV">Prius in Lichess TV</string>
+  <string name="previouslyOnLichessTV">Prius in Chess-Online TV</string>
   <string name="onlinePlayers">Lusores presentes</string>
   <string name="activePlayers">Lusores frequentes</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Cave, ludus ordinatus est sed tempore eget!</string>
@@ -573,7 +573,7 @@
   <string name="simulClockHint">Fischer Horologica fabrica. Tot lusores ludeabis ut plurem tempus requireas.</string>
   <string name="simulAddExtraTime">Plurem tempus in tuo horologio addeas ut exhibitio simultanea molliatur.</string>
   <string name="simulHostExtraTime">Praebe magis temporis</string>
-  <string name="lichessTournaments">Lichess certamina</string>
+  <string name="lichessTournaments">Chess-Online certamina</string>
   <string name="tournamentFAQ">Certaminis FAQ</string>
   <string name="timeBeforeTournamentStarts">Tempus ante principio certaminis</string>
   <string name="averageCentipawnLoss">Medius casus centipeditum</string>
@@ -629,7 +629,7 @@
   <string name="sessions">Sessiones</string>
   <string name="revokeAllSessions">recanta sessionem</string>
   <string name="playChessEverywhere">Ubique scaccos.</string>
-  <string name="asFreeAsLichess">Tam quam Lichess gratuito.</string>
+  <string name="asFreeAsLichess">Tam quam Chess-Online gratuito.</string>
   <string name="builtForTheLoveOfChessNotMoney">Non divitiis, sed scaccorum amori creata.</string>
   <string name="everybodyGetsAllFeaturesForFree">Omnes omnia gratuito sunt.</string>
   <string name="zeroAdvertisement">Sine praeconiis mercatoriis.</string>

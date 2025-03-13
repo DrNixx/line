@@ -62,8 +62,8 @@
   <string name="notifyChallenge">تحديات</string>
   <string name="notifyTournamentSoon">البطولة ستبدأ قريباً</string>
   <string name="notifyTimeAlarm">ساعة المراسلة تنفد</string>
-  <string name="notifyBell">إشعار الجرس داخل Lichess</string>
-  <string name="notifyPush">إشعار الجهاز عندما لا تكون على Lichess</string>
+  <string name="notifyBell">إشعار الجرس داخل Chess-Online</string>
+  <string name="notifyPush">إشعار الجهاز عندما لا تكون على Chess-Online</string>
   <string name="notifyWeb">المتصفح</string>
   <string name="notifyDevice">الجهاز</string>
   <string name="bellNotificationSound">صوت التنبيه</string>

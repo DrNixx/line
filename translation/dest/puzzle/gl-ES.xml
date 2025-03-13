@@ -31,8 +31,8 @@
   <string name="byOpenings">Por aperturas</string>
   <string name="puzzlesByOpenings">Exercicios por aperturas</string>
   <string name="openingsYouPlayedTheMost">As aperturas que máis xogaches en partidas puntuadas</string>
-  <string name="useFindInPage" comment="useFindInPage&#10;&#10;Appears on https://lichess.org/training/openings for mobile and tablet users&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Usa \"Encontrar na páxina\" no menú do navegador para atopar a túa apertura favorita!</string>
-  <string name="useCtrlF" comment="Appears on https://lichess.org/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Usa Ctrl+f para atopar a túa apertura favorita!</string>
+  <string name="useFindInPage" comment="useFindInPage&#10;&#10;Appears on https://chess-online.com/training/openings for mobile and tablet users&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Usa \"Encontrar na páxina\" no menú do navegador para atopar a túa apertura favorita!</string>
+  <string name="useCtrlF" comment="Appears on https://chess-online.com/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Usa Ctrl+f para atopar a túa apertura favorita!</string>
   <string name="notTheMove">Esa non é a xogada!</string>
   <string name="trySomethingElse">Proba outra cosa.</string>
   <string name="ratingX">Puntuación: %s</string>
@@ -76,7 +76,7 @@
   <string name="lookupOfPlayer">Buscar crebacabezas das partidas dun xogador</string>
   <string name="fromXGames">Crebacabezas das partidas de %s</string>
   <string name="searchPuzzles">Busca crebacabezas</string>
-  <string name="fromMyGamesNone">Non tes crebacabezas na base de datos e aínda así Lichess quérete moito.
+  <string name="fromMyGamesNone">Non tes crebacabezas na base de datos e aínda así Chess-Online quérete moito.
 Xoga partidas rápidas e clásicas para ter máis opcións de que se engadan os teus crebacabezas!</string>
   <string name="fromXGamesFound">%1$s crebacabezas atopados nas partidas de %2$s</string>
   <string name="puzzleDashboardDescription">Adestra, analiza, mellora</string>

@@ -3,8 +3,8 @@
   <string name="activity">Verlaf</string>
   <string name="hostedALiveStream">Huet live gestreamt</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">Ënnerstëtzt Lichess.org säit %1$s Mount als %2$s</item>
-    <item quantity="other">Ënnerstëtzt Lichess.org säit %1$s Méint als %2$s</item>
+    <item quantity="one">Ënnerstëtzt Chess-Online.Com säit %1$s Mount als %2$s</item>
+    <item quantity="other">Ënnerstëtzt Chess-Online.Com säit %1$s Méint als %2$s</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">Huet %1$s Positioun zu %2$s geüübt</item>
@@ -58,7 +58,7 @@
     <item quantity="one">Huet %s Etüd kreéiert</item>
     <item quantity="other">Huet %s Etüde kreéiert</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="one">Huet bei %s Arena Turnéier matgemaach</item>
     <item quantity="other">Huet bei %s Arena Turnéiere matgemaach</item>
   </plurals>
@@ -71,7 +71,7 @@
     <item quantity="other">Huet bei %s Turnéieren nom Schwäizer System matgemaach</item>
   </plurals>
   <string name="rankedInSwissTournament">Huet sech als #%1$s an %2$s placéiert</string>
-  <string name="signedUp">Huet sech bei Lichess ugemellt</string>
+  <string name="signedUp">Huet sech bei Chess-Online ugemellt</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">Ass %s Ekipp bäigetrueden</item>
     <item quantity="other">Ass %s Ekippe bäigetrueden</item>

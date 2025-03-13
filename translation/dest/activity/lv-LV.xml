@@ -3,9 +3,9 @@
   <string name="activity">Aktivitāte</string>
   <string name="hostedALiveStream">Rīkoja tiešsaistes straumi</string>
   <plurals name="supportedNbMonths">
-    <item quantity="zero">%1$s mēnešus atbalstīja lichess.org kā %2$s</item>
-    <item quantity="one">%1$s mēnesi atbalstīja lichess.org kā %2$s</item>
-    <item quantity="other">%1$s mēnešus atbalstīja lichess.org kā %2$s</item>
+    <item quantity="zero">%1$s mēnešus atbalstīja chess-online.com kā %2$s</item>
+    <item quantity="one">%1$s mēnesi atbalstīja chess-online.com kā %2$s</item>
+    <item quantity="other">%1$s mēnešus atbalstīja chess-online.com kā %2$s</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="zero">Mācījās no %1$s pozīcijām sadaļā %2$s</item>
@@ -67,7 +67,7 @@
     <item quantity="one">Izveidoja %s jaunu izpēti</item>
     <item quantity="other">Izveidoja %s jaunas izpētes</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="zero">Sacentās %s turnīros</item>
     <item quantity="one">Sacentās %s turnīrā</item>
     <item quantity="other">Sacentās %s turnīros</item>
@@ -83,7 +83,7 @@
     <item quantity="other">Sacentās %s Šveices turnīros</item>
   </plurals>
   <string name="rankedInSwissTournament">Ieguva %1$s. vietu turnīrā %2$s</string>
-  <string name="signedUp">Reģistrējās lichess.org</string>
+  <string name="signedUp">Reģistrējās chess-online.com</string>
   <plurals name="joinedNbTeams">
     <item quantity="zero">Pievienojās %s komandām</item>
     <item quantity="one">Pievienojās %s komandai</item>

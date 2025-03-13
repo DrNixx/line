@@ -67,7 +67,7 @@ Továbbá, fél pontot érő egyszeri szabadkört kap minden játékos, aki kés
 A rendszer visszalépteti ezeket a játékosokat a versenytől, hogy ne veszítsenek el több játszmát.
  Bármikor újracsatlakozhatnak a versenyhez.</string>
   <string name="protectionAgainstNoShowQ">Mi lesz ha nem jelenik meg egy játékos?</string>
-  <string name="protectionAgainstNoShowA" comment="By &quot;a game&quot; - we mean just one game. Missing even one game will prevent that player from joining a new Swiss event for a certain amount of time.">Játékosok akik regisztrálnak egy svájci rendszerű versenyre, de nem játszák le játszmáikat, az problémás lehet. Hogy enyhítsen a dolgon, Lichess egy adott időre megakadályozza ezeket a játékosokat hogy új svájci rendszerű versenyre jelentkezzenek. Egy verseny szervezője dönthet úgy, hogy ennek ellenére is játszhassanak.</string>
+  <string name="protectionAgainstNoShowA" comment="By &quot;a game&quot; - we mean just one game. Missing even one game will prevent that player from joining a new Swiss event for a certain amount of time.">Játékosok akik regisztrálnak egy svájci rendszerű versenyre, de nem játszák le játszmáikat, az problémás lehet. Hogy enyhítsen a dolgon, Chess-Online egy adott időre megakadályozza ezeket a játékosokat hogy új svájci rendszerű versenyre jelentkezzenek. Egy verseny szervezője dönthet úgy, hogy ennek ellenére is játszhassanak.</string>
   <string name="lateJoinQ">Csatlakozhatnak-e a játékosok utólag?</string>
   <string name="lateJoinA">Igen, amíg nem több, mint a fordulók fele elkezdődött; például egy 11 fordulósban játékosok csatlakozhatnak a 6. forduló kezdete előtt illetve egy 12 fordulósban a 7. forduló kezdetéig.
 A későn csatlakozók egy pontot érő szabadkört kapnak akkor is, ha több fordulóból maradtak ki.</string>
@@ -78,7 +78,7 @@ A későn csatlakozók egy pontot érő szabadkört kapnak akkor is, ha több fo
 Ennek az az oka, hogy nem tudjuk tisztességesen kezelni a versenyből idő előtt távozókat. Nem várhatjuk el, hogy egy online versenyen minden játékos lejátssza az összes meccsét. Ez egyszerűen nem fog menni és ennek eredményeképpen a legtöbb körmérkőzés verseny hibás és igazságtalan lenne, ami meghiúsítja az értelmüket.
 Az online körmérkőzéshez legközelebb egy svájci verseny áll, ahol nagyon sok forduló van. Ilyenkor az összes lehetséges párosítást lejátsszák, mielőtt a verseny véget ér.</string>
   <string name="otherSystemsQ">Mi a helyzet más verseny struktúrákkal?</string>
-  <string name="otherSystemsA">Jelenleg nem tervezzük további versenytípusok hozzáadását a Lichess-hez.</string>
+  <string name="otherSystemsA">Jelenleg nem tervezzük további versenytípusok hozzáadását a Chess-Online-hez.</string>
   <string name="swissDescription">A svájci rendszerű versenyekben %1$s a résztvevők nem feltétlen játszanak mindenki más ellen. A versenyzőket egymás ellen párosítják minden fordulóban előre meghatározott szabályok alapján úgy, hogy mindenki hasonló teljesítményű ellenfelet kapjon, de ne ugyanazt kétszer egymás után. A nyertes az, aki a legtöbb pontot szerezte a fordulókban összesen. Minden résztvevő játszik valaki ellen minden fordulóban, kivéve ha páratlan számú versenyző van.</string>
   <string name="teamOnly">Svájci rendszerű versenyeket csak csapatvezetők indíthatnak és csak csapattagok vehetnek benne részt.           
 %1$s, hogy részt vehess svájci rendszerű versenyben.</string>

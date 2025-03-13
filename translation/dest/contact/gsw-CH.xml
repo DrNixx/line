@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="contact">Kontakt</string>
-  <string name="contactLichess">Lichess kontaktiere</string>
+  <string name="contactLichess">Chess-Online kontaktiere</string>
   <string name="whatCanWeHelpYouWith">Mit was chömmer hälfe?</string>
   <string name="visitThisPage">Bsuech die Site, um s\'Problem z\'löse</string>
   <string name="iCantLogIn">Ich chann nöd ilogge</string>
@@ -12,7 +12,7 @@
   <string name="lost2FA">Ich han de Zuegriff zu mim Zwei-Faktor-Code verlore</string>
   <string name="doPasswordReset">Setz dis Passwort zrugg, zum de zweit Faktor entferne</string>
   <string name="accountSupport">Ich bruche Konto Underschtützig</string>
-  <string name="wantTitle">Ich wett, dass min Titel uf Lichess azeigt wird</string>
+  <string name="wantTitle">Ich wett, dass min Titel uf Chess-Online azeigt wird</string>
   <string name="visitTitleConfirmation">Das din Titel i dim Profil azeigt wird und dass du dörfsch bi Arena Turnier für Schpiller mit Titel aträte, muesch zerscht uf d\'Site für d\'Titelbeschtätigung</string>
   <string name="wantCloseAccount">Ich wott mis Konto schlüsse</string>
   <string name="closeYourAccount">Du chasch dis Konto uf dere Site schlüsse</string>
@@ -34,10 +34,10 @@
   <string name="doNotMessageModerators">Bitte schick de Moderatore kei diräkti Nachrichte.</string>
   <string name="onlyReports">Effektiv sind Mäldige vu Schpiller nur via Mäldigsformular.</string>
   <string name="wantReportBug">Ich möcht en Fähler mälde</string>
-  <string name="reportBugInForum">Under \"Lichess Feedback\", im Lichess Forum</string>
-  <string name="reportWebsiteIssue">Als es \"Lichess Website Problem\" uf GitHub</string>
-  <string name="reportMobileIssue">Als es \"Lichess Mobile App Problem\" uf GitHub</string>
-  <string name="reportBugInDiscord">Im Lichess Discordserver</string>
+  <string name="reportBugInForum">Under \"Chess-Online Feedback\", im Chess-Online Forum</string>
+  <string name="reportWebsiteIssue">Als es \"Chess-Online Website Problem\" uf GitHub</string>
+  <string name="reportMobileIssue">Als es \"Chess-Online Mobile App Problem\" uf GitHub</string>
+  <string name="reportBugInDiscord">Im Chess-Online Discordserver</string>
   <string name="howToReportBug">Bitte beschrib, wie de Fähler usgseht, was du stattdesse erwartet häsch und wie mer de Fähler chann reproduziere.</string>
   <string name="illegalPawnCapture">Unerlaubts Schlah vu Puure</string>
   <string name="calledEnPassant">Das nännt sich \"en passant\" und e Schachregle.</string>
@@ -55,7 +55,7 @@
   <string name="botRatingAbuse">Under beschtimmte Umschtänd - wänn gäge es \"Bot Konto\" gschpillt wird - chas si, dass kei Pünkt vergeh werded, wänn feschtgschtellt wird, dass de \"Bot\" für d\'Wertig missbrucht wird.</string>
   <string name="errorPage">Fählersite</string>
   <string name="reportErrorPage">Wänn du e Fählersite entdeckt häsch, chasch sie mälde:</string>
-  <string name="learnHowToMakeBroadcasts">Lern wie du - uf Lichess - dini eigeni Überträgig machsch</string>
+  <string name="learnHowToMakeBroadcasts">Lern wie du - uf Chess-Online - dini eigeni Überträgig machsch</string>
   <string name="banAppeal">Ischpruch gäge en Usschluss oder IP-Beschränkig</string>
   <string name="engineAppeal">Markierig vu Computer Underschtützig oder Betrug</string>
   <string name="sendAppealTo">Du chasch en Ischpruch a %s sände.</string>
@@ -65,11 +65,11 @@
   <string name="doNotDeny">Schtrit de Betrug nöd ab. Wänn du es neus Konto wottsch, gisch eifach zue, was du gmacht häsch und zeigsch, dass du verschtande häsch, dass es en Fähler gsi isch.</string>
   <string name="otherRestriction">Anderi Beschränkige</string>
   <string name="collaboration">Zämmearbet, Rächtlichs, Kommerziells</string>
-  <string name="monetizing">Lichess finanzielli Bewertig</string>
-  <string name="buyingLichess">Lichess chaufe</string>
-  <string name="authorizationToUse">Genehmigung Lichess z\'benutze</string>
-  <string name="welcomeToUse">Du chasch Lichess für Aktivitäte verwände, au für Kommerzielli.</string>
-  <string name="videosAndBooks">Du chasch Lichess i dine Videos zeige und au Screenshots usdrucke und verwände.</string>
+  <string name="monetizing">Chess-Online finanzielli Bewertig</string>
+  <string name="buyingLichess">Chess-Online chaufe</string>
+  <string name="authorizationToUse">Genehmigung Chess-Online z\'benutze</string>
+  <string name="welcomeToUse">Du chasch Chess-Online für Aktivitäte verwände, au für Kommerzielli.</string>
+  <string name="videosAndBooks">Du chasch Chess-Online i dine Videos zeige und au Screenshots usdrucke und verwände.</string>
   <string name="creditAppreciated">Erwähnig isch g\'wünscht, aber nöd notwändig.</string>
   <string name="noneOfTheAbove">Öppis anders</string>
   <string name="sendEmailAt">Schick eus e E-Mail a %s.</string>

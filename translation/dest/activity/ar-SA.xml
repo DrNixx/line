@@ -4,11 +4,11 @@
   <string name="hostedALiveStream">بدأ بث مباشر</string>
   <plurals name="supportedNbMonths">
     <item quantity="zero">دعم ليتشيس لمدة %1$s شهر ك%2$s</item>
-    <item quantity="one">دعم lichess.org لمدة %1$s شهر ك%2$s</item>
-    <item quantity="two">دعم lichess.org لمدة %1$s أشهر ك%2$s</item>
-    <item quantity="few">دعم lichess.org لمدة %1$s اشهر ك%2$s</item>
-    <item quantity="many">دعم lichess.org لمدة %1$s اشهر ك%2$s</item>
-    <item quantity="other">دعم lichess.org لمدة %1$s أشهر ك %2$s</item>
+    <item quantity="one">دعم chess-online.com لمدة %1$s شهر ك%2$s</item>
+    <item quantity="two">دعم chess-online.com لمدة %1$s أشهر ك%2$s</item>
+    <item quantity="few">دعم chess-online.com لمدة %1$s اشهر ك%2$s</item>
+    <item quantity="many">دعم chess-online.com لمدة %1$s اشهر ك%2$s</item>
+    <item quantity="other">دعم chess-online.com لمدة %1$s أشهر ك %2$s</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="zero">لقد تدربت على %1$s موقف تكتيكي من %2$s</item>
@@ -106,7 +106,7 @@
     <item quantity="many">تم إنشاء %s دراسة جديدة</item>
     <item quantity="other">تم إنشاء %s دراسة جديدة</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="zero">تنافس في %s بطولة</item>
     <item quantity="one">تنافس في %s بطولة</item>
     <item quantity="two">تنافس في %s بطولة</item>

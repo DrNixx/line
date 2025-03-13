@@ -13,6 +13,6 @@
   <string name="twoFactorEnabled">Dvoja avtentikacija je omogočena</string>
   <string name="twoFactorToDisable">Za onemogočanje dvofaktorske avtentikacije potrebujete geslo in kodo za preverjanje pristnosti iz aplikacije authenticator.</string>
   <string name="openTwoFactorApp">V napravi odprite aplikacijo za dvostopenjsko preverjanje pristnosti, da si ogledate kodo za preverjanje pristnosti in preverite svojo identiteto.</string>
-  <string name="setupReminder">Prosimo, da za vaš račun omogočite dvojno preverjanje pristnosti. In sicer na strani https://lichess.org/account/twofactor.
+  <string name="setupReminder">Prosimo, da za vaš račun omogočite dvojno preverjanje pristnosti. In sicer na strani https://chess-online.com/account/twofactor.
 To sporočilo ste prejeli, ker imate uporabniški račun s posebno odgovornostjo kot na primer vodja ekipe, trener, učitelj ali pa kot voditelj pretočnih vsebin</string>
 </resources>

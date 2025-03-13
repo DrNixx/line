@@ -2,7 +2,7 @@
 <resources>
   <string name="likedBlogs">Mga blog post na ni-like</string>
   <string name="blogTopics">Mga blog topic</string>
-  <string name="lichessOfficialBlog">Opisyal na blog ng Lichess</string>
+  <string name="lichessOfficialBlog">Opisyal na blog ng Chess-Online</string>
   <string name="continueReadingPost">Ituloy ang pagbabasa sa post na ito</string>
   <string name="xBlog">Blog ni %s</string>
   <string name="newPost">Bagong post</string>

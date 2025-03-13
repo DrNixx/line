@@ -67,7 +67,7 @@ export function boot() {
 
     serviceWorker();
 
-    console.info('Lichess is open source! See https://lichess.org/source');
+    console.info('Lila is open source! See https://github.com/lichess-org/lila');
 
     // if not already connected by a ui module, setup default connection
     eventuallySetupDefaultConnection();

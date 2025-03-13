@@ -79,4 +79,4 @@ final class GameMod(env: Env)(using akka.stream.Materializer) extends LilaContro
         )
       )
     }
-    asAttachmentStream(s"lichess_mod_${user.username}_${gameIds.size}_games.pgn")(res).as(pgnContentType)
+    asAttachmentStream(s"chess_mod_${user.username}_${gameIds.size}_games.pgn")(res).as(pgnContentType)

@@ -13,7 +13,7 @@
   <string name="newBroadcast">Nauja transliacija</string>
   <string name="subscribedBroadcasts">Prenumeruojamos transliacijos</string>
   <string name="aboutBroadcasts">Apie transliacijas</string>
-  <string name="howToUseLichessBroadcasts">Kaip naudotis Lichess transliacijomis.</string>
+  <string name="howToUseLichessBroadcasts">Kaip naudotis Chess-Online transliacijomis.</string>
   <string name="theNewRoundHelp">Naujajame ture bus tie patys nariai ir bendradarbiai, kaip ir ankstesniame.</string>
   <string name="addRound">Pridėti raundą</string>
   <string name="ongoing">Vykstančios</string>
@@ -25,8 +25,8 @@
   <string name="fullDescription">Pilnas renginio aprašymas</string>
   <string name="fullDescriptionHelp">Neprivalomas pilnas transliacijos aprašymas. Galima naudoti %1$s. Ilgis negali viršyti %2$s simbolių.</string>
   <string name="sourceSingleUrl">PGN šaltinio URL</string>
-  <string name="sourceUrlHelp">URL, į kurį „Lichess“ kreipsis gauti PGN atnaujinimus. Privalo būti viešai pasiekiamas internete.</string>
-  <string name="sourceGameIds">Iki 64 Lichess žaidimo ID, atskirtų tarpais.</string>
+  <string name="sourceUrlHelp">URL, į kurį „Chess-Online“ kreipsis gauti PGN atnaujinimus. Privalo būti viešai pasiekiamas internete.</string>
+  <string name="sourceGameIds">Iki 64 Chess-Online žaidimo ID, atskirtų tarpais.</string>
   <string name="startDateTimeZone">Turnyro pradžia vietos laiku: %s</string>
   <string name="startDateHelp">Neprivaloma; tik jeigu žinote, kada prasideda renginys</string>
   <string name="currentGameUrl">Dabartinio žaidimo adresas</string>
@@ -49,7 +49,7 @@
   <string name="ageThisYear">Amžius šiemet</string>
   <string name="unrated">Nereitinguota(s)</string>
   <string name="recentTournaments">Neseniai sukurti turnyrai</string>
-  <string name="openLichess">Atverti Lichess-e</string>
+  <string name="openLichess">Atverti Chess-Online-e</string>
   <string name="teams">Komandos</string>
   <string name="boards">Lentos</string>
   <string name="overview">Apžvalga</string>

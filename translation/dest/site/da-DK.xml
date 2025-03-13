@@ -232,9 +232,9 @@
   <string name="forgotPassword">Glemt adgangskode?</string>
   <string name="error.weakPassword">Denne adgangskode er ekstremt almindelig og for let at gætte.</string>
   <string name="error.namePassword">Brug ikke dit brugernavn som din adgangskode.</string>
-  <string name="blankedPassword">Du har brugt den samme adgangskode på et andet websted, og dette websted er blevet kompromitteret. For at sikre din Lichess-konto skal du angive en ny adgangskode. Tak for din forståelse.</string>
-  <string name="youAreLeavingLichess">Du forlader Lichess</string>
-  <string name="neverTypeYourPassword">Indtast aldrig din Lichess-adgangskode på et andet websted!</string>
+  <string name="blankedPassword">Du har brugt den samme adgangskode på et andet websted, og dette websted er blevet kompromitteret. For at sikre din Chess-Online-konto skal du angive en ny adgangskode. Tak for din forståelse.</string>
+  <string name="youAreLeavingLichess">Du forlader Chess-Online</string>
+  <string name="neverTypeYourPassword">Indtast aldrig din Chess-Online-adgangskode på et andet websted!</string>
   <string name="proceedToX">Fortsæt til %s</string>
   <string name="passwordSuggestion">Angiv ikke en adgangskode, som er foreslået af en anden person. De vil bruge den til at stjæle din konto.</string>
   <string name="emailSuggestion">Angiv ikke en e-mailadresse, som er foreslået af en anden person. De vil bruge den til at stjæle din konto.</string>
@@ -343,7 +343,7 @@
     <item quantity="one">Giv %s sekund</item>
     <item quantity="other">Giv %s sekunder</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Denne konto overtrådte Lichess servicevilkår</string>
+  <string name="thisAccountViolatedTos">Denne konto overtrådte Chess-Online servicevilkår</string>
   <string name="openingExplorerAndTablebase">Åbner åbnings- og slutspilsbog</string>
   <string name="takeback">Omtræk</string>
   <string name="proposeATakeback">Anmod om omtræk</string>
@@ -529,7 +529,7 @@
   <string name="inlineNotation">Notation uden linjeskift</string>
   <string name="makeAStudy">Overvej at lave et studie for sikker opbevaring og deling.</string>
   <string name="clearSavedMoves">Ryd træk</string>
-  <string name="previouslyOnLichessTV">Tidligere på Lichess TV</string>
+  <string name="previouslyOnLichessTV">Tidligere på Chess-Online TV</string>
   <string name="onlinePlayers">Online spillere</string>
   <string name="activePlayers">Aktive spillere</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Bemærk: Partiet er ratet, men er uden tidsbegrænsning!</string>
@@ -697,7 +697,7 @@
   <string name="simulHostExtraTime">Ekstra tid til værtsuret</string>
   <string name="simulAddExtraTimePerPlayer">Læg den indledende tid til dit ur igen for hver spiller, der melder sig til simultanspillet.</string>
   <string name="simulHostExtraTimePerPlayer">Ekstra tid på arrangørens ur pr. spiller</string>
-  <string name="lichessTournaments">Lichess-turneringer</string>
+  <string name="lichessTournaments">Chess-Online-turneringer</string>
   <string name="tournamentFAQ">Arenaturnering FAQ</string>
   <string name="timeBeforeTournamentStarts">Tid før turnering starter</string>
   <string name="averageCentipawnLoss">Gennemsnitligt centibonde-tab</string>
@@ -748,7 +748,7 @@
   <string name="byRegisteringYouAgreeToBeBoundByOur">Ved at registrere, accepterer du at være bundet af vores %s.</string>
   <string name="readAboutOur">Læs om vores %s.</string>
   <string name="networkLagBetweenYouAndLichess">Netværksforsinkelse mellem dig og lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">Tid til at behandle et træk på Lichess-server</string>
+  <string name="timeToProcessAMoveOnLichessServer">Tid til at behandle et træk på Chess-Online-server</string>
   <string name="downloadAnnotated">Download kommenteret</string>
   <string name="downloadRaw">Download rå</string>
   <string name="downloadImported">Download importeret</string>
@@ -765,7 +765,7 @@
   <string name="kidMode">Børnetilstand</string>
   <string name="kidModeIsEnabled">Børnetilstand er aktiveret.</string>
   <string name="kidModeExplanation">Dette angår sikkerhed. I børnetilstand er alt kommunikation deaktiveret. Aktivér dette for dine børn eller skoleelever for at beskytte dem mod andre internetbrugere.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">I børnetilstand vil Lichess-logoet få et %s ikon, så du ved, at dine børn er sikret.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">I børnetilstand vil Chess-Online-logoet få et %s ikon, så du ved, at dine børn er sikret.</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">Din konto er under administration. Spørg din skaklærer om at ophæve børnetilstanden.</string>
   <string name="enableKidMode">Aktiver børnetilstand</string>
   <string name="disableKidMode">Deaktiver børnetilstand</string>
@@ -773,7 +773,7 @@
   <string name="sessions">Sessioner</string>
   <string name="revokeAllSessions">annuller alle sessioner</string>
   <string name="playChessEverywhere">Spil skak hvor som helst</string>
-  <string name="asFreeAsLichess">Gratis som Lichess</string>
+  <string name="asFreeAsLichess">Gratis som Chess-Online</string>
   <string name="builtForTheLoveOfChessNotMoney">Bygget af kærlighed til skak, ikke penge</string>
   <string name="everybodyGetsAllFeaturesForFree">Alle får alle funktioner gratis</string>
   <string name="zeroAdvertisement">Ingen reklamer</string>
@@ -881,7 +881,7 @@
     <item quantity="one">og gem %s serie af forhåndstræk</item>
     <item quantity="other">og gem %s serier af forhåndstræk</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Du har modtaget en privat besked fra Lichess.</string>
+  <string name="showUnreadLichessMessage">Du har modtaget en privat besked fra Chess-Online.</string>
   <string name="clickHereToReadIt">Klik her for at læse den</string>
   <string name="sorry">Beklager :(</string>
   <string name="weHadToTimeYouOutForAWhile">Vi måtte give dig en timeout.</string>
@@ -894,14 +894,14 @@
   <string name="tryToWin">Forsøg at vinde (eller i det mindre opnå remis) alle partier du spiller.</string>
   <string name="resignLostGames">Kapituler ved tabende position (lad ikke tiden løbe ud).</string>
   <string name="temporaryInconvenience">Vi undskylder for den midlertidige ulejlighed,</string>
-  <string name="wishYouGreatGames">og ønsker dig gode kampe på lichess.org.</string>
+  <string name="wishYouGreatGames">og ønsker dig gode kampe på chess-online.com.</string>
   <string name="thankYouForReading">Tak for at læse!</string>
   <string name="lifetimeScore">Livstidsscore</string>
   <string name="currentMatchScore">Nuværende kampscore</string>
   <string name="agreementAssistance">Jeg lover, at jeg på intet tidspunkt i løbet af mine partier vil modtage assistance (fra en skakcomputer, bog, database eller anden person).</string>
   <string name="agreementNice">Jeg lover, at jeg altid vil være respektfuld mod andre spillere.</string>
   <string name="agreementMultipleAccounts" comment="%s will be replaced with the translation of 'termsOfService'">Jeg er indforstået med, at jeg ikke opretter flere konti (undtagen af de grunde, der er angivet i %s).</string>
-  <string name="agreementPolicy">Jeg lover, at jeg vil overholde alle Lichess-politikker.</string>
+  <string name="agreementPolicy">Jeg lover, at jeg vil overholde alle Chess-Online-politikker.</string>
   <string name="searchOrStartNewDiscussion">Søg eller start ny diskussion</string>
   <string name="edit">Rediger</string>
   <string name="bullet" comment="Probably best left untranslated. Leave it as 'Bullet' unless your language has a better word for it.">Bullet</string>
@@ -940,7 +940,7 @@
   <string name="congratsYouWon">Tillykke, du vandt!</string>
   <string name="gameVsX">Parti mod %1$s</string>
   <string name="resVsX">%1$s mod %2$s</string>
-  <string name="lostAgainstTOSViolator">Du tabte til en person, der overtrådte Lichess brugerbetingelserne</string>
+  <string name="lostAgainstTOSViolator">Du tabte til en person, der overtrådte Chess-Online brugerbetingelserne</string>
   <string name="refundXpointsTimeControlY">Refunderet: %1$s %2$s ratingpoint.</string>
   <string name="timeAlmostUp">Tiden er næsten udløbet!</string>
   <string name="clickToRevealEmailAddress">[Klik for at vise e-mailadresse]</string>
@@ -995,13 +995,13 @@ Lad stå tomt for at starte partier fra den normale udgangsstilling.</string>
   <string name="youCantStartNewGame">Du kan ikke starte et nyt parti, før dette er afsluttet.</string>
   <string name="since">Siden</string>
   <string name="until">Indtil</string>
-  <string name="lichessDbExplanation">Ratede partier indsamlet fra alle Lichess-spillere</string>
+  <string name="lichessDbExplanation">Ratede partier indsamlet fra alle Chess-Online-spillere</string>
   <string name="switchSides">Skift side</string>
   <string name="closingAccountWithdrawAppeal">Hvis du lukker din konto, vil din appel blive trukket tilbage</string>
   <string name="ourEventTips">Tips til organisering af begivenheder</string>
   <string name="instructions">Instruktioner</string>
   <string name="showMeEverything">Vis mig alt</string>
-  <string name="lichessPatronInfo">Lichess er en velgørenhedsorganisation og helt gratis/libre open source-software.
+  <string name="lichessPatronInfo">Chess-Online er en velgørenhedsorganisation og helt gratis/libre open source-software.
 Alle driftsomkostninger, udvikling og indhold finansieres udelukkende af brugerdonationer.</string>
   <string name="nothingToSeeHere">Intet at se her i øjeblikket.</string>
   <string name="stats">Statistik</string>

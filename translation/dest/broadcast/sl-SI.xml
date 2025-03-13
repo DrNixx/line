@@ -13,7 +13,7 @@
   <string name="newBroadcast">Nov prenos v živo</string>
   <string name="subscribedBroadcasts">Naročene oddaje</string>
   <string name="aboutBroadcasts">O oddaji</string>
-  <string name="howToUseLichessBroadcasts">Kako uporabljati Lichess Broadcasts.</string>
+  <string name="howToUseLichessBroadcasts">Kako uporabljati Chess-Online Broadcasts.</string>
   <string name="theNewRoundHelp">Novi krog bo imel iste člane in sodelavce kot prejšnji.</string>
   <string name="addRound">Dodajte krog</string>
   <string name="ongoing">V teku</string>
@@ -25,8 +25,8 @@
   <string name="fullDescription">Polni opis dogodka</string>
   <string name="fullDescriptionHelp">Neobvezen dolg opis prenosa. %1$s je na voljo. Dolžina mora biti manjša od %2$s znakov.</string>
   <string name="sourceSingleUrl">Vir partije v PGN formatu</string>
-  <string name="sourceUrlHelp">URL, ki ga bo Lichess preveril, da bo prejel PGN posodobitve. Javno mora biti dostopen preko interneta.</string>
-  <string name="sourceGameIds">Do 64 Lichess ID-jev iger, deljenih s presledkom.</string>
+  <string name="sourceUrlHelp">URL, ki ga bo Chess-Online preveril, da bo prejel PGN posodobitve. Javno mora biti dostopen preko interneta.</string>
+  <string name="sourceGameIds">Do 64 Chess-Online ID-jev iger, deljenih s presledkom.</string>
   <string name="startDateTimeZone">Začetni datum v lokalnem časovnem pasu turnirja: %s</string>
   <string name="startDateHelp">Izbirno, če veste, kdaj se dogodek začne</string>
   <string name="currentGameUrl">URL trenutno igrane igre</string>
@@ -49,7 +49,7 @@
   <string name="ageThisYear">Starost letos</string>
   <string name="unrated">Nima ratinga</string>
   <string name="recentTournaments">Pretekli turnirji</string>
-  <string name="openLichess">Odprto v Lichess</string>
+  <string name="openLichess">Odprto v Chess-Online</string>
   <string name="teams">Ekipe</string>
   <string name="boards">Deske</string>
   <string name="overview">Pregled</string>

@@ -161,7 +161,7 @@ final class TournamentApi(
                       featureOneOf(tour, pairings, ranking.ranking) // do outside of queue
         .monSuccess(_.tournament.pairing.create)
         .chronometer
-        .logIfSlow(100, logger)(_ => s"Pairings for https://lichess.org/tournament/${tour.id}")
+        .logIfSlow(100, logger)(_ => s"Pairings for https://live.chess-online.com/tournament/${tour.id}")
         .result)
 
   private def featureOneOf(tour: Tournament, pairings: List[Pairing.WithPlayers], ranking: Ranking): Funit =

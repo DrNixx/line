@@ -57,7 +57,7 @@ object AuthorizationRequest:
     def maybeLegacy: Boolean = codeChallengeMethod.isEmpty && codeChallenge.isEmpty
 
     lazy val trusted =
-      List("lichess.org", "discotron.lichess.org", "www.lichess4545.com", "wiki.lichess.ovh").has:
+      List("live.chess-online.com", "www.chess-online.com", "forum.chess-online.com", "wiki.lichess.ovh").has:
         ~redirectUri.host
 
     lazy val lichessMobileAttributes = List(

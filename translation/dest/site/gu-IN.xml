@@ -424,7 +424,7 @@
   <string name="inlineNotation">લાઇનમાં લખાયેલ</string>
   <string name="makeAStudy">સલામતી અને વહેંચણી માટે, અભ્યાસ કરવાનું વિચારો.</string>
   <string name="clearSavedMoves">સ્પષ્ટ ચાલ</string>
-  <string name="previouslyOnLichessTV">અગાઉનું Lichess TV પર</string>
+  <string name="previouslyOnLichessTV">અગાઉનું Chess-Online TV પર</string>
   <string name="onlinePlayers">ઑનલાઇન ખેલાડીઓ</string>
   <string name="activePlayers">સક્રિય ખેલાડીઓ</string>
   <string name="bewareTheGameIsRatedButHasNoClock">સાવચેત રહો, રમત રેટ કરવામાં આવી છે પરંતુ કોઈ ઘડિયાળ નથી!</string>
@@ -522,13 +522,13 @@
   <string name="simulHostExtraTime">વધારાનો પ્રારંભિક ઘડિયાળ સમય હોસ્ટ કરો</string>
   <string name="simulAddExtraTimePerPlayer">સિમુલમાં જોડાનાર દરેક ખેલાડી માટે તમારી ઘડિયાળમાં પ્રારંભિક સમય ઉમેરો.</string>
   <string name="simulHostExtraTimePerPlayer">ખેલાડી દીઠ વધારાનો ઘડિયાળ સમય હોસ્ટ કરો</string>
-  <string name="lichessTournaments">Lichess પ્રતિયોગિતાઓ</string>
+  <string name="lichessTournaments">Chess-Online પ્રતિયોગિતાઓ</string>
   <string name="tournamentFAQ">એરેના ટુર્નામેન્ટ FAQ</string>
   <string name="timeBeforeTournamentStarts">ટુર્નામેન્ટ શરૂ થાય તે પહેલાનો સમય</string>
   <string name="averageCentipawnLoss">સરેરાશ સેન્ટીપૉન નુકશાન</string>
   <string name="accuracy">ચોકસાઈ</string>
-  <string name="networkLagBetweenYouAndLichess">તમારા અને Lichess વચ્ચે નેટવર્ક વિલંબ છે</string>
-  <string name="timeToProcessAMoveOnLichessServer">Lichess ના સર્વર પર એક ચાલની પ્રક્રિયા માટેનો સમય</string>
+  <string name="networkLagBetweenYouAndLichess">તમારા અને Chess-Online વચ્ચે નેટવર્ક વિલંબ છે</string>
+  <string name="timeToProcessAMoveOnLichessServer">Chess-Online ના સર્વર પર એક ચાલની પ્રક્રિયા માટેનો સમય</string>
   <string name="receiveForumNotifications">જ્યારે ફોરમમાં ઉલ્લેખ કરવામાં આવે ત્યારે સૂચનાઓ પ્રાપ્ત કરો</string>
   <string name="shareYourInsightsData">તમારી ચેસ આંતરદૃષ્ટિ ડેટા શેર કરો</string>
   <string name="withNobody">કોઈની સાથે</string>
@@ -596,7 +596,7 @@
   <string name="tryToWin">તમે રમો છો તે દરેક રમત જીતવાનો (અથવા ઓછામાં ઓછો ડ્રો) કરવાનો પ્રયાસ કરો.</string>
   <string name="resignLostGames">હારી ગયેલી રમતોને રાજીનામું આપો (ઘડિયાળને નીચે ન ચાલવા દો).</string>
   <string name="temporaryInconvenience">અસ્થાયી અસુવિધા માટે અમે દિલગીર છીએ,</string>
-  <string name="wishYouGreatGames">and wish you great games on lichess.org.</string>
+  <string name="wishYouGreatGames">and wish you great games on chess-online.com.</string>
   <string name="thankYouForReading">વાંચવા બદલ આભાર!</string>
   <string name="puzzleDesc">શતરંજના વ્યૂહની તાલીમ</string>
   <string name="markdownAvailable">%s અદ્યતન વાક્યરચના માટે ઉપલબ્ધ છે.</string>

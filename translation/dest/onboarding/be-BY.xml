@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="welcome">Вітаем!</string>
-  <string name="welcomeToLichess">Вітаем вас на lichess.org!</string>
+  <string name="welcomeToLichess">Вітаем вас на chess-online.com!</string>
   <string name="thisIsYourProfilePage">гэта старонка вашага профілю.</string>
   <string name="enabledKidModeSuggestion">Ці гэтым уліковым запісам будзе карыстацца дзіцяці? магчыма вы пажадаеце ўключыць %s.</string>
   <string name="whatNowSuggestions">што цяпер? вось некаторыя прапановы :</string>
@@ -9,9 +9,9 @@
   <string name="improveWithChessTacticsPuzzles">Паляпшайце свой узровень з дапамогай шахматных галаваломак.</string>
   <string name="playTheArtificialIntelligence">Згуляйце супраць штучнага інтэлекту.</string>
   <string name="playOpponentsFromAroundTheWorld">Гуляйце з супернікамі з усяго свету.</string>
-  <string name="followYourFriendsOnLichess">Сачыце за сябрамі на Lichess.</string>
+  <string name="followYourFriendsOnLichess">Сачыце за сябрамі на Chess-Online.</string>
   <string name="playInTournaments">Гуляйце ў турнірах.</string>
   <string name="learnFromXAndY">Вучыся паводле %1$s і %2$s.</string>
-  <string name="configureLichess">Наладзьце Lichess на свой густ.</string>
+  <string name="configureLichess">Наладзьце Chess-Online на свой густ.</string>
   <string name="exploreTheSiteAndHaveFun">Даследуйце сайт і атрымлівайце задавальненне :)</string>
 </resources>

@@ -8,9 +8,9 @@
     <item quantity="one">%s Blog-Beitrag</item>
     <item quantity="other">%s Blog-Beiträge</item>
   </plurals>
-  <string name="lichessOfficialBlog">Offizieller Lichess-Blog</string>
+  <string name="lichessOfficialBlog">Offizieller Chess-Online-Blog</string>
   <string name="continueReadingPost">Diesen Beitrag weiterlesen</string>
-  <string name="lichessBlogPostsFromXYear">Blogbeiträge von Lichess in %s</string>
+  <string name="lichessBlogPostsFromXYear">Blogbeiträge von Chess-Online in %s</string>
   <string name="previousBlogPosts">Frühere Blogeinträge</string>
   <string name="xBlog">Blog von %s</string>
   <string name="newPost">Neuer Beitrag</string>
@@ -52,7 +52,7 @@
   <string name="deleteBlog">Lösche diesen Blog-Beitrag unwiderruflich</string>
   <string name="safeToUseImages">Es ist sicher Bilder von den folgenden Webseiten zu verwenden: </string>
   <string name="selectPostTopics">Wähle die Themen deines Beitrags aus</string>
-  <string name="useImagesYouMadeYourself">Du kannst auch Bilder verwenden, die du selbst erstellt oder geschossen hast, sowie Screenshots von Lichess... Alles, was nicht von jemand anderem urheberrechtlich geschützt ist.</string>
+  <string name="useImagesYouMadeYourself">Du kannst auch Bilder verwenden, die du selbst erstellt oder geschossen hast, sowie Screenshots von Chess-Online... Alles, was nicht von jemand anderem urheberrechtlich geschützt ist.</string>
   <string name="safeAndRespectfulContent">Bitte poste nur sichere und respektvolle Inhalte. Kopiere nicht den Inhalt anderer Personen.</string>
   <string name="inappropriateContentAccountClosed">Jegliche unangemessenen Inhalte können zur Schließung deines Benutzerkontos führen.</string>
   <string name="blogTips">Unsere einfachen Tipps, um tolle Blog-Beiträge zu schreiben</string>

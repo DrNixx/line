@@ -2,14 +2,14 @@
 <resources>
   <string name="donate">Donér</string>
   <string name="donateAsX">Donér som %s</string>
-  <string name="lichessPatron">Lichess Protektor</string>
+  <string name="lichessPatron">Chess-Online Protektor</string>
   <string name="patronSince" comment="string is a date">Protektor siden %s</string>
   <string name="freeAccount">Gratis konto</string>
-  <string name="becomePatron">Bliv Lichess Protektor</string>
-  <string name="xBecamePatron">%s blev Lichess Protektor</string>
+  <string name="becomePatron">Bliv Chess-Online Protektor</string>
+  <string name="xBecamePatron">%s blev Chess-Online Protektor</string>
   <plurals name="xIsPatronForNbMonths">
-    <item quantity="one">%1$s er en Lichess Protektor i %2$s måned</item>
-    <item quantity="other">%1$s er en Lichess Protektor i %2$s måneder</item>
+    <item quantity="one">%1$s er en Chess-Online Protektor i %2$s måned</item>
+    <item quantity="other">%1$s er en Chess-Online Protektor i %2$s måneder</item>
   </plurals>
   <string name="newPatrons">Nye protektorer</string>
   <string name="freeChess">Gratis skak for alle, for evigt!</string>
@@ -19,10 +19,10 @@
   <string name="patronUntil">Du har en protektor-konto indtil den %s.</string>
   <string name="ifNotRenewedThenAccountWillRevert">Hvis ikke fornyet, vil din konto derefter blive til en almindelig konto igen.</string>
   <string name="weAreNonProfit">Vi er en nonprofitorganisation, da vi mener, at alle bør have adgang til en gratis, verdensomspændende skakplatform.</string>
-  <string name="weRelyOnSupport">Vi er afhængige af støtte fra folk som dig for at gøre dette muligt. Hvis du nyder at bruge Lichess, så overvej gerne at støtte os med et bidrag og bliv protektor!</string>
+  <string name="weRelyOnSupport">Vi er afhængige af støtte fra folk som dig for at gøre dette muligt. Hvis du nyder at bruge Chess-Online, så overvej gerne at støtte os med et bidrag og bliv protektor!</string>
   <string name="lifetime">Livstid</string>
-  <string name="payLifetimeOnce">Betal %s én gang. Vær Lichess Protektor for evigt!</string>
-  <string name="lifetimePatron">Livstids Lichess Protektor</string>
+  <string name="payLifetimeOnce">Betal %s én gang. Vær Chess-Online Protektor for evigt!</string>
+  <string name="lifetimePatron">Livstids Chess-Online Protektor</string>
   <string name="monthly">Månedligt</string>
   <string name="recurringBilling">Tilbagevendende fakturering, forny dine Protektor-vinger hver måned.</string>
   <string name="onetime">En gang</string>
@@ -32,30 +32,30 @@
   <string name="withCreditCard">Kreditkort</string>
   <string name="logInToDonate">Log ind for at donere</string>
   <string name="weAreSmallTeam">Vi er et lille hold, så din støtte gør en kæmpe forskel!</string>
-  <string name="celebratedPatrons">De værdsatte protektorer, som gør Lichess mulig</string>
+  <string name="celebratedPatrons">De værdsatte protektorer, som gør Chess-Online mulig</string>
   <string name="whereMoneyGoes">Hvad går pengene til?</string>
   <string name="serversAndDeveloper">Først og fremmest kraftfulde servere.
-Dernæst betaler vi en fuldtidsudvikler: %s, grundlæggeren af Lichess.</string>
+Dernæst betaler vi en fuldtidsudvikler: %s, grundlæggeren af Chess-Online.</string>
   <string name="costBreakdown">Se en detaljeret opgørelse over omkostninger</string>
-  <string name="officialNonProfit">Er Lichess officielt en nonprofit?</string>
+  <string name="officialNonProfit">Er Chess-Online officielt en nonprofit?</string>
   <string name="actOfCreation">Ja, her er fundatsen (på fransk)</string>
   <string name="changeMonthlySupport">Kan jeg ændre/annullere mit månedlige bidrag?</string>
   <string name="changeOrContact">Ja, til enhver tid, fra denne side.
 Eller du kan %s.</string>
-  <string name="contactSupport">kontakte Lichess-support</string>
+  <string name="contactSupport">kontakte Chess-Online-support</string>
   <string name="otherMethods">Andre måder at bidrage?</string>
-  <string name="lichessIsRegisteredWith">Lichess er registreret hos %s.</string>
+  <string name="lichessIsRegisteredWith">Chess-Online er registreret hos %s.</string>
   <string name="bankTransfers">Vi kan også modtage bankoverførsler</string>
   <string name="onlyDonationFromAbove">Bemærk, at kun ved brug af donationsformularen ovenfor vil du få status af protektor.</string>
   <string name="patronFeatures">Er nogle funktioner forbeholdt protektorer?</string>
-  <string name="noPatronFeatures">Nej, for Lichess er helt gratis, for evigt og for alle. Det er et løfte.
+  <string name="noPatronFeatures">Nej, for Chess-Online er helt gratis, for evigt og for alle. Det er et løfte.
 Men protektorer kan bryste sig af et sejt, nyt profil-ikon.</string>
   <string name="featuresComparison">Se en detaljeret funktionssammenligning</string>
   <plurals name="patronForMonths">
-    <item quantity="one">Lichess Protektor i en måned</item>
-    <item quantity="other">Lichess Protektor i %s måneder</item>
+    <item quantity="one">Chess-Online Protektor i en måned</item>
+    <item quantity="other">Chess-Online Protektor i %s måneder</item>
   </plurals>
-  <string name="youSupportWith">Du støtter lichess.org med %s per måned.</string>
+  <string name="youSupportWith">Du støtter chess-online.com med %s per måned.</string>
   <string name="tyvm">Mange tak for din støtte! Du er for sej!</string>
   <string name="currentStatus">Nuværende status</string>
   <string name="nextPayment">Næste betaling</string>
@@ -67,18 +67,18 @@ Men protektorer kan bryste sig af et sejt, nyt profil-ikon.</string>
   <string name="changeMonthlyAmount">Ændr det månedlige beløb (%s)</string>
   <string name="cancelSupport">annuller din støtte</string>
   <string name="xOrY">%1$s eller %2$s</string>
-  <string name="decideHowMuch">Beslut hvor meget Lichess er værd for dig:</string>
+  <string name="decideHowMuch">Beslut hvor meget Chess-Online er værd for dig:</string>
   <string name="stopPayments">Træk dit kreditkort tilbage og stop betalinger:</string>
   <string name="stopPaymentsPayPal">Annuller PayPal-abonnement og stop betalinger:</string>
-  <string name="noLongerSupport">Støt ikke længere Lichess</string>
-  <string name="viewOthers">Se andre Lichess-protektorer</string>
+  <string name="noLongerSupport">Støt ikke længere Chess-Online</string>
+  <string name="viewOthers">Se andre Chess-Online-protektorer</string>
   <string name="date">Dato</string>
   <string name="amount">Beløb</string>
   <string name="transactionCompleted">Din transaktion er fuldført, og en kvittering for dit bidrag er blevet e-mailet til dig.</string>
   <string name="permanentPatron">Du har nu en permanent Protektor-konto.</string>
   <string name="checkOutProfile">Tjek din profilside!</string>
-  <string name="nowLifetime">Du er nu Lichess Protektor for livstid!</string>
-  <string name="nowOneMonth">Du er nu Lichess Protektor i en måned!</string>
+  <string name="nowLifetime">Du er nu Chess-Online Protektor for livstid!</string>
+  <string name="nowOneMonth">Du er nu Chess-Online Protektor i en måned!</string>
   <string name="downgradeNextMonth">Om en måned bliver du IKKE debiteret igen, og din konto bliver nedgraderet til gratis.</string>
   <string name="changeCurrency">Skift valuta</string>
   <string name="paymentDetails">Betalingsoplysninger</string>

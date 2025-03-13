@@ -13,7 +13,7 @@
   <string name="newBroadcast">Нова трансляція</string>
   <string name="subscribedBroadcasts">Обрані трансляції</string>
   <string name="aboutBroadcasts">Про трансляцію</string>
-  <string name="howToUseLichessBroadcasts">Як користуватися Lichess трансляціями.</string>
+  <string name="howToUseLichessBroadcasts">Як користуватися Chess-Online трансляціями.</string>
   <string name="theNewRoundHelp">У новому раунді будуть ті самі учасники та редактори, що й у попередньому.</string>
   <string name="addRound">Додати раунд</string>
   <string name="ongoing">Поточні</string>
@@ -25,8 +25,8 @@
   <string name="fullDescription">Повний опис події</string>
   <string name="fullDescriptionHelp">Необов\'язковий довгий опис трансляції. Наявна розмітка %1$s. Довжина має бути менша ніж %2$s символів.</string>
   <string name="sourceSingleUrl">Адреса джерела PGN</string>
-  <string name="sourceUrlHelp">Посилання, яке Lichess перевірятиме, щоб отримати оновлення PGN. Воно має бути загальнодоступним в Інтернеті.</string>
-  <string name="sourceGameIds">До 64 ігрових ID Lichess, відокремлені пробілами.</string>
+  <string name="sourceUrlHelp">Посилання, яке Chess-Online перевірятиме, щоб отримати оновлення PGN. Воно має бути загальнодоступним в Інтернеті.</string>
+  <string name="sourceGameIds">До 64 ігрових ID Chess-Online, відокремлені пробілами.</string>
   <string name="startDateTimeZone">Дата початку в місцевому часовому поясі турніру: %s</string>
   <string name="startDateHelp">За бажанням, якщо ви знаєте, коли починається подія</string>
   <string name="currentGameUrl">Посилання на поточну гру</string>
@@ -49,7 +49,7 @@
   <string name="ageThisYear">Вік цього року</string>
   <string name="unrated">Без рейтингу</string>
   <string name="recentTournaments">Нещодавні турніри</string>
-  <string name="openLichess">Відкрити в Lichess</string>
+  <string name="openLichess">Відкрити в Chess-Online</string>
   <string name="teams">Команди</string>
   <string name="boards">Дошки</string>
   <string name="overview">Огляд</string>

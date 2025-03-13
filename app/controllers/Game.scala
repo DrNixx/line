@@ -96,7 +96,7 @@ final class Game(env: Env, apiC: => Api) extends LilaController(env):
                     Ok.chunked(source)
                       .pipe:
                         asAttachmentStream:
-                          s"lichess_${user.username}_${fileDate}.${format.toString.toLowerCase}"
+                          s"chess_${user.username}_${fileDate}.${format.toString.toLowerCase}"
                       .as(gameContentType(config))
 
   private def fileDate = DateTimeFormatter.ofPattern("yyyy-MM-dd").print(nowInstant)
@@ -106,7 +106,7 @@ final class Game(env: Env, apiC: => Api) extends LilaController(env):
       env.api.gameApiV2.exportUserImportedGames(me)
     ): source =>
       Ok.chunked(source)
-        .pipe(asAttachmentStream(s"lichess_${me.username}_$fileDate.imported.pgn"))
+        .pipe(asAttachmentStream(s"chess_${me.username}_$fileDate.imported.pgn"))
         .as(pgnContentType)
   }
 
@@ -129,7 +129,7 @@ final class Game(env: Env, apiC: => Api) extends LilaController(env):
       Ok.chunked(source)
         .pipe:
           asAttachmentStream(
-            s"lichess_${me.username}_$fileDate.bookmarks.${config.format.toString.toLowerCase}"
+            s"chess_${me.username}_$fileDate.bookmarks.${config.format.toString.toLowerCase}"
           )
         .as(gameContentType(config))
   }

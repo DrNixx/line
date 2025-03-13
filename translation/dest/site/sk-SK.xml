@@ -262,9 +262,9 @@
   <string name="forgotPassword">Zabudli ste heslo?</string>
   <string name="error.weakPassword">Toto heslo je veľmi bežné, a ľahké na uhádnutie.</string>
   <string name="error.namePassword">Prosím, nepoužívajte Vaše prihlasovacie meno ako Vaše heslo!</string>
-  <string name="blankedPassword">Na inej stránke ste použili rovnaké heslo a táto stránka bola napadnutá. Aby sme zaistili bezpečnosť Vášho účtu Lichess, je potrebné aby ste si nastavili nové heslo. Ďakujeme Vám za pochopenie.</string>
+  <string name="blankedPassword">Na inej stránke ste použili rovnaké heslo a táto stránka bola napadnutá. Aby sme zaistili bezpečnosť Vášho účtu Chess-Online, je potrebné aby ste si nastavili nové heslo. Ďakujeme Vám za pochopenie.</string>
   <string name="youAreLeavingLichess">Odchádzate z Lichessu</string>
-  <string name="neverTypeYourPassword">Nikdy nepoužívajte vaše Lichess heslo na inom webe!</string>
+  <string name="neverTypeYourPassword">Nikdy nepoužívajte vaše Chess-Online heslo na inom webe!</string>
   <string name="proceedToX">Pokračovať na %s</string>
   <string name="passwordSuggestion">Nepoužívajte heslo ktoré, vám dal niekto iný. Mohol by vám ukradnúť účet.</string>
   <string name="emailSuggestion">Nepoužívajte e-mail, ktorý, vám dal niekto iný. Mohol by vám ukradnúť účet.</string>
@@ -391,7 +391,7 @@
     <item quantity="many">Pridať %s sekúnd</item>
     <item quantity="other">Pridať %s sekúnd</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Tento účet porušil Podmienky poskytovania služby Lichess</string>
+  <string name="thisAccountViolatedTos">Tento účet porušil Podmienky poskytovania služby Chess-Online</string>
   <string name="openingExplorerAndTablebase">Knižnica otvorení &amp; koncoviek</string>
   <string name="takeback">Vrátiť ťah</string>
   <string name="proposeATakeback">Ponúknuť vrátenie ťahu</string>
@@ -601,7 +601,7 @@
   <string name="inlineNotation">Notácia v riadkoch</string>
   <string name="makeAStudy">Pre bezpečné uchovanie a zdieľanie pouvažujte nad vytvorením štúdie.</string>
   <string name="clearSavedMoves">Zrušiť dočasné ťahy</string>
-  <string name="previouslyOnLichessTV">Bolo na Lichess TV</string>
+  <string name="previouslyOnLichessTV">Bolo na Chess-Online TV</string>
   <string name="onlinePlayers">Pripojení hráči</string>
   <string name="activePlayers">Najaktívnejší hráči</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Pozor, partia je hodnotená, ale bez časového limitu!</string>
@@ -777,7 +777,7 @@
   <string name="simulHostExtraTime">Dotatočný čas pre hostiteľa.</string>
   <string name="simulAddExtraTimePerPlayer">Za každého hráča, ktorý sa pripojí k simultánke, navýšiť čas na Vašich hodinách o počiatočný čas partie.</string>
   <string name="simulHostExtraTimePerPlayer">Navýšiť čas na hodinách za každého hráča</string>
-  <string name="lichessTournaments">Lichess turnaje</string>
+  <string name="lichessTournaments">Chess-Online turnaje</string>
   <string name="tournamentFAQ">Často kladené otázky pre turnajovú arénu</string>
   <string name="timeBeforeTournamentStarts">Čas do štartu turnaja</string>
   <string name="averageCentipawnLoss">Priemerná strata (v stotinách pešiaka)</string>
@@ -847,7 +847,7 @@
   <string name="kidMode">Detský režim</string>
   <string name="kidModeIsEnabled">Detský režim je povolený.</string>
   <string name="kidModeExplanation">V detskom režime je pre ochranu detí a mládeže pred ostatnými užívateľmi akákoľvek komunikácia zablokovaná.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">Keď je zapnutý detský režim, tak sa pri logu Lichess objaví ikona %s. Podľa toho viete, že je Vaše dieťa v bezpečí.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">Keď je zapnutý detský režim, tak sa pri logu Chess-Online objaví ikona %s. Podľa toho viete, že je Vaše dieťa v bezpečí.</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">Váš účet je spravovaný niekým iným. Opýtajte sa svojho učiteľa šachu na zrušenie detského režimu.</string>
   <string name="enableKidMode">Povoliť detský režim</string>
   <string name="disableKidMode">Vypnúť detský režim</string>
@@ -971,7 +971,7 @@
     <item quantity="many">a uložiť %s variantov predťahu</item>
     <item quantity="other">a uložiť %s variantov predťahu</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Obdržali ste súkromnú správu od Lichess.</string>
+  <string name="showUnreadLichessMessage">Obdržali ste súkromnú správu od Chess-Online.</string>
   <string name="clickHereToReadIt">Kliknutím sem si ju môžete prečítať</string>
   <string name="sorry">Prepáčte :(</string>
   <string name="weHadToTimeYouOutForAWhile">Na chvíľu sme Vás museli odstaviť.</string>
@@ -984,7 +984,7 @@
   <string name="tryToWin">Snažte sa vyhrať (alebo aspoň zremizovať) každú partiu, ktorú hráte!</string>
   <string name="resignLostGames">Prehraté partie vzdajte (nenechávajte vypršať čas na hodinách)!</string>
   <string name="temporaryInconvenience">Ospravedlňujeme sa za spôsobenú nepríjemnosť,</string>
-  <string name="wishYouGreatGames">a prajeme Vám veľa skvelých partií na lichess.org.</string>
+  <string name="wishYouGreatGames">a prajeme Vám veľa skvelých partií na chess-online.com.</string>
   <string name="thankYouForReading">Ďakujeme za dočítanie.</string>
   <string name="lifetimeScore">Celkové skóre</string>
   <string name="currentMatchScore">Skóre aktuálneho zápasu</string>
@@ -1030,7 +1030,7 @@
   <string name="congratsYouWon">Gratulujeme, vyhrali ste!</string>
   <string name="gameVsX">v partii proti %1$s</string>
   <string name="resVsX">%1$s proti %2$s</string>
-  <string name="lostAgainstTOSViolator">Prehrali ste s niekým kto porušil pravidlá stránky Lichess</string>
+  <string name="lostAgainstTOSViolator">Prehrali ste s niekým kto porušil pravidlá stránky Chess-Online</string>
   <string name="refundXpointsTimeControlY">Náhrada: %1$s %2$s ratingových bodov.</string>
   <string name="timeAlmostUp">Čas čoskoro vyprší!</string>
   <string name="clickToRevealEmailAddress">[Kliknite pre zobrazenie e-mailovej adresy]</string>
@@ -1085,13 +1085,13 @@ Nechajte prázdne pre začatie partií zo základnej pozície!</string>
   <string name="youCantStartNewGame">Kým neukončíte túto partiu, nemôžete začať novú.</string>
   <string name="since">Od</string>
   <string name="until">Do</string>
-  <string name="lichessDbExplanation">Hodnotené partie vybraté spomedzi všetkých Lichess hráčov</string>
+  <string name="lichessDbExplanation">Hodnotené partie vybraté spomedzi všetkých Chess-Online hráčov</string>
   <string name="switchSides">Vymeniť strany</string>
   <string name="closingAccountWithdrawAppeal">Zrušením Vášho účtu bude Vaše odvolanie stiahnuté</string>
   <string name="ourEventTips">Naše tipy ohľadom organizovania podujatí</string>
   <string name="instructions">Inštrukcie</string>
   <string name="showMeEverything">Ukázať všetko</string>
-  <string name="lichessPatronInfo">Lichess je bezplatný a úplne slobodný/nezávislý softvér s otvoreným zdrojovým kódom. Všetky prevádzkové náklady, vývoj a obsah sú financované výlučne z darov používateľov.</string>
+  <string name="lichessPatronInfo">Chess-Online je bezplatný a úplne slobodný/nezávislý softvér s otvoreným zdrojovým kódom. Všetky prevádzkové náklady, vývoj a obsah sú financované výlučne z darov používateľov.</string>
   <string name="nothingToSeeHere">Momentálne tu nie je nič k zobrazeniu.</string>
   <string name="stats">Štatistiky</string>
 </resources>

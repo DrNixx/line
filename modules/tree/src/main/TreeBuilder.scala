@@ -144,4 +144,4 @@ object TreeBuilder:
             )
 
   private def formatError(id: GameId, err: chess.ErrorStr) =
-    s"TreeBuilder https://lichess.org/$id ${err.value.linesIterator.toList.headOption}"
+    s"TreeBuilder https://live.chess-online.com/$id ${err.value.linesIterator.toList.headOption}"

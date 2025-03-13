@@ -2,13 +2,13 @@
 <resources>
   <string name="donate">Ủng hộ</string>
   <string name="donateAsX">Ủng hộ bằng tài khoản %s</string>
-  <string name="lichessPatron">Người bảo trợ Lichess</string>
+  <string name="lichessPatron">Người bảo trợ Chess-Online</string>
   <string name="patronSince" comment="%s is a date">Người bảo trợ từ khi %s</string>
   <string name="freeAccount">Tài khoản miễn phí</string>
-  <string name="becomePatron">Trở thành một Người bảo trợ Lichess</string>
-  <string name="xBecamePatron">%s đã trở thành một Người bảo trợ Lichess</string>
+  <string name="becomePatron">Trở thành một Người bảo trợ Chess-Online</string>
+  <string name="xBecamePatron">%s đã trở thành một Người bảo trợ Chess-Online</string>
   <plurals name="xIsPatronForNbMonths">
-    <item quantity="other">%1$s là Người bảo trợ Lichess trong %2$s tháng</item>
+    <item quantity="other">%1$s là Người bảo trợ Chess-Online trong %2$s tháng</item>
   </plurals>
   <string name="newPatrons">Những Người bảo trợ mới</string>
   <string name="freeChess">Cờ Vua Miễn Phí Cho Mọi Người! Mãi Mãi!</string>
@@ -18,10 +18,10 @@
   <string name="patronUntil">Bạn có tài khoản người Bảo Trợ cho đến %s.</string>
   <string name="ifNotRenewedThenAccountWillRevert">Nếu không gia hạn, tài khoản của bạn sẽ trở về tài khoản bình thường.</string>
   <string name="weAreNonProfit">Chúng tôi là một hiệp hội phi lợi nhuận bởi vì chúng tôi tin rằng tất cả mọi người đều có thể có truy cập tới một nền tảng cờ vua miễn phí, đẳng cấp thế giới.</string>
-  <string name="weRelyOnSupport">Chúng tôi dựa vào sự đóng góp từ những người như bạn. Nếu bạn thích sử dụng Lichess, hãy cân nhắc giúp đỡ chúng tôi thông qua việc quyên góp và trờ thành một Người bảo trợ!</string>
+  <string name="weRelyOnSupport">Chúng tôi dựa vào sự đóng góp từ những người như bạn. Nếu bạn thích sử dụng Chess-Online, hãy cân nhắc giúp đỡ chúng tôi thông qua việc quyên góp và trờ thành một Người bảo trợ!</string>
   <string name="lifetime">Trọn đời</string>
-  <string name="payLifetimeOnce">Đóng góp %s một lần. Trở thành một Người bảo trợ Lichess trọn đời!</string>
-  <string name="lifetimePatron">Người bảo trợ Lichess trọn đời</string>
+  <string name="payLifetimeOnce">Đóng góp %s một lần. Trở thành một Người bảo trợ Chess-Online trọn đời!</string>
+  <string name="lifetimePatron">Người bảo trợ Chess-Online trọn đời</string>
   <string name="monthly">Hàng tháng</string>
   <string name="recurringBilling">Trả tiền định kỳ, gia hạn đôi cánh Người bảo trợ của bạn mỗi tháng.</string>
   <string name="onetime">Một lần</string>
@@ -31,29 +31,29 @@
   <string name="withCreditCard">Thẻ tín dụng</string>
   <string name="logInToDonate">Đăng nhập để ủng hộ</string>
   <string name="weAreSmallTeam">Chúng tôi là một đội nhỏ, vì vậy sự giúp đỡ của bạn tạo nên khác biệt rất lớn!</string>
-  <string name="celebratedPatrons">Những Người bảo trợ nổi tiếng biến Lichess thành hiện thực</string>
+  <string name="celebratedPatrons">Những Người bảo trợ nổi tiếng biến Chess-Online thành hiện thực</string>
   <string name="whereMoneyGoes">Tiền được dùng để làm gi?</string>
   <string name="serversAndDeveloper">Đầu tiên, một máy chủ mạnh mẽ.
-Sau đó chúng tôi trả lương cho một nhà phát triển toàn thời gian: %s, người sáng lập Lichess.</string>
+Sau đó chúng tôi trả lương cho một nhà phát triển toàn thời gian: %s, người sáng lập Chess-Online.</string>
   <string name="costBreakdown">Xem phân tích chi phí chi tiết</string>
-  <string name="officialNonProfit">Lichess có phải là một tổ chức phi lợi nhuận chính thức?</string>
+  <string name="officialNonProfit">Chess-Online có phải là một tổ chức phi lợi nhuận chính thức?</string>
   <string name="actOfCreation">Đúng, và đây là tuyên bố thành lập (bằng tiếng Pháp)</string>
   <string name="changeMonthlySupport">Tôi có thể thay đổi/hủy việc đóng góp hàng tháng được không?</string>
   <string name="changeOrContact">Có, bất cứ lúc nào, ở trang này.
 Hoặc bạn có thể %s.</string>
-  <string name="contactSupport">liên hệ với bộ phận hỗ trợ Lichess</string>
+  <string name="contactSupport">liên hệ với bộ phận hỗ trợ Chess-Online</string>
   <string name="otherMethods">Phương thức quyên góp khác?</string>
-  <string name="lichessIsRegisteredWith">Lichess được đăng ký với %s.</string>
+  <string name="lichessIsRegisteredWith">Chess-Online được đăng ký với %s.</string>
   <string name="bankTransfers">Chúng tôi cũng chấp nhận chuyển khoản ngân hàng</string>
   <string name="onlyDonationFromAbove">Xin lưu ý rằng chỉ có hình thức ủng hộ ở trên mới được cấp trạng thái Người bảo trợ.</string>
   <string name="patronFeatures">Có những tính năng nào được dành riêng cho những Người bảo trợ không?</string>
-  <string name="noPatronFeatures">Không, bởi vì Lichess hoàn toàn miễn phí, mãi mãi và dành cho tất cả mọi người. Đó là lời hứa của chúng tôi.
+  <string name="noPatronFeatures">Không, bởi vì Chess-Online hoàn toàn miễn phí, mãi mãi và dành cho tất cả mọi người. Đó là lời hứa của chúng tôi.
 Tuy nhiên, Patron được quyền khoe khoang với những đôi cánh Người bảo trợ mới thú vị hiển thị trên hồ sơ của bạn.</string>
   <string name="featuresComparison">Xem so sánh các tính năng chi tiết</string>
   <plurals name="patronForMonths">
-    <item quantity="other">Bảo trợ Lichess trong %s tháng</item>
+    <item quantity="other">Bảo trợ Chess-Online trong %s tháng</item>
   </plurals>
-  <string name="youSupportWith">Bạn hỗ trợ lichess.org với %s mỗi tháng.</string>
+  <string name="youSupportWith">Bạn hỗ trợ chess-online.com với %s mỗi tháng.</string>
   <string name="tyvm">Cảm ơn sự giúp đỡ của bạn rất nhiều. Bạn thật tuyệt vời!</string>
   <string name="currentStatus">Trạng thái hiện tại</string>
   <string name="nextPayment">Lần thanh toán tiếp theo</string>
@@ -65,19 +65,19 @@ Tuy nhiên, Patron được quyền khoe khoang với những đôi cánh Ngư�
   <string name="changeMonthlyAmount">Đổi số tiền hàng tháng (%s)</string>
   <string name="cancelSupport">Hủy sự ủng hộ của bạn</string>
   <string name="xOrY">%1$s hoặc %2$s</string>
-  <string name="decideHowMuch">Quyết định Lichess đáng giá như nào với bạn:</string>
+  <string name="decideHowMuch">Quyết định Chess-Online đáng giá như nào với bạn:</string>
   <string name="stopPayments">Rút thẻ tín dụng và dừng các thanh toán:</string>
   <string name="stopPaymentsPayPal">Huỷ đăng ký qua PayPal và dừng thanh toán:</string>
-  <string name="noLongerSupport">Không ủng hộ Lichess nữa</string>
-  <string name="viewOthers">Xem những Người bảo trợ Lichess khác</string>
+  <string name="noLongerSupport">Không ủng hộ Chess-Online nữa</string>
+  <string name="viewOthers">Xem những Người bảo trợ Chess-Online khác</string>
   <string name="date">Ngày</string>
   <string name="amount">Số tiền</string>
   <string name="transactionCompleted">Giao dịch của bạn đã hoàn thành và một hóa đơn cho quyên góp của bạn đã được gửi qua email tới bạn.</string>
   <string name="permanentPatron">Giờ bạn đã có một tài khoản Người bảo trợ trọn đời.</string>
   <string name="checkOutProfile">Hãy xem trang cá nhân của bạn!</string>
-  <string name="nowLifetime">Giờ bạn đã trở thành Người bảo trợ Lichess vĩnh viễn!</string>
-  <string name="nowOneMonth">Giờ bạn đã trở thành Người bảo trợ Lichess trong một tháng!</string>
-  <string name="downgradeNextMonth">Sau một tháng, bạn sẽ KHÔNG phải trả tiền lại nữa và tài khoản Lichess của bạn sẽ quay trở lại tài khoản thường.</string>
+  <string name="nowLifetime">Giờ bạn đã trở thành Người bảo trợ Chess-Online vĩnh viễn!</string>
+  <string name="nowOneMonth">Giờ bạn đã trở thành Người bảo trợ Chess-Online trong một tháng!</string>
+  <string name="downgradeNextMonth">Sau một tháng, bạn sẽ KHÔNG phải trả tiền lại nữa và tài khoản Chess-Online của bạn sẽ quay trở lại tài khoản thường.</string>
   <string name="changeCurrency">Thay đổi đơn vị tiền tệ</string>
   <string name="paymentDetails">Chi tiết thanh toán</string>
   <string name="updatePaymentMethod">Cập nhật phương thức thanh toán</string>

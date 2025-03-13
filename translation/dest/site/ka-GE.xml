@@ -336,7 +336,7 @@
     <item quantity="one">მიეცით %s წამი</item>
     <item quantity="other">მიეცით %s წამი</item>
   </plurals>
-  <string name="thisAccountViolatedTos">ამ ანგარიშმა დაარღვია Lichess-ის მომსახურების პირობები</string>
+  <string name="thisAccountViolatedTos">ამ ანგარიშმა დაარღვია Chess-Online-ის მომსახურების პირობები</string>
   <string name="openingExplorerAndTablebase">დებიუტის გზამკვლევი &amp; ცხრილ-ბაზა</string>
   <string name="takeback">სვლის დაბრუნება</string>
   <string name="proposeATakeback">სვლის დაბრუნების შეთავაზება</string>
@@ -515,7 +515,7 @@
   <string name="inlineNotation">შიგა ნოტაცია</string>
   <string name="makeAStudy">უსაფრთხო შენახვისა და გაზიარებისთვის, გააკეთეთ კვლევა.</string>
   <string name="clearSavedMoves">გაასუფთავეთ სვლები</string>
-  <string name="previouslyOnLichessTV">წინა Lichess TV-ზე</string>
+  <string name="previouslyOnLichessTV">წინა Chess-Online TV-ზე</string>
   <string name="onlinePlayers">ონლაინ მოთამაშეები</string>
   <string name="activePlayers">აქტიური მოთამაშეები</string>
   <string name="bewareTheGameIsRatedButHasNoClock">ყურადღებით! თამაშის შედეგი მოქმედებს რეიტინგზე, თუმცა დრო არ აითვლება.</string>
@@ -674,7 +674,7 @@
   <string name="simulHostExtraTime">თამაშის შემქნელის დამატები დრო</string>
   <string name="simulAddExtraTimePerPlayer">დაამატეთ საწყისი დრო თქვენს საათს თითოეული მოთამაშისთვის, რომელიც უერთდება სიმულს.</string>
   <string name="simulHostExtraTimePerPlayer">დაამატე დრო სიმულის შემქმნელის საათზე, ყოველ შემოსულ მოთამაშეზე</string>
-  <string name="lichessTournaments">Lichess ტურნირები</string>
+  <string name="lichessTournaments">Chess-Online ტურნირები</string>
   <string name="tournamentFAQ">Arena ტურნირის ხშირი შეკითხვები</string>
   <string name="timeBeforeTournamentStarts">ტურნირის დაწყებამდე დარჩენილი დრო</string>
   <string name="averageCentipawnLoss">საშუალო დანაკარგი \"პაიკ-პროცენტში\" (პაიკის მეასედი)</string>
@@ -715,8 +715,8 @@
   <string name="weHaveSentYouAnEmailTo">ჩვენ გავაგზავნეთ შეტყობინება %s მეილზე. შეტყობინებაში დააჭირეთ ლინკს, რომ პაროლი შეცვალოთ.</string>
   <string name="byRegisteringYouAgreeToBeBoundByOur">რეგისტრაციით თქვენ ეთანხმებით ჩვენს %s.</string>
   <string name="readAboutOur">წაიკითხეთ ჩვენი %s- ს შესახებ.</string>
-  <string name="networkLagBetweenYouAndLichess">ქსელი გარკვეული შუალედი შორის თქვენ და Lichess</string>
-  <string name="timeToProcessAMoveOnLichessServer">დროა დავამუშავოთ სვლა Lichess -ის სერვერზე</string>
+  <string name="networkLagBetweenYouAndLichess">ქსელი გარკვეული შუალედი შორის თქვენ და Chess-Online</string>
+  <string name="timeToProcessAMoveOnLichessServer">დროა დავამუშავოთ სვლა Chess-Online -ის სერვერზე</string>
   <string name="downloadAnnotated">ანოტირებულის ჩამოტვირთვა</string>
   <string name="downloadRaw">სუფთას ჩამოტვირთვა</string>
   <string name="downloadImported">იმპორტირებულის ჩამოტვირთვა</string>
@@ -732,7 +732,7 @@
   <string name="withEverybody">ყველას</string>
   <string name="kidMode">ბავშვის რეჟიმი</string>
   <string name="kidModeExplanation">ეს ეხება უსაფრთხოებას. საბავშვო რეჟიმში, საიტის ყველა კომუნიკაცია გამორთულია. ჩართეთ ეს თქვენი ბავშვებისთვის და სკოლის მოსწავლეებისთვის, რათა დაიცვან ისინი ინტერნეტის სხვა მომხმარებლებისგან.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">საბავშვო რეჟიმში, Lichess-ის ლოგო იღებს %s - ღიმილის ემოჯის, ასე რომ თქვენ იცით, რომ თქვენი ბავშვები უსაფრთხოდ არიან.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">საბავშვო რეჟიმში, Chess-Online-ის ლოგო იღებს %s - ღიმილის ემოჯის, ასე რომ თქვენ იცით, რომ თქვენი ბავშვები უსაფრთხოდ არიან.</string>
   <string name="askYourChessTeacherAboutLiftingKidMode">თქვენი ექაუნთი იმართება თქვენი ჭადრაკის მასწავლებლის მიერ. თხოვეთ მას, რომ გამორთოს საბავშვო რეჟიმი.</string>
   <string name="enableKidMode">ჩართეთ საბავშვო რეჟიმი</string>
   <string name="disableKidMode">გამორთეთ საბავშვო რეჟიმი</string>
@@ -855,14 +855,14 @@
   <string name="tryToWin">ეცადეთ, რომ მოიგოთ (ან მინიმუმ ფრედ დაამთავროთ) ყველა თამაში.</string>
   <string name="resignLostGames">წაგებული პარტიებიდან გამოდით, დატოვეთ თამაში (ნუ დაელოდებით დროის გასვლას).</string>
   <string name="temporaryInconvenience">ბოდიშს გიხდით დროებითი დისკომფორტისთვის,</string>
-  <string name="wishYouGreatGames">და გისურვებთ კარგი პარტიების თამაშს lichess.org - ზე.</string>
+  <string name="wishYouGreatGames">და გისურვებთ კარგი პარტიების თამაშს chess-online.com - ზე.</string>
   <string name="thankYouForReading">მადლობთ, რომ კითხულობთ!</string>
   <string name="lifetimeScore">მთლიანი ანგარიში</string>
   <string name="currentMatchScore">მიმდინარე პარტიის ანგარიში</string>
   <string name="agreementAssistance">ვთანხმდები, რომ არავითარ შემთხვევაში არ მივიღებ დახმარებას ჩემი თამაშების დროს (ჭადრაკის კომპიუტერიდან, წიგნიდან, მონაცემთა ბაზიდან ან სხვა პირისგან).</string>
   <string name="agreementNice">ვთანხმდები, რომ ყოველთვის პატივს ვცემ სხვა მოთამაშეებს.</string>
   <string name="agreementMultipleAccounts" comment="%s will be replaced with the translation of 'termsOfService'">ვთანხმდები, რომ არ შევქმნი რამდენიმე ექაუნთს (გარდა %s-ში მითითებული მიზეზებისა).</string>
-  <string name="agreementPolicy">ვთანხმდები, რომ დავიცავ Lichess -ის პოლიტიკას.</string>
+  <string name="agreementPolicy">ვთანხმდები, რომ დავიცავ Chess-Online -ის პოლიტიკას.</string>
   <string name="searchOrStartNewDiscussion">მოძებნეთ ან დაიწყეთ საუბარი</string>
   <string name="edit">რედაქტირება</string>
   <string name="blitz" comment="Probably best left untranslated. Leave it as 'Blitz' unless your language has a better word for it.">ბლიცი</string>
@@ -900,7 +900,7 @@
   <string name="congratsYouWon">გილოცავთ! მოიგეთ!</string>
   <string name="gameVsX">პარტია %1$s-ს წინააღმდეგ</string>
   <string name="resVsX">%1$s-ი %2$s-ის წინააღმდეგ</string>
-  <string name="lostAgainstTOSViolator">თქვენ დაკარგეთ სარეიტინგო ქულები იმასთან, ვინც დაარღვია Lichess-ის TOS</string>
+  <string name="lostAgainstTOSViolator">თქვენ დაკარგეთ სარეიტინგო ქულები იმასთან, ვინც დაარღვია Chess-Online-ის TOS</string>
   <string name="refundXpointsTimeControlY">აგინაზღაურდათ %1$s რეიტინგის ქულა %2$s დროის ფორმატში.</string>
   <string name="timeAlmostUp">დრო თითქმის ამოიწურა!</string>
   <string name="clickToRevealEmailAddress">[დააჭირეთ ელფოსტის სანახავად]</string>
@@ -954,10 +954,10 @@
   <string name="youCantStartNewGame">ვერ შეძლებთ ახალი თამაშის დაწყებას, სანამ მიმდინარე არ დასრულდება.</string>
   <string name="since">დან</string>
   <string name="until">მდე</string>
-  <string name="lichessDbExplanation">Lichess-ზე ჩატარებული რეიტინგული თამაშები</string>
+  <string name="lichessDbExplanation">Chess-Online-ზე ჩატარებული რეიტინგული თამაშები</string>
   <string name="switchSides">მხარეების შეცვლა</string>
   <string name="closingAccountWithdrawAppeal">თქვენი ექაუნთის დახურვა გამოიწვევს თქვენი აპელაციის ამოღებას</string>
   <string name="ourEventTips">ჩვენი რჩევები ღონისძიებების ორგანიზებისთვის</string>
-  <string name="lichessPatronInfo">Lichess -ი არის საქველმოქმედო და სრულიად უფასო/თავისუფალი ღია კოდის მქონე პროგრამა.
+  <string name="lichessPatronInfo">Chess-Online -ი არის საქველმოქმედო და სრულიად უფასო/თავისუფალი ღია კოდის მქონე პროგრამა.
 ყველა საოპერაციო ხარჯი, დეველოპმენტი და კონტენტი ფინანსდება მხოლოდ მომხმარებლის შემოწირულობებით.</string>
 </resources>

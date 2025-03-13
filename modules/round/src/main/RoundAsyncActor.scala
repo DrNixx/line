@@ -156,7 +156,7 @@ final private class RoundAsyncActor(
               lila
                 .log("cheat")
                 .info(
-                  s"hold alert $ip https://lichess.org/${pov.gameId}/${pov.color.name}#${pov.game.ply} ${pov.player.userId | "anon"} mean: $mean SD: $sd"
+                  s"hold alert $ip https://live.chess-online.com/${pov.gameId}/${pov.color.name}#${pov.game.ply} ${pov.player.userId | "anon"} mean: $mean SD: $sd"
                 )
               lila.mon.cheat.holdAlert.increment()
               gameRepo.setHoldAlert(pov, GamePlayer.HoldAlert(ply = pov.game.ply, mean = mean, sd = sd)).void

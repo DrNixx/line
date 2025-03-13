@@ -35,8 +35,8 @@
   <string name="onlyReports">ವರದಿ ಫಾರ್ಮ್ ಮೂಲಕ ಆಟಗಾರರನ್ನು ವರದಿ ಮಾಡುವುದು ಮಾತ್ರ ಪರಿಣಾಮಕಾರಿಯಾಗಿದೆ.</string>
   <string name="wantReportBug">ನಾನು ದೋಷವನ್ನು ವರದಿ ಮಾಡಲು ಬಯಸುತ್ತೇನೆ</string>
   <string name="reportBugInForum">ಫೋರಂನ ಲಿಚೆಸ್ ಪ್ರತಿಕ್ರಿಯೆ ವಿಭಾಗದಲ್ಲಿ</string>
-  <string name="reportWebsiteIssue">GitHub ನಲ್ಲಿ Lichess ವೆಬ್‌ಸೈಟ್ ಸಂಚಿಕೆಯಾಗಿ</string>
-  <string name="reportMobileIssue">GitHub ನಲ್ಲಿ Lichess ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್ ಸಮಸ್ಯೆಯಾಗಿ</string>
+  <string name="reportWebsiteIssue">GitHub ನಲ್ಲಿ Chess-Online ವೆಬ್‌ಸೈಟ್ ಸಂಚಿಕೆಯಾಗಿ</string>
+  <string name="reportMobileIssue">GitHub ನಲ್ಲಿ Chess-Online ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್ ಸಮಸ್ಯೆಯಾಗಿ</string>
   <string name="reportBugInDiscord">ಲಿಚೆಸ್ ಡಿಸ್ಕಾರ್ಡ್ ಸರ್ವರ್‌ನಲ್ಲಿ</string>
   <string name="howToReportBug">ದಯವಿಟ್ಟು ದೋಷವು ಹೇಗೆ ಕಾಣುತ್ತದೆ, ಬದಲಿಗೆ ಏನಾಗಬಹುದು ಎಂದು ನೀವು ನಿರೀಕ್ಷಿಸಿದ್ದೀರಿ ಮತ್ತು ದೋಷವನ್ನು ಪುನರುತ್ಪಾದಿಸುವ ಹಂತಗಳನ್ನು ವಿವರಿಸಿ.</string>
   <string name="illegalPawnCapture">ಅಕ್ರಮ ಗಿರವಿ ಸೆರೆ</string>
@@ -55,7 +55,7 @@
   <string name="botRatingAbuse">ಕೆಲವು ಸಂದರ್ಭಗಳಲ್ಲಿ ಬೋಟ್ ಖಾತೆಯ ವಿರುದ್ಧ ಆಡುವಾಗ, ಆಟಗಾರನು ರೇಟಿಂಗ್ ಪಾಯಿಂಟ್‌ಗಳಿಗಾಗಿ ಬೋಟ್ ಅನ್ನು ದುರುಪಯೋಗಪಡಿಸಿಕೊಳ್ಳುತ್ತಿದ್ದಾರೆ ಎಂದು ನಿರ್ಣಯಿಸಿದರೆ ರೇಟ್ ಮಾಡಲಾದ ಆಟವು ಅಂಕಗಳನ್ನು ನೀಡುವುದಿಲ್ಲ.</string>
   <string name="errorPage">ದೋಷ ಪುಟ</string>
   <string name="reportErrorPage">ನೀವು ದೋಷ ಪುಟವನ್ನು ಎದುರಿಸಿದರೆ, ನೀವು ಅದನ್ನು ವರದಿ ಮಾಡಬಹುದು:</string>
-  <string name="learnHowToMakeBroadcasts">Lichess ನಲ್ಲಿ ನಿಮ್ಮ ಸ್ವಂತ ಪ್ರಸಾರವನ್ನು ಹೇಗೆ ಮಾಡಬೇಕೆಂದು ತಿಳಿಯಿರಿ</string>
+  <string name="learnHowToMakeBroadcasts">Chess-Online ನಲ್ಲಿ ನಿಮ್ಮ ಸ್ವಂತ ಪ್ರಸಾರವನ್ನು ಹೇಗೆ ಮಾಡಬೇಕೆಂದು ತಿಳಿಯಿರಿ</string>
   <string name="banAppeal">ನಿಷೇಧ ಅಥವಾ IP ನಿರ್ಬಂಧಕ್ಕಾಗಿ ಮನವಿ</string>
   <string name="engineAppeal">ಎಂಜಿನ್ ಅಥವಾ ಮೋಸ ಗುರುತು</string>
   <string name="sendAppealTo">ನೀವು %s ಗೆ ಮನವಿಯನ್ನು ಕಳುಹಿಸಬಹುದು.</string>
@@ -67,11 +67,11 @@
   <string name="collaboration">ಸಹಯೋಗ, ಕಾನೂನು, ವಾಣಿಜ್ಯ</string>
   <string name="monetizing">ಮಾನಿಟೈಸಿಂಗ್ ಲಿಚೆಸ್</string>
   <string name="buyingLichess">ಲಿಚೆಸ್ ಅನ್ನು ಖರೀದಿಸಿ</string>
-  <string name="authorizationToUse">Lichess ಅನ್ನು ಬಳಸಲು ಅಧಿಕಾರ</string>
-  <string name="welcomeToUse">ನಿಮ್ಮ ಚಟುವಟಿಕೆಗಾಗಿ, ವಾಣಿಜ್ಯಿಕವಾಗಿಯೂ Lichess ಅನ್ನು ಬಳಸಲು ನಿಮಗೆ ಸ್ವಾಗತ.</string>
+  <string name="authorizationToUse">Chess-Online ಅನ್ನು ಬಳಸಲು ಅಧಿಕಾರ</string>
+  <string name="welcomeToUse">ನಿಮ್ಮ ಚಟುವಟಿಕೆಗಾಗಿ, ವಾಣಿಜ್ಯಿಕವಾಗಿಯೂ Chess-Online ಅನ್ನು ಬಳಸಲು ನಿಮಗೆ ಸ್ವಾಗತ.</string>
   <string name="videosAndBooks">ನೀವು ಅದನ್ನು ನಿಮ್ಮ ವೀಡಿಯೊಗಳಲ್ಲಿ ತೋರಿಸಬಹುದು ಮತ್ತು ನಿಮ್ಮ ಪುಸ್ತಕಗಳಲ್ಲಿ ಲಿಚೆಸ್‌ನ ಸ್ಕ್ರೀನ್‌ಶಾಟ್‌ಗಳನ್ನು ನೀವು ಮುದ್ರಿಸಬಹುದು.</string>
   <string name="creditAppreciated">ಕ್ರೆಡಿಟ್ ಅನ್ನು ಪ್ರಶಂಸಿಸಲಾಗುತ್ತದೆ ಆದರೆ ಅಗತ್ಯವಿಲ್ಲ.</string>
   <string name="noneOfTheAbove">ಮೇಲಿನ ಯಾವುದೂ ಅಲ್ಲ</string>
   <string name="sendEmailAt">%s ನಲ್ಲಿ ನಮಗೆ ಇಮೇಲ್ ಕಳುಹಿಸಿ.</string>
-  <string name="explainYourRequest">ದಯವಿಟ್ಟು ನಿಮ್ಮ ವಿನಂತಿಯನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ಮತ್ತು ಸಂಪೂರ್ಣವಾಗಿ ವಿವರಿಸಿ. ನಿಮ್ಮ Lichess ಬಳಕೆದಾರಹೆಸರು ಮತ್ತು ನಿಮಗೆ ಸಹಾಯ ಮಾಡಲು ನಮಗೆ ಸಹಾಯ ಮಾಡುವ ಯಾವುದೇ ಮಾಹಿತಿಯನ್ನು ತಿಳಿಸಿ.</string>
+  <string name="explainYourRequest">ದಯವಿಟ್ಟು ನಿಮ್ಮ ವಿನಂತಿಯನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ಮತ್ತು ಸಂಪೂರ್ಣವಾಗಿ ವಿವರಿಸಿ. ನಿಮ್ಮ Chess-Online ಬಳಕೆದಾರಹೆಸರು ಮತ್ತು ನಿಮಗೆ ಸಹಾಯ ಮಾಡಲು ನಮಗೆ ಸಹಾಯ ಮಾಡುವ ಯಾವುದೇ ಮಾಹಿತಿಯನ್ನು ತಿಳಿಸಿ.</string>
 </resources>

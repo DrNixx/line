@@ -91,9 +91,9 @@ object Mailer:
   object txt:
 
     private def serviceNote(using Translate): String = s"""
-${trans.common_note("https://lichess.org").render}
+${trans.common_note("https://live.chess-online.com").render}
 
-${trans.common_contact("https://lichess.org/contact").render}"""
+${trans.common_contact("https://live.chess-online.com/contact").render}"""
 
     def addServiceNote(body: String)(using Translate) = s"""$body
 
@@ -111,14 +111,14 @@ $serviceNote"""
       div(itemprop := "potentialAction", itemscope, itemtype := "http://schema.org/ViewAction")
     def metaName(cont: String) = meta(itemprop := "name", content := cont)
     val publisher = div(itemprop := "publisher", itemscope, itemtype := "http://schema.org/Organization")
-    val noteContact = a(itemprop := "url", href := "https://lichess.org/contact")(
-      span(itemprop := "name")("lichess.org/contact")
+    val noteContact = a(itemprop := "url", href := "https://live.chess-online.com/contact")(
+      span(itemprop := "name")("live.chess-online.com/contact")
     )
 
     private val noteLink = a(
       itemprop := "url",
-      href     := "https://lichess.org/"
-    )(span(itemprop := "name")("lichess.org"))
+      href     := "https://live.chess-online.com/"
+    )(span(itemprop := "name")("live.chess-online.com"))
 
     def serviceNote(using Translate) =
       publisher(
@@ -128,7 +128,7 @@ $serviceNote"""
           trans.common_contact(noteContact),
           " ",
           lila.core.i18n.I18nKey.site.readAboutOur(
-            a(href := "https://lichess.org/privacy")(
+            a(href := "https://live.chess-online.com/privacy")(
               lila.core.i18n.I18nKey.site.privacyPolicy()
             )
           )

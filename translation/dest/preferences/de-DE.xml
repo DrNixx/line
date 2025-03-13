@@ -63,8 +63,8 @@
   <string name="notifyChallenge">Herausforderungen</string>
   <string name="notifyTournamentSoon">Turnier beginnt bald</string>
   <string name="notifyTimeAlarm">Zeit in Fernschachpartie neigt sich dem Ende zu</string>
-  <string name="notifyBell">Benachrichtigungs-Glocke auf Lichess</string>
-  <string name="notifyPush">Geräte-Benachrichtigung wenn du nicht auf Lichess bist</string>
+  <string name="notifyBell">Benachrichtigungs-Glocke auf Chess-Online</string>
+  <string name="notifyPush">Geräte-Benachrichtigung wenn du nicht auf Chess-Online bist</string>
   <string name="notifyWeb">Browser</string>
   <string name="notifyDevice">Gerät</string>
   <string name="bellNotificationSound">Glocken-Benachrichtigungston</string>

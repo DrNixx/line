@@ -8,9 +8,9 @@
     <item quantity="one">%s Tagebuech-Bitrag</item>
     <item quantity="other">%s Tagebuech-Biträg</item>
   </plurals>
-  <string name="lichessOfficialBlog">Offiziells Lichess Tagebuech</string>
+  <string name="lichessOfficialBlog">Offiziells Chess-Online Tagebuech</string>
   <string name="continueReadingPost">De Bitrag witer läse</string>
-  <string name="lichessBlogPostsFromXYear">Lichess Tagebuech-Biträg in %s</string>
+  <string name="lichessBlogPostsFromXYear">Chess-Online Tagebuech-Biträg in %s</string>
   <string name="previousBlogPosts">Vorherigi Tagebuech-Biträg</string>
   <string name="xBlog">%s\'s Blog</string>
   <string name="newPost">Neue Bitrag</string>
@@ -52,7 +52,7 @@
   <string name="deleteBlog">Lösch de Tagebuech-Post definitiv</string>
   <string name="safeToUseImages">Es isch sicher, Bilder vu folgende Website z\'verwände: </string>
   <string name="selectPostTopics">Wähl d\'Theme vu dim Post us</string>
-  <string name="useImagesYouMadeYourself">Du chasch auch sälber g\'machti- oder knipsti Bilder verwände oder Screenshots vu Lichess... eifach alles, was nöd vu öpper anderem urheberrächtlich gschützt isch.</string>
+  <string name="useImagesYouMadeYourself">Du chasch auch sälber g\'machti- oder knipsti Bilder verwände oder Screenshots vu Chess-Online... eifach alles, was nöd vu öpper anderem urheberrächtlich gschützt isch.</string>
   <string name="safeAndRespectfulContent">Bitte nur sicheri und reschpäktvolli Inhält poschte. Kopier nöd Inhält vu öpper anderem.</string>
   <string name="inappropriateContentAccountClosed">Irgendwelchi unagmässeni Inhält, chönd zur Schlüssig vu dim Konto fühere.</string>
   <string name="blogTips">Eusi simple Tips, zum tolli Tagebuech-Biträg poschte</string>

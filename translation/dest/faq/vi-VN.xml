@@ -2,22 +2,22 @@
 <resources>
   <string name="faqAbbreviation">Những câu hỏi thường gặp</string>
   <string name="frequentlyAskedQuestions">Những Câu Hỏi Thường Gặp</string>
-  <string name="whyIsLichessCalledLichess">Tại sao Lichess lại có tên là Lichess?</string>
-  <string name="lichessCombinationLiveLightLibrePronounced">Lichess là một sự kết hợp của live/light/libre (trực tiếp/nhẹ/miễn phí) và chess (cờ vua). Nó được phát âm là %1$s.</string>
+  <string name="whyIsLichessCalledLichess">Tại sao Chess-Online lại có tên là Chess-Online?</string>
+  <string name="lichessCombinationLiveLightLibrePronounced">Chess-Online là một sự kết hợp của live/light/libre (trực tiếp/nhẹ/miễn phí) và chess (cờ vua). Nó được phát âm là %1$s.</string>
   <string name="leechess">lee-chess (ly-chess/ly-chét)</string>
   <string name="hearItPronouncedBySpecialist">Nghe cách phát âm chuẩn.</string>
-  <string name="whyLiveLightLibre">Luôn trực tiếp (live) vì bạn có thể chơi và xem mọi lúc trong thời gian thực 24/7; nhẹ nhàng và miễn phí (light và libre) vì Lichess có mã nguồn mở và không có các vấn đề độc quyền làm ảnh hướng đến các trang web khác.</string>
-  <string name="whyIsLilaCalledLila">Tương tự, mã nguồn của Lichess: %1$s là viết tắt của li[chess trong sca]la, vì phần lớn Lichess được viết bằng %2$s, một ngôn ngữ lập trình trực quan.</string>
-  <string name="howCanIContributeToLichess">Làm thế nào để tôi có thể đóng góp cho Lichess?</string>
-  <string name="lichessPoweredByDonationsAndVolunteers">Lichess được hỗ trợ bởi sự đóng góp từ những người bảo trợ và nỗ lực của một nhóm tình nguyện viên.</string>
-  <string name="findMoreAndSeeHowHelp">Bạn có thể xem thêm thông tin về %1$s (hoặc xem %2$s). Nếu bạn muốn giúp Lichess bằng việc tình nguyện dành thời gian và kỹ năng của bạn, có rất nhiều %3$s.</string>
+  <string name="whyLiveLightLibre">Luôn trực tiếp (live) vì bạn có thể chơi và xem mọi lúc trong thời gian thực 24/7; nhẹ nhàng và miễn phí (light và libre) vì Chess-Online có mã nguồn mở và không có các vấn đề độc quyền làm ảnh hướng đến các trang web khác.</string>
+  <string name="whyIsLilaCalledLila">Tương tự, mã nguồn của Chess-Online: %1$s là viết tắt của li[chess trong sca]la, vì phần lớn Chess-Online được viết bằng %2$s, một ngôn ngữ lập trình trực quan.</string>
+  <string name="howCanIContributeToLichess">Làm thế nào để tôi có thể đóng góp cho Chess-Online?</string>
+  <string name="lichessPoweredByDonationsAndVolunteers">Chess-Online được hỗ trợ bởi sự đóng góp từ những người bảo trợ và nỗ lực của một nhóm tình nguyện viên.</string>
+  <string name="findMoreAndSeeHowHelp">Bạn có thể xem thêm thông tin về %1$s (hoặc xem %2$s). Nếu bạn muốn giúp Chess-Online bằng việc tình nguyện dành thời gian và kỹ năng của bạn, có rất nhiều %3$s.</string>
   <string name="beingAPatron">trở thành một người bảo trợ</string>
   <string name="breakdownOfOurCosts">bảng phân tích chi tiết chi phí của chúng tôi</string>
   <string name="otherWaysToHelp">những cách khác để giúp đỡ</string>
-  <string name="areThereWebsitesBasedOnLichess">Có trang web nào dựa trên cấu trúc của Lichess không?</string>
-  <string name="yesLichessInspiredOtherOpenSourceWebsites">Đúng vậy, Lichess thực sự đã truyền cảm hứng cho các trang web mã nguồn mở khác sử dụng %1$s, %2$s, hay là %3$s của chúng tôi.</string>
+  <string name="areThereWebsitesBasedOnLichess">Có trang web nào dựa trên cấu trúc của Chess-Online không?</string>
+  <string name="yesLichessInspiredOtherOpenSourceWebsites">Đúng vậy, Chess-Online thực sự đã truyền cảm hứng cho các trang web mã nguồn mở khác sử dụng %1$s, %2$s, hay là %3$s của chúng tôi.</string>
   <string name="keyboardShortcuts">Có những phím tắt nào?</string>
-  <string name="keyboardShortcutsExplanation">Một số trang trên Lichess có phím tắt mà bạn có thể sử dụng. Hãy thử nhấn \'?\' ở trang nghiên cứu, phân tích, câu đố hoặc trang ván đấu để hiển thị các phím tắt khả dụng.</string>
+  <string name="keyboardShortcutsExplanation">Một số trang trên Chess-Online có phím tắt mà bạn có thể sử dụng. Hãy thử nhấn \'?\' ở trang nghiên cứu, phân tích, câu đố hoặc trang ván đấu để hiển thị các phím tắt khả dụng.</string>
   <string name="fairPlay">Chơi Công Bằng</string>
   <string name="whenAmIEligibleRatinRefund">Khi nào thì tôi đủ điều kiện để được hoàn lại hệ số tự động từ những kẻ gian lận?</string>
   <string name="ratingRefundExplanation" comment="In answer to the question 'When am I eligible for the automatic rating refund from cheaters?'">Một phút sau khi một người chơi bị đánh dấu, 40 ván đấu đã xếp hạng mới nhất của họ trong vòng 5 ngày qua sẽ được thực hiện. Nếu bạn là đối thủ của họ trong các ván đấu đó, bạn bị mất hệ số (do thua hoặc hòa) và hệ số của bạn không phải là tạm thời, bạn sẽ được hoàn lại hệ số. Điểm hoàn lại được giới hạn dựa trên hệ số cao nhất của bạn và tiến độ hệ số của bạn sau ván đấu. (Ví dụ: nếu hệ số của bạn tăng lên đáng kể sau các ván đấu đó, bạn có thể không được hoàn điểm hoặc chỉ được hoàn lại một phần.) Khoản hoàn trả sẽ không bao giờ vượt quá 150 điểm.</string>
@@ -28,16 +28,16 @@
   <string name="isCorrespondenceDifferent">Đánh cờ qua thư có khác với cờ vua bình thường?</string>
   <string name="pleaseReadFairPlayPage">Để biết thêm thông tin, vui lòng đọc %s</string>
   <string name="fairPlayPage">trang chơi công bằng</string>
-  <string name="youCanUseOpeningBookNoEngine">Trên Lichess, sự khác biệt chính trong các quy tắc cho cờ qua thư là sách khai cuộc được cho phép. Việc sử dụng máy tính phân tích vẫn bị cấm và sẽ bị gắn cờ vì sử dụng máy tính phân tích hỗ trợ. Mặc dù ICCF cho phép sử dụng máy tính phân tích trong đánh cờ qua thư nhưng Lichess thì không.</string>
+  <string name="youCanUseOpeningBookNoEngine">Trên Chess-Online, sự khác biệt chính trong các quy tắc cho cờ qua thư là sách khai cuộc được cho phép. Việc sử dụng máy tính phân tích vẫn bị cấm và sẽ bị gắn cờ vì sử dụng máy tính phân tích hỗ trợ. Mặc dù ICCF cho phép sử dụng máy tính phân tích trong đánh cờ qua thư nhưng Chess-Online thì không.</string>
   <string name="gameplay">Cách Chơi</string>
   <string name="howBulletBlitzEtcDecided">Cờ Siêu Chớp, Cờ Chớp và các định giờ khác được quyết định thế nào?</string>
-  <string name="basedOnGameDuration">Việc xác định loại cờ của Lichess dựa trên thời lượng ván đấu ước tính = %1$s
+  <string name="basedOnGameDuration">Việc xác định loại cờ của Chess-Online dựa trên thời lượng ván đấu ước tính = %1$s
 Ví dụ: thời lượng ước tính của một ván cờ 5+3 là 5 × 60 + 40 × 3 = 420 giây.</string>
   <string name="durationFormula" comment="durationFormula&#10;&#10;Part of the larger string 'basedOnGameDuration'&#10;&#10;Note: this string did not use to say 'in seconds'. Please update if necessary.">(thời gian ban đầu tính bằng giây) + 40 × (thời gian gia tăng)</string>
   <string name="inferiorThanXsEqualYtimeControl">≤ %1$s giây = %2$s</string>
   <string name="superiorThanXsEqualYtimeControl">≥ %1$s = %2$s</string>
-  <string name="whatVariantsCanIplay">Tôi có thể chơi những loại biến thể nào trên Lichess?</string>
-  <string name="lichessSupportChessAnd">Lichess hỗ trợ cờ vua tiêu chuẩn và %1$s.</string>
+  <string name="whatVariantsCanIplay">Tôi có thể chơi những loại biến thể nào trên Chess-Online?</string>
+  <string name="lichessSupportChessAnd">Chess-Online hỗ trợ cờ vua tiêu chuẩn và %1$s.</string>
   <string name="eightVariants">8 biến thể cờ vua khác</string>
   <string name="whatIsACPL">Tỉ lệ mất tốt trung bình (ACPL) là gì?</string>
   <string name="acplExplanation">Phần trăm tốt là đơn vị đo lường được sử dụng trong cờ vua để đại diện cho lợi thế. Một phần trăm tốt bằng 1/100 tốt. Do đó 100 phần trăm tốt = 1 tốt. Những giá trị này không đóng vai trò chính thức trong ván đấu nhưng hữu ích cho người chơi, và rất cần thiết trong cờ vua trên máy tính, để đánh giá các thế cờ.
@@ -46,7 +46,7 @@ Ví dụ: thời lượng ước tính của một ván cờ 5+3 là 5 × 60 + 4
 
 Giá trị này có thể được sử dụng như một chỉ báo về chất lượng chơi. Càng ít phần trăm mất tốt mỗi nước đi, càng có lợi thế.
 
-Máy tính phân tích trên Lichess do Stockfish và Fairy-Stockfish cung cấp.</string>
+Máy tính phân tích trên Chess-Online do Stockfish và Fairy-Stockfish cung cấp.</string>
   <string name="insufficientMaterial">Thua do thời gian, hòa và không đủ quân chiếu hết</string>
   <string name="lichessFollowFIDErules">Trong trường hợp một người chơi hết thời gian, người chơi đó thường sẽ bị xử thua. Tuy nhiên, ván đấu sẽ được xử hòa nếu ở thế trận đó mà đối phương không thể chiếu hết vua của họ bằng bất kỳ chuỗi nước đi hợp lệ nào có thể xảy ra (%1$s).
 
@@ -64,32 +64,32 @@ Nó được mô tả trong phần 3.7.3.1 và 3.7.3.2 của %2$s:
 
 Xem %3$s về nước này để biết một cách thực hiện nó.</string>
   <string name="goodIntroduction">thông tin hữu ích</string>
-  <string name="lichessTraining">huấn luyện của Lichess</string>
+  <string name="lichessTraining">huấn luyện của Chess-Online</string>
   <string name="watchIMRosenCheckmate">Xem Kiện tướng Quốc tế (IM) Eric Rosen chiếu hết %s.</string>
   <string name="threefoldRepetition">Luật lặp cờ 3 lần</string>
-  <string name="threefoldRepetitionExplanation">Nếu thế cờ được lặp lại 3 lần, hai người chơi có thể được xử hòa bởi %1$s. Lichess áp dụng các quy tắc chính thức của FIDE, như được mô tả trong Điều 9.2 của %2$s.</string>
+  <string name="threefoldRepetitionExplanation">Nếu thế cờ được lặp lại 3 lần, hai người chơi có thể được xử hòa bởi %1$s. Chess-Online áp dụng các quy tắc chính thức của FIDE, như được mô tả trong Điều 9.2 của %2$s.</string>
   <string name="threefoldRepetitionLowerCase">luật lặp cờ ba lần</string>
   <string name="notRepeatedMoves">Chúng tôi không lặp lại các nước đi. Tại sao ván đấu vẫn bị xử hòa bởi luật lặp cờ?</string>
   <string name="repeatedPositionsThatMatters">Lặp lại ba lần là về %1$s bị lặp lại, không phải các nước đi. Sự lặp lại không nhất thiết phải xẩy ra liên tiếp.</string>
   <string name="positions">những thế cờ</string>
   <string name="weRepeatedthreeTimesPosButNoDraw">Chúng tôi lặp cờ ba lần. Tại sao vẫn không được xử hòa?</string>
-  <string name="threeFoldHasToBeClaimed">Sự lặp lại cần được xác nhận bởi một trong hai người chơi. Bạn có thể làm như vậy bằng cách nhấn vào nút được hiển thị hoặc bằng cách đề nghị hòa trước nước đi lặp lại cuối cùng của bạn, sẽ không thành vấn đề nếu đối thủ của bạn từ chối hòa, ván đấu vẫn sẽ được xử hòa theo luật lặp cờ ba lần. Bạn cũng có thể %1$s Lichess để tự động yêu cầu các lần lặp lại cho bạn. Ngoài ra, việc lặp lại năm lần luôn ngay lập tức kết thúc ván đấu.</string>
+  <string name="threeFoldHasToBeClaimed">Sự lặp lại cần được xác nhận bởi một trong hai người chơi. Bạn có thể làm như vậy bằng cách nhấn vào nút được hiển thị hoặc bằng cách đề nghị hòa trước nước đi lặp lại cuối cùng của bạn, sẽ không thành vấn đề nếu đối thủ của bạn từ chối hòa, ván đấu vẫn sẽ được xử hòa theo luật lặp cờ ba lần. Bạn cũng có thể %1$s Chess-Online để tự động yêu cầu các lần lặp lại cho bạn. Ngoài ra, việc lặp lại năm lần luôn ngay lập tức kết thúc ván đấu.</string>
   <string name="configure">cấu hình</string>
   <string name="accounts">Tài Khoản</string>
-  <string name="titlesAvailableOnLichess">Có những danh hiệu nào trên Lichess?</string>
-  <string name="lichessRecognizeAllOTBtitles">Lichess công nhận tất cả các danh hiệu do FIDE ghi nhận từ OTB (thi đấu bên ngoài), cũng như %1$s. Đây là danh sách các danh hiệu được FIDE công nhận:</string>
+  <string name="titlesAvailableOnLichess">Có những danh hiệu nào trên Chess-Online?</string>
+  <string name="lichessRecognizeAllOTBtitles">Chess-Online công nhận tất cả các danh hiệu do FIDE ghi nhận từ OTB (thi đấu bên ngoài), cũng như %1$s. Đây là danh sách các danh hiệu được FIDE công nhận:</string>
   <string name="showYourTitle">Nếu bạn có danh hiệu OTB, bạn có thể đăng ký để hiển thị danh hiệu này trên tài khoản của mình bằng cách hoàn thành %1$s, bao gồm hình ảnh rõ ràng của tài liệu/thẻ nhận dạng và ảnh tự chụp của bạn đang cầm tài liệu/thẻ.
 
-Việc xác minh là người chơi có danh hiệu trên Lichess sẽ cho phép bạn chơi trong các sự kiện Titled Arena.
+Việc xác minh là người chơi có danh hiệu trên Chess-Online sẽ cho phép bạn chơi trong các sự kiện Titled Arena.
 
 Cuối cùng là danh hiệu %2$s danh dự.</string>
   <string name="asWellAsManyNMtitles">nhiều danh hiệu quốc gia</string>
   <string name="verificationForm">biểu mẫu xác minh</string>
-  <string name="canIbecomeLM">Tôi có thể nhận được danh hiệu Lichess Master (LM) không?</string>
+  <string name="canIbecomeLM">Tôi có thể nhận được danh hiệu Chess-Online Master (LM) không?</string>
   <string name="noUpperCaseDot">Không.</string>
-  <string name="lMtitleComesToYouDoNotRequestIt">Danh hiệu danh dự này không chính thức và chỉ tồn tại trên Lichess.
+  <string name="lMtitleComesToYouDoNotRequestIt">Danh hiệu danh dự này không chính thức và chỉ tồn tại trên Chess-Online.
 
-Theo quyết định của chúng tôi, chúng tôi hiếm khi trao giải cho những người chơi đáng chú ý là thành viên tốt của Lichess. Bạn không nhận được danh hiệu LM, danh hiệu LM sẽ tự đến với bạn. Nếu bạn đủ điều kiện, bạn sẽ nhận được thông báo từ chúng tôi về điều đó và lựa chọn chấp nhận hoặc từ chối.
+Theo quyết định của chúng tôi, chúng tôi hiếm khi trao giải cho những người chơi đáng chú ý là thành viên tốt của Chess-Online. Bạn không nhận được danh hiệu LM, danh hiệu LM sẽ tự đến với bạn. Nếu bạn đủ điều kiện, bạn sẽ nhận được thông báo từ chúng tôi về điều đó và lựa chọn chấp nhận hoặc từ chối.
 
 Vui lòng không yêu cầu được nhận danh hiệu LM.</string>
   <string name="whatUsernameCanIchoose">Tôi có thể đặt tên người dùng là gì?</string>
@@ -98,12 +98,12 @@ Vui lòng không yêu cầu được nhận danh hiệu LM.</string>
   <string name="canIChangeMyUsername">Tôi có thể đổi tên đăng nhập được không?</string>
   <string name="usernamesCannotBeChanged" comment="&quot;Materialised&quot; is a technical term: https://en.wikipedia.org/wiki/Materialized_view&#10;In this context, it means that it is used in many places and too significant to change, on a technical level. It also comments on the social perspective (&quot;people's minds&quot;).">Không, tên đăng nhập không thể thay đổi được vì nhiều lý do kỹ thuật và thực tế. Các tên đăng nhập được đưa vào quá nhiều nơi: cơ sở dữ liệu, biên bản ván cờ và trong trí nhớ của mọi người. Bạn có thể điều chỉnh việc viết hoa hoặc thường một lần.</string>
   <string name="uniqueTrophies">Những chiếc cúp độc nhất</string>
-  <string name="ownerUniqueTrophies">Chiếc cúp đó là duy nhất trong lịch sử của Lichess, không ai khác ngoài %1$s sẽ có được nó.</string>
+  <string name="ownerUniqueTrophies">Chiếc cúp đó là duy nhất trong lịch sử của Chess-Online, không ai khác ngoài %1$s sẽ có được nó.</string>
   <string name="wayOfBerserkExplanation">Để có được nó, hiimgosu đã tự thử thách bản thân bằng cách chia đôi thời gian mỗi ván (Berserk) và giành chiến thắng 100%% các ván trong một %s.</string>
   <string name="aHourlyBulletTournament">một giải đấu Cờ Siêu Chớp hàng giờ</string>
-  <string name="goldenZeeExplanation" comment="goldenZeeExplanation&#10;&#10;ZugAddict is a legendary player and streamer, do not translate his name.&#10;https://lichess.org/@/ZugAddict&#10;&#10;Thibault is the name of the founder of Lichess: https://lichess.org/@/thibault">ZugAddict đã phát trực tiếp và trong 2 giờ đó anh ấy đã cố gắng đánh bại AI cấp độ 8 trong thể loại 1+0, nhưng không thành công. Thibault nói với anh ấy rằng nếu anh ấy làm điều đó thành công trên luồng, anh ấy sẽ nhận được một chiếc cúp độc nhất vô nhị. Một giờ sau, anh ta đánh bại Stockfish, và lời hứa đã được tôn vinh.</string>
-  <string name="lichessRatings">Hệ số Lichess</string>
-  <string name="whichRatingSystemUsedByLichess">Lichess sử dụng hệ thống xếp hạng nào?</string>
+  <string name="goldenZeeExplanation" comment="goldenZeeExplanation&#10;&#10;ZugAddict is a legendary player and streamer, do not translate his name.&#10;https://chess-online.com/@/ZugAddict&#10;&#10;Thibault is the name of the founder of Chess-Online: https://chess-online.com/@/thibault">ZugAddict đã phát trực tiếp và trong 2 giờ đó anh ấy đã cố gắng đánh bại AI cấp độ 8 trong thể loại 1+0, nhưng không thành công. Thibault nói với anh ấy rằng nếu anh ấy làm điều đó thành công trên luồng, anh ấy sẽ nhận được một chiếc cúp độc nhất vô nhị. Một giờ sau, anh ta đánh bại Stockfish, và lời hứa đã được tôn vinh.</string>
+  <string name="lichessRatings">Hệ số Chess-Online</string>
+  <string name="whichRatingSystemUsedByLichess">Chess-Online sử dụng hệ thống xếp hạng nào?</string>
   <string name="ratingSystemUsedByLichess">Xếp hạng được tính bằng phương pháp xếp hạng Glicko-2 do Mark Glickman phát triển. Đây là một phương pháp đánh giá rất phổ biến và được sử dụng bởi một số lượng lớn các tổ chức cờ vua (FIDE là một ví dụ ngược lại đáng chú ý, vì họ vẫn sử dụng hệ thống đánh giá Elo lỗi thời).
 
 Về cơ bản, xếp hạng Glicko sử dụng \"khoảng tin cậy\" để tính toán và cho ra xếp hạng của bạn. Khi bạn bắt đầu sử dụng trang web lần đầu tiên, hệ số Elo của bạn bắt đầu ở mức 1500 ± 1000. 1500 thể hiện hệ số của bạn và 1000 thể hiện khoảng tin cậy.
@@ -133,46 +133,46 @@ Tốt nhất bạn nên coi xếp hạng là số liệu \"tương đối\" (tr�
   <string name="enableZenMode">Bật chế độ Zen trong %1$s hoặc bằng cách nhấn %2$s trong khi chơi.</string>
   <string name="displayPreferences">tùy chọn hiển thị</string>
   <string name="connexionLostCanIGetMyRatingBack">Tôi đã thua một ván đấu do lag/mất kết nối. Tôi có thể lấy lại điểm hệ số của mình không?</string>
-  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">Rất tiếc, chúng tôi không thể trả lại điểm hệ số cho các ván đấu bị thua do lag hoặc mất kết nối, bất kể vấn đề là do bạn hay do chúng tôi. Tuy nhiên, trường hợp thứ hai là rất hiếm. Cũng lưu ý rằng khi Lichess khởi động lại và bạn thua do hết giờ vì điều đó, chúng tôi sẽ hủy trò chơi để tránh bị mất oan.</string>
+  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">Rất tiếc, chúng tôi không thể trả lại điểm hệ số cho các ván đấu bị thua do lag hoặc mất kết nối, bất kể vấn đề là do bạn hay do chúng tôi. Tuy nhiên, trường hợp thứ hai là rất hiếm. Cũng lưu ý rằng khi Chess-Online khởi động lại và bạn thua do hết giờ vì điều đó, chúng tôi sẽ hủy trò chơi để tránh bị mất oan.</string>
   <string name="howToThreeDots">Làm thế nào để...</string>
   <string name="enableDisableNotificationPopUps">Bật hoặc tắt cửa sổ thông báo?</string>
   <string name="viewSiteInformationPopUp">Xem cửa sổ thông tin trang web</string>
-  <string name="lichessCanOptionnalySendPopUps">Lichess có thể tùy chọn gửi thông báo hiện lên, chẳng hạn như khi đến lượt bạn hoặc bạn nhận được tin nhắn riêng.
+  <string name="lichessCanOptionnalySendPopUps">Chess-Online có thể tùy chọn gửi thông báo hiện lên, chẳng hạn như khi đến lượt bạn hoặc bạn nhận được tin nhắn riêng.
 
-Nhấp vào biểu tượng ổ khóa bên cạnh địa chỉ lichess.org trong thanh URL của trình duyệt của bạn.
+Nhấp vào biểu tượng ổ khóa bên cạnh địa chỉ chess-online.com trong thanh URL của trình duyệt của bạn.
 
-Sau đó, chọn cho phép hoặc chặn thông báo từ Lichess.</string>
+Sau đó, chọn cho phép hoặc chặn thông báo từ Chess-Online.</string>
   <string name="enableAutoplayForSoundsQ">Bật tính năng tự động phát âm thanh?</string>
   <string name="enableAutoplayForSoundsA">Hầu hết các trình duyệt có thể ngăn âm thanh phát trên trang mới tải để bảo vệ người dùng. Hãy tưởng tượng nếu mọi trang web có thể ngay lập tức tấn công bạn bằng quảng cáo âm thanh sẽ như thế nào.
 
-Biểu tượng tắt tiếng màu đỏ xuất hiện khi trình duyệt của bạn ngăn lichess.org phát âm thanh. Thông thường, hạn chế này sẽ được dỡ bỏ khi bạn nhấp vào thứ gì đó. Trên một số trình duyệt di động, thao tác chạm kéo một phần không được tính là một lần nhấp. Trong trường hợp đó, bạn phải chạm vào bàn cờ để phát ra âm thanh khi bắt đầu mỗi ván cờ.
+Biểu tượng tắt tiếng màu đỏ xuất hiện khi trình duyệt của bạn ngăn chess-online.com phát âm thanh. Thông thường, hạn chế này sẽ được dỡ bỏ khi bạn nhấp vào thứ gì đó. Trên một số trình duyệt di động, thao tác chạm kéo một phần không được tính là một lần nhấp. Trong trường hợp đó, bạn phải chạm vào bàn cờ để phát ra âm thanh khi bắt đầu mỗi ván cờ.
 
-Chúng tôi hiển thị biểu tượng màu đỏ để cảnh báo bạn khi điều này xẩy ra. Thông thường, bạn có thể cho phép lichess.org phát âm thanh một cách rõ ràng. Dưới đây là hướng dẫn thực hiện trên các phiên bản gần đây của một số trình duyệt phổ biến.</string>
-  <string name="desktop" comment="Appears on the FAQ for &quot;Enable autoplay for sounds&quot; https://lichess.org/faq#autoplay&#10;&#10;Indicates that the instructions are for a desktop computer browser - not a mobile browser.">máy tính để bàn</string>
-  <string name="enableAutoplayForSoundsFirefox">1. Truy cập vào lichess.org
+Chúng tôi hiển thị biểu tượng màu đỏ để cảnh báo bạn khi điều này xẩy ra. Thông thường, bạn có thể cho phép chess-online.com phát âm thanh một cách rõ ràng. Dưới đây là hướng dẫn thực hiện trên các phiên bản gần đây của một số trình duyệt phổ biến.</string>
+  <string name="desktop" comment="Appears on the FAQ for &quot;Enable autoplay for sounds&quot; https://chess-online.com/faq#autoplay&#10;&#10;Indicates that the instructions are for a desktop computer browser - not a mobile browser.">máy tính để bàn</string>
+  <string name="enableAutoplayForSoundsFirefox">1. Truy cập vào chess-online.com
 2. Nhấn tổ hợp phím Ctrl-i trên Windows/Linux hoặc cmd-i trên MacOS
 3. Nhấn vào tab Quyền (Permissions)
 4. Cho phép Video và Âm Thanh (Audio)</string>
-  <string name="enableAutoplayForSoundsChrome">1. Truy cập vào lichess.org
+  <string name="enableAutoplayForSoundsChrome">1. Truy cập vào chess-online.com
 2. Nhấn hình ổ khoá trên thanh tìm kiếm
 3. Nhấn Cài đặt trang web
 4. Cho phép Âm thanh</string>
-  <string name="enableAutoplayForSoundsSafari">1. Truy cập vào lichess.org
+  <string name="enableAutoplayForSoundsSafari">1. Truy cập vào chess-online.com
 2. Nhấn hình Safari trong thanh menu
-3. Nhấn vào Cài đặt cho lichess.org ...
+3. Nhấn vào Cài đặt cho chess-online.com ...
 4. Cho phép Tất cả Tự động Phát</string>
   <string name="enableAutoplayForSoundsMicrosoftEdge">1. Nhấp vào hình 3 dấu chấm ở góc bên phải
 2. Nhấp vào Cài đặt
 3. Nhấn vào Cookie và Quyền của trang web
 4. Cuộn xuống và nhấn vào Phương tiện tự động phát (Media autoplay)
-5. Thêm lichess.org vào Cho phép</string>
+5. Thêm chess-online.com vào Cho phép</string>
   <string name="stopMyselfFromPlaying" comment="As in &quot;How to stop myself from playing?&quot;.&#10;&#10;It is an FAQ which addresses chess/gaming addiction.">Hạn chế bản thân chơi quá nhiều?</string>
   <string name="mentalHealthCondition" comment="Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">tình trạng sức khỏe tâm thần độc lập</string>
-  <string name="lichessUserstyles" comment="User styles are ways to customise the appearance of Lichess using third-party tools.&#10;&#10;Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">Phong cách người dùng Lichess</string>
+  <string name="lichessUserstyles" comment="User styles are ways to customise the appearance of Chess-Online using third-party tools.&#10;&#10;Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">Phong cách người dùng Chess-Online</string>
   <string name="fewerLobbyPools" comment="Lobby pools are options to quick pair for games on the home page (e.g. 1+0, 3+0).&#10;In this context, this is mentioned for people who want to limit bullet and blitz.&#10;&#10;Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">ít kiểu thời lượng ván ở phòng chờ hơn</string>
-  <string name="adviceOnMitigatingAddiction" comment="Part of the FAQ answer &quot;How to [...] Stop myself from playing?&quot;&#10;&#10;%1$s, %2$s, and %3$s is software which may change.&#10;&#10;%4$s is &quot;Lichess userstyles&quot; (as in CSS styles)&#10;%5$s is &quot;fewer lobby pools&quot;.&#10;&#10;%6$s is &quot;stand-alone mental health condition&quot;.">Chúng tôi thường xuyên nhận được tin nhắn từ nhiều người dùng yêu cầu chúng tôi giúp đỡ để ngăn họ chơi quá nhiều.
+  <string name="adviceOnMitigatingAddiction" comment="Part of the FAQ answer &quot;How to [...] Stop myself from playing?&quot;&#10;&#10;%1$s, %2$s, and %3$s is software which may change.&#10;&#10;%4$s is &quot;Chess-Online userstyles&quot; (as in CSS styles)&#10;%5$s is &quot;fewer lobby pools&quot;.&#10;&#10;%6$s is &quot;stand-alone mental health condition&quot;.">Chúng tôi thường xuyên nhận được tin nhắn từ nhiều người dùng yêu cầu chúng tôi giúp đỡ để ngăn họ chơi quá nhiều.
 
-Mặc dù Lichess không cấm hoặc chặn người chơi ngoại trừ các vi phạm Điều khoản Dịch vụ, chúng tôi khuyên bạn nên sử dụng các công cụ bên ngoài để hạn chế hành vi chơi quá mức. Một số đề xuất phổ biến cho trình chặn trang web bao gồm %1$s, %2$s và %3$s. Nếu bạn muốn tiếp tục sử dụng trang web nhưng không bị cám dỗ bởi các kiểu thời gian ván đấu nhanh, bạn cũng có thể quan tâm đến %4$s, đây là một kiểu có %5$s.
+Mặc dù Chess-Online không cấm hoặc chặn người chơi ngoại trừ các vi phạm Điều khoản Dịch vụ, chúng tôi khuyên bạn nên sử dụng các công cụ bên ngoài để hạn chế hành vi chơi quá mức. Một số đề xuất phổ biến cho trình chặn trang web bao gồm %1$s, %2$s và %3$s. Nếu bạn muốn tiếp tục sử dụng trang web nhưng không bị cám dỗ bởi các kiểu thời gian ván đấu nhanh, bạn cũng có thể quan tâm đến %4$s, đây là một kiểu có %5$s.
 
 Một số người chơi có thể cảm thấy như hành vi chơi của họ đang biến thành nghiện. Trên thực tế, WHO phân loại rối loạn chơi game là %6$s, với các đặc điểm cơ bản như là 1) giảm khả năng kiểm soát chơi game, 2) tăng ưu tiên cho chơi game và 3) không ngừng chơi game bất chấp hậu quả tiêu cực. Nếu bạn nghĩ rằng hành vi chơi cờ của bạn theo mô hình này, chúng tôi khuyến khích bạn nói điều đó với một người bạn hoặc thành viên gia đình và/hoặc với một chuyên gia.</string>
 </resources>

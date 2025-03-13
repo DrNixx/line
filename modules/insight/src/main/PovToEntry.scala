@@ -173,7 +173,7 @@ final private class PovToEntry(
           !situation.board.isOccupied(chess.Piece(color, chess.Queen))
         }
       case _ =>
-        logger.warn(s"https://lichess.org/${from.pov.gameId} missing endgame board")
+        logger.warn(s"https://live.chess-online.com/${from.pov.gameId} missing endgame board")
         false
 
   private def convert(from: RichPov): Option[InsightEntry] =

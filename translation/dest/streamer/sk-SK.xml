@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="lichessStreamers">Lichess streameri</string>
-  <string name="lichessStreamer">Lichess streamer</string>
+  <string name="lichessStreamers">Chess-Online streameri</string>
+  <string name="lichessStreamer">Chess-Online streamer</string>
   <string name="live">NAŽIVO!</string>
   <string name="offline">OFFLINE</string>
   <string name="currentlyStreaming">Práve streamujú: %s</string>
   <string name="lastStream">Posledný stream %s</string>
-  <string name="becomeStreamer">Staňte sa Lichess streamerom</string>
+  <string name="becomeStreamer">Staňte sa Chess-Online streamerom</string>
   <string name="doYouHaveStream">Máte Twitch alebo YouTube kanál?</string>
   <string name="hereWeGo">Ideme na to!</string>
   <string name="allStreamers">Všetci streameri</string>
@@ -15,24 +15,24 @@
   <string name="downloadKit">Stiahnite si streamerskú súpravu</string>
   <string name="xIsStreaming">%s vysiela</string>
   <string name="rules">Pravidlá streamovania</string>
-  <string name="rule1">Zahrňte kľúčové slovo \"lichess.org\" v názve Vášho streamu a požite kategóriu \"Šach\" keď streamujete na Lichessi.</string>
+  <string name="rule1">Zahrňte kľúčové slovo \"chess-online.com\" v názve Vášho streamu a požite kategóriu \"Šach\" keď streamujete na Lichessi.</string>
   <string name="rule2">Odstráňte kľúčové slovo keď nestreamujete z Lichessu.</string>
-  <string name="rule3">Lichess automaticky rozozná tvoj stream a poskytne ti nasledujúce výhody:</string>
+  <string name="rule3">Chess-Online automaticky rozozná tvoj stream a poskytne ti nasledujúce výhody:</string>
   <string name="rule4" comment="the resulting message is: Read our streaming Fairplay FAQ to ensure a fair play for everyone in your stream">Aby sme počas Vášho streamu zabezpečili fair play pre všetkých, prečítajte so naše %s.</string>
   <string name="streamingFairplayFAQ">Časté otázky: Fariplay pri streamovaní</string>
   <string name="perks">Benefity streamovania s kľúčovým slovom</string>
-  <string name="perk1">Dostanete ohnivú streamerskú ikonku na Váš Lichess profil.</string>
+  <string name="perk1">Dostanete ohnivú streamerskú ikonku na Váš Chess-Online profil.</string>
   <string name="perk2">Dostanete sa na vrchol zoznamu streamerov.</string>
-  <string name="perk3">Upozorníte svojich Lichess sledovateľov.</string>
+  <string name="perk3">Upozorníte svojich Chess-Online sledovateľov.</string>
   <string name="perk4">Váš stream bude ukázaný vo vašich hrách, turnajoch a štúdiách.</string>
   <string name="approved">Váš stream je schválený.</string>
   <string name="pendingReview">Váš stream je preskúmavaný moderátormi.</string>
   <string name="pleaseFillIn">Prosím vyplňte Vaše streamerské informácie a nahrajte obrázok.</string>
-  <string name="whenReady" comment="whenReady&#10;&#10;%s is &quot;request a moderator review&quot;">Keď budete pripravený byť uvedený ako Lichess streamer, %s</string>
-  <string name="submitForReview" comment="Appears on a button when editing the page which lets you be listed as a streamer: https://lichess.org/streamer/edit&#10;&#10;As this is public, any changes to a streamer page are first sent to the Lichess team for review.">Odoslať na preskúmanie</string>
-  <string name="streamerLanguageSettings">Stránka streamera Lichess oslovuje publikum prostredníctvom jazyka, ktorý poskytuje streamovacia platforma. Nastavte správny predvolený jazyk pre svoje šachové streamy v aplikácii alebo službe, ktorú používate na vysielanie.</string>
+  <string name="whenReady" comment="whenReady&#10;&#10;%s is &quot;request a moderator review&quot;">Keď budete pripravený byť uvedený ako Chess-Online streamer, %s</string>
+  <string name="submitForReview" comment="Appears on a button when editing the page which lets you be listed as a streamer: https://chess-online.com/streamer/edit&#10;&#10;As this is public, any changes to a streamer page are first sent to the Chess-Online team for review.">Odoslať na preskúmanie</string>
+  <string name="streamerLanguageSettings">Stránka streamera Chess-Online oslovuje publikum prostredníctvom jazyka, ktorý poskytuje streamovacia platforma. Nastavte správny predvolený jazyk pre svoje šachové streamy v aplikácii alebo službe, ktorú používate na vysielanie.</string>
   <string name="twitchUsername">Vaše Twitch používateľské meno alebo link</string>
-  <string name="twitchOrYouTubeRequired" comment="A notice when creating/editing your streamer page (https://lichess.org/streamer/edit), denoting that you can only be listed if you stream from a Twitch or YouTube channel.">Vyžaduje sa buď Twitch alebo YouTube</string>
+  <string name="twitchOrYouTubeRequired" comment="A notice when creating/editing your streamer page (https://chess-online.com/streamer/edit), denoting that you can only be listed if you stream from a Twitch or YouTube channel.">Vyžaduje sa buď Twitch alebo YouTube</string>
   <string name="twitchOrYouTubeMustBeVerified">Zmeny v službách Twitch a YouTube musia byť overené.
  
  Váš odznak a zaradenie na zoznam streamerov budú pozastavené, kým bude prebiehať kontrola. Môže to trvať až 72 hodín.</string>

@@ -100,7 +100,7 @@
   <string name="ownerUniqueTrophies">Бұл олжа Личес тарихында ерекше орын алады, %1$s-дан басқа ешкім де оған ие болмады.</string>
   <string name="wayOfBerserkExplanation">Оған жету үшін, hiimgosu өзін берсеркке шақырып, %s-ның 100%% ойындарын жеңді.</string>
   <string name="aHourlyBulletTournament">әрсағаттық Буллит жарысы</string>
-  <string name="goldenZeeExplanation" comment="goldenZeeExplanation&#10;&#10;ZugAddict is a legendary player and streamer, do not translate his name.&#10;https://lichess.org/@/ZugAddict&#10;&#10;Thibault is the name of the founder of Lichess: https://lichess.org/@/thibault">ZugAddict стрим жүргізе отырып, 2 сағат бойы 1+0 қалыпта 8-нші деңгейдегі Жасанды зият жүйесін жеңе алмай тұрған. Thibault оған стрим кезінде сәтті ойнасаң, ерекше олжа аласың деп уәде берген еді. Бір сағаттан соң, ол Стокфиштің тас талқанын шығарып, уәдеге сай олжасына ие болды.</string>
+  <string name="goldenZeeExplanation" comment="goldenZeeExplanation&#10;&#10;ZugAddict is a legendary player and streamer, do not translate his name.&#10;https://chess-online.com/@/ZugAddict&#10;&#10;Thibault is the name of the founder of Chess-Online: https://chess-online.com/@/thibault">ZugAddict стрим жүргізе отырып, 2 сағат бойы 1+0 қалыпта 8-нші деңгейдегі Жасанды зият жүйесін жеңе алмай тұрған. Thibault оған стрим кезінде сәтті ойнасаң, ерекше олжа аласың деп уәде берген еді. Бір сағаттан соң, ол Стокфиштің тас талқанын шығарып, уәдеге сай олжасына ие болды.</string>
   <string name="lichessRatings">Личес рейтингтері</string>
   <string name="whichRatingSystemUsedByLichess">Личес қандай рейтинг жүйесін қолданады?</string>
   <string name="ratingSystemUsedByLichess">Личес рейтингті Mark Glickman жасаған Glicko-2 тәсілімен есептейді. Бұл өте танымал тәсіл, оны көптеген шахмат ұйымдары қолданады (FIDE көз түсер қарсы мысал, ол әлі де Elo рейтинг жүйесін қолданады).
@@ -138,32 +138,32 @@
   <string name="viewSiteInformationPopUp">Сайттың жайлы қалқымалы терезені қарау</string>
   <string name="lichessCanOptionnalySendPopUps">Личес таңдаулы түрде қалқымалы терезе түрінде ескерту жібере алады, мысалы, сіздің жүру кезегіңіз келгенде не жеке хабар түскенде.
 
-Браузердің URL жолағында lichess.org мекенжайының қасында орналасқан құлып таңбасын басыңыз.
+Браузердің URL жолағында chess-online.com мекенжайының қасында орналасқан құлып таңбасын басыңыз.
 
 Кейін Личестің ескетулерін көрсету-көрсетпеуді таңдаңыз.</string>
   <string name="enableAutoplayForSoundsQ">Дыбысты автошығару рұқсат па?</string>
   <string name="enableAutoplayForSoundsA">Браузердің дені қолданушыны қорғау үшін жаңа жүктелген парақшада дыбысты тыйым етеді. Өйткені әрбір сайт дыбысқа жол берсе, жарнаманың шуы бітпес еді.
 Браузер Личес-тегі дыбысқа тыйым етсе, қызыл \"үнсіз\" белгісі шығады. Жағдайдың көбінде қандай да бір жерге шертсеңіз бұл тыйым кетеді. Кейбір мобилді браузер тасты тартып жүргеніңізді шерту деп қабылдамайды, сондықтан дыбысқа рұқсат беру үшін әр ойын басында тақтаға бір шертуіңіз керек. Бұл кезде қызыл белгі шығады.
 Браузер Лическе тұрақты түрде дыбыс рұқсатын бере алады. Ол үшін танымал браузерлерді қамтитын келесідей нұсқаулықты қарап шығыңыз.</string>
-  <string name="desktop" comment="Appears on the FAQ for &quot;Enable autoplay for sounds&quot; https://lichess.org/faq#autoplay&#10;&#10;Indicates that the instructions are for a desktop computer browser - not a mobile browser.">компьютер</string>
-  <string name="enableAutoplayForSoundsFirefox">1. lichess.org сайтын ашыңыз
+  <string name="desktop" comment="Appears on the FAQ for &quot;Enable autoplay for sounds&quot; https://chess-online.com/faq#autoplay&#10;&#10;Indicates that the instructions are for a desktop computer browser - not a mobile browser.">компьютер</string>
+  <string name="enableAutoplayForSoundsFirefox">1. chess-online.com сайтын ашыңыз
 2. Windows пен Linux үшін Cntr + i, MacOS үшін Cmd + i
 3. Рұқсаттар бөліміне өтіңіз
-4. lichess.org-та Аудио мен Видео рұқсат ету</string>
-  <string name="enableAutoplayForSoundsChrome">1. lichess.org сайтын ашыңыз
+4. chess-online.com-та Аудио мен Видео рұқсат ету</string>
+  <string name="enableAutoplayForSoundsChrome">1. chess-online.com сайтын ашыңыз
 2. Мекенжай жолағында құлып белгісін басыңыз
 3. Сайт баптауларына өтіңіз
 4. Дыбысқа рұқсат беріңіз</string>
-  <string name="enableAutoplayForSoundsSafari">1. lichess.org сайтын ашыңыз
+  <string name="enableAutoplayForSoundsSafari">1. chess-online.com сайтын ашыңыз
 2. Мәзір жолағында Safari басыңыз
-3. lichess.org арналған баптаулар
+3. chess-online.com арналған баптаулар
 4. Бүкіл автоойнатуды рұқсат ету</string>
   <string name="enableAutoplayForSoundsMicrosoftEdge">1. Төбенің оң жағында үш нүктеге басыңыз
 2. Баптаулар
 3. Куки мен сайт рұқсаттарына кіріңіз
 4. Төмен түсіп, Медиа автоойнату
-5. lichess.org-ты қосып, Рұқсатты басыңыз</string>
-  <string name="adviceOnMitigatingAddiction" comment="Part of the FAQ answer &quot;How to [...] Stop myself from playing?&quot;&#10;&#10;%1$s, %2$s, and %3$s is software which may change.&#10;&#10;%4$s is &quot;Lichess userstyles&quot; (as in CSS styles)&#10;%5$s is &quot;fewer lobby pools&quot;.&#10;&#10;%6$s is &quot;stand-alone mental health condition&quot;.">Тым көп ойнаудан құтыла алмай, бізден көмек сұрап хабарласып жүрген ойышылар аз емес.
+5. chess-online.com-ты қосып, Рұқсатты басыңыз</string>
+  <string name="adviceOnMitigatingAddiction" comment="Part of the FAQ answer &quot;How to [...] Stop myself from playing?&quot;&#10;&#10;%1$s, %2$s, and %3$s is software which may change.&#10;&#10;%4$s is &quot;Chess-Online userstyles&quot; (as in CSS styles)&#10;%5$s is &quot;fewer lobby pools&quot;.&#10;&#10;%6$s is &quot;stand-alone mental health condition&quot;.">Тым көп ойнаудан құтыла алмай, бізден көмек сұрап хабарласып жүрген ойышылар аз емес.
 
 Егер ойыншы Қызмет Көрсету Шартын бұзбаса, Личес оны бұғауға салмайды, сондықтан өзін көп ойнаудан шектеу үшін сыртқы құралдарға назар аударыңыз. Сайт бұғаушылар арасында %1$s, %2$s, %3$s құралдары жұртқа танымал. Егерде Личесті бұғауға салмай, қысқа уақыт қалыптарына қызықпау үшін %4$s, әрі %5$s сияқты әдістерді қолданып көріңіз.
 

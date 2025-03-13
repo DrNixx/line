@@ -3,8 +3,8 @@
   <string name="activity">Attività</string>
   <string name="hostedALiveStream">Ha ospitato una diretta</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">Supporta lichess.org da %1$s mese in qualità di %2$s</item>
-    <item quantity="other">Supporta lichess.org da %1$s mesi in qualità di %2$s</item>
+    <item quantity="one">Supporta chess-online.com da %1$s mese in qualità di %2$s</item>
+    <item quantity="other">Supporta chess-online.com da %1$s mesi in qualità di %2$s</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">Ha studiato %1$s posizione in %2$s</item>
@@ -58,7 +58,7 @@
     <item quantity="one">Ha creato %s nuovo studio</item>
     <item quantity="other">Ha creato %s nuovi studi</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="one">Ha gareggiato in %s torneo</item>
     <item quantity="other">Ha gareggiato in %s tornei</item>
   </plurals>
@@ -71,7 +71,7 @@
     <item quantity="other">Ha gareggiato in %s tornei Svizzeri</item>
   </plurals>
   <string name="rankedInSwissTournament">Classificato #%1$s in %2$s</string>
-  <string name="signedUp">Si è registrato su lichess.org</string>
+  <string name="signedUp">Si è registrato su chess-online.com</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">Si è unito ad %s squadra</item>
     <item quantity="other">Si è unito a %s squadre</item>

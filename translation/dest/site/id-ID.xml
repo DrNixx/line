@@ -213,9 +213,9 @@
   <string name="forgotPassword">Lupa kata sandi?</string>
   <string name="error.weakPassword">Password ini terlalu umum dan mudah ditebak.</string>
   <string name="error.namePassword">Mohon tidak menggunakan username sebagai password.</string>
-  <string name="blankedPassword">Anda telah menggunakan password di website lain, dan website itu telah jebol. Untuk memastikan keamanan akun Lichess anda, kami haruskan untuk menyetel password baru. Terimakasih atas pengertiannya.</string>
-  <string name="youAreLeavingLichess">Anda akan keluar dari Lichess</string>
-  <string name="neverTypeYourPassword">Jangan pernah memasukkan password Lichess di tempat lain!</string>
+  <string name="blankedPassword">Anda telah menggunakan password di website lain, dan website itu telah jebol. Untuk memastikan keamanan akun Chess-Online anda, kami haruskan untuk menyetel password baru. Terimakasih atas pengertiannya.</string>
+  <string name="youAreLeavingLichess">Anda akan keluar dari Chess-Online</string>
+  <string name="neverTypeYourPassword">Jangan pernah memasukkan password Chess-Online di tempat lain!</string>
   <string name="proceedToX">Melanjutkan ke %s</string>
   <string name="passwordSuggestion">Jangan gunakan password yang disarankan orang lain. Mereka akan menggunakannya untuk mengambil akun anda.</string>
   <string name="emailSuggestion">Jangan gunakan email yang disarankan orang lain. Mereka akan menggunakannya untuk mengambil akun anda.</string>
@@ -314,7 +314,7 @@
   <plurals name="giveNbSeconds">
     <item quantity="other">Berikan %s detik</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Akun ini melanggar Ketentuan Layanan Lichess</string>
+  <string name="thisAccountViolatedTos">Akun ini melanggar Ketentuan Layanan Chess-Online</string>
   <string name="openingExplorerAndTablebase">Penjelajah pembukaan &amp; tablebase</string>
   <string name="takeback">Langkah Batal</string>
   <string name="proposeATakeback">Ajukan langkah batal</string>
@@ -488,7 +488,7 @@
   <string name="inlineNotation">Notasi inline</string>
   <string name="makeAStudy">Untuk keperluan menyimpan dan membagi file, pertimbangkan untuk membuat sebuah study.</string>
   <string name="clearSavedMoves">Bersihkan gerakan</string>
-  <string name="previouslyOnLichessTV">Sebelumnya di Lichess TV</string>
+  <string name="previouslyOnLichessTV">Sebelumnya di Chess-Online TV</string>
   <string name="onlinePlayers">Pemain online</string>
   <string name="activePlayers">Pemain aktif</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Awas, permainan ini pake rating namun tanpa pake waktu!</string>
@@ -646,7 +646,7 @@
   <string name="simulHostExtraTime">Penyedia waktu tambahan</string>
   <string name="simulAddExtraTimePerPlayer">Tambahkan waktu awal kepada jam anda untuk setiap pemain yang bergabung ke simul.</string>
   <string name="simulHostExtraTimePerPlayer">Waktu tambahan tuan rumah setiap pemain baru simul</string>
-  <string name="lichessTournaments">Turnamen Lichess</string>
+  <string name="lichessTournaments">Turnamen Chess-Online</string>
   <string name="tournamentFAQ">Arena Turnamen FAQ</string>
   <string name="timeBeforeTournamentStarts">Waktu sebelum turnamen dimulai</string>
   <string name="averageCentipawnLoss">Rata-rata poin kekalahan</string>
@@ -815,7 +815,7 @@
   <plurals name="andSaveNbPremoveLines">
     <item quantity="other">dan simpan %s baris pra-langkah</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Anda telah menerima pesan pribadi dari Lichess.</string>
+  <string name="showUnreadLichessMessage">Anda telah menerima pesan pribadi dari Chess-Online.</string>
   <string name="clickHereToReadIt">Klik di sini untuk membaca</string>
   <string name="sorry">Maaf :(</string>
   <string name="weHadToTimeYouOutForAWhile">Kami harus mengatur waktu Anda untuk sementara waktu.</string>
@@ -828,14 +828,14 @@
   <string name="tryToWin">Usahakan untuk menang (atau setidaknya remis) disetiap permainan yang kau mainkan.</string>
   <string name="resignLostGames">Ajukan menyerah untuk permainan yang kalah (jangan sampai waktu habis).</string>
   <string name="temporaryInconvenience">Kami mohon maaf atas ketidaknyamanan ini,</string>
-  <string name="wishYouGreatGames">dan doakan Anda untuk mendapatkan pengalaman bermain yang hebat di lichess.org.</string>
+  <string name="wishYouGreatGames">dan doakan Anda untuk mendapatkan pengalaman bermain yang hebat di chess-online.com.</string>
   <string name="thankYouForReading">Terima kasih sudah membacanya!</string>
   <string name="lifetimeScore">Skor seumur hidup</string>
   <string name="currentMatchScore">Skor pertandingan saat ini</string>
   <string name="agreementAssistance">Saya menyetujui bahwa saya tidak akan pernah menerima bantuan selama pertandingan (dari komputer catur, buku, database ataupun orang lain).</string>
   <string name="agreementNice">Saya menyetujui bahwa saya akan selalu bersikap baik kepada pemain lain.</string>
   <string name="agreementMultipleAccounts" comment="%s will be replaced with the translation of 'termsOfService'">Saya setuju untuk tidak membuat banyak akun (kecuali untuk alasan yang tertera di %s).</string>
-  <string name="agreementPolicy">Saya menyetujui bahwa saya akan mengikuti semua kebijakan yang ada di Lichess.</string>
+  <string name="agreementPolicy">Saya menyetujui bahwa saya akan mengikuti semua kebijakan yang ada di Chess-Online.</string>
   <string name="searchOrStartNewDiscussion">Cari atau mulai diskusi baru</string>
   <string name="edit">Ubah</string>
   <string name="bullet" comment="Probably best left untranslated. Leave it as 'Bullet' unless your language has a better word for it.">Peluru</string>
@@ -874,7 +874,7 @@
   <string name="congratsYouWon">Selamat, kamu menang!</string>
   <string name="gameVsX">Game vs %1$s</string>
   <string name="resVsX">%1$s vs %2$s</string>
-  <string name="lostAgainstTOSViolator">Anda kalah dari seseorang yang melanggar TOS Lichess</string>
+  <string name="lostAgainstTOSViolator">Anda kalah dari seseorang yang melanggar TOS Chess-Online</string>
   <string name="refundXpointsTimeControlY">Pengembalian dana: %1$s %2$s poin rating.</string>
   <string name="timeAlmostUp">Waktu hampir habis!</string>
   <string name="clickToRevealEmailAddress">[Klik untuk memunculkan alamat email]</string>
@@ -916,7 +916,7 @@ Kosongkan untuk memulai permainan dari posisi awal yang normal.</string>
   <string name="analysisOptions">Setelan analisa</string>
   <string name="focusChat">Fokus pada kotak obroloan</string>
   <string name="showHelpDialog">Tampilkan halaman bantuan ini</string>
-  <string name="reopenYourAccount" comment="Appears on the page where players can reopen their closed account - https://lichess.org/account/reopen (you can only see this when you logged out).">Buka kembali akun Anda</string>
+  <string name="reopenYourAccount" comment="Appears on the page where players can reopen their closed account - https://chess-online.com/account/reopen (you can only see this when you logged out).">Buka kembali akun Anda</string>
   <string name="emailAssociatedToaccount">Alamat e-mail yang terkait dengan akun ini</string>
   <string name="sentEmailWithLink">Kami telah mengirimkan Anda email dengan tautan.</string>
   <string name="tournamentEntryCode">Kode masuk turnamen</string>
@@ -927,13 +927,13 @@ Kosongkan untuk memulai permainan dari posisi awal yang normal.</string>
   <string name="youCantStartNewGame">Anda tidak dapat memulai permainan baru sampai permainan ini selesai.</string>
   <string name="since">Sejak</string>
   <string name="until">Hingga</string>
-  <string name="lichessDbExplanation">Partai diambil dari semua pemain rated Lichess</string>
+  <string name="lichessDbExplanation">Partai diambil dari semua pemain rated Chess-Online</string>
   <string name="switchSides">Tukar Sisi</string>
   <string name="closingAccountWithdrawAppeal">Menutup akun anda akan menarik permohonan banding</string>
   <string name="ourEventTips">Tips dari kami terkait penyelenggaraan acara</string>
   <string name="instructions">Instruksi</string>
   <string name="showMeEverything">Tunjukkan semuanya</string>
-  <string name="lichessPatronInfo">Lichess adalah sebuah amal dan semuanya merupakan perangkat lunak sumber terbuka yang gratis/bebas.
+  <string name="lichessPatronInfo">Chess-Online adalah sebuah amal dan semuanya merupakan perangkat lunak sumber terbuka yang gratis/bebas.
 Semua biaya operasi, pengembangan, dan konten didanai sepenuhnya oleh donasi pengguna.</string>
   <string name="nothingToSeeHere">Tidak ada yang bisa dilihat untuk saat ini.</string>
 </resources>

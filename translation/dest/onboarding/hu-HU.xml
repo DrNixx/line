@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="welcome">Üdv itt!</string>
-  <string name="welcomeToLichess">Üdv lichess.org-on!</string>
+  <string name="welcomeToLichess">Üdv chess-online.com-on!</string>
   <string name="thisIsYourProfilePage">Ez a te profilod.</string>
   <string name="enabledKidModeSuggestion">Kiskorú használná a fiókot? Engedélyezt a %s-ot.</string>
   <string name="whatNowSuggestions">Mi legyen most? Itt van néhány javaslat:</string>
@@ -12,6 +12,6 @@
   <string name="followYourFriendsOnLichess">Kövesd barátaidat Lichessen.</string>
   <string name="playInTournaments">Indulj versenyeken.</string>
   <string name="learnFromXAndY">Tanulj innen: %1$s és %2$s.</string>
-  <string name="configureLichess">Állítsd be Lichess-t kedved szerint.</string>
+  <string name="configureLichess">Állítsd be Chess-Online-t kedved szerint.</string>
   <string name="exploreTheSiteAndHaveFun">Fedezd fel az oldalt és érezd jól magad :)</string>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="contact">联系</string>
-  <string name="contactLichess">联系 Lichess</string>
+  <string name="contactLichess">联系 Chess-Online</string>
   <string name="whatCanWeHelpYouWith">你需要什么帮助?</string>
   <string name="visitThisPage">请向往该页面解决问题</string>
   <string name="iCantLogIn">我无法登录</string>
@@ -12,8 +12,8 @@
   <string name="lost2FA">我丢失了我的双重认证码</string>
   <string name="doPasswordReset">重置密码会解除双重认证</string>
   <string name="accountSupport">账号支援</string>
-  <string name="wantTitle">我想要在 Lichess 显示我的国际象棋称号</string>
-  <string name="visitTitleConfirmation">如果要在你的 Lichess 档案显示你的称号或参与限于大师的锦标赛，请浏览称号认证页面</string>
+  <string name="wantTitle">我想要在 Chess-Online 显示我的国际象棋称号</string>
+  <string name="visitTitleConfirmation">如果要在你的 Chess-Online 档案显示你的称号或参与限于大师的锦标赛，请浏览称号认证页面</string>
   <string name="wantCloseAccount">我想要关闭我的账户</string>
   <string name="closeYourAccount">你可以在此关闭账号</string>
   <string name="doNotAskByEmail">请不要通过电邮要求关闭账号，我们不能招待</string>
@@ -34,10 +34,10 @@
   <string name="doNotMessageModerators">请不要向版主发送私信举报。</string>
   <string name="onlyReports">仅通过举报表单才有效。</string>
   <string name="wantReportBug">我想举报一个错误</string>
-  <string name="reportBugInForum">在 Lichess Feedback 论坛</string>
-  <string name="reportWebsiteIssue">在 GitHub （关于 Lichess 网站）</string>
-  <string name="reportMobileIssue">在 GitHub （关于 Lichess app）</string>
-  <string name="reportBugInDiscord">在 Lichess Discord 服务器</string>
+  <string name="reportBugInForum">在 Chess-Online Feedback 论坛</string>
+  <string name="reportWebsiteIssue">在 GitHub （关于 Chess-Online 网站）</string>
+  <string name="reportMobileIssue">在 GitHub （关于 Chess-Online app）</string>
+  <string name="reportBugInDiscord">在 Chess-Online Discord 服务器</string>
   <string name="howToReportBug">请描述错误的内容，意料的结果，和重复导致错误的步骤。</string>
   <string name="illegalPawnCapture">兵的异常吃法</string>
   <string name="calledEnPassant">它被称为“吃过路兵”，是棋规之一。</string>
@@ -55,7 +55,7 @@
   <string name="botRatingAbuse">在与机器人账号的对局中，若发现玩家滥用其以获取积分，那么这场对局将不会授予积分。</string>
   <string name="errorPage">错误页面</string>
   <string name="reportErrorPage">如果你遇到错误页面，您可以举报：</string>
-  <string name="learnHowToMakeBroadcasts">学习如何在 Lichess 创建直播</string>
+  <string name="learnHowToMakeBroadcasts">学习如何在 Chess-Online 创建直播</string>
   <string name="banAppeal">申请禁令或限制IP</string>
   <string name="engineAppeal">引擎或作弊标记</string>
   <string name="sendAppealTo">你可以向 %s 发出申诉。</string>
@@ -65,13 +65,13 @@
   <string name="doNotDeny">不要否认作弊。 如果你还想被允许创建一个新账户，承认你所做的事情， 并表明你理解这是错误的行为。</string>
   <string name="otherRestriction">其他限制</string>
   <string name="collaboration">协作、法律、贸易等</string>
-  <string name="monetizing">在 Lichess 获利</string>
-  <string name="buyingLichess">收购 Lichess</string>
-  <string name="authorizationToUse">Lichess 利用许可</string>
-  <string name="welcomeToUse">欢迎你使用 Lichess 进行活动，包括商业活动。</string>
-  <string name="videosAndBooks">你可以在视频中展示 Lichess，也能在书籍含用 Lichess 截图。</string>
+  <string name="monetizing">在 Chess-Online 获利</string>
+  <string name="buyingLichess">收购 Chess-Online</string>
+  <string name="authorizationToUse">Chess-Online 利用许可</string>
+  <string name="welcomeToUse">欢迎你使用 Chess-Online 进行活动，包括商业活动。</string>
+  <string name="videosAndBooks">你可以在视频中展示 Chess-Online，也能在书籍含用 Chess-Online 截图。</string>
   <string name="creditAppreciated">我们感激你留一句致谢，但这不是必要的。</string>
   <string name="noneOfTheAbove">其他</string>
   <string name="sendEmailAt">请向 %s 向我们发送一封电邮。</string>
-  <string name="explainYourRequest">请清楚和彻底地解释你的请求，输入你的 Lichess 用户名和任何有助于我们帮助你的信息。</string>
+  <string name="explainYourRequest">请清楚和彻底地解释你的请求，输入你的 Chess-Online 用户名和任何有助于我们帮助你的信息。</string>
 </resources>

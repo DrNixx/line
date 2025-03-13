@@ -8,9 +8,9 @@
     <item quantity="one">%s Deze blogpost</item>
     <item quantity="other">%s Deze blogposts</item>
   </plurals>
-  <string name="lichessOfficialBlog">Officiële blog van Lichess</string>
+  <string name="lichessOfficialBlog">Officiële blog van Chess-Online</string>
   <string name="continueReadingPost">Doorgaan met lezen van dit bericht</string>
-  <string name="lichessBlogPostsFromXYear">Lichess blog berichten uit %s</string>
+  <string name="lichessBlogPostsFromXYear">Chess-Online blog berichten uit %s</string>
   <string name="previousBlogPosts">Eerdere blog berichten</string>
   <string name="xBlog">Blog van %s</string>
   <string name="newPost">Nieuwe blogpost</string>
@@ -52,7 +52,7 @@
   <string name="deleteBlog">Deze blogpost definitief verwijderen</string>
   <string name="safeToUseImages">Het is veilig om afbeeldingen van de volgende websites te gebruiken: </string>
   <string name="selectPostTopics">Selecteer de onderwerpen waar je bericht over gaat</string>
-  <string name="useImagesYouMadeYourself">Je kunt ook afbeeldingen gebruiken die je zelf hebt gemaakt, foto\'s die je hebt gemaakt, screenshots van Lichess... alles waar geen auteursrechten van iemand anders op berusten.</string>
+  <string name="useImagesYouMadeYourself">Je kunt ook afbeeldingen gebruiken die je zelf hebt gemaakt, foto\'s die je hebt gemaakt, screenshots van Chess-Online... alles waar geen auteursrechten van iemand anders op berusten.</string>
   <string name="safeAndRespectfulContent">Plaats alleen veilige en respectvolle inhoud. Kopieer geen inhoud van iemand anders.</string>
   <string name="inappropriateContentAccountClosed">Alles wat ongepast is kan sluiting van je account tot gevolg hebben.</string>
   <string name="blogTips">Onze simpele tips om geweldige blogberichten te schrijven</string>

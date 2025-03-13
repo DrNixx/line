@@ -94,19 +94,19 @@ Następnie system wycofa takiego uczestnika z turnieju, więc nie przegra on wi�
 Uczestnik ten może w każdej chwili ponownie dołączyć do turnieju.</string>
   <string name="protectionAgainstNoShowQ">Co się dzieje z graczami, którzy nie przystępują do partii?</string>
   <string name="protectionAgainstNoShowA" comment="By &quot;a game&quot; - we mean just one game. Missing even one game will prevent that player from joining a new Swiss event for a certain amount of time.">Gracze, którzy zapisali się do turnieju w systemie szwajcarskim, ale nie rozgrywają swoich partii, stanowią problem.
-W celu minimalizacji skali takich sytuacji Lichess uniemożliwia przez pewien czas zapisy na turnieje w systemie szwajcarskim graczom, którzy nie podeszli do partii. 
+W celu minimalizacji skali takich sytuacji Chess-Online uniemożliwia przez pewien czas zapisy na turnieje w systemie szwajcarskim graczom, którzy nie podeszli do partii.
 Twórca turnieju może jednak zezwolić im na dołączenie.</string>
   <string name="lateJoinQ">Czy można dołączyć do turnieju po jego rozpoczęciu?</string>
   <string name="lateJoinA">Tak, dopóki nie rozpocznie się ponad połowa rund. Na przykład w 11-rundowym turnieju uczestnicy mogą dołączyć przed rozpoczęciem się 6 rundy, a w 12-rundowym turnieju przed rozpoczęciem się rundy 7.
 Uczestnicy dołączający po rozpoczęciu turnieju otrzymują jeden wolny los (punkt bez gry), nawet jeśli przegapili już kilka rund.</string>
   <string name="willSwissReplaceArenasQ">Czy system szwajcarski zastąpi areny?</string>
-  <string name="willSwissReplaceArenasA">Nie. To dodatkowy system turniejowy na Lichess.</string>
+  <string name="willSwissReplaceArenasA">Nie. To dodatkowy system turniejowy na Chess-Online.</string>
   <string name="roundRobinQ">Co z systemem kołowym?</string>
   <string name="roundRobinA">Chcielibyśmy go dodać, ale niestety system kołowy nie sprawdza się w turniejach online.
 Problemem jest to, że nie ma sprawiedliwego sposobu radzenia sobie z uczestnikami, którzy wcześnie porzucają turniej. Trudno oczekiwać, że wszyscy uczestnicy zagrają wszystkie swoje partie. To po prostu się nie zdarza, a w rezultacie większość turniejów byłaby wadliwa i niesprawiedliwa, co podważa ich sens istnienia.
 Najbardziej zbliżoną formą do systemu kołowego jest właśnie system szwajcarski z bardzo dużą liczbą rund. W takim turnieju zagrają ze sobą wszystkie możliwe pary.</string>
   <string name="otherSystemsQ">Co z innymi systemami turniejowymi?</string>
-  <string name="otherSystemsA">W tej chwili nie planujemy dodawać innych systemów turniejowych na Lichess.</string>
+  <string name="otherSystemsA">W tej chwili nie planujemy dodawać innych systemów turniejowych na Chess-Online.</string>
   <string name="swissDescription">W systemie szwajcarskim %1$s, uczestnik niekoniecznie rozegra partie ze wszystkimi innymi uczestnikami turnieju. Uczestnicy parowani są ze sobą przy użyciu zestawu zasad mających na celu zapewnienie, że każdy zagra z przeciwnikiem mającym podobny wynik, jednak nie więcej niż raz z tym samym przeciwnikiem. Zwycięzcą turnieju jest uczestnik z najwyższą łączną liczbą punktów uzyskaną we wszystkich rundach. Wszyscy uczestnicy turnieju grają w każdej rundzie, chyba że istnieje nieparzysta liczba uczestników.</string>
   <string name="teamOnly">Turnieje systemem szwajcarskim mogą być tworzone wyłącznie przez liderów klubów i mogą być grane tylko przez członków tego klubu.
 %1$s, aby zacząć grać systemem szwajcarskim.</string>

@@ -31,7 +31,7 @@ export function initModule(): StudyTour {
 
     const steps: Shepherd.Step.StepOptions[] = [
       {
-        title: 'Welcome to Lichess Study!',
+        title: 'Welcome to Chess-Online Study!',
         text:
           'This is a shared analysis board.<br><br>' +
           'Use it to analyse and annotate games,<br>' +
@@ -104,7 +104,7 @@ export function initModule(): StudyTour {
       title: 'Thanks for your time',
       text:
         "You can find your <a href='/study/mine/hot'>previous studies</a> from your profile page.<br>" +
-        "There is also a <a href='//lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way'>blog post about studies</a>.<br>" +
+        "There is also a <a href='//live.chess-online.com/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way'>blog post about studies</a>.<br>" +
         'Power users might want to press "?" to see keyboard shortcuts.<br>' +
         'Have fun!',
       attachTo: { element: helpButtonSelector, on: 'top' },
@@ -153,7 +153,7 @@ export function initModule(): StudyTour {
         title: 'Load an existing lichess game',
         text:
           'Paste a lichess game URL<br>' +
-          '(like lichess.org/7fHIU0XI)<br>' +
+          '(like live.chess-online.com/7fHIU0XI)<br>' +
           'to load the game moves in the chapter.',
         attachTo: { element: `${viewSel} .tabs-horiz .game`, on: 'top' },
         when: onTab('game'),

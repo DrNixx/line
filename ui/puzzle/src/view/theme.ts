@@ -5,7 +5,7 @@ import type { ThemeKey, RoundThemes } from '../interfaces';
 import { renderColorForm } from './side';
 import type PuzzleCtrl from '../ctrl';
 
-const studyUrl = 'https://lichess.org/study/viiWlKjv';
+const studyUrl = 'https://live.chess-online.com/study/viiWlKjv';
 
 export default function theme(ctrl: PuzzleCtrl): MaybeVNode {
   const data = ctrl.data,

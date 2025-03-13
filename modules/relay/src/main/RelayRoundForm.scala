@@ -177,7 +177,7 @@ object RelayRoundForm:
       then Left("LCC URLs must end with /{round-number}, e.g. /5 for round 5")
       else Right(url)
     url <-
-      if url.host.toString.endsWith("lichess.org") && !Granter(_.Relay)
+      if url.host.toString.endsWith("chess-online.com") && !Granter(_.Relay)
       then Left("Invalid source URL")
       else Right(url)
   yield url

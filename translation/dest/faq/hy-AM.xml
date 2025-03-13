@@ -2,18 +2,18 @@
 <resources>
   <string name="faqAbbreviation">ՀՏՀ</string>
   <string name="frequentlyAskedQuestions">Հաճախ տրվող հարցեր</string>
-  <string name="whyIsLichessCalledLichess">Ինչո՞ւ է Lichess-ը կոչվում Lichess։</string>
-  <string name="lichessCombinationLiveLightLibrePronounced">Lichess-ը live/light/libre և chess բառերի համադրությունից է` կենդանի, թեթև և ազատ շախմատ։ Lichess-ն արտասանվում է %1$s։</string>
+  <string name="whyIsLichessCalledLichess">Ինչո՞ւ է Chess-Online-ը կոչվում Chess-Online։</string>
+  <string name="lichessCombinationLiveLightLibrePronounced">Chess-Online-ը live/light/libre և chess բառերի համադրությունից է` կենդանի, թեթև և ազատ շախմատ։ Chess-Online-ն արտասանվում է %1$s։</string>
   <string name="leechess">լի֊չես</string>
   <string name="hearItPronouncedBySpecialist">Լսեք մասնագետի կատարմամբ։</string>
-  <string name="howCanIContributeToLichess">Ինչպե՞ս կարող եմ ներդրում ունենալ Lichess-ում։</string>
-  <string name="lichessPoweredByDonationsAndVolunteers">Lichess-ը գոյություն ունի խաղացողների նվիրատվություններով և մշակվում է կամավորների թիմի կողմից։</string>
+  <string name="howCanIContributeToLichess">Ինչպե՞ս կարող եմ ներդրում ունենալ Chess-Online-ում։</string>
+  <string name="lichessPoweredByDonationsAndVolunteers">Chess-Online-ը գոյություն ունի խաղացողների նվիրատվություններով և մշակվում է կամավորների թիմի կողմից։</string>
   <string name="beingAPatron">դառնալ հովանավոր</string>
   <string name="breakdownOfOurCosts">ծախսերի հաշվետվություն</string>
   <string name="otherWaysToHelp">օգնելու այլ ձևեր</string>
-  <string name="areThereWebsitesBasedOnLichess">Lichess-ի վրա հիմնված այլ կայքեր կա՞ն։</string>
-  <string name="yesLichessInspiredOtherOpenSourceWebsites">Այո, կան։ Շատ կայքեր ոգեշնչվել են Lichess-ից և օգտագործում են մեր %1$s-ը, %2$s-ը և %3$s-ը։</string>
-  <string name="keyboardShortcutsExplanation">Lichess-ի որոշ էջեր ունեն ստեղնաշարի դյուրանցումներ, որոնք կարող եք օգտագործել: Փորձեք սեղմել «?» ստեղնը ստուդիայում, խաղի վերլուծության ժամանակ, խնդիրը լուծելու կամ խաղի ընթացքում՝ հասանելի թեժ ստեղները թվարկելու համար:</string>
+  <string name="areThereWebsitesBasedOnLichess">Chess-Online-ի վրա հիմնված այլ կայքեր կա՞ն։</string>
+  <string name="yesLichessInspiredOtherOpenSourceWebsites">Այո, կան։ Շատ կայքեր ոգեշնչվել են Chess-Online-ից և օգտագործում են մեր %1$s-ը, %2$s-ը և %3$s-ը։</string>
+  <string name="keyboardShortcutsExplanation">Chess-Online-ի որոշ էջեր ունեն ստեղնաշարի դյուրանցումներ, որոնք կարող եք օգտագործել: Փորձեք սեղմել «?» ստեղնը ստուդիայում, խաղի վերլուծության ժամանակ, խնդիրը լուծելու կամ խաղի ընթացքում՝ հասանելի թեժ ստեղները թվարկելու համար:</string>
   <string name="fairPlay">Արդար խաղ</string>
   <string name="whenAmIEligibleRatinRefund">Եթե պարզվի, որ ես պատվել եմ խարդախին, իմ վարկանիշը կվերադարձնե՞ն։</string>
   <string name="ratingRefundExplanation" comment="In answer to the question 'When am I eligible for the automatic rating refund from cheaters?'">Խարդախին հայտնաբերելուց մեկ րոպե անց, վերջին 3 օրում նրա հաղթած 40 պարտիաները վերանայվում են։ Եթե ​​դուք եղել եք նրա մրցակիցը այդ պարտիաներում, և ձեր սեփական վարկանիշը համարվում է հուսալի, կարող եք հույս ունենալ, որ վարկանիշը կվերադարձվի։ Փոխհատուցումը կարող է սահմանափակվել տարբեր պայմաններով, ինչպիսիք են՝ ձեր առավելագույն վարկանիշը և վարկանիշի փոփոխությունները անազնիվ խաղից հետո։
@@ -36,13 +36,13 @@
 
 Դիտե՛ք %3$s-ը և մարզվե՛ք։</string>
   <string name="goodIntroduction">լավ բացատրություն</string>
-  <string name="lichessTraining">Մարզում Lichess-ում</string>
+  <string name="lichessTraining">Մարզում Chess-Online-ում</string>
   <string name="threefoldRepetition">Եռակի կրկնություն</string>
   <string name="threefoldRepetitionLowerCase">եռակի կրկնություն</string>
   <string name="configure">կարգավորել</string>
   <string name="accounts">Հաշիվներ</string>
-  <string name="titlesAvailableOnLichess">Ի՞նչ պաշտոնական կոչումներ են օգտագործվում Lichess-ում։</string>
-  <string name="lichessRecognizeAllOTBtitles">Lichess-ը կարող է ցուցադրել ՖԻԴԵ-ի բոլոր կոչումները, որոնք ստացվել են սովորական մրցաշարերում, ինչպես նաև՝ %1$s։ Ահա ՖԻԴԵ-ի կոչումների ցանկը․</string>
+  <string name="titlesAvailableOnLichess">Ի՞նչ պաշտոնական կոչումներ են օգտագործվում Chess-Online-ում։</string>
+  <string name="lichessRecognizeAllOTBtitles">Chess-Online-ը կարող է ցուցադրել ՖԻԴԵ-ի բոլոր կոչումները, որոնք ստացվել են սովորական մրցաշարերում, ինչպես նաև՝ %1$s։ Ահա ՖԻԴԵ-ի կոչումների ցանկը․</string>
   <string name="noUpperCaseDot">Ոչ.</string>
   <string name="ratingLeaderboards">առաջատարների ցանկ.</string>
   <string name="secondRequirementToStopOldPlayersTrustingLeaderboards">Երկրորդ պայմանն այն է, որ փակված մասնակցային հաշիվներով խաղացողներն անհետանում են առաջատարների ցանկից։</string>

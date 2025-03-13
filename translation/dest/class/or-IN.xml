@@ -40,8 +40,8 @@
   <string name="youAcceptedThisInvitation">ଆପଣ ଏହି ନିମନ୍ତ୍ରଣ ଗ୍ରହଣ କରିଛନ୍ତି।</string>
   <string name="youDeclinedThisInvitation">ଆପଣ ଏହି ନିମନ୍ତ୍ରଣକୁ ପ୍ରତ୍ୟାଖ୍ୟାନ କରିଛନ୍ତି।</string>
   <string name="orSeparator" comment="Used as separator between invite sections. Shown as large '~ or ~'.">କିମ୍ବା</string>
-  <string name="createMultipleAccounts">ଏକାଥରକେ ଏକାଧିକ Lichess ଆକାଉଣ୍ଟ୍ ସୃଷ୍ଟି କରନ୍ତୁ</string>
-  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">ଛାତ୍ରଙ୍କ ନା‍ଁ ଥିବା ତାଲିକାରୁ ଏକାଧିକ Lichess ଆକାଉଣ୍ଟ୍ ସୃଷ୍ଟି କରିବା ପାଇଁ ଆପଣ %s କରିପାରିବେ।</string>
+  <string name="createMultipleAccounts">ଏକାଥରକେ ଏକାଧିକ Chess-Online ଆକାଉଣ୍ଟ୍ ସୃଷ୍ଟି କରନ୍ତୁ</string>
+  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">ଛାତ୍ରଙ୍କ ନା‍ଁ ଥିବା ତାଲିକାରୁ ଏକାଧିକ Chess-Online ଆକାଉଣ୍ଟ୍ ସୃଷ୍ଟି କରିବା ପାଇଁ ଆପଣ %s କରିପାରିବେ।</string>
   <string name="useThisForm" comment="Link text in multipleAccsFromDescription">ଏହି ଫର୍ମ ମଧ୍ୟ ବ୍ୟବହାର</string>
   <string name="maxStudentsNote" comment="%1$s will be replaced with a large number (currently 100).\n%2$s is a link and will be replaced with the translation of createMoreClasses. Make sure both strings fit together.">ଧ୍ୟାନ ଦିଅନ୍ତୁ ଯେ ଗୋଟେ ଶ୍ରେଣୀରେ କେବଳ %1$s ଜଣ ଛାତ୍ର ରହିପାରିବେ। ଅଧିକ ଛାତ୍ର ପରିଚାଳନା କରିବାକୁ, %2$s।</string>
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">ଅଧିକ ଶ୍ରେଣୀ ସୃଷ୍ଟି କରନ୍ତୁ</string>

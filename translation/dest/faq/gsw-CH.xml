@@ -2,22 +2,22 @@
 <resources>
   <string name="faqAbbreviation">Hüfig gschtellti Frage (FAQ)</string>
   <string name="frequentlyAskedQuestions">Oft geschtellti Frage</string>
-  <string name="whyIsLichessCalledLichess">Wieso de Name Lichess?</string>
-  <string name="lichessCombinationLiveLightLibrePronounced">Lichess isch e Kombinazion us live/light/libre und Schach. Usgschproche wirds: %1$s.</string>
+  <string name="whyIsLichessCalledLichess">Wieso de Name Chess-Online?</string>
+  <string name="lichessCombinationLiveLightLibrePronounced">Chess-Online isch e Kombinazion us live/light/libre und Schach. Usgschproche wirds: %1$s.</string>
   <string name="leechess">litschess</string>
   <string name="hearItPronouncedBySpecialist">Los dir es Usschprach Bischpil ah.</string>
-  <string name="whyLiveLightLibre">\"Live\" - will rund um d\'Uhr und in Ächtzit Schpiel gschpillt und beobachtet werde chönd und \"light + libre\" (liecht und frei) will Lichess quälle-offe isch und frei isch vu \"Müll\", wo vill anderi Internetsite belaschted.</string>
-  <string name="whyIsLilaCalledLila">Ähnlich ischs mit em Quällcode vu Lichess, %1$s, was für \"li[chess in sca]la\" staht. De Grossteil vu de Plattform isch ebe i dem %2$s gschribe worde. \"Scala\" isch e intuitivi Programmierschprach. Und näbebi bemerkt, isch es au offesichtlich, dass regi, verschpillti Fantasie mit gwürkt hät.</string>
-  <string name="howCanIContributeToLichess">Wie chann ich zu Lichess öppis biträge?</string>
-  <string name="lichessPoweredByDonationsAndVolunteers">Lichess wird dur Schpände vu Gönner und vu Leischtige vu Freiwillige betribe und erhalte.</string>
-  <string name="findMoreAndSeeHowHelp">Du chasch meh drüber erfahre, wie du %1$s wirsch und du chasch au e %2$s aluege. Und falls du Lichess, mit freiwilliger Arbet wottsch underschtütze, gits einigi %3$s.</string>
+  <string name="whyLiveLightLibre">\"Live\" - will rund um d\'Uhr und in Ächtzit Schpiel gschpillt und beobachtet werde chönd und \"light + libre\" (liecht und frei) will Chess-Online quälle-offe isch und frei isch vu \"Müll\", wo vill anderi Internetsite belaschted.</string>
+  <string name="whyIsLilaCalledLila">Ähnlich ischs mit em Quällcode vu Chess-Online, %1$s, was für \"li[chess in sca]la\" staht. De Grossteil vu de Plattform isch ebe i dem %2$s gschribe worde. \"Scala\" isch e intuitivi Programmierschprach. Und näbebi bemerkt, isch es au offesichtlich, dass regi, verschpillti Fantasie mit gwürkt hät.</string>
+  <string name="howCanIContributeToLichess">Wie chann ich zu Chess-Online öppis biträge?</string>
+  <string name="lichessPoweredByDonationsAndVolunteers">Chess-Online wird dur Schpände vu Gönner und vu Leischtige vu Freiwillige betribe und erhalte.</string>
+  <string name="findMoreAndSeeHowHelp">Du chasch meh drüber erfahre, wie du %1$s wirsch und du chasch au e %2$s aluege. Und falls du Chess-Online, mit freiwilliger Arbet wottsch underschtütze, gits einigi %3$s.</string>
   <string name="beingAPatron">en Gönner</string>
   <string name="breakdownOfOurCosts">Ufschlüsselig vu euse Choschte</string>
   <string name="otherWaysToHelp">anderi Wäg z\'hälfe</string>
-  <string name="areThereWebsitesBasedOnLichess">Gits Website wo uf Lichess basiered?</string>
-  <string name="yesLichessInspiredOtherOpenSourceWebsites">Ja - Lichess hät tatsächlich anderi quälle-offeni Site inschpiriert, wo euse %1$s, %2$s oder eusi %3$s verwänded.</string>
+  <string name="areThereWebsitesBasedOnLichess">Gits Website wo uf Chess-Online basiered?</string>
+  <string name="yesLichessInspiredOtherOpenSourceWebsites">Ja - Chess-Online hät tatsächlich anderi quälle-offeni Site inschpiriert, wo euse %1$s, %2$s oder eusi %3$s verwänded.</string>
   <string name="keyboardShortcuts">Was für Taschtaturchürzel gits da?</string>
-  <string name="keyboardShortcutsExplanation">Bi einige Lichess-Site gits Taschtaturchürzel, wo mer chann verwände. Mit em Fragezeiche (?) werded, uf Schtudie-, Analyse-, Rätsel- oder Schpielsite - die verfüegbare Taschte-Kombinazione azeigt.</string>
+  <string name="keyboardShortcutsExplanation">Bi einige Chess-Online-Site gits Taschtaturchürzel, wo mer chann verwände. Mit em Fragezeiche (?) werded, uf Schtudie-, Analyse-, Rätsel- oder Schpielsite - die verfüegbare Taschte-Kombinazione azeigt.</string>
   <string name="fairPlay">Fairs Schpille</string>
   <string name="whenAmIEligibleRatinRefund">Wänn chumm ich Wertigspünkt zrugg über, wo mir en Betrüger gnah hät?</string>
   <string name="ratingRefundExplanation" comment="In answer to the question 'When am I eligible for the automatic rating refund from cheaters?'">1 Minute, nachdem en Schpiller markiert worde isch, werded sini 40 letschte Schpiel, vu de letschte 3 Tag aglueget. Bisch du i dene Schpiel under de Gägner gsi und dini Wertig hät sich verschlächteret, will du verlore- oder Remis gschpillt häsch, dänn chunnsch du e \"Wertigsrückerstattig\" über. Die Rückerschtattig wird begränzt dur dini Spitzewertig und din Wertigsfortschritt nach dem Schpiel.
@@ -29,16 +29,16 @@
   <string name="isCorrespondenceDifferent">Was sind d\'Underschid vu Fernschach zu normalem Schach?</string>
   <string name="pleaseReadFairPlayPage">Meh Infos chasch uf eusere %s läse</string>
   <string name="fairPlayPage">\"Fairplay-Site\"</string>
-  <string name="youCanUseOpeningBookNoEngine">Bi Lichess isch de Hauptunderschid i de Regle für Korrespondänz-Schach darin, dass es Buech erlaubt isch. Software oder Schach-Computer sind aber immer no verbote und füehred zur Markierig vom Konto, wäge unerlaubter Computer-Underschtützig. Obwohl d\'ICCF d\'Verwändig vu Computer für Fernschachpartie erlaubt, isch das bi Lichess nöd g\'schtattet.</string>
+  <string name="youCanUseOpeningBookNoEngine">Bi Chess-Online isch de Hauptunderschid i de Regle für Korrespondänz-Schach darin, dass es Buech erlaubt isch. Software oder Schach-Computer sind aber immer no verbote und füehred zur Markierig vom Konto, wäge unerlaubter Computer-Underschtützig. Obwohl d\'ICCF d\'Verwändig vu Computer für Fernschachpartie erlaubt, isch das bi Chess-Online nöd g\'schtattet.</string>
   <string name="gameplay">Schpielerläbnis</string>
   <string name="howBulletBlitzEtcDecided">Wie wird entschide, was Bullet, Blitz und anderi Zitkontrolle sind?</string>
-  <string name="basedOnGameDuration">Lichess Zitkontrolle basiered uf de erwartete Schpieldur = %1$s
+  <string name="basedOnGameDuration">Chess-Online Zitkontrolle basiered uf de erwartete Schpieldur = %1$s
 Zum Bischpil berächnet sich die erwartete Schpieldur vonere 5+3 Partie zu 5 × 60 + 40 × 3 = 420 Sekunde.</string>
   <string name="durationFormula" comment="durationFormula&#10;&#10;Part of the larger string 'basedOnGameDuration'&#10;&#10;Note: this string did not use to say 'in seconds'. Please update if necessary.">(Zitguethabe am Afang) + 40 × (Zug-Inkrement)</string>
   <string name="inferiorThanXsEqualYtimeControl">&lt; %1$ss = %2$s</string>
   <string name="superiorThanXsEqualYtimeControl">≥ %1$ss = %2$s</string>
-  <string name="whatVariantsCanIplay">Was für Variante chann ich uf Lichess schpille?</string>
-  <string name="lichessSupportChessAnd">Lichess underschtützt Schtandardschach und %1$s.</string>
+  <string name="whatVariantsCanIplay">Was für Variante chann ich uf Chess-Online schpille?</string>
+  <string name="lichessSupportChessAnd">Chess-Online underschtützt Schtandardschach und %1$s.</string>
   <string name="eightVariants">8 Schachvariantä</string>
   <string name="whatIsACPL">Was isch durchschnittlichä Hundertstelpur-Verluscht (ACPL)?</string>
   <string name="acplExplanation">De Centipur isch im Schach es Mass, zum de Vorteil bemässe. 1 Centipur entschpricht- oder isch 1 Hundertschtelpur - also sind 100 Centipure 1 ganze Pur. Die Wert schpilled während em Schpiel kei Rolle, sie sind aber im Computer-Schach es Mittel zum Stellige bewerte.
@@ -47,7 +47,7 @@ De bescht, möglich Computer-Zug verlürt kein Hundertschtelpur, schlächteri Z�
 
 De Wert chann als Indikator für d\'Schpielqualität gnutzt werde: Je weniger Centipure pro Zug verlore göhnd, umso besser isch d\'Schpielstärchi.
 
-Computer-Analyse werded bi Lichess vu \"Stockfish\" gmacht.</string>
+Computer-Analyse werded bi Chess-Online vu \"Stockfish\" gmacht.</string>
   <string name="insufficientMaterial">Mit Zit verlüre, Remis und ungnüegends Material</string>
   <string name="lichessFollowFIDErules">Isch eim Schpiller d\'Zit abgloffe, verlürt er - i de Regel - s\'Schpiel. 
 Es Schpiel chann jedoch au als Remis erchlärt werde, wänn de vermeindlich Sieger, kei legali Zugfolg hät zum es Matt mache (%1$s).
@@ -66,10 +66,10 @@ Wichtig isch, dass die Schlagart \"en passant\" nur diräkt nach dem Uswichversu
 
 Im %3$s wird \"en passant\" mit Üebige erchlärt und glehrt.</string>
   <string name="goodIntroduction">guete erschte Idruck</string>
-  <string name="lichessTraining">Lichess-Träning</string>
+  <string name="lichessTraining">Chess-Online-Träning</string>
   <string name="watchIMRosenCheckmate">Lueg zue, wie de IM Eric Rosen - mit eme %s - es Schachmatt macht.</string>
   <string name="threefoldRepetition">Drüfachi Schtelligswiderholig</string>
-  <string name="threefoldRepetitionExplanation">Bi drümal glicher Stellig, chann en Schpiller es Remis dur %1$s reklamiere. Lichess setzt die offiziell FIDE Regle, wo im Artikel 9.2 vum %2$s beschribe isch, um.</string>
+  <string name="threefoldRepetitionExplanation">Bi drümal glicher Stellig, chann en Schpiller es Remis dur %1$s reklamiere. Chess-Online setzt die offiziell FIDE Regle, wo im Artikel 9.2 vum %2$s beschribe isch, um.</string>
   <string name="threefoldRepetitionLowerCase">drüfachi Schtelligswiderholig</string>
   <string name="notRepeatedMoves">Mir händ kei Züge widerholt, wieso hät s\'Schpiel trotzdem, dur Schtelligswiderholig, Remis g\'ändet?</string>
   <string name="repeatedPositionsThatMatters">Bi drüfach glicher Schtellig gahts um vollschtändig glichi %1$s, nöd um Zugswiderholige. Di glichi Schtellig cha mit beliebige Züg erreicht werde, sofern d\'Zugmöglichkeite i dene Schtellige immer glich sind.</string>
@@ -78,20 +78,20 @@ Im %3$s wird \"en passant\" mit Üebige erchlärt und glehrt.</string>
   <string name="threeFoldHasToBeClaimed">Drüfach glichi Schtellig muess vume Schpiller reklamiert werde. Das macht mer, idem mer uf d\'Schaltflächi klickt, wo azeigt wird, oder idem mer Remis vor em letschte Zug abütet, wo so e Schtellig herbifüehrt. I so me Fall wird e berächtigti Reklamation, wäge drüfach glicher Schtellig, sälbscht dänn erfolgrich si, wänn de Gägner es Remisagebot ablehnt. Mer chann im Konto au %1$s, dass drüfach glichi Schtellig automatisch zum Remis wird. Usserdem beändet e foiffach glichi Schtellig mit gliche Zugsmöglichkeite es Schpil immer sofort.</string>
   <string name="configure">konfiguriärä</string>
   <string name="accounts">Konti</string>
-  <string name="titlesAvailableOnLichess">Welli Titel gits uf Lichess?</string>
-  <string name="lichessRecognizeAllOTBtitles">Lichess anerchännt alli FIDE-Titel, wo am Brätt g\'unne worde sind, ebeso %1$s. Da e Lischte vu FIDE-Titel:</string>
+  <string name="titlesAvailableOnLichess">Welli Titel gits uf Chess-Online?</string>
+  <string name="lichessRecognizeAllOTBtitles">Chess-Online anerchännt alli FIDE-Titel, wo am Brätt g\'unne worde sind, ebeso %1$s. Da e Lischte vu FIDE-Titel:</string>
   <string name="showYourTitle">Wänn du en OTB Titel häsch, chasch du beaträge, dass er i dim Konto azeigt wird, idem du das %1$s usfüllsch, mit ere läserliche Kopie vu dim Pass oder dinere ID plus es Selfie vu dir, uf dem du d\'Beschtätigung vu dim Titel präsentiersch.
 
-So e Titelbeschtätigung ermöglicht dir, bi Lichess a Titel Arena Events mitzschpille.
+So e Titelbeschtätigung ermöglicht dir, bi Chess-Online a Titel Arena Events mitzschpille.
 
 Usserdem gits no en Ehretitel %2$s.</string>
   <string name="asWellAsManyNMtitles">vili nationali Meischtertitel</string>
   <string name="verificationForm">Verifikationsformular</string>
-  <string name="canIbecomeLM">Chan ich de Lichess Meischter (LM) Titel übercho?</string>
+  <string name="canIbecomeLM">Chan ich de Chess-Online Meischter (LM) Titel übercho?</string>
   <string name="noUpperCaseDot">Leider nei.</string>
-  <string name="lMtitleComesToYouDoNotRequestIt">De Ehretitel isch inoffiziell und exischtiert nur bi Lichess.
+  <string name="lMtitleComesToYouDoNotRequestIt">De Ehretitel isch inoffiziell und exischtiert nur bi Chess-Online.
 
-I sältene Fäll und nach eusem Ermässe, vergänd mir de Titel a bsunders bemerkenswerti Schpiller, wo gueti Mitglieder vu Lichess sind. Du chunnsch de \"LM-Titel\" nöd über, sondern de Titel gaht a dich. Wänn du dich defür qualifiziersch, chunnsch du vu eus e Nachricht über und du häsch d\'Wahl de Titel azneh oder abzlehne. 
+I sältene Fäll und nach eusem Ermässe, vergänd mir de Titel a bsunders bemerkenswerti Schpiller, wo gueti Mitglieder vu Chess-Online sind. Du chunnsch de \"LM-Titel\" nöd über, sondern de Titel gaht a dich. Wänn du dich defür qualifiziersch, chunnsch du vu eus e Nachricht über und du häsch d\'Wahl de Titel azneh oder abzlehne.
 
 Also verlang de Titel nöd.</string>
   <string name="whatUsernameCanIchoose">Wie chann min Benutzername lute?</string>
@@ -100,12 +100,12 @@ Also verlang de Titel nöd.</string>
   <string name="canIChangeMyUsername">Chann ich min Benutzername ändere?</string>
   <string name="usernamesCannotBeChanged" comment="&quot;Materialised&quot; is a technical term: https://en.wikipedia.org/wiki/Materialized_view&#10;In this context, it means that it is used in many places and too significant to change, on a technical level. It also comments on the social perspective (&quot;people's minds&quot;).">Leider nei, Benutzernäme chönd us technische und praktische Gründ nöd g\'änderet werde. Die Benutzernäme erschined a z\'vill Schtelle: Datebanke, Export, Logs und au im Chopf vu andere Lüt. mer chann aber eimal d\'Gross-/Chlischribig ändere.</string>
   <string name="uniqueTrophies">Einzigartigi Trophäe</string>
-  <string name="ownerUniqueTrophies">Die Trophäe isch einzigartig i de Gschicht vo Lichess, niemert usser em %1$s wird si jemals ha.</string>
+  <string name="ownerUniqueTrophies">Die Trophäe isch einzigartig i de Gschicht vo Chess-Online, niemert usser em %1$s wird si jemals ha.</string>
   <string name="wayOfBerserkExplanation">Er hät si übercho, will er 100%% vu de Schpiel vumene %s mit Berserk gschpillt- und gunne hät.</string>
   <string name="aHourlyBulletTournament">es schtündlichs Bullet-Turnier</string>
-  <string name="goldenZeeExplanation" comment="goldenZeeExplanation&#10;&#10;ZugAddict is a legendary player and streamer, do not translate his name.&#10;https://lichess.org/@/ZugAddict&#10;&#10;Thibault is the name of the founder of Lichess: https://lichess.org/@/thibault">De Schpiller \"ZugAddict\" hät mal - ime Stream - über 2 Schtund lang versuecht de Computer, uf Schtufe 8, im Bullet 1+0 z\'besiege - aber ohni Erfolg. De \"Thibault\" hät ihm dänn e einzigartigi Trophäe versproche, falls er das doch mal schaffe würd. Ei Schtund spöter hät de \"ZugAddicr\" de \"Stockfish\" besiegt und das Verschpräche isch ighalte worde.</string>
-  <string name="lichessRatings">Lichess-Wertige</string>
-  <string name="whichRatingSystemUsedByLichess">Was für es Wertigs-System benutzt Lichess?</string>
+  <string name="goldenZeeExplanation" comment="goldenZeeExplanation&#10;&#10;ZugAddict is a legendary player and streamer, do not translate his name.&#10;https://chess-online.com/@/ZugAddict&#10;&#10;Thibault is the name of the founder of Chess-Online: https://chess-online.com/@/thibault">De Schpiller \"ZugAddict\" hät mal - ime Stream - über 2 Schtund lang versuecht de Computer, uf Schtufe 8, im Bullet 1+0 z\'besiege - aber ohni Erfolg. De \"Thibault\" hät ihm dänn e einzigartigi Trophäe versproche, falls er das doch mal schaffe würd. Ei Schtund spöter hät de \"ZugAddicr\" de \"Stockfish\" besiegt und das Verschpräche isch ighalte worde.</string>
+  <string name="lichessRatings">Chess-Online-Wertige</string>
+  <string name="whichRatingSystemUsedByLichess">Was für es Wertigs-System benutzt Chess-Online?</string>
   <string name="ratingSystemUsedByLichess">Wertige (\"Wertigszahle\", \"Ratings\") werded mit de Glicko-2-Wertigsmethode - entwicklet vum Mark Glickman - berächnet. Das isch e sehr beliebti Methode und wird vonere bedütende Azahl vu Schachorganisatione verwändet (d\'FIDE isch es bemerkenswerts Gägebischpil wo immer no s\'veraltete ELO-Wertigs-Syschtem verwändet).
 
 Grundsätzlich verwändet d\'Glicko-Wertig \"Konfidänzintervall\" bi de Berächnig vu Wertige. Wer zum erschte Mal uf dere Website schpillt, fangt sini Wertig bi 1500 ± 1000 Pünkt a. Die 1500 schtelled e Grundwertig dar und die 1000 schtellt s\'Konfidänzintervall dar.
@@ -139,42 +139,42 @@ Es isch am beschte, Wertige als \"relativi\" Wert z\'betrachte (im Gägesatz zu 
   <string name="howToThreeDots">Wie chann ich...</string>
   <string name="enableDisableNotificationPopUps">Benachrichtigungs-Popups aktiviere oder deaktiviere?</string>
   <string name="viewSiteInformationPopUp">Site Informations-Popup azeige</string>
-  <string name="lichessCanOptionnalySendPopUps">Lichess chan optional Popup-Benachrichtigunge versände, zum Bischpil wänn du am Zug bisch oder wänn du e privati Nachricht übercho häsch.
+  <string name="lichessCanOptionnalySendPopUps">Chess-Online chan optional Popup-Benachrichtigunge versände, zum Bischpil wänn du am Zug bisch oder wänn du e privati Nachricht übercho häsch.
 
-Klick uf s\'Schlosssymbol, näbe de lichess.org Adrässe, i de URL-Lischte vu dim Browser.
+Klick uf s\'Schlosssymbol, näbe de chess-online.com Adrässe, i de URL-Lischte vu dim Browser.
 
-Wähl dänn us, ob Benachrichtigunge vo Lichess erlaubt oder blockiert werde sölled.</string>
+Wähl dänn us, ob Benachrichtigunge vo Chess-Online erlaubt oder blockiert werde sölled.</string>
   <string name="enableAutoplayForSoundsQ">Autoplay für de Ton aktiviere?</string>
   <string name="enableAutoplayForSoundsA">Die meischte Browser chönd - zum de User schütze - d\'Tonwidergab uf ere frisch g\'ladene Site verhindere. Stell dir vor, jedi Website chönnt dich direkt mit Audio-Werbig stresse!
 
-Das roti Stummschaltigssymbol erschint, wänn de Browser verhinderet, dass lichess.org Tön abschpillt. Normal wird die Ischränkig uf g\'hobe, sobald du öppis klicksch. Bi einige mobile Browser gilt s\'Figureziehe, dur Berüherig, nöd als Klick. Isch das so, dänn muesch du bim Beginn vu jedem Schpiel ufs Brätt tippe zum so de Ton aktiviere.
+Das roti Stummschaltigssymbol erschint, wänn de Browser verhinderet, dass chess-online.com Tön abschpillt. Normal wird die Ischränkig uf g\'hobe, sobald du öppis klicksch. Bi einige mobile Browser gilt s\'Figureziehe, dur Berüherig, nöd als Klick. Isch das so, dänn muesch du bim Beginn vu jedem Schpiel ufs Brätt tippe zum so de Ton aktiviere.
 
-s\'rote Symbol macht dich druf ufmerksam, wänn das passiert. Oft chann mer lichess.org usdrücklich erlaube, Tön ab z\'schpille. Da findsch du e Aleitig, wie mer das - ide neuschte Versione, vu einige gängige Browser - ischtelle chann.</string>
-  <string name="desktop" comment="Appears on the FAQ for &quot;Enable autoplay for sounds&quot; https://lichess.org/faq#autoplay&#10;&#10;Indicates that the instructions are for a desktop computer browser - not a mobile browser.">Desktop</string>
-  <string name="enableAutoplayForSoundsFirefox">1. Gang zu Lichess.org
+s\'rote Symbol macht dich druf ufmerksam, wänn das passiert. Oft chann mer chess-online.com usdrücklich erlaube, Tön ab z\'schpille. Da findsch du e Aleitig, wie mer das - ide neuschte Versione, vu einige gängige Browser - ischtelle chann.</string>
+  <string name="desktop" comment="Appears on the FAQ for &quot;Enable autoplay for sounds&quot; https://chess-online.com/faq#autoplay&#10;&#10;Indicates that the instructions are for a desktop computer browser - not a mobile browser.">Desktop</string>
+  <string name="enableAutoplayForSoundsFirefox">1. Gang zu Chess-Online.Com
 2. Taschte Ctrl-i bi Linux / Windos oder cmd-i bi MacOS
 3. Klick de Tab \"Permissions\"
-4. Erlaub \"Audio and Video\" uf Lichess.org</string>
-  <string name="enableAutoplayForSoundsChrome">1. Gang zu Lichess.org
+4. Erlaub \"Audio and Video\" uf Chess-Online.Com</string>
+  <string name="enableAutoplayForSoundsChrome">1. Gang zu Chess-Online.Com
 2. Klick i de Adrässzile ufs Schloss-Icon
 3. Klick d\'Site \"Settings\"
 4. Erlaub \"Sound\"</string>
-  <string name="enableAutoplayForSoundsSafari">1. Gang zu Lichess.org
+  <string name="enableAutoplayForSoundsSafari">1. Gang zu Chess-Online.Com
 2. Klick ide Menuezile uf \"Safari\"
-3. Klick \"Settings für lichess.org\"...
+3. Klick \"Settings für chess-online.com\"...
 4. Erlaub \"All Autoplay\"</string>
   <string name="enableAutoplayForSoundsMicrosoftEdge">1. Klick uf die 3 Pünkt ganz obe, im rächte Egge
 2. Klick \"Settings\"
 3. Klick \"Cookies and Site Permissions\"
 4. Scroll abwärts und klick \"Media autoplay\"
-5. \"Lichess.org\" zum Erlaube bi-füege</string>
+5. \"Chess-Online.Com\" zum Erlaube bi-füege</string>
   <string name="stopMyselfFromPlaying" comment="As in &quot;How to stop myself from playing?&quot;.&#10;&#10;It is an FAQ which addresses chess/gaming addiction.">Mich sälber vum Schpille abhalte?</string>
   <string name="mentalHealthCondition" comment="Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">eigene, geischtige G\'sundheitszueschtand</string>
-  <string name="lichessUserstyles" comment="User styles are ways to customise the appearance of Lichess using third-party tools.&#10;&#10;Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">Lichess Benutzerstil</string>
+  <string name="lichessUserstyles" comment="User styles are ways to customise the appearance of Chess-Online using third-party tools.&#10;&#10;Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">Chess-Online Benutzerstil</string>
   <string name="fewerLobbyPools" comment="Lobby pools are options to quick pair for games on the home page (e.g. 1+0, 3+0).&#10;In this context, this is mentioned for people who want to limit bullet and blitz.&#10;&#10;Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">weniger Lobby-Pools</string>
-  <string name="adviceOnMitigatingAddiction" comment="Part of the FAQ answer &quot;How to [...] Stop myself from playing?&quot;&#10;&#10;%1$s, %2$s, and %3$s is software which may change.&#10;&#10;%4$s is &quot;Lichess userstyles&quot; (as in CSS styles)&#10;%5$s is &quot;fewer lobby pools&quot;.&#10;&#10;%6$s is &quot;stand-alone mental health condition&quot;.">Es chömed regelmässig Nachrichte, wo eus Benutzer um Hilf bitted, sie vum übermässige Schpille ab z\'halte.
+  <string name="adviceOnMitigatingAddiction" comment="Part of the FAQ answer &quot;How to [...] Stop myself from playing?&quot;&#10;&#10;%1$s, %2$s, and %3$s is software which may change.&#10;&#10;%4$s is &quot;Chess-Online userstyles&quot; (as in CSS styles)&#10;%5$s is &quot;fewer lobby pools&quot;.&#10;&#10;%6$s is &quot;stand-alone mental health condition&quot;.">Es chömed regelmässig Nachrichte, wo eus Benutzer um Hilf bitted, sie vum übermässige Schpille ab z\'halte.
 
-Obwohl Lichess kei Schpiller schperrt oder blockiert, usser bi Verschtöss gäge d\'Nutzigsbedingige, empfehled mir d\'Verwändig vu externe Werchzüg, um exzessivs Schpielverhalte i\'zschränke. Einigi, gängigi Vorschläg für Website-Blocker sind %1$s, %2$s und %3$s. Wänn Du eusi Website witer nutze wotsch, aber nöd dur schnälli Zitkontrolle i Versuechig g\'rate wottsch, chasch Du au a %4$s intressiert si. Da isch eini mit %5$s.
+Obwohl Chess-Online kei Schpiller schperrt oder blockiert, usser bi Verschtöss gäge d\'Nutzigsbedingige, empfehled mir d\'Verwändig vu externe Werchzüg, um exzessivs Schpielverhalte i\'zschränke. Einigi, gängigi Vorschläg für Website-Blocker sind %1$s, %2$s und %3$s. Wänn Du eusi Website witer nutze wotsch, aber nöd dur schnälli Zitkontrolle i Versuechig g\'rate wottsch, chasch Du au a %4$s intressiert si. Da isch eini mit %5$s.
 
 Mäng Schpiller händ s\'Gfühl, dass sich ihres Schpielverhalte zunere Sucht entwicklet. Tatsächlich stuft d\'WHO die Schpielschtörig als %6$s i, mit folgende wesentliche Merkmal: 1) beiträchtigti Kontrolle übers Schpille, 2) e wachsendi Priorität vum Schpille und 3) Eskalation vum Schpille, trotz negative Konsequenze. Wänn Du findsch, dass Dis Schpielverhalte dem Muschter entspricht, empfehled mir Dir, mit eme Fründ oder Familiemitglied und/oder mit eme Fachmaa d\'rüber z\'rede.</string>
 </resources>

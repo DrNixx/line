@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="twoFactorAuth">Tofaktorautentisering</string>
-  <string name="twoFactorHelp">Tofaktorautentisering legg til eit ekstra lag tryggleik til Lichess-kontoen din.</string>
+  <string name="twoFactorHelp">Tofaktorautentisering legg til eit ekstra lag tryggleik til Chess-Online-kontoen din.</string>
   <string name="twoFactorAppRecommend">Skaff deg ein app for tostegsautensering. Vi anbefaler desse appane:</string>
   <string name="scanTheCode">Skann QR-koden med appen.</string>
   <string name="enterPassword">Fullfør oppsettet ved å skrive inn passordet ditt og autentiseringskoden som appen genererer. Du må bruke ein ny autentiseringskode kvar gong du loggar inn.</string>
@@ -13,6 +13,6 @@
   <string name="twoFactorEnabled">Tofaktorautentisering skrudd på</string>
   <string name="twoFactorToDisable">Du treng din tilgangskode og ein autenseringskode frå godkjenningsappen for å deaktivera totrinns autensering.</string>
   <string name="openTwoFactorApp">Opna 2-stegs autentiseringsappen på eininga di for å sjå autentiseringskoden og verifisera identiteten din.</string>
-  <string name="setupReminder">For å sikra kontoen din vert du oppmoda om å aktivera totrinns-autensering på https://lichess.org/account/twofactor.
+  <string name="setupReminder">For å sikra kontoen din vert du oppmoda om å aktivera totrinns-autensering på https://chess-online.com/account/twofactor.
 Du mottek denne meldinga fordi kontoen din har spesielle ansvarsområde som gruppeleiar, trenar, lærar eller strøymar</string>
 </resources>

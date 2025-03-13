@@ -2,20 +2,20 @@
 <resources>
   <string name="faqAbbreviation">ČPP</string>
   <string name="frequentlyAskedQuestions">Česta pitanja</string>
-  <string name="whyIsLichessCalledLichess">Zašto se Lichess zove tako?</string>
-  <string name="lichessCombinationLiveLightLibrePronounced">Lichess je kombinacija \"uživo / lahko / slobodno\" i šaha. Izgovara se %1$s.</string>
+  <string name="whyIsLichessCalledLichess">Zašto se Chess-Online zove tako?</string>
+  <string name="lichessCombinationLiveLightLibrePronounced">Chess-Online je kombinacija \"uživo / lahko / slobodno\" i šaha. Izgovara se %1$s.</string>
   <string name="leechess">lî-čes</string>
   <string name="hearItPronouncedBySpecialist">Poslušajte kako ga izgovara specijalist.</string>
-  <string name="whyLiveLightLibre">\"Uživo\", zato što se pertije igraju i gledaju u stvarnom vremenu 24 sata sedmično; \"lahko\" i \"slobodno\" zato što Lichess radi na otvorenom kodu i neopterećen je vlasničkim procedurama koje muče druge sajtove.</string>
-  <string name="whyIsLilaCalledLila">Slično tome, izvorni kod za Lichess, %1$s, skraćenica je od \"li[chess in Sca]la\", s obzirom na to da je većina Lichessa napisana u intuitivnom programskom jeziku %2$s.</string>
+  <string name="whyLiveLightLibre">\"Uživo\", zato što se pertije igraju i gledaju u stvarnom vremenu 24 sata sedmično; \"lahko\" i \"slobodno\" zato što Chess-Online radi na otvorenom kodu i neopterećen je vlasničkim procedurama koje muče druge sajtove.</string>
+  <string name="whyIsLilaCalledLila">Slično tome, izvorni kod za Chess-Online, %1$s, skraćenica je od \"li[chess in Sca]la\", s obzirom na to da je većina Lichessa napisana u intuitivnom programskom jeziku %2$s.</string>
   <string name="howCanIContributeToLichess">Kako mogu doprinijeti Lichessu?</string>
-  <string name="lichessPoweredByDonationsAndVolunteers">Lichess je potpomognut donacijama patrona i trudom tima volontera.</string>
+  <string name="lichessPoweredByDonationsAndVolunteers">Chess-Online je potpomognut donacijama patrona i trudom tima volontera.</string>
   <string name="findMoreAndSeeHowHelp">Možete naći više o tome %1$s (uključujući %2$s). Ako želite pomoći Lichessu volontiranjem, postoji mnogo %3$s.</string>
   <string name="beingAPatron">kako biti patron</string>
   <string name="breakdownOfOurCosts">presjek naših troškova</string>
   <string name="otherWaysToHelp">drugi načini da pomognete</string>
   <string name="areThereWebsitesBasedOnLichess">Postoje li sajtovi zasnovani na Lichessu?</string>
-  <string name="yesLichessInspiredOtherOpenSourceWebsites">Da. Lichess je zaista nadahnuo druge sajtove s otvorenim kodom koji upotrebljavaju naš %1$s, %2$s ili %3$s.</string>
+  <string name="yesLichessInspiredOtherOpenSourceWebsites">Da. Chess-Online je zaista nadahnuo druge sajtove s otvorenim kodom koji upotrebljavaju naš %1$s, %2$s ili %3$s.</string>
   <string name="keyboardShortcuts">Koje prečice na tastaturi postoje?</string>
   <string name="keyboardShortcutsExplanation">Za neke stranice na Lichessu postoje prečice na tastaturi. Pritisnite tipku \"?\" na stranicama za analizu, probleme ili partije da se pojavi spisak dostupnih prečica.</string>
   <string name="fairPlay">Fer-plej</string>
@@ -32,13 +32,13 @@
   <string name="youCanUseOpeningBookNoEngine">Na Lichessu, glavna razlika u pravilima za dopisni šah jest da je dozvoljeno upotrebljavati knjige o šahovskim otvaranjima i baze podataka o njima. Upotreba šahovskih programa i dalje je zabranjena i rezultirat će time da igrač bude označen zbog nje. Iako ICCF dozvoljava upotrebu programa u dopisnom šahu, to nije slučaj s Lichessom.</string>
   <string name="gameplay">Igra</string>
   <string name="howBulletBlitzEtcDecided">Kako se razlučuju Metak-šah, munjeviti šah i druge šahovske varijante?</string>
-  <string name="basedOnGameDuration">Lichess vremenske kontrole temelje se na procijenjenoj trajanju igre = %1$s. 
+  <string name="basedOnGameDuration">Chess-Online vremenske kontrole temelje se na procijenjenoj trajanju igre = %1$s.
 Primjerice, procijenjeno trajanje igre 5+3 je 5 × 60 + 40 × 3 = 420 sekundi.</string>
   <string name="durationFormula" comment="durationFormula&#10;&#10;Part of the larger string 'basedOnGameDuration'&#10;&#10;Note: this string did not use to say 'in seconds'. Please update if necessary.">(početno vrijeme u sekundama) + 40 × ( uvećanja sata)</string>
   <string name="inferiorThanXsEqualYtimeControl">≤ %1$ss = %2$s</string>
   <string name="superiorThanXsEqualYtimeControl">≥ %1$ss = %2$s</string>
   <string name="whatVariantsCanIplay">Koje varijante šaha mogu igrati na Lichessu?</string>
-  <string name="lichessSupportChessAnd">Lichess podržava standardni šah i još osam %1$s.</string>
+  <string name="lichessSupportChessAnd">Chess-Online podržava standardni šah i još osam %1$s.</string>
   <string name="eightVariants">8 varijanti šaha</string>
   <string name="whatIsACPL">Šta je prosječni gubitak centipješaka (ACPL)?</string>
   <string name="acplExplanation">Centipješak je mjerna jedinica koja se koristi u šahu radi prikazivanja prednosti, a jednaka je stotom dijelu pješaka; dakle, 100 centipješaka = 1 pješak. Ove vrijednosti nemaju formalnu ulogu u partiji, ali su korisne igračima i ključne u računarskom šahu za vrednovanje pozicija.
@@ -68,17 +68,17 @@ Pogledajte %3$s koja se odnosi na ovaj potez kako biste ga malo izvježbali.</st
   <string name="lichessTraining">Lichessov trening</string>
   <string name="watchIMRosenCheckmate">Pogledajte kako IM Eric Rosen matira %s.</string>
   <string name="threefoldRepetition">Trostruko ponavljanje pozicije</string>
-  <string name="threefoldRepetitionExplanation">Ako se neka pozicija ponovi tri puta, igrači mogu proglasiti remi zbog %1$s. Lichess primjenjuje službena pravila FIDE, kao što je opisano u članu 9.2 %2$s.</string>
+  <string name="threefoldRepetitionExplanation">Ako se neka pozicija ponovi tri puta, igrači mogu proglasiti remi zbog %1$s. Chess-Online primjenjuje službena pravila FIDE, kao što je opisano u članu 9.2 %2$s.</string>
   <string name="threefoldRepetitionLowerCase">trostruko ponavljanje pozicije</string>
   <string name="notRepeatedMoves">Nismo ponavljali poteze. Zašto je partija i dalje neriješena zbog ponavljanja?</string>
   <string name="repeatedPositionsThatMatters">Trostruko ponavljanje odnosi se na ponavljanje %1$s, ne poteza. Ponavljanje pozicije ne mora se dogoditi u uzastopnim potezima.</string>
   <string name="positions">pozicije</string>
   <string name="weRepeatedthreeTimesPosButNoDraw">Ponovili smo poziciju tri puta. Zašto partija nije bila neriješena?</string>
-  <string name="threeFoldHasToBeClaimed">Ponavljanje treba proglasiti jedan od igrača. To možete učiniti klikom na prikazano dugme ili nuđenjem remija prije Vašeg posljednjeg ponavljajućeg poteza. Neće biti važno ako protivnik odbije ponudu; trostruko ponavljanje bit će proglašeno u svakom slučaju. Također možete %1$s Lichess da automatski proglašava ponavljanje za Vas. Osim toga, petostruko ponavljanje okončava partiju istog trenutka.</string>
+  <string name="threeFoldHasToBeClaimed">Ponavljanje treba proglasiti jedan od igrača. To možete učiniti klikom na prikazano dugme ili nuđenjem remija prije Vašeg posljednjeg ponavljajućeg poteza. Neće biti važno ako protivnik odbije ponudu; trostruko ponavljanje bit će proglašeno u svakom slučaju. Također možete %1$s Chess-Online da automatski proglašava ponavljanje za Vas. Osim toga, petostruko ponavljanje okončava partiju istog trenutka.</string>
   <string name="configure">konfigurirajte</string>
   <string name="accounts">Računi</string>
   <string name="titlesAvailableOnLichess">Koje titule postoje na Lichessu?</string>
-  <string name="lichessRecognizeAllOTBtitles">Lichess priznaje sve FIDE titule stečene igrom na tabli (OTB), kao i %1$s. Evo spiska FIDE titula:</string>
+  <string name="lichessRecognizeAllOTBtitles">Chess-Online priznaje sve FIDE titule stečene igrom na tabli (OTB), kao i %1$s. Evo spiska FIDE titula:</string>
   <string name="showYourTitle">Ako imate OTB naslov, možete zatražiti da se on prikaže na vašem računu popunjavanjem %1$s, uključujući jasnu sliku identifikacijskog dokumenta/kartice i selfi na kojem držite dokument/karticu.
 
 Potvrda kao igrač s naslovom na Lichessu omogućuje sudjelovanje u događajima s naslovom Arenom.
@@ -86,7 +86,7 @@ Potvrda kao igrač s naslovom na Lichessu omogućuje sudjelovanje u događajima 
 Na kraju, postoji počasni %2$s naslov.</string>
   <string name="asWellAsManyNMtitles">mnoge nacionalne majstorske titule</string>
   <string name="verificationForm">formular za verifikaciju</string>
-  <string name="canIbecomeLM">Mogu li steći titulu Lichess majstora (LM)?</string>
+  <string name="canIbecomeLM">Mogu li steći titulu Chess-Online majstora (LM)?</string>
   <string name="noUpperCaseDot">Ne.</string>
   <string name="lMtitleComesToYouDoNotRequestIt">Ova počasna titula je nezvanična i postoji samo na Lichessu.
 
@@ -102,9 +102,9 @@ Ne tražite LM naslov.</string>
   <string name="ownerUniqueTrophies">Taj trofej je jedinstven u povijesti Lichessa, niko osim %1$s ga neće imati.</string>
   <string name="wayOfBerserkExplanation">Da bi ga dobio, hiimgosu je sebe izazvao na berzerk i pobijedio u svim igrama %s.</string>
   <string name="aHourlyBulletTournament">satni Metčani turnir</string>
-  <string name="goldenZeeExplanation" comment="goldenZeeExplanation&#10;&#10;ZugAddict is a legendary player and streamer, do not translate his name.&#10;https://lichess.org/@/ZugAddict&#10;&#10;Thibault is the name of the founder of Lichess: https://lichess.org/@/thibault">ZugAddict je streamao i posljednja 2 sata pokušavao je pobijediti A.I. nivo 8 u igri 1+0, bez uspjeha. Thibault mu je rekao da će dobiti jedinstveni trofej ako to uspješno uradi na streamu. Jedan sat kasnije, razbio je Stockfish, i obećanje je ispunjeno.</string>
+  <string name="goldenZeeExplanation" comment="goldenZeeExplanation&#10;&#10;ZugAddict is a legendary player and streamer, do not translate his name.&#10;https://chess-online.com/@/ZugAddict&#10;&#10;Thibault is the name of the founder of Chess-Online: https://chess-online.com/@/thibault">ZugAddict je streamao i posljednja 2 sata pokušavao je pobijediti A.I. nivo 8 u igri 1+0, bez uspjeha. Thibault mu je rekao da će dobiti jedinstveni trofej ako to uspješno uradi na streamu. Jedan sat kasnije, razbio je Stockfish, i obećanje je ispunjeno.</string>
   <string name="lichessRatings">Rejtinzi na Lichessu</string>
-  <string name="whichRatingSystemUsedByLichess">Koji sistem rejtingovanja upotrebljava Lichess?</string>
+  <string name="whichRatingSystemUsedByLichess">Koji sistem rejtingovanja upotrebljava Chess-Online?</string>
   <string name="ratingSystemUsedByLichess">Ocjene se izračunavaju korištenjem Glicko-2 metode ocjenjivanja koju je razvio Mark Glickman. Ovo je veoma popularan metod ocjenjivanja i koristi ga značajan broj šahovskih organizacija (FIDE je značajan protuprimjer, jer još uvijek koriste zastarjeli Elo sistem ocjenjivanja).
 
 U osnovi, Glicko ocjene koriste \"intervale povjerenja\" kada izračunavaju i predstavljaju vašu ocjenu. Kada prvi put počnete koristiti stranicu, vaša ocjena počinje od 1500 ± 1000. 1500 predstavlja vašu ocjenu, a 1000 predstavlja interval povjerenja.
@@ -134,45 +134,45 @@ Najbolje je misliti o rejtinzima kao o \"relativnim\" brojkama (u kontrastu prem
   <string name="enableZenMode">Omogućite zen-način u %1$s ili pritisnite %2$s tokom partije.</string>
   <string name="displayPreferences">preferencama prikaza</string>
   <string name="connexionLostCanIGetMyRatingBack">Izgubio sam partiju zbog kašnjenja konekcije ili njenog prekida. Mogu li mi biti vraćeni rejting-bodovi?</string>
-  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">Nažalost, ne možemo Vam vratiti bodove za partije izgubljene zbog kašnjenja konekcije ili njenog prekida, nezavisno od toga je li problem bio do Vas ili do nas. Ovo potonje vrlo je rijetko, doduše. Također primijetite da, kad se Lichess restarta i usljed toga izgubite zbog isteka vremena, prekidamo partiju kako bismo spriječili nepravedan gubitak.</string>
+  <string name="weCannotDoThatEvenIfItIsServerSideButThatsRare">Nažalost, ne možemo Vam vratiti bodove za partije izgubljene zbog kašnjenja konekcije ili njenog prekida, nezavisno od toga je li problem bio do Vas ili do nas. Ovo potonje vrlo je rijetko, doduše. Također primijetite da, kad se Chess-Online restarta i usljed toga izgubite zbog isteka vremena, prekidamo partiju kako bismo spriječili nepravedan gubitak.</string>
   <string name="howToThreeDots">Kako...</string>
   <string name="enableDisableNotificationPopUps">Omogući ili onemogući skočne obavijesti?</string>
   <string name="viewSiteInformationPopUp">Pogledajte iskačući prozor sa informacijama o web lokaciji</string>
-  <string name="lichessCanOptionnalySendPopUps">Lichess može dodatno slati iskačuća obavještenja, na primjer kada je vaš red ili kada ste primili privatnu poruku.
+  <string name="lichessCanOptionnalySendPopUps">Chess-Online može dodatno slati iskačuća obavještenja, na primjer kada je vaš red ili kada ste primili privatnu poruku.
 
-Kliknite na ikonu katanca pored adrese lichess.org u URL traci vašeg pretraživača.
+Kliknite na ikonu katanca pored adrese chess-online.com u URL traci vašeg pretraživača.
 
-Zatim odaberite hoćete li dopustiti ili blokirati obavijesti od Lichess-a.</string>
+Zatim odaberite hoćete li dopustiti ili blokirati obavijesti od Chess-Online-a.</string>
   <string name="enableAutoplayForSoundsQ">Dozvoliti automatsko izvođenje zvukova?</string>
   <string name="enableAutoplayForSoundsA">Većina pretraživača može spriječiti izvođenje zvuka na svježe-otvorenoj stranici u svrhu zaštite korisnika. Zamislite kad bi svaka web-stranica mogla odmah bombardovati Vas sa audio reklamama.
 
-U slučaju kada pretraživač spriječi lichess.org u izvođenju zvuka, prikazat će se crvena ikona za utišenje. Najčešće ova restrikcija će biti uklonjena nakon što kliknete negdje. Na nekim mobilnim pretraživačima, povlačenje dodirom figure se ne računa kao klik. U tom slučaju mora te dodirnuti ploču da bi dozvolili zvuk na početku svakog meča. 
-Prikazat ćemo Vam spomenutu crvenu ikonu kada se ovo desi. Često možete eksplicitno dozvoliti lichess.org-u da reproducira zvukove. Upute kako to uraditi na novijim verzijama od nekih popularnijih pretraživača možete pronaći ovdje.</string>
-  <string name="desktop" comment="Appears on the FAQ for &quot;Enable autoplay for sounds&quot; https://lichess.org/faq#autoplay&#10;&#10;Indicates that the instructions are for a desktop computer browser - not a mobile browser.">desktop</string>
-  <string name="enableAutoplayForSoundsFirefox">1. Posjetite lichess.org stranicu
+U slučaju kada pretraživač spriječi chess-online.com u izvođenju zvuka, prikazat će se crvena ikona za utišenje. Najčešće ova restrikcija će biti uklonjena nakon što kliknete negdje. Na nekim mobilnim pretraživačima, povlačenje dodirom figure se ne računa kao klik. U tom slučaju mora te dodirnuti ploču da bi dozvolili zvuk na početku svakog meča.
+Prikazat ćemo Vam spomenutu crvenu ikonu kada se ovo desi. Često možete eksplicitno dozvoliti chess-online.com-u da reproducira zvukove. Upute kako to uraditi na novijim verzijama od nekih popularnijih pretraživača možete pronaći ovdje.</string>
+  <string name="desktop" comment="Appears on the FAQ for &quot;Enable autoplay for sounds&quot; https://chess-online.com/faq#autoplay&#10;&#10;Indicates that the instructions are for a desktop computer browser - not a mobile browser.">desktop</string>
+  <string name="enableAutoplayForSoundsFirefox">1. Posjetite chess-online.com stranicu
 2. Pritisnite CRTL+i dugme na Linux-u/Windows-u ili CMD-i na Mac-OS-u
 3. Kliknite Tab za ovlaštenja
-4. Dozvolite audio i video za lichess.org</string>
-  <string name="enableAutoplayForSoundsChrome">1. Posjetite lichess.org stranicu
+4. Dozvolite audio i video za chess-online.com</string>
+  <string name="enableAutoplayForSoundsChrome">1. Posjetite chess-online.com stranicu
 2. Kliknite katanac ikonu u polju adrese web-stranice
 3. Kliknite na Postavke stranice
 4. Dozvolite zvuk</string>
-  <string name="enableAutoplayForSoundsSafari">1. Posjetite lichess.org stranicu
+  <string name="enableAutoplayForSoundsSafari">1. Posjetite chess-online.com stranicu
 2. Kliknite Safari u izborniku 
-3. Kliknite Postavke za lichess.org ...
+3. Kliknite Postavke za chess-online.com ...
 4. Dopustite Sva automatska izvođenja</string>
   <string name="enableAutoplayForSoundsMicrosoftEdge">1. Kliknite na tri tačke u gornjem desnom uglu
 2. Kliknite na Postavke
 3. Kliknite na Kolačići i ovlaštenja stranice
 4. Spustite se kotačićem miša i kliknite Automatsko izvođenje medija
-5. Dodajte lichess.org u Dozvoli</string>
+5. Dodajte chess-online.com u Dozvoli</string>
   <string name="stopMyselfFromPlaying" comment="As in &quot;How to stop myself from playing?&quot;.&#10;&#10;It is an FAQ which addresses chess/gaming addiction.">Zaustavi se sam od igranja?</string>
   <string name="mentalHealthCondition" comment="Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">zasebno mentalno oboljenje</string>
-  <string name="lichessUserstyles" comment="User styles are ways to customise the appearance of Lichess using third-party tools.&#10;&#10;Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">Lichess korisnički stilovi</string>
+  <string name="lichessUserstyles" comment="User styles are ways to customise the appearance of Chess-Online using third-party tools.&#10;&#10;Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">Chess-Online korisnički stilovi</string>
   <string name="fewerLobbyPools" comment="Lobby pools are options to quick pair for games on the home page (e.g. 1+0, 3+0).&#10;In this context, this is mentioned for people who want to limit bullet and blitz.&#10;&#10;Part of a longer FAQ answer on chess/gaming addiction. See the full text on adviceOnMitigatingAddiction.">manje brzih soba</string>
-  <string name="adviceOnMitigatingAddiction" comment="Part of the FAQ answer &quot;How to [...] Stop myself from playing?&quot;&#10;&#10;%1$s, %2$s, and %3$s is software which may change.&#10;&#10;%4$s is &quot;Lichess userstyles&quot; (as in CSS styles)&#10;%5$s is &quot;fewer lobby pools&quot;.&#10;&#10;%6$s is &quot;stand-alone mental health condition&quot;.">Redovno dobijamo poruke poruke od korisnika u kojima traže pomoć pri zaustavljanju od previše igranja.
+  <string name="adviceOnMitigatingAddiction" comment="Part of the FAQ answer &quot;How to [...] Stop myself from playing?&quot;&#10;&#10;%1$s, %2$s, and %3$s is software which may change.&#10;&#10;%4$s is &quot;Chess-Online userstyles&quot; (as in CSS styles)&#10;%5$s is &quot;fewer lobby pools&quot;.&#10;&#10;%6$s is &quot;stand-alone mental health condition&quot;.">Redovno dobijamo poruke poruke od korisnika u kojima traže pomoć pri zaustavljanju od previše igranja.
 
-Dok Lichess ne bana ili blokira igrače osim u slučaju prekrašaja Uslova korištenja, preporučujemo korištenje eksternih alata koji ograničavaju ponašanja pretjeranog igranja. Uobičajnij prijedlozi za blokere stranica uključuju %1$s, %2$s i %3$s. Ukoliko želite idalje koristiti stranicu ali ne želite biti iskušani sa brzim vremenskim kontrolama, onda biste možda bili zainteresirani za %4$s, ovdje možete pronaći %5$s. 
+Dok Chess-Online ne bana ili blokira igrače osim u slučaju prekrašaja Uslova korištenja, preporučujemo korištenje eksternih alata koji ograničavaju ponašanja pretjeranog igranja. Uobičajnij prijedlozi za blokere stranica uključuju %1$s, %2$s i %3$s. Ukoliko želite idalje koristiti stranicu ali ne želite biti iskušani sa brzim vremenskim kontrolama, onda biste možda bili zainteresirani za %4$s, ovdje možete pronaći %5$s.
 
 Neki igrači mogu osjetiti da se njihovo igranje prelazi u ovisnost. Štoviše, SZO klasificira poremećaj igrica kao %6$s, sa ključnim karakteristikama poput 1) ograničena kontrola nad igranjem, 2) sve češće prioritiziranje igranja i 3) eskalacija igranja unatoč negativnim posljedicama. Ako mislite da vaše ponašanje pri igranju šaha prati ovaj obrazac, preporučujemo Vam da porazgovarate o tome sa prijateljem ili članom familije i/ili doktorom.</string>
 </resources>

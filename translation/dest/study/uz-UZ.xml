@@ -108,7 +108,7 @@
     <item quantity="other">%s o\'yinlarni yuklash uchun PGN matnni shu yerga qo\'ying</item>
   </plurals>
   <string name="urlOfTheGame">O\'yin URL i</string>
-  <string name="loadAGameFromXOrY" comment="%1$s is lichess.org %2$s is chessgames.com.&#10;&#10;Users can paste URLs to games from either of these websites and import the games into their studies.">%1$s yoki %2$s dan o\'yinni yuklash</string>
+  <string name="loadAGameFromXOrY" comment="%1$s is chess-online.com %2$s is chessgames.com.&#10;&#10;Users can paste URLs to games from either of these websites and import the games into their studies.">%1$s yoki %2$s dan o\'yinni yuklash</string>
   <string name="createChapter">Bo\'lim yaratish</string>
   <string name="createStudy">Ta\'lim yaratish</string>
   <string name="editStudy">Ta\'limni tahrirlash</string>
@@ -140,7 +140,7 @@
   <string name="interestingMove">Qiziq yurish</string>
   <string name="dubiousMove" comment="dubiousMove&#10;A questionable move.">Shubhali yurish</string>
   <string name="onlyMove" comment="onlyMove&#10;The only possible move. This is a label that can be placed in a study of a past game. It may not technically be the only move, but the only feasible one.">Yagona yurish</string>
-  <string name="zugzwang" comment="zugzwang&#10;What zugzwang is: https://lichess.org/practice/intermediate-tactics/zugzwang/9cKgYrHb/ybYJ9gNa&#10;&#10;This specific string is a label that can be applied to a position in a study, to indicate one side is in zugzwang.">Sugsvang</string>
+  <string name="zugzwang" comment="zugzwang&#10;What zugzwang is: https://chess-online.com/practice/intermediate-tactics/zugzwang/9cKgYrHb/ybYJ9gNa&#10;&#10;This specific string is a label that can be applied to a position in a study, to indicate one side is in zugzwang.">Sugsvang</string>
   <string name="equalPosition">Teng holat</string>
   <string name="unclearPosition" comment="unclearPosition&#10;It is unclear who is winning or losing.">Noaniq holat</string>
   <string name="whiteIsSlightlyBetter">Oqlarda vaziyat yaxshiroq</string>
@@ -152,11 +152,11 @@
   <string name="novelty" comment="novelty&#10;&#10;A move in the opening that has not been played before.&#10;https://en.wikipedia.org/wiki/Glossary_of_chess#theoretical_novelty">Yangi</string>
   <string name="development" comment="development&#10;Used in studies - shows that the player made a developing move (e.g. pushing pawns to open their bishops in the opening).">Ishlab chiqish</string>
   <string name="initiative">Initsiativa</string>
-  <string name="attack" comment="attack&#10;A label that can be applied to a position in a Lichess study. Noun.">Hujum</string>
-  <string name="counterplay" comment="counterplay&#10;A label that can be applied to a position in a Lichess study. Noun.&#10;&#10;Generally describes a defending player who is under attack, and makes an attacking move elsewhere.">Qarshi o‘yin</string>
-  <string name="timeTrouble" comment="timeTrouble&#10;A label that can be applied to a position in a Lichess study. Noun. Indicates that a player had little time to think and make this move (clock was running low).">Vaqt yetishmovchiligi</string>
+  <string name="attack" comment="attack&#10;A label that can be applied to a position in a Chess-Online study. Noun.">Hujum</string>
+  <string name="counterplay" comment="counterplay&#10;A label that can be applied to a position in a Chess-Online study. Noun.&#10;&#10;Generally describes a defending player who is under attack, and makes an attacking move elsewhere.">Qarshi o‘yin</string>
+  <string name="timeTrouble" comment="timeTrouble&#10;A label that can be applied to a position in a Chess-Online study. Noun. Indicates that a player had little time to think and make this move (clock was running low).">Vaqt yetishmovchiligi</string>
   <string name="withCompensation" comment="withCompensation&#10;&#10;Compensation is the short-term positional advantage a player has in exchange for typically material disadvantage. Short term advantages involve initiative and attack.&#10;https://en.wikipedia.org/wiki/Compensation_(chess)">Kompensatsiya bilan</string>
-  <string name="withTheIdea" comment="withTheIdea&#10;A label that can be applied to a position in a Lichess study. Noun.&#10;&#10;Shows that the player was following the theory around an opening, even after the initial opening moves.">G‘oya bilan</string>
+  <string name="withTheIdea" comment="withTheIdea&#10;A label that can be applied to a position in a Chess-Online study. Noun.&#10;&#10;Shows that the player was following the theory around an opening, even after the initial opening moves.">G‘oya bilan</string>
   <string name="nextChapter">Navbatdagi bo‘lim</string>
   <string name="prevChapter">Avvalgi bo‘lim</string>
   <string name="studyActions">Ta‘lim harakatlari</string>

@@ -23,7 +23,7 @@
   <string name="classDescription">ವರ್ಗ ವಿವರಣೆ</string>
   <string name="visibleByBothStudentsAndTeachers">ತರಗತಿಯ ಶಿಕ್ಷಕರು ಮತ್ತು ವಿದ್ಯಾರ್ಥಿಗಳು ಇಬ್ಬರಿಗೂ ಗೋಚರಿಸುತ್ತದೆ</string>
   <string name="teachersOfTheClass">ತರಗತಿಯ ಶಿಕ್ಷಕರು</string>
-  <string name="addLichessUsernames">ಅವರನ್ನು ಶಿಕ್ಷಕರಾಗಿ ಆಹ್ವಾನಿಸಲು Lichess ಬಳಕೆದಾರಹೆಸರುಗಳನ್ನು ಸೇರಿಸಿ. ಪ್ರತಿ ಸಾಲಿಗೆ ಒಬ್ಬರು.</string>
+  <string name="addLichessUsernames">ಅವರನ್ನು ಶಿಕ್ಷಕರಾಗಿ ಆಹ್ವಾನಿಸಲು Chess-Online ಬಳಕೆದಾರಹೆಸರುಗಳನ್ನು ಸೇರಿಸಿ. ಪ್ರತಿ ಸಾಲಿಗೆ ಒಬ್ಬರು.</string>
   <string name="resetPassword">ಪಾಸ್ವರ್ಡ್ ಮರುಹೊಂದಿಸಿ</string>
   <string name="makeSureToCopy">ಈಗ ಪಾಸ್ವರ್ಡ್ ಅನ್ನು ನಕಲಿಸಲು ಅಥವಾ ಬರೆಯುವುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ. ನೀವು ಅದನ್ನು ಮತ್ತೆ ನೋಡಲು ಸಾಧ್ಯವಾಗುವುದಿಲ್ಲ!</string>
   <string name="passwordX">ಪಾಸ್ವರ್ಡ್: %s</string>
@@ -36,18 +36,18 @@
   <string name="studentCredentials">ವಿದ್ಯಾರ್ಥಿ: %1$s
 ಬಳಕೆದಾರ ಹೆಸರು: %2$s
 ಪಾಸ್‌ವರ್ಡ್: %3$s</string>
-  <string name="inviteALichessAccount">Lichess ಖಾತೆಯನ್ನು ಆಹ್ವಾನಿಸಿ</string>
+  <string name="inviteALichessAccount">Chess-Online ಖಾತೆಯನ್ನು ಆಹ್ವಾನಿಸಿ</string>
   <string name="inviteDesc1">ವಿದ್ಯಾರ್ಥಿಯು ಈಗಾಗಲೇ ಲಿಚೆಸ್ ಖಾತೆಯನ್ನು ಹೊಂದಿದ್ದರೆ, ನೀವು ಅವರನ್ನು ತರಗತಿಗೆ ಆಹ್ವಾನಿಸಬಹುದು.</string>
   <string name="inviteDesc2">ಅವರು ತರಗತಿಗೆ ಸೇರಲು ಲಿಂಕ್‌ನೊಂದಿಗೆ ಲಿಚೆಸ್‌ನಲ್ಲಿ ಸಂದೇಶವನ್ನು ಸ್ವೀಕರಿಸುತ್ತಾರೆ.</string>
   <string name="inviteDesc3">ಪ್ರಮುಖ: ನಿಮಗೆ ತಿಳಿದಿರುವ ಮತ್ತು ಸಕ್ರಿಯವಾಗಿ ತರಗತಿಗೆ ಸೇರಲು ಬಯಸುವ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಮಾತ್ರ ಆಹ್ವಾನಿಸಿ.</string>
   <string name="inviteDesc4">ಅನಿಯಂತ್ರಿತ ಆಟಗಾರರಿಗೆ ಎಂದಿಗೂ ಅಪೇಕ್ಷಿಸದ ಆಹ್ವಾನಗಳನ್ನು ಕಳುಹಿಸಬೇಡಿ.</string>
-  <string name="createANewLichessAccount">ಹೊಸ Lichess ಖಾತೆಯನ್ನು ರಚಿಸಿ</string>
+  <string name="createANewLichessAccount">ಹೊಸ Chess-Online ಖಾತೆಯನ್ನು ರಚಿಸಿ</string>
   <string name="createDesc1">ವಿದ್ಯಾರ್ಥಿಯು ಇನ್ನೂ ಲಿಚೆಸ್ ಖಾತೆಯನ್ನು ಹೊಂದಿಲ್ಲದಿದ್ದರೆ, ನೀವು ಅವರಿಗಾಗಿ ಇಲ್ಲಿ ಒಂದನ್ನು ರಚಿಸಬಹುದು.</string>
   <string name="createDesc2">ಯಾವುದೇ ಇಮೇಲ್ ವಿಳಾಸದ ಅಗತ್ಯವಿಲ್ಲ. ಪಾಸ್ವರ್ಡ್ ಅನ್ನು ರಚಿಸಲಾಗುತ್ತದೆ ಮತ್ತು ನೀವು ಅದನ್ನು ವಿದ್ಯಾರ್ಥಿಗೆ ರವಾನಿಸಬೇಕು, ಆದ್ದರಿಂದ ಅವರು ಲಾಗ್ ಇನ್ ಮಾಡಬಹುದು.</string>
   <string name="createDesc3">ಪ್ರಮುಖ: ವಿದ್ಯಾರ್ಥಿಯು ಬಹು ಖಾತೆಗಳನ್ನು ಹೊಂದಿರಬಾರದು.</string>
   <string name="createDesc4">ಅವರು ಈಗಾಗಲೇ ಒಂದನ್ನು ಹೊಂದಿದ್ದರೆ, ಬದಲಿಗೆ ಆಹ್ವಾನ ಫಾರ್ಮ್ ಅನ್ನು ಬಳಸಿ.</string>
   <string name="createStudentWarning">ನಿಜವಾದ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಮಾತ್ರ ಖಾತೆಗಳನ್ನು ರಚಿಸಿ. ನಿಮಗಾಗಿ ಬಹು ಖಾತೆಗಳನ್ನು ಮಾಡಲು ಇದನ್ನು ಬಳಸಬೇಡಿ. ನೀವು ನಿಷೇಧಿತರಾಗುತ್ತೀರಿ.</string>
-  <string name="lichessUsername">Lichess ಬಳಕೆದಾರಹೆಸರು</string>
+  <string name="lichessUsername">Chess-Online ಬಳಕೆದಾರಹೆಸರು</string>
   <string name="generateANewUsername">ಹೊಸ ಬಳಕೆದಾರ ಹೆಸರನ್ನು ರಚಿಸಿ</string>
   <string name="welcomeToClass">ನಿಮ್ಮ ತರಗತಿಗೆ ಸುಸ್ವಾಗತ: %s.
 ತರಗತಿಯನ್ನು ಪ್ರವೇಶಿಸಲು ಲಿಂಕ್ ಇಲ್ಲಿದೆ.</string>
@@ -104,8 +104,8 @@
   <string name="youAcceptedThisInvitation">ನೀವು ಈ ಆಹ್ವಾನವನ್ನು ಒಪ್ಪಿಕೊಂಡಿದ್ದೀರಿ.</string>
   <string name="youDeclinedThisInvitation">ನೀವು ಆಹ್ವಾನವನ್ನು ನಿರಾಕರಿಸಿದ್ದೀರಿ.</string>
   <string name="orSeparator" comment="Used as separator between invite sections. Shown as large '~ or ~'.">ಅಥವಾ</string>
-  <string name="createMultipleAccounts">ಏಕಕಾಲದಲ್ಲಿ ಬಹು Lichess ಖಾತೆಗಳನ್ನು ರಚಿಸಿ</string>
-  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">ನೀವು ವಿದ್ಯಾರ್ಥಿ ಹೆಸರುಗಳ ಪಟ್ಟಿಯಿಂದ ಬಹು Lichess ಖಾತೆಗಳನ್ನು ರಚಿಸಲು %s ಮಾಡಬಹುದು.</string>
+  <string name="createMultipleAccounts">ಏಕಕಾಲದಲ್ಲಿ ಬಹು Chess-Online ಖಾತೆಗಳನ್ನು ರಚಿಸಿ</string>
+  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">ನೀವು ವಿದ್ಯಾರ್ಥಿ ಹೆಸರುಗಳ ಪಟ್ಟಿಯಿಂದ ಬಹು Chess-Online ಖಾತೆಗಳನ್ನು ರಚಿಸಲು %s ಮಾಡಬಹುದು.</string>
   <string name="useThisForm" comment="Link text in multipleAccsFromDescription">ಈ ಫಾರ್ಮ್ ಅನ್ನು ಬಳಸಿ</string>
   <string name="maxStudentsNote" comment="%1$s will be replaced with a large number (currently 100).\n%2$s is a link and will be replaced with the translation of createMoreClasses. Make sure both strings fit together.">ಒಂದು ತರಗತಿಯು %1$s ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಹೊಂದಬಹುದು ಎಂಬುದನ್ನು ಗಮನಿಸಿ. ಹೆಚ್ಚಿನ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ನಿರ್ವಹಿಸಲು, %2$s.</string>
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">ಹೆಚ್ಚಿನ ತರಗತಿಗಳನ್ನು ರಚಿಸಿ</string>

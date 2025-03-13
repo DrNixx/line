@@ -63,8 +63,8 @@
   <string name="notifyChallenge">Предизвикателства</string>
   <string name="notifyTournamentSoon">Турнирът започва скоро</string>
   <string name="notifyTimeAlarm">Времето в кореспондентска игра изтича</string>
-  <string name="notifyBell">Звукови известия в Lichess</string>
-  <string name="notifyPush">Получаване на известия на устойството Ви когато не сте в Lichess</string>
+  <string name="notifyBell">Звукови известия в Chess-Online</string>
+  <string name="notifyPush">Получаване на известия на устойството Ви когато не сте в Chess-Online</string>
   <string name="notifyWeb">Браузър</string>
   <string name="notifyDevice">Устройство</string>
   <string name="bellNotificationSound">Мелодия за известия</string>

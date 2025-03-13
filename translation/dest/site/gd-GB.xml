@@ -192,7 +192,7 @@
   <string name="editProfile">Deasaich a’ phròifil</string>
   <string name="biography">Eachdraidh-beatha</string>
   <string name="thankYou">Mòran taing!</string>
-  <string name="previouslyOnLichessTV">Air tbh Lichess roimhe</string>
+  <string name="previouslyOnLichessTV">Air tbh Chess-Online roimhe</string>
   <string name="onlinePlayers">Cluicheadairean air loidhne</string>
   <string name="activePlayers">Cluicheadairean gnìomhach</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Thoir an aire, thèid an geama seo rangachadh ach chan eil uaireadair aige!</string>
@@ -276,7 +276,7 @@
   <string name="sourceCode">Bun-tùs</string>
   <string name="host">Òstair</string>
   <string name="create">Cruthaich</string>
-  <string name="lichessTournaments">Féillean-chluich Lichess</string>
+  <string name="lichessTournaments">Féillean-chluich Chess-Online</string>
   <string name="timeBeforeTournamentStarts">Ùine mus tòisich an fhéill-chluich</string>
   <string name="keyboardShortcuts">Ath-ghoiridean a\' mheur-chlàir</string>
   <string name="keyMoveBackwardOrForward">gluais air ais/air adhart</string>

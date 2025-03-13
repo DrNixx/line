@@ -233,8 +233,8 @@
   <string name="error.weakPassword">Passordet er svært vanlig og for lett å gjette.</string>
   <string name="error.namePassword">Ikke bruk navnet ditt som passord.</string>
   <string name="blankedPassword">Du har brukt likt passord på en kompromittert nettside. Du må lage nytt passord.</string>
-  <string name="youAreLeavingLichess">Du forlater Lichess</string>
-  <string name="neverTypeYourPassword">Ikke bruk Lichess-passordet ditt andre steder!</string>
+  <string name="youAreLeavingLichess">Du forlater Chess-Online</string>
+  <string name="neverTypeYourPassword">Ikke bruk Chess-Online-passordet ditt andre steder!</string>
   <string name="proceedToX">Fortsett til %s</string>
   <string name="passwordSuggestion">Ikke bruk passord foreslått av andre. Kontoen din vil bli stjålet.</string>
   <string name="emailSuggestion">Ikke bruk e-postadresse foreslått av andre. Kontoen din vil bli stjålet.</string>
@@ -343,7 +343,7 @@
     <item quantity="one">Gi %s sekund</item>
     <item quantity="other">Gi %s sekunder</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Denne kontoen brøt vilkårene for å bruke Lichess</string>
+  <string name="thisAccountViolatedTos">Denne kontoen brøt vilkårene for å bruke Chess-Online</string>
   <string name="openingExplorerAndTablebase">Åpningsutforsker og tabellbase</string>
   <string name="takeback">Angre</string>
   <string name="proposeATakeback">Foreslå å angre</string>
@@ -529,7 +529,7 @@
   <string name="inlineNotation">Innebygd notasjon</string>
   <string name="makeAStudy">Du kan lage en studie for å bevare og dele trekkene.</string>
   <string name="clearSavedMoves">Fjern trekk</string>
-  <string name="previouslyOnLichessTV">Tidligere på Lichess TV</string>
+  <string name="previouslyOnLichessTV">Tidligere på Chess-Online TV</string>
   <string name="onlinePlayers">Påloggede spillere</string>
   <string name="activePlayers">Aktive spillere</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Legg merke til at partiet er ratet, men ikke tidsbegrenset!</string>
@@ -881,7 +881,7 @@
     <item quantity="one">og lagre %s forhåndstrekkvariant</item>
     <item quantity="other">og lagre %s forhåndstrekkvarianter</item>
   </plurals>
-  <string name="showUnreadLichessMessage">Du har mottatt en privat melding fra Lichess.</string>
+  <string name="showUnreadLichessMessage">Du har mottatt en privat melding fra Chess-Online.</string>
   <string name="clickHereToReadIt">Klikk her for å lese den</string>
   <string name="sorry">Beklager :(</string>
   <string name="weHadToTimeYouOutForAWhile">Vi måtte gi deg en timeout.</string>
@@ -894,14 +894,14 @@
   <string name="tryToWin">Forsøk å vinne (eller i det minste oppnå remis) i alle partier du spiller.</string>
   <string name="resignLostGames">Gi opp tapte stillinger (ikke la tiden løpe ut).</string>
   <string name="temporaryInconvenience">Vi beklager det midlertidige bryet,</string>
-  <string name="wishYouGreatGames">og håper du får gode partier på lichess.org.</string>
+  <string name="wishYouGreatGames">og håper du får gode partier på chess-online.com.</string>
   <string name="thankYouForReading">Takk for at du leste!</string>
   <string name="lifetimeScore">Livstidsscore</string>
   <string name="currentMatchScore">Gjeldende kampscore</string>
   <string name="agreementAssistance">Jeg lover at jeg aldri vil motta hjelp under partiene mine, hverken fra maskiner, bøker, databaser eller andre personer.</string>
   <string name="agreementNice">Jeg lover å alltid være høflig mot andre spillere.</string>
   <string name="agreementMultipleAccounts" comment="%s will be replaced with the translation of 'termsOfService'">Jeg godtar å ikke opprette flere kontoer (med unntak for grunnene nevnt i våre %s).</string>
-  <string name="agreementPolicy">Jeg lover å respektere alle Lichess\' retningslinjer.</string>
+  <string name="agreementPolicy">Jeg lover å respektere alle Chess-Online\' retningslinjer.</string>
   <string name="searchOrStartNewDiscussion">Søk eller start en ny diskusjon</string>
   <string name="edit">Rediger</string>
   <string name="bullet" comment="Probably best left untranslated. Leave it as 'Bullet' unless your language has a better word for it.">Bullet</string>
@@ -995,13 +995,13 @@ La feltet stå tomt for å begynne partiene fra den normale utgangsstillingen.</
   <string name="youCantStartNewGame">Du kan ikke starte et nytt parti før dette er avsluttet.</string>
   <string name="since">Fra</string>
   <string name="until">Til</string>
-  <string name="lichessDbExplanation">Ratede partier spilt hos Lichess</string>
+  <string name="lichessDbExplanation">Ratede partier spilt hos Chess-Online</string>
   <string name="switchSides">Skift side</string>
   <string name="closingAccountWithdrawAppeal">Klagen din blir trukket hvis du stenger kontoen din</string>
   <string name="ourEventTips">Tips for arrangementer</string>
   <string name="instructions">Instruksjoner</string>
   <string name="showMeEverything">Vis meg alt</string>
-  <string name="lichessPatronInfo">Lichess er en ideell forening, basert på fri programvare med åpen kildekode.
+  <string name="lichessPatronInfo">Chess-Online er en ideell forening, basert på fri programvare med åpen kildekode.
 Alle kostnader for drift, utvikling og innhold finansieres utelukkende av brukerbidrag.</string>
   <string name="nothingToSeeHere">Ingenting her for nå.</string>
   <string name="stats">Statistikk</string>

@@ -61,8 +61,8 @@
   <string name="notifyChallenge">بەرەنگاریەکان</string>
   <string name="notifyTournamentSoon">بەم زووانە پاڵەوانێتییەکە دەستپێدەکات</string>
   <string name="notifyTimeAlarm">کاتژمێری نامەنارد تەواو بووە</string>
-  <string name="notifyBell">زەنگی ئاگادارکردنەوەی لە ناو Lichess</string>
-  <string name="notifyPush">ئاگادارکردنەوەی ئامێرەکەت کاتێک لەسەر Lichess نیت</string>
+  <string name="notifyBell">زەنگی ئاگادارکردنەوەی لە ناو Chess-Online</string>
+  <string name="notifyPush">ئاگادارکردنەوەی ئامێرەکەت کاتێک لەسەر Chess-Online نیت</string>
   <string name="notifyWeb">وێبگەڕ</string>
   <string name="notifyDevice">ئامێر</string>
   <string name="bellNotificationSound">دەنگی زەنگی ئاگادارکردنەوە</string>

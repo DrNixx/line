@@ -10,9 +10,9 @@
     <item quantity="many">Записи в блоге %s</item>
     <item quantity="other">Записи в блоге %s</item>
   </plurals>
-  <string name="lichessOfficialBlog">Официальный блог Lichess</string>
+  <string name="lichessOfficialBlog">Официальный блог Chess-Online</string>
   <string name="continueReadingPost">Продолжить чтение этой публикации</string>
-  <string name="lichessBlogPostsFromXYear">Записи в блоге Lichess за %s</string>
+  <string name="lichessBlogPostsFromXYear">Записи в блоге Chess-Online за %s</string>
   <string name="previousBlogPosts">Предыдущие записи блога</string>
   <string name="xBlog">Блог %s</string>
   <string name="newPost">Новая запись</string>
@@ -60,7 +60,7 @@
   <string name="deleteBlog">Окончательно удалить эту запись блога</string>
   <string name="safeToUseImages">Можно безопасно использовать изображения со следующих сайтов: </string>
   <string name="selectPostTopics">Выберите темы, которые вы обсуждаете в записи блога</string>
-  <string name="useImagesYouMadeYourself">Вы также можете использовать свои собственные изображения, фотографии, скриншоты Lichess... В общем, всё, что не защищено авторским правом.</string>
+  <string name="useImagesYouMadeYourself">Вы также можете использовать свои собственные изображения, фотографии, скриншоты Chess-Online... В общем, всё, что не защищено авторским правом.</string>
   <string name="safeAndRespectfulContent">Публикуйте только безопасный и уважительный контент, пожалуйста. Не копируйте чужой контент.</string>
   <string name="inappropriateContentAccountClosed">Неуместное содержание может стать причиной закрытия вашего аккаунта.</string>
   <string name="blogTips">Наши простые советы по написанию отличных записей в блоге</string>

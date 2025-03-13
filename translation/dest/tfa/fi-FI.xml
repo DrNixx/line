@@ -13,6 +13,6 @@
   <string name="twoFactorEnabled">Kaksivaiheinen tunnistautuminen käytössä</string>
   <string name="twoFactorToDisable">Kaksivaiheisen tunnistautumisen poistamiseksi käytöstä tarvitset salasanasi sekä tunnistautumiskoodin tunnistautumiseen käyttämästäsi sovelluksesta.</string>
   <string name="openTwoFactorApp">Avaa laitteessasi sovellus kaksivaiheiseen tunnistautumiseen, katso siitä tunnistautumiskoodisi ja vahvista henkilöllisyytesi.</string>
-  <string name="setupReminder">Ota käyttäjätunnuksesi suojaamiseksi käyttöön kaksivaiheinen tunnistautuminen osoitteessa https://lichess.org/account/twofactor.
+  <string name="setupReminder">Ota käyttäjätunnuksesi suojaamiseksi käyttöön kaksivaiheinen tunnistautuminen osoitteessa https://chess-online.com/account/twofactor.
 Sait tämän viestin, koska tunnukseesi kohdistuu erityinen vastuu, kuten arvonimi, joukkueen johtaja, valmentaja, opettaja tai striimaaja.</string>
 </resources>

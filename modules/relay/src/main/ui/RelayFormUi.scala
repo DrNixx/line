@@ -152,7 +152,7 @@ final class RelayFormUi(helpers: Helpers, ui: RelayUi, tourUi: RelayTourUi):
         url: play.api.mvc.Call,
         nav: FormNavigation
     )(using ctx: Context) =
-      val broadcastEmailContact = a(href := "mailto:broadcast@lichess.org")("broadcast@lichess.org")
+      val broadcastEmailContact = a(href := "mailto:broadcast@chess-online.com")("broadcast@chess-online.com")
       val lccWarning = for
         round    <- nav.round
         upstream <- round.sync.upstream

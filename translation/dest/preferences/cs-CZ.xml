@@ -63,8 +63,8 @@
   <string name="notifyChallenge">Výzvy</string>
   <string name="notifyTournamentSoon">Turnaj brzy začne</string>
   <string name="notifyTimeAlarm">Dochází čas na korespondenčních hodinách</string>
-  <string name="notifyBell">Zvuková upozornění na Lichess</string>
-  <string name="notifyPush">Oznámení zařízení, když nejste na Lichess</string>
+  <string name="notifyBell">Zvuková upozornění na Chess-Online</string>
+  <string name="notifyPush">Oznámení zařízení, když nejste na Chess-Online</string>
   <string name="notifyWeb">Prohlížeč</string>
   <string name="notifyDevice">Zařízení</string>
   <string name="bellNotificationSound">Typ zvukového upozornění</string>

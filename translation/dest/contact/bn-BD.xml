@@ -12,8 +12,8 @@
   <string name="lost2FA">আমি আমার টু-ফ্যাক্টর অথেন্টিকেশন কোডের অ্যাক্সেস হারিয়েছি</string>
   <string name="doPasswordReset">আপনার দ্বিতীয় ফ্যাক্টর সরানোর জন্য একটি পাসওয়ার্ড রিসেট সম্পন্ন করুন</string>
   <string name="accountSupport">আমার অ্যাকাউন্ট সাপোর্ট প্রয়োজন</string>
-  <string name="wantTitle">আমি আমার পদবি Lichess এ দেখাতে চাই</string>
-  <string name="visitTitleConfirmation">আপনার টাইটেল Lichess প্রোফাইলে দেখাতে, এবং টাইটেলযুক্ত অ্যারিনায় অংশগ্রহণ করতে, কনফার্মেশন পেজটি ভিজিট করুন</string>
+  <string name="wantTitle">আমি আমার পদবি Chess-Online এ দেখাতে চাই</string>
+  <string name="visitTitleConfirmation">আপনার টাইটেল Chess-Online প্রোফাইলে দেখাতে, এবং টাইটেলযুক্ত অ্যারিনায় অংশগ্রহণ করতে, কনফার্মেশন পেজটি ভিজিট করুন</string>
   <string name="wantCloseAccount">আমি আমার অ্যাকাউন্ট বন্ধ করতে চাই</string>
   <string name="closeYourAccount">আপনি এই পাতাই আপনার অ্যাকাউন্ট বন্ধ করতে পারেন</string>
   <string name="doNotAskByEmail">ইমেইলে আমাদেরকে অ্যাকাউন্ট বন্ধ করতে বলবেন না, আমরা তা করব না।</string>

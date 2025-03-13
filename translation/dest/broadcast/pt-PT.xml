@@ -11,7 +11,7 @@
   <string name="newBroadcast">Nova transmissão em direto</string>
   <string name="subscribedBroadcasts">Transmissões subscritas</string>
   <string name="aboutBroadcasts">Sobre Transmissões</string>
-  <string name="howToUseLichessBroadcasts">Como usar as Transmissões do Lichess.</string>
+  <string name="howToUseLichessBroadcasts">Como usar as Transmissões do Chess-Online.</string>
   <string name="theNewRoundHelp">A nova ronda terá os mesmos membros e contribuidores que a anterior.</string>
   <string name="addRound">Adicionar uma ronda</string>
   <string name="ongoing">A decorrer</string>
@@ -23,8 +23,8 @@
   <string name="fullDescription">Descrição completa do evento</string>
   <string name="fullDescriptionHelp">Descrição longa do evento opcional da transmissão. %1$s está disponível. Tem de ter menos que %2$s carácteres.</string>
   <string name="sourceSingleUrl">URL da fonte PGN</string>
-  <string name="sourceUrlHelp">Link que o Lichess vai verificar para obter atualizações da PGN. Deve ser acessível ao público a partir da internet.</string>
-  <string name="sourceGameIds">Até 64 IDs de jogo Lichess, separados por espaços.</string>
+  <string name="sourceUrlHelp">Link que o Chess-Online vai verificar para obter atualizações da PGN. Deve ser acessível ao público a partir da internet.</string>
+  <string name="sourceGameIds">Até 64 IDs de jogo Chess-Online, separados por espaços.</string>
   <string name="startDateTimeZone">Data de início no fuso horário local do torneio: %s</string>
   <string name="startDateHelp">Opcional, se souberes quando começa o evento</string>
   <string name="currentGameUrl">Link da partida atual</string>
@@ -47,7 +47,7 @@
   <string name="ageThisYear">Idade neste ano</string>
   <string name="unrated">Sem classificação</string>
   <string name="recentTournaments">Torneio recentes</string>
-  <string name="openLichess">Abrir no Lichess</string>
+  <string name="openLichess">Abrir no Chess-Online</string>
   <string name="teams">Equipas</string>
   <string name="boards">Tabuleiros</string>
   <string name="overview">Visão geral</string>

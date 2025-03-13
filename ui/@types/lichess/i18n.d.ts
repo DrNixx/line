@@ -51,11 +51,11 @@ interface I18n {
     rankedInSwissTournament: I18nFormat;
     /** Ranked #%1$s (top %2$s%%) with %3$s games in %4$s */
     rankedInTournament: I18nPlural;
-    /** Signed up to lichess.org */
+    /** Signed up to chess-online.com */
     signedUp: string;
     /** Solved %s training puzzles */
     solvedNbPuzzles: I18nPlural;
-    /** Supported lichess.org for %1$s months as a %2$s */
+    /** Supported chess-online.com for %1$s months as a %2$s */
     supportedNbMonths: I18nPlural;
   };
   appeal: {
@@ -983,19 +983,19 @@ interface I18n {
     emailConfirm_click: string;
     /** If you did not register with Lichess you can safely ignore this message. */
     emailConfirm_ignore: string;
-    /** Confirm your lichess.org account, %s */
+    /** Confirm your chess-online.com account, %s */
     emailConfirm_subject: I18nFormat;
-    /** Log in to lichess.org, %s */
+    /** Log in to chess-online.com, %s */
     logInToLichess: I18nFormat;
     /** If you made this request, click the link below. If not, you can ignore this email. */
     passwordReset_clickOrIgnore: string;
     /** We received a request to reset the password for your account. */
     passwordReset_intro: string;
-    /** Reset your lichess.org password, %s */
+    /** Reset your chess-online.com password, %s */
     passwordReset_subject: I18nFormat;
-    /** Welcome to lichess.org, %s */
+    /** Welcome to live.chess-online.com, %s */
     welcome_subject: I18nFormat;
-    /** You have successfully created your account on https://lichess.org. */
+    /** You have successfully created your account on https://chess-online.com. */
     welcome_text: I18nFormat;
   };
   faq: {
@@ -1039,15 +1039,15 @@ interface I18n {
     eightVariants: string;
     /** Most browsers can prevent sound from playing on a freshly loaded page to protect users. Imagine if every website could immediately bombard you with audio ads. */
     enableAutoplayForSoundsA: string;
-    /** 1. Go to lichess.org */
+    /** 1. Go to live.chess-online.com */
     enableAutoplayForSoundsChrome: string;
-    /** 1. Go to lichess.org */
+    /** 1. Go to live.chess-online.com */
     enableAutoplayForSoundsFirefox: string;
     /** 1. Click the three dots in the top right corner */
     enableAutoplayForSoundsMicrosoftEdge: string;
     /** Enable autoplay for sounds? */
     enableAutoplayForSoundsQ: string;
-    /** 1. Go to lichess.org */
+    /** 1. Go to live.chess-online.com */
     enableAutoplayForSoundsSafari: string;
     /** Enable or disable notification popups? */
     enableDisableNotificationPopUps: string;
@@ -1853,7 +1853,7 @@ interface I18n {
     thisIsYourProfilePage: string;
     /** Welcome! */
     welcome: string;
-    /** Welcome to lichess.org! */
+    /** Welcome to live.chess-online.com! */
     welcomeToLichess: string;
     /** What now? Here are a few suggestions: */
     whatNowSuggestions: string;
@@ -2005,7 +2005,7 @@ interface I18n {
     xOrY: I18nFormat;
     /** You have a Lifetime Patron account. That's pretty awesome! */
     youHaveLifetime: string;
-    /** You support lichess.org with %s per month. */
+    /** You support live.chess-online.com with %s per month. */
     youSupportWith: I18nFormat;
     /** You will be charged %1$s on %2$s. */
     youWillBeChargedXOnY: I18nFormat;
@@ -4349,7 +4349,7 @@ interface I18n {
     winRate: string;
     /** Wins */
     wins: string;
-    /** and wish you great games on lichess.org. */
+    /** and wish you great games on live.chess-online.com. */
     wishYouGreatGames: string;
     /** Withdraw */
     withdraw: string;
@@ -4621,7 +4621,7 @@ interface I18n {
     perks: string;
     /** Please fill in your streamer information, and upload a picture. */
     pleaseFillIn: string;
-    /** Include the keyword "lichess.org" in your stream title and use the category "Chess" when you stream on Lichess. */
+    /** Include the keyword "live.chess-online.com" in your stream title and use the category "Chess" when you stream on Lichess. */
     rule1: string;
     /** Remove the keyword when you stream non-Lichess stuff. */
     rule2: string;
@@ -5291,7 +5291,7 @@ interface I18n {
     openTwoFactorApp: string;
     /** Scan the QR code with the app. */
     scanTheCode: string;
-    /** Please enable two-factor authentication to secure your account at https://lichess.org/account/twofactor. */
+    /** Please enable two-factor authentication to secure your account at https://live.chess-online.com/account/twofactor. */
     setupReminder: string;
     /** Get an app for two-factor authentication. We recommend the following apps: */
     twoFactorAppRecommend: string;

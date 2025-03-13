@@ -22,5 +22,5 @@
   <string name="declineVariant">No quiero chugar esta variant en este momento.</string>
   <string name="declineNoBot">No accepto desafíos de bots.</string>
   <string name="declineOnlyBot">Nomás accepto desafíos de bots.</string>
-  <string name="inviteLichessUser">U convida a un usuario de Lichess:</string>
+  <string name="inviteLichessUser">U convida a un usuario de Chess-Online:</string>
 </resources>

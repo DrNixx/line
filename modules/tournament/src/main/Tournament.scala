@@ -203,7 +203,7 @@ object Tournament:
       startsAt = startsAt
     )
 
-  def tournamentUrl(tourId: TourId): String = s"https://lichess.org/tournament/$tourId"
+  def tournamentUrl(tourId: TourId): String = s"https://live.chess-online.com/tournament/$tourId"
 
   def makeId = TourId(ThreadLocalRandom.nextString(8))
 

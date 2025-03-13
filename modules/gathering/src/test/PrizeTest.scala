@@ -12,5 +12,5 @@ class PrizeTest extends munit.FunSuite:
     assert:
       looksLikePrize("""Blitz Titled Arena July '23 Prizes: $500/$250/$125/$75/$50
 
-  [Warm-up event](https://lichess.org/tournament/jul23bua) """)
+  [Warm-up event](https://live.chess-online.com/tournament/jul23bua) """)
   }

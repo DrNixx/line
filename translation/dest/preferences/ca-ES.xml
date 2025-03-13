@@ -63,8 +63,8 @@
   <string name="notifyChallenge">Desafiaments</string>
   <string name="notifyTournamentSoon">Un torneig comença aviat</string>
   <string name="notifyTimeAlarm">S\'està esgotant el rellotge d\'una partida per correspondència</string>
-  <string name="notifyBell">Notificació emergent a Lichess</string>
-  <string name="notifyPush">Notifica un dispositiu quan no esteu a Lichess</string>
+  <string name="notifyBell">Notificació emergent a Chess-Online</string>
+  <string name="notifyPush">Notifica un dispositiu quan no esteu a Chess-Online</string>
   <string name="notifyWeb">Navegador</string>
   <string name="notifyDevice">Dispositiu</string>
   <string name="bellNotificationSound">So de notificació</string>

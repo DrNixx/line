@@ -228,9 +228,9 @@
   <string name="forgotPassword">Şifrəni unutmusuz?</string>
   <string name="error.weakPassword">Bu parol olduqca yayğındır və təxmin etmək çox asandır.</string>
   <string name="error.namePassword">Zəhmət olmasa istifadəçi adınızı şifrə kimi istifadə etməyin.</string>
-  <string name="blankedPassword">Siz eyni parolu başqa saytda istifadə etmisiniz və həmin sayt oğurlanıb. Lichess hesabınızın təhlükəsizliyini təmin etmək üçün sizə yeni parol təyin etməyimiz lazımdır. Anlayışınız üçün təşəkkür edirik.</string>
+  <string name="blankedPassword">Siz eyni parolu başqa saytda istifadə etmisiniz və həmin sayt oğurlanıb. Chess-Online hesabınızın təhlükəsizliyini təmin etmək üçün sizə yeni parol təyin etməyimiz lazımdır. Anlayışınız üçün təşəkkür edirik.</string>
   <string name="youAreLeavingLichess">Lichessdən ayrılırsınız</string>
-  <string name="neverTypeYourPassword">Lichess parolunuzu heç vaxt başqa saytda yazmayın!</string>
+  <string name="neverTypeYourPassword">Chess-Online parolunuzu heç vaxt başqa saytda yazmayın!</string>
   <string name="proceedToX">%s ilə davam edin</string>
   <string name="passwordSuggestion">Başqasının təklif etdiyi parolu təyin etməyin. Hesabınızı oğurlamaq üçün istifadə edə bilərlər.</string>
   <string name="emailSuggestion">Başqasının təklif etdiyi e-poçt ünvanını təyin etməyin. Hesabınızı oğurlamaq üçün istifadə edəcəklər.</string>
@@ -337,7 +337,7 @@
     <item quantity="one">%s saniyə ver</item>
     <item quantity="other">%s saniyə ver</item>
   </plurals>
-  <string name="thisAccountViolatedTos">Bu hesab Lichess İstifadə Şərtlərini pozmuşdur</string>
+  <string name="thisAccountViolatedTos">Bu hesab Chess-Online İstifadə Şərtlərini pozmuşdur</string>
   <string name="openingExplorerAndTablebase">Debüt &amp; endşpil bazası</string>
   <string name="takeback">Dala qaytarma</string>
   <string name="proposeATakeback">Dala qaytarma təklif et</string>
@@ -514,7 +514,7 @@
   <string name="oneUrlPerLine">Hər sətirə bir URL.</string>
   <string name="inlineNotation">Sətirarası notasiya</string>
   <string name="makeAStudy">Saxlamaq və paylaşmaq üçün araşdırma aparmağı düşünün.</string>
-  <string name="previouslyOnLichessTV">Daha öncə Lichess TV-də</string>
+  <string name="previouslyOnLichessTV">Daha öncə Chess-Online TV-də</string>
   <string name="onlinePlayers">Onlayn oyunçular</string>
   <string name="activePlayers">Aktiv oyunçular</string>
   <string name="bewareTheGameIsRatedButHasNoClock">Ehtiyatlı olun, oyunda vaxt limiti olmasa da, reytinqlidir!</string>
@@ -658,7 +658,7 @@
   <string name="simulClockHint">Fişer Saatını quraşdırma. Daha çox oyunçu götürsəniz, daha çox vaxta ehtiyacınız ola bilər.</string>
   <string name="simulAddExtraTime">Sinxron seansla başa çıxmaq üçün öz saatınıza əlavə vaxtlar artıra bilərsiniz.</string>
   <string name="simulHostExtraTime">Ev sahibinin əlavə vaxtı</string>
-  <string name="lichessTournaments">Lichess turnirləri</string>
+  <string name="lichessTournaments">Chess-Online turnirləri</string>
   <string name="tournamentFAQ">Arena turnirinin TSS-i</string>
   <string name="timeBeforeTournamentStarts">Turnir başlamasına qalan vaxt</string>
   <string name="averageCentipawnLoss">Ortalama santipiyada itkisi</string>
@@ -693,7 +693,7 @@
   <string name="byRegisteringYouAgreeToBeBoundByOur">Qeydiyyatdan keçməklə siz, bizim %s ilə razılaşırsınız.</string>
   <string name="readAboutOur">%s haqqında oxuyun.</string>
   <string name="networkLagBetweenYouAndLichess">Siz və lichess arasında şəbəkə gecikməsi</string>
-  <string name="timeToProcessAMoveOnLichessServer">Lichess serverində gedişi emal etmə zamanı</string>
+  <string name="timeToProcessAMoveOnLichessServer">Chess-Online serverində gedişi emal etmə zamanı</string>
   <string name="downloadAnnotated">Annotasiyanı endir.</string>
   <string name="downloadRaw">Annotasiyasız endir</string>
   <string name="downloadImported">Daxil edilmiş oyunu endir</string>
@@ -708,13 +708,13 @@
   <string name="withEverybody">Hər kəs ilə</string>
   <string name="kidMode">Uşaq rejimi</string>
   <string name="kidModeExplanation">Bu təhlükəsizliklə bağlıdır. Uşaq rejimində bütün sayt əlaqələri deaktivdir. Uşaqlarınız və məktəb şagirdləriniz üçün, onları digər internet istifadəçilərindən qorumaq üçün bunu aktiv edin.</string>
-  <string name="inKidModeTheLichessLogoGetsIconX">Uşaq rejimində, Lichess loqosu %s işarəsini alır, beləliklə uşaqlarınızın təhlükəsiz olduğunu bilirsiniz.</string>
+  <string name="inKidModeTheLichessLogoGetsIconX">Uşaq rejimində, Chess-Online loqosu %s işarəsini alır, beləliklə uşaqlarınızın təhlükəsiz olduğunu bilirsiniz.</string>
   <string name="enableKidMode">Uşaq rejimini aktivləşdir</string>
   <string name="disableKidMode">Uşaq rejimini deaktiv et</string>
   <string name="security">Təhlükəsizlik</string>
   <string name="revokeAllSessions">bütün sessiyaları ləğv et</string>
   <string name="playChessEverywhere">Şahmatı hər yerdə oyna</string>
-  <string name="asFreeAsLichess">Lichess kimi azad</string>
+  <string name="asFreeAsLichess">Chess-Online kimi azad</string>
   <string name="builtForTheLoveOfChessNotMoney">Pula görə deyil, şahmat sevgisinə görə yaradılmışdır</string>
   <string name="everybodyGetsAllFeaturesForFree">Hər kəs bütün özəllikləri pulsuz əldə edir</string>
   <string name="zeroAdvertisement">Sıfır reklam</string>
@@ -823,13 +823,13 @@
   <string name="tryToWin">Oynadığınız hər oyunda qalib gəlməyə (və ya heç olmasa heç-heçə etməyə) çalışın.</string>
   <string name="resignLostGames">İtirəcəyiniz oyunları tərk edin(vaxtın bitməsinə imkan verməyin).</string>
   <string name="temporaryInconvenience">Müvəqqəti narahatlığa görə üzr istəyirik,</string>
-  <string name="wishYouGreatGames">və sizə lichess.org saytında əla oyunlar arzulayırıq.</string>
+  <string name="wishYouGreatGames">və sizə chess-online.com saytında əla oyunlar arzulayırıq.</string>
   <string name="thankYouForReading">Oxuduğunuz üçün təşəkkür edirik!</string>
   <string name="lifetimeScore">Toplam hesab</string>
   <string name="currentMatchScore">Cari matç hesabı</string>
   <string name="agreementAssistance">Razıyam ki, heç vaxt oyunlarım zamanı (şahmat kompüterindən, kitabdan, məlumat bazasından və ya başqa bir şəxsdən) kömək almayacağam.</string>
   <string name="agreementNice">Həmişə digər oyunçulara hörmətlə yanaşacağımla razıyam.</string>
-  <string name="agreementPolicy">Bütün Lichess qaydalarına riayət edəcəyimlə razıyam.</string>
+  <string name="agreementPolicy">Bütün Chess-Online qaydalarına riayət edəcəyimlə razıyam.</string>
   <string name="searchOrStartNewDiscussion">Axtarış edin və ya yeni söhbətə başlayın</string>
   <string name="edit">Redaktə et</string>
   <string name="blitz" comment="Probably best left untranslated. Leave it as 'Blitz' unless your language has a better word for it.">İldırım</string>

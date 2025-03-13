@@ -249,14 +249,14 @@ export const lichessGames = (r: Recap): VNode => {
   const gamesPercentOfTotal = (r.games.nbs.total * 100) / totalGames;
   const showGamesPercentOfTotal = gamesPercentOfTotal.toFixed(6) + '%';
   return slideTag('lichess-games')([
-    h('div.recap--massive', [h('strong', animateNumber(totalGames)), 'games played on Lichess in ', r.year]),
+    h('div.recap--massive', [h('strong', animateNumber(totalGames)), 'games played on Chess-Online in ', r.year]),
     h('div', [h('p', [h('strong', showGamesPercentOfTotal), ' of them are yours.'])]),
   ]);
 };
 
 export const thanks = (): VNode =>
   slideTag('thanks')([
-    h('div.recap--massive', 'Thank you for playing on Lichess!'),
+    h('div.recap--massive', 'Thank you for playing on Chess-Online!'),
     h('img.recap__logo', { attrs: { src: site.asset.url('logo/lichess-white.svg') } }),
     h('div', "We're glad you're here. Have a great 2025!"),
   ]);

@@ -62,8 +62,8 @@
   <string name="notifyChallenge">आव्हाने</string>
   <string name="notifyTournamentSoon">लवकरच सुरू होणारी स्पर्धा</string>
   <string name="notifyTimeAlarm">पत्रव्यवहार खेळाचा वेळ संपत आहे</string>
-  <string name="notifyBell">Lichess मधिल बेल सूचना</string>
-  <string name="notifyPush">तुम्ही Lichess वर नसतानाच्या डिव्हाइस सूचना</string>
+  <string name="notifyBell">Chess-Online मधिल बेल सूचना</string>
+  <string name="notifyPush">तुम्ही Chess-Online वर नसतानाच्या डिव्हाइस सूचना</string>
   <string name="notifyWeb">ब्राउझर</string>
   <string name="notifyDevice">डिव्हाइस</string>
   <string name="bellNotificationSound">बेल सूचनांचा आवाज</string>

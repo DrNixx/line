@@ -39,7 +39,7 @@ KyThuC KyThuD
 Để miễn (1 điểm) cho một người chơi thay vì ghép đôi, hãy thêm một dòng như sau:
 KyThuE 1
 Những kỳ thủ bị thiếu sẽ bị coi là vắng mặt và không được điểm.
-Để trống phần này để Lichess tự động tạo các cặp.</string>
+Để trống phần này để Chess-Online tự động tạo các cặp.</string>
   <string name="mustHavePlayedTheirLastSwissGame">Chắc chắn đã phải chơi trận trong giải hệ Thụy Sĩ cuối cùng của họ</string>
   <string name="mustHavePlayedTheirLastSwissGameHelp">Chỉ cho phép kỳ thủ tham gia nếu họ đã chơi trận trong giải hệ Thụy Sĩ cuối cùng. Nếu họ không xuất hiện trong một sự kiện hệ Thụy Sĩ gần đây, họ sẽ không thể tham gia sự kiện của bạn. Điều này mang lại trải nghiệm giải đấu hệ Thụy Sĩ tốt hơn cho những kỳ thủ thực sự xuất hiện.</string>
   <string name="newSwiss">Giải đấu hệ Thụy Sĩ mới</string>
@@ -73,7 +73,7 @@ Sau đó, hệ thống sẽ tự động rút họ khỏi giải đấu để tr
  Họ có thể tham gia lại bất cứ lúc nào.</string>
   <string name="protectionAgainstNoShowQ">Những gì được thực hiện liên quan đến vắng mặt?</string>
   <string name="protectionAgainstNoShowA" comment="By &quot;a game&quot; - we mean just one game. Missing even one game will prevent that player from joining a new Swiss event for a certain amount of time.">Người chơi đăng ký các sự kiện của giải hệ Thụy Sĩ nhưng không chơi ván của họ có thể gặp vấn đề.
-Để giải quyết vấn đề này, Lichess ngăn những người chơi không chơi được ván đấu tham gia một sự kiện hệ Thụy Sĩ mới trong một khoảng thời gian nhất định.
+Để giải quyết vấn đề này, Chess-Online ngăn những người chơi không chơi được ván đấu tham gia một sự kiện hệ Thụy Sĩ mới trong một khoảng thời gian nhất định.
 Người tạo ở sự kiện hệ Thụy Sĩ vẫn có thể quyết định cho phép họ tham gia sự kiện đó.</string>
   <string name="lateJoinQ">Người chơi có thể tham gia muộn không?</string>
   <string name="lateJoinA">Có, trước khi quá nửa số vòng của giải đã bắt đầu; ví dụ: trong 1 giải hệ Thụy Sĩ 11 vòng, người chơi có thể tham gia trước khi vòng 6 bắt đầu, còn trong giải hệ Thụy Sĩ 12 ván sẽ là trước khi vòng 7 bắt đầu.
@@ -85,7 +85,7 @@ Người vào muộn sẽ chỉ được cộng 1 điểm \"bye\" kể cả nế
 Lý do là chúng không có một cách công bằng nào có thể giải quyết trường hợp có người chơi rời khỏi giải trước khi giải đấu kết thúc. Không thể mong đợi tất cả mọi người đều có thể chơi hết các ván đấu của họ trong một giải đấu trực tuyến. Điều đó không thể xẩy ra và vì thế, hầu hết các giải đấu vòng tròn sẽ không hoạt động một cách công bằng, điều đó mâu thuẫn với lý do nó tồn tại ngay từ đầu.
 Thứ gần nhất bạn có thể có với một giải đấu vòng tròn là một giải đấu hệ Thụy Sĩ có số ván đấu rất cao. Như vậy, tất cả các cặp đấu có thể xảy ra sẽ được chơi trước khi giải đấu kết thúc.</string>
   <string name="otherSystemsQ">Vậy còn những hệ thống giải đấu khác?</string>
-  <string name="otherSystemsA">Hiện tại chúng tôi chưa có ý định thêm các hệ thống giải đấu khác vào Lichess.</string>
+  <string name="otherSystemsA">Hiện tại chúng tôi chưa có ý định thêm các hệ thống giải đấu khác vào Chess-Online.</string>
   <string name="swissDescription">Trong một giải đấu hệ Thụy Sĩ %1$s, mỗi kỳ thủ không nhất thiết phải đấu với tất cả những người tham gia khác. Các kỳ thủ một đối một trong mỗi vòng và được ghép cặp với nhau bằng cách sử dụng một bộ quy tắc được thiết kế để đảm bảo rằng mỗi đấu thủ sẽ đấu với các đối thủ có điểm số tương tự nhưng không gặp lại cùng một đối thủ ở các vòng trước. Người chiến thắng là người có tổng điểm cao nhất sau tất cả các vòng. Mỗi vòng đấu tất cả các đấu thủ sẽ đều được chơi trừ khi số người chơi là số lẻ.</string>
   <string name="teamOnly">Giải đấu hệ Thụy Sĩ chỉ có thể được tạo bởi chỉ huy và chỉ có thể được tham gia bởi các thành viên trong đội. %1$s để bắt đầu chơi trong các giải đấu hệ Thụy Sĩ.</string>
   <string name="joinOrCreateTeam">Tham gia hoặc tạo một đội</string>

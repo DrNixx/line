@@ -280,14 +280,12 @@ object contact:
               "Broadcast a tournament on Lichess",
               frag(
                 p(
-                  "If you want to officially broadcast a tournament on Lichess, ",
+                  "If you want to officially broadcast a tournament on Chess-Online, ",
                   "or have any questions about our broadcasts:"
                 ),
                 p(
                   "Please contact our Broadcast Team at ",
-                  contactEmailLink("broadcast@lichess.org"),
-                  " or on ",
-                  a(href := "https://discord.gg/Syx9CbN8Jv")("our discord"),
+                  contactEmailLink("broadcast@chess-online.com"),
                   "."
                 )
               )

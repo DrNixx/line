@@ -55,22 +55,22 @@ final class PlanPages(helpers: Helpers)(fishnetPerDay: Int):
                 trans.features.boardEditorAndAnalysisBoardWithEngine("Stockfish 16+ NNUE")
               ),
               tr(unlimited)(
-                a(href := "https://lichess.org/blog/WN-gLzAAAKlI89Xn/thousands-of-stockfish-analysers")(
+                a(href := "https://live.chess-online.com/blog/WN-gLzAAAKlI89Xn/thousands-of-stockfish-analysers")(
                   trans.features.cloudEngineAnalysis()
                 )
               ),
               tr(unlimited)(
-                a(href := "https://lichess.org/blog/WFvLpiQAACMA8e9D/learn-from-your-mistakes")(
+                a(href := "https://live.chess-online.com/blog/WFvLpiQAACMA8e9D/learn-from-your-mistakes")(
                   trans.site.learnFromYourMistakes()
                 )
               ),
               tr(unlimited)(
-                a(href := "https://lichess.org/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way")(
+                a(href := "https://live.chess-online.com/blog/V0KrLSkAAMo3hsi4/study-chess-the-lichess-way")(
                   trans.features.studies()
                 )
               ),
               tr(unlimited)(
-                a(href := "https://lichess.org/blog/VmZbaigAABACtXQC/chess-insights")(
+                a(href := "https://live.chess-online.com/blog/VmZbaigAABACtXQC/chess-insights")(
                   trans.features.chessInsights()
                 )
               ),

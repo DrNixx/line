@@ -10,6 +10,6 @@
   <string name="disableTwoFactor">Ikki faktorli autentifikatsiyani oʻchirish</string>
   <string name="twoFactorEnabled">Ikki faktorli autentifikatsiya yoqilgan</string>
   <string name="openTwoFactorApp">Identifikatsiyalashdan oʻtish va autentifikatsiya kodini koʻrish uchun ikki faktorli autentifikatsiya appini qurilmangizda oching.</string>
-  <string name="setupReminder">Iltimos o‘z hisobingizni ximoyalash uchun ikki-bosqichli autentifikatsiyalash imkonini https://lichess.org/account/twofactor da yoqing. 
+  <string name="setupReminder">Iltimos o‘z hisobingizni ximoyalash uchun ikki-bosqichli autentifikatsiyalash imkonini https://chess-online.com/account/twofactor da yoqing.
 Siz ushbu xabarni sizda jamoa rahbarligi, murabbiylik yoki strimmerlik kabi ma‘suliyatli javobgarliklar bor bo‘lgani uchun oldingiz</string>
 </resources>

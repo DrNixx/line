@@ -31,8 +31,8 @@
   <string name="byOpenings">Theo khai cuộc</string>
   <string name="puzzlesByOpenings">Câu đố theo khai cuộc</string>
   <string name="openingsYouPlayedTheMost">Những khai cuộc bạn thường chơi trong các ván đấu có xếp hạng</string>
-  <string name="useFindInPage" comment="useFindInPage&#10;&#10;Appears on https://lichess.org/training/openings for mobile and tablet users&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Dùng \"Tìm kiếm trong trang\" trong mục lục trình duyệt để tìm khai cuộc yêu thích của bạn!</string>
-  <string name="useCtrlF" comment="Appears on https://lichess.org/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Dùng Ctrl+f để tìm khai cuộc yêu thích của bạn!</string>
+  <string name="useFindInPage" comment="useFindInPage&#10;&#10;Appears on https://chess-online.com/training/openings for mobile and tablet users&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Dùng \"Tìm kiếm trong trang\" trong mục lục trình duyệt để tìm khai cuộc yêu thích của bạn!</string>
+  <string name="useCtrlF" comment="Appears on https://chess-online.com/training/openings for desktop and laptop users.&#10;Encourages players to use the built-in browser feature (Ctrl+F on most desktop computers) to find the opening they want to practise.">Dùng Ctrl+f để tìm khai cuộc yêu thích của bạn!</string>
   <string name="notTheMove">Đó chưa phải là nước đi tối ưu!</string>
   <string name="trySomethingElse">Hãy thử nước đi khác.</string>
   <string name="ratingX">Hệ số: %s</string>
@@ -73,7 +73,7 @@
   <string name="lookupOfPlayer">Tìm câu đố từ các ván đấu của người khác</string>
   <string name="fromXGames">Câu đố từ ván cờ của %s</string>
   <string name="searchPuzzles">Tìm câu đố</string>
-  <string name="fromMyGamesNone">Bạn không có câu đố nào trong dữ liệu, nhưng Lichess vẫn rất yêu mến bạn.
+  <string name="fromMyGamesNone">Bạn không có câu đố nào trong dữ liệu, nhưng Chess-Online vẫn rất yêu mến bạn.
 
 Hãy chơi thêm nhiều ván cờ nhanh và cờ chậm để có cơ hội có một câu đố từ ván cờ của riêng bạn!</string>
   <string name="fromXGamesFound">Đã tìm được %1$s câu đố trong các ván đấu của %2$s</string>

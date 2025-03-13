@@ -22,5 +22,5 @@
   <string name="declineVariant">Tôi chưa sẵn sàng chơi biến thể này ngay bây giờ.</string>
   <string name="declineNoBot">Tôi không chấp nhận các thách đấu từ các BOT.</string>
   <string name="declineOnlyBot">Tôi chỉ chấp nhận các thách đấu từ BOT.</string>
-  <string name="inviteLichessUser">Hoặc mời một người dùng Lichess:</string>
+  <string name="inviteLichessUser">Hoặc mời một người dùng Chess-Online:</string>
 </resources>

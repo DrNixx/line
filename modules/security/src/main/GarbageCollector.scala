@@ -97,7 +97,7 @@ final class GarbageCollector(
         val armed = isArmed()
         val wait  = if quickly then 3.seconds else (30 + ThreadLocalRandom.nextInt(240)).seconds
         val message =
-          s"Will dispose of https://lichess.org/${user.username} in $wait. Email: ${email.value}. $msg${(!armed)
+          s"Will dispose of https://live.chess-online.com/${user.username} in $wait. Email: ${email.value}. $msg${(!armed)
               .so(" [SIMULATION]")}"
         logger.info(message)
         noteApi.lichessWrite(user, s"Garbage collected because of $msg")

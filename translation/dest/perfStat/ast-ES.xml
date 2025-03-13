@@ -6,7 +6,7 @@
   <string name="notEnoughRatedGames">Nun se xugaron suficientes partíes pa establecer una puntuación fiable.</string>
   <string name="progressOverLastXGames">Progresión nas ultimes %s partíes:</string>
   <string name="ratingDeviation">Esviación de la puntuación: %s.</string>
-  <string name="ratingDeviationTooltip" comment="ratingDeviationTooltip&#10;&#10;This is a tooltip (appears on mouseover) for the rating deviation. Appears on performance statistics pages such as https://lichess.org/@/thibault/perf/ultraBullet&#10;&#10;As of 2021-05-19, $1%s is set to 110.">Un valor baxu na puntuación significa que ye más estable. Un valor superior a %1$s, significa que la puntuación ye provisional. Por que s\'incluya nes clasificaciones, esti valor tien de ser inferior a %2$s (axedrez estándar) o %3$s (variantes).</string>
+  <string name="ratingDeviationTooltip" comment="ratingDeviationTooltip&#10;&#10;This is a tooltip (appears on mouseover) for the rating deviation. Appears on performance statistics pages such as https://chess-online.com/@/thibault/perf/ultraBullet&#10;&#10;As of 2021-05-19, $1%s is set to 110.">Un valor baxu na puntuación significa que ye más estable. Un valor superior a %1$s, significa que la puntuación ye provisional. Por que s\'incluya nes clasificaciones, esti valor tien de ser inferior a %2$s (axedrez estándar) o %3$s (variantes).</string>
   <string name="totalGames">Partíes totales</string>
   <string name="ratedGames">Partíes por puntos</string>
   <string name="tournamentGames">Partíes de tornéu</string>

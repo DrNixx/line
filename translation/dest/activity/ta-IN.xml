@@ -3,8 +3,8 @@
   <string name="activity">செயல்பாடு</string>
   <string name="hostedALiveStream">இணைய நேரலை</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">%1$s மாதத்திற்கு %2$s ஆக lichess.org ஆதரிக்கப்படுகிறது</item>
-    <item quantity="other">%1$s மாதங்களுக்கு %2$s ஆக lichess.org ஆதரிக்கப்படுகிறது</item>
+    <item quantity="one">%1$s மாதத்திற்கு %2$s ஆக chess-online.com ஆதரிக்கப்படுகிறது</item>
+    <item quantity="other">%1$s மாதங்களுக்கு %2$s ஆக chess-online.com ஆதரிக்கப்படுகிறது</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">%2$s இல் %1$s நிலையைப் பயிற்சி செய்தேன்</item>
@@ -58,7 +58,7 @@
     <item quantity="one">%s புதிய கற்கையை உருவாக்கப்பட்டது</item>
     <item quantity="other">%s புதிய கற்கைகள் உருவாக்கப்பட்டது</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="one">%s அரினா போட்டியில் போட்டியிட்டார்</item>
     <item quantity="other">%s அரினா போட்டிகளில் போட்டியிட்டார்</item>
   </plurals>
@@ -71,7 +71,7 @@
     <item quantity="other">%s சுவிஸ் போட்டிகளில் போட்டியிட்டார்</item>
   </plurals>
   <string name="rankedInSwissTournament">%2$s இல் #%1$s ஆம் தரவரிசை</string>
-  <string name="signedUp">Lichess.org இல் பதிவு செய்துள்ளார்</string>
+  <string name="signedUp">Chess-Online.Com இல் பதிவு செய்துள்ளார்</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">%s குழுவில் சேர்ந்தார்</item>
     <item quantity="other">%s குழுக்களில் சேர்ந்தார்</item>

@@ -104,8 +104,8 @@ Neid näidatakse horisontaalselt.</string>
   <string name="youAcceptedThisInvitation">Sa võtsid vastu selle kutse.</string>
   <string name="youDeclinedThisInvitation">Sa keeldusid sellest kutsest.</string>
   <string name="orSeparator" comment="Used as separator between invite sections. Shown as large '~ or ~'.">või</string>
-  <string name="createMultipleAccounts">Loo korraga mitu Lichess kontot</string>
-  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">%s võid luua mitu Lichess kontot õpilaste nimekirjast.</string>
+  <string name="createMultipleAccounts">Loo korraga mitu Chess-Online kontot</string>
+  <string name="multipleAccsFormDescription" comment="%s is a link and will be replaced with the translation of useThisForm. Make sure both strings fit together.">%s võid luua mitu Chess-Online kontot õpilaste nimekirjast.</string>
   <string name="useThisForm" comment="Link text in multipleAccsFromDescription">kasuta seda ankeeti</string>
   <string name="maxStudentsNote" comment="%1$s will be replaced with a large number (currently 100).\n%2$s is a link and will be replaced with the translation of createMoreClasses. Make sure both strings fit together.">Klassis saab olla maksimaalsest %1$s õpilast. Kui soovid hallata rohkem õpilasi, %2$s.</string>
   <string name="createMoreClasses" comment="Link text in maxStudentsNote">loo rohkem klasse</string>

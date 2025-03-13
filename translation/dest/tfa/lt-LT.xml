@@ -13,6 +13,6 @@
   <string name="twoFactorEnabled">Dviejų lygių tapatumo nustatymas įjungtas</string>
   <string name="twoFactorToDisable">Jums reikia slaptažodžio ir autentifikavimo kodo iš savo autentifikavimo programos, kad išjungti dviejų veiksmų autentifikavimą.</string>
   <string name="openTwoFactorApp">Norėdami pamatyti autentikacijos kodą ir patvirtinti savo tapatybę, savo įrenginyje atverkite dviejų-faktorių autentikacijos programėlę.</string>
-  <string name="setupReminder">Prašome įjungti paskyros apsaugojimą prisijungimu dviem būdais https://lichess.org/account/twofactor.
+  <string name="setupReminder">Prašome įjungti paskyros apsaugojimą prisijungimu dviem būdais https://chess-online.com/account/twofactor.
 Jūs gavote šią žinutę, nes jūsų paskyra turi ypatingas pareigas: esate komandos kapitonas, treneris, mokytojas arba transliuotojas</string>
 </resources>

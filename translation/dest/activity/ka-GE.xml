@@ -3,8 +3,8 @@
   <string name="activity">აქტიურობა</string>
   <string name="hostedALiveStream">იყო პირდაპირ ეთერში</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">გახდა lichess.org-ის %2$s %1$s თვით</item>
-    <item quantity="other">გახდა lichess.org-ის %2$s %1$s თვით</item>
+    <item quantity="one">გახდა chess-online.com-ის %2$s %1$s თვით</item>
+    <item quantity="other">გახდა chess-online.com-ის %2$s %1$s თვით</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">გაიარა პრაქტიკა %2$s-ის %1$s პოზიციაში</item>
@@ -54,7 +54,7 @@
     <item quantity="one">შექმნა %s ახალი გაკვეთილი</item>
     <item quantity="other">შექმნა %s ახალი გაკვეთილი</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="one">მიიღო მონაწილეობა %s ტურნირში</item>
     <item quantity="other">მიიღო მონაწილეობა %s ტურნირში</item>
   </plurals>
@@ -67,7 +67,7 @@
     <item quantity="other">მიიღო მონაწილეობა %s სვის ტურნირში</item>
   </plurals>
   <string name="rankedInSwissTournament">დაიკავა #%1$s in %2$s</string>
-  <string name="signedUp">დარეგისტრირდა lichess.org-ზე</string>
+  <string name="signedUp">დარეგისტრირდა chess-online.com-ზე</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">შეუერთდა ჯგუფს %s</item>
     <item quantity="other">შეუერთდა ჯგუფებს %s</item>

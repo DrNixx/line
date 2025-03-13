@@ -3,10 +3,10 @@
   <string name="activity">Активность</string>
   <string name="hostedALiveStream">Проведён стрим</string>
   <plurals name="supportedNbMonths">
-    <item quantity="one">Поддерживает lichess.org %1$s месяц (%2$s)</item>
-    <item quantity="few">Поддерживает lichess.org %1$s месяца (%2$s)</item>
-    <item quantity="many">Поддерживает lichess.org %1$s месяцев (%2$s)</item>
-    <item quantity="other">Поддерживает lichess.org %1$s месяцев (%2$s)</item>
+    <item quantity="one">Поддерживает chess-online.com %1$s месяц (%2$s)</item>
+    <item quantity="few">Поддерживает chess-online.com %1$s месяца (%2$s)</item>
+    <item quantity="many">Поддерживает chess-online.com %1$s месяцев (%2$s)</item>
+    <item quantity="other">Поддерживает chess-online.com %1$s месяцев (%2$s)</item>
   </plurals>
   <plurals name="practicedNbPositions">
     <item quantity="one">Выполнено %1$s упражнение в %2$s</item>
@@ -86,7 +86,7 @@
     <item quantity="many">Созданы %s новых студий</item>
     <item quantity="other">Созданы %s новых студий</item>
   </plurals>
-  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Lichess. Please update as required.">
+  <plurals name="competedInNbTournaments" comment="Indicates that the user has competed in %s number of tournaments.&#10;&#10;Please note this string used to say &quot;tournaments&quot; without qualifying them as &quot;Arena tournaments&quot;, which used to be the only format available on Chess-Online. Please update as required.">
     <item quantity="one">Завершён %s турнир</item>
     <item quantity="few">Завершены %s турнира</item>
     <item quantity="many">Завершены %s турниров</item>
@@ -105,7 +105,7 @@
     <item quantity="other">Завершено %s турниров по швейцарской системе</item>
   </plurals>
   <string name="rankedInSwissTournament">Занято %1$s место в %2$s</string>
-  <string name="signedUp">Регистрация на lichess.org</string>
+  <string name="signedUp">Регистрация на chess-online.com</string>
   <plurals name="joinedNbTeams">
     <item quantity="one">Принят в %s клуб</item>
     <item quantity="few">Принят в %s клуба</item>

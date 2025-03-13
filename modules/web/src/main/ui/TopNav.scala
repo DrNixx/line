@@ -19,7 +19,7 @@ final class TopNav(helpers: Helpers):
           "/",
           frag(
             span(cls := "play")(trans.site.play()),
-            span(cls := "home")("lichess.org")
+            span(cls := "home")("live.chess-online.com")
           )
         ),
         div(role := "group")(
