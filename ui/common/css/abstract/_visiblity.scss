@@ -1,0 +1,64 @@
+.visible-xlg-only {
+  display: none;
+}
+.visible-xl-only {
+  display: none;
+}
+.visible-lg-only {
+  display: none;
+}
+.visible-md-only {
+  display: none;
+}
+.visible-sm-only {
+  display: none;
+}
+.visible-xs-only {
+  display: none;
+}
+
+.visible {
+  display: block !important;
+}
+
+/*** Extra Extra Large screens ***/
+@media (min-width: at-least($xx-large)) {
+  .visible-xlg-only {
+    display: block !important;
+  }
+}
+
+/*** Extra Large screens ***/
+@media (min-width: at-least($x-large)) and (max-width: at-most($xx-large)) {
+  .visible-xl-only {
+    display: block !important;
+  }
+}
+
+/*** Large screens ***/
+@media (min-width: at-least($large)) and (max-width: at-most($x-large)) {
+  .visible-lg-only {
+    display: block !important;
+  }
+}
+
+/*** Medium devices ***/
+@media (min-width: at-least($medium)) and (max-width: at-most($large)) {
+  .visible-md-only {
+    display: block !important;
+  }
+}
+
+/*** Small devices ***/
+@media (min-width: at-least($xx-small)) and (max-width: at-most($medium)) {
+  .visible-sm-only {
+    display: block !important;
+  }
+}
+
+/*** Extra Small devices ***/
+@media (max-width: at-most($xx-small)) {
+  .visible-xs-only {
+    display: block !important;
+  }
+}

@@ -456,7 +456,7 @@ final class Mod(
         _ => BadRequest.page(views.mod.permissions(user)),
         permissions =>
           val newPermissions = Permission.ofDbKeys(permissions).diff(Permission(user))
-          (api.setPermissions(user.username, Permission.ofDbKeys(permissions)) >> {
+          (api.setPermissions(user.id, Permission.ofDbKeys(permissions)) >> {
             newPermissions(Permission.Coach).so(env.mailer.automaticEmail.onBecomeCoach(user))
           } >> {
             Permission

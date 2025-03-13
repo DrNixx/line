@@ -14,6 +14,9 @@ object HTTPRequest:
   def isXhr(req: RequestHeader): Boolean =
     req.headers.get("X-Requested-With").contains("XMLHttpRequest")
 
+  def isIframe(req: RequestHeader): Boolean =
+    req.headers.get("Sec-Fetch-Dest").contains("iframe")
+
   def isSynchronousHttp(req: RequestHeader) = !isXhr(req)
 
   def isSafe(req: RequestHeader)   = req.method == "GET" || req.method == "HEAD" || req.method == "OPTIONS"

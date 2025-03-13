@@ -466,7 +466,7 @@ final class Study(
     }
 
   def exportPgn(userId: UserId) = OpenOrScoped(_.Study.Read, _.Web.Mobile): ctx ?=>
-    val isMe   = ctx.me.exists(_.is(userId))
+    val isMe = ctx.me.exists(_.is(userId))
     val makeStream = env.study.studyRepo
       .sourceByOwner(userId, isMe)
       .flatMapConcat(env.study.pgnDump.chaptersOf(_, requestPgnFlags))

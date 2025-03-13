@@ -2321,10 +2321,16 @@ interface I18n {
     puzzleId: I18nFormat;
     /** Puzzle of the day */
     puzzleOfTheDay: string;
+    /** Puzzle Racer */
+    puzzleRacer: string;
     /** Puzzles */
     puzzles: string;
     /** Puzzles by openings */
     puzzlesByOpenings: string;
+    /** Puzzle Storm */
+    puzzleStorm: string;
+    /** Puzzle Streak */
+    puzzleStreak: string;
     /** Success! */
     puzzleSuccess: string;
     /** Puzzle Themes */
@@ -2797,6 +2803,8 @@ interface I18n {
     backToGame: string;
     /** Back to tournament */
     backToTournament: string;
+    /** Based on Lila server */
+    basedOn: string;
     /** Berserk rate */
     berserkRate: string;
     /** Best move arrow */
@@ -2925,6 +2933,8 @@ interface I18n {
     chess960StartPosition: I18nFormat;
     /** Chess basics */
     chessBasics: string;
+    /** Chess books */
+    chessBooks: string;
     /** Claim a draw */
     claimADraw: string;
     /** Classical */
@@ -2987,6 +2997,8 @@ interface I18n {
     continueFromHere: string;
     /** Contribute */
     contribute: string;
+    /** © Chess-Online Network */
+    copyright: string;
     /** Copy and paste the above text and send it to %s */
     copyTextToEmail: I18nFormat;
     /** Copy variation PGN */
@@ -2997,6 +3009,8 @@ interface I18n {
     correspondenceChess: string;
     /** Correspondence games: one or several days per move */
     correspondenceDesc: string;
+    /** Correspondence */
+    corrsTournaments: string;
     /** Country or region */
     countryRegion: string;
     /** CPUs */
@@ -3183,6 +3197,8 @@ interface I18n {
     fast: string;
     /** Favourite opponents */
     favoriteOpponents: string;
+    /** Feedback */
+    feedback: string;
     /** Fifty moves without progress */
     fiftyMovesWithoutProgress: string;
     /** Filter games */
@@ -3257,8 +3273,12 @@ interface I18n {
     hangOn: string;
     /** Help: */
     help: string;
+    /** Info & help */
+    helpMenu: string;
     /** Hide best move */
     hideBestMove: string;
+    /** Home page */
+    homeMenu: string;
     /** Host */
     host: string;
     /** Host a new simul */
@@ -3307,6 +3327,8 @@ interface I18n {
     incrementInSeconds: string;
     /** Infinite analysis */
     infiniteAnalysis: string;
+    /** Information */
+    information: string;
     /** In kid mode, the Lichess logo gets a %s icon, so you know your kids are safe. */
     inKidModeTheLichessLogoGetsIconX: I18nFormat;
     /** Inline notation */
@@ -3405,6 +3427,8 @@ interface I18n {
     letOtherPlayersMessageYou: string;
     /** Level */
     level: string;
+    /** Library */
+    library: string;
     /** Rated games played on Lichess */
     lichessDbExplanation: string;
     /** Lichess is a charity and entirely free/libre open source software. */
@@ -3441,6 +3465,8 @@ interface I18n {
     lossSavedBy50MoveRule: string;
     /** You lost rating points to someone who violated the Lichess TOS */
     lostAgainstTOSViolator: string;
+    /** Main Chess-Online.Com profile */
+    mainProfileLink: string;
     /** For safekeeping and sharing, consider making a study. */
     makeAStudy: string;
     /** Make mainline */
@@ -3463,6 +3489,8 @@ interface I18n {
     maximumWeeklyRating: string;
     /** Maybe include more games from the preferences menu? */
     maybeIncludeMoreGamesFromThePreferencesMenu: string;
+    /** Club Chess-Online */
+    membership: string;
     /** Member since */
     memberSince: string;
     /** Memory */
@@ -3721,6 +3749,10 @@ interface I18n {
     pieceSet: string;
     /** Play */
     play: string;
+    /** Play as guest */
+    playAsGuest: string;
+    /** Play unrated game without registration */
+    playAsGuestDesc: string;
     /** Play chess everywhere */
     playChessEverywhere: string;
     /** Play chess in style */
@@ -4325,8 +4357,12 @@ interface I18n {
     withEverybody: string;
     /** With friends */
     withFriends: string;
+    /** With love to Chess! */
+    withLove: string;
     /** With nobody */
     withNobody: string;
+    /** Worldwide top players */
+    worldTopPlayers: string;
     /** Write a private note about this user */
     writeAPrivateNoteAboutThisUser: string;
     /** %1$s competes in %2$s */
@@ -5133,6 +5169,8 @@ interface I18n {
     closeTeam: string;
     /** Closes the team forever. */
     closeTeamDescription: string;
+    /** Clubs */
+    clubs: string;
     /** Completed tournaments */
     completedTourns: string;
     /** Declined Requests */
@@ -5187,14 +5225,20 @@ interface I18n {
     oneTeamPerLineHelp: string;
     /** Please add a new team leader before leaving, or close the team. */
     onlyLeaderLeavesTeam: string;
+    /** Play groups */
+    playGroups: string;
     /** Leave team */
     quitTeam: string;
     /** Your join request was declined by a team leader. */
     requestDeclined: string;
+    /** Special groups */
+    specGroups: string;
     /** Subscribe to team messages */
     subToTeamMessages: string;
     /** A Swiss tournament that only members of your team can join */
     swissTournamentOverview: string;
+    /** System groups */
+    sysGroups: string;
     /** Team */
     team: string;
     /** This team already exists. */

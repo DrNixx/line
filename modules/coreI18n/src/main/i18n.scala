@@ -10,9 +10,9 @@ export scalalib.model.{ Language, Country, LangTag }
 
 val maxLangs = 128
 
-val defaultLanguage: Language = Language("en")
-val enLang: Lang              = Lang("en", "GB")
-val defaultLang: Lang         = enLang
+val defaultLanguage: Language = Language("ru")
+val ruLang: Lang              = Lang("ru", "RU")
+val defaultLang: Lang         = ruLang
 
 def toLanguage(lang: Lang): Language = Language(lang.language)
 def toCountry(lang: Lang): Country   = Country(lang.country)

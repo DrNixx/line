@@ -6,7 +6,7 @@ import play.api.libs.json.*
 import chess.IntRating
 
 import lila.common.Json.given
-import lila.common.Json.lightUser.writeNoId
+import lila.common.Json.lightUser.write
 import lila.common.Uptime
 import lila.core.LightUser
 import lila.core.chess.Rank
@@ -311,7 +311,7 @@ final class JsonView(
       .add("pauseDelay", delay)
 
   private def gameUserJson(userId: Option[UserId], rating: Option[IntRating], berserk: Boolean): JsObject =
-    userId.flatMap(lightUserApi.sync).so(writeNoId) ++
+    userId.flatMap(lightUserApi.sync).so(write) ++
       Json
         .obj("rating" -> rating)
         .add("berserk" -> berserk)
@@ -437,7 +437,7 @@ final class JsonView(
                       lightUserApi
                         .sync(p.userId)
                         .map: u =>
-                          writeNoId(u) ++
+                          write(u) ++
                             Json
                               .obj(
                                 "rating" -> p.rating,
@@ -535,7 +535,7 @@ object JsonView:
     lightUserApi
       .asyncFallback(p.userId)
       .map: light =>
-        writeNoId(light) ++
+        write(light) ++
           Json
             .obj(
               "rank"   -> rankedPlayer.rank,

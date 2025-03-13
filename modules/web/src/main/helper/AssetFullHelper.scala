@@ -22,7 +22,7 @@ trait AssetFullHelper:
   lazy val sameAssetDomain = netConfig.domain == netConfig.assetDomain
 
   lazy val siteName: String =
-    if netConfig.siteName == "localhost:9663" then "lichess.dev"
+    if netConfig.siteName == "localhost:9663" then "stage.chess-online.com"
     else netConfig.siteName
 
   def assetVersion = lila.core.net.AssetVersion.current

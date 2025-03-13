@@ -27,7 +27,8 @@ export interface Hook {
   variant: VariantKey;
   perf: Exclude<Perf, 'fromPosition'>;
   prov?: true; // is rating provisional
-  u?: string; // username
+  u?: string; // userId
+  n?: string; // username
   rating?: number;
   ra?: 1; // rated
   action: 'cancel' | 'join';

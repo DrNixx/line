@@ -70,7 +70,7 @@ export default class OnlineFriends {
       tvButton = friend.playing
         ? `<a data-icon="${licon.AnalogTv}" class="tv ulpt" data-pt-pos="nw" href="${url}/tv" data-href="${url}"></a>`
         : '';
-    return `<div><a class="user-link ulpt" data-pt-pos="nw" href="${url}">${icon}${titleTag}${friend.id}</a>${tvButton}</div>`;
+    return `<div><a class="user-link ulpt" data-pt-pos="nw" href="${url}">${icon}${titleTag}${friend.name}</a>${tvButton}</div>`;
   };
 
   enters = (titleName: TitleName, msg: { playing: boolean; patron: boolean }) => {
@@ -98,14 +98,19 @@ export default class OnlineFriends {
     return this.users.get(id)!;
   };
 
-  getId = (titleName: TitleName) => titleName.toLowerCase().replace(/^\w+\s/, '');
+  getId = (titleName: TitleName) => {
+    const idn = titleName.split('/');
+    return idn.length > 1 ? idn[0] : titleName.toLowerCase().replace(/^\w+\s/, '');
+  };
 
   toFriend = (titleName: TitleName): Friend => {
-    const split = titleName.split(' ');
+    const [id, ...rest] = titleName.split('/');
+    const [title, name] = rest.length > 0 ? rest[0].split(' ') : [undefined, titleName.split(' ').pop()];
+
     return {
-      id: split[split.length - 1].toLowerCase(),
-      name: split[split.length - 1],
-      title: split.length > 1 ? split[0] : undefined,
+      id: id || name?.toLowerCase() || '',
+      name: name || id,
+      title,
       playing: false,
       patron: false,
     };

@@ -71,7 +71,7 @@ final class PlanUi(helpers: Helpers)(contactEmail: EmailAddress):
               .ifTrue(ctx.me.so(_.isPatron))
               .map { p =>
                 div(cls := "banner one_time_active")(
-                  iconTag(patronIconChar),
+                  i(cls := "co", dataIcon := patronIconChar),
                   div(
                     h1(cls := "box__top")(trp.thankYou()),
                     if p.isLifetime then trp.youHaveLifetime()
@@ -88,12 +88,12 @@ final class PlanUi(helpers: Helpers)(contactEmail: EmailAddress):
               }
               .getOrElse(
                 div(cls := "banner moto")(
-                  iconTag(patronIconChar),
+                  i(cls := "co", dataIcon := patronIconChar),
                   div(
                     h1(cls := "box__top")(trp.freeChess()),
                     p(trp.noAdsNoSubs())
                   ),
-                  iconTag(patronIconChar)
+                  i(cls := "co", dataIcon := patronIconChar)
                 )
               ),
             div(cls := "box__pad")(

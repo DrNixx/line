@@ -15,7 +15,9 @@ object page:
   )
   import ui.*
 
-  private val topnav = lila.web.ui.TopNav(helpers)
+  private val topnav  = lila.web.ui.TopNav(helpers)
+  private val sidenav = lila.web.ui.SideNav(helpers)
+  private val footer  = lila.web.ui.PageFooter(helpers)
 
   private def metaThemeColor(using ctx: Context): Frag =
     raw(s"""<meta name="theme-color" content="${ctx.pref.themeColor}">""")
@@ -78,6 +80,10 @@ object page:
             raw("""<meta content="noindex, nofollow" name="robots">""")
           ,
           noTranslate,
+          netConfig.isProd.option(
+            frag:
+              ctx.userId.isEmpty.option(autoLogin(ctx.nonce))
+          ),
           p.openGraph.map(lila.web.ui.openGraph),
           p.atomLinkTag | dailyNewsAtom,
           (pref.bg == lila.pref.Pref.Bg.TRANSPARENT).option(pref.bgImgOrDefault).map { loc =>
@@ -141,6 +147,10 @@ object page:
               frag(cssTag("bits.email-confirm"), views.auth.checkYourEmailBanner(u.username, u.email))
             ),
           zenable.option(zenZone),
+          sidenav(
+            hasClas = ctx.hasClas,
+            hasDgt = ctx.pref.hasDgt
+          ),
           ui.siteHeader(
             zenable = zenable,
             isAppealUser = ctx.isAppealUser,
@@ -159,7 +169,7 @@ object page:
               "is2d"              -> pref.is2d,
               "is3d"              -> pref.is3d
             )
-          )(p.transform(p.body)),
+          )(p.transform(p.body), footer()),
           bottomHtml,
           ctx.nonce.map(inlineJs(_, allModules)),
           modulesInit(allModules, ctx.nonce),

@@ -176,7 +176,7 @@ final class PlanPages(helpers: Helpers)(fishnetPerDay: Int):
     Page(trans.patron.thankYou.txt())
       .css("bits.page"):
         main(cls := "page-small page box box-pad")(
-          boxTop(h1(cls := "text", dataIcon := patronIconChar)(trp.thankYou())),
+          boxTop(h1(cls := "text co", dataIcon := patronIconChar)(trp.thankYou())),
           p(trp.tyvm()),
           p(trp.transactionCompleted()),
           (gift, patron) match

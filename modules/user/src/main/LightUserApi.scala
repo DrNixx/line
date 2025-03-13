@@ -52,21 +52,20 @@ final class LightUserApi(repo: UserRepo, cacheApi: CacheApi)(using Executor)
   )
 
   private given BSONDocumentReader[LightUser] with
-    def readDocument(doc: BSONDocument) =
-      doc
-        .getAsTry[UserName](F.username)
-        .map: name =>
-          LightUser(
-            id = name.id,
-            name = name,
-            title = doc.getAsOpt[chess.PlayerTitle](F.title),
-            flair = doc.getAsOpt[Flair](F.flair).filter(FlairApi.exists),
-            isPatron = ~doc.child(F.plan).flatMap(_.getAsOpt[Boolean]("active"))
-          )
+    def readDocument(doc: BSONDocument) = for
+      id   <- doc.getAsTry[UserId](F.id)
+      name <- doc.getAsTry[UserName](F.username)
+    yield LightUser(
+      id = id,
+      name = name,
+      title = doc.getAsOpt[chess.PlayerTitle](F.title),
+      flair = doc.getAsOpt[Flair](F.flair).filter(FlairApi.exists),
+      isPatron = ~doc.child(F.plan).flatMap(_.getAsOpt[Boolean]("active"))
+    )
 
   private val projection =
     $doc(
-      F.id                -> false,
+      F.id                -> true,
       F.username          -> true,
       F.title             -> true,
       s"${F.plan}.active" -> true,

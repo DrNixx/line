@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <string name="library">Библиотека</string>
+  <string name="chessBooks">Шахматные книги</string>
+  <string name="helpMenu">Помощь</string>
+  <string name="information">Информация</string>
+  <string name="feedback">Обратная связь</string>
+  <string name="membership">Клуб привилегий</string>
+  <string name="corrsTournaments">По переписке</string>
+  <string name="copyright">© Chess-Online Network</string>
+  <string name="basedOn">Работает на Lila server</string>
+  <string name="withLove">С любовью к шахматам!</string>
+  <string name="mainProfileLink">Основной профиль Chess-Online.Com</string>
+  <string name="playAsGuest">Играть как гость</string>
+  <string name="playAsGuestDesc">Играть товарищескую партию без регистрации</string>
+  <string name="worldTopPlayers">Шахматная элита</string>
+  <string name="homeMenu">Главная страница</string>
+  
   <string name="playWithAFriend">Сыграть с другом</string>
   <string name="playWithTheMachine">Сыграть с компьютером</string>
   <string name="toInviteSomeoneToPlayGiveThisUrl">Чтобы пригласить друга, отправьте ему эту ссылку</string>

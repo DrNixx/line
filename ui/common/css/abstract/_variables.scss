@@ -17,6 +17,10 @@ $site-header-margin: var(---site-header-margin);
 $site-header-margin-extra: 1.3em;
 $site-header-outer-height: calc($site-header-height + $site-header-margin + var(---sticky-gap));
 
+$layout-sidepanel-width-collapsed: 70px;
+$layout-sidepanel-width: 280px;
+$layout-sidepanel-pin-width: 250px;
+
 $main-margin: var(---main-margin);
 $main-max-width: 1300px !default;
 

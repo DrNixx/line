@@ -46,7 +46,9 @@ const views = {
   friend: (ctrl: LobbyController): MaybeVNodes => [
     h('h2', i18n.site.playWithAFriend),
     h('div.setup-content', [
-      ctrl.setupCtrl.friendUser ? userLink({ id: ctrl.setupCtrl.friendUser, name: ctrl.setupCtrl.friendUser, line: false }) : null,
+      ctrl.setupCtrl.friendUser
+        ? userLink({ id: ctrl.setupCtrl.friendUser, name: ctrl.setupCtrl.friendUser, line: false })
+        : null,
       variantPicker(ctrl),
       fenInput(ctrl),
       timePickerAndSliders(ctrl, true),

@@ -27,8 +27,11 @@ body {
 
 #main-wrap {
   display: grid;
-  grid-template-areas: '. . main . .';
+  grid-template-areas:
+    '. . main . .'
+    '. . footer . .';
   grid-template-columns: $main-margin 1fr minmax(auto, var(---main-max-width)) 1fr $main-margin;
+  grid-template-rows: auto 90px;
   ---main-max-width: #{$main-max-width};
   margin-top: $site-header-margin;
 
@@ -59,4 +62,8 @@ main {
     margin: auto;
     width: 100%;
   }
+}
+
+footer {
+  grid-area: footer;
 }

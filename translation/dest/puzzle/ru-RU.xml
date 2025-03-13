@@ -2,6 +2,9 @@
 <resources>
   <string name="puzzles">Задачи</string>
   <string name="puzzleThemes">Темы задач</string>
+  <string name="puzzleStreak">Победная серия</string>
+  <string name="puzzleStorm">Мозговой штурм</string>
+  <string name="puzzleRacer">Гонки на задачах</string>
   <string name="recommended">Рекомендуемые</string>
   <string name="phases">Стадии игры</string>
   <string name="motifs">Мотивы</string>

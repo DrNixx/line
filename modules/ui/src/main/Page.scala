@@ -13,7 +13,7 @@ case class OpenGraph(
     url: String,
     `type`: String = "website",
     image: Option[String] = None,
-    siteName: String = "lichess.org"
+    siteName: String = "live.chess-online.com"
 )
 
 enum PageFlags:

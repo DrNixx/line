@@ -78,6 +78,7 @@ case class Hook(
     )
     .add("prov" -> perf.map(_.provisional))
     .add("u" -> user.map(_.id))
+    .add("n" -> user.map(_.username))
     .add("rating" -> rating)
     .add("variant" -> realVariant.exotic.option(realVariant.key))
     .add("ra" -> realMode.rated.option(1))

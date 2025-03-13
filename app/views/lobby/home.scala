@@ -106,16 +106,6 @@ object home:
                   )
                 )
               )
-            else
-              div(cls := "about-side")(
-                ctx.blind.option(h2("About")),
-                trans.site.xIsAFreeYLibreOpenSourceChessServer(
-                  "Lichess",
-                  a(cls := "blue", href := routes.Plan.features)(trans.site.really.txt())
-                ),
-                " ",
-                a(href := "/about")(trans.site.aboutX("Lichess"), "...")
-              )
           ),
           featured.map: g =>
             div(cls := "lobby__tv"):
@@ -136,7 +126,7 @@ object home:
           ,
           div(cls := "lobby__support")(
             a(href := routes.Plan.index())(
-              iconTag(patronIconChar),
+              i(cls := "co", dataIcon := patronIconChar),
               span(cls := "lobby__support__text")(
                 strong(trans.patron.donate()),
                 span(trans.patron.becomePatron())
@@ -149,17 +139,5 @@ object home:
                 span(trans.site.playChessInStyle())
               )
             )
-          ),
-          div(cls := "lobby__about")(
-            ctx.blind.option(h2("About")),
-            a(href := "/about")(trans.site.aboutX("Lichess")),
-            a(href := "/faq")(trans.faq.faqAbbreviation()),
-            a(href := "/contact")(trans.contact.contact()),
-            a(href := "/mobile")(trans.site.mobileApp()),
-            a(href := routes.Cms.tos)(trans.site.termsOfService()),
-            a(href := "/privacy")(trans.site.privacy()),
-            a(href := "/source")(trans.site.sourceCode()),
-            a(href := "/ads")("Ads"),
-            views.bits.connectLinks
           )
         )

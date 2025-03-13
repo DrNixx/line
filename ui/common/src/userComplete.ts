@@ -72,7 +72,7 @@ export function userComplete(opts: UserCompleteOpts): void {
     },
     populate: opts.populate || (r => r.name),
     onSelect: opts.onSelect,
-    regex: /^[a-z][\w-]{2,29}$/i,
+    regex: /^([a-z][\w-]|[\d]){2,29}$/i,
   });
   if (opts.focus) setTimeout(() => opts.input.focus());
 }

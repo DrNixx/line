@@ -1,4 +1,3 @@
-import * as licon from 'common/licon';
 import { text as xhrText } from 'common/xhr';
 import { requestIdleCallback, $as } from 'common';
 import { spinnerHtml } from 'common/spinner';
@@ -11,30 +10,25 @@ const inCrosstable = (el: HTMLElement) => document.querySelector('.crosstable')?
 const onPowertipPreRender = (id: string, preload?: (url: string) => void) => (el: HTMLAnchorElement) => {
   const url = (el.dataset.href || el.href).replace(/\?.+$/, '');
   if (preload) preload(url);
-  xhrText(url + '/mini').then(html => {
-    const el = document.getElementById(id) as HTMLElement;
-    el.innerHTML = html;
-    pubsub.emit('content-loaded', el);
-  });
+  xhrText(url + '/mini')
+    .then(html => {
+      const el = document.getElementById(id) as HTMLElement;
+      el.innerHTML = html;
+      pubsub.emit('content-loaded', el);
+    })
+    .catch(e => console.debug(e));
 };
-
-const uptA = (url: string, icon: string) => `<a class="btn-rack__btn" href="${url}" data-icon="${icon}"></a>`;
 
 const userPowertip = (el: HTMLElement, pos?: PowerTip.Placement) =>
   $(el)
     .removeClass('ulpt')
     .powerTip({
-      preRender: onPowertipPreRender('powerTip', (url: string) => {
-        const u = url.slice(3);
+      preRender: onPowertipPreRender('powerTip', () => {
         const name = el.dataset.name || $(el).html();
         $('#powerTip').html(
           '<div class="upt__info"><div class="upt__info__top"><span class="user-link offline">' +
             name +
-            '</span></div></div><div class="upt__actions btn-rack">' +
-            uptA('/@/' + u + '/tv', licon.AnalogTv) +
-            uptA('/inbox/new?user=' + u, licon.BubbleSpeech) +
-            uptA('/?user=' + u + '#friend', licon.Swords) +
-            '<a class="btn-rack__btn relation-button" disabled></a></div>',
+            '</span></div></div>',
         );
       }),
       placement:

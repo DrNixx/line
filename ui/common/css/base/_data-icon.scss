@@ -4,6 +4,10 @@
   @extend %data-icon;
 }
 
+.co[data-icon]::before {
+  font-family: 'cochess';
+}
+
 .is.text::before,
 .text[data-icon]::before {
   @include margin-inline-end(0.4em);

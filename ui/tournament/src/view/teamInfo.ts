@@ -46,7 +46,7 @@ export default function (ctrl: TournamentController): VNode | undefined {
       h(
         'table.players.sublist',
         data.topPlayers.map((p, i) =>
-          h('tr', { key: p.name, hook: bind('click', () => ctrl.jumpToPageOf(p.name)) }, [
+          h('tr', { key: p.name, hook: bind('click', () => ctrl.jumpToPageOf(p.id)) }, [
             h('th', '' + (i + 1)),
             h('td', renderPlayer(p, false, ctrl.opts.showRatings, false, i < nbLeaders)),
             h('td.total', [

@@ -36,7 +36,7 @@ object mod:
   def plan(u: User)(charges: List[lila.plan.Charge])(using Context): Option[Frag] =
     charges.nonEmpty.option(
       mzSection("plan")(
-        strong(cls := "text inline", dataIcon := patronIconChar)(
+        strong(cls := "text inline co", dataIcon := patronIconChar)(
           "Patron payments",
           Granter.opt(_.PayPal).option {
             charges.find(_.giftTo.isEmpty).flatMap(_.payPal).flatMap(_.subId).map { subId =>

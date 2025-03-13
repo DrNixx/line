@@ -45,6 +45,7 @@ final class layout(helpers: Helpers, assetHelper: lila.web.ui.AssetFullHelper)(
 
   def fontPreload(using ctx: Context) = frag(
     preload(assetUrl("font/lichess.woff2"), "font", crossorigin = true, "font/woff2".some),
+    preload(assetUrl("font/xchess.woff2"), "font", crossorigin = true, "font/woff2".some),
     preload(
       assetUrl("font/noto-sans-latin.woff2"),
       "font",
@@ -169,6 +170,17 @@ final class layout(helpers: Helpers, assetHelper: lila.web.ui.AssetFullHelper)(
         .mkString(";")
     embedJsUnsafe(code)(nonce.some)
 
+  def autoLogin(nonce: Option[Nonce]) =
+    raw:
+      List(
+        s"""<script src="https://passport.chess-online.com/script"></script>""",
+        embedJsUnsafe(s"""window.chessPassport.isLoggedIn(function (online) {
+                if (online) {
+                    location.href = "${routes.Auth.login.url}?referrer=" + encodeURIComponent(location.href);
+                }
+            });""")(nonce).render
+      ).mkString
+
   private def hrefLang(langStr: String, path: String) =
     s"""<link rel="alternate" hreflang="$langStr" href="$netBaseUrl$path"/>"""
 
@@ -228,6 +240,11 @@ final class layout(helpers: Helpers, assetHelper: lila.web.ui.AssetFullHelper)(
     font-family: 'lichess';
     font-display: block;
     src: url('${assetUrl("font/lichess.woff2")}') format('woff2')
+  }
+  @font-face {
+    font-family: 'cochess';
+    font-display: block;
+    src: url('${assetUrl("font/xchess.woff2")}') format('woff2')
   }
 </style>"""
 

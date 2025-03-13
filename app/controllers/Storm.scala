@@ -53,4 +53,3 @@ final class Storm(env: Env) extends LilaController(env):
       ((days > 0).so(env.storm.dayApi.apiHistory(userId, days))).zip(env.storm.highApi.get(userId)).map {
         case (history, high) => Ok(env.storm.json.apiDashboard(high, history))
       }
-      

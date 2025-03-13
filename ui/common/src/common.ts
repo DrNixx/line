@@ -12,6 +12,20 @@ export interface Prop<T> {
 }
 export interface PropWithEffect<T> extends Prop<T> {}
 
+interface Props {}
+
+export function extend<A extends Props>(a: A, b: A): A {
+  if (b !== undefined) {
+    for (var key in b) {
+      if (b.hasOwnProperty(key)) {
+        a[key] = b[key];
+      }
+    }
+  }
+
+  return a;
+}
+
 // like mithril prop but with type safety
 export const prop = <A>(initialValue: A): Prop<A> => {
   let value = initialValue;

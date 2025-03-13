@@ -74,6 +74,7 @@ body.zen {
   @extend %flex-center;
   &::after {
     @extend %data-icon;
+    font-family: 'cochess';
     content: $licon-Wings;
     font-size: 1.3em;
     color: $c-brag;

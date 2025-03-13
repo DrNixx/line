@@ -11,7 +11,11 @@ interface Data {
 
 let watchersData: Data | undefined;
 
-const name = (u: string) => (u.includes(' ') ? u.split(' ')[1] : u);
+const userLink = (u: string) => {
+  const [id, ...rest] = u.split('/');
+  const name = rest.length > 0 ? rest[0].split(' ')[0] : u.split(' ').pop()?.toLowerCase() || '';
+  return `<a class="user-link ulpt" href="/@/${id}">${name}</a>`;
+};
 
 export function watchers(element: HTMLElement): void {
   if (element.dataset.watched) return;
@@ -39,9 +43,7 @@ export function watchers(element: HTMLElement): void {
       const prevUsers = data.users.map(u => u || '').join(';');
       if (get(listEl, 'prevUsers') !== prevUsers) {
         set(listEl, 'prevUsers', prevUsers);
-        const tags = data.users.map(u =>
-          u ? `<a class="user-link ulpt" href="/@/${name(u)}">${u}</a>` : 'Anonymous',
-        );
+        const tags = data.users.map(u => (u ? userLink(u) : 'Anonymous'));
         if (data.anons === 1) tags.push('Anonymous');
         else if (data.anons) tags.push(`Anonymous (${data.anons})`);
         $listEl.html(tags.join(', '));

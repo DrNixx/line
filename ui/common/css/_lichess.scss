@@ -15,7 +15,11 @@
 
 @import 'theme/board/chessground';
 
+@import 'sidebar/sidebar';
+
 @import 'header/header';
+@import 'footer/footer';
+
 @import '../../cli/css/clinput';
 
 @import 'component/board';

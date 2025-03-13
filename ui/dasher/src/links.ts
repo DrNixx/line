@@ -44,7 +44,7 @@ export class LinksCtrl extends PaneCtrl {
     return d.user
       ? h('div.links', [
           h(
-            'a.user-link.online.text.is-green',
+            'a.user-link.online.text.is-green.co',
             linkCfg(`/@/${d.user.id}`, d.user.patron ? licon.Wings : licon.Disc),
             i18n.site.profile,
           ),

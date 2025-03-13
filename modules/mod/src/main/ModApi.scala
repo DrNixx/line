@@ -116,25 +116,25 @@ final class ModApi(
       _   <- logApi.garbageCollect(sus)
     yield ()
 
-  def disableTwoFactor(mod: ModId, username: UserStr): Funit =
-    withUser(username): user =>
+  def disableTwoFactor(mod: ModId, userId: UserId): Funit =
+    withUser(userId): user =>
       (userRepo.disableTwoFactor(user.id)) >> logApi.disableTwoFactor(mod, user.id)
 
-  def reopenAccount(username: UserStr)(using Me): Funit =
-    withUser(username): user =>
+  def reopenAccount(userId: UserId)(using Me): Funit =
+    withUser(userId): user =>
       user.enabled.no.so:
         userRepo.reopen(user.id) >> logApi.reopenAccount(user.id)
 
-  def setKid(mod: ModId, username: UserStr): Funit =
-    withUser(username): user =>
+  def setKid(mod: ModId, userId: UserId): Funit =
+    withUser(userId): user =>
       userRepo
         .isKid(user.id)
         .flatMap: isKid =>
           (!isKid).so:
             userRepo.setKid(user, true) >> logApi.setKidMode(mod, user.id)
 
-  def setTitle(username: UserStr, title: Option[PlayerTitle])(using Me): Funit =
-    withUser(username): user =>
+  def setTitle(userId: UserId, title: Option[PlayerTitle])(using Me): Funit =
+    withUser(userId): user =>
       title match
         case None =>
           for
@@ -149,19 +149,19 @@ final class ModApi(
             yield lightUserApi.invalidate(user.id)
           }
 
-  def setEmail(username: UserStr, emailOpt: Option[EmailAddress])(using Me): Funit =
-    withUser(username): user =>
+  def setEmail(userId: UserId, emailOpt: Option[EmailAddress])(using Me): Funit =
+    withUser(userId): user =>
       for
         prev <- userRepo.emailOrPrevious(user.id)
         email = emailOpt | EmailAddress:
-          s"noreply.blanked.${username.id}${prev.fold("@nope.nope")("." + _)}"
+          s"noreply.blanked.${userId}${prev.fold("@nope.nope")("." + _)}"
         _ <- userRepo.setEmail(user.id, email)
         _ <- userRepo.setEmailConfirmed(user.id)
         _ <- logApi.setEmail(user.id)
       yield ()
 
-  def setPermissions(username: UserStr, permissions: Set[Permission])(using Me): Funit =
-    withUser(username): user =>
+  def setPermissions(userId: UserId, permissions: Set[Permission])(using Me): Funit =
+    withUser(userId): user =>
       val finalPermissions = Permission(user).filter { p =>
         // only remove permissions the mod can actually grant
         permissions.contains(p) || !canGrant(p)
@@ -199,5 +199,5 @@ final class ModApi(
       .flatMap(userRepo.enabledByIds)
       .map(_.sortBy(timeNoSee))
 
-  private def withUser[A](username: UserStr)(op: User => Fu[A]): Fu[A] =
-    userRepo.byId(username).orFail(s"[mod] missing user $username").flatMap(op)
+  private def withUser[A](userId: UserId)(op: User => Fu[A]): Fu[A] =
+    userRepo.byId(userId).orFail(s"[mod] missing user $userId").flatMap(op)

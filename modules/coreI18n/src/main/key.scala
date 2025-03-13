@@ -1143,6 +1143,9 @@ object I18nKey:
   object puzzle:
     val `puzzles`: I18nKey = "puzzle:puzzles"
     val `puzzleThemes`: I18nKey = "puzzle:puzzleThemes"
+    val `puzzleStreak`: I18nKey = "puzzle:puzzleStreak"
+    val `puzzleStorm`: I18nKey = "puzzle:puzzleStorm"
+    val `puzzleRacer`: I18nKey = "puzzle:puzzleRacer"
     val `recommended`: I18nKey = "puzzle:recommended"
     val `phases`: I18nKey = "puzzle:phases"
     val `motifs`: I18nKey = "puzzle:motifs"
@@ -1387,6 +1390,21 @@ object I18nKey:
     val `thisAccountIsClosed`: I18nKey = "settings:thisAccountIsClosed"
 
   object site:
+    val `library`: I18nKey = "library"
+    val `chessBooks`: I18nKey = "chessBooks"
+    val `helpMenu`: I18nKey = "helpMenu"
+    val `information`: I18nKey = "information"
+    val `feedback`: I18nKey = "feedback"
+    val `membership`: I18nKey = "membership"
+    val `corrsTournaments`: I18nKey = "corrsTournaments"
+    val `copyright`: I18nKey = "copyright"
+    val `basedOn`: I18nKey = "basedOn"
+    val `withLove`: I18nKey = "withLove"
+    val `mainProfileLink`: I18nKey = "mainProfileLink"
+    val `playAsGuest`: I18nKey = "playAsGuest"
+    val `playAsGuestDesc`: I18nKey = "playAsGuestDesc"
+    val `worldTopPlayers`: I18nKey = "worldTopPlayers"
+    val `homeMenu`: I18nKey = "homeMenu"
     val `playWithAFriend`: I18nKey = "playWithAFriend"
     val `playWithTheMachine`: I18nKey = "playWithTheMachine"
     val `toInviteSomeoneToPlayGiveThisUrl`: I18nKey = "toInviteSomeoneToPlayGiveThisUrl"
@@ -2606,6 +2624,10 @@ object I18nKey:
     val `ongoingGames`: I18nKey = "swiss:ongoingGames"
 
   object team:
+    val `clubs`: I18nKey = "team:clubs"
+    val `playGroups`: I18nKey = "team:playGroups"
+    val `specGroups`: I18nKey = "team:specGroups"
+    val `sysGroups`: I18nKey = "team:sysGroups"
     val `team`: I18nKey = "team:team"
     val `teams`: I18nKey = "team:teams"
     val `allTeams`: I18nKey = "team:allTeams"

@@ -91,10 +91,10 @@ final class Auth(
     referrer.ifTrue(ctx.isAuth).ifTrue(switch.isEmpty) match
       case Some(url) => Redirect(url) // redirect immediately if already logged in
       case None =>
-        env.oidc.api.getAuthenticationRequest() flatMap { request =>
+        env.oidc.api.getAuthenticationRequest().flatMap { request =>
           fuccess(
             Redirect(request.toURI.toString).flashing(
-              "referrer" -> referrer.getOrElse("/"),
+              "referrer"  -> referrer.getOrElse("/"),
               "oidcState" -> request.getState.getValue,
               "oidcNonce" -> request.getNonce.getValue
             )
@@ -104,14 +104,13 @@ final class Auth(
   def signinOidc = Open(oidcCallback)
 
   private def oidcCallback(using ctx: Context) = NoBot:
-    env.oidc.api.authenticate(ctx.req) flatMap { userOp =>
-      userOp match {
+    env.oidc.api.authenticate(ctx.req).flatMap { userOp =>
+      userOp match
         case None => InternalServerError("Authentication error")
         case Some(user) =>
           authenticateUser(user, remember = true)
-      }
     }
-  
+
   private val is2fa = Set("MissingTotpToken", "InvalidTotpToken")
 
   def authenticate = OpenBody:

@@ -1,11 +1,13 @@
 import * as licon from 'common/licon';
 import { text as xhrText } from 'common/xhr';
 import topBar from './topBar';
+import sideBar from './sideBar';
 import { userComplete } from 'common/userComplete';
 import { confirm } from 'common/dialog';
 
 export function attachDomHandlers() {
   topBar();
+  sideBar();
 
   $('#main-wrap').on('click', '.copy-me__button', function (this: HTMLElement) {
     const showCheckmark = () => {
