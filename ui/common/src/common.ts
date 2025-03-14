@@ -16,7 +16,7 @@ interface Props {}
 
 export function extend<A extends Props>(a: A, b: A): A {
   if (b !== undefined) {
-    for (var key in b) {
+    for (let key in b) {
       if (b.hasOwnProperty(key)) {
         a[key] = b[key];
       }

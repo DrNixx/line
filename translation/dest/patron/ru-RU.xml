@@ -5,7 +5,7 @@
   <string name="lichessPatron">Chess-Online-спонсор</string>
   <string name="patronSince" comment="string is a date">Покровитель с %s</string>
   <string name="freeAccount">Бесплатный аккаунт</string>
-  <string name="becomePatron">Стать спонсором Chess-Online</string>
+  <string name="becomePatron">Поддержать Chess-Online</string>
   <string name="xBecamePatron">%s стал спонсором Chess-Online</string>
   <plurals name="xIsPatronForNbMonths">
     <item quantity="one">%1$s продлил спонсорство Chess-Online на %2$s месяц</item>

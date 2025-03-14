@@ -29,7 +29,7 @@ Allow: /game/export/gif/thumbnail/
       "description"      -> "The (really) free, no-ads, open source chess server.",
       "icons" -> List(32, 64, 128, 192, 256, 512, 1024).map: size =>
         Json.obj(
-          "src"   -> s"//${net.assetDomain}/assets/logo/lichess-favicon-$size.png",
+          "src"   -> s"//${net.assetDomain}/assets/logo/chess-favicon-$size.png",
           "sizes" -> s"${size}x$size",
           "type"  -> "image/png"
         ),

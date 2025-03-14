@@ -7,6 +7,7 @@ case class ContentSecurityPolicy(
     frameSrc: List[String],
     workerSrc: List[String],
     imgSrc: List[String],
+    mediaSrc: List[String],
     scriptSrc: List[String],
     fontSrc: List[String],
     baseUri: List[String]
@@ -18,6 +19,21 @@ case class ContentSecurityPolicy(
   def withUnsafeInlineScripts = copy(scriptSrc = "'unsafe-inline'" :: scriptSrc)
 
   def withExternalEngine(url: String) = copy(connectSrc = url :: connectSrc)
+
+  def withAd =
+    copy(
+      connectSrc =
+        "yastatic.net" :: "*.adfox.ru" :: "*.yandex.ru" :: "yandex.ru" :: "yandex.com" :: connectSrc,
+      frameSrc =
+        "yandexadexchange.net" :: "*.yandexadexchange.net" :: "yastatic.net" :: "*.yandex.ru" :: "*.adfox.ru" :: frameSrc,
+      imgSrc = "*.yandex.net" :: "*.adfox.ru" :: "*.yandex.ru" :: "yandex.ru" :: "yandex.com" :: imgSrc,
+      mediaSrc =
+        "yastatic.net" :: "*.yandex.net" :: "*.yandex.ru" :: "*.adfox.ru" :: "yandex.ru" :: "yandex.com" :: mediaSrc,
+      scriptSrc =
+        "'unsafe-inline'" :: "'unsafe-eval'" :: "yastatic.net" :: "*.yandex.ru" :: "*.adfox.ru" :: "yandex.ru" :: "yandex.com" :: "verify.yandex.ru" :: scriptSrc,
+      styleSrc = "'unsafe-inline'" :: "'unsafe-eval'" :: "yastatic.net" :: "*.adfox.ru" :: styleSrc,
+      fontSrc = "yastatic.net" :: fontSrc
+    )
 
   def withTwitter =
     copy(

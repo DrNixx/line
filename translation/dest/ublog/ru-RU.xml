@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+  <string name="myBlog">Мой блог</string>
+  <string name="officialBlog">Официально</string>
   <string name="communityBlogs">Блоги сообщества</string>
   <string name="friendBlogs">Блоги друзей</string>
   <string name="likedBlogs">Понравившиеся публикации блогов</string>

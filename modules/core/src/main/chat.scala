@@ -36,11 +36,16 @@ object BusChan:
 
 enum TimeoutReason(val key: String, val name: String):
   lazy val shortName = name.split(';').lift(0) | name
-  case PublicShaming extends TimeoutReason("shaming", "public shaming; please use live.chess-online.com/report")
+  case PublicShaming
+      extends TimeoutReason("shaming", "public shaming; please use live.chess-online.com/report")
   case Insult
-      extends TimeoutReason("insult", "disrespecting other players; see live.chess-online.com/page/chat-etiquette")
-  case Spam  extends TimeoutReason("spam", "spamming the chat; see live.chess-online.com/page/chat-etiquette")
-  case Other extends TimeoutReason("other", "inappropriate behavior; see live.chess-online.com/page/chat-etiquette")
+      extends TimeoutReason(
+        "insult",
+        "disrespecting other players; see live.chess-online.com/page/chat-etiquette"
+      )
+  case Spam extends TimeoutReason("spam", "spamming the chat; see live.chess-online.com/page/chat-etiquette")
+  case Other
+      extends TimeoutReason("other", "inappropriate behavior; see live.chess-online.com/page/chat-etiquette")
 object TimeoutReason:
   val all                = values.toList
   def apply(key: String) = all.find(_.key == key)

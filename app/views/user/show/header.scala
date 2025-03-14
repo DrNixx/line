@@ -210,6 +210,11 @@ object header:
                       c.name
                     ),
                   p(cls := "thin")(trans.site.memberSince(), " ", showDate(u.createdAt)),
+                  p()(
+                    a(href := s"https://www.chess-online.com/@/${u.id}", cls := "text co", dataIcon := "r")(
+                      trans.site.mainProfileLink()
+                    )
+                  ),
                   u.seenAt.map: seen =>
                     p(cls := "thin")(trans.site.lastSeenActive(momentFromNow(seen))),
                   ctx

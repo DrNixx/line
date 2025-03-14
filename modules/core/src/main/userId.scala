@@ -56,7 +56,7 @@ object userId:
     extension (e: UserName) def str = UserStr(e)
     given UserIdOf[UserName]        = n => UserId(n.value.toLowerCase)
     // what existing usernames are like
-    val historicalRegex     = "[0-9]{1,30}".r
+    val historicalRegex     = "[1-9][0-9]{0,30}".r
     val anonymous: UserName = "Anonymous"
     val lichess: UserName   = "lichess"
     val anonMod: String     = "A Lichess Moderator"

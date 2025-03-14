@@ -47,9 +47,9 @@ class TranslationTest extends munit.FunSuite:
   test("escape html") {
     import scalatags.Text.all.*
     given Lang = defaultLang
-    assertEquals(I18nKey.site.depthX("string"), RawFrag("Depth string"))
-    assertEquals(I18nKey.site.depthX("<string>"), RawFrag("Depth &lt;string&gt;"))
-    assertEquals(I18nKey.site.depthX(Html("<html>")), RawFrag("Depth &lt;html&gt;"))
+    assertEquals(I18nKey.site.depthX("string"), RawFrag("Глубина string"))
+    assertEquals(I18nKey.site.depthX("<string>"), RawFrag("Глубина &lt;string&gt;"))
+    assertEquals(I18nKey.site.depthX(Html("<html>")), RawFrag("Глубина &lt;html&gt;"))
   }
   test("quotes") {
     given Lang = Lang("fr", "FR")
@@ -68,7 +68,7 @@ Voir les link3 sur ce coup pour vous entraîner."""
     given Lang = Lang("ar", "SA")
     assertEquals(
       I18nKey.faq.lichessCombinationLiveLightLibrePronounced.txt("link1"),
-      """كلمة Lichess مزيج من live/light/libre (مباشر\خفيف\حر) و chess (شطرنج). تنطق link1."""
+      """كلمة Chess-Online مزيج من live/light/libre (مباشر\خفيف\حر) و chess (شطرنج). تنطق link1."""
     )
   }
 

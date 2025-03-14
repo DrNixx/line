@@ -38,7 +38,7 @@ def mobile(helpers: Helpers)(renderedCmsPage: Frag)(using Context) =
                 li(trans.site.puzzles()),
                 li(trans.site.gameAnalysis()),
                 li(trans.site.boardEditor()),
-                li("Lichess TV"),
+                li("Chess TV"),
                 li(trans.site.followAndChallengeFriends()),
                 li(trans.site.availableInNbLanguages.pluralSame(80))
               )
@@ -49,7 +49,7 @@ def mobile(helpers: Helpers)(renderedCmsPage: Frag)(using Context) =
                 heightA := "883",
                 cls     := "mobile-playing",
                 src     := assetUrl("images/mobile/lichesstv-mobile.png"),
-                alt     := "Lichess TV on mobile"
+                alt     := "Chess TV on mobile"
               ),
               qrcode(s"$netBaseUrl${routes.Main.redirectToAppStore}")
             )

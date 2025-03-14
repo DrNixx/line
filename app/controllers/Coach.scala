@@ -45,8 +45,7 @@ final class Coach(env: Env) extends LilaController(env):
 
   def edit = Secure(_.Coach) { ctx ?=> me ?=>
     FoundPage(api.findOrInit): c =>
-      env.msg.twoFactorReminder(me).inject(views.coach.edit(c, CoachProfileForm.edit(c.coach)))
-    .map(_.noCache)
+      views.coach.edit(c, CoachProfileForm.edit(c.coach))
   }
 
   def editApply = SecureBody(_.Coach) { ctx ?=> me ?=>

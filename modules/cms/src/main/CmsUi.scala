@@ -59,10 +59,10 @@ final class CmsUi(helpers: Helpers)(menu: Context ?=> Frag):
         main(cls := "page-menu")(menu, div(cls := "page-menu__content cms box")(mods)(body))
 
   def index(pages: List[CmsPage])(using Context) =
-    layout("Lichess pages")():
+    layout("Chess-Online pages")():
       frag(
         boxTop(
-          h1("Lichess pages"),
+          h1("Chess-Online pages"),
           div(cls := "box__top__actions")(
             input(cls := "cms__pages__search", placeholder := trans.search.search.txt(), autofocus),
             a(

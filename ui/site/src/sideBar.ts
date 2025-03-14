@@ -44,11 +44,11 @@ const sideBar = () => {
     const $el = $(element);
 
     const openSideBar = () => {
-      var _sideBarWidthCondensed = dom.hasClass(body, 'rtl')
+      const _sideBarWidthCondensed = dom.hasClass(body, 'rtl')
         ? -options.sideBarWidthCondensed!
         : options.sideBarWidthCondensed;
 
-      var menuOpenCSS =
+      const menuOpenCSS =
         options.css3d == true
           ? 'translate3d(' + _sideBarWidthCondensed + 'px, 0,0)'
           : 'translate(' + _sideBarWidthCondensed + 'px, 0)';
@@ -70,7 +70,7 @@ const sideBar = () => {
     };
 
     const closeSideBar = () => {
-      var menuClosedCSS = options.css3d == true ? 'translate3d(0, 0,0)' : 'translate(0, 0)';
+      const menuClosedCSS = options.css3d == true ? 'translate3d(0, 0,0)' : 'translate(0, 0)';
 
       if (isVisibleSm() || isVisibleXs()) {
         return;
@@ -167,7 +167,7 @@ const sideBar = () => {
     }
 
     // add handler for menu toggler with attr "data-toggle" equal to data-pages
-    var dp = element.getAttribute('data-pages');
+    const dp = element.getAttribute('data-pages');
     if (dp) {
       $('[data-toggle="' + dp + '"]').on('click', function (e: MouseEvent) {
         e.preventDefault();

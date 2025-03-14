@@ -8,17 +8,27 @@ body > header {
   height: $site-header-height;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: relative;
   z-index: $z-site-header-106;
   max-width: 1800px;
   margin: 0 auto;
+  padding: 0 var(---site-header-sticky-padding) 0 0;
+  background-color: var(--c-bg-box);
+
+  .toggle-sidebar {
+    padding: 8px 16px;
+    color: var(--c-font);
+    &:hover {
+      color: var(--c-font-clearer);
+    }
+  }
 
   @include mq-sticky-header {
     max-width: unset;
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 0 var(---site-header-sticky-padding);
     border-bottom: 1px solid transparent;
     transition:
       transform $transition-duration ease-in-out,
@@ -87,17 +97,36 @@ body.zen {
 }
 
 .site-title-nav {
-  display: flex;
-  justify-content: flex-start;
+  display: none;
+  justify-content: center;
 
-  &__donate {
-    @extend %flex-center;
-    color: $c-brag;
-    margin: 0 1rem;
-    text-transform: uppercase;
-    line-height: $site-header-height;
-    @media (max-width: at-most($xx-small)) {
-      display: none;
+  @media (min-width: at-least($medium)) {
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .brand {
+    display: inline-block;
+    vertical-align: middle;
+    width: 229px;
+    position: relative;
+    text-align: right;
+    padding-right: 1rem;
+
+    @media (min-width: at-least($medium)) {
+      position: relative;
+    }
+
+    @media (max-width: at-most($medium)) {
+      width: auto;
+    }
+
+    img {
+      vertical-align: middle;
+      width: 180px;
+      height: 44px;
     }
   }
 }

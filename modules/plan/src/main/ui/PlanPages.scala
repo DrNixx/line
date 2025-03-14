@@ -55,7 +55,9 @@ final class PlanPages(helpers: Helpers)(fishnetPerDay: Int):
                 trans.features.boardEditorAndAnalysisBoardWithEngine("Stockfish 16+ NNUE")
               ),
               tr(unlimited)(
-                a(href := "https://live.chess-online.com/blog/WN-gLzAAAKlI89Xn/thousands-of-stockfish-analysers")(
+                a(
+                  href := "https://live.chess-online.com/blog/WN-gLzAAAKlI89Xn/thousands-of-stockfish-analysers"
+                )(
                   trans.features.cloudEngineAnalysis()
                 )
               ),

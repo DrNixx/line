@@ -249,7 +249,11 @@ export const lichessGames = (r: Recap): VNode => {
   const gamesPercentOfTotal = (r.games.nbs.total * 100) / totalGames;
   const showGamesPercentOfTotal = gamesPercentOfTotal.toFixed(6) + '%';
   return slideTag('lichess-games')([
-    h('div.recap--massive', [h('strong', animateNumber(totalGames)), 'games played on Chess-Online in ', r.year]),
+    h('div.recap--massive', [
+      h('strong', animateNumber(totalGames)),
+      'games played on Chess-Online in ',
+      r.year,
+    ]),
     h('div', [h('p', [h('strong', showGamesPercentOfTotal), ' of them are yours.'])]),
   ]);
 };

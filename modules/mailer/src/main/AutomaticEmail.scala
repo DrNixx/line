@@ -156,7 +156,7 @@ As a small token of our thanks, your account now has the awesome Patron wings!""
 Thank you for your support over the last month.
 We appreciate all donations, being a small team relying entirely on generous donors like you!
 If you're still interested in supporting us in other ways, you can see non-financial ways of supporting us here $baseUrl/help/contribute.
-To make a new donation, head to $baseUrl/patron"""
+To make a new donation, head to https://www.chess-online.com/ru-ru/membership/club"""
         )
     }
 

@@ -26,38 +26,15 @@ final class Plan(env: Env) extends LilaController(env):
   private val logger = lila.log("plan")
 
   def index(page: Int = 1) = Open:
-    pageHit
-    Reasonable(page):
-      if HTTPRequest.isXhr(req) then
-        Ok.snipAsync:
-          env.plan.api.paginator(page).map(views.plan.topPatrons)
-      else
-        ctx.me.foldUse(indexAnon): me ?=>
-          import lila.plan.PlanApi.SyncResult.*
-          env.plan.api.sync(me).flatMap {
-            case ReloadUser => Redirect(routes.Plan.index())
-            case Synced(Some(patron), None, None) =>
-              env.user.repo.email(me).flatMap { email =>
-                renderIndex(email, patron.some)
-              }
-            case Synced(Some(patron), Some(stripeCus), _) => indexStripePatron(patron, stripeCus)
-            case Synced(Some(patron), _, Some(payPalSub)) => indexPayPalPatron(patron, payPalSub)
-            case _                                        => indexFreeUser
-          }
+    Redirect("https://www.chess-online.com/membership/club")
 
   def list = Open:
-    ctx.me.foldUse(Redirect(routes.Plan.index()).toFuccess): me ?=>
-      import lila.plan.PlanApi.SyncResult.*
-      env.plan.api.sync(me).flatMap {
-        case ReloadUser            => Redirect(routes.Plan.list)
-        case Synced(Some(_), _, _) => indexFreeUser
-        case _                     => Redirect(routes.Plan.index())
-      }
+    Redirect("https://www.chess-online.com/membership/club")
 
   private def indexAnon(using Context) = renderIndex(email = none, patron = none)
 
   private def indexFreeUser(using ctx: Context, me: Me) =
-    env.user.repo.email(me).flatMap { renderIndex(_, patron = none) }
+    Redirect("https://www.chess-online.com/membership/club")
 
   private def renderIndex(email: Option[EmailAddress], patron: Option[lila.plan.Patron])(using
       Context
@@ -118,8 +95,7 @@ final class Plan(env: Env) extends LilaController(env):
       )
 
   def features = Open:
-    pageHit
-    Ok.page(views.planPages.features)
+    Redirect("https://www.chess-online.com/membership/club")
 
   def switch = AuthBody { ctx ?=> me ?=>
     env.plan.priceApi.pricingOrDefault(myCurrency).flatMap { pricing =>

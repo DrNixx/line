@@ -21,7 +21,7 @@ const changeForm = () => {
 export function stripeStart(publicKey: string): void {
   $('.update-payment-method').on('click', () => {
     const stripe = window.Stripe(publicKey);
-    xhr.json('/patron/stripe/update-payment', { method: 'post' }).then(data => {
+    xhr.json('https://www.chess-online.com/ru-ru/membership/club', { method: 'post' }).then(data => {
       if (data.session?.id) {
         stripe
           .redirectToCheckout({
@@ -33,7 +33,7 @@ export function stripeStart(publicKey: string): void {
             showError('message' in e ? e.message : e);
           });
       } else {
-        location.assign('/patron');
+        location.assign('https://www.chess-online.com/ru-ru/membership/club');
       }
     }, showError);
   });

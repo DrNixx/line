@@ -23,7 +23,7 @@ def index(
     .graph(
       title = s"Watch the best ${channel.name.toLowerCase} games of Chess-Online.Com",
       description =
-        s"Sit back, relax, and watch the best ${channel.name.toLowerCase} Chess-Online players compete on Lichess TV",
+        s"Sit back, relax, and watch the best ${channel.name.toLowerCase} Chess-Online players compete on Chess TV",
       url = s"$netBaseUrl${routes.Tv.onChannel(channel.key)}"
     )
     .flag(_.zen)

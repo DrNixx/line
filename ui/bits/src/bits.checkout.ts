@@ -19,7 +19,8 @@ const getVal = (selector: string): string => {
 };
 const getFreq = (): string => getVal('group.freq input:checked');
 const getDest = (): string => getVal('group.dest input:checked');
-const showErrorThenReload = (error: string) => alert(error).then(() => location.assign('/patron'));
+const showErrorThenReload = (error: string) =>
+  alert(error).then(() => location.assign('https://www.chess-online.com/ru-ru/membership/club'));
 
 export function initModule({ stripePublicKey, pricing }: { stripePublicKey: string; pricing: any }): void {
   contactEmail();
@@ -129,9 +130,9 @@ export function initModule({ stripePublicKey, pricing }: { stripePublicKey: stri
 
   toggleCheckout();
 
-  payPalOrderStart($checkout, pricing, getAmountToCharge);
-  payPalSubscriptionStart($checkout, pricing, getAmountToCharge);
-  stripeStart($checkout, stripePublicKey, pricing, getAmountToCharge);
+  payPalOrderStart($checkout, getAmountToCharge);
+  payPalSubscriptionStart($checkout, getAmountToCharge);
+  stripeStart($checkout, stripePublicKey, getAmountToCharge);
 }
 
 const xhrFormData = ($checkout: Cash, amount: number) =>
@@ -148,7 +149,7 @@ const payPalStyle = {
   height: 55,
 };
 
-function payPalOrderStart($checkout: Cash, pricing: Pricing, getAmount: () => number | undefined) {
+function payPalOrderStart($checkout: Cash, getAmount: () => number | undefined) {
   if (!window.paypalOrder) return;
   (window.paypalOrder as any)
     .Buttons({
@@ -157,7 +158,7 @@ function payPalOrderStart($checkout: Cash, pricing: Pricing, getAmount: () => nu
         const amount = getAmount();
         if (!amount) return;
         return xhr
-          .jsonAnyResponse(`/patron/paypal/checkout?currency=${pricing.currency}`, {
+          .jsonAnyResponse(`https://www.chess-online.com/ru-ru/membership/club`, {
             method: 'post',
             body: xhrFormData($checkout, amount),
           })
@@ -165,19 +166,19 @@ function payPalOrderStart($checkout: Cash, pricing: Pricing, getAmount: () => nu
           .then(data => {
             if (data.error) showErrorThenReload(data.error);
             else if (data.order?.id) return data.order.id;
-            else location.assign('/patron');
+            else location.assign('https://www.chess-online.com/ru-ru/membership/club');
           });
       },
-      onApprove: (data: any, _actions: any) => {
+      onApprove: (_data: any, _actions: any) => {
         xhr
-          .json('/patron/paypal/capture/' + data.orderID, { method: 'POST' })
-          .then(() => location.assign('/patron/thanks'));
+          .json('https://www.chess-online.com/ru-ru/membership/club', { method: 'POST' })
+          .then(() => location.assign('https://www.chess-online.com/ru-ru/membership/club'));
       },
     })
     .render('.paypal--order');
 }
 
-function payPalSubscriptionStart($checkout: Cash, pricing: Pricing, getAmount: () => number | undefined) {
+function payPalSubscriptionStart($checkout: Cash, getAmount: () => number | undefined) {
   if (!window.paypalSubscription) return;
   (window.paypalSubscription as any)
     .Buttons({
@@ -186,7 +187,7 @@ function payPalSubscriptionStart($checkout: Cash, pricing: Pricing, getAmount: (
         const amount = getAmount();
         if (!amount) return;
         return xhr
-          .jsonAnyResponse(`/patron/paypal/checkout?currency=${pricing.currency}`, {
+          .jsonAnyResponse(`https://www.chess-online.com/ru-ru/membership/club`, {
             method: 'post',
             body: xhrFormData($checkout, amount),
           })
@@ -194,24 +195,19 @@ function payPalSubscriptionStart($checkout: Cash, pricing: Pricing, getAmount: (
           .then(data => {
             if (data.error) showErrorThenReload(data.error);
             else if (data.subscription?.id) return data.subscription.id;
-            else location.assign('/patron');
+            else location.assign('https://www.chess-online.com/ru-ru/membership/club');
           });
       },
-      onApprove: (data: any, _actions: any) => {
+      onApprove: (_data: any, _actions: any) => {
         xhr
-          .json(`/patron/paypal/capture/${data.orderID}?sub=${data.subscriptionID}`, { method: 'POST' })
-          .then(() => location.assign('/patron/thanks'));
+          .json(`https://www.chess-online.com/ru-ru/membership/club`, { method: 'POST' })
+          .then(() => location.assign('https://www.chess-online.com/ru-ru/membership/club'));
       },
     })
     .render('.paypal--subscription');
 }
 
-function stripeStart(
-  $checkout: Cash,
-  publicKey: string,
-  pricing: Pricing,
-  getAmount: () => number | undefined,
-) {
+function stripeStart($checkout: Cash, publicKey: string, getAmount: () => number | undefined) {
   const stripe = window.Stripe(publicKey);
   $checkout.find('.service .stripe').on('click', function () {
     const amount = getAmount();
@@ -219,7 +215,7 @@ function stripeStart(
     $checkout.find('.service').html(spinnerHtml);
 
     xhr
-      .jsonAnyResponse(`/patron/stripe/checkout?currency=${pricing.currency}`, {
+      .jsonAnyResponse(`https://www.chess-online.com/ru-ru/membership/club`, {
         method: 'post',
         body: xhrFormData($checkout, amount),
       })
@@ -232,7 +228,7 @@ function stripeStart(
               sessionId: data.session.id,
             })
             .then((result: any) => showErrorThenReload(result.error.message));
-        } else location.assign('/patron');
+        } else location.assign('https://www.chess-online.com/ru-ru/membership/club');
       });
   });
 

@@ -91,7 +91,7 @@ private object TournamentScheduler:
 
     val farFuture = today.plusMonths(7).atStartOfDay
 
-    val birthday = LocalDate.of(2010, 6, 20)
+    val birthday = LocalDate.of(2006, 2, 2)
 
     extension (date: LocalDate)
       def withDayOfWeek(day: java.time.DayOfWeek): LocalDate =
@@ -104,14 +104,14 @@ private object TournamentScheduler:
           val yo = date.getYear - 2010
           Schedule(Unique, Rapid, Standard, none, date).plan {
             _.copy(
-              name = s"${date.getYear} Lichess Anniversary",
+              name = s"${date.getYear} Chess-Online Anniversary",
               minutes = 12 * 60,
               description = s"""
 We've had $yo great chess years together!
 
 Thank you all, you rock!""".some,
               spotlight = Spotlight(
-                headline = s"$yo years of free chess!",
+                headline = s"$yo years of Chess-Online!",
                 homepageHours = 24.some
               ).some
             )
@@ -121,16 +121,16 @@ Thank you all, you rock!""".some,
       List( // yearly tournaments!
         secondWeekOf(JANUARY).withDayOfWeek(MONDAY)      -> Bullet,
         secondWeekOf(FEBRUARY).withDayOfWeek(TUESDAY)    -> SuperBlitz,
-        secondWeekOf(MARCH).withDayOfWeek(WEDNESDAY)     -> Blitz,
-        secondWeekOf(APRIL).withDayOfWeek(THURSDAY)      -> Rapid,
-        secondWeekOf(MAY).withDayOfWeek(FRIDAY)          -> Classical,
-        secondWeekOf(JUNE).withDayOfWeek(SATURDAY)       -> HyperBullet,
+        secondWeekOf(MARCH).withDayOfWeek(WEDNESDAY)     -> Rapid,
+        secondWeekOf(APRIL).withDayOfWeek(THURSDAY)      -> Blitz,
+        secondWeekOf(MAY).withDayOfWeek(FRIDAY)          -> HyperBullet,
+        secondWeekOf(JUNE).withDayOfWeek(SATURDAY)       -> Classical,
         secondWeekOf(JULY).withDayOfWeek(MONDAY)         -> Bullet,
         secondWeekOf(AUGUST).withDayOfWeek(TUESDAY)      -> SuperBlitz,
-        secondWeekOf(SEPTEMBER).withDayOfWeek(WEDNESDAY) -> Blitz,
-        secondWeekOf(OCTOBER).withDayOfWeek(THURSDAY)    -> Rapid,
-        secondWeekOf(NOVEMBER).withDayOfWeek(FRIDAY)     -> Classical,
-        secondWeekOf(DECEMBER).withDayOfWeek(SATURDAY)   -> HyperBullet
+        secondWeekOf(SEPTEMBER).withDayOfWeek(WEDNESDAY) -> Rapid,
+        secondWeekOf(OCTOBER).withDayOfWeek(THURSDAY)    -> Blitz,
+        secondWeekOf(NOVEMBER).withDayOfWeek(FRIDAY)     -> HyperBullet,
+        secondWeekOf(DECEMBER).withDayOfWeek(SATURDAY)   -> Classical
       ).flatMap { (day, speed) =>
         at(day, 17).some.filter(farFuture.isAfter).map { date =>
           Schedule(Yearly, speed, Standard, none, date).plan
@@ -156,8 +156,8 @@ Thank you all, you rock!""".some,
             month.lastWeek.withDayOfWeek(MONDAY)    -> Bullet,
             month.lastWeek.withDayOfWeek(TUESDAY)   -> SuperBlitz,
             month.lastWeek.withDayOfWeek(WEDNESDAY) -> Blitz,
-            month.lastWeek.withDayOfWeek(THURSDAY)  -> Rapid,
-            month.lastWeek.withDayOfWeek(FRIDAY)    -> Classical,
+            month.lastWeek.withDayOfWeek(THURSDAY)  -> Classical,
+            month.lastWeek.withDayOfWeek(FRIDAY)    -> Rapid,
             month.lastWeek.withDayOfWeek(SATURDAY)  -> HyperBullet,
             month.lastWeek.withDayOfWeek(SUNDAY)    -> UltraBullet
           ).map { (day, speed) =>
@@ -189,8 +189,8 @@ Thank you all, you rock!""".some,
             month.firstWeek.withDayOfWeek(MONDAY)    -> Bullet,
             month.firstWeek.withDayOfWeek(TUESDAY)   -> SuperBlitz,
             month.firstWeek.withDayOfWeek(WEDNESDAY) -> Blitz,
-            month.firstWeek.withDayOfWeek(THURSDAY)  -> Rapid,
-            month.firstWeek.withDayOfWeek(FRIDAY)    -> Classical,
+            month.firstWeek.withDayOfWeek(THURSDAY)  -> Classical,
+            month.firstWeek.withDayOfWeek(FRIDAY)    -> Rapid,
             month.firstWeek.withDayOfWeek(SATURDAY)  -> HyperBullet,
             month.firstWeek.withDayOfWeek(SUNDAY)    -> UltraBullet
           ).map: (day, speed) =>
@@ -211,29 +211,29 @@ Thank you all, you rock!""".some,
         ).flatten
       },
       List( // weekly standard tournaments!
-        nextMonday    -> Bullet,
-        nextTuesday   -> SuperBlitz,
-        nextWednesday -> Blitz,
+        nextMonday    -> UltraBullet,
+        nextTuesday   -> HyperBullet,
+        nextWednesday -> Bullet,
         nextThursday  -> Rapid,
         nextFriday    -> Classical,
-        nextSaturday  -> HyperBullet,
-        nextSunday    -> UltraBullet
+        nextSaturday  -> SuperBlitz,
+        nextSunday    -> Blitz
       ).map { (day, speed) =>
-        at(day, 17).pipe { date =>
+        at(day, 18).pipe { date =>
           Schedule(Weekly, speed, Standard, none, date.pipe(orNextWeek)).plan
         }
       },
       List( // weekly variant tournaments!
         nextMonday    -> ThreeCheck,
-        nextTuesday   -> Crazyhouse,
+        nextTuesday   -> Chess960,
         nextWednesday -> KingOfTheHill,
-        nextThursday  -> RacingKings,
-        nextFriday    -> Antichess,
+        nextThursday  -> Antichess,
+        nextFriday    -> Crazyhouse,
         nextSaturday  -> Atomic,
         nextSunday    -> Horde,
-        nextSunday    -> Chess960
+        nextSunday    -> RacingKings
       ).map { (day, variant) =>
-        at(day, 19).pipe { date =>
+        at(day, 20).pipe { date =>
           Schedule(
             Weekly,
             if variant == Chess960 || variant == Crazyhouse then Blitz else SuperBlitz,

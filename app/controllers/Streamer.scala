@@ -87,7 +87,6 @@ final class Streamer(env: Env, apiC: => Api) extends LilaController(env):
   def edit = Auth { ctx ?=> _ ?=>
     AsStreamer: s =>
       for
-        _      <- env.msg.twoFactorReminder(s.user.id)
         sws    <- env.streamer.liveStreamApi.of(s)
         forMod <- modData(s.streamer)
         page   <- renderPage(views.streamer.edit(sws, StreamerForm.userForm(sws.streamer), forMod))

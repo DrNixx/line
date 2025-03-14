@@ -19,7 +19,7 @@ function notify(msg: string | (() => string)) {
   store.set('' + Date.now());
   if ($.isFunction(msg)) msg = msg();
   const notification = new Notification('live.chess-online.com', {
-    icon: site.asset.url('logo/lichess-favicon-256.png'),
+    icon: site.asset.url('logo/chess-favicon-256.png'),
     body: msg,
   });
   notification.onclick = () => window.focus();

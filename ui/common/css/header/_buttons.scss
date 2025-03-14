@@ -117,19 +117,24 @@
   .dasher {
     @extend %flex-center-nowrap;
   }
+
+  .user-menu {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: 16px;
+    }
+  }
 }
 
 #user_tag {
   @extend %flex-center-nowrap;
   white-space: nowrap;
   gap: 0.5rem;
-
-  &::after {
-    @extend %data-icon;
-    color: $m-font_dimmer--mix-85;
-    content: $licon-AccountCircle;
-    font-size: 2rem;
-  }
 }
 
 #notify-app .initiating {

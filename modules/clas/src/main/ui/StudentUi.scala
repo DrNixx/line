@@ -102,7 +102,7 @@ final class StudentUi(helpers: Helpers, clasUi: ClasUi)(using NetDomain):
         ),
         div(
           a(
-            href := routes.Msg.convo(s.user.username),
+            href := routes.Msg.convo(s.user.id),
             cls  := "button button-empty"
           )(trans.site.message()),
           a(

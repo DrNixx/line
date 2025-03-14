@@ -53,7 +53,9 @@ final private class FarmBoostDetection(
             g.durationSeconds.exists(_ < minSeconds)
         if found then
           lila.mon.round.farming.provisional.increment()
-          logger.info(s"new account boosting: https://live.chess-online.com/${g.id} ${users.map(_.user.username)}")
+          logger.info(
+            s"new account boosting: https://live.chess-online.com/${g.id} ${users.map(_.user.username)}"
+          )
         found
 
   private def linearInterpolation(x: Int)(p1: PairOf[Int], p2: PairOf[Int]): Int =

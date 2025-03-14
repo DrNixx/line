@@ -7,12 +7,20 @@ object ContentSecurityPolicy:
   def page(assetDomain: AssetDomain, connectSrcs: List[String]) =
     lila.ui.ContentSecurityPolicy(
       defaultSrc = List("'self'", assetDomain.value),
-      connectSrc = "'self'" :: "blob:" :: "data:" :: connectSrcs,
+      connectSrc = "'self'" :: "blob:" :: "data:" :: "https://mc.yandex.ru" :: connectSrcs,
       styleSrc = List("'self'", "'unsafe-inline'", assetDomain.value),
-      frameSrc = List("'self'", assetDomain.value, "www.youtube.com", "player.twitch.tv", "player.vimeo.com"),
+      frameSrc = List(
+        "'self'",
+        assetDomain.value,
+        "www.youtube.com",
+        "player.twitch.tv",
+        "player.vimeo.com",
+        "mc.yandex.ru"
+      ),
       workerSrc = List("'self'", assetDomain.value, "blob:"),
       imgSrc = List("'self'", "blob:", "data:", "*"),
-      scriptSrc = List("'self'", assetDomain.value),
+      mediaSrc = List("'self'", "blob:", "data:"),
+      scriptSrc = List("'self'", assetDomain.value, "https://mc.yandex.ru", "https://yastatic.net"),
       fontSrc = List("'self'", assetDomain.value),
       baseUri = List("'none'")
     )
@@ -24,6 +32,7 @@ object ContentSecurityPolicy:
       styleSrc = List("'self'", "'unsafe-inline'", assetDomain.value),
       frameSrc = Nil,
       workerSrc = Nil,
+      mediaSrc = List("'self'", "blob:", "data:"),
       imgSrc = List("'self'", "blob:", "data:", "*"),
       scriptSrc = List("'self'", assetDomain.value),
       fontSrc = List("'self'", assetDomain.value),
@@ -39,6 +48,7 @@ object ContentSecurityPolicy:
       "frame-src "   -> frameSrc,
       "worker-src "  -> workerSrc,
       "img-src "     -> imgSrc,
+      "media-src "   -> mediaSrc,
       "script-src "  -> scriptSrc,
       "font-src "    -> fontSrc,
       "base-uri "    -> baseUri

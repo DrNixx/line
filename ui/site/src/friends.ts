@@ -105,7 +105,7 @@ export default class OnlineFriends {
 
   toFriend = (titleName: TitleName): Friend => {
     const [id, ...rest] = titleName.split('/');
-    const [title, name] = rest.length > 0 ? rest[0].split(' ') : [undefined, titleName.split(' ').pop()];
+    const [name, title] = rest.length > 0 ? rest[0].split(' ') : [titleName.split(' ').pop(), undefined];
 
     return {
       id: id || name?.toLowerCase() || '',

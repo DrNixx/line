@@ -281,7 +281,7 @@ interface I18n {
     fullDescriptionHelp: I18nFormat;
     /** Games in this tournament */
     gamesThisTournament: string;
-    /** How to use Lichess Broadcasts. */
+    /** How to use Chess-Online Broadcasts. */
     howToUseLichessBroadcasts: string;
     /** More options on the %s */
     iframeHelp: I18nFormat;
@@ -303,7 +303,7 @@ interface I18n {
     officialWebsite: string;
     /** Ongoing */
     ongoing: string;
-    /** Open in Lichess */
+    /** Open in Chess-Online */
     openLichess: string;
     /** Optional details */
     optionalDetails: string;
@@ -331,11 +331,11 @@ interface I18n {
     showScores: string;
     /** Since you chose to hide the results, all the preview boards are empty to avoid spoilers. */
     sinceHideResults: string;
-    /** Up to 64 Lichess game IDs, separated by spaces. */
+    /** Up to 64 Chess-Online game IDs, separated by spaces. */
     sourceGameIds: string;
     /** PGN Source URL */
     sourceSingleUrl: string;
-    /** URL that Lichess will check to get PGN updates. It must be publicly accessible from the Internet. */
+    /** URL that Chess-Online will check to get PGN updates. It must be publicly accessible from the Internet. */
     sourceUrlHelp: string;
     /** Standings */
     standings: string;
@@ -413,7 +413,7 @@ interface I18n {
     declineTooSlow: string;
     /** I'm not willing to play this variant right now. */
     declineVariant: string;
-    /** Or invite a Lichess user: */
+    /** Or invite a Chess-Online user: */
     inviteLichessUser: string;
     /** Please register to send challenges to this user. */
     registerToSendChallenges: string;
@@ -427,7 +427,7 @@ interface I18n {
     yourXRatingIsTooFarFromY: I18nFormat;
   };
   class: {
-    /** Add Lichess usernames to invite them as teachers. One per line. */
+    /** Add Chess-Online usernames to invite them as teachers. One per line. */
     addLichessUsernames: string;
     /** Add student */
     addStudent: string;
@@ -435,7 +435,7 @@ interface I18n {
     aLinkToTheClassWillBeAdded: string;
     /** An invitation has been sent to %s */
     anInvitationHasBeenSentToX: I18nFormat;
-    /** Apply to be a Lichess Teacher */
+    /** Apply to be a Chess-Online Teacher */
     applyToBeLichessTeacher: string;
     /** Class description */
     classDescription: string;
@@ -455,9 +455,9 @@ interface I18n {
     closeStudent: string;
     /** Close the student account permanently. */
     closeTheAccount: string;
-    /** Create a new Lichess account */
+    /** Create a new Chess-Online account */
     createANewLichessAccount: string;
-    /** If the student doesn't have a Lichess account yet, you can create one for them here. */
+    /** If the student doesn't have a Chess-Online account yet, you can create one for them here. */
     createDesc1: string;
     /** No email address is required. A password will be generated, and you will have to transmit it to the student so that they can log in. */
     createDesc2: string;
@@ -467,7 +467,7 @@ interface I18n {
     createDesc4: string;
     /** create more classes */
     createMoreClasses: string;
-    /** Create multiple Lichess accounts at once */
+    /** Create multiple Chess-Online accounts at once */
     createMultipleAccounts: string;
     /** Only create accounts for real students. Do not use this to make multiple accounts for yourself. You would get banned. */
     createStudentWarning: string;
@@ -487,11 +487,11 @@ interface I18n {
     invitationToClass: I18nFormat;
     /** Invite */
     invite: string;
-    /** Invite a Lichess account */
+    /** Invite a Chess-Online account */
     inviteALichessAccount: string;
-    /** If the student already has a Lichess account, you can invite them to the class. */
+    /** If the student already has a Chess-Online account, you can invite them to the class. */
     inviteDesc1: string;
-    /** They will receive a message on Lichess with a link to join the class. */
+    /** They will receive a message on Chess-Online with a link to join the class. */
     inviteDesc2: string;
     /** Important: only invite students you know, and who actively want to join the class. */
     inviteDesc3: string;
@@ -505,9 +505,9 @@ interface I18n {
     lastActiveDate: string;
     /** Classes */
     lichessClasses: string;
-    /** Lichess profile %1$s created for %2$s. */
+    /** Chess-Online profile %1$s created for %2$s. */
     lichessProfileXCreatedForY: I18nFormat;
-    /** Lichess username */
+    /** Chess-Online username */
     lichessUsername: string;
     /** Make sure to copy or write down the password now. You won’t ever be able to see it again! */
     makeSureToCopy: string;
@@ -521,7 +521,7 @@ interface I18n {
     moveToAnotherClass: string;
     /** Move to %s */
     moveToClass: I18nFormat;
-    /** You can also %s to create multiple Lichess accounts from a list of student names. */
+    /** You can also %s to create multiple Chess-Online accounts from a list of student names. */
     multipleAccsFormDescription: I18nFormat;
     /** N/A */
     na: string;
@@ -599,7 +599,7 @@ interface I18n {
     students: string;
     /** Students' real names, one per line */
     studentsRealNamesOnePerLine: string;
-    /** Teach classes of chess students with the Lichess Classes tool suite. */
+    /** Teach classes of chess students with the Chess-Online Classes tool suite. */
     teachClassesOfChessStudents: string;
     /** Teachers */
     teachers: string;
@@ -655,9 +655,9 @@ interface I18n {
     hourlyRate: string;
     /** Languages */
     languages: string;
-    /** Lichess coach */
+    /** Chess-Online coach */
     lichessCoach: string;
-    /** Lichess coaches */
+    /** Chess-Online coaches */
     lichessCoaches: string;
     /** Location */
     location: string;
@@ -681,7 +681,7 @@ interface I18n {
     teachingExperience: string;
     /** Teaching methodology */
     teachingMethod: string;
-    /** View %s Lichess profile */
+    /** View %s Chess-Online profile */
     viewXProfile: I18nFormat;
     /** %s coaches chess students */
     xCoachesStudents: I18nFormat;
@@ -693,13 +693,13 @@ interface I18n {
     accountLost: string;
     /** I need account support */
     accountSupport: string;
-    /** Authorisation to use Lichess */
+    /** Authorisation to use Chess-Online */
     authorizationToUse: string;
     /** Appeal for a ban or IP restriction */
     banAppeal: string;
     /** In certain circumstances when playing against a bot account, a rated game may not award points if it is determined that the player is abusing the bot for rating points. */
     botRatingAbuse: string;
-    /** Buying Lichess */
+    /** Buying Chess-Online */
     buyingLichess: string;
     /** It is called "en passant" and is one of the rules of chess. */
     calledEnPassant: string;
@@ -721,7 +721,7 @@ interface I18n {
     collaboration: string;
     /** Contact */
     contact: string;
-    /** Contact Lichess */
+    /** Contact Chess-Online */
     contactLichess: string;
     /** Credit is appreciated but not required. */
     creditAppreciated: string;
@@ -743,7 +743,7 @@ interface I18n {
     engineAppeal: string;
     /** Error page */
     errorPage: string;
-    /** Please explain your request clearly and thoroughly. State your Lichess username, and any information that could help us help you. */
+    /** Please explain your request clearly and thoroughly. State your Chess-Online username, and any information that could help us help you. */
     explainYourRequest: string;
     /** False positives do happen sometimes, and we're sorry about that. */
     falsePositives: string;
@@ -767,11 +767,11 @@ interface I18n {
     insufficientMaterial: string;
     /** It is possible to checkmate with only a knight or a bishop, if the opponent has more than a king on the board. */
     knightMate: string;
-    /** Learn how to make your own broadcasts on Lichess */
+    /** Learn how to make your own broadcasts on Chess-Online */
     learnHowToMakeBroadcasts: string;
     /** I lost access to my two-factor authentication codes */
     lost2FA: string;
-    /** Monetising Lichess */
+    /** Monetising Chess-Online */
     monetizing: string;
     /** I didn't receive my confirmation email */
     noConfirmationEmail: string;
@@ -789,15 +789,15 @@ interface I18n {
     ratedGame: string;
     /** You can reopen your account on this page. */
     reopenOnThisPage: string;
-    /** In the Lichess Discord server */
+    /** In the Chess-Online Discord server */
     reportBugInDiscord: string;
-    /** In the Lichess Feedback section of the forum */
+    /** In the Chess-Online Feedback section of the forum */
     reportBugInForum: string;
     /** If you faced an error page, you may report it: */
     reportErrorPage: string;
-    /** As a Lichess mobile app issue on GitHub */
+    /** As a Chess-Online mobile app issue on GitHub */
     reportMobileIssue: string;
-    /** As a Lichess website issue on GitHub */
+    /** As a Chess-Online website issue on GitHub */
     reportWebsiteIssue: string;
     /** You may send an appeal to %s. */
     sendAppealTo: I18nFormat;
@@ -809,11 +809,11 @@ interface I18n {
     tryCastling: string;
     /** Try this little interactive game to learn more about "en passant". */
     tryEnPassant: string;
-    /** You can show it in your videos, and you can print screenshots of Lichess in your books. */
+    /** You can show it in your videos, and you can print screenshots of Chess-Online in your books. */
     videosAndBooks: string;
     /** Visit this page to solve the issue */
     visitThisPage: string;
-    /** To show your title on your Lichess profile, and participate in Titled Arenas, visit the title confirmation page */
+    /** To show your title on your Chess-Online profile, and participate in Titled Arenas, visit the title confirmation page */
     visitTitleConfirmation: string;
     /** I want to change my username */
     wantChangeUsername: string;
@@ -827,9 +827,9 @@ interface I18n {
     wantReport: string;
     /** I want to report a bug */
     wantReportBug: string;
-    /** I want my title displayed on Lichess */
+    /** I want my title displayed on Chess-Online */
     wantTitle: string;
-    /** You are welcome to use Lichess for your activity, even commercial. */
+    /** You are welcome to use Chess-Online for your activity, even commercial. */
     welcomeToUse: string;
     /** What can we help you with? */
     whatCanWeHelpYouWith: string;
@@ -881,7 +881,7 @@ interface I18n {
     announceAllMoves: string;
     /** Announce Move Format */
     announceMoveFormat: string;
-    /** As a last resort, setup the board identically as Lichess, then %s */
+    /** As a last resort, setup the board identically as Chess-Online, then %s */
     asALastResort: I18nFormat;
     /** The board will auto connect to any game that is already on course or any new game that starts. Ability to choose which game to play is coming soon. */
     boardWillAutoConnect: string;
@@ -919,17 +919,17 @@ interface I18n {
     ifLiveChessRunningOnThisComputer: I18nFormat;
     /** If a move is not detected */
     ifMoveNotDetected: string;
-    /** The play page needs to remain open on your browser. It does not need to be visible, you can minimize it or set it side to side with the Lichess game page, but don't close it or the board will stop working. */
+    /** The play page needs to remain open on your browser. It does not need to be visible, you can minimize it or set it side to side with the Chess-Online game page, but don't close it or the board will stop working. */
     keepPlayPageOpen: string;
     /** Keywords are in JSON format. They are used to translate moves and results into your language. Default is English, but feel free to change it. */
     keywordFormatDescription: string;
     /** Keywords */
     keywords: string;
-    /** Lichess & DGT */
+    /** Chess-Online & DGT */
     lichessAndDgt: string;
-    /** Lichess connectivity */
+    /** Chess-Online connectivity */
     lichessConnectivity: string;
-    /** SAN is the standard on Lichess like "Nf6". UCI is common on engines like "g8f6". */
+    /** SAN is the standard on Chess-Online like "Nf6". UCI is common on engines like "g8f6". */
     moveFormatDescription: string;
     /** No suitable OAuth token has been created. */
     noSuitableOauthToken: string;
@@ -945,7 +945,7 @@ interface I18n {
     speechSynthesisVoice: string;
     /** Text to speech */
     textToSpeech: string;
-    /** This page allows you to connect your DGT board to Lichess, and to use it for playing games. */
+    /** This page allows you to connect your DGT board to Chess-Online, and to use it for playing games. */
     thisPageAllowsConnectingDgtBoard: string;
     /** Time controls for casual games: Classical, Correspondence and Rapid only. */
     timeControlsForCasualGames: string;
@@ -979,9 +979,9 @@ interface I18n {
     emailChange_intro: string;
     /** Confirm new email address, %s */
     emailChange_subject: I18nFormat;
-    /** Click the link to enable your Lichess account: */
+    /** Click the link to enable your Chess-Online account: */
     emailConfirm_click: string;
-    /** If you did not register with Lichess you can safely ignore this message. */
+    /** If you did not register with Chess-Online you can safely ignore this message. */
     emailConfirm_ignore: string;
     /** Confirm your chess-online.com account, %s */
     emailConfirm_subject: I18nFormat;
@@ -993,7 +993,7 @@ interface I18n {
     passwordReset_intro: string;
     /** Reset your chess-online.com password, %s */
     passwordReset_subject: I18nFormat;
-    /** Welcome to live.chess-online.com, %s */
+    /** Welcome to chess-online.com, %s */
     welcome_subject: I18nFormat;
     /** You have successfully created your account on https://chess-online.com. */
     welcome_text: I18nFormat;
@@ -1007,11 +1007,11 @@ interface I18n {
     adviceOnMitigatingAddiction: I18nFormat;
     /** an hourly Bullet tournament */
     aHourlyBulletTournament: string;
-    /** Are there websites based on Lichess? */
+    /** Are there websites based on Chess-Online? */
     areThereWebsitesBasedOnLichess: string;
     /** many national master titles */
     asWellAsManyNMtitles: string;
-    /** Lichess time controls are based on estimated game duration = %1$s. */
+    /** Chess-Online time controls are based on estimated game duration = %1$s. */
     basedOnGameDuration: I18nFormat;
     /** being a patron */
     beingAPatron: string;
@@ -1019,7 +1019,7 @@ interface I18n {
     beInTopTen: string;
     /** breakdown of our costs */
     breakdownOfOurCosts: string;
-    /** Can I get the Lichess Master (LM) title? */
+    /** Can I get the Chess-Online Master (LM) title? */
     canIbecomeLM: string;
     /** Can I change my username? */
     canIChangeMyUsername: string;
@@ -1039,15 +1039,15 @@ interface I18n {
     eightVariants: string;
     /** Most browsers can prevent sound from playing on a freshly loaded page to protect users. Imagine if every website could immediately bombard you with audio ads. */
     enableAutoplayForSoundsA: string;
-    /** 1. Go to live.chess-online.com */
+    /** 1. Go to chess-online.com */
     enableAutoplayForSoundsChrome: string;
-    /** 1. Go to live.chess-online.com */
+    /** 1. Go to chess-online.com */
     enableAutoplayForSoundsFirefox: string;
     /** 1. Click the three dots in the top right corner */
     enableAutoplayForSoundsMicrosoftEdge: string;
     /** Enable autoplay for sounds? */
     enableAutoplayForSoundsQ: string;
-    /** 1. Go to live.chess-online.com */
+    /** 1. Go to chess-online.com */
     enableAutoplayForSoundsSafari: string;
     /** Enable or disable notification popups? */
     enableDisableNotificationPopUps: string;
@@ -1067,7 +1067,7 @@ interface I18n {
     fideHandbook: string;
     /** FIDE handbook %s */
     fideHandbookX: I18nFormat;
-    /** You can find out more about %1$s (including a %2$s). If you want to help Lichess by volunteering your time and skills, there are many %3$s. */
+    /** You can find out more about %1$s (including a %2$s). If you want to help Chess-Online by volunteering your time and skills, there are many %3$s. */
     findMoreAndSeeHowHelp: I18nFormat;
     /** Frequently Asked Questions */
     frequentlyAskedQuestions: string;
@@ -1089,7 +1089,7 @@ interface I18n {
     howBulletBlitzEtcDecided: string;
     /** How can I become a moderator? */
     howCanIBecomeModerator: string;
-    /** How can I contribute to Lichess? */
+    /** How can I contribute to Chess-Online? */
     howCanIContributeToLichess: string;
     /** How do ranks and leaderboards work? */
     howDoLeaderoardsWork: string;
@@ -1107,31 +1107,31 @@ interface I18n {
     isCorrespondenceDifferent: string;
     /** What keyboard shortcuts are there? */
     keyboardShortcuts: string;
-    /** Some Lichess pages have keyboard shortcuts you can use. Try pressing the '?' key on a study, analysis, puzzle, or game page to list available keyboard shortcuts. */
+    /** Some Chess-Online pages have keyboard shortcuts you can use. Try pressing the '?' key on a study, analysis, puzzle, or game page to list available keyboard shortcuts. */
     keyboardShortcutsExplanation: string;
     /** If your opponent frequently aborts/leaves games, they get "play banned", which means they're temporarily banned from playing games. This is not publicly indicated on their profile. If this behaviour continues, the length of the playban increases - and prolonged behaviour of this nature may lead to account closure. */
     leavingGameWithoutResigningExplanation: string;
     /** lee-chess */
     leechess: string;
-    /** Lichess can optionally send popup notifications, for example when it is your turn or you received a private message. */
+    /** Chess-Online can optionally send popup notifications, for example when it is your turn or you received a private message. */
     lichessCanOptionnalySendPopUps: string;
-    /** Lichess is a combination of live/light/libre and chess. It is pronounced %1$s. */
+    /** Chess-Online is a combination of live/light/libre and chess. It is pronounced %1$s. */
     lichessCombinationLiveLightLibrePronounced: I18nFormat;
     /** In the event of one player running out of time, that player will usually lose the game. However, the game is drawn if the position is such that the opponent cannot checkmate the player's king by any possible series of legal moves (%1$s). */
     lichessFollowFIDErules: I18nFormat;
-    /** Lichess is powered by donations from patrons and the efforts of a team of volunteers. */
+    /** Chess-Online is powered by donations from patrons and the efforts of a team of volunteers. */
     lichessPoweredByDonationsAndVolunteers: string;
-    /** Lichess ratings */
+    /** Chess-Online ratings */
     lichessRatings: string;
-    /** Lichess recognises all FIDE titles gained from OTB (over the board) play, as well as %1$s. Here is a list of FIDE titles: */
+    /** Chess-Online recognises all FIDE titles gained from OTB (over the board) play, as well as %1$s. Here is a list of FIDE titles: */
     lichessRecognizeAllOTBtitles: I18nFormat;
-    /** Lichess supports standard chess and %1$s. */
+    /** Chess-Online supports standard chess and %1$s. */
     lichessSupportChessAnd: I18nFormat;
-    /** Lichess training */
+    /** Chess-Online training */
     lichessTraining: string;
-    /** Lichess userstyles */
+    /** Chess-Online userstyles */
     lichessUserstyles: string;
-    /** This honorific title is unofficial and only exists on Lichess. */
+    /** This honorific title is unofficial and only exists on Chess-Online. */
     lMtitleComesToYouDoNotRequestIt: string;
     /** stand-alone mental health condition */
     mentalHealthCondition: string;
@@ -1145,7 +1145,7 @@ interface I18n {
     noUpperCaseDot: string;
     /** other ways to help */
     otherWaysToHelp: string;
-    /** That trophy is unique in the history of Lichess, nobody other than %1$s will ever have it. */
+    /** That trophy is unique in the history of Chess-Online, nobody other than %1$s will ever have it. */
     ownerUniqueTrophies: I18nFormat;
     /** For more information, please read our %s */
     pleaseReadFairPlayPage: I18nFormat;
@@ -1177,15 +1177,15 @@ interface I18n {
     stopMyselfFromPlaying: string;
     /** ≥ %1$ss = %2$s */
     superiorThanXsEqualYtimeControl: I18nFormat;
-    /** Repetition needs to be claimed by one of the players. You can do so by pressing the button that is shown, or by offering a draw before your final repeating move, it won't matter if your opponent rejects the draw offer, the threefold repetition draw will be claimed anyway. You can also %1$s Lichess to automatically claim repetitions for you. Additionally, fivefold repetition always immediately ends the game. */
+    /** Repetition needs to be claimed by one of the players. You can do so by pressing the button that is shown, or by offering a draw before your final repeating move, it won't matter if your opponent rejects the draw offer, the threefold repetition draw will be claimed anyway. You can also %1$s Chess-Online to automatically claim repetitions for you. Additionally, fivefold repetition always immediately ends the game. */
     threeFoldHasToBeClaimed: I18nFormat;
     /** Threefold repetition */
     threefoldRepetition: string;
-    /** If a position occurs three times, players can claim a draw by %1$s. Lichess implements the official FIDE rules, as described in Article 9.2 of the %2$s. */
+    /** If a position occurs three times, players can claim a draw by %1$s. Chess-Online implements the official FIDE rules, as described in Article 9.2 of the %2$s. */
     threefoldRepetitionExplanation: I18nFormat;
     /** threefold repetition */
     threefoldRepetitionLowerCase: string;
-    /** What titles are there on Lichess? */
+    /** What titles are there on Chess-Online? */
     titlesAvailableOnLichess: string;
     /** Unique trophies */
     uniqueTrophies: string;
@@ -1201,7 +1201,7 @@ interface I18n {
     watchIMRosenCheckmate: I18nFormat;
     /** To get it, hiimgosu challenged himself to berserk and win all games of %s. */
     wayOfBerserkExplanation: I18nFormat;
-    /** Unfortunately, we cannot give back rating points for games lost due to lag or disconnection, regardless of whether the problem was at your end or our end. The latter is very rare though. Also note that when Lichess restarts and you lose on time because of that, we abort the game to prevent an unfair loss. */
+    /** Unfortunately, we cannot give back rating points for games lost due to lag or disconnection, regardless of whether the problem was at your end or our end. The latter is very rare though. Also note that when Chess-Online restarts and you lose on time because of that, we abort the game to prevent an unfair loss. */
     weCannotDoThatEvenIfItIsServerSideButThatsRare: string;
     /** We repeated a position three times. Why was the game not drawn? */
     weRepeatedthreeTimesPosButNoDraw: string;
@@ -1211,27 +1211,27 @@ interface I18n {
     whatIsProvisionalRating: string;
     /** What can my username be? */
     whatUsernameCanIchoose: string;
-    /** What variants can I play on Lichess? */
+    /** What variants can I play on Chess-Online? */
     whatVariantsCanIplay: string;
     /** When am I eligible for the automatic rating refund from cheaters? */
     whenAmIEligibleRatinRefund: string;
-    /** What rating system does Lichess use? */
+    /** What rating system does Chess-Online use? */
     whichRatingSystemUsedByLichess: string;
     /** Why are ratings higher compared to other sites and organisations such as FIDE, USCF and the ICC? */
     whyAreRatingHigher: string;
     /** It is best not to think of ratings as absolute numbers, or compare them against other organisations. Different organisations have different levels of players, different rating systems (Elo, Glicko, Glicko-2, or a modified version of the aforementioned). These factors can drastically affect the absolute numbers (ratings). */
     whyAreRatingHigherExplanation: string;
-    /** Why is Lichess called Lichess? */
+    /** Why is Chess-Online called Chess-Online? */
     whyIsLichessCalledLichess: string;
-    /** Similarly, the source code for Lichess, %1$s, stands for li[chess in sca]la, seeing as the bulk of Lichess is written in %2$s, an intuitive programming language. */
+    /** Similarly, the source code for Chess-Online, %1$s, stands for li[chess in sca]la, seeing as the bulk of Chess-Online is written in %2$s, an intuitive programming language. */
     whyIsLilaCalledLila: I18nFormat;
-    /** Live, because games are played and watched in real-time 24/7; light and libre for the fact that Lichess is open-source and unencumbered by proprietary junk that plagues other websites. */
+    /** Live, because games are played and watched in real-time 24/7; light and libre for the fact that Chess-Online is open-source and unencumbered by proprietary junk that plagues other websites. */
     whyLiveLightLibre: string;
-    /** Yes. Lichess has indeed inspired other open-source sites that use our %1$s, %2$s, or %3$s. */
+    /** Yes. Chess-Online has indeed inspired other open-source sites that use our %1$s, %2$s, or %3$s. */
     yesLichessInspiredOtherOpenSourceWebsites: I18nFormat;
     /** It’s not possible to apply to become a moderator. If we see someone who we think would be good as a moderator, we will contact them directly. */
     youCannotApply: string;
-    /** On Lichess, the main difference in rules for correspondence chess is that an opening book is allowed. The use of engines is still prohibited and will result in being flagged for engine assistance. Although ICCF allows engine use in correspondence, Lichess does not. */
+    /** On Chess-Online, the main difference in rules for correspondence chess is that an opening book is allowed. The use of engines is still prohibited and will result in being flagged for engine assistance. Although ICCF allows engine use in correspondence, Chess-Online does not. */
     youCanUseOpeningBookNoEngine: string;
   };
   features: {
@@ -1261,7 +1261,7 @@ interface I18n {
     gamesPerDay: I18nPlural;
     /** Global opening explorer (%s games!) */
     globalOpeningExplorerInNbGames: I18nFormat;
-    /** If you love Lichess, */
+    /** If you love Chess-Online, */
     ifYouLoveLichess: string;
     /** iPhone & Android phones and tablets, landscape support */
     landscapeSupportOnApp: string;
@@ -1349,21 +1349,21 @@ interface I18n {
   lag: {
     /** And now, the long answer! Game lag is composed of two unrelated values (lower is better): */
     andNowTheLongAnswerLagComposedOfTwoValues: string;
-    /** Is Lichess lagging? */
+    /** Is Chess-Online lagging? */
     isLichessLagging: string;
     /** Lag compensation */
     lagCompensation: string;
-    /** Lichess compensates network lag. This includes sustained lag and occasional lag spikes. There are limits and heuristics based on time control and the compensated lag so far, so that the result should feel reasonable for both players. As a result, having a higher network lag than your opponent is not a handicap! */
+    /** Chess-Online compensates network lag. This includes sustained lag and occasional lag spikes. There are limits and heuristics based on time control and the compensated lag so far, so that the result should feel reasonable for both players. As a result, having a higher network lag than your opponent is not a handicap! */
     lagCompensationExplanation: string;
-    /** Lichess server latency */
+    /** Chess-Online server latency */
     lichessServerLatency: string;
-    /** The time it takes to process a move on the server. It's the same for everybody, and only depends on the servers load. The more players, the higher it gets, but Lichess developers do their best to keep it low. It rarely exceeds 10ms. */
+    /** The time it takes to process a move on the server. It's the same for everybody, and only depends on the servers load. The more players, the higher it gets, but Chess-Online developers do their best to keep it low. It rarely exceeds 10ms. */
     lichessServerLatencyExplanation: string;
     /** Measurements in progress... */
     measurementInProgressThreeDot: string;
-    /** Network between Lichess and you */
+    /** Network between Chess-Online and you */
     networkBetweenLichessAndYou: string;
-    /** The time it takes to send a move from your computer to Lichess server, and get the response back. It's specific to your distance to Lichess (France), and to the quality of your Internet connection. Lichess developers cannot fix your wifi or make light go faster. */
+    /** The time it takes to send a move from your computer to Chess-Online server, and get the response back. It's specific to your distance to Chess-Online (France), and to the quality of your Internet connection. Chess-Online developers cannot fix your wifi or make light go faster. */
     networkBetweenLichessAndYouExplanation: string;
     /** No. And your network is bad. */
     noAndYourNetworkIsBad: string;
@@ -1485,7 +1485,7 @@ interface I18n {
     firstPlaceTheRooks: string;
     /** Fundamentals */
     fundamentals: string;
-    /** Get a free Lichess account */
+    /** Get a free Chess-Online account */
     getAFreeLichessAccount: string;
     /** Grab all the stars! */
     grabAllTheStars: string;
@@ -1827,13 +1827,13 @@ interface I18n {
     whatTheTokenCanDo: string;
   };
   onboarding: {
-    /** Configure Lichess to your liking. */
+    /** Configure Chess-Online to your liking. */
     configureLichess: string;
     /** Will a child use this account? You might want to enable %s. */
     enabledKidModeSuggestion: I18nFormat;
     /** Explore the site and have fun :) */
     exploreTheSiteAndHaveFun: string;
-    /** Follow your friends on Lichess. */
+    /** Follow your friends on Chess-Online. */
     followYourFriendsOnLichess: string;
     /** Improve with chess tactics puzzles. */
     improveWithChessTacticsPuzzles: string;
@@ -1853,7 +1853,7 @@ interface I18n {
     thisIsYourProfilePage: string;
     /** Welcome! */
     welcome: string;
-    /** Welcome to live.chess-online.com! */
+    /** Welcome to chess-online.com! */
     welcomeToLichess: string;
     /** What now? Here are a few suggestions: */
     whatNowSuggestions: string;
@@ -1865,11 +1865,11 @@ interface I18n {
     amount: string;
     /** We also accept bank transfers */
     bankTransfers: string;
-    /** Become a Lichess Patron */
+    /** Become a Chess-Online Patron */
     becomePatron: string;
     /** Cancel your support */
     cancelSupport: string;
-    /** The celebrated Patrons who make Lichess possible */
+    /** The celebrated Patrons who make Chess-Online possible */
     celebratedPatrons: string;
     /** Change currency */
     changeCurrency: string;
@@ -1881,7 +1881,7 @@ interface I18n {
     changeOrContact: I18nFormat;
     /** Check out your profile page! */
     checkOutProfile: string;
-    /** contact Lichess support */
+    /** contact Chess-Online support */
     contactSupport: string;
     /** See the detailed cost breakdown */
     costBreakdown: string;
@@ -1889,13 +1889,13 @@ interface I18n {
     currentStatus: string;
     /** Date */
     date: string;
-    /** Decide what Lichess is worth to you: */
+    /** Decide what Chess-Online is worth to you: */
     decideHowMuch: string;
     /** Donate */
     donate: string;
     /** Donate as %s */
     donateAsX: I18nFormat;
-    /** In one month, you will NOT be charged again, and your Lichess account will revert to a regular account. */
+    /** In one month, you will NOT be charged again, and your Chess-Online account will revert to a regular account. */
     downgradeNextMonth: string;
     /** See the detailed feature comparison */
     featuresComparison: string;
@@ -1909,13 +1909,13 @@ interface I18n {
     giftPatronWingsShort: string;
     /** If not renewed, your account will then revert to a regular account. */
     ifNotRenewedThenAccountWillRevert: string;
-    /** Lichess is registered with %s. */
+    /** Chess-Online is registered with %s. */
     lichessIsRegisteredWith: I18nFormat;
-    /** Lichess Patron */
+    /** Chess-Online Patron */
     lichessPatron: string;
     /** Lifetime */
     lifetime: string;
-    /** Lifetime Lichess Patron */
+    /** Lifetime Chess-Online Patron */
     lifetimePatron: string;
     /** Log in to donate */
     logInToDonate: string;
@@ -1929,15 +1929,15 @@ interface I18n {
     nextPayment: string;
     /** No ads, no subscriptions; but open-source and passion. */
     noAdsNoSubs: string;
-    /** No longer support Lichess */
+    /** No longer support Chess-Online */
     noLongerSupport: string;
-    /** No, because Lichess is entirely free, forever, and for everyone. That's a promise. */
+    /** No, because Chess-Online is entirely free, forever, and for everyone. That's a promise. */
     noPatronFeatures: string;
-    /** You are now a lifetime Lichess Patron! */
+    /** You are now a lifetime Chess-Online Patron! */
     nowLifetime: string;
-    /** You are now a Lichess Patron for one month! */
+    /** You are now a Chess-Online Patron for one month! */
     nowOneMonth: string;
-    /** Is Lichess an official non-profit? */
+    /** Is Chess-Online an official non-profit? */
     officialNonProfit: string;
     /** One-time */
     onetime: string;
@@ -1949,13 +1949,13 @@ interface I18n {
     otherMethods: string;
     /** Are some features reserved to Patrons? */
     patronFeatures: string;
-    /** Lichess Patron for %s months */
+    /** Chess-Online Patron for %s months */
     patronForMonths: I18nPlural;
     /** Patron since %s */
     patronSince: I18nFormat;
     /** You have a Patron account until %s. */
     patronUntil: I18nFormat;
-    /** Pay %s once. Be a Lichess Patron forever! */
+    /** Pay %s once. Be a Chess-Online Patron forever! */
     payLifetimeOnce: I18nFormat;
     /** Payment details */
     paymentDetails: string;
@@ -1985,27 +1985,27 @@ interface I18n {
     update: string;
     /** Update payment method */
     updatePaymentMethod: string;
-    /** View other Lichess Patrons */
+    /** View other Chess-Online Patrons */
     viewOthers: string;
     /** We are a non‑profit association because we believe everyone should have access to a free, world-class chess platform. */
     weAreNonProfit: string;
     /** We are a small team, so your support makes a huge difference! */
     weAreSmallTeam: string;
-    /** We rely on support from people like you to make it possible. If you enjoy using Lichess, please consider supporting us by donating and becoming a Patron! */
+    /** We rely on support from people like you to make it possible. If you enjoy using Chess-Online, please consider supporting us by donating and becoming a Patron! */
     weRelyOnSupport: string;
     /** Where does the money go? */
     whereMoneyGoes: string;
     /** Credit Card */
     withCreditCard: string;
-    /** %s became a Lichess Patron */
+    /** %s became a Chess-Online Patron */
     xBecamePatron: I18nFormat;
-    /** %1$s is a Lichess Patron for %2$s months */
+    /** %1$s is a Chess-Online Patron for %2$s months */
     xIsPatronForNbMonths: I18nPlural;
     /** %1$s or %2$s */
     xOrY: I18nFormat;
     /** You have a Lifetime Patron account. That's pretty awesome! */
     youHaveLifetime: string;
-    /** You support live.chess-online.com with %s per month. */
+    /** You support chess-online.com with %s per month. */
     youSupportWith: I18nFormat;
     /** You will be charged %1$s on %2$s. */
     youWillBeChargedXOnY: I18nFormat;
@@ -2113,7 +2113,7 @@ interface I18n {
     explainCanThenBeTemporarilyDisabled: string;
     /** Hold the <ctrl> key while promoting to temporarily disable auto-promotion */
     explainPromoteToQueenAutomatically: string;
-    /** This hides all ratings from Lichess, to help focus on the chess. Rated games still impact your rating, this is only about what you get to see. */
+    /** This hides all ratings from Chess-Online, to help focus on the chess. Rated games still impact your rating, this is only about what you get to see. */
     explainShowPlayerRatings: string;
     /** Game behaviour */
     gameBehavior: string;
@@ -2141,7 +2141,7 @@ interface I18n {
     moveListWhilePlaying: string;
     /** Notifications */
     notifications: string;
-    /** Bell notification within Lichess */
+    /** Bell notification within Chess-Online */
     notifyBell: string;
     /** Challenges */
     notifyChallenge: string;
@@ -2155,7 +2155,7 @@ interface I18n {
     notifyInboxMsg: string;
     /** Study invite */
     notifyInvitedStudy: string;
-    /** Device notification when you're not on Lichess */
+    /** Device notification when you're not on Chess-Online */
     notifyPush: string;
     /** Streamer goes live */
     notifyStreamStart: string;
@@ -2249,7 +2249,7 @@ interface I18n {
     fromGameLink: I18nFormat;
     /** From my games */
     fromMyGames: string;
-    /** You have no puzzles in the database, but Lichess still loves you very much. */
+    /** You have no puzzles in the database, but Chess-Online still loves you very much. */
     fromMyGamesNone: string;
     /** Puzzles from %s' games */
     fromXGames: I18nFormat;
@@ -2747,7 +2747,7 @@ interface I18n {
     agreementMultipleAccounts: I18nFormat;
     /** I agree that I will always be respectful to other players. */
     agreementNice: string;
-    /** I agree that I will follow all Lichess policies. */
+    /** I agree that I will follow all Chess-Online policies. */
     agreementPolicy: string;
     /** %1$s level %2$s */
     aiNameLevelAiLevel: I18nFormat;
@@ -2775,7 +2775,7 @@ interface I18n {
     apply: string;
     /** as black */
     asBlack: string;
-    /** As free as Lichess */
+    /** As free as Chess-Online */
     asFreeAsLichess: string;
     /** Your account is managed. Ask your chess teacher about lifting kid mode. */
     askYourChessTeacherAboutLiftingKidMode: string;
@@ -2845,7 +2845,7 @@ interface I18n {
     blackWins: string;
     /** Black wins */
     blackWinsGame: string;
-    /** You have used the same password on another site, and that site has been compromised. To ensure the safety of your Lichess account, we need you to set a new password. Thank you for your understanding. */
+    /** You have used the same password on another site, and that site has been compromised. To ensure the safety of your Chess-Online account, we need you to set a new password. Thank you for your understanding. */
     blankedPassword: string;
     /** Blitz */
     blitz: string;
@@ -3329,7 +3329,7 @@ interface I18n {
     infiniteAnalysis: string;
     /** Information */
     information: string;
-    /** In kid mode, the Lichess logo gets a %s icon, so you know your kids are safe. */
+    /** In kid mode, the Chess-Online logo gets a %s icon, so you know your kids are safe. */
     inKidModeTheLichessLogoGetsIconX: I18nFormat;
     /** Inline notation */
     inlineNotation: string;
@@ -3429,11 +3429,11 @@ interface I18n {
     level: string;
     /** Library */
     library: string;
-    /** Rated games played on Lichess */
+    /** Rated games played on Chess-Online */
     lichessDbExplanation: string;
-    /** Lichess is a charity and entirely free/libre open source software. */
+    /** Chess-Online is a charity and entirely free/libre open source software. */
     lichessPatronInfo: string;
-    /** Lichess tournaments */
+    /** Chess-Online tournaments */
     lichessTournaments: string;
     /** Lifetime score */
     lifetimeScore: string;
@@ -3463,7 +3463,7 @@ interface I18n {
     lossOr50MovesByPriorMistake: string;
     /** Loss prevented by 50-move rule */
     lossSavedBy50MoveRule: string;
-    /** You lost rating points to someone who violated the Lichess TOS */
+    /** You lost rating points to someone who violated the Chess-Online TOS */
     lostAgainstTOSViolator: string;
     /** Main Chess-Online.Com profile */
     mainProfileLink: string;
@@ -3599,11 +3599,11 @@ interface I18n {
     needNbMoreGames: I18nPlural;
     /** You need to play %1$s more %2$s rated games */
     needNbMorePerfGames: I18nPlural;
-    /** Network lag between you and Lichess */
+    /** Network lag between you and Chess-Online */
     networkLagBetweenYouAndLichess: string;
     /** Never */
     never: string;
-    /** Never type your Lichess password on another site! */
+    /** Never type your Chess-Online password on another site! */
     neverTypeYourPassword: string;
     /** New opponent */
     newOpponent: string;
@@ -3795,7 +3795,7 @@ interface I18n {
     practice: string;
     /** Practice with computer */
     practiceWithComputer: string;
-    /** Previously on Lichess TV */
+    /** Previously on Chess-Online TV */
     previouslyOnLichessTV: string;
     /** Privacy */
     privacy: string;
@@ -3971,7 +3971,7 @@ interface I18n {
     showMeEverything: string;
     /** Show threat */
     showThreat: string;
-    /** You have received a private message from Lichess. */
+    /** You have received a private message from Chess-Online. */
     showUnreadLichessMessage: string;
     /** Show variation arrows */
     showVariationArrows: string;
@@ -4097,7 +4097,7 @@ interface I18n {
     theGameIsADraw: string;
     /** Thematic */
     thematic: string;
-    /** This account violated the Lichess Terms of Service */
+    /** This account violated the Chess-Online Terms of Service */
     thisAccountViolatedTos: string;
     /** This game is rated */
     thisGameIsRated: string;
@@ -4121,7 +4121,7 @@ interface I18n {
     timeControl: string;
     /** Timeline */
     timeline: string;
-    /** Time to process a move on Lichess's server */
+    /** Time to process a move on Chess-Online's server */
     timeToProcessAMoveOnLichessServer: string;
     /** Today */
     today: string;
@@ -4349,7 +4349,7 @@ interface I18n {
     winRate: string;
     /** Wins */
     wins: string;
-    /** and wish you great games on live.chess-online.com. */
+    /** and wish you great games on chess-online.com. */
     wishYouGreatGames: string;
     /** Withdraw */
     withdraw: string;
@@ -4401,7 +4401,7 @@ interface I18n {
     yesterday: string;
     /** You are better than %1$s of %2$s players. */
     youAreBetterThanPercentOfPerfTypePlayers: I18nFormat;
-    /** You are leaving Lichess */
+    /** You are leaving Chess-Online */
     youAreLeavingLichess: string;
     /** You are not in the team %s */
     youAreNotInTeam: I18nFormat;
@@ -4575,7 +4575,7 @@ interface I18n {
     allStreamers: string;
     /** Your stream is approved. */
     approved: string;
-    /** Become a Lichess streamer */
+    /** Become a Chess-Online streamer */
     becomeStreamer: string;
     /** Change/delete your picture */
     changePicture: string;
@@ -4595,9 +4595,9 @@ interface I18n {
     keepItShort: I18nPlural;
     /** Last stream %s */
     lastStream: I18nFormat;
-    /** Lichess streamer */
+    /** Chess-Online streamer */
     lichessStreamer: string;
-    /** Lichess streamers */
+    /** Chess-Online streamers */
     lichessStreamers: string;
     /** LIVE! */
     live: string;
@@ -4609,11 +4609,11 @@ interface I18n {
     offline: string;
     /** Your stream is being reviewed by moderators. */
     pendingReview: string;
-    /** Get a flaming streamer icon on your Lichess profile. */
+    /** Get a flaming streamer icon on your Chess-Online profile. */
     perk1: string;
     /** Get bumped up to the top of the streamers list. */
     perk2: string;
-    /** Notify your Lichess followers. */
+    /** Notify your Chess-Online followers. */
     perk3: string;
     /** Show your stream in your games, tournaments and studies. */
     perk4: string;
@@ -4621,19 +4621,19 @@ interface I18n {
     perks: string;
     /** Please fill in your streamer information, and upload a picture. */
     pleaseFillIn: string;
-    /** Include the keyword "live.chess-online.com" in your stream title and use the category "Chess" when you stream on Lichess. */
+    /** Include the keyword "chess-online.com" in your stream title and use the category "Chess" when you stream on Chess-Online. */
     rule1: string;
-    /** Remove the keyword when you stream non-Lichess stuff. */
+    /** Remove the keyword when you stream non-Chess-Online stuff. */
     rule2: string;
-    /** Lichess will detect your stream automatically and enable the following perks: */
+    /** Chess-Online will detect your stream automatically and enable the following perks: */
     rule3: string;
     /** Read our %s to ensure fair play for everyone during your stream. */
     rule4: I18nFormat;
     /** Streaming rules */
     rules: string;
-    /** The Lichess streamer page targets your audience with the language provided by your streaming platform. Set the correct default language for your chess streams in the app or service you use to broadcast. */
+    /** The Chess-Online streamer page targets your audience with the language provided by your streaming platform. Set the correct default language for your chess streams in the app or service you use to broadcast. */
     streamerLanguageSettings: string;
-    /** Your streamer name on Lichess */
+    /** Your streamer name on Chess-Online */
     streamerName: string;
     /** streaming Fairplay FAQ */
     streamingFairplayFAQ: string;
@@ -4653,7 +4653,7 @@ interface I18n {
     visibility: string;
     /** When approved by moderators */
     whenApproved: string;
-    /** When you are ready to be listed as a Lichess streamer, %s */
+    /** When you are ready to be listed as a Chess-Online streamer, %s */
     whenReady: I18nFormat;
     /** %s is streaming */
     xIsStreaming: I18nFormat;
@@ -4973,7 +4973,7 @@ interface I18n {
     youAreNowAContributor: string;
     /** You are now a spectator */
     youAreNowASpectator: string;
-    /** You can paste this in the forum or your Lichess blog to embed */
+    /** You can paste this in the forum or your Chess-Online blog to embed */
     youCanPasteThisInTheForumToEmbed: string;
     /** Congratulations! You completed this lesson. */
     youCompletedThisLesson: string;
@@ -5055,7 +5055,7 @@ interface I18n {
     oneRoundEveryXDays: I18nPlural;
     /** Ongoing games */
     ongoingGames: I18nPlural;
-    /** We don't plan to add more tournament systems to Lichess at the moment. */
+    /** We don't plan to add more tournament systems to Chess-Online at the moment. */
     otherSystemsA: string;
     /** What about other tournament systems? */
     otherSystemsQ: string;
@@ -5291,7 +5291,7 @@ interface I18n {
     openTwoFactorApp: string;
     /** Scan the QR code with the app. */
     scanTheCode: string;
-    /** Please enable two-factor authentication to secure your account at https://live.chess-online.com/account/twofactor. */
+    /** Please enable two-factor authentication to secure your account at https://chess-online.com/account/twofactor. */
     setupReminder: string;
     /** Get an app for two-factor authentication. We recommend the following apps: */
     twoFactorAppRecommend: string;
@@ -5465,14 +5465,16 @@ interface I18n {
     inappropriateContentAccountClosed: string;
     /** Latest blog posts */
     latestBlogPosts: string;
-    /** Lichess blog posts in %s */
+    /** Chess-Online blog posts in %s */
     lichessBlogPostsFromXYear: I18nFormat;
-    /** Lichess Official Blog */
+    /** Chess-Online Official Blog */
     lichessOfficialBlog: string;
     /** Liked blog posts */
     likedBlogs: string;
     /** More blog posts by %s */
     moreBlogPostsBy: I18nFormat;
+    /** Community blogs */
+    myBlog: string;
     /** %s views */
     nbViews: I18nPlural;
     /** New post */
@@ -5481,6 +5483,8 @@ interface I18n {
     noDrafts: string;
     /** No posts in this blog, yet. */
     noPostsInThisBlogYet: string;
+    /** Official blog */
+    officialBlog: string;
     /** Post body */
     postBody: string;
     /** Post intro */
@@ -5515,7 +5519,7 @@ interface I18n {
     thisPostIsPublished: string;
     /** Upload an image for your post */
     uploadAnImageForYourPost: string;
-    /** You can also use images that you made yourself, pictures you took, screenshots of Lichess... anything that is not copyrighted by someone else. */
+    /** You can also use images that you made yourself, pictures you took, screenshots of Chess-Online... anything that is not copyrighted by someone else. */
     useImagesYouMadeYourself: string;
     /** View all %s posts */
     viewAllNbPosts: I18nPlural;

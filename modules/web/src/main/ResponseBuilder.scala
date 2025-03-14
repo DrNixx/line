@@ -62,7 +62,7 @@ trait ResponseBuilder(using Executor)
     "qa"           -> "/faq",
     "help"         -> "/contact",
     "support"      -> "/contact",
-    "donate"       -> "/patron",
+    "donate"       -> "https://www.chess-online.com/ru-ru/membership/club",
     "how-to-cheat" -> "/page/how-to-cheat"
   )
   def staticRedirect(key: String): Option[Fu[Result]] = movedMap.get(key).map { MovedPermanently(_) }

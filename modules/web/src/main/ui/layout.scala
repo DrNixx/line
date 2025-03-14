@@ -106,11 +106,11 @@ final class layout(helpers: Helpers, assetHelper: lila.web.ui.AssetFullHelper)(
   val favicons = raw:
     List(512, 256, 192, 128, 64)
       .map: px =>
-        s"""<link rel="icon" type="image/png" href="$assetBaseUrl/assets/logo/lichess-favicon-$px.png" sizes="${px}x$px">"""
+        s"""<link rel="icon" type="image/png" href="$assetBaseUrl/assets/logo/chess-favicon-$px.png" sizes="${px}x$px">"""
       .mkString(
         "",
         "",
-        s"""<link id="favicon" rel="icon" type="image/png" href="$assetBaseUrl/assets/logo/lichess-favicon-32.png" sizes="32x32">"""
+        s"""<link id="favicon" rel="icon" type="image/png" href="$assetBaseUrl/assets/logo/chess-favicon-32.png" sizes="32x32">"""
       )
   def blindModeForm(using ctx: Context) = raw:
     s"""<form id="blind-mode" action="${routes.Main.toggleBlindMode}" method="POST"><input type="hidden" name="enable" value="${
@@ -128,9 +128,8 @@ final class layout(helpers: Helpers, assetHelper: lila.web.ui.AssetFullHelper)(
 </div>"""
 
   def dasher(me: User) =
-    div(cls := "dasher")(
-      a(id := "user_tag", cls := "toggle link", href := routes.Auth.logoutGet)(me.username),
-      div(id := "dasher_app", cls := "dropdown")
+    raw(
+      s"""<div class="user-menu"><img src="https://a00.chess-online.com/userpics/get/${me.id}" alt="${me.username}"><div class="dasher"><a id="user_tag" class="toggle link">${me.username}</a><div id="dasher_app" class="dropdown"></div></div></div>"""
     )
 
   def anonDasher(using ctx: Context) =
@@ -181,12 +180,26 @@ final class layout(helpers: Helpers, assetHelper: lila.web.ui.AssetFullHelper)(
             });""")(nonce).render
       ).mkString
 
+  def ya(nonce: Option[Nonce]) =
+    embedJsUnsafe(s""" 
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(38062140, "init", {
+        clickmap:false,
+        trackLinks:false
+   });
+    """)(nonce)
+
   private def hrefLang(langStr: String, path: String) =
     s"""<link rel="alternate" hreflang="$langStr" href="$netBaseUrl$path"/>"""
 
   def hrefLangs(path: LangPath) = raw {
     val pathEnd = if path.value == "/" then "" else path.value
-    hrefLang("x-default", path.value) + hrefLang("en", path.value) +
+    hrefLang("x-default", path.value) + hrefLang("ru", path.value) +
       popularAlternateLanguages.map { l =>
         hrefLang(l.value, s"/$l$pathEnd")
       }.mkString
@@ -205,7 +218,7 @@ final class layout(helpers: Helpers, assetHelper: lila.web.ui.AssetFullHelper)(
 
   val dailyNewsAtom = link(
     href     := routes.Feed.atom,
-    st.title := "Lichess Updates Feed",
+    st.title := "Лента новостей Арены",
     tpe      := "application/atom+xml",
     rel      := "alternate"
   )
@@ -266,12 +279,9 @@ final class layout(helpers: Helpers, assetHelper: lila.web.ui.AssetFullHelper)(
   )
 
   object siteHeader:
-
     private val topnavToggle = spaceless:
       """
-<input type="checkbox" id="tn-tg" class="topnav-toggle fullscreen-toggle" autocomplete="off" aria-label="Navigation">
-<label for="tn-tg" class="fullscreen-mask"></label>
-<label for="tn-tg" class="hbg"><span class="hbg__in"></span></label>"""
+<a href="#" class="toggle-sidebar" data-toggle="sidebar"><i class="co" data-icon="["></i></a>"""
 
     private def privileges(using Context) =
       if Granter.opt(_.SeeReport) then
@@ -328,24 +338,17 @@ final class layout(helpers: Helpers, assetHelper: lila.web.ui.AssetFullHelper)(
         topnav: Frag
     )(using ctx: PageContext) =
       header(id := "top")(
+        topnavToggle,
         div(cls := "site-title-nav")(
-          (!isAppealUser).option(topnavToggle),
-          a(cls := "site-title", href := langHref("/"))(
-            if ctx.kid.yes then span(title := trans.site.kidMode.txt(), cls := "kiddo")(":)")
-            else ctx.isBot.option(botImage),
-            div(cls := "site-icon", dataIcon := Icon.Logo),
-            div(cls := "site-name")(siteNameFrag)
-          ),
-          (!isAppealUser).option(
-            frag(
-              topnav,
-              (ctx.kid.no && !ctx.me.exists(_.isPatron) && !zenable).option(
-                a(cls := "site-title-nav__donate")(
-                  href := routes.Plan.index()
-                )(trans.patron.donate())
+          st.div(cls := "brand inline")(
+            a(href := "/")(
+              img(
+                src := "https://cdn.chess-online.com/images/logos/nav-logo-uni.png",
+                alt := "Chess-Online"
               )
             )
           ),
+          (!isAppealUser).option(topnav),
           ctx.blind.option(h2("Navigation"))
         ),
         div(cls := "site-buttons")(

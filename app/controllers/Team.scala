@@ -103,9 +103,8 @@ final class Team(env: Env) extends LilaController(env):
         .map:
           views.team.tournaments.page(team, _)
 
-  private def renderEdit(team: TeamModel, form: Form[?])(using me: Me, ctx: Context) = for
-    member <- env.team.memberRepo.get(team.id, me)
-    _      <- env.msg.twoFactorReminder(me)
+  private def renderEdit(team: TeamModel, form: Form[?])(using me: Me, ctx: Context) = for member <-
+      env.team.memberRepo.get(team.id, me)
   yield views.team.form.edit(team, form, member)
 
   def edit(id: TeamId) = Auth { ctx ?=> me ?=>

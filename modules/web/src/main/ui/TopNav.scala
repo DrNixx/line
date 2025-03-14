@@ -42,9 +42,9 @@ final class TopNav(helpers: Helpers):
             a(href := puzzleUrl)(trans.site.puzzles()),
             a(href := langHref(routes.Puzzle.themes))(trans.puzzle.puzzleThemes()),
             a(href := routes.Puzzle.dashboard(Days(30), "home", none))(trans.puzzle.puzzleDashboard()),
-            a(href := langHref(routes.Puzzle.streak))("Puzzle Streak"),
-            a(href := langHref(routes.Storm.home))("Puzzle Storm"),
-            a(href := langHref(routes.Racer.home))("Puzzle Racer")
+            a(href := langHref(routes.Puzzle.streak))(trans.puzzle.puzzleStreak()),
+            a(href := langHref(routes.Storm.home))(trans.puzzle.puzzleStorm()),
+            a(href := langHref(routes.Racer.home))(trans.puzzle.puzzleRacer())
           )
         )
       ,
@@ -69,7 +69,7 @@ final class TopNav(helpers: Helpers):
           linkTitle(broadcastUrl, trans.site.watch()),
           div(role := "group")(
             a(href := routes.RelayTour.index())(trans.broadcast.broadcasts()),
-            a(href := langHref(routes.Tv.index))("Lichess TV"),
+            a(href := langHref(routes.Tv.index))("Chess TV"),
             a(href := routes.Tv.games)(trans.site.currentGames()),
             (ctx.kid.no && ctx.noBot).option(a(href := routes.Streamer.index())(trans.site.streamersMenu())),
             ctx.noBot.option(a(href := routes.Video.index)(trans.site.videoLibrary()))
@@ -81,11 +81,9 @@ final class TopNav(helpers: Helpers):
         div(role := "group")(
           a(href := routes.User.list)(trans.site.players()),
           ctx.me.map(me => a(href := routes.Relation.following(me.userId))(trans.site.friends())),
-          a(href := routes.Team.home())(trans.team.teams()),
-          ctx.kid.no.option(a(href := routes.ForumCateg.index)(trans.site.forum())),
-          ctx.kid.no.option(a(href := langHref(routes.Ublog.communityAll()))(trans.site.blog())),
-          (ctx.kid.no && ctx.me.exists(_.isPatron))
-            .option(a(cls := "community-patron", href := routes.Plan.index())(trans.patron.donate()))
+          a(href := "https://www.chess-online.com/teams/list")(trans.team.teams()),
+          ctx.kid.no.option(a(href := "https://forum.chess-online.com/")(trans.site.forum())),
+          ctx.kid.no.option(a(href := langHref(routes.Ublog.communityAll()))(trans.site.blog()))
         )
       ),
       st.section(

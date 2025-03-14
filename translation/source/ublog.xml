@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
+  <string name="myBlog">Community blogs</string>
+  <string name="officialBlog">Official blog</string>
   <string name="communityBlogs">Community blogs</string>
   <string name="friendBlogs">Friends blogs</string>
   <string name="likedBlogs">Liked blog posts</string>

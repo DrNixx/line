@@ -244,7 +244,7 @@ final class UserApi(userRepo: UserRepo, perfsRepo: UserPerfsRepo, cacheApi: Cach
         import framework.*
         import lila.user.BSONFields as F
         Match(
-          $inIds(ids) ++ $doc("standard.gl.d".$lt(chess.rating.glicko.provisionalDeviation))
+          $inIds(ids) // ++ $doc("standard.gl.d".$lt(chess.rating.glicko.provisionalDeviation))
         ) -> List(
           Sort(Descending("standard.gl.r")),
           Limit(nb * 5),

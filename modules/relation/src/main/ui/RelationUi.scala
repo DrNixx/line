@@ -65,7 +65,7 @@ final class RelationUi(helpers: Helpers):
             (!blocked && !blocks && !user.isBot).option(
               a(
                 cls      := "text",
-                href     := routes.Msg.convo(user.name),
+                href     := routes.Msg.convo(user.id),
                 dataIcon := Icon.BubbleSpeech
               )(trans.site.composeMessage.txt())
             ),

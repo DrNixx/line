@@ -34,62 +34,6 @@ final class FaqUi(helpers: Helpers, sitePages: SitePages)(
       .css("bits.faq"):
         div(cls := "faq box box-pad")(
           h1(cls := "box__top")(trf.frequentlyAskedQuestions()),
-          h2("Lichess"),
-          question(
-            "name",
-            trf.whyIsLichessCalledLichess.txt(),
-            p(
-              trf.lichessCombinationLiveLightLibrePronounced(em(trf.leechess())),
-              " ",
-              a(href := "https://www.youtube.com/watch?v=KRpPqcrdE-o")(trf.hearItPronouncedBySpecialist())
-            ),
-            p(
-              trf.whyLiveLightLibre()
-            ),
-            p(
-              trf.whyIsLilaCalledLila(
-                a(href := "https://github.com/lichess-org/lila")("lila"),
-                a(href := "https://www.scala-lang.org/")("Scala")
-              )
-            )
-          ),
-          question(
-            "contributing",
-            trf.howCanIContributeToLichess.txt(),
-            p(trf.lichessPoweredByDonationsAndVolunteers()),
-            p(
-              trf.findMoreAndSeeHowHelp(
-                a(href := routes.Plan.index())(trf.beingAPatron()),
-                a(href := routes.Main.costs)(trf.breakdownOfOurCosts()),
-                a(href := routes.Cms.help)(trf.otherWaysToHelp())
-              )
-            )
-          ),
-          question(
-            "sites_based_on_Lichess",
-            trf.areThereWebsitesBasedOnLichess.txt(),
-            p(
-              trf.yesLichessInspiredOtherOpenSourceWebsites(
-                a(href := "/source")(trans.site.sourceCode()),
-                a(href := "/api")("API"),
-                a(href := "https://database.lichess.org")(trans.site.database())
-              )
-            ),
-            ul(
-              li(a(href := "https://blitztactics.com/about")("Blitz Tactics")),
-              li(a(href := "https://tailuge.github.io/chess-o-tron/html/blunder-bomb.html")("Blunder Bomb")),
-              li(a(href := "https://lidraughts.org")("lidraughts.org")),
-              li(a(href := "https://playstrategy.org")("playstrategy.org")),
-              li(a(href := "https://lishogi.org")("lishogi.org"))
-            )
-          ),
-          question(
-            "keyboard-shortcuts",
-            trf.keyboardShortcuts.txt(),
-            p(
-              trf.keyboardShortcutsExplanation()
-            )
-          ),
           h2(trf.fairPlay()),
           question(
             "rating-refund",

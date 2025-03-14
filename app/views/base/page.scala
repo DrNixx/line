@@ -74,7 +74,7 @@ object page:
             content := p.openGraph.fold(trans.site.siteDescription.txt())(o => o.description),
             name    := "description"
           ),
-          link(rel := "mask-icon", href := staticAssetUrl("logo/lichess.svg"), attr("color") := "black"),
+          link(rel := "mask-icon", href := staticAssetUrl("logo/chess.svg"), attr("color") := "black"),
           favicons,
           (p.flags(PageFlags.noRobots) || !netConfig.crawlable).option:
             raw("""<meta content="noindex, nofollow" name="robots">""")
@@ -98,7 +98,8 @@ object page:
           p.withHrefLangs.map(hrefLangs),
           sitePreload(p.i18nModules, allModules, isInquiry = ctx.data.inquiry.isDefined),
           lichessFontFaceCss,
-          (ctx.pref.bg === lila.pref.Pref.Bg.SYSTEM).so(systemThemeScript(ctx.nonce))
+          (ctx.pref.bg === lila.pref.Pref.Bg.SYSTEM).so(systemThemeScript(ctx.nonce)),
+          netConfig.isProd.option(ya(ctx.nonce))
         ),
         st.body(
           cls := {

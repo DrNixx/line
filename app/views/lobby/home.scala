@@ -29,10 +29,11 @@ object home:
         )
       )
       .css("lobby")
+      .csp(_.withAd)
       .graph(
         OpenGraph(
-          image = staticAssetUrl("logo/lichess-tile-wide.png").some,
-          title = "The best free, adless Chess server",
+          image = staticAssetUrl("logo/chess-tile-wide.png").some,
+          title = "The best free Chess server",
           url = netBaseUrl.value,
           description = trans.site.siteDescription.txt()
         )
@@ -95,7 +96,7 @@ object home:
                 }
               )
             ,
-            if ctx.isAuth then
+            ctx.isAuth.option(
               div(cls := "lobby__timeline")(
                 ctx.blind.option(h2("Timeline")),
                 views.timeline.entries(userTimeline),
@@ -106,6 +107,7 @@ object home:
                   )
                 )
               )
+            )
           ),
           featured.map: g =>
             div(cls := "lobby__tv"):
@@ -125,19 +127,5 @@ object home:
             views.feed.lobbyUpdates(lastUpdates)
           ,
           div(cls := "lobby__support")(
-            a(href := routes.Plan.index())(
-              i(cls := "co", dataIcon := patronIconChar),
-              span(cls := "lobby__support__text")(
-                strong(trans.patron.donate()),
-                span(trans.patron.becomePatron())
-              )
-            ),
-            a(href := "https://shop.spreadshirt.com/lichess-org")(
-              iconTag(Icon.Tshirt),
-              span(cls := "lobby__support__text")(
-                strong("Swag Store"),
-                span(trans.site.playChessInStyle())
-              )
-            )
           )
         )
