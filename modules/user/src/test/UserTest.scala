@@ -16,7 +16,7 @@ class UserTest extends munit.FunSuite:
   import UserStr.couldBeUsername
 
   test("username regex bad prefix: can login") {
-    assert(couldBeUsername("000"))
+    assert(couldBeUsername("2"))
     // assert(couldBeUsername("0foo"))
     // assert(couldBeUsername("_foo"))
     // assert(couldBeUsername("__foo"))
