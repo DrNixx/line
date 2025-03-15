@@ -20,7 +20,13 @@ object ContentSecurityPolicy:
       workerSrc = List("'self'", assetDomain.value, "blob:"),
       imgSrc = List("'self'", "blob:", "data:", "*"),
       mediaSrc = List("'self'", "blob:", "data:"),
-      scriptSrc = List("'self'", assetDomain.value, "https://mc.yandex.ru", "https://yastatic.net"),
+      scriptSrc = List(
+        "'self'",
+        assetDomain.value,
+        "https://passport.chess-online.com",
+        "https://mc.yandex.ru",
+        "https://yastatic.net"
+      ),
       fontSrc = List("'self'", assetDomain.value),
       baseUri = List("'none'")
     )
