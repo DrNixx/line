@@ -172,7 +172,7 @@ final class layout(helpers: Helpers, assetHelper: lila.web.ui.AssetFullHelper)(
   def autoLogin(nonce: Option[Nonce]) =
     raw:
       List(
-        s"""<script src="https://passport.chess-online.com/script"></script>""",
+        s"""<script src="https://passport.chess-online.com/script" crossorigin="use-credentials"></script>""",
         embedJsUnsafe(s"""window.chessPassport.isLoggedIn(function (online) {
                 if (online) {
                     location.href = "${routes.Auth.login.url}?referrer=" + encodeURIComponent(location.href);
