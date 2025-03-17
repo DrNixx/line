@@ -1,5 +1,6 @@
 package lila.chat
 
+import reactivemongo.api.bson.Macros.Annotations.Key
 import play.api.libs.json.JsArray
 
 import lila.core.shutup.PublicSource
@@ -17,7 +18,7 @@ object JsonChatLines extends TotalWrapper[JsonChatLines, JsArray]:
   def empty: JsonChatLines = JsArray.empty
 
 private case class Speaker(
-    id: UserId,
+    @Key("_id") id: UserId,
     username: UserName,
     title: Option[chess.PlayerTitle],
     flair: Option[lila.core.id.Flair],

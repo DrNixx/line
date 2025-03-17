@@ -32,8 +32,10 @@ const sideBar = () => {
   const pin = pinnedStorage.get();
   if (pin) {
     dom.addClass(body, 'menu-pin');
+    window.dispatchEvent(new Event('resize'));
   } else {
     dom.removeClass(body, 'menu-pin');
+    window.dispatchEvent(new Event('resize'));
   }
 
   const sidebarElements = document.querySelectorAll('[data-pages="sidebar"]');
@@ -113,10 +115,13 @@ const sideBar = () => {
     const togglePinSidebar = (toggle?: string) => {
       if (toggle == sHide) {
         dom.removeClass(body, 'menu-pin');
+        window.dispatchEvent(new Event('resize'));
       } else if (toggle == sShow) {
         dom.addClass(body, 'menu-pin');
+        window.dispatchEvent(new Event('resize'));
       } else {
         dom.toggleClass(body, 'menu-pin');
+        window.dispatchEvent(new Event('resize'));
       }
     };
 

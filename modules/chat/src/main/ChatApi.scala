@@ -119,7 +119,7 @@ final class ChatApi(
     def clear(chatId: ChatId) = coll.delete.one($id(chatId)).void
 
     def system(chatId: ChatId, text: String, busChan: BusChan.Select): Funit =
-      val line = UserLine(UserName.lichess, None, false, flair = true, text, troll = false, deleted = false)
+      val line = UserLine(UserId.lichess, UserName.lichess, None, false, flair = true, text, troll = false, deleted = false)
       for _ <- persistLine(chatId, line)
       yield
         cached.invalidate(chatId)
@@ -127,7 +127,7 @@ final class ChatApi(
 
     // like system, but not persisted.
     def volatile(chatId: ChatId, text: String, busChan: BusChan.Select): Unit =
-      val line = UserLine(UserName.lichess, None, false, flair = true, text, troll = false, deleted = false)
+      val line = UserLine(UserId.lichess, UserName.lichess, None, false, flair = true, text, troll = false, deleted = false)
       publishLine(chatId, line, busChan)
 
     def timeout(
@@ -185,6 +185,7 @@ final class ChatApi(
             case _ => s"${user.username} was timed out 15 minutes by a page mod (not a Lichess mod)"
           val line = (isNew && c.hasRecentLine(user)).option(
             UserLine(
+              userId = UserId.lichess, 
               username = UserName.lichess,
               title = None,
               patron = false,
@@ -246,6 +247,7 @@ final class ChatApi(
                 else flood.allowMessage(userId.into(FloodSource), t2)
               allow.option(
                 UserLine(
+                  user.id,
                   user.username,
                   user.title,
                   patron = user.isPatron,
@@ -272,6 +274,7 @@ final class ChatApi(
     def get(userId: UserId): Fu[Option[Speaker]] = userApi.byIdAs[Speaker](userId.value, Speaker.projection)
     import lila.core.user.BSONFields as F
     val projection = lila.db.dsl.$doc(
+      "_id"      -> true,
       F.username -> true,
       F.title    -> true,
       F.plan     -> true,

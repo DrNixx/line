@@ -49,8 +49,8 @@ object JsonView:
 
   def boardApi(chat: UserChat) = JsArray:
     chat.lines.collect:
-      case UserLine(name, _, _, _, text, troll, del) if !troll && !del =>
-        Json.obj("text" -> text, "user" -> name)
+      case UserLine(id, name, _, _, _, text, troll, del) if !troll && !del =>
+        Json.obj("text" -> text, "user" -> name, "id" -> id)
 
   object writers:
 
@@ -72,6 +72,7 @@ object JsonView:
     def userLineWriter(using getFlair: FlairMap): OWrites[UserLine] = OWrites: l =>
       Json
         .obj(
+          "i" -> l.userId,
           "u" -> l.username,
           "t" -> l.text
         )

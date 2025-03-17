@@ -531,6 +531,10 @@ $color-hinted-a: #999; //rgba value of $color-contrast-medium for hinted text
         .brand {
           display: none;
         }
+
+        #topnav {
+          margin-left: $layout-sidepanel-width - $layout-sidepanel-width-collapsed;
+        }
       }
     }
   }

@@ -94,8 +94,8 @@ final class GameStateStream(
 
     def receive =
       case MoveGameEvent(g, _, _) if g.id == id && !g.finished => pushState(g)
-      case lila.chat.ChatLine(chatId, UserLine(username, _, _, _, text, false, false), _) =>
-        pushChatLine(username, text, chatId.value.lengthIs == GameId.size)
+      case lila.chat.ChatLine(chatId, UserLine(userId, username, _, _, _, text, false, false), _) =>
+        pushChatLine(userId, username, text, chatId.value.lengthIs == GameId.size)
       case FinishGame(g, _) if g.id == id                                 => onGameOver(g.some)
       case AbortedBy(pov) if pov.gameId == id                             => onGameOver(pov.game.some)
       case BoardDrawOffer(g) if g.id == id                                => pushState(g)
@@ -114,8 +114,8 @@ final class GameStateStream(
     def pushState(g: Game): Funit =
       jsonView.gameState(WithInitialFen(g, init.fen)).dmap(some).flatMap(queue.offer).void
 
-    def pushChatLine(username: UserName, text: String, player: Boolean) =
-      queue.offer(jsonView.chatLine(username, text, player).some)
+    def pushChatLine(id: UserId, username: UserName, text: String, player: Boolean) =
+      queue.offer(jsonView.chatLine(id, username, text, player).some)
 
     def opponentGone(claimInSeconds: Option[Int]) = queue.offer:
       claimInSeconds.fold(jsonView.opponentGoneIsBack)(jsonView.opponentGoneClaimIn).some

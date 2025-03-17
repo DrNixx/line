@@ -69,10 +69,11 @@ final class BotJsonView(
       .orElse(game.correspondenceClock.map(_.remainingTime(color).toInt * 1000))
       .getOrElse(Int.MaxValue)
 
-  def chatLine(username: UserName, text: String, player: Boolean) =
+  def chatLine(id: UserId, username: UserName, text: String, player: Boolean) =
     Json.obj(
       "type"     -> "chatLine",
       "room"     -> (if player then "player" else "spectator"),
+      "userId"   -> id,
       "username" -> username,
       "text"     -> text
     )

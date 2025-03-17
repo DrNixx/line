@@ -4,6 +4,7 @@ import chess.{ Color, PlayerTitle }
 import reactivemongo.api.bson.*
 
 case class UserLine(
+    userId: UserId,
     username: UserName,
     title: Option[PlayerTitle],
     patron: Boolean,
@@ -13,9 +14,8 @@ case class UserLine(
     deleted: Boolean
 ) extends Line:
 
-  def author = username.value
+  def author = userId.value
 
-  def userId      = username.id
   def userIdMaybe = userId.some
 
   def delete = copy(deleted = true)
@@ -43,7 +43,7 @@ object Line:
   val titleSep    = '~'
 
   private[chat] val invalidLine =
-    UserLine(UserName(""), None, false, false, "[invalid character]", troll = false, deleted = true)
+    UserLine(UserId(""), UserName(""), None, false, false, "[invalid character]", troll = false, deleted = true)
 
   private[chat] given lineHandler: BSONHandler[lila.core.chat.Line] =
     BSONStringHandler.as[lila.core.chat.Line](
@@ -51,7 +51,7 @@ object Line:
       lineToStr
     )
 
-  private val baseChar        = " "
+  private val baseChar        = "|"
   private val trollChar       = "!"
   private val deletedChar     = "?"
   private val patronChar      = "&"
@@ -60,7 +60,7 @@ object Line:
   private[chat] val separatorChars =
     List(baseChar, trollChar, deletedChar, patronChar, flairChar, patronFlairChar)
   private val UserLineRegex = {
-    """(?s)([\w-~]{2,}+)([""" + separatorChars.mkString("") + """])(.++)"""
+    """(?sU)([\w _\-~]{2,}+)([""" + separatorChars.mkString("") + """])(.++)"""
   }.r
   private[chat] def strToUserLine(str: String): Option[UserLine] = str match
     case UserLineRegex(username, sep, text) =>
@@ -68,10 +68,11 @@ object Line:
       val deleted = sep == deletedChar
       val patron  = sep == patronChar || sep == patronFlairChar
       val flair   = sep == flairChar || sep == patronFlairChar
-      val (title, name) = username.split(titleSep) match
-        case Array(title, name) => (PlayerTitle.get(title), UserName(name))
-        case _                  => (none, UserName(username))
-      UserLine(name, title, patron, flair, text, troll = troll, deleted = deleted).some
+      val (title, name, id) = username.split(titleSep) match
+        case Array(title, name, id) => (PlayerTitle.get(title), UserName(name), UserId(id))
+        case Array(name, id) => (none, UserName(name), UserId(id))
+        case _                  => (none, UserName(username), UserId(username))
+      UserLine(id, name, title, patron, flair, text, troll = troll, deleted = deleted).some
     case _ => none
   def userLineToStr(x: UserLine): String =
     val sep =
@@ -79,9 +80,9 @@ object Line:
       else if x.deleted then deletedChar
       else if x.patron then if x.flair then patronFlairChar else patronChar
       else if x.flair then flairChar
-      else " "
+      else "|"
     val tit = x.title.so(_.value + titleSep)
-    s"$tit${x.username}$sep${x.text}"
+    s"$tit${x.username}$titleSep${x.userId}$sep${x.text}"
 
   def strToLine(str: String): Option[Line] =
     strToUserLine(str).orElse {

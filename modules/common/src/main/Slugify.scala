@@ -13,7 +13,7 @@ class Slugify(normalize: (String => String)) {
   protected val nonWord = """[^\w]""".r
   protected def toDashes(s: String) = nonWord.replaceAllIn(s, "-")
 
-  protected val slugify = Function.chain(List(normalize, toDashes _, dedupDashes _, trimEnds _))
+  protected val slugify = Function.chain(List(normalize, toDashes, dedupDashes, trimEnds))
 
   def apply(s: String) = slugify(s)
 }
