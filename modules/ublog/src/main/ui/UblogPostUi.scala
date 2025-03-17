@@ -105,8 +105,7 @@ final class UblogPostUi(helpers: Helpers, ui: UblogUi)(
             div(cls := "ublog-post__markup expand-text")(markup),
             post.isLichess.option(
               div(cls := "ublog-post__lichess")(
-                connectLinks,
-                p(a(href := routes.Plan.index())(trans.site.lichessPatronInfo()))
+                connectLinks
               )
             ),
             div(cls := "ublog-post__footer")(

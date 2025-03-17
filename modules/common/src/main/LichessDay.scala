@@ -7,7 +7,7 @@ object LichessDay extends OpaqueInt[LichessDay]:
 
   extension (day: LichessDay) def toDate = genesis.plusDays(day).withTimeAtStartOfDay
 
-  val genesis: Instant = instantOf(2010, 1, 1, 0, 0).withTimeAtStartOfDay
+  val genesis: Instant = instantOf(2006, 2, 2, 0, 0).withTimeAtStartOfDay
 
   def dayOf(time: Instant) = LichessDay(daysBetween(genesis, time))
 

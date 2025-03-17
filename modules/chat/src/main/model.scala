@@ -17,6 +17,7 @@ object JsonChatLines extends TotalWrapper[JsonChatLines, JsArray]:
   def empty: JsonChatLines = JsArray.empty
 
 private case class Speaker(
+    id: UserId,
     username: UserName,
     title: Option[chess.PlayerTitle],
     flair: Option[lila.core.id.Flair],

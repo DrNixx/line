@@ -35,7 +35,7 @@ case class RelayTour(
     note: Option[String] = None
 ):
   lazy val slug =
-    val s = scalalib.StringOps.slug(name.value)
+    val s = lila.common.Slugify.apply(name.value)
     if s.isEmpty then "-" else s
 
   def withRounds(rounds: List[RelayRound]) = RelayTour.WithRounds(this, rounds)

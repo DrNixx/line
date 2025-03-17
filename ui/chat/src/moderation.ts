@@ -84,7 +84,7 @@ export function moderationView(ctrl?: ModerationCtrl): VNode[] | undefined {
               'a',
               {
                 attrs: {
-                  href: '/@/' + data.name + '?mod',
+                  href: '/@/' + data.id + '?mod',
                 },
               },
               'profile',
@@ -97,7 +97,7 @@ export function moderationView(ctrl?: ModerationCtrl): VNode[] | undefined {
                     'a',
                     {
                       attrs: {
-                        href: '/mod/' + data.name + '/communication',
+                        href: '/mod/' + data.id + '/communication',
                       },
                     },
                     'coms',

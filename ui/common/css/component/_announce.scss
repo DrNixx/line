@@ -4,6 +4,7 @@
   position: fixed;
   bottom: 0;
   @include inline-start(0);
+  left: $layout-sidepanel-width-collapsed;
   font-size: 1.4em;
   background: $c-primary;
   color: $c-over;

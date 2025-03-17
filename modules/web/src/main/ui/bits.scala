@@ -24,28 +24,30 @@ z-index: 99;
   val connectLinks: Frag =
     div(cls := "connect-links")(
       a(
-        href := routes.Main.externalLink("mastodon"),
-        targetBlank,
-        noFollow,
-        relMe
-      )("Mastodon"),
-      a(
-        href := routes.Main.externalLink("github"),
+        href := routes.Main.externalLink("vk"),
         targetBlank,
         noFollow
-      )("GitHub"),
-      a(href := routes.Main.externalLink("discord"), targetBlank, noFollow)("Discord"),
-      a(href := routes.Main.externalLink("bluesky"), targetBlank, noFollow)("Bluesky"),
+      )("VK"),
       a(
-        href := routes.Main.externalLink("youtube"),
+        href := routes.Main.externalLink("ok"),
         targetBlank,
         noFollow
-      )("YouTube"),
+      )("OK"),
       a(
-        href := routes.Main.externalLink("twitch"),
+        href := routes.Main.externalLink("facebook"),
         targetBlank,
         noFollow
-      )("Twitch")
+      )("Facebook"),
+      a(
+        href := routes.Main.externalLink("telegram"),
+        targetBlank,
+        noFollow
+      )("Telegram"),
+      a(
+        href := routes.Main.externalLink("discord"),
+        targetBlank,
+        noFollow
+      )("Discord")
     )
 
   def api = raw:

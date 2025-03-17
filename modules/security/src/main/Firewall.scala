@@ -53,7 +53,8 @@ final class Firewall(
 
   private def blockProxyScrapeIps() =
     ws.url(
-      "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=3000&country=all&ssl=all&anonymity=all"
+      //"https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=3000&country=all&ssl=all&anonymity=all"
+      "https://www.chess-online.com/proxyscrape.txt"
     ).get()
       .map: res =>
         if res.status == 200 then

@@ -127,7 +127,7 @@ object Team:
   )
 
   def nameToId(name: String) =
-    val slug = scalalib.StringOps.slug(name)
+    val slug = lila.common.Slugify.apply(name)
     // if most chars are not latin, go for random slug
     if slug.lengthIs > (name.length / 2) then TeamId(slug) else randomId()
 

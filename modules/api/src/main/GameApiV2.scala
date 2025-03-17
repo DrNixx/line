@@ -69,7 +69,7 @@ final class GameApiV2(
   def filename(game: Game, format: Format): Fu[String] =
     gameLightUsers(game).map: users =>
       fileR.replaceAllIn(
-        "lichess_pgn_%s_%s_vs_%s.%s.%s".format(
+        "chess-online_pgn_%s_%s_vs_%s.%s.%s".format(
           Tag.UTCDate.format.print(game.createdAt),
           pgnDump.dumper.player.tupled(users.white),
           pgnDump.dumper.player.tupled(users.black),
@@ -84,10 +84,10 @@ final class GameApiV2(
 
   def filename(tour: Tournament, format: String): String =
     fileR.replaceAllIn(
-      "lichess_tournament_%s_%s_%s.%s".format(
+      "chess-online_tournament_%s_%s_%s.%s".format(
         Tag.UTCDate.format.print(tour.startsAt),
         tour.id,
-        scalalib.StringOps.slug(tour.name),
+        lila.common.Slugify.apply(tour.name),
         format
       ),
       "_"
@@ -98,10 +98,10 @@ final class GameApiV2(
 
   def filename(swiss: lila.swiss.Swiss, format: String): String =
     fileR.replaceAllIn(
-      "lichess_swiss_%s_%s_%s.%s".format(
+      "chess-online_swiss_%s_%s_%s.%s".format(
         Tag.UTCDate.format.print(swiss.startsAt),
         swiss.id,
-        scalalib.StringOps.slug(swiss.name),
+        lila.common.Slugify.apply(swiss.name),
         format
       ),
       "_"

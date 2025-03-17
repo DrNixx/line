@@ -40,7 +40,7 @@ trait ResponseHeaders extends HeaderNames:
 
   val permissionsPolicyHeader =
     "Permissions-Policy" -> List(
-      "screen-wake-lock=(self \"https://lichess1.org\")",
+      "screen-wake-lock=(self \"https://www.chess-online.com\")",
       "microphone=(self)",
       "fullscreen=(self)"
     ).mkString(", ")

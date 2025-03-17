@@ -3,7 +3,7 @@ package lila.study
 import akka.stream.scaladsl.*
 import chess.format.pgn as chessPgn
 import chess.format.pgn.{ Comment, Glyphs, InitialComments, Pgn, PgnStr, PgnTree, Tag, Tags }
-import scalalib.StringOps.slug
+import lila.common.Slugify.apply as slug
 
 import lila.tree.Node.{ Shape, Shapes }
 import lila.tree.{ Analysis, Metas, NewBranch, NewRoot, NewTree, Root }
@@ -43,8 +43,8 @@ final class PgnDump(
     val date = dateFormatter.print(study.createdAt)
     fileR.replaceAllIn(
       if study.isRelay
-      then s"lichess_broadcast_${slug(study.name.value)}_$date"
-      else s"lichess_study_${slug(study.name.value)}_by_${ownerName(study)}_$date",
+      then s"chess-online_broadcast_${slug(study.name.value)}_$date"
+      else s"chess-online_study_${slug(study.name.value)}_by_${ownerName(study)}_$date",
       ""
     )
 
@@ -52,9 +52,9 @@ final class PgnDump(
     val date = dateFormatter.print(chapter.createdAt)
     fileR.replaceAllIn(
       if study.isRelay
-      then s"lichess_broadcast_${slug(study.name.value)}_${slug(chapter.name.value)}_$date"
+      then s"chess-online_broadcast_${slug(study.name.value)}_${slug(chapter.name.value)}_$date"
       else
-        s"lichess_study_${slug(study.name.value)}_${slug(chapter.name.value)}_by_${ownerName(study)}_$date"
+        s"chess-online_study_${slug(study.name.value)}_${slug(chapter.name.value)}_by_${ownerName(study)}_$date"
       ,
       ""
     )

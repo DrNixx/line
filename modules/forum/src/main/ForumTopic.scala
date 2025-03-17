@@ -62,7 +62,7 @@ case class ForumTopic(
 object ForumTopic:
 
   def nameToId(name: String) =
-    val slug = scalalib.StringOps.slug(name)
+    val slug = lila.common.Slugify.apply(name)
     // if most chars are not latin, go for random slug
     if slug.lengthIs > (name.lengthIs / 2) then slug else ThreadLocalRandom.nextString(8)
 

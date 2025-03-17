@@ -9,7 +9,11 @@ import lila.core.security.LilaCookie
 
 final class LilaCookie(baker: SessionCookieBaker, config: NetConfig) extends lila.core.security.LilaCookie:
 
-  private val cookieDomain = config.domain.value.split(":").head
+  private val domainRegex = """\.[^.]++\.[^.]++$""".r
+ 
+  private val cleanDomain =  config.domain.value.split(":").head
+ 
+  private val cookieDomain = domainRegex.findFirstIn(cleanDomain).getOrElse(cleanDomain)
 
   def makeSessionId(using RequestHeader): Cookie = session(LilaCookie.sessionId, generateSessionId())
 
@@ -38,6 +42,12 @@ final class LilaCookie(baker: SessionCookieBaker, config: NetConfig) extends lil
       if remember then none else 0.some
     )
 
+  private def isSecure() = config.baseUrl.value.startsWith("https:")
+
+  private def sameSte() = 
+    if isSecure() then Cookie.SameSite.None
+    else Cookie.SameSite.Lax
+
   def cookie(name: String, value: String, maxAge: Option[Int] = None, httpOnly: Option[Boolean] = None)(using
       req: RequestHeader
   ): Cookie =
@@ -47,9 +57,9 @@ final class LilaCookie(baker: SessionCookieBaker, config: NetConfig) extends lil
       maxAge = if maxAge.has(0) then none else maxAge.orElse(baker.maxAge).orElse(86400.some),
       path = "/",
       domain = cookieDomain.some,
-      secure = config.baseUrl.value.startsWith("https:"),
+      secure = isSecure(),
       httpOnly = httpOnly | baker.httpOnly,
-      sameSite = Cookie.SameSite.Lax.some
+      sameSite = sameSte().some
     )
 
   def isRememberMe(req: RequestHeader) = !req.session.get(LilaCookie.noRemember).has("1")

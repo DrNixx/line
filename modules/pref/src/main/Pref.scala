@@ -140,7 +140,7 @@ case class Pref(
 
 object Pref:
 
-  val defaultBgImg = "//lichess1.org/assets/images/background/landscape.jpg"
+  val defaultBgImg = "//live.chess-online.com/assets/images/background/landscape.jpg"
 
   case class BoardPref(
       brightness: Int,

@@ -22,6 +22,7 @@ $recon-height: 2.5rem;
   color: $c-over;
   bottom: 0;
   @include inline-start(0);
+  left: $layout-sidepanel-width-collapsed;
   height: $recon-height;
   padding: 0 1rem;
   border-top-right-radius: 3px;

@@ -51,7 +51,7 @@ case class Location(
     city: Option[String]
 ):
 
-  lazy val id = scalalib.StringOps.slug:
+  lazy val id = lila.common.Slugify.apply:
     List(shortCountry.some, region, city).flatten.mkString("")
 
   def shortCountry: String = ~country.split(',').headOption

@@ -82,35 +82,35 @@ object Tv:
           name = "Top Rated",
           icon = Icon.CrownElite,
           secondsSinceLastMove = freshBlitz,
-          filters = Seq(rated(2150), standard, noBot)
+          filters = Seq(rated(1700), standard, noBot)
         )
     case Bullet
         extends Channel(
           name = S.Bullet.name,
           icon = P.Bullet.icon,
           secondsSinceLastMove = 35,
-          filters = Seq(speed(S.Bullet), rated(2000), standard, noBot)
+          filters = Seq(speed(S.Bullet), rated(1300), standard, noBot)
         )
     case Blitz
         extends Channel(
           name = S.Blitz.name,
           icon = P.Blitz.icon,
           secondsSinceLastMove = freshBlitz,
-          filters = Seq(speed(S.Blitz), rated(2000), standard, noBot)
+          filters = Seq(speed(S.Blitz), rated(1300), standard, noBot)
         )
     case Rapid
         extends Channel(
           name = S.Rapid.name,
           icon = P.Rapid.icon,
           secondsSinceLastMove = 60 * 5,
-          filters = Seq(speed(S.Rapid), rated(1800), standard, noBot)
+          filters = Seq(speed(S.Rapid), rated(1100), standard, noBot)
         )
     case Classical
         extends Channel(
           name = S.Classical.name,
           icon = P.Classical.icon,
           secondsSinceLastMove = 60 * 8,
-          filters = Seq(speed(S.Classical), rated(1650), standard, noBot)
+          filters = Seq(speed(S.Classical), rated(1050), standard, noBot)
         )
     case Chess960
         extends Channel(
@@ -173,7 +173,7 @@ object Tv:
           name = S.UltraBullet.name,
           icon = P.UltraBullet.icon,
           secondsSinceLastMove = 20,
-          filters = Seq(speed(S.UltraBullet), rated(1600), standard, noBot)
+          filters = Seq(speed(S.UltraBullet), rated(1000), standard, noBot)
         )
     case Bot
         extends Channel(

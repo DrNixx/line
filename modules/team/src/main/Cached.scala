@@ -19,7 +19,7 @@ final class Cached(
     compute = teamRepo.light,
     default = _ => none,
     strategy = Syncache.Strategy.WaitAfterUptime(20.millis),
-    expireAfter = Syncache.ExpireAfter.Write(10.minutes)
+    expireAfter = Syncache.ExpireAfter.Write(5.minutes)
   )
 
   val async = LightTeam.Getter(lightCache.async)
@@ -61,7 +61,7 @@ final class Cached(
           Team.IdsStr(~doc.flatMap(_.getAsOpt[List[TeamId]]("ids"))),
     default = _ => Team.IdsStr.empty,
     strategy = Syncache.Strategy.WaitAfterUptime(20.millis),
-    expireAfter = Syncache.ExpireAfter.Write(40.minutes)
+    expireAfter = Syncache.ExpireAfter.Write(5.minutes)
   )
 
   export teamIdsCache.{ async as teamIds, invalidate as invalidateTeamIds, sync as syncTeamIds }
@@ -69,7 +69,7 @@ final class Cached(
   def teamIdsSet[U: UserIdOf](user: UserId): Fu[Set[TeamId]] = teamIds(user.id).dmap(_.toSet)
 
   val nbRequests = cacheApi[UserId, Int](32_768, "team.nbRequests"):
-    _.expireAfterAccess(40.minutes)
+    _.expireAfterAccess(5.minutes)
       .maximumSize(131_072)
       .buildAsyncFuture[UserId, Int]: userId =>
         for
@@ -82,4 +82,4 @@ final class Cached(
     _.expireAfterWrite(5.minutes).buildAsyncFuture(id => teamRepo.forumAccess(id).dmap(_ | Access.None))
 
   val unsubs = cacheApi[TeamId, Int](512, "team.unsubs"):
-    _.expireAfterWrite(1.hour).buildAsyncFuture(memberRepo.countUnsub)
+    _.expireAfterWrite(10.minutes).buildAsyncFuture(memberRepo.countUnsub)

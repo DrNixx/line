@@ -60,12 +60,13 @@ Allow: /game/export/gif/thumbnail/
     })
 
   val externalLinks = Map(
-    "mastodon" -> "https://mastodon.online/@lichess",
-    "github"   -> "https://github.com/lichess-org",
-    "discord"  -> "https://discord.gg/lichess",
-    "bluesky"  -> "https://bsky.app/profile/lichess.org",
-    "youtube"  -> "https://youtube.com/@LichessDotOrg",
-    "twitch"   -> "https://www.twitch.tv/lichessdotorg"
+    "vk"       -> "https://vk.com/chessonlineru",
+    "discord"  -> "https://discord.gg/YCURk8P",
+    "telegram" -> "https://t.me/ChessOnlineCom",
+    "ok"       -> "https://ok.ru/group/59096571052079",
+    "twitter"  -> "https://twitter.com/playschess",
+    "facebook" -> "https://www.facebook.com/ChessOnline",
+    "twitch"   -> "https://www.twitch.tv/chessonlinecom"
   )
 
   def legacyQaQuestion(id: Int) =
