@@ -43,7 +43,16 @@ object Line:
   val titleSep    = '~'
 
   private[chat] val invalidLine =
-    UserLine(UserId(""), UserName(""), None, false, false, "[invalid character]", troll = false, deleted = true)
+    UserLine(
+      UserId(""),
+      UserName(""),
+      None,
+      false,
+      false,
+      "[invalid character]",
+      troll = false,
+      deleted = true
+    )
 
   private[chat] given lineHandler: BSONHandler[lila.core.chat.Line] =
     BSONStringHandler.as[lila.core.chat.Line](
@@ -70,8 +79,8 @@ object Line:
       val flair   = sep == flairChar || sep == patronFlairChar
       val (title, name, id) = username.split(titleSep) match
         case Array(title, name, id) => (PlayerTitle.get(title), UserName(name), UserId(id))
-        case Array(name, id) => (none, UserName(name), UserId(id))
-        case _                  => (none, UserName(username), UserId(username))
+        case Array(name, id)        => (none, UserName(name), UserId(id))
+        case _                      => (none, UserName(username), UserId(username))
       UserLine(id, name, title, patron, flair, text, troll = troll, deleted = deleted).some
     case _ => none
   def userLineToStr(x: UserLine): String =

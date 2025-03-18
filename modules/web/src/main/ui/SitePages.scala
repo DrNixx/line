@@ -32,7 +32,7 @@ final class SitePages(helpers: Helpers):
       a(activeCls("privacy"), href := "https://passport.chess-online.com/rules/privacy")(
         trans.site.privacy()
       ),
-      a(activeCls("title"), href := routes.TitleVerify.index)("Title verification"),
+      a(activeCls("title"), href := routes.TitleVerify.index)("Проверка звания"),
       sep,
       a(activeCls("source"), href := "https://github.com/DrNixx/line")(trans.site.sourceCode()),
       sep,

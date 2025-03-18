@@ -10,9 +10,9 @@ import lila.core.security.LilaCookie
 final class LilaCookie(baker: SessionCookieBaker, config: NetConfig) extends lila.core.security.LilaCookie:
 
   private val domainRegex = """\.[^.]++\.[^.]++$""".r
- 
-  private val cleanDomain =  config.domain.value.split(":").head
- 
+
+  private val cleanDomain = config.domain.value.split(":").head
+
   private val cookieDomain = domainRegex.findFirstIn(cleanDomain).getOrElse(cleanDomain)
 
   def makeSessionId(using RequestHeader): Cookie = session(LilaCookie.sessionId, generateSessionId())
@@ -44,7 +44,7 @@ final class LilaCookie(baker: SessionCookieBaker, config: NetConfig) extends lil
 
   private def isSecure() = config.baseUrl.value.startsWith("https:")
 
-  private def sameSte() = 
+  private def sameSte() =
     if isSecure() then Cookie.SameSite.None
     else Cookie.SameSite.Lax
 

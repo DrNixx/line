@@ -36,7 +36,7 @@ final class TitleModUi(helpers: Helpers)(ui: TitleUi)(using NetDomain):
       .js(esmInitBit("titleRequest") ++ Granter.opt(_.UserModView).so(Esm("mod.user"))):
         main(cls := "box box-pad page title-mod")(
           div(cls := "box__top")(
-            h1("Title verification by ", userLink(user), " ", showStatus(req.status)),
+            h1("Проверка звания для ", userLink(user), " ", showStatus(req.status)),
             div(cls := "box__top__actions")(
               a(
                 cls  := "button button-empty mod-zone-toggle",

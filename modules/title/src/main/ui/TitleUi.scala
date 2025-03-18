@@ -20,7 +20,7 @@ final class TitleUi(helpers: Helpers)(picfitUrl: lila.core.misc.PicfitUrl):
         br,
         br,
         div(style := "text-align: center;")(
-          a(cls := "button button-fat", href := routes.TitleVerify.form)("Verify your title")
+          a(cls := "button button-fat", href := routes.TitleVerify.form)("Проверить моё звание")
         )
       )
 
@@ -30,7 +30,7 @@ final class TitleUi(helpers: Helpers)(picfitUrl: lila.core.misc.PicfitUrl):
         h1(cls := "box__top")(page.title),
         postForm(cls := "form3", action := routes.TitleVerify.create)(
           dataForm(form),
-          form3.action(form3.submit("Next"))
+          form3.action(form3.submit("Далее"))
         )
       )
 
@@ -42,7 +42,7 @@ final class TitleUi(helpers: Helpers)(picfitUrl: lila.core.misc.PicfitUrl):
           standardFlash,
           showStatus(req),
           if req.status.is(_.approved)
-          then a(href := routes.TitleVerify.form)("Make a new title request")
+          then a(href := routes.TitleVerify.form)("Новый запрос на проверку")
           else if req.status.is(_.rejected)
           then emptyFrag
           else showForms(req, form)
@@ -54,31 +54,31 @@ final class TitleUi(helpers: Helpers)(picfitUrl: lila.core.misc.PicfitUrl):
         imageByTag(
           req,
           "idDocument",
-          name = "Identity document",
+          name = "Документ",
           help = div(
-            p("ID card, passport or driver's license."),
+            p("Паспорт или водительское удостоверение."),
             p(trans.streamer.maxSize(s"${lila.memo.PicfitApi.uploadMaxMb}MB."))
           )
         ),
         imageByTag(
           req,
           "selfie",
-          name = "Your picture",
+          name = "Ваше изображение",
           help = div(
-            p("""A picture of yourself holding up a piece of paper, with the required text:"""),
-            pre("""Official Lichess verification
-My Lichess account is [your username]
-Today's date is [current date]""")
+            p("""Фотография, на которой вы держите лист бумаги с требуемым текстом:"""),
+            pre("""Официальная проверка Chess-Online
+Мой аккаунт на Chess-Online: [ваше имя пользователя или ID]
+Сегодняшняя дата: [текущая дата]""")
           )
         )
       ),
       postForm(cls := "form3", action := routes.TitleVerify.update(req.id))(
         dataForm(form),
-        form3.action(form3.submit("Update and send for review"))
+        form3.action(form3.submit("Обновить и отправить на проверку"))
       ),
       postForm(cls := "form3", action := routes.TitleVerify.cancel(req.id))(
         form3.action(
-          form3.submit("Cancel request and delete form data", icon = Icon.Trash.some)(
+          form3.submit("Отменить запрос и удалить данные формы", icon = Icon.Trash.some)(
             cls := "button-red button-empty yes-no-confirm"
           )
         )(cls := "title__cancel")
@@ -91,17 +91,18 @@ Today's date is [current date]""")
       statusFlair(req),
       div(cls := "title__status__body")(
         req.status match
-          case Status.building => frag("Please upload the required documents to confirm your identity.")
+          case Status.building =>
+            frag("Пожалуйста, загрузите необходимые документы для подтверждения вашей личности.")
           case Status.pending(_) =>
             frag(
-              h2("All set! Your request is pending."),
-              "A moderator will review it shortly. You will receive a Lichess message once it is processed."
+              h2("Все готово! Ваш запрос находится на рассмотрении."),
+              "Модератор рассмотрит его в ближайшее время. Вы получите сообщение Chess-Online, как только оно будет обработано."
             )
           case Status.approved =>
-            h2("Your ", nbsp, userTitleTag(req.data.title), nbsp, " title has been confirmed!")
-          case Status.rejected    => h2("Your request has been rejected.")
-          case Status.imported    => h2("Your request has been archived.")
-          case Status.feedback(t) => frag("Moderator feedback:", br, br, strong(t))
+            h2("Ваше ", nbsp, userTitleTag(req.data.title), nbsp, " звание было подтверждено!")
+          case Status.rejected    => h2("Ваш запрос был отклонен.")
+          case Status.imported    => h2("Ваш запрос был заархивирован.")
+          case Status.feedback(t) => frag("Комментарии модератора:", br, br, strong(t))
       )
     )
 
@@ -125,25 +126,25 @@ Today's date is [current date]""")
           form3.select(
             field,
             availableTitles.map(t => t -> t.value),
-            default = "Select your title".some
+            default = "Выберите Ваше звание".some
           ),
         form3.group(
           form("realName"),
-          "Full real name",
+          "Полное настоящее ФИО",
           half = true
         )(form3.input(_)(autofocus))
       ),
       form3.split(
         form3.group(
           form("fideId"),
-          "Your FIDE ID or profile URL",
-          help = frag("If you have one.").some,
+          "Ваш идентификатор ФИДЕ или URL-адрес профиля",
+          help = frag("Если есть.").some,
           half = true
         )(form3.input(_)),
         form3.group(
           form("federationUrl"),
-          "Your national federation profile URL",
-          help = frag("If you have one.").some,
+          "URL-адрес вашего профиля в национальной федерации",
+          help = frag("Если есть.").some,
           half = true
         )(form3.input(_))
       ),
@@ -152,18 +153,18 @@ Today's date is [current date]""")
           if form("public").value.isDefined || form.hasErrors
           then form("public")
           else form("public").copy(value = "true".some),
-          frag("Public account"),
+          frag("Публичный аккаунт"),
           help = frag(
-            "Makes your real name public. Required for coaching, streaming, and prize tournaments."
+            "Сделать Ваше настоящее имя публичным. Требуется для тренеров, стриминга и призовых турниров."
           ).some,
           half = true
         ),
         form3.checkbox(
           form("coach"),
-          frag("Create a coach profile"),
+          frag("Создать профиль тренера"),
           help = frag(
-            "Offer your services as a coach, and appear in the ",
-            a(href := routes.Coach.all())("coach directory"),
+            "Предложите свои услуги в качестве тренера и появитесь в ",
+            a(href := routes.Coach.all())("списке тренеров"),
             "."
           ).some,
           half = true
@@ -171,8 +172,8 @@ Today's date is [current date]""")
       ),
       form3.group(
         form("comment"),
-        "Comment",
-        help = frag("Optional additional information for the moderators.").some,
+        "Комментарии",
+        help = frag("Необязательная дополнительная информация для модераторов.").some,
         half = true
       )(form3.textarea(_)(rows := 4))
     )

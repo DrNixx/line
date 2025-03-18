@@ -9,7 +9,7 @@ final class TitleVerify(env: Env, cmsC: => Cms, reportC: => report.Report, userC
   import env.title.api
   import views.title.ui
 
-  private def inSiteMenu(title: String = "Your title verification")(using Context) =
+  private def inSiteMenu(title: String = "Проверка Вашего звания")(using Context) =
     views.site.ui.SitePage(title, "title", "page box box-pad force-ltr").css("bits.titleRequest")
 
   def index = Auth { _ ?=> me ?=>

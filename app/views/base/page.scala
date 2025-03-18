@@ -80,12 +80,10 @@ object page:
             raw("""<meta content="noindex, nofollow" name="robots">""")
           ,
           noTranslate,
-          
           (!ctx.data.error && netConfig.isProd).option(
             frag:
               ctx.userId.isEmpty.option(autoLogin(ctx.nonce))
           ),
-          
           p.openGraph.map(lila.web.ui.openGraph),
           p.atomLinkTag | dailyNewsAtom,
           (pref.bg == lila.pref.Pref.Bg.TRANSPARENT).option(pref.bgImgOrDefault).map { loc =>
