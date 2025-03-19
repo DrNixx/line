@@ -66,7 +66,7 @@ SERVER_BUILD_URL = "https://api.github.com/repos/DrNixx/line/actions/workflows/s
 ARTIFACT_DIR = "/home/lichess-artifacts"
 
 
-def curl_cli(command, *, url="https://lichess.org/run/cli", token_file=".lila-cli"):
+def curl_cli(command, *, url="https://live.chess-online.com/run/cli", token_file=".lila-cli"):
     return f"curl --fail -X POST --data {shlex.quote(command)} {shlex.quote(url)} -H @{token_file}"
 
 
