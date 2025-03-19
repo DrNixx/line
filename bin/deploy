@@ -112,6 +112,8 @@ PROFILES = {
     "snafu-server": server_profile("root@snafu.lichess.ovh", post="systemctl restart lichess-stage", stage=True),
     "testy-assets": asset_profile("root@snafu.lichess.ovh", deploy_dir="/home/testy/deploy", post=curl_cli("change asset version", url="https://testy.lichess.dev/run/cli", token_file="/home/testy/.testy-cli"), stage=True, user="testy"),
     "testy-server": server_profile("root@snafu.lichess.ovh", deploy_dir="/home/testy/deploy", post="systemctl restart testy", stage=True, user="testy", symlinks=None),
+    "stage-server": server_profile("root@stage.chess-online.com", deploy_dir="/home/lichess"),
+    "stage-assets": asset_profile("root@stage.chess-online.com", deploy_dir="/home/lichess"),
     "arena-server": server_profile("root@arena.chess-online.com", deploy_dir="/home/lichess"),
     "arena-assets": asset_profile("root@arena.chess-online.com", deploy_dir="/home/lichess"),
 }
