@@ -281,7 +281,7 @@ def deploy_script(profile, session, run, url):
         "echo \\# Unpacking ...",
         f"unzip -q -o {artifact_zip} -d {artifact_unzipped}",
         f"mkdir -p {artifact_unzipped}/d",
-        f"tar -xf {artifact_unzipped}/*.tar.zst -C {artifact_unzipped}/d",
+        f"tar -xf --use-compress-program=unzstd {artifact_unzipped}/*.tar.zst -C {artifact_unzipped}/d",
         f"cat {artifact_unzipped}/d/commit.txt",
         "echo",
         f"echo \\# chown -R {user_group} {artifact_unzipped}",
