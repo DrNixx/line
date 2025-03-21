@@ -2,8 +2,8 @@
 <resources>
   <string name="donate">Поддержать проект</string>
   <string name="donateAsX">Пожертвовать как %s</string>
-  <string name="lichessPatron">Chess-Online-спонсор</string>
-  <string name="patronSince" comment="string is a date">Покровитель с %s</string>
+  <string name="lichessPatron">Chess-Online-активист</string>
+  <string name="patronSince" comment="string is a date">Активист с %s</string>
   <string name="freeAccount">Бесплатный аккаунт</string>
   <string name="becomePatron">Поддержать Chess-Online</string>
   <string name="xBecamePatron">%s стал спонсором Chess-Online</string>
@@ -13,12 +13,12 @@
     <item quantity="many">%1$s продлил спонсорство Chess-Online на %2$s месяцев</item>
     <item quantity="other">%1$s продлил спонсорство Chess-Online на %2$s месяцев</item>
   </plurals>
-  <string name="newPatrons">Новые спонсоры</string>
+  <string name="newPatrons">Новые активисты</string>
   <string name="freeChess">Бесплатные шахматы для всех, навсегда!</string>
-  <string name="noAdsNoSubs">Без рекламы, без подписок, но с открытым исходным кодом и преданностью делу.</string>
+  <string name="noAdsNoSubs">С открытым исходным кодом и преданностью делу.</string>
   <string name="thankYou">Благодарим вас за пожертвование!</string>
-  <string name="youHaveLifetime">У вас есть пожизненная учётная запись спонсора. Это очень круто!</string>
-  <string name="patronUntil">Ваш аккаунт покровителя действует до %s.</string>
+  <string name="youHaveLifetime">У вас есть пожизненная учётная запись активиста. Это очень круто!</string>
+  <string name="patronUntil">Ваш аккаунт активиста действует до %s.</string>
   <string name="ifNotRenewedThenAccountWillRevert">Если не будет обновляться, то учётная запись опять станет обычной.</string>
   <string name="weAreNonProfit">Мы некоммерческая ассоциация, потому что мы считаем, что все должны иметь бесплатный и свободный доступ к шахматной платформе мирового класса.</string>
   <string name="weRelyOnSupport">Мы полагаемся на поддержку таких людей как вы. Если вам нравится Chess-Online, пожалуйста, поддержите нас, сделав пожертвование и став его спонсором!</string>
@@ -26,15 +26,15 @@
   <string name="payLifetimeOnce">Заплатите %s один раз. Станьте спонсором навсегда!</string>
   <string name="lifetimePatron">Пожизненный покровитель Chess-Online</string>
   <string name="monthly">Ежемесячно</string>
-  <string name="recurringBilling">Регулярные платежи продлевают ваше \"крыло спонсора\" каждый месяц.</string>
+  <string name="recurringBilling">Регулярные платежи продлевают ваше \"крыло активиста\" каждый месяц.</string>
   <string name="onetime">Однократно</string>
-  <string name="singleDonation">Одно пожертвование, которое даст вам \"крыло спонсора\"на один месяц.</string>
+  <string name="singleDonation">Одно пожертвование, которое даст вам \"крыло активиста\"на один месяц.</string>
   <string name="otherAmount">Другое</string>
   <string name="pleaseEnterAmountInX">Пожалуйста, укажите сумму в %s</string>
   <string name="withCreditCard">Кредитная карта</string>
   <string name="logInToDonate">Войдите, чтобы внести пожертвование</string>
   <string name="weAreSmallTeam">Мы небольшая команда, поэтому ваша поддержка имеет огромное значение!</string>
-  <string name="celebratedPatrons">Выдающиеся спонсоры, благодаря которым существует Chess-Online</string>
+  <string name="celebratedPatrons">Выдающиеся активисты, благодаря которым существует Chess-Online</string>
   <string name="whereMoneyGoes">Куда пойдут деньги от поддержки?</string>
   <string name="serversAndDeveloper">Прежде всего, мощные серверы.
 Также мы оплачиваем полный рабочий день разработчику: %s, основателю Chess-Online.</string>
@@ -65,8 +65,8 @@
   <string name="nextPayment">Следующий платёж</string>
   <string name="youWillBeChargedXOnY">%2$s с вашего счета будет списано %1$s.</string>
   <string name="makeAdditionalDonation">Сделайте дополнительное пожертвование сейчас</string>
-  <string name="giftPatronWingsShort">Подарить крылья Спонсора</string>
-  <string name="giftPatronWings">Подарить крылья спонсора другому игроку</string>
+  <string name="giftPatronWingsShort">Подарить крылья Активиста</string>
+  <string name="giftPatronWings">Подарить крылья активиста другому игроку</string>
   <string name="update">Обновить</string>
   <string name="changeMonthlyAmount">Изменить ежемесячную сумму (%s)</string>
   <string name="cancelSupport">отменить поддержку</string>
@@ -79,7 +79,7 @@
   <string name="date">Дата</string>
   <string name="amount">Сумма</string>
   <string name="transactionCompleted">Ваша транзакция завершена, и вам на почту отправлена квитанция о пожертвовании.</string>
-  <string name="permanentPatron">Теперь у вас учётная запись спонсора пожизненно.</string>
+  <string name="permanentPatron">Теперь у вас учётная запись активисту пожизненно.</string>
   <string name="checkOutProfile">Посмотрите свою страницу профиля!</string>
   <string name="nowLifetime">Теперь вы пожизненный покровитель Chess-Online!</string>
   <string name="nowOneMonth">Теперь вы покровитель Chess-Online на один месяц!</string>

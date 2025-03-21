@@ -92,7 +92,7 @@ final class AccountUi(helpers: Helpers):
             trans.site.kidMode()
           ),
           div(cls := "sep"),
-          a(activeCls("username"), href := routes.Account.username)(
+          a(activeCls("username"), href := "https://passport.chess-online.com/ru-ru/profile/edit-username")(
             trans.site.changeUsername()
           ),
           Granter
@@ -102,14 +102,11 @@ final class AccountUi(helpers: Helpers):
                 trans.coach.lichessCoach()
               )
             ),
-          a(activeCls("password"), href := routes.Account.passwd)(
+          a(activeCls("password"), href := "https://passport.chess-online.com/ru-ru/manage/change-password")(
             trans.site.changePassword()
           ),
-          a(activeCls("email"), href := routes.Account.email)(
+          a(activeCls("email"), href := "https://passport.chess-online.com/ru-ru/manage/change-email")(
             trans.site.changeEmail()
-          ),
-          a(activeCls("twofactor"), href := routes.Account.twoFactor)(
-            trans.tfa.twoFactorAuth()
           ),
           a(activeCls("oauth.token"), href := routes.OAuthToken.index)(
             trans.oauthScope.apiAccessTokens()
@@ -127,7 +124,7 @@ final class AccountUi(helpers: Helpers):
             )
           ),
           div(cls := "sep"),
-          a(activeCls("close"), href := routes.Account.close)(
+          a(activeCls("close"), href := "https://passport.chess-online.com/ru-ru/manage/delete-account")(
             trans.settings.closeAccount()
           )
         )

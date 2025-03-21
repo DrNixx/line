@@ -169,8 +169,9 @@ final class SecurityApi(
     else scoped.copy(me = stripRolesOf(scoped.me))
 
   private def stripRolesOfCookieUser(me: Me) =
-    if mode.isProd && me.totpSecret.isEmpty then stripRolesOf(me)
-    else me
+    // if mode.isProd && me.totpSecret.isEmpty then stripRolesOf(me)
+    // else me
+    me
 
   private def stripRolesOf(me: Me) =
     if me.roles.nonEmpty
