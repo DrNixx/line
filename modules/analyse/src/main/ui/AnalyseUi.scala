@@ -93,7 +93,7 @@ final class AnalyseUi(helpers: Helpers)(externalEngineEndpoint: String):
       .obj(
         "menu" -> Json.obj(
           "getPgn" -> Json.obj("enabled" -> getPgn)
-        )
+        ),
+        "lichess" -> "https://live.chess-online.com"
       )
       .add("orientation", orientation.map(_.name))
-      .add("lichess", "https://live.chess-online.com")
