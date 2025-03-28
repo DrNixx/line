@@ -96,3 +96,4 @@ final class AnalyseUi(helpers: Helpers)(externalEngineEndpoint: String):
         )
       )
       .add("orientation", orientation.map(_.name))
+      .add("lichess", "https://live.chess-online.com")
