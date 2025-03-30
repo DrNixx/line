@@ -76,14 +76,6 @@ object header:
           a(href := routes.Study.byOwnerDefault(u.id), cls := "nm-item")(
             splitNumber(trans.site.`nbStudies`.pluralSame(info.nbStudies))
           ),
-          ctx.kid.no.option(
-            a(
-              cls  := "nm-item",
-              href := routes.ForumPost.search("user:" + u.username, 1).url
-            )(
-              splitNumber(trans.site.nbForumPosts.pluralSame(info.nbForumPosts))
-            )
-          ),
           (ctx.kid.no && (info.ublog.exists(_.nbPosts > 0) || ctx.is(u))).option(
             a(
               cls  := "nm-item",
@@ -140,7 +132,7 @@ object header:
                 ),
               a(
                 cls      := "text",
-                href     := s"${routes.UserAnalysis.index}#explorer/${u.username}",
+                href     := s"${routes.UserAnalysis.index}#explorer/${u.id}",
                 dataIcon := Icon.Book
               )(trans.site.openingExplorer.txt()),
               a(
@@ -151,7 +143,7 @@ object header:
               (ctx.isAuth && ctx.kid.no && ctx.isnt(u)).option(
                 a(
                   cls      := "text",
-                  href     := s"${routes.Report.form}?username=${u.username}",
+                  href     := s"${routes.Report.form}?username=${u.id}",
                   dataIcon := Icon.CautionTriangle
                 )(trans.site.reportXToModerators.txt(u.username))
               ),
@@ -159,7 +151,7 @@ object header:
                 a(href := routes.Relation.following(u.id), dataIcon := Icon.User)(trans.site.friends())
               ),
               (ctx.is(u) || isGranted(_.BoostHunter)).option(
-                a(href := s"${routes.User.opponents}?u=${u.username}", dataIcon := Icon.User)(
+                a(href := s"${routes.User.opponents}?u=${u.id}", dataIcon := Icon.User)(
                   trans.site.favoriteOpponents()
                 )
               )

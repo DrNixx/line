@@ -292,7 +292,7 @@ final class AccountPages(helpers: Helpers, ui: AccountUi, flagApi: lila.core.use
       div(cls := "security personal-data box box-pad")(
         h1(cls := "box__top")("My personal data"),
         div(cls := "personal-data__header")(
-          p("Here is all personal information Lichess has about ", userLink(u)),
+          p("Here is all personal information Chess-Online has about ", userLink(u)),
           a(cls := "button", href := s"${routes.Account.data}?user=${u.id}&text=1", downloadAttr):
             trans.site.download()
         )

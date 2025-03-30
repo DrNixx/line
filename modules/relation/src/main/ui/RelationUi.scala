@@ -54,7 +54,7 @@ final class RelationUi(helpers: Helpers):
       (ctx.isnt(user) && !blocked && !blocks).option(
         a(
           cls      := "text",
-          href     := s"${routes.Lobby.home}?user=${user.name}#friend",
+          href     := s"${routes.Lobby.home}?user=${user.id}#friend",
           dataIcon := Icon.Swords
         )(trans.challenge.challengeToPlay.txt())
       ),

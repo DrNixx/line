@@ -76,7 +76,7 @@ final class TutorOpening(helpers: Helpers, bits: TutorBits, perfUi: PerfUi):
                 cls      := "button button-no-upper text",
                 dataIcon := Icon.Book,
                 href := s"${routes.UserAnalysis
-                    .pgn(report.family.anyOpening.pgn.value.replace(" ", "_"))}#explorer/${user.username}"
+                    .pgn(report.family.anyOpening.pgn.value.replace(" ", "_"))}#explorer/${user.id}"
               )("Personal opening explorer"),
               puzzle
             )
@@ -136,7 +136,7 @@ final class TutorOpening(helpers: Helpers, bits: TutorBits, perfUi: PerfUi):
             a(
               cls      := "tutor__openings__color__explorer button button-no-upper text",
               dataIcon := Icon.Book,
-              href     := s"${routes.UserAnalysis.index}?color=${color.name}#explorer/${user.username}"
+              href     := s"${routes.UserAnalysis.index}?color=${color.name}#explorer/${user.id}"
             )("Personal explorer as ", color.name)
           )
         })

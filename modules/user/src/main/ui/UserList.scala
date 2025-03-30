@@ -165,7 +165,7 @@ final class UserList(helpers: Helpers, bits: UserBits):
           dataIcon := Icon.Swords,
           cls      := List("bots__list__entry__play button button-empty text" -> true),
           st.title := trans.challenge.challengeToPlay.txt(),
-          href     := s"${routes.Lobby.home}?user=${u.username}#friend"
+          href     := s"${routes.Lobby.home}?user=${u.id}#friend"
         )(trans.site.play())
       )
   )

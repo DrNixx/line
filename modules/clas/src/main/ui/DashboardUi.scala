@@ -460,7 +460,7 @@ final class DashboardUi(helpers: Helpers, ui: ClasUi)(using NetDomain):
             dataIcon := Icon.Swords,
             cls      := List("button button-empty text" -> true, "disabled" -> !online),
             title    := trans.challenge.challengeToPlay.txt(),
-            href     := online.option(s"${routes.Lobby.home}?user=${user.username}#friend")
+            href     := online.option(s"${routes.Lobby.home}?user=${user.id}#friend")
           )(trans.site.play())
         )
 
