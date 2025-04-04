@@ -28,9 +28,10 @@ object HTTPRequest:
     isXhr(req) && referer(req).exists(_.contains(s"${req.host}/embed/"))
 
   private val appOrigins = List(
-    "capacitor://localhost", // ios
-    "ionic://localhost",     // ios
-    "http://localhost"       // android/dev/flutter
+    "capacitor://localhost",   // ios
+    "ionic://localhost",       // ios
+    "http://localhost",        // android/dev/flutter
+    "https://app-218606.games" // yandex games
   )
 
   def appOrigin(req: RequestHeader): Option[String] =
@@ -52,9 +53,11 @@ object HTTPRequest:
   val isMobileBrowser                              = UaMatcher("""(?i)iphone|ipad|ipod|android.+mobile""")
   def isLichessMobile(ua: UserAgent): Boolean      = ua.value.startsWith("Lichess Mobile/")
   def isLichessMobile(req: RequestHeader): Boolean = userAgent(req).exists(isLichessMobile)
-  def isLichobile(req: RequestHeader)              = userAgent(req).exists(_.value.contains("Lichobile/"))
-  def isLichobileDev(req: RequestHeader) = // lichobile in a browser can't set its user-agent
-    isLichobile(req) || (appOrigin(req).isDefined && !isLichessMobile(req))
+  def isLichobile(req: RequestHeader) = 
+    userAgent(req).exists(_.value.contains("Lichobile/")) || (appOrigin(req).isDefined && !isLichessMobile(req))
+  // def isLichobileDev(req: RequestHeader) = // lichobile in a browser can't set its user-agent
+  // isLichobile(req) || (appOrigin(req).isDefined && !isLichessMobile(req))
+  
   def isAndroid                     = UaMatcher("Android")
   def isLitools(req: RequestHeader) = userAgent(req).has(UserAgent("litools"))
 
