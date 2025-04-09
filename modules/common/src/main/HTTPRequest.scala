@@ -31,6 +31,7 @@ object HTTPRequest:
     "capacitor://localhost",   // ios
     "ionic://localhost",       // ios
     "http://localhost",        // android/dev/flutter
+    "https://localhost",       // yandex games
     "https://app-218606.games" // yandex games
   )
 
