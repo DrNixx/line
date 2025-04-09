@@ -277,7 +277,7 @@ object contact:
             ),
             Leaf(
               "contact-broadcast",
-              "Broadcast a tournament on Lichess",
+              "Broadcast a tournament on Chess-Online Arena",
               frag(
                 p(
                   "If you want to officially broadcast a tournament on Chess-Online, ",

@@ -90,8 +90,8 @@ export default function (token: string): void {
   /**
    * Global Variables for DGT Board Connection (JACM)
    */
-  let localBoard: Chess = startingPosition(); //Board with valid moves played on Lichess and DGT Board. May be half-move behind Lichess or half-move in advance
-  let DGTgameId = ''; //Used to track if DGT board was setup already with the lichess currentGameId
+  let localBoard: Chess = startingPosition(); //Board with valid moves played on Chess-Online Arena and DGT Board. May be half-move behind Lichess or half-move in advance
+  let DGTgameId = ''; //Used to track if DGT board was setup already with the Arena currentGameId
   let boards = Array<{ serialnr: string; state: string }>(); //An array to store all the board recognized by DGT LiveChess
   let liveChessConnection: WebSocket; //Connection Object to LiveChess through websocket
   let isLiveChessConnected = false; //Used to track if a board there is a connection to DGT Live Chess
@@ -1058,9 +1058,9 @@ export default function (token: string): void {
   }
 
   /**
-   * Synchronizes the position on Lichess with the position on the board
+   * Synchronizes the position on Arena with the position on the board
    * If the position does not match, no moves will be received from LiveChess
-   * @param chess - The chessops Chess object with the position on Lichess
+   * @param chess - The chessops Chess object with the position on Arena
    */
   async function sendBoardToLiveChess(chess: Chess) {
     const fen = makeFen(chess.toSetup());

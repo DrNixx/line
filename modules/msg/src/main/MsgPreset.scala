@@ -14,7 +14,7 @@ object MsgPreset:
   def maxFollow(username: UserName, max: Int) =
     Msg(
       name = "Follow limit reached!",
-      text = s"""Sorry, you can't follow more than $max players on Lichess.
+      text = s"""Sorry, you can't follow more than $max players on Chess-Online Arena.
 To follow new players, you must first unfollow some on $baseUrl/@/$username/following.
 
 Thank you for your understanding."""

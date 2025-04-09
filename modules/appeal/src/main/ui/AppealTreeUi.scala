@@ -93,7 +93,7 @@ final class AppealTreeUi(helpers: Helpers, ui: AppealUi)(
               "It is important to be honest from the start. If at first you deny doing anything wrong, we'll treat your appeal accordingly, and we will simply disregard any changes in your position. In other words, don't try to deny things at first only to confess to something later on."
             ),
             p(
-              "Note that if your appeal is denied, you are not permitted to open additional accounts on Lichess."
+              "Note that if your appeal is denied, you are not permitted to open additional accounts on Chess-Online Arena."
             ),
             newAppeal(deny)
           )

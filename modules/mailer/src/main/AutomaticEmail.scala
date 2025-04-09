@@ -51,8 +51,8 @@ The Lichess team"""
       body = alsoSendAsPrivateMessage(user): _ =>
         s"""Hello,
 
-Thank you for confirming your $title title on Lichess.
-It is now visible on your profile page: $baseUrl/@/${user.username}.
+Thank you for confirming your $title title on Chess-Online Arena.
+It is now visible on your profile page: $baseUrl/@/${user.id}.
 
 $regards
 """
@@ -184,7 +184,7 @@ To make a new donation, head to https://www.chess-online.com/ru-ru/membership/cl
           .so: email =>
             given Lang = userLang(userWithEmail.user)
             val hello =
-              "Hello and thank you for playing correspondence chess on Lichess!"
+              "Hello and thank you for playing correspondence chess on Chess-Online Arena!"
             val disableSettingNotice =
               "You are receiving this email because you have correspondence email notification turned on. You can turn it off in your settings:"
             val disableLink = s"$baseUrl/account/preferences/notification#correspondence-email-notif"

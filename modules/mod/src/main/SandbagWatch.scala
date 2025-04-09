@@ -127,14 +127,14 @@ private object SandbagWatch:
       name = "Warning: possible sandbagging",
       text =
         """You have lost a couple games after a few moves. Please note that you MUST try to win every rated game.
-  Losing rated games on purpose is called "sandbagging" and is not allowed on Lichess.
+  Losing rated games on purpose is called "sandbagging" and is not allowed on Chess-Online Arena.
 
   Thank you for your understanding."""
     )
     lazy val boostAuto = MsgPreset(
       name = "Warning: possible boosting",
       """You have won a couple of games after a few moves. Please note that both players MUST try to win every game.
-  Taking advantage of opponents losing rated games on purpose is called "boosting" and is not allowed on Lichess.
+  Taking advantage of opponents losing rated games on purpose is called "boosting" and is not allowed on Chess-Online Arena.
 
   Thank you for your understanding."""
     )
