@@ -12,6 +12,7 @@ object ContentSecurityPolicy:
       frameSrc = List(
         "'self'",
         assetDomain.value,
+        "www.chess-online.com",
         "www.youtube.com",
         "player.twitch.tv",
         "player.vimeo.com",

@@ -2,7 +2,7 @@
   ---cols: 1; // ui/lobby/src/main.ts
   grid-area: main;
   display: grid;
-  grid-template-areas: 'app' 'table' 'side' 'blog' 'support' 'feed' 'tv' 'puzzle' 'tours' 'timeline' 'about';
+  grid-template-areas: 'app' 'table' 'side' 'blog' 'support' 'feed' 'tv' 'puzzle' 'tours' 'timeline' 'forums';
   grid-gap: $block-gap;
 
   &__tournaments,
@@ -23,7 +23,7 @@
       'feed     feed'
       'tours    tours'
       'timeline timeline'
-      'about    about';
+      'forums   forums';
 
     &__support {
       display: grid;
@@ -45,7 +45,7 @@
       'tv     support'
       'puzzle feed'
       'tours  tours'
-      'about  about';
+      'forums forums';
 
     &__start {
       margin: 2em 0 0 0;
@@ -73,7 +73,7 @@
       'tv     blog    blog    puzzle'
       'tv     support support puzzle'
       'feed   feed    tours   tours'
-      '.      about   about   .';
+      '.      forums  forums  .';
 
     &__start {
       justify-content: center;
@@ -141,8 +141,8 @@
     grid-area: feed;
   }
 
-  &__about {
-    grid-area: about;
+  &__forums {
+    grid-area: forums;
   }
 
   &__timeline {

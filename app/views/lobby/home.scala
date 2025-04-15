@@ -127,5 +127,14 @@ object home:
             views.feed.lobbyUpdates(lastUpdates)
           ,
           div(cls := "lobby__support")(
+          ),
+          div(cls := "lobby__forums")(
+            iframe(
+              src             := s"https://www.chess-online.com/ru-ru/forums/frame",
+              st.frameborder  := 0,
+              frame.scrolling := "no",
+              widthA          := "100%",
+              heightA         := "500"
+            )
           )
         )
