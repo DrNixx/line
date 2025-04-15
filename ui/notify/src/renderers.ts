@@ -156,7 +156,7 @@ export default function makeRenderers(): Renderers {
 
 const jobDone = (name: string): Renderer => ({
   html: n =>
-    generic(n, '/@/' + n.content.user!.name + '?mod', licon.Agent, [
+    generic(n, '/@/' + n.content.user!.id + '?mod', licon.Agent, [
       h('span', [h('strong', userFullName(n.content.user)), drawTime(n)]),
       h('span', `${name} job complete!`),
     ]),

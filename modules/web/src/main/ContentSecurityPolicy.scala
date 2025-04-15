@@ -13,6 +13,7 @@ object ContentSecurityPolicy:
         "'self'",
         assetDomain.value,
         "www.chess-online.com",
+        "forum.chess-online.com",
         "www.youtube.com",
         "player.twitch.tv",
         "player.vimeo.com",
