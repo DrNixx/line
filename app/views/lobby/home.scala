@@ -135,13 +135,6 @@ object home:
               frame.scrolling := "no",
               widthA          := "100%",
               heightA         := "500"
-            ),
-            iframe(
-              src := s"https://forum.chess-online.com/embed/topics?discourse_embed_id=arena-dblf&per_page=15&template=complete",
-              st.frameborder  := 0,
-              frame.scrolling := "no",
-              widthA          := "1",
-              heightA         := "0"
             )
           )
         )
