@@ -332,14 +332,14 @@ final class Mod(
             env.user.lightUserApi
               .asyncFallback(ongoing.mod)
               .map: mod =>
-                Redirect(routes.Appeal.show(user.username))
+                Redirect(routes.Appeal.show(user.id))
                   .flashFailure(s"Currently processed by ${mod.name}")
           case _ =>
             val f =
               if isAppeal then env.report.api.inquiries.appeal
               else env.report.api.inquiries.spontaneous
             f(Suspect(user)).inject {
-              if isAppeal then Redirect(s"${routes.Appeal.show(user.username)}#appeal-actions")
+              if isAppeal then Redirect(s"${routes.Appeal.show(user.id)}#appeal-actions")
               else redirect(user.id, mod = true)
             }
         }

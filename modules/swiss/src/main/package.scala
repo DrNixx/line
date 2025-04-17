@@ -3,7 +3,7 @@ package lila.swiss
 export lila.core.lilaism.Lilaism.{ *, given }
 export lila.common.extensions.*
 
-val lichessTeamId = TeamId("lichess-swiss")
+val lichessTeamId = TeamId("5197")
 
 private val logger = lila.log("swiss")
 

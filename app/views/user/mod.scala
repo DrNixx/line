@@ -159,7 +159,7 @@ object mod:
                 case Some(appeal) =>
                   td(dataSort := 1)(
                     a(
-                      href := Granter.opt(_.Appeals).option(routes.Appeal.show(o.username).url),
+                      href := Granter.opt(_.Appeals).option(routes.Appeal.show(o.id).url),
                       cls := List(
                         "text"         -> true,
                         "appeal-muted" -> appeal.isMuted

@@ -123,7 +123,7 @@ object inquiry:
           div(
             isGranted(_.SendToZulip).option {
               val url =
-                if in.report.isAppeal then routes.Appeal.sendToZulip(in.user.username)
+                if in.report.isAppeal then routes.Appeal.sendToZulip(in.user.id)
                 else routes.Mod.inquiryToZulip
               postForm(action := url)(
                 submitButton(cls := "fbt")("Send to Zulip")

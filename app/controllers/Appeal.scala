@@ -63,14 +63,14 @@ final class Appeal(env: Env, reportC: => report.Report, userC: => User) extends 
     yield Ok(page)
   }
 
-  def show(username: UserStr) = Secure(_.Appeals) { ctx ?=> me ?=>
-    asMod(username): (appeal, suspect) =>
+  def show(userId: UserId) = Secure(_.Appeals) { ctx ?=> me ?=>
+    asMod(userId): (appeal, suspect) =>
       getModData(suspect).flatMap: modData =>
         Ok.page(views.appeal.discussion.show(appeal, modForm, modData))
   }
 
-  def reply(username: UserStr) = SecureBody(_.Appeals) { ctx ?=> me ?=>
-    asMod(username): (appeal, suspect) =>
+  def reply(userId: UserId) = SecureBody(_.Appeals) { ctx ?=> me ?=>
+    asMod(userId): (appeal, suspect) =>
       bindForm(modForm)(
         err =>
           getModData(suspect).flatMap: modData =>
@@ -84,7 +84,7 @@ final class Appeal(env: Env, reportC: => report.Report, userC: => User) extends 
                 env.report.api.inquiries
                   .toggle(Right(appeal.userId))
                   .inject(Redirect(routes.Appeal.queue()))
-              else Redirect(s"${routes.Appeal.show(username)}#appeal-actions").toFuccess
+              else Redirect(s"${routes.Appeal.show(userId)}#appeal-actions").toFuccess
           yield result
       )
   }
@@ -107,21 +107,21 @@ final class Appeal(env: Env, reportC: => report.Report, userC: => User) extends 
       markedByMe = markedByMe
     )
 
-  def mute(username: UserStr) = Secure(_.Appeals) { _ ?=> _ ?=>
-    asMod(username): (appeal, _) =>
+  def mute(userId: UserId) = Secure(_.Appeals) { _ ?=> _ ?=>
+    asMod(userId): (appeal, _) =>
       (env.appeal.api.toggleMute(appeal) >>
         env.report.api.inquiries.toggle(Right(appeal.userId))).inject(Redirect(routes.Appeal.queue()))
   }
 
-  def sendToZulip(username: UserStr) = Secure(_.SendToZulip) { _ ?=> _ ?=>
-    asMod(username): (_, s) =>
+  def sendToZulip(userId: UserId) = Secure(_.SendToZulip) { _ ?=> _ ?=>
+    asMod(userId): (_, s) =>
       env.irc.api
         .userAppeal(s.user.light)
         .inject(NoContent)
   }
 
-  def snooze(username: UserStr, dur: String) = Secure(_.Appeals) { _ ?=> _ ?=>
-    asMod(username): (appeal, _) =>
+  def snooze(userId: UserId, dur: String) = Secure(_.Appeals) { _ ?=> _ ?=>
+    asMod(userId): (appeal, _) =>
       env.appeal.api.snooze(appeal.id, dur)
       env.report.api.inquiries.toggle(Right(appeal.userId)).inject(Redirect(routes.Appeal.queue()))
   }
@@ -129,9 +129,9 @@ final class Appeal(env: Env, reportC: => report.Report, userC: => User) extends 
   private def getPresets = env.mod.presets.appealPresets.get()
 
   private def asMod(
-      username: UserStr
+      userId: UserId
   )(f: (AppealModel, Suspect) => Fu[Result])(using Context): Fu[Result] =
-    meOrFetch(username)
+    meOrFetch(userId)
       .flatMapz: user =>
         env.appeal.api
           .byId(user)

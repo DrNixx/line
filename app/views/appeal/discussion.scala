@@ -44,7 +44,7 @@ object discussion:
                 submitButton(cls := "button")("Handle this appeal")
               )
             case Some(Inquiry(mod, _)) if ctx.userId.has(mod) =>
-              postForm(action := routes.Appeal.mute(modData.suspect.user.username))(
+              postForm(action := routes.Appeal.mute(modData.suspect.user.id))(
                 if appeal.isMuted then
                   submitButton("Un-mute")(
                     title := "Be notified about user replies again",
