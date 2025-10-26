@@ -28,11 +28,12 @@ object HTTPRequest:
     isXhr(req) && referer(req).exists(_.contains(s"${req.host}/embed/"))
 
   private val appOrigins = List(
-    "capacitor://localhost",   // ios
-    "ionic://localhost",       // ios
-    "http://localhost",        // android/dev/flutter
-    "https://localhost",       // yandex games
-    "https://app-218606.games" // yandex games
+    "capacitor://localhost",    // ios
+    "ionic://localhost",        // ios
+    "http://localhost",         // android/dev/flutter
+    "https://localhost",        // yandex games
+    "https://app-218606.games", // yandex games
+    "https://games.friday.ru"   // friday games
   )
 
   def appOrigin(req: RequestHeader): Option[String] =
