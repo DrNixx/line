@@ -516,31 +516,15 @@ POST  /translation/select              controllers.I18n.select
 
 # Authentication
 GET   /login                           controllers.Auth.login
-POST  /login                           controllers.Auth.authenticate
 GET   /$lang<\w\w\w?>/login            controllers.Auth.loginLang(lang: Language)
 GET   /signin-oidc                     controllers.Auth.signinOidc
 POST  /signin-oidc                     controllers.Auth.signinOidc
 GET   /logout                          controllers.Auth.logoutGet
 POST  /logout                          controllers.Auth.logout
+GET   /signout-oidc                    controllers.Auth.signoutOidc
 GET   /signup                          controllers.Auth.signup
-POST  /signup                          controllers.Auth.signupPost
 GET   /$lang<\w\w\w?>/signup           controllers.Auth.signupLang(lang: Language)
-GET   /signup/check-your-email         controllers.Auth.checkYourEmail
-POST  /signup/fix-email                controllers.Auth.fixEmail
-GET   /signup/confirm/:token           controllers.Auth.signupConfirmEmail(token)
-POST  /signup/confirm/:token           controllers.Auth.signupConfirmEmailPost(token)
-GET   /password/reset                  controllers.Auth.passwordReset
-POST  /password/reset/send             controllers.Auth.passwordResetApply
-GET   /password/reset/sent/:email      controllers.Auth.passwordResetSent(email)
-GET   /password/reset/confirm/:token   controllers.Auth.passwordResetConfirm(token)
-POST  /password/reset/confirm/:token   controllers.Auth.passwordResetConfirmApply(token)
 POST  /auth/set-fp/:fp/:ms             controllers.Auth.setFingerPrint(fp, ms: Int)
-POST  /auth/token                      controllers.Auth.makeLoginToken
-GET   /auth/token/:token               controllers.Auth.loginWithToken(token)
-POST  /auth/token/:token               controllers.Auth.loginWithTokenPost(token, referrer: Option[String])
-GET   /auth/magic-link                 controllers.Auth.magicLink
-POST  /auth/magic-link/send            controllers.Auth.magicLinkApply
-GET   /auth/magic-link/sent            controllers.Auth.magicLinkSent
 
 # Mod
 POST  /mod/:userId/alt/:v              controllers.Mod.alt(userId: UserId, v: Boolean)
@@ -770,32 +754,20 @@ POST  /api/board/*cmd                   controllers.PlayApi.boardCommandPost(cmd
 GET   /api/board/*cmd                   controllers.PlayApi.boardCommandGet(cmd)
 
 # Account
-GET   /account/passwd                  controllers.Account.passwd
-POST  /account/passwd                  controllers.Account.passwdApply
-GET   /account/email                   controllers.Account.email
-POST  /account/email                   controllers.Account.emailApply
-GET   /contact/email-confirm/help      controllers.Account.emailConfirmHelp
-GET   /account/email/confirm/:token    controllers.Account.emailConfirm(token)
 GET   /account/close                   controllers.Account.close
 POST  /account/close                   controllers.Account.closeConfirm
-GET   /account/delete                  controllers.Account.delete
-POST  /account/delete                  controllers.Account.deleteConfirm
-GET   /account/delete/done             controllers.Account.deleteDone
 GET   /account/profile                 controllers.Account.profile
 POST  /account/profile                 controllers.Account.profileApply
-GET   /account/username                controllers.Account.username
-POST  /account/username                controllers.Account.usernameApply
 GET   /account/kid                     controllers.Account.kid
 POST  /account/kid                     controllers.Account.kidPost
-GET   /account/twofactor               controllers.Account.twoFactor
-POST  /account/twofactor/setup         controllers.Account.setupTwoFactor
-POST  /account/twofactor/disable       controllers.Account.disableTwoFactor
 GET   /account/reopen                  controllers.Account.reopen
-POST  /account/reopen/send             controllers.Account.reopenApply
-GET   /account/reopen/sent             controllers.Account.reopenSent
-GET   /account/reopen/login/:token     controllers.Account.reopenLogin(token)
+POST  /account/reopen                  controllers.Account.reopenApply
 GET   /account/personal-data           controllers.Account.data
 GET   /account/network                 controllers.Account.network(usingAltSocket: Option[Boolean] ?= None)
+
+# Internal
+POST  /internal/identity/events        controllers.Internal.identityEvent
+POST  /internal/identity/backchannel-logout controllers.Internal.backchannelLogout
 
 # App BC
 GET   /account/security                controllers.Account.security

@@ -71,3 +71,6 @@ object config:
       logRequests: Boolean
   ):
     def isProd = domain == prodDomain
+
+  /** SSO-only mode: local password/signup/reset/magic-link flows are denied. */
+  case class AuthConfig(ssoOnly: Boolean)

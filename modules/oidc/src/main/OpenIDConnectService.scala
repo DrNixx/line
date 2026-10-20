@@ -5,14 +5,18 @@ import java.io.IOException
 import com.nimbusds.jose.proc.BadJOSEException
 import com.nimbusds.jose.util.DefaultResourceRetriever
 import com.nimbusds.jose.JOSEException
+import com.nimbusds.jwt.SignedJWT
 import com.nimbusds.oauth2.sdk.*
-import com.nimbusds.oauth2.sdk.auth.ClientSecretBasic
+import com.nimbusds.oauth2.sdk.auth.{ ClientSecretBasic, ClientSecretPost }
 import com.nimbusds.oauth2.sdk.http.HTTPResponse
 import com.nimbusds.oauth2.sdk.id.{ Issuer, State }
+import com.nimbusds.oauth2.sdk.pkce.{ CodeChallengeMethod, CodeVerifier }
 import com.nimbusds.oauth2.sdk.token.BearerAccessToken
 import com.nimbusds.openid.connect.sdk.claims.IDTokenClaimsSet
+import com.nimbusds.openid.connect.sdk.claims.LogoutTokenClaimsSet
 import com.nimbusds.openid.connect.sdk.op.OIDCProviderMetadata
-import com.nimbusds.openid.connect.sdk.validators.IDTokenValidator
+import com.nimbusds.openid.connect.sdk.token.OIDCTokens
+import com.nimbusds.openid.connect.sdk.validators.{ IDTokenValidator, LogoutTokenValidator }
 import com.nimbusds.openid.connect.sdk.{ AuthenticationErrorResponse, * }
 import com.nimbusds.openid.connect.sdk.claims.*
 
@@ -28,32 +32,28 @@ final class OpenIDConnectService(
 
   private val JWK_REQUEST_TIMEOUT = 5000
 
-  private val OIDC_SCOPE = new Scope(
-    OIDCScopeValue.OPENID,
-    OIDCScopeValue.EMAIL,
-    OIDCScopeValue.PROFILE,
-    OIDCScopeValue.ADDRESS
-  )
-
-  OIDC_SCOPE.add("profile_ex")
+  private val OIDC_SCOPE = new Scope(oidc.scopes.toSeq*)
 
   /** Create an authentication request.
     *
     * @return
     *   Authentication request
     */
-  def createOIDCAuthenticationRequest(): Fu[AuthenticationRequest] = metadata.flatMap { metadata =>
-    fuccess(
-      new AuthenticationRequest(
-        metadata.getAuthorizationEndpointURI,
+  def createOIDCAuthenticationRequest(): Fu[(AuthenticationRequest, CodeVerifier)] = metadata.map {
+    metadata =>
+      val codeVerifier = new CodeVerifier()
+      val request = new AuthenticationRequest.Builder(
         new ResponseType(ResponseType.Value.CODE),
         OIDC_SCOPE,
         oidc.clientID,
-        oidc.signinCallbackUrl,
-        new State(),
-        new Nonce()
+        oidc.signinCallbackUrl
       )
-    )
+        .endpointURI(metadata.getAuthorizationEndpointURI)
+        .state(new State())
+        .nonce(new Nonce())
+        .codeChallenge(codeVerifier, CodeChallengeMethod.S256)
+        .build()
+      (request, codeVerifier)
   }
 
   /** Proceed the OpenID Connect authentication.
@@ -70,14 +70,57 @@ final class OpenIDConnectService(
   def authenticate(
       params: Map[String, Seq[String]],
       state: State,
-      nonce: Nonce
-  ): Fu[UserInfo] =
+      nonce: Nonce,
+      codeVerifier: CodeVerifier
+  ): Fu[OidcAuthn] =
     validateOIDCAuthenticationResponse(params, state).flatMap { authenticationResponse =>
-      obtainOIDCToken(authenticationResponse.getAuthorizationCode, nonce).flatMap { token =>
-        obtainUserInfo(token).flatMap { userInfo =>
-          fuccess(userInfo)
-        }
+      obtainOIDCTokens(authenticationResponse.getAuthorizationCode, nonce, codeVerifier).flatMap {
+        (tokens, claims) =>
+          obtainUserInfo(tokens.getBearerAccessToken).map { userInfo =>
+            OidcAuthn(
+              userInfo = userInfo,
+              session = OidcSession(
+                idToken = tokens.getIDToken.serialize,
+                issuer = oidc.issuer.getValue,
+                sid = Option(claims.getSessionID).map(_.getValue),
+                authTime = Option(claims.getAuthenticationTime).map(_.toInstant)
+              )
+            )
+          }
       }
+    }
+
+  /** RP-initiated logout URL, if the provider advertises an end_session_endpoint. */
+  /** RP-initiated logout URL. `post_logout_redirect_uri` is omitted because the IdP client does not register
+    * it; IdentityServer then ignores the request and keeps the SSO session alive. With `id_token_hint` +
+    * `state` it redirects to `/signout-oidc`.
+    */
+  def endSessionUrl(idToken: String): Fu[Option[String]] =
+    metadata.map: metadata =>
+      Option(metadata.getEndSessionEndpointURI).map: endpoint =>
+        val separator = if endpoint.toString.contains("?") then "&" else "?"
+        val encode =
+          (value: String) => java.net.URLEncoder.encode(value, java.nio.charset.StandardCharsets.UTF_8)
+        val state = new State()
+        s"$endpoint${separator}id_token_hint=${encode(idToken)}&state=${encode(state.getValue)}"
+
+  /** Validate a signed backchannel logout token. */
+  def validateLogoutToken(token: String): Fu[LogoutTokenClaimsSet] =
+    metadata.flatMap { metadata =>
+      JwsAlgorithmValidation.ensureSupported(oidc.jwsAlgorithm)(metadata) match
+        case Left(err) => fufail(err)
+        case Right(jwsAlgorithm) =>
+          val validator = new LogoutTokenValidator(
+            metadata.getIssuer,
+            oidc.clientID,
+            jwsAlgorithm,
+            metadata.getJWKSetURI.toURL,
+            new DefaultResourceRetriever(JWK_REQUEST_TIMEOUT, JWK_REQUEST_TIMEOUT)
+          )
+          try fuccess(validator.validate(SignedJWT.parse(token)))
+          catch
+            case e @ (_: BadJOSEException | _: JOSEException | _: java.text.ParseException) =>
+              fufail(s"OIDC logout token has error: $e")
     }
 
   private def converParams(params: Map[String, Seq[String]]) =
@@ -119,27 +162,24 @@ final class OpenIDConnectService(
     * @return
     *   Token response
     */
-  def obtainOIDCToken(
+  def obtainOIDCTokens(
       authorizationCode: AuthorizationCode,
-      nonce: Nonce
-  ): Fu[BearerAccessToken] = sendOIDCTokenRequest(authorizationCode).flatMap { httpResponse =>
-    try
-      OIDCTokenResponseParser.parse(httpResponse) match
-        case response: OIDCTokenResponse =>
-          validateOIDCTokenResponse(response, nonce).flatMap { claims =>
-            Seq("sub").map(k => Option(claims.getStringClaim(k))) match
-              case Seq(Some(sub)) =>
-                val successResponse = response.toSuccessResponse
-                fuccess(successResponse.getOIDCTokens.getBearerAccessToken)
-              case _ =>
-                fufail(s"OIDC ID token must have an email claim: claims=${claims.toJSONObject}")
-          }
-        case response: TokenErrorResponse =>
-          fufail(s"OIDC token response has error: ${response.getErrorObject.toJSONObject}")
-    catch
-      case e: ParseException =>
-        fufail(s"OIDC token response has error: $e")
-  }
+      nonce: Nonce,
+      codeVerifier: CodeVerifier
+  ): Fu[(OIDCTokens, IDTokenClaimsSet)] =
+    sendOIDCTokenRequest(authorizationCode, codeVerifier).flatMap { httpResponse =>
+      try
+        OIDCTokenResponseParser.parse(httpResponse) match
+          case response: OIDCTokenResponse =>
+            validateOIDCTokenResponse(response, nonce).map { claims =>
+              (response.getOIDCTokens, claims)
+            }
+          case response: TokenErrorResponse =>
+            fufail(s"OIDC token response has error: ${response.getErrorObject.toJSONObject}")
+      catch
+        case e: ParseException =>
+          fufail(s"OIDC token response has error: $e")
+    }
 
   /** Execute oidc token request
     * @param authorizationCode
@@ -147,8 +187,9 @@ final class OpenIDConnectService(
     * @return
     */
   private def sendOIDCTokenRequest(
-      authorizationCode: AuthorizationCode
-  ): Fu[HTTPResponse] = buildOIDCTokenRequest(authorizationCode).flatMap { request =>
+      authorizationCode: AuthorizationCode,
+      codeVerifier: CodeVerifier
+  ): Fu[HTTPResponse] = buildOIDCTokenRequest(authorizationCode, codeVerifier).flatMap { request =>
     try fuccess(request.toHTTPRequest.send())
     catch
       case se: SerializeException =>
@@ -164,13 +205,18 @@ final class OpenIDConnectService(
     * @return
     */
   private def buildOIDCTokenRequest(
-      authorizationCode: AuthorizationCode
+      authorizationCode: AuthorizationCode,
+      codeVerifier: CodeVerifier
   ): Fu[TokenRequest] = metadata.flatMap { metadata =>
+    val clientAuth = oidc.tokenAuthMethod match
+      case "client_secret_post"  => new ClientSecretPost(oidc.clientID, oidc.clientSecret)
+      case "client_secret_basic" => new ClientSecretBasic(oidc.clientID, oidc.clientSecret)
+      case other => throw new IllegalArgumentException(s"Unsupported token auth method: $other")
     fuccess(
       new TokenRequest(
         metadata.getTokenEndpointURI,
-        new ClientSecretBasic(oidc.clientID, oidc.clientSecret),
-        new AuthorizationCodeGrant(authorizationCode, oidc.signinCallbackUrl),
+        clientAuth,
+        new AuthorizationCodeGrant(authorizationCode, oidc.signinCallbackUrl, codeVerifier),
         OIDC_SCOPE
       )
     )
@@ -191,24 +237,20 @@ final class OpenIDConnectService(
   ): Fu[IDTokenClaimsSet] = Option(response.getOIDCTokens.getIDToken) match
     case Some(jwt) =>
       metadata.flatMap { metadata =>
-        val validator = oidc.jwsAlgorithm
-          .map { jwsAlgorithm =>
-            new IDTokenValidator(
+        JwsAlgorithmValidation.ensureSupported(oidc.jwsAlgorithm)(metadata) match
+          case Left(err) => fufail(err)
+          case Right(jwsAlgorithm) =>
+            val validator = new IDTokenValidator(
               metadata.getIssuer,
               oidc.clientID,
               jwsAlgorithm,
               metadata.getJWKSetURI.toURL,
               new DefaultResourceRetriever(JWK_REQUEST_TIMEOUT, JWK_REQUEST_TIMEOUT)
             )
-          }
-          .getOrElse {
-            new IDTokenValidator(metadata.getIssuer, oidc.clientID)
-          }
-
-        try fuccess(validator.validate(jwt, nonce))
-        catch
-          case e @ (_: BadJOSEException | _: JOSEException) =>
-            fufail(s"OIDC ID token has error: $e")
+            try fuccess(validator.validate(jwt, nonce))
+            catch
+              case e @ (_: BadJOSEException | _: JOSEException) =>
+                fufail(s"OIDC ID token has error: $e")
       }
     case None =>
       fufail(s"OIDC token response does not have a valid ID token: ${response.toJSONObject}")

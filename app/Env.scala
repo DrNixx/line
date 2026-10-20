@@ -17,7 +17,9 @@ final class Env(
     StandaloneWSClient,
     akka.stream.Materializer
 ):
-  val net: NetConfig = config.get[NetConfig]("net")
+  val net: NetConfig         = config.get[NetConfig]("net")
+  val authConfig: AuthConfig = config.get[AuthConfig]("auth")
+  def ssoOnly: Boolean       = authConfig.ssoOnly
 
   export net.{ baseUrl, assetBaseUrlInternal }
 
@@ -34,6 +36,7 @@ final class Env(
   val socket: lila.socket.Env  = wire[lila.socket.Env]
   val user: lila.user.Env      = wire[lila.user.Env]
   import user.flairApi.given
+  val identity: lila.identity.Env = wire[lila.identity.Env]
   val mailer: lila.mailer.Env     = wire[lila.mailer.Env]
   val oAuth: lila.oauth.Env       = wire[lila.oauth.Env]
   val security: lila.security.Env = wire[lila.security.Env]
@@ -128,6 +131,23 @@ final class Env(
     case lila.puzzle.DailyPuzzle.Render(puzzle, fen, lastMove, promise) =>
       promise.success(Html(views.puzzle.bits.daily(puzzle, fen, lastMove)))
 
+  lila.common.Bus.subscribeFuns(
+    "identityStatus" -> { case lila.core.security.RevokeAllCredentials(userId) =>
+      security.store.closeAllSessionsOf(userId) >>
+        security.api.appeal.closeAllOf(userId) >>
+        user.repo
+          .byId(userId)
+          .flatMapz: u =>
+            oAuth.tokenApi.revokeAllByUser(u) >>
+              push.webSubscriptionApi.unsubscribeByUser(u) >>
+              push.unregisterDevices(u)
+    },
+    "userChange" -> { case lila.core.user.ChangeUsername(userId) =>
+      user.lightUserApi.invalidate(userId)
+      ()
+    }
+  )
+
 end Env
 
 given ConfigLoader[NetConfig] = ConfigLoader(config =>
@@ -152,4 +172,10 @@ given ConfigLoader[NetConfig] = ConfigLoader(config =>
       email = get[EmailAddress]("email"),
       logRequests = get[Boolean]("http.log")
     )
+)
+
+given ConfigLoader[AuthConfig] = ConfigLoader(config =>
+  path =>
+    def get[A](at: String)(using loader: ConfigLoader[A]): A = loader.load(config, s"$path.$at")
+    AuthConfig(ssoOnly = get[Boolean]("ssoOnly"))
 )

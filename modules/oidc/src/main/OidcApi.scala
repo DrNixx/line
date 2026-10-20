@@ -1,50 +1,94 @@
 package lila.oidc
 
-import scalalib.SecureRandom
 import com.nimbusds.openid.connect.sdk.AuthenticationRequest
 import com.nimbusds.oauth2.sdk.id.State
 import com.nimbusds.openid.connect.sdk.Nonce
 import com.nimbusds.openid.connect.sdk.claims.UserInfo
 import lila.common.EmailAddress
-import lila.core.security.ClearPassword
-import lila.user.{ User, UserRepo }
 import play.api.mvc.RequestHeader
 
 final class OidcApi(
     oidc: OIDC,
-    userRepo: lila.user.UserRepo,
-    authenticator: lila.core.security.Authenticator
-)(using Executor, akka.stream.Materializer):
+    provisioning: UserProvisioning,
+    stateRepo: OidcStateRepo
+)(using Executor):
 
-  def getAuthenticationRequest(): Fu[AuthenticationRequest] =
-    val client                = new OpenIDConnectService(oidc);
-    val authenticationRequest = client.createOIDCAuthenticationRequest()
-    authenticationRequest
+  private val client = new OpenIDConnectService(oidc)
 
-  def authenticate(req: RequestHeader): Fu[Option[User]] =
-    // val redirectBackURI = req.flash("referrer")
-    val state  = req.flash.get("oidcState").getOrElse("~")
-    val nonce  = req.flash.get("oidcNonce").getOrElse("~")
-    val params = req.queryString
-    val client = new OpenIDConnectService(oidc);
+  def getAuthenticationRequest(): Fu[(AuthenticationRequest, com.nimbusds.oauth2.sdk.pkce.CodeVerifier)] =
+    client.createOIDCAuthenticationRequest()
 
-    client.authenticate(params, new State(state), new Nonce(nonce)).flatMap { userInfo =>
-      getOrCreateUser(userInfo)
-    }
+  def saveLoginState(
+      request: AuthenticationRequest,
+      referrer: Option[String],
+      codeVerifier: com.nimbusds.oauth2.sdk.pkce.CodeVerifier
+  ): Funit =
+    stateRepo.put(
+      request.getState.getValue,
+      request.getNonce.getValue,
+      codeVerifier.getValue,
+      referrer
+    )
 
-  def getOrCreateUser(userInfo: UserInfo): Fu[Option[User]] =
-    userRepo.byId(UserId(userInfo.getSubject.toString)).flatMap {
-      case Some(user) =>
-        userRepo.setUsername(user.id, userInfo.getPreferredUsername)
-        fuccess(Some(user))
-      case None =>
-        createOidcUser(userInfo)
-    }
+  def authenticate(req: RequestHeader): Fu[LoginOutcome] =
+    val state       = req.getQueryString("state").getOrElse("")
+    val cookieState = req.cookies.get("oidc_state").map(_.value)
 
-  def createOidcUser(userInfo: UserInfo): Fu[Option[User]] =
-    val pwd          = authenticator.passEnc(ClearPassword(SecureRandom.nextString(12)))
-    val blind        = false
-    val confirmEmail = false
-    val email        = EmailAddress(userInfo.getEmailAddress)
-    val username     = userInfo.getPreferredUsername
-    userRepo.create2(UserId(userInfo.getSubject.toString), username, pwd, email, blind, none, confirmEmail)
+    if state.isEmpty || !cookieState.contains(state) then
+      fuccess(LoginOutcome.Refused(LoginError.InvalidState, None))
+    else
+      stateRepo.consume(state).flatMap {
+        case None => fuccess(LoginOutcome.Refused(LoginError.InvalidState, None))
+        case Some(loginState) =>
+          client
+            .authenticate(
+              req.queryString,
+              new State(state),
+              new Nonce(loginState.nonce),
+              new com.nimbusds.oauth2.sdk.pkce.CodeVerifier(loginState.codeVerifier)
+            )
+            .flatMap { authn =>
+              externalIdentity(authn.userInfo) match
+                case Left(error) => fuccess(LoginOutcome.Refused(error, None))
+                case Right(identity) =>
+                  provisioning.resolve(identity).map {
+                    case LoginOutcome.Success(user, _) => LoginOutcome.Success(user, authn.session.some)
+                    case other                         => other
+                  }
+            }
+            .recover { case _ =>
+              LoginOutcome.Refused(LoginError.ProviderError, None)
+            }
+      }
+
+  def issuer: String = oidc.issuer.getValue
+
+  def endSessionUrl(idToken: String): Fu[Option[String]] =
+    client.endSessionUrl(idToken)
+
+  def validateLogoutToken(token: String): Fu[com.nimbusds.openid.connect.sdk.claims.LogoutTokenClaimsSet] =
+    client.validateLogoutToken(token)
+
+  private def externalIdentity(userInfo: UserInfo): Either[LoginError, ExternalIdentity] =
+    for
+      subject <- Option(userInfo.getSubject)
+        .map(_.getValue)
+        .filter(_.nonEmpty)
+        .toRight(LoginError.ClaimsError)
+      username <- Option(userInfo.getPreferredUsername)
+        .map(_.trim)
+        .filter(_.nonEmpty)
+        .toRight(LoginError.ClaimsError)
+      email         = Option(userInfo.getEmailAddress).flatMap(EmailAddress.from)
+      emailVerified = Option(userInfo.getEmailVerified).exists(_.booleanValue)
+      globallyEnabled = Option(userInfo.getClaim("globally_enabled")).flatMap:
+        case b: java.lang.Boolean => Some(b.booleanValue)
+        case _                    => None
+    yield ExternalIdentity(
+      issuer = oidc.issuer.getValue,
+      subject = subject,
+      username = username,
+      email = email,
+      emailVerified = emailVerified,
+      globallyEnabled = globallyEnabled
+    )

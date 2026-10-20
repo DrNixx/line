@@ -162,10 +162,16 @@ final class UserRepo(c: Coll)(using Executor) extends lila.core.user.UserRepo(c)
     coll.updateField($id(id), s"${F.profile}.realName", name).void
 
   def setUsername(id: UserId, username: String): Funit =
-    coll.updateField($id(id), "username", username).void
+    coll.update
+      .one(
+        $id(id),
+        $set(F.username -> username, "len" -> BSONInteger(username.length))
+      )
+      .map: _ =>
+        lila.common.Bus.publish(lila.core.user.ChangeUsername(id), "userChange")
 
   def setUsernameCased(id: UserId, name: UserName): Funit =
-    if id.is(name) then
+    if id.value == name.value.toLowerCase then
       coll.update
         .one(
           $id(id) ++ F.changedCase.$exists(false),
@@ -234,8 +240,10 @@ final class UserRepo(c: Coll)(using Executor) extends lila.core.user.UserRepo(c)
   def incToints(id: UserId, nb: Int): Funit = coll.update.one($id(id), $inc("toints" -> nb)).void
   def removeAllToints                       = coll.update.one($empty, $unset("toints"), multi = true)
 
-  def create(
-      name: UserName,
+  /** Legacy credential account created outside SSO (Clas students, local signup when enabled). */
+  def createLocal(
+      id: UserId,
+      username: UserName,
       passwordHash: HashedPassword,
       email: EmailAddress,
       blind: Boolean,
@@ -243,30 +251,38 @@ final class UserRepo(c: Coll)(using Executor) extends lila.core.user.UserRepo(c)
       mustConfirmEmail: Boolean,
       lang: Option[LangTag] = None
   ): Fu[Option[User]] =
-    exists(name).not.flatMapz {
-      val doc = newUser(name, passwordHash, email, blind, mobileApiVersion, mustConfirmEmail, lang) ++
-        ("len" -> BSONInteger(name.value.length))
-      coll.insert.one(doc) >> byId(name.id)
-    }
+    exists(id).not.flatMapz:
+      val doc =
+        newUserLocal(id, username, passwordHash, email, blind, mobileApiVersion, mustConfirmEmail, lang) ++
+          ("len" -> BSONInteger(username.value.length))
+      coll.insert.one(doc) >> byId(id)
 
-  def create2(
+  /** Create an account without local credentials, for external (SSO) identities. Idempotent: a duplicate
+    * `_id` re-reads the existing user.
+    */
+  def createExternal(
       id: UserId,
       username: String,
-      passwordHash: HashedPassword,
-      email: EmailAddress,
-      blind: Boolean,
-      mobileApiVersion: Option[ApiVersion],
-      mustConfirmEmail: Boolean,
+      email: Option[EmailAddress],
       lang: Option[String] = None
   ): Fu[Option[User]] =
-    exists(id).not.flatMapz {
-      val doc =
-        newUser2(id, username, passwordHash, email, blind, mobileApiVersion, mustConfirmEmail, lang) ++
-          ("len" -> BSONInteger(username.length))
-      coll.insert.one(doc) >> byId(id)
+    def insert(withEmail: Option[EmailAddress]) =
+      coll.insert
+        .one(newUserExternal(id, username, withEmail, lang) ++ ("len" -> BSONInteger(username.length)))
+        .recover(lila.db.ignoreDuplicateKey)
+    insert(email).flatMap { _ =>
+      byId(id).flatMap {
+        case some @ Some(_) => fuccess(some)
+        case None if email.isDefined =>
+          insert(None).flatMap(_ => byId(id))
+        case None => fuccess(None)
+      }
     }
 
   def exists[U: UserIdOf](u: U): Fu[Boolean] = coll.exists($id(u.id))
+
+  def usernameExists(name: UserName): Fu[Boolean] =
+    coll.exists($doc(F.username -> name.value))
 
   def filterExists(ids: Set[UserId]): Fu[List[UserId]] =
     coll.primitive[UserId]($inIds(ids), F.id)
@@ -274,10 +290,16 @@ final class UserRepo(c: Coll)(using Executor) extends lila.core.user.UserRepo(c)
   def userIdsLikeWithRole(text: UserSearch, role: RoleDbKey, max: Int = 10): Fu[List[UserId]] =
     userIdsLikeFilter(text, $doc(F.roles -> role), max)
 
+  def userIdsLike(text: UserSearch, max: Int = 10): Fu[List[UserId]] =
+    userIdsLikeFilter(text, $empty, max)
+
   private[user] def userIdsLikeFilter(text: UserSearch, filter: Bdoc, max: Int): Fu[List[UserId]] =
     coll
       .find(
-        $doc(F.id.$startsWith(text.value)) ++ enabledSelect ++ filter,
+        $or(
+          $doc(F.id.$startsWith(text.value)),
+          $doc(F.username.$regex(s"^${java.util.regex.Pattern.quote(text.value)}", "i"))
+        ) ++ enabledSelect ++ filter,
         $doc(F.id -> true).some
       )
       .sort($doc("len" -> 1))
@@ -570,13 +592,38 @@ final class UserRepo(c: Coll)(using Executor) extends lila.core.user.UserRepo(c)
     user.enabled.no.so:
       coll.exists($id(user.id) ++ $doc(F.foreverClosed -> true))
 
+  /** Anonymize local PII of a globally deleted identity, keeping `_id` and games. */
+  def anonymize(id: UserId): Funit =
+    val username = s"deleted_${id.value.takeRight(20)}"
+    coll.update
+      .one(
+        $id(id),
+        $doc(
+          "$set" -> $doc(
+            F.username    -> username,
+            "len"         -> BSONInteger(username.length),
+            F.enabled     -> false,
+            "delete.done" -> true
+          )
+        ) ++ $unset(
+          F.email,
+          F.prevEmail,
+          F.verbatimEmail,
+          F.profile,
+          F.totpSecret,
+          F.mustConfirmEmail
+        )
+      )
+      .void
+
   def filterClosedOrInactiveIds(since: Instant)(ids: Iterable[UserId]): Fu[List[UserId]] =
     coll.distinctEasy[UserId, List](F.id, $inIds(ids) ++ $or(disabledSelect, F.seenAt.$lt(since)), _.sec)
 
   private val defaultCount = lila.core.user.Count(0, 0, 0, 0, 0, 0, 0, 0, 0)
 
-  private def newUser(
-      name: UserName,
+  private def newUserLocal(
+      id: UserId,
+      username: UserName,
       passwordHash: HashedPassword,
       email: EmailAddress,
       blind: Boolean,
@@ -586,41 +633,10 @@ final class UserRepo(c: Coll)(using Executor) extends lila.core.user.UserRepo(c)
   ) =
     val normalizedEmail = email.normalize
     val now             = nowInstant
-    $doc(
-      F.id                    -> name.id,
-      F.username              -> name.value,
-      F.email                 -> normalizedEmail,
-      F.mustConfirmEmail      -> mustConfirmEmail.option(now),
-      F.bpass                 -> passwordHash,
-      F.count                 -> defaultCount,
-      F.enabled               -> true,
-      F.createdAt             -> now,
-      F.createdWithApiVersion -> mobileApiVersion,
-      F.seenAt                -> now,
-      F.playTime              -> PlayTime(0, 0),
-      F.lang                  -> lang
-    ) ++ {
-      (email.value != normalizedEmail.value).so($doc(F.verbatimEmail -> email))
-    } ++ {
-      blind.so($doc(F.blind -> true))
-    }
-
-  private def newUser2(
-      id: UserId,
-      username: String,
-      passwordHash: HashedPassword,
-      email: EmailAddress,
-      blind: Boolean,
-      mobileApiVersion: Option[ApiVersion],
-      mustConfirmEmail: Boolean,
-      lang: Option[String]
-  ) =
-    val normalizedEmail = email.normalize
-    val now             = nowInstant
 
     $doc(
       F.id                    -> id,
-      F.username              -> username,
+      F.username              -> username.value,
       F.email                 -> normalizedEmail,
       F.mustConfirmEmail      -> mustConfirmEmail.option(now),
       F.bpass                 -> passwordHash,
@@ -636,3 +652,25 @@ final class UserRepo(c: Coll)(using Executor) extends lila.core.user.UserRepo(c)
     } ++ {
       blind.so($doc(F.blind -> true))
     }
+
+  private def newUserExternal(
+      id: UserId,
+      username: String,
+      email: Option[EmailAddress],
+      lang: Option[String]
+  ) =
+    val now = nowInstant
+    val base = $doc(
+      F.id        -> id,
+      F.username  -> username,
+      F.count     -> defaultCount,
+      F.enabled   -> true,
+      F.createdAt -> now,
+      F.seenAt    -> now,
+      F.playTime  -> PlayTime(0, 0),
+      F.lang      -> lang
+    )
+    email.fold(base): raw =>
+      val normalized = raw.normalize
+      base ++ $doc(F.email -> normalized) ++
+        (raw.value != normalized.value).so($doc(F.verbatimEmail -> raw))

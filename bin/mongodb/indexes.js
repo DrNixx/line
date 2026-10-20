@@ -99,8 +99,9 @@ db.note.createIndex(
 );
 db.irwin_report.createIndex({ date: -1 });
 db.user4.createIndex({ 'count.game': -1 });
+db.user4.createIndex({ username: 1 });
 db.user4.createIndex({ title: 1 }, { partialFilterExpression: { title: { $exists: 1 } } });
-db.user4.createIndex({ email: 1 }, { unique: true, partialFilterExpression: { email: { $exists: 1 } } });
+db.user4.createIndex({ email: 1 }, { partialFilterExpression: { email: { $exists: 1 } } });
 db.user4.createIndex({ roles: 1 }, { partialFilterExpression: { roles: { $exists: 1 } } });
 db.user4.createIndex({ prevEmail: 1 }, { sparse: 1 });
 db.user4.createIndex(
@@ -275,6 +276,12 @@ db.game5.createIndex({ 'pgni.h': 1 }, { sparse: true });
 db.security.createIndex({ user: 1 });
 db.security.createIndex({ ip: 1 });
 db.security.createIndex({ fp: 1 }, { sparse: 1 });
+db.security.createIndex({ sid: 1 }, { sparse: 1 });
+db.security.createIndex({ expiresAt: 1 }, { expireAfterSeconds: 0 });
+db.identity_status.createIndex({ version: 1 });
+db.identity_status.createIndex({ status: 1 });
+db.identity_event.createIndex({ subject: 1, version: -1 });
+db.oidc_state.createIndex({ expiresAt: 1 }, { expireAfterSeconds: 0 });
 db.study.createIndex({ ownerId: 1, createdAt: -1 });
 db.study.createIndex({ likes: 1, createdAt: -1 });
 db.study.createIndex({ ownerId: 1, updatedAt: -1 });

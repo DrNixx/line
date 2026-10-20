@@ -27,10 +27,16 @@ final class AccountSecurity(helpers: Helpers)(
           standardFlash.map(div(cls := "box__pad")(_)),
           div(cls := "box__pad")(
             p(
-              "This is a list of devices and applications that are logged into your account. If you notice any suspicious activity, make sure to ",
-              a(href := routes.Account.email)("check your recovery email address"),
-              " and ",
-              a(href := routes.Account.passwd)("change your password"),
+              strong("SSO account. "),
+              "Your username, email and password are managed on ",
+              a(href := "https://passport.chess-online.com")("passport.chess-online.com"),
+              "."
+            ),
+            p(
+              "This is a list of devices and applications that are logged into your account. If you notice any suspicious activity, change your password and email on ",
+              a(href := "https://passport.chess-online.com/ru-ru/manage/change-password")(
+                "passport.chess-online.com"
+              ),
               "."
             ),
             (sessions.sizeIs > 1).option(
@@ -137,72 +143,3 @@ final class AccountSecurity(helpers: Helpers)(
         )
       )
     )
-
-  import lila.security.EmailConfirm.Help.Status
-  def emailConfirmHelp(form: Form[?], status: Option[Status])(using Context) =
-    Page(trans.site.emailConfirmHelp.txt()).css("email-confirm"):
-      frag(
-        main(cls := "page-small box box-pad email-confirm-help")(
-          h1(cls := "box__top")(trans.site.emailConfirmHelp()),
-          p(trans.site.emailConfirmNotReceived()),
-          st.form(cls := "form3", action := routes.Account.emailConfirmHelp, method := "get")(
-            form3.split(
-              form3.group(
-                form("username"),
-                trans.site.username(),
-                help = trans.site.whatSignupUsername().some
-              ) { f =>
-                form3.input(f)(pattern := lila.user.nameRules.newUsernameRegex.regex)
-              },
-              div(cls := "form-group")(
-                form3.submit(trans.site.apply())
-              )
-            )
-          ),
-          div(cls := "replies")(
-            status.map {
-              case Status.NoSuchUser(name) =>
-                frag(
-                  p(trans.site.usernameNotFound(strong(name))),
-                  p(
-                    a(href := routes.Auth.signup)(
-                      trans.site.usernameCanBeUsedForNewAccount()
-                    )
-                  )
-                )
-              case Status.EmailSent(name, email) =>
-                frag(
-                  p(trans.site.emailSent(email.conceal)),
-                  p(
-                    trans.site.emailCanTakeSomeTime(),
-                    br,
-                    strong(trans.site.refreshInboxAfterFiveMinutes())
-                  ),
-                  p(trans.site.checkSpamFolder()),
-                  p(trans.site.emailForSignupHelp()),
-                  hr,
-                  p(i(s"Hello, please confirm my account: $name")),
-                  hr,
-                  p(
-                    trans.site.copyTextToEmail(
-                      a(href := s"mailto:${contactEmail.value}?subject=Confirm account $name")(
-                        contactEmail.value
-                      )
-                    )
-                  ),
-                  p(trans.site.waitForSignupHelp())
-                )
-              case Status.Confirmed(name) =>
-                frag(
-                  p(trans.site.accountConfirmed(strong(name))),
-                  p(trans.site.accountCanLogin(a(href := routes.Auth.login)(name))),
-                  p(trans.site.accountConfirmationEmailNotNeeded())
-                )
-              case Status.Closed(name) =>
-                p(trans.site.accountClosed(strong(name)))
-              case Status.NoEmail(name) =>
-                p(trans.site.accountRegisteredWithoutEmail(strong(name)))
-            }
-          )
-        )
-      )

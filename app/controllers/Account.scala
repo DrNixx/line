@@ -7,7 +7,6 @@ import views.account.pages
 
 import lila.app.{ *, given }
 import lila.common.HTTPRequest
-import lila.security.SecurityForm.Reopen
 import lila.web.AnnounceApi
 
 final class Account(
@@ -19,11 +18,6 @@ final class Account(
   def profile = Auth { _ ?=> me ?=>
     Ok.page:
       pages.profile(me, env.user.forms.profileOf(me))
-  }
-
-  def username = Auth { _ ?=> me ?=>
-    Ok.page:
-      pages.username(me, env.user.forms.usernameOf(me))
   }
 
   def profileApply = AuthOrScopedBody(_.Web.Mobile) { _ ?=> me ?=>
@@ -48,15 +42,6 @@ final class Account(
           env.user.lightUserApi.invalidate(me)
           Redirect(routes.User.show(me.userId)).flashSuccess
     )
-  }
-
-  def usernameApply = AuthBody { _ ?=> me ?=>
-    FormFuResult(env.user.forms.username(me))(err => renderPage(pages.username(me, err))): username =>
-      env.user.repo
-        .setUsernameCased(me, username)
-        .inject(Redirect(routes.User.show(me.userId)).flashSuccess)
-        .recover: e =>
-          Redirect(routes.Account.username).flashFailure(e.getMessage)
   }
 
   def info = Auth { ctx ?=> me ?=>
@@ -129,17 +114,15 @@ final class Account(
             )
   }
 
-  def passwd = Auth { _ ?=> me ?=>
-    env.security.forms.passwdChange.flatMap: form =>
-      Ok.page(pages.password(form))
+  def apiEmail = Scoped(_.Email.Read) { _ ?=> me ?=>
+    Found(env.user.repo.email(me)): email =>
+      JsonOk(Json.obj("email" -> email.value))
   }
 
-  def passwdApply = AuthBody { ctx ?=> me ?=>
-    auth.HasherRateLimit:
-      env.security.forms.passwdChange.flatMap: form =>
-        FormFuResult(form)(err => renderPage(pages.password(err))): data =>
-          env.security.authenticator.setPassword(me, lila.core.security.ClearPassword(data.newPasswd1)) >>
-            refreshSessionId(Redirect(routes.Account.passwd).flashSuccess)
+  def network(usingAltSocket: Option[Boolean]) = Auth { _ ?=> me ?=>
+    val page = (use: Option[Boolean]) => Ok.page(pages.network(use, ctx.pref.isUsingAltSocket))
+    if usingAltSocket.isEmpty || usingAltSocket.has(ctx.pref.isUsingAltSocket) then page(none)
+    else env.pref.api.setPref(me, ctx.pref.copy(usingAltSocket = usingAltSocket)) >> page(usingAltSocket)
   }
 
   private def refreshSessionId(result: Result)(using ctx: Context, me: Me): Fu[Result] = for
@@ -149,139 +132,32 @@ final class Account(
     sessionId <- env.security.api.saveAuthentication(me, ctx.mobileApiVersion)
   yield result.withCookies(env.security.lilaCookie.session(env.security.api.sessionIdKey, sessionId))
 
-  private def emailForm(using me: Me) =
-    env.user.repo.email(me).flatMap(env.security.forms.changeEmail)
-
-  def email = Auth { _ ?=> me ?=>
-    if getBool("check")
-    then Ok.page(renderCheckYourEmail)
-    else emailForm.flatMap(f => Ok.page(pages.email(f)))
-  }
-
-  def apiEmail = Scoped(_.Email.Read) { _ ?=> me ?=>
-    Found(env.user.repo.email(me)): email =>
-      JsonOk(Json.obj("email" -> email.value))
-  }
-
-  def renderCheckYourEmail(using Context) =
-    views.auth.checkYourEmail(lila.security.EmailConfirm.cookie.get(ctx.req).map(_.email))
-
-  def emailApply = AuthBody { ctx ?=> me ?=>
-    auth.HasherRateLimit:
-      env.security.forms.preloadEmailDns() >> emailForm.flatMap: form =>
-        FormFuResult(form)(err => renderPage(pages.email(err))): data =>
-          val newUserEmail = lila.security.EmailConfirm.UserEmail(me.userId, me.username, data.email)
-          auth.EmailConfirmRateLimit(newUserEmail, ctx.req, rateLimited):
-            env.security.emailChange
-              .send(me, newUserEmail.email)
-              .inject(Redirect(routes.Account.email).flashSuccess:
-                lila.core.i18n.I18nKey.site.checkYourEmail.txt())
-  }
-
-  def emailConfirm(token: String) = Open:
-    Found(env.security.emailChange.confirm(token)): (user, prevEmail) =>
-      for
-        _ <- prevEmail.exists(_.isNoReply).so(env.clas.api.student.release(user))
-        res <- auth.authenticateUser(
-          user,
-          remember = true,
-          result =
-            if prevEmail.exists(_.isNoReply)
-            then Some(_ => Redirect(routes.User.show(user.userId)).flashSuccess)
-            else Some(_ => Redirect(routes.Account.email).flashSuccess)
-        )
-      yield res
-
-  def emailConfirmHelp = OpenBody:
-    import lila.security.EmailConfirm.Help.*
-    ctx.me match
-      case Some(me) =>
-        Redirect(routes.User.show(me.userId))
-      case None if get("username").isEmpty =>
-        Ok.page(views.account.security.emailConfirmHelp(helpForm, none))
-      case None =>
-        bindForm(helpForm)(
-          err => BadRequest.page(views.account.security.emailConfirmHelp(err, none)),
-          username =>
-            getStatus(env.user.api, env.user.repo, username).flatMap: status =>
-              Ok.page(views.account.security.emailConfirmHelp(helpForm.fill(username), status.some))
-        )
-
-  def twoFactor = Auth { _ ?=> me ?=>
-    if me.totpSecret.isDefined
-    then
-      env.security.forms.disableTwoFactor.flatMap: f =>
-        Ok.page(views.account.twoFactor.disable(f))
-    else
-      env.security.forms.setupTwoFactor.flatMap: f =>
-        Ok.page(views.account.twoFactor.setup(f))
-  }
-
-  def setupTwoFactor = AuthBody { ctx ?=> me ?=>
-    auth.HasherRateLimit:
-      env.security.forms.setupTwoFactor.flatMap: form =>
-        FormFuResult(form)(err => renderPage(views.account.twoFactor.setup(err))): data =>
-          env.user.repo.setupTwoFactor(me, lila.user.TotpSecret.decode(data.secret)) >>
-            refreshSessionId(Redirect(routes.Account.twoFactor).flashSuccess)
-  }
-
-  def disableTwoFactor = AuthBody { ctx ?=> me ?=>
-    auth.HasherRateLimit:
-      env.security.forms.disableTwoFactor.flatMap: form =>
-        FormFuResult(form)(err => renderPage(views.account.twoFactor.disable(err))): _ =>
-          env.user.repo.disableTwoFactor(me).inject(Redirect(routes.Account.twoFactor).flashSuccess)
-  }
-
-  def network(usingAltSocket: Option[Boolean]) = Auth { _ ?=> me ?=>
-    val page = (use: Option[Boolean]) => Ok.page(pages.network(use, ctx.pref.isUsingAltSocket))
-    if usingAltSocket.isEmpty || usingAltSocket.has(ctx.pref.isUsingAltSocket) then page(none)
-    else env.pref.api.setPref(me, ctx.pref.copy(usingAltSocket = usingAltSocket)) >> page(usingAltSocket)
-  }
-
   def close = Auth { _ ?=> me ?=>
     for
       managed <- env.clas.api.student.isManaged(me)
-      form    <- env.security.forms.closeAccount
-      res     <- Ok.page(pages.close(form, managed))
+      form = env.security.forms.closeAccount
+      res <- Ok.page(pages.close(form, managed))
     yield res
   }
 
   def closeConfirm = AuthBody { ctx ?=> me ?=>
     NotManaged:
-      auth.HasherRateLimit:
-        env.security.forms.closeAccount.flatMap: form =>
-          FormFuResult(form)(err => renderPage(pages.close(err, managed = false))): forever =>
-            for _ <- env.api.accountTermination.disable(me.value, forever = forever)
-            yield Redirect(routes.Lobby.home).withCookies(env.security.lilaCookie.newSession)
-  }
-
-  def delete = Auth { _ ?=> me ?=>
-    for
-      managed <- env.clas.api.student.isManaged(me)
-      form    <- env.security.forms.deleteAccount
-      res     <- Ok.page(pages.delete(form, managed))
-    yield res
-  }
-
-  def deleteConfirm = AuthBody { ctx ?=> me ?=>
-    NotManaged:
-      auth.HasherRateLimit:
-        env.security.forms.deleteAccount.flatMap: form =>
-          FormFuResult(form)(err => renderPage(pages.delete(err, managed = false))): _ =>
-            for _ <- env.api.accountTermination.scheduleDelete(me.value)
-            yield Redirect(routes.Account.deleteDone).withCookies(env.security.lilaCookie.newSession)
-  }
-
-  def deleteDone = Open { ctx ?=>
-    if ctx.isAuth then Redirect(routes.Lobby.home)
-    else FoundPage(env.cms.renderKey("delete-done"))(views.site.page.lone)
+      env.mod.logApi.closedByMod(me.value).flatMap {
+        case true => notFound
+        case false =>
+          limit.closeAccount(me.userId, rateLimited):
+            val form = env.security.forms.closeAccount
+            FormFuResult(form)(err => renderPage(pages.close(err, managed = false))): forever =>
+              for _ <- env.api.accountTermination.disable(me.value, forever = forever)
+              yield Redirect(routes.Lobby.home).withCookies(env.security.lilaCookie.newSession)
+      }
   }
 
   def kid = Auth { _ ?=> me ?=>
     for
       managed <- env.clas.api.student.isManaged(me)
-      form    <- env.security.forms.toggleKid
-      page    <- Ok.page(pages.kid(me, form, managed))
+      form = env.security.forms.toggleKid
+      page <- Ok.page(pages.kid(me, form, managed))
     yield page
   }
   def apiKid = Scoped(_.Preference.Read) { _ ?=> me ?=>
@@ -290,7 +166,8 @@ final class Account(
 
   def kidPost = AuthBody { ctx ?=> me ?=>
     NotManaged:
-      env.security.forms.toggleKid.flatMap: form =>
+      limit.kidMode(me.userId, rateLimited):
+        val form = env.security.forms.toggleKid
         bindForm(form)(
           err =>
             negotiate(
@@ -336,55 +213,43 @@ final class Account(
       yield NoContent
   }
 
-  private def renderReopen(form: Option[Form[Reopen]], msg: Option[String])(using Context) =
-    env.security.forms.reopen.map: baseForm =>
-      pages.reopen.form(form.foldLeft(baseForm)(_.withForm(_)), msg)
+  private def renderReopen(form: Option[Form[Boolean]], msg: Option[String])(using Context)(using Me) =
+    pages.reopen.form(form.getOrElse(env.security.forms.reopenConfirm), msg)
 
   def reopen = Open:
-    auth.RedirectToProfileIfLoggedIn:
-      Ok.async(renderReopen(none, none))
+    ctx.me match
+      case Some(me) if ctx.isAppealUser => Ok.async(renderReopen(none, none)(using ctx)(using me))
+      case Some(me)                     => Redirect(routes.User.show(me.userId))
+      case None                         => Redirect(routes.Auth.login)
 
-  def reopenApply = OpenBody:
-    env.security.hcaptcha.verify().flatMap { captcha =>
-      if captcha.ok then
-        env.security.forms.reopen.flatMap:
-          _.form
-            .bindFromRequest()
-            .fold(
-              err => BadRequest.async(renderReopen(err.some, none)),
-              data =>
-                env.security.reopen
-                  .prepare(data.username, data.email, env.mod.logApi.closedByMod)
-                  .flatMap {
-                    case Left((code, msg)) =>
-                      lila.mon.user.auth.reopenRequest(code).increment()
-                      BadRequest.async(renderReopen(none, msg.some))
-                    case Right(user) =>
-                      env.security.loginToken.rateLimit[Result](user, data.email, ctx.req, rateLimited):
-                        lila.mon.user.auth.reopenRequest("success").increment()
-                        env.security.reopen
-                          .send(user, data.email)
-                          .inject(Redirect(routes.Account.reopenSent))
-                  }
-            )
-      else BadRequest.async(renderReopen(none, none))
-    }
+  def reopenApply = AuthBody { ctx ?=> me ?=>
+    if !ctx.isAppealUser then notFound
+    else
+      limit.reopen(me.userId, rateLimited):
+        bindForm(env.security.forms.reopenConfirm)(
+          err => BadRequest.async(renderReopen(err.some, none)),
+          _ => reopenAccount(me)
+        )
+  }
 
-  def reopenSent = Open:
-    Ok.page(pages.reopen.sent)
-
-  def reopenLogin(token: String) = Open:
-    env.security.reopen.confirm(token).flatMap {
-      case None =>
-        lila.mon.user.auth.reopenConfirm("token_fail").increment()
-        notFound
-      case Some(user) =>
-        for
-          _      <- env.report.api.reopenReports(lila.report.Suspect(user))
-          result <- auth.authenticateUser(user, remember = true)
-          _ = lila.mon.user.auth.reopenConfirm("success").increment()
-        yield result
-    }
+  private def reopenAccount(me: Me)(using Context): Fu[Result] =
+    for
+      foreverClosed <- env.user.repo.isForeverClosed(me.value)
+      deleted       <- env.user.repo.isDeleted(me.value)
+      closedByMod   <- env.mod.logApi.closedByMod(me.value)
+      result <-
+        if foreverClosed || deleted || closedByMod then notFound
+        else
+          for
+            _ <- env.user.repo.reopen(me.userId)
+            _ = lila.log("auth").info(s"Reopen by ${me.userId} ${HTTPRequest.printClient(ctx.req)}")
+            _ = lila.mon.user.auth.reopenConfirm("success").increment()
+            _ <- env.report.api.reopenReports(lila.report.Suspect(me.value))
+            _ = env.security.api.reqSessionId(ctx.req).so(env.security.api.appeal.delete)
+            user <- env.user.repo.byId(me.userId).orFail("Reopened user not found")
+            res  <- auth.authenticateUser(user, remember = true)
+          yield res
+    yield result
 
   def data = Auth { _ ?=> me ?=>
     meOrFetch(getUserStr("user"))
