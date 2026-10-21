@@ -8,13 +8,13 @@ export default function (ctrl: LobbyController) {
   if (ctrl.filter.open) filterBody = filterView.render(ctrl);
   switch (ctrl.mode) {
     case 'chart':
-      res = ctrl.filter.filter(ctrl.data.hooks);
+      res = ctrl.filter.filter([...ctrl.data.hooks, ...ctrl.poolEntries]);
       nbFiltered = res.hidden;
       body = filterBody || chart.render(ctrl, res.visible);
       modeToggle = ctrl.filter.open ? null : chart.toggle(ctrl);
       break;
     default:
-      res = ctrl.filter.filter(ctrl.stepHooks);
+      res = ctrl.filter.filter([...ctrl.stepHooks, ...ctrl.poolEntries]);
       nbFiltered = res.hidden;
       body = filterBody || list.render(ctrl, res.visible);
       modeToggle = ctrl.filter.open ? null : list.toggle(ctrl);

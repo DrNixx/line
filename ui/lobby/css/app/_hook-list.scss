@@ -16,7 +16,8 @@
       background: $m-secondary--fade-60;
     }
 
-    &.join:hover td {
+    &.join:hover td,
+    &.joinPool:hover td {
       background: $m-accent--fade-50;
       color: #fff;
     }
