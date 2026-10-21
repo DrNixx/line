@@ -18,7 +18,8 @@ final private class LobbySyncActor(
 
   import LobbySyncActor.*
 
-  private val hookRepo = new HookRepo
+  private val hookRepo  = new HookRepo
+  private var mergeMode = false // Шаг 1: пока без изменения матчинга, используется в Шаге 4
 
   private var remoteDisconnectAllAt = nowInstant
 
@@ -31,6 +32,8 @@ final private class LobbySyncActor(
 
     // solve circular reference
     case SetSocket(actor) => socket = actor
+
+    case SetMergeMode(enabled) => mergeMode = enabled
 
     case msg @ AddHook(hook) =>
       lila.mon.lobby.hook.create.increment()

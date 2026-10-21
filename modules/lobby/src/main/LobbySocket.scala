@@ -265,13 +265,13 @@ final class LobbySocket(
         )
 
     case In.Counters(m, r) =>
-        lastCounters = LobbyCounters(m, r)
-        val enabled = mergeBelowPlayers > 0 && m < mergeBelowPlayers
-        if enabled != mergeMode then
-          mergeMode = enabled
-          lobby ! LobbySyncActor.SetMergeMode(enabled)
-          poolApi.setMergeMode(enabled)
-
+      lastCounters = LobbyCounters(m, r)
+      val enabled = mergeBelowPlayers > 0 && m < mergeBelowPlayers
+      if enabled != mergeMode then
+        mergeMode = enabled
+        lila.mon.lobby.pool.merge.update(if enabled then 1 else 0)
+        lobby ! LobbySyncActor.SetMergeMode(enabled)
+        poolApi.setMergeMode(enabled)
 
     case P.In.WsBoot =>
       logger.warn("Remote socket boot")

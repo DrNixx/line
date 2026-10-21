@@ -53,6 +53,8 @@ final private class PoolActor(
         members = members.filter(member !=)
       }
 
+    case SetMergeMode(enabled) => mergeMode = enabled
+
     case ScheduledWave =>
       monitor.scheduled(monId).increment()
       self ! RunWave
