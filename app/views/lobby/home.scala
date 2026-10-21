@@ -19,7 +19,8 @@ object home:
             .obj(
               "data"                    -> data,
               "showRatings"             -> ctx.pref.showRatings,
-              "hasUnreadLichessMessage" -> hasUnreadLichessMessage
+              "hasUnreadLichessMessage" -> hasUnreadLichessMessage,
+              "mergeBelowPlayers"       -> env.lobby.lobbyMergeConfig.mergeBelowPlayers
             )
             .add(
               "playban",

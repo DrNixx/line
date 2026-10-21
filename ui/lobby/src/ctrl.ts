@@ -48,6 +48,8 @@ export default class LobbyController {
   private poolInStorage: LichessStorage;
   private flushHooksTimeout?: number;
   private alreadyWatching: string[] = [];
+  private membersCount: number;
+  private remoteRealTimeCount?: number;
 
   constructor(
     readonly opts: LobbyOpts,
@@ -58,6 +60,7 @@ export default class LobbyController {
     this.me = opts.data.me;
     this.pools = opts.pools;
     this.playban = opts.playban;
+    this.membersCount = this.data.counters.members;
     this.filter = new Filter(storage.make('lobby.filter'), this);
     this.setupCtrl = new SetupController(this);
 
@@ -122,6 +125,7 @@ export default class LobbyController {
     this.flushHooksSchedule();
 
     this.startWatching();
+    this.activateTabFromLocationHash();
 
     if (this.playban) {
       if (this.playban.remainingSeconds < 86400)
@@ -207,6 +211,27 @@ export default class LobbyController {
 
   setSort = (sort: Sort) => {
     this.sort = this.stores.sort.set(sort);
+  };
+
+  get mergeMode(): boolean {
+    return this.opts.mergeBelowPlayers > 0 && this.membersCount < this.opts.mergeBelowPlayers;
+  }
+
+  get realTimeCount(): number | undefined {
+    return this.remoteRealTimeCount;
+  }
+
+  setRealTimeCount = (nb: number) => {
+    if (this.remoteRealTimeCount === nb) return;
+    this.remoteRealTimeCount = nb;
+    if (this.mergeMode && this.tab !== 'real_time') this.redraw();
+  };
+
+  setMembersCount = (nb: number) => {
+    if (this.membersCount === nb) return;
+    const wasMergeMode = this.mergeMode;
+    this.membersCount = nb;
+    if (wasMergeMode !== this.mergeMode) this.redraw();
   };
 
   onSetFilter = () => {
@@ -312,6 +337,12 @@ export default class LobbyController {
         xhr.seeks().then(this.setSeeks);
         break;
     }
+  };
+
+  private activateTabFromLocationHash = () => {
+    if (this.me?.isBot) return;
+    const hash = location.hash.replace('#', '');
+    if (hash === 'pools' || hash === 'real_time') this.setTab(hash);
   };
 
   // after click on round "new opponent" button

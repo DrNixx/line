@@ -71,6 +71,7 @@ export interface LobbyOpts {
   hasUnreadLichessMessage: boolean;
   playban: boolean;
   showRatings: boolean;
+  mergeBelowPlayers: number;
   data: LobbyData;
 }
 

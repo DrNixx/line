@@ -49,8 +49,10 @@ final class LobbySocket(
     private val removedHookIds     = new collection.mutable.StringBuilder(1024)
 
     // Шаг 2b: режим слияния и кэш PoolMembers, приходящих из Bus.
-    private var mergeEnabled = false
-    private val poolMembers  = collection.mutable.Map.empty[PoolConfigId, lila.core.pool.PoolMembers]
+    private var mergeEnabled       = false
+    private var lobbyHookCount     = 0
+    private var lastSentLobbyCount = -1
+    private val poolMembers        = collection.mutable.Map.empty[PoolConfigId, lila.core.pool.PoolMembers]
 
     val process: SyncActor.Receive =
 
@@ -66,7 +68,9 @@ final class LobbySocket(
         idleSris.filterInPlace(membersMap.contains)
         hookSubscriberSris.filterInPlace(membersMap.contains)
 
-      case Join(member) => members.put(member.sri.value, member)
+      case Join(member) =>
+        members.put(member.sri.value, member)
+        if mergeEnabled then send.exec(P.Out.tellSri(member.sri, makeMessage("hcount", lobbyCount)))
 
       case LeaveBatch(sris) => sris.foreach(quit)
       case LeaveAll =>
@@ -112,7 +116,10 @@ final class LobbySocket(
       // Шаг 2b: реакция на смену режима слияния и приём PoolMembers из Bus.
       case SetMergeMode(enabled) =>
         mergeEnabled = enabled
-        if enabled then sendPoolEntries()
+        lastSentLobbyCount = -1
+        if enabled then
+          broadcastLobbyCount()
+          sendPoolEntries()
         else
           send.exec(
             P.Out.tellSris(
@@ -124,7 +131,13 @@ final class LobbySocket(
       case msg @ lila.core.pool.PoolMembers(poolId, _, membersList) =>
         if membersList.isEmpty then poolMembers.remove(poolId)
         else poolMembers.update(poolId, msg)
-        if mergeEnabled then sendPoolEntries()
+        if mergeEnabled then
+          sendPoolEntries()
+          broadcastLobbyCount()
+
+      case LobbyHookCount(count) =>
+        lobbyHookCount = count
+        broadcastLobbyCount()
 
       case HookIds(ids) => tellActiveHookSubscribers(makeMessage("hli", ids.mkString("")))
 
@@ -149,7 +162,8 @@ final class LobbySocket(
       "streams",
       "poolPairings",
       "lobbySocket",
-      "poolMembers"
+      "poolMembers",
+      "lobbyHookCount"
     )
     scheduler.scheduleOnce(7.seconds)(this ! SendHookRemovals)
     scheduler.scheduleWithFixedDelay(31.seconds, 31.seconds)(() => this ! Cleanup)
@@ -158,6 +172,16 @@ final class LobbySocket(
 
     private def tellActiveHookSubscribers(msg: JsObject): Unit =
       send.exec(P.Out.tellSris(hookSubscriberSris.diff(idleSris).map { Sri(_) }, msg))
+
+    private def lobbyCount: Int =
+      lobbyHookCount + poolMembers.valuesIterator.map(_.members.size).sum
+
+    private def broadcastLobbyCount(): Unit =
+      if mergeEnabled then
+        val count = lobbyCount
+        if count != lastSentLobbyCount then
+          lastSentLobbyCount = count
+          tellActive(makeMessage("hcount", count))
 
     // Шаг 2b: отправка пул-записей зрителям.
     private def sendPoolEntries(): Unit =

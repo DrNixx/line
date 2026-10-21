@@ -40,6 +40,9 @@ export default class LobbySocket {
         ctrl.setPoolEntries(entries);
         ctrl.redraw();
       },
+      hcount(nb: number) {
+        ctrl.setRealTimeCount(nb);
+      },
       reload_seeks() {
         if (ctrl.tab === 'seeks') xhr.seeks().then(ctrl.setSeeks);
       },
