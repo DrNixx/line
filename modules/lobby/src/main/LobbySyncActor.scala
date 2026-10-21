@@ -185,6 +185,8 @@ final private class LobbySyncActor(
 private object LobbySyncActor:
 
   case class SetSocket(actor: SyncActor)
+  // Шаг 1: тип сообщения для переключения режима слияния; поведение (матчинг в AddHook) — в Шаге 4.
+  case class SetMergeMode(enabled: Boolean)
 
   private case class Tick(promise: Promise[Unit])
 

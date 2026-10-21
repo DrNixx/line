@@ -66,3 +66,4 @@ trait PoolApi:
   def poolPerfKeys: Map[PoolConfigId, PerfKey]
   def join(poolId: PoolConfigId, joiner: Joiner): Unit
   def leave(poolId: PoolConfigId, user: UserId): Unit
+  def setMergeMode(enabled: Boolean): Unit

@@ -17,6 +17,8 @@ final private class PoolActor(
 
   var members = Vector.empty[PoolMember]
 
+  private var mergeMode = false // Шаг 1: пока без изменения матчинга, используется в Шаге 4
+
   private var lastPairedUserIds = Set.empty[UserId]
 
   var nextWave: Cancellable = scala.compiletime.uninitialized
@@ -104,6 +106,7 @@ private object PoolActor:
 
   case class Join(joiner: Joiner, rageSit: lila.core.playban.RageSit)
   case class Leave(userId: UserId) extends AnyVal
+  case class SetMergeMode(enabled: Boolean)
 
   case object ScheduledWave
   case object FullWave

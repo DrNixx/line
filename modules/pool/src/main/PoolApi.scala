@@ -41,6 +41,8 @@ final class PoolApi(
 
   def leave(poolId: PoolConfigId, userId: UserId) = sendTo(poolId, Leave(userId))
 
+  def setMergeMode(enabled: Boolean): Unit = actors.values.foreach(_ ! SetMergeMode(enabled))
+
   def setOnlineSris(ids: Sris): Unit = actors.values.foreach(_ ! ids)
 
   private def sendTo(poolId: PoolConfigId, msg: Any) =

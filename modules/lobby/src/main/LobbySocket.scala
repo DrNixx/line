@@ -23,7 +23,8 @@ final class LobbySocket(
     lobby: LobbySyncActor,
     relationApi: lila.core.relation.RelationApi,
     poolApi: lila.core.pool.PoolApi,
-    userTrustApi: UserTrustApi
+    userTrustApi: UserTrustApi,
+    mergeConfig: LobbyMergeConfig
 )(using ec: Executor, scheduler: Scheduler)(using lila.core.config.RateLimit):
 
   import LobbySocket.*
@@ -32,6 +33,11 @@ final class LobbySocket(
 
   private var lastCounters = LobbyCounters(0, 0)
   def counters             = lastCounters
+
+  // Шаг 1: режим слияния lobby/pool при малой нагрузке; переключается в In.Counters ниже.
+  private val mergeBelowPlayers = mergeConfig.mergeBelowPlayers
+
+  private var mergeMode = false
 
   private val actor: SyncActor = new SyncActor:
 
@@ -258,7 +264,14 @@ final class LobbySocket(
           }: SocketController
         )
 
-    case In.Counters(m, r) => lastCounters = LobbyCounters(m, r)
+    case In.Counters(m, r) =>
+        lastCounters = LobbyCounters(m, r)
+        val enabled = mergeBelowPlayers > 0 && m < mergeBelowPlayers
+        if enabled != mergeMode then
+          mergeMode = enabled
+          lobby ! LobbySyncActor.SetMergeMode(enabled)
+          poolApi.setMergeMode(enabled)
+
 
     case P.In.WsBoot =>
       logger.warn("Remote socket boot")
