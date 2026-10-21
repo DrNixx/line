@@ -50,7 +50,8 @@ final private class PoolActor(
         case None =>
           members = members :+ lila.pool.PoolMember(joiner, rageSit)
           publishMembers()
-          if members.sizeIs >= config.wave.players.value then self ! FullWave
+          val needed = if mergeMode then 2 else config.wave.players.value
+          if members.sizeIs >= needed then self ! FullWave
         case Some(member) if member.ratingRange != joiner.ratingRange =>
           members = members.map: m =>
             if m == member then m.withRange(joiner.ratingRange) else m
@@ -63,7 +64,9 @@ final private class PoolActor(
 
     case SetMergeMode(enabled) =>
       mergeMode = enabled
-      if enabled then publishMembers()
+      if enabled then
+        publishMembers()
+        if members.sizeIs >= 2 then self ! FullWave
 
     case ScheduledWave =>
       monitor.scheduled(monId).increment()
