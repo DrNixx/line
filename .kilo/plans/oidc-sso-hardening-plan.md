@@ -1,29 +1,103 @@
 # План работ: SSO-only hardening (OIDC + модель идентичности)
 
-- **Дата:** 2026-10-19
-- **Статус:** draft, решения D1–D12 подтверждены; ревизия по результатам сверки с кодом — 2026-10-19 (добавлены 1.0, 1.7, 3.8; расширены 1.1/2.1/2.2/2.5/2.5a/3.5/4.1/4.6/8.1–8.4/Phase 9)
-- **Репозиторий:** `D:\Workspace\Projects\lila\line-repos\line`
-- **Область:** `modules/oidc`, `app/controllers/Auth.scala`, `app/controllers/Account.scala`, `modules/core` (`userId.scala`), `modules/ui` (`router/LilaRouter.scala`), `modules/user`, `modules/security`, `modules/oauth`, `modules/team`, `modules/msg`, `modules/tournament`, `conf/routes`, `conf/base.conf`, `bin/mongodb/indexes.js`
-- **Связанные репозитории:** `arena/src` (клиент: sessionId/socket/http) и `line-ws` (WS: TTL/`enabled`/`identity_status`/disconnect). Изменения там — отдельные PR, но входят в DoD этого плана (3.8, 4.6).
-- **Вне области (отдельная задача):** signature-flow для YandexGame / VkGame / FridayGame. План должен оставить для него точку расширения, но не реализует его.
+> **АКТУАЛЬНЫЙ СТАТУС (2026-10-21): production-core реализован и задеплоен.**
+> Ветка `line_oidc` смержена в `chess-online2` (merge `9dd0c17947`); на arena раскатан артефакт `39fb56c562` (дерево идентично merge).
+> Миграции MongoDB выполнены; приложение запущено. **План закрыт не полностью** — актуальный backlog ниже.
+>
+> **Новой сессии:** сначала прочитать блок «Актуальный статус» и «Что делать дальше», затем `docs/oidc-sso-deployment.md`.
+> Разделы Phase 0–9 ниже — спецификация и история; статус каждой фазы указан сразу под заголовком.
+
+- **Дата:** 2026-10-19; актуализировано 2026-10-21
+- **Репозиторий:** `DrNixx/line`; рабочая ветка `chess-online2`
+- **Область:** `modules/oidc`, `modules/identity`, `app/controllers/Auth.scala`, `app/controllers/Account.scala`, `app/controllers/Internal.scala`, `modules/core` (`userId.scala`), `modules/ui` (`router/LilaRouter.scala`), `modules/user`, `modules/security`, `modules/oauth`, `modules/clas`, `conf/routes`, `conf/base.conf`, `bin/mongodb/*`
+- **Связанные репозитории:** `line-ws` (WS: TTL/`identity_status`/disconnect) и `arena/src` (клиент). Изменения там — отдельные PR; входят в остаток DoD (3.8, 4.6, 8.4).
+- **Вне области (отдельная задача):** signature-flow для YandexGame / VkGame / FridayGame.
+- **Деплой-инструкция:** `docs/oidc-sso-deployment.md`. Прод-конфиги: `/etc/lichess/{application,base}.conf`, `prod-logger.xml`.
+
+---
+
+## Актуальный статус
+
+### Сделано и задеплоено
+- **Phase 0.4:** флаг `auth.ssoOnly` (сейчас `true`; локальные роуты удалены).
+- **Phase 1:** хотфикс статусов (1.0), guards + удаление локальных auth-роутов (1.1/1.2), SSO-reopen (1.4), удаление локальной 2FA (1.6), обязательный `jws_alg` (1.7).
+- **Phase 2:** модуль `identity` (2.1), `UserProvisioning` + alias (2.2/2.3), статусы и appeal (2.4), signed events/webhook + `identity_status` + revoke (2.5), анонимизация deleted (2.5a), warning о расхождении claim/projection (2.6).
+- **Phase 3:** `UserId.regex` vs `UserName.displayRegex` (3.5), удалён `UserIdOf[UserName]` (3.1), поиск по display-name (3.2), ID на границах (3.3 частично), `Duel`/модели (3.4), `len`/LightUser cache (3.6), unit-тесты ID/Unicode (3.7).
+- **Phase 4:** `id_token`/`iss`/`expiresAt` в сессии (4.1), RP-initiated logout (4.2), backchannel logout (4.3), TTL сессий + миграция (4.5).
+- **Phase 5:** server-side одноразовые `state`/`nonce` + cookie (5.1/5.2), allowlist реферера (5.3, уже был), `LoginError`/`LoginOutcome` (5.4), scopes из конфига (5.5), PKCE S256 (5.6), `token_auth_method` (5.7).
+- **Phase 6/7:** SSO-баннер, email как контакт, non-unique email index + миграции, индексы, prod-валидация `client_id`/`secret` (6.1–6.4, 6.6, 7.1–7.5).
+- **Phase 9:** удалены мёртвые `Signup`/`PasswordReset`/`LoginToken`/`EmailChange`, `LoginCandidate`, guard-хелперы; runbook и smoke-тест.
+
+### Проверено на реальном IdP (dev)
+- `sub` numeric, совпадает с `_id`; новый пользователь `375100` создан без `bpass`.
+- `preferred_username`/`email` приходят из UserInfo; в ID token их нет.
+- `sid` в ID token **отсутствует** → backchannel только по `sub`; RP-logout работает через `/signout-oidc`.
+- Logout завершает сессию и в lila, и в passport.
+- Webhook `banned` инвалидирует сессии (`up=false`) и закрывает WS; `active` восстанавливает доступ.
+
+### Прод-факты
+- Деплой: artifact `39510984472` (`39fb56c562`), merge `9dd0c17947`.
+- Миграции выполнены; конфиг `/etc/lichess` дополнен `auth.ssoOnly`, `oidc.issuer.token_auth_method`, `identity.webhook.secret`.
+- Legacy-тестовые аккаунты (7) в аудите: `chess-network`, 5 managed-учеников класса `Learning Club`, `greedycrab`.
+
+## Что делать дальше
+
+### P0 — подтвердить прод (до объявления стабильности)
+1. **Проверить индексы/TTL/сессии** (read-only):
+   ```bash
+   mongosh "$MONGO_URI" --eval '
+   printjson(db.user4.getIndexes().filter(i => i.key.email));
+   print("withoutExpiresAt=" + db.security.countDocuments({expiresAt:{$exists:false}}));
+   printjson(db.security.getIndexes().filter(i => i.name==="expiresAt_1" || i.name==="sid_1"));
+   print("identity_status=" + db.identity_status.countDocuments() + " events=" + db.identity_event.countDocuments());
+   '
+   ```
+   Ожидаемо: email non-unique, `withoutExpiresAt=0`, TTL index, `sid_1` есть.
+2. **Login/logout существующим и новым пользователем**; проверить `security` (`idToken`, `expiresAt`), `/signout-oidc`.
+3. **Webhook на тестовом аккаунте:** `banned` → вход отклоняется; `active` → доступ возвращается. `deleted` → анонимизация. Не тестировать на реальных пользователях.
+4. **Legacy cleanup** (после бэкапа): dry-run `2026-10-20-delete-clas-test-accounts.js`, затем `CONFIRM_DELETE=1`. Скрипт не удаляет игры/сообщения; у `greedycrab` 8 игр — решить отдельно. Если аккаунт реальный — вместо удаления заполнить `identity_alias`.
+5. **Проверить `identity.webhook.secret`** и что `/internal/identity/events` не 401/404 при подписи; backchannel URL в IdP.
+
+### P1 — до включения классов и для полноты SSO
+6. **Clas:** скрыть/заблокировать «Create a new account», «Create multiple», «Reset password» при `ssoOnly`; затем реализовать SSO-провижининг по `.kilo/plans/clas-sso-student-provisioning.md`.
+7. **Cross-repo:** `line-ws`/`arena` — проверка `identity_status`, TTL сессий, disconnect; отдельные PR (3.8/4.6/8.4).
+8. **Integration tests (Phase 8):** mock IdP + тестовый Mongo; минимум login/logout/ban/delete/state/PKCE. Сейчас есть только unit/BSON/smoke.
+9. **3.3 остаток:** формы выбора пользователя (msg compat, game search, plan gift/event) перевести на autocomplete с `userId`; сейчас часть ожидает ID вручную.
+10. **bpass:** решить, снимать ли локальные password hashes у старых аккаунтов (сейчас локального входа нет, но хэши остаются).
+
+### P2 — опционально
+11. Refresh tokens (4.4) — потребителя access token в lila нет.
+12. Дальнейшая чистка мёртвого кода/доков; `Phase 9.4` финальный аудит.
+13. `sid`/backchannel: если IdP начнёт отдавать `sid`, включить точечное закрытие по сессии; сейчас только `sub`.
+
+## Как продолжить в новой сессии
+```bash
+git fetch origin
+git switch -c <task> origin/chess-online2   # default after merge #21
+# обязательное чтение:
+# .kilo/plans/oidc-sso-hardening-plan.md (этот файл)
+# docs/oidc-sso-deployment.md
+# bin/tests/oidc-smoke
+```
+Не перезапускать destructive-миграции без проверки: TTL-сессии и удаление legacy необратимы. Новые миграции добавлять отдельными файлами в `bin/mongodb/migrations/` с dry-run по умолчанию.
 
 ---
 
 ## 0. Контекст
 
-Форк lila предназначен только для работы с внешним SSO. Прямой локальный вход в lila запрещён. Текущее состояние — dev/переход, запрет ещё нигде не enforced.
+Форк lila предназначен только для работы с внешним SSO. Прямой локальный вход в lila запрещён. Текущее состояние на 2026-10-21 — SSO-only production-core задеплоен; остаточные пункты перечислены в backlog выше.
 
 Факты, на которых построен план:
 
 1. IdP: `https://passport.chess-online.com`, OIDC discovery доступен.
 2. `sub` — целое число, приведённое к строке. Используется как `_id` пользователя lila.
 3. `preferred_username` — отдельный username, не равный `sub`. Это ключевое отличие от оригинальной lila, где `_id == lowercased(username)`.
-4. База SSO старая (около 20 лет, ~350 000 пользователей). База lila изначально пустая, пользователи создаются при первом входе. Явной миграции нет и не планируется.
+4. База SSO старая (около 20 лет, ~350 000 пользователей). На момент планирования база lila была пустой, пользователи создаются при первом входе. После деплоя в ней уже есть SSO-пользователи; отдельной массовой миграции нет.
 5. Баны должны быть двух уровней:
    - глобальный — на всю экосистему, источник истины IdP;
    - локальный — только lila (игровые ограничения/закрытие аккаунта).
 6. Email-флоу (password reset, magic link) должны быть выключены.
-7. IdP поддерживает `end_session_endpoint`, frontchannel и backchannel logout.
+7. IdP поддерживает `end_session_endpoint` и backchannel logout; в проверенном ID token `sid` отсутствует, поэтому backchannel закрывает по `sub`, а RP-logout работает через `id_token_hint` + `/signout-oidc`.
 8. IdP discovery: `scopes_supported = openid, profile, email, phone, offline_access`; `address` и `profile_ex` не поддерживаются.
 9. IdP поддерживает `response_modes_supported = query, fragment, form_post`; текущий рабочий режим — query.
 10. Мобильный/игровой клиент будет использовать отдельный flow через IdP; это следующая задача.
@@ -36,9 +110,9 @@
 
 - **A1.** `sub` стабилен и никогда не переиспользуется в SSO — **подтверждено** (D3).
 - **A2.** `preferred_username` — UTF-8 username: буквы/цифры (включая кириллицу), `_`, `-`, пробел; длина 2–30. Может меняться, уникальность **не гарантируется**. Используется только для отображения/поиска, никогда как ключ идентичности или URL-параметр (D2/D11 подтверждены).
-- **A3.** Глобальный бан: IdP — source of truth, отдаёт signed claim `globally_enabled` и signed-события изменения статуса. Lila хранит проекцию `identity_status`, не пишет в БД lila напрямую со стороны IdP; при запрете закрывает сессии.
+- **A3.** Глобальный бан: IdP — source of truth. Signed-события изменения статуса — основной канал; lila хранит проекцию `identity_status` и при запрете закрывает сессии. Claim `globally_enabled` поддерживается кодом, но в проверенном IdP он **отсутствует**; если появится — будет учитываться вместе с проекцией.
 - **A4.** Локальный бан/закрытие lila хранится в `user4.enabled` и `user4.foreverClosed`.
-- **A5.** Локальный вход (пароль, локальный signup, password reset, magic link, login token) должен быть недоступен на уровне приложения.
+- **A5.** Локальный вход (пароль, локальный signup, password reset, magic link, login token) недоступен: роуты удалены. Исключение — Clas создаёт локальные аккаунты учеников; это нужно закрыть до включения классов (см. `.kilo/plans/clas-sso-student-provisioning.md`).
 - **A6.** `response_mode=query` — единственный поддерживаемый режим (D6). `form_post` не рассматриваем; `POST /signin-oidc` удаляется.
 - **A7.** Локальная 2FA полностью отключена (D7); MFA — ответственность IdP. Пользователь не может включить локальный TOTP, который OIDC всё равно не проверяет.
 - **A8.** lila хранит только канонический `UserId = sub`. Платформенные ID (Yandex/VK/Friday) не попадают в `_id`.
@@ -97,6 +171,9 @@
 
 ### Phase 0 — Baseline и подготовка
 
+**Статус:** ✅ 0.4; ⚠️ 0.1/0.2 закрыты аудитом прод-дампа; ❌ 0.3 (тестовый контур/mock IdP).
+
+
 **Цель:** зафиксировать текущее состояние, точки отказа и тестовый контур.
 
 - [ ] **0.1. Инвентаризация локальных auth-эндпоинтов.**
@@ -132,6 +209,9 @@
 ---
 
 ### Phase 1 — P0: Закрыть локальный стек аутентификации
+
+**Статус:** ✅ 1.0/1.1/1.2/1.4/1.6/1.7; ⚠️ 1.3 (у старых пользователей остаётся `bpass`, Clas не переведён); ❌ 1.5 (интеграционные тесты).
+
 
 **Цель:** ни один локальный endpoint не может создать сессию или credential; SSO-вход не выдаёт сессию закрытому аккаунту.
 
@@ -199,6 +279,9 @@
 ---
 
 ### Phase 2 — P0: UserProvisioning, баны и удалённые аккаунты
+
+**Статус:** ✅ 2.1–2.6; ⚠️ 2.5 (`sid` отсутствует в ID token); ❌ 2.7 (интеграционные тесты).
+
 
 **Цель:** один provider-agnostic путь `ExternalIdentity → User`, с корректной обработкой статусов.
 
@@ -296,6 +379,9 @@
 
 ### Phase 3 — P0: Разделение `UserId` и `UserName`
 
+**Статус:** ✅ 3.1/3.2/3.4–3.7; ⚠️ 3.3 (не все формы выбора пользователя); ❌ 3.8 (line-ws/arena/клиенты).
+
+
 **Цель:** устранить неявные конверсии username → id и все wrong-target сценарии.
 
 - [ ] **3.1. Убрать неявные конверсии.**
@@ -382,6 +468,9 @@
 
 ### Phase 4 — P0: Logout, backchannel и жизненный цикл сессии
 
+**Статус:** ✅ 4.1/4.2/4.3/4.5; ❌ 4.4 (optional refresh tokens), 4.6 (cross-repo), 4.7 (интеграционные тесты).
+
+
 **Цель:** «выход» завершает SSO-сессию; глобальный бан/завершение сессии на IdP инвалидирует lila-сессию.
 
 - [ ] **4.1. Сохранять ID token/claims.**
@@ -440,6 +529,9 @@
 
 ### Phase 5 — P1: Корректность OIDC
 
+**Статус:** ✅ 5.1–5.7 (5.3 уже был allowlist); ⚠️ 5.8 (только unit-тесты, без mock IdP).
+
+
 **Цель:** привести запросы и разбор ответов в соответствие с IdP и OIDC-спекой.
 
 - [ ] **5.1. Scopes.**
@@ -491,6 +583,9 @@
 
 ### Phase 6 — P1: Производительность и устойчивость
 
+**Статус:** ✅ 6.1–6.4/6.6/6.7; 6.5 N/A (в этом форке нет sudo).
+
+
 **Цель:** убрать блокирующий I/O с потока запроса и лишние сетевые вызовы.
 
 - [ ] **6.1. Singleton/caching `OpenIDConnectService`.**
@@ -523,6 +618,9 @@
 
 ### Phase 7 — P2: Email, UX и диагностика
 
+**Статус:** ✅ 7.1–7.5; миграции выполнены на проде.
+
+
 - [ ] **7.1. Email-политика (D5).**
   - Email — необязательные контактные данные, не identity. Null/empty: не падать, не писать пустую строку, не создавать поле.
   - Убрать unique index на `email` в `bin/mongodb/indexes.js`; добавить non-unique индекс для поиска. Миграция: drop unique → create non-unique.
@@ -554,6 +652,9 @@
 ---
 
 ### Phase 8 — Тесты, CI и приёмка
+
+**Статус:** ⚠️ 8.1 частично (unit/BSON/smoke); ❌ 8.2/8.3/8.4 (mock IdP, БД, клиенты).
+
 
 - [ ] **8.1. Unit-тесты.**
   - `UserProvisioning`: все статусы, duplicate, null claims, idempotency.
@@ -595,6 +696,9 @@
 ---
 
 ### Phase 9 — Out of scope: YandexGame / VkGame / FridayGame (D12 hybrid)
+
+**Статус:** ✅ 9.2/9.3; ⚠️ 9.1/9.4 частично; signature-flow остаётся отдельной задачей.
+
 
 Отдельная задача после Phase 1–8. Фактическое состояние на момент планирования:
 
@@ -690,6 +794,8 @@
 ---
 
 ## 7. Definition of Done
+
+> **На 2026-10-21 DoD выполнен для production-core, но не полностью:** открыты Phase 8 (integration/mock IdP), 3.8/4.6/8.4 (line-ws/arena/clients), Clas SSO и очистка legacy. Не считать план закрытым до их выполнения.
 
 - [ ] Ни один локальный auth-эндпоинт не создаёт сессию/credential (включая email-confirm signup, смену пароля/email/username).
 - [ ] `close`/`kid` работают без пароля после SSO; `delete`/`passwd`/`email`/`username`/`twoFactor` недоступны.
