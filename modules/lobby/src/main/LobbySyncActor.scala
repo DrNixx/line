@@ -1,7 +1,5 @@
 package lila.lobby
 
-import java.time.Instant // Шаг 5.1: TTL зарезервированных хуков (защита от потерянного ответа)
-
 import scalalib.actor.SyncActor
 
 import lila.common.Bus
@@ -20,19 +18,11 @@ final private class LobbySyncActor(
 
   import LobbySyncActor.*
 
-  private val hookRepo  = new HookRepo
-  private var mergeMode = false // Шаг 1: пока без изменения матчинга, используется в Шаге 4
+  private val hookRepo      = new HookRepo
+  private var mergeMode     = false // Шаг 1: пока без изменения матчинга, используется в Шаге 4
+  private val reservedHooks = new HookReservations(30.seconds)
 
   private var remoteDisconnectAllAt = nowInstant
-
-  // Step5a: reserved hook ids handed to a pool as candidates; cleaned by TTL (lost-reply protection)
-  private val reservedTtlSeconds = 30L
-  private var reserved = Map.empty[String, Instant]
-
-  /** Step5a: drop stale reservations */
-  private def cleanupReserved(): Unit =
-    val cutoff = nowInstant.minusSeconds(reservedTtlSeconds)
-    reserved --= reserved.collect { case (id, ts) if !ts.isAfter(cutoff) => id }
 
   private var socket: SyncActor = new SyncActor:
     val process = { case msg =>
@@ -108,6 +98,7 @@ final private class LobbySyncActor(
     case LeaveAll => remoteDisconnectAllAt = nowInstant
 
     case Tick(promise) =>
+      reservedHooks.cleanup()
       hookRepo.truncateIfNeeded()
       socket
         .ask[Sris](GetSrisP.apply)
@@ -143,21 +134,20 @@ final private class LobbySyncActor(
     case HookSub(member, true) =>
       socket ! AllHooksFor(member, hookRepo.filter { biter.showHookTo(_, member) }.toSeq)
 
-    // Step5a: hand the pool candidates excluding already-reserved hooks; mark them reserved (TTL-protected)
     case HookThieve.GetCandidates(clock, promise) =>
-      cleanupReserved()
-      val hooks = hookRepo.poolCandidates(clock).filterNot(hook => reserved.contains(hook.hookId))
-      if hooks.nonEmpty then reserved ++= hooks.map(_.hookId -> nowInstant)
+      reservedHooks.cleanup()
+      val hooks = hookRepo.poolCandidates(clock).filterNot(h => reservedHooks.isReserved(h.hookId))
+      reservedHooks.reserve(hooks.map(_.hookId))
       promise.success(HookThieve.PoolHooks(hooks))
 
     // Step5a: paired hooks -> clear reservation and remove from lobby (as before)
     case HookThieve.StolenHookIds(ids) =>
-      if ids.nonEmpty then reserved --= ids
+      reservedHooks.release(ids)
       hookRepo.byIds(ids.toSet).foreach(remove)
 
     // Step5a: unpaired candidates -> clear reservation; hooks stay in lobby and become matchable again
     case HookThieve.ReleasedHookIds(ids) =>
-      if ids.nonEmpty then reserved --= ids
+      reservedHooks.release(ids)
 
   private def NoPlayban(user: Option[LobbyUser])(f: => Unit): Unit =
     user
@@ -166,8 +156,7 @@ final private class LobbySyncActor(
         if _ then () else f
 
   private def biteHook(hookId: String, sri: Sri, user: Option[LobbyUser]): Unit =
-    if reserved.contains(hookId) then return ()
-    hookRepo.byId(hookId).foreach { hook =>
+    hookRepo.byId(hookId).filterNot(h => reservedHooks.isReserved(h.id)).foreach { hook =>
       remove(hook)
       hookRepo.bySri(sri).foreach(remove)
       biter(hook, sri, user).foreach(this.!)
@@ -176,7 +165,7 @@ final private class LobbySyncActor(
   private def findCompatible(hook: Hook): Option[Hook] =
     hookRepo.filter(_.compatibleWith(hook)).find { existing =>
       // Step5a: do not pair hooks already handed to a pool as candidates
-      !reserved.contains(existing.id) &&
+      !reservedHooks.isReserved(existing.id) &&
       biter.canJoin(existing, hook.user) &&
       !(existing.user, hook.user).tupled
         .so: (u1, u2) =>
