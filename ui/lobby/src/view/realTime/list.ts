@@ -12,14 +12,16 @@ function renderHook(ctrl: LobbyController, hook: Hook) {
     'tr.hook.' + hook.action,
     {
       key: hook.id,
-      class: { disabled: !!hook.disabled },
+      class: { disabled: !!hook.disabled, pool: hook.action === 'joinPool' },
       attrs: {
         role: 'button',
         title: hook.disabled
           ? ''
-          : hook.action === 'join'
-            ? i18n.site.joinTheGame + ' | ' + perfNames[hook.perf]
-            : i18n.site.cancel,
+          : hook.action === 'cancel'
+            ? i18n.site.cancel
+            : hook.action === 'joinPool'
+              ? i18n.site.quickPairing + ' | ' + perfNames[hook.perf]
+              : i18n.site.joinTheGame + ' | ' + perfNames[hook.perf],
         'data-id': hook.id,
       },
     },

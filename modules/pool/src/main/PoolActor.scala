@@ -17,12 +17,20 @@ final private class PoolActor(
 
   var members = Vector.empty[PoolMember]
 
+  private var mergeMode = false // Шаг 1: пока без изменения матчинга, используется в Шаге 4
+
   private var lastPairedUserIds = Set.empty[UserId]
 
   var nextWave: Cancellable = scala.compiletime.uninitialized
 
   given Executor = context.dispatcher
 
+  private def publishMembers(): Unit =
+    if mergeMode then
+      lila.common.Bus.publish(
+        lila.core.pool.PoolMembers(config.id, config.clock, members),
+        "poolMembers"
+      )
   def scheduleWave() =
     nextWave = context.system.scheduler.scheduleOnce(
       config.wave.every + ThreadLocalRandom.nextInt(1000).millis,
@@ -41,15 +49,24 @@ final private class PoolActor(
       members.find(joiner.is(_)) match
         case None =>
           members = members :+ lila.pool.PoolMember(joiner, rageSit)
-          if members.sizeIs >= config.wave.players.value then self ! FullWave
+          publishMembers()
+          val needed = if mergeMode then 2 else config.wave.players.value
+          if members.sizeIs >= needed then self ! FullWave
         case Some(member) if member.ratingRange != joiner.ratingRange =>
           members = members.map: m =>
             if m == member then m.withRange(joiner.ratingRange) else m
+          publishMembers()
         case _ => // no change
     case Leave(userId) =>
-      members.find(_.userId == userId).foreach { member =>
-        members = members.filter(member !=)
-      }
+      val before = members
+      members = members.filterNot(_.userId == userId)
+      if members != before then publishMembers()
+
+    case SetMergeMode(enabled) =>
+      mergeMode = enabled
+      if enabled then
+        publishMembers()
+        if members.sizeIs >= 2 then self ! FullWave
 
     case ScheduledWave =>
       monitor.scheduled(monId).increment()
@@ -73,13 +90,15 @@ final private class PoolActor(
 
       val pairedMembers = pairings.flatMap(_.members)
 
-      hookThieve.stolen(
-        hooks.filter: h =>
-          pairedMembers.exists(h.is(_)),
-        monId
-      )
+      // Шаг 5.1: спаренные хуки — stolen; остальные кандидаты возвращаем в лобби через release,
+      // чтобы зарезервированные id не блокировали матчинг после волны (защита от дубля игры при гонке hook/wave)
+      val pairedIds = pairedMembers.map(_.userId).toSet
+
+      hookThieve.stolen(hooks.filter { h => pairedIds.contains(h.member.userId) }, monId)
+      hookThieve.release(hooks.filterNot { h => pairedIds.contains(h.member.userId) })
 
       members = members.diff(pairedMembers).map(_.incMisses)
+      publishMembers()
 
       if pairings.nonEmpty then gameStarter(config, pairings)
 
@@ -94,8 +113,10 @@ final private class PoolActor(
       scheduleWave()
 
     case Sris(sris) =>
+      val before = members
       members = members.filter: m =>
         sris contains m.sri
+      if members != before then publishMembers()
 
   val monitor = lila.mon.lobby.pool.wave
   val monId   = config.id.value.replace('+', '_')
@@ -104,6 +125,7 @@ private object PoolActor:
 
   case class Join(joiner: Joiner, rageSit: lila.core.playban.RageSit)
   case class Leave(userId: UserId) extends AnyVal
+  case class SetMergeMode(enabled: Boolean)
 
   case object ScheduledWave
   case object FullWave

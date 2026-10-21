@@ -31,8 +31,14 @@ export interface Hook {
   n?: string; // username
   rating?: number;
   ra?: 1; // rated
-  action: 'cancel' | 'join';
+  action: 'cancel' | 'join' | 'joinPool';
+  pool?: PoolId;
   disabled?: boolean;
+}
+
+export interface PoolEntry extends Hook {
+  action: 'joinPool';
+  pool: PoolId;
 }
 
 export interface Seek {

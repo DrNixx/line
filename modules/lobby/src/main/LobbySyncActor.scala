@@ -18,7 +18,9 @@ final private class LobbySyncActor(
 
   import LobbySyncActor.*
 
-  private val hookRepo = new HookRepo
+  private val hookRepo      = new HookRepo
+  private var mergeMode     = false // Шаг 1: пока без изменения матчинга, используется в Шаге 4
+  private val reservedHooks = new HookReservations(30.seconds)
 
   private var remoteDisconnectAllAt = nowInstant
 
@@ -32,12 +34,17 @@ final private class LobbySyncActor(
     // solve circular reference
     case SetSocket(actor) => socket = actor
 
+    case SetMergeMode(enabled) => mergeMode = enabled
+
     case msg @ AddHook(hook) =>
       lila.mon.lobby.hook.create.increment()
+      // Шаг 5.2: взаимоисключение — создание хука авторизованным владельцем выводит его из всех пулов
+      hook.user.so(u => poolApi.leaveAll(u.id))
       hookRepo.bySri(hook.sri).foreach(remove)
       hook.sid.so: sid =>
         hookRepo.bySid(sid).foreach(remove)
-      (!hook.compatibleWithPools).so(findCompatible(hook)) match
+      val tryLobbyMatch = !hook.compatibleWithPools || mergeMode
+      tryLobbyMatch.so(findCompatible(hook)) match
         case Some(h) =>
           biteHook(h.id, hook.sri, hook.user)
           publishRemoveHook(hook)
@@ -91,6 +98,7 @@ final private class LobbySyncActor(
     case LeaveAll => remoteDisconnectAllAt = nowInstant
 
     case Tick(promise) =>
+      reservedHooks.cleanup()
       hookRepo.truncateIfNeeded()
       socket
         .ask[Sris](GetSrisP.apply)
@@ -127,10 +135,19 @@ final private class LobbySyncActor(
       socket ! AllHooksFor(member, hookRepo.filter { biter.showHookTo(_, member) }.toSeq)
 
     case HookThieve.GetCandidates(clock, promise) =>
-      promise.success(HookThieve.PoolHooks(hookRepo.poolCandidates(clock)))
+      reservedHooks.cleanup()
+      val hooks = hookRepo.poolCandidates(clock).filterNot(h => reservedHooks.isReserved(h.hookId))
+      reservedHooks.reserve(hooks.map(_.hookId))
+      promise.success(HookThieve.PoolHooks(hooks))
 
+    // Step5a: paired hooks -> clear reservation and remove from lobby (as before)
     case HookThieve.StolenHookIds(ids) =>
+      reservedHooks.release(ids)
       hookRepo.byIds(ids.toSet).foreach(remove)
+
+    // Step5a: unpaired candidates -> clear reservation; hooks stay in lobby and become matchable again
+    case HookThieve.ReleasedHookIds(ids) =>
+      reservedHooks.release(ids)
 
   private def NoPlayban(user: Option[LobbyUser])(f: => Unit): Unit =
     user
@@ -138,8 +155,8 @@ final private class LobbySyncActor(
       .foreach:
         if _ then () else f
 
-  private def biteHook(hookId: String, sri: Sri, user: Option[LobbyUser]) =
-    hookRepo.byId(hookId).foreach { hook =>
+  private def biteHook(hookId: String, sri: Sri, user: Option[LobbyUser]): Unit =
+    hookRepo.byId(hookId).filterNot(h => reservedHooks.isReserved(h.id)).foreach { hook =>
       remove(hook)
       hookRepo.bySri(sri).foreach(remove)
       biter(hook, sri, user).foreach(this.!)
@@ -147,6 +164,8 @@ final private class LobbySyncActor(
 
   private def findCompatible(hook: Hook): Option[Hook] =
     hookRepo.filter(_.compatibleWith(hook)).find { existing =>
+      // Step5a: do not pair hooks already handed to a pool as candidates
+      !reservedHooks.isReserved(existing.id) &&
       biter.canJoin(existing, hook.user) &&
       !(existing.user, hook.user).tupled
         .so: (u1, u2) =>
@@ -185,6 +204,8 @@ final private class LobbySyncActor(
 private object LobbySyncActor:
 
   case class SetSocket(actor: SyncActor)
+  // Шаг 1: тип сообщения для переключения режима слияния; поведение (матчинг в AddHook) — в Шаге 4.
+  case class SetMergeMode(enabled: Boolean)
 
   private case class Tick(promise: Promise[Unit])
 

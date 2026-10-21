@@ -1,12 +1,16 @@
 package lila.lobby
 
 import com.softwaremill.macwire.*
+import play.api.Configuration
 
 import lila.core.config.*
 import lila.core.pool.IsClockCompatible
 
+case class LobbyMergeConfig(mergeBelowPlayers: Int)
+
 @Module
 final class Env(
+    appConfig: Configuration,
     db: lila.db.Db,
     onStart: lila.core.game.OnStart,
     relationApi: lila.core.relation.RelationApi,
@@ -27,6 +31,10 @@ final class Env(
     IsClockCompatible,
     lila.core.config.RateLimit
 ):
+
+  val lobbyMergeConfig = LobbyMergeConfig(
+    mergeBelowPlayers = appConfig.getOptional[Int]("lobby.merge_below_players").getOrElse(0)
+  )
 
   private lazy val seekApiConfig = new SeekApi.Config(
     coll = db(CollName("seek")),

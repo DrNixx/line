@@ -23,8 +23,10 @@ object IsClockCompatible extends FunctionWrapper[IsClockCompatible, Clock.Config
 
 case class PoolMember(
     userId: UserId,
+    username: UserName,
     sri: Sri,
     rating: IntRating,
+    displayRating: IntRating,
     provisional: Boolean,
     ratingRange: Option[RatingRange],
     lame: Boolean,
@@ -39,10 +41,19 @@ object PoolMember:
 case class Pairing(players: ByColor[(Sri, GameFullId)])
 case class Pairings(pairings: List[Pairing])
 
+/** Internal Bus message. Contains blocking lists, must not be sent to clients as-is. */
+case class PoolMembers(
+    poolId: PoolConfigId,
+    clock: Clock.Config,
+    members: Vector[PoolMember]
+)
+
 object HookThieve:
 
   case class GetCandidates(clock: Clock.Config, promise: Promise[PoolHooks])
   case class StolenHookIds(ids: Vector[String])
+  // Шаг 5.1: кандидаты не спарены — снимаем резерв в лобби (хуки остаются доступными)
+  case class ReleasedHookIds(ids: Vector[String])
 
   case class PoolHook(hookId: String, member: PoolMember):
     def is(m: PoolMember) = member.userId == m.userId
@@ -51,11 +62,13 @@ object HookThieve:
 
 case class Joiner(
     sri: Sri,
-    rating: IntRating,
+    rating: IntRating,        // jittered, used for matchmaking
+    displayRating: IntRating, // real rating, used for lobby display
     provisional: Boolean,
     ratingRange: Option[RatingRange],
     lame: Boolean,
-    blocking: Blocking
+    blocking: Blocking,
+    username: UserName
 )(using val me: MyId)
 
 object Joiner:
@@ -66,3 +79,7 @@ trait PoolApi:
   def poolPerfKeys: Map[PoolConfigId, PerfKey]
   def join(poolId: PoolConfigId, joiner: Joiner): Unit
   def leave(poolId: PoolConfigId, user: UserId): Unit
+  def setMergeMode(enabled: Boolean): Unit
+
+  // Шаг 5.2: взаимоисключение — создание хука авторизованным владельцем выводит его из всех пулов
+  def leaveAll(userId: UserId): Unit

@@ -108,6 +108,7 @@ object mon:
         def withRange(id: String)  = histogram("lobby.pool.wave.withRange").withTag("pool", id)
       object thieve:
         def stolen(id: String) = histogram("lobby.pool.thieve.stolen").withTag("pool", id)
+      val merge = gauge("lobby.pool.merge").withoutTags()
     private val lobbySegment = timer("lobby.segment")
     def segment(seg: String) = lobbySegment.withTag("segment", seg)
   object rating:

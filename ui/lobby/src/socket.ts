@@ -1,7 +1,7 @@
 import * as xhr from './xhr';
 import * as hookRepo from './hookRepo';
 import type LobbyController from './ctrl';
-import type { PoolMember, Hook } from './interfaces';
+import type { PoolMember, Hook, PoolEntry } from './interfaces';
 import { idleTimer } from 'common/timing';
 
 interface Handlers {
@@ -34,6 +34,10 @@ export default class LobbySocket {
       },
       hli(ids: string) {
         hookRepo.syncIds(ctrl, ids.match(/.{8}/g) || []);
+        ctrl.redraw();
+      },
+      pmem(entries: PoolEntry[]) {
+        ctrl.setPoolEntries(entries);
         ctrl.redraw();
       },
       reload_seeks() {

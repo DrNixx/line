@@ -19,9 +19,11 @@ object PoolMember:
   def apply(joiner: Joiner, rageSit: RageSit): PoolMember =
     lila.core.pool.PoolMember(
       userId = joiner.me,
+      username = joiner.username,
       sri = joiner.sri,
       lame = joiner.lame,
       rating = joiner.rating,
+      displayRating = joiner.displayRating,
       provisional = joiner.provisional,
       ratingRange = joiner.ratingRange,
       blocking = joiner.blocking,

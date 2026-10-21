@@ -18,6 +18,7 @@ import type {
   GameType,
   ForceSetupOptions,
   LobbyMe,
+  PoolEntry,
 } from './interfaces';
 import LobbySocket from './socket';
 import Filter from './filter';
@@ -36,6 +37,7 @@ export default class LobbyController {
   mode: Mode;
   sort: Sort;
   stepHooks: Hook[] = [];
+  poolEntries: PoolEntry[] = [];
   stepping = false;
   redirecting = false;
   poolMember?: PoolMember;
@@ -135,6 +137,7 @@ export default class LobbyController {
     pubsub.on('socket.open', () => {
       if (this.tab === 'real_time') {
         this.data.hooks = [];
+        this.poolEntries = [];
         this.socket.realTimeIn();
       } else if (this.tab === 'pools' && this.poolMember) this.poolIn();
     });
@@ -190,6 +193,7 @@ export default class LobbyController {
       else if (this.tab === 'real_time') {
         this.socket.realTimeOut();
         this.data.hooks = [];
+        this.poolEntries = [];
       }
       this.tab = this.stores.tab.set(tab);
     }
@@ -211,8 +215,12 @@ export default class LobbyController {
   };
 
   clickHook = async (id: string) => {
-    const hook = hookRepo.find(this, id);
+    const hook = hookRepo.find(this, id) || this.poolEntries.find(h => h.id === id);
     if (!hook || hook.disabled || this.stepping || this.redirecting) return;
+    if (hook.action === 'joinPool') {
+      if (hook.pool) this.enterPool({ id: hook.pool });
+      return;
+    }
     if (hook.action === 'cancel' || (await variantConfirm(hook.variant)))
       this.socket.send(hook.action, hook.id);
   };
@@ -228,6 +236,12 @@ export default class LobbyController {
     this.data.seeks = seeks;
     seekRepo.initAll(this);
     this.redraw();
+  };
+
+  setPoolEntries = (entries: PoolEntry[]) => {
+    this.poolEntries = entries.map(
+      (e): PoolEntry => ({ ...e, action: 'joinPool', variant: e.variant || 'standard' }),
+    );
   };
 
   clickPool = (id: string) => {
@@ -291,6 +305,7 @@ export default class LobbyController {
     switch (this.tab) {
       case 'real_time':
         this.data.hooks = [];
+        this.poolEntries = [];
         this.socket.realTimeIn();
         break;
       case 'seeks':
