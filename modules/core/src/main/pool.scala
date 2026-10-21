@@ -23,8 +23,10 @@ object IsClockCompatible extends FunctionWrapper[IsClockCompatible, Clock.Config
 
 case class PoolMember(
     userId: UserId,
+    username: UserName,
     sri: Sri,
     rating: IntRating,
+    displayRating: IntRating,
     provisional: Boolean,
     ratingRange: Option[RatingRange],
     lame: Boolean,
@@ -39,6 +41,13 @@ object PoolMember:
 case class Pairing(players: ByColor[(Sri, GameFullId)])
 case class Pairings(pairings: List[Pairing])
 
+/** Internal Bus message. Contains blocking lists, must not be sent to clients as-is. */
+case class PoolMembers(
+    poolId: PoolConfigId,
+    clock: Clock.Config,
+    members: Vector[PoolMember]
+)
+
 object HookThieve:
 
   case class GetCandidates(clock: Clock.Config, promise: Promise[PoolHooks])
@@ -51,11 +60,13 @@ object HookThieve:
 
 case class Joiner(
     sri: Sri,
-    rating: IntRating,
+    rating: IntRating,        // jittered, used for matchmaking
+    displayRating: IntRating, // real rating, used for lobby display
     provisional: Boolean,
     ratingRange: Option[RatingRange],
     lame: Boolean,
-    blocking: Blocking
+    blocking: Blocking,
+    username: UserName
 )(using val me: MyId)
 
 object Joiner:

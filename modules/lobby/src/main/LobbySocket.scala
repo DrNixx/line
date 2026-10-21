@@ -214,10 +214,12 @@ final class LobbySocket(
               lila.core.pool.Joiner(
                 sri = member.sri,
                 rating = toJoinRating(user, glicko, trust),
+                displayRating = user.ratingAt(perfType),
                 provisional = glicko.forall(_.provisional.yes),
                 ratingRange = ratingRange,
                 lame = user.lame,
-                blocking = user.blocking.map(_ ++ blocking)
+                blocking = user.blocking.map(_ ++ blocking),
+                username = user.username
               )(using user.id.into(MyId))
             )
     // leaving a pool

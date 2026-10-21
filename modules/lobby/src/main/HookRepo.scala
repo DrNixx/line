@@ -75,8 +75,10 @@ final private class HookRepo:
       hookId = h.id,
       member = lila.core.pool.PoolMember(
         userId = u.id,
+        username = h.username,
         sri = h.sri,
         rating = h.rating | lila.rating.Glicko.default.intRating,
+        displayRating = h.rating | lila.rating.Glicko.default.intRating,
         provisional = h.provisional,
         ratingRange = h.manualRatingRange,
         lame = h.user.so(_.lame),

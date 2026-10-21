@@ -25,6 +25,12 @@ final private class PoolActor(
 
   given Executor = context.dispatcher
 
+  private def publishMembers(): Unit =
+    if mergeMode then
+      lila.common.Bus.publish(
+        lila.core.pool.PoolMembers(config.id, config.clock, members),
+        "poolMembers"
+      )
   def scheduleWave() =
     nextWave = context.system.scheduler.scheduleOnce(
       config.wave.every + ThreadLocalRandom.nextInt(1000).millis,
@@ -43,17 +49,21 @@ final private class PoolActor(
       members.find(joiner.is(_)) match
         case None =>
           members = members :+ lila.pool.PoolMember(joiner, rageSit)
+          publishMembers()
           if members.sizeIs >= config.wave.players.value then self ! FullWave
         case Some(member) if member.ratingRange != joiner.ratingRange =>
           members = members.map: m =>
             if m == member then m.withRange(joiner.ratingRange) else m
+          publishMembers()
         case _ => // no change
     case Leave(userId) =>
-      members.find(_.userId == userId).foreach { member =>
-        members = members.filter(member !=)
-      }
+      val before = members
+      members = members.filterNot(_.userId == userId)
+      if members != before then publishMembers()
 
-    case SetMergeMode(enabled) => mergeMode = enabled
+    case SetMergeMode(enabled) =>
+      mergeMode = enabled
+      if enabled then publishMembers()
 
     case ScheduledWave =>
       monitor.scheduled(monId).increment()
@@ -84,6 +94,7 @@ final private class PoolActor(
       )
 
       members = members.diff(pairedMembers).map(_.incMisses)
+      publishMembers()
 
       if pairings.nonEmpty then gameStarter(config, pairings)
 
@@ -98,8 +109,10 @@ final private class PoolActor(
       scheduleWave()
 
     case Sris(sris) =>
+      val before = members
       members = members.filter: m =>
         sris contains m.sri
+      if members != before then publishMembers()
 
   val monitor = lila.mon.lobby.pool.wave
   val monId   = config.id.value.replace('+', '_')
