@@ -7,7 +7,7 @@ import chess.IntRating
 
 import lila.common.Json.given
 import lila.core.game.ChangeFeatured
-import lila.core.pool.PoolConfigId
+import lila.core.pool.{ PoolConfigId, PoolMember }
 import lila.core.security.{ UserTrust, UserTrustApi }
 import lila.core.socket.{ protocol as P, * }
 import lila.core.timeline.*
@@ -47,6 +47,10 @@ final class LobbySocket(
     private val idleSris           = collection.mutable.Set[SriStr]()
     private val hookSubscriberSris = collection.mutable.Set[SriStr]()
     private val removedHookIds     = new collection.mutable.StringBuilder(1024)
+
+    // Шаг 2b: режим слияния и кэш PoolMembers, приходящих из Bus.
+    private var mergeEnabled = false
+    private val poolMembers  = collection.mutable.Map.empty[PoolConfigId, lila.core.pool.PoolMembers]
 
     val process: SyncActor.Receive =
 
@@ -105,6 +109,23 @@ final class LobbySocket(
 
       case lila.core.pool.Pairings(pairings) => send.exec(Out.pairings(pairings))
 
+      // Шаг 2b: реакция на смену режима слияния и приём PoolMembers из Bus.
+      case SetMergeMode(enabled) =>
+        mergeEnabled = enabled
+        if enabled then sendPoolEntries()
+        else
+          send.exec(
+            P.Out.tellSris(
+              hookSubscriberSris.diff(idleSris).map { Sri(_) },
+              makeMessage("pmem", Json.arr())
+            )
+          )
+
+      case msg @ lila.core.pool.PoolMembers(poolId, _, membersList) =>
+        if membersList.isEmpty then poolMembers.remove(poolId)
+        else poolMembers.update(poolId, msg)
+        if mergeEnabled then sendPoolEntries()
+
       case HookIds(ids) => tellActiveHookSubscribers(makeMessage("hli", ids.mkString("")))
 
       case AddSeek(_) | RemoveSeek(_) => tellActive(makeMessage("reload_seeks"))
@@ -119,9 +140,17 @@ final class LobbySocket(
         send.exec(
           P.Out.tellSri(member.sri, makeMessage("hooks", hooks.map(_.render)))
         )
+        if mergeEnabled then send.exec(P.Out.tellSri(member.sri, makeMessage("pmem", poolEntriesFor(member))))
         hookSubscriberSris += member.sri.value
 
-    lila.common.Bus.subscribe(this, "changeFeaturedGame", "streams", "poolPairings", "lobbySocket")
+    lila.common.Bus.subscribe(
+      this,
+      "changeFeaturedGame",
+      "streams",
+      "poolPairings",
+      "lobbySocket",
+      "poolMembers"
+    )
     scheduler.scheduleOnce(7.seconds)(this ! SendHookRemovals)
     scheduler.scheduleWithFixedDelay(31.seconds, 31.seconds)(() => this ! Cleanup)
 
@@ -129,6 +158,50 @@ final class LobbySocket(
 
     private def tellActiveHookSubscribers(msg: JsObject): Unit =
       send.exec(P.Out.tellSris(hookSubscriberSris.diff(idleSris).map { Sri(_) }, msg))
+
+    // Шаг 2b: отправка пул-записей зрителям.
+    private def sendPoolEntries(): Unit =
+      hookSubscriberSris
+        .diff(idleSris)
+        .foreach: sriStr =>
+          members
+            .getIfPresent(sriStr)
+            .foreach: member =>
+              send.exec(P.Out.tellSri(Sri(sriStr), makeMessage("pmem", poolEntriesFor(member))))
+
+    private def poolEntriesFor(member: Member): JsArray =
+      member.user.fold(Json.arr()): viewer =>
+        JsArray(
+          poolMembers.valuesIterator.flatMap { pool =>
+            poolApi.poolPerfKeys.get(pool.poolId).iterator.flatMap { perfKey =>
+              val perfType = lila.rating.PerfType(perfKey)
+              pool.members.iterator.collect {
+                case m if LobbySocket.poolEntryVisibleTo(viewer, m, perfType) =>
+                  renderPoolMember(pool, m, perfType)
+              }
+            }
+          }.toVector
+        )
+
+    private def renderPoolMember(
+        pool: lila.core.pool.PoolMembers,
+        m: PoolMember,
+        perfType: lila.rating.PerfType
+    ): JsObject =
+      Json.obj(
+        "id"     -> s"pool:${pool.poolId.value}:${m.userId}",
+        "pool"   -> pool.poolId.value,
+        "clock"  -> pool.clock.show,
+        "t"      -> pool.clock.estimateTotalSeconds,
+        "s"      -> chess.Speed(pool.clock).id,
+        "i"      -> pool.clock.incrementSeconds,
+        "perf"   -> perfType.key,
+        "ra"     -> 1,
+        "u"      -> m.userId,
+        "n"      -> m.username,
+        "rating" -> m.displayRating.value,
+        "prov"   -> m.provisional
+      )
 
     import lila.common.Json.given
     private def gameStartRedirect(pov: Pov) = makeMessage(
@@ -274,6 +347,7 @@ final class LobbySocket(
         lila.mon.lobby.pool.merge.update(if enabled then 1 else 0)
         lobby ! LobbySyncActor.SetMergeMode(enabled)
         poolApi.setMergeMode(enabled)
+        actor ! SetMergeMode(enabled)
 
     case P.In.WsBoot =>
       logger.warn("Remote socket boot")
@@ -330,3 +404,17 @@ private object LobbySocket:
   case class GetMember(sri: Sri, promise: Promise[Option[Member]])
   object SendHookRemovals
   case class SetIdle(sri: Sri, value: Boolean)
+  // Шаг 2b: своё сообщение (не путать с LobbySyncActor.SetMergeMode).
+  case class SetMergeMode(enabled: Boolean)
+
+  private[lobby] def poolEntryVisibleTo(
+      viewer: LobbyUser,
+      entry: PoolMember,
+      perfType: lila.rating.PerfType
+  ): Boolean =
+    !viewer.bot &&
+      viewer.id != entry.userId &&
+      viewer.lame == entry.lame &&
+      !viewer.blocking.value.contains(entry.userId) &&
+      !entry.blocking.value.contains(viewer.id) &&
+      entry.ratingRange.forall(_.contains(viewer.ratingAt(perfType)))
