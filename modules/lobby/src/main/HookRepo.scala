@@ -21,6 +21,8 @@ final private class HookRepo:
 
   def size = hooks.size
 
+  def all: Vector[Hook] = hooks.values.toVector
+
   // O(n)
   def filter(f: Hook => Boolean): View[Hook] = hooks.values.view.filter(f)
 

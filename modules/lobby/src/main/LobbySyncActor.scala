@@ -6,7 +6,7 @@ import lila.common.Bus
 import lila.core.pool.{ HookThieve, IsClockCompatible }
 import lila.core.socket.{ Sri, Sris }
 
-case class LobbyHookCount(count: Int)
+case class LobbyHookSnapshot(hooks: Vector[Hook])
 
 final private class LobbySyncActor(
     seekApi: SeekApi,
@@ -127,7 +127,7 @@ final private class LobbySyncActor(
       lila.mon.lobby.socket.member.update(sris.size)
       lila.mon.lobby.hook.size.record(hookRepo.size)
       lila.mon.actor.queueSize("lobby").update(queueSize)
-      if mergeMode then Bus.publish(LobbyHookCount(hookRepo.size), "lobbyHookCount")
+      if mergeMode then Bus.publish(LobbyHookSnapshot(hookRepo.all), "lobbyHookSnapshot")
       promise.success(())
 
     case RemoveHooks(hooks) => hooks.foreach(remove)
