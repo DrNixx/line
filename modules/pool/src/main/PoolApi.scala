@@ -43,6 +43,9 @@ final class PoolApi(
 
   def setMergeMode(enabled: Boolean): Unit = actors.values.foreach(_ ! SetMergeMode(enabled))
 
+  // Шаг 5.2: взаимоисключение — выводит пользователя из всех пулов (создание хука авторизованным владельцем)
+  def leaveAll(userId: UserId): Unit = actors.values.foreach(_ ! Leave(userId))
+
   def setOnlineSris(ids: Sris): Unit = actors.values.foreach(_ ! ids)
 
   private def sendTo(poolId: PoolConfigId, msg: Any) =

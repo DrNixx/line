@@ -52,6 +52,8 @@ object HookThieve:
 
   case class GetCandidates(clock: Clock.Config, promise: Promise[PoolHooks])
   case class StolenHookIds(ids: Vector[String])
+  // Шаг 5.1: кандидаты не спарены — снимаем резерв в лобби (хуки остаются доступными)
+  case class ReleasedHookIds(ids: Vector[String])
 
   case class PoolHook(hookId: String, member: PoolMember):
     def is(m: PoolMember) = member.userId == m.userId
@@ -78,3 +80,6 @@ trait PoolApi:
   def join(poolId: PoolConfigId, joiner: Joiner): Unit
   def leave(poolId: PoolConfigId, user: UserId): Unit
   def setMergeMode(enabled: Boolean): Unit
+
+  // Шаг 5.2: взаимоисключение — создание хука авторизованным владельцем выводит его из всех пулов
+  def leaveAll(userId: UserId): Unit

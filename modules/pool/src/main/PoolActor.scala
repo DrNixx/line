@@ -90,11 +90,12 @@ final private class PoolActor(
 
       val pairedMembers = pairings.flatMap(_.members)
 
-      hookThieve.stolen(
-        hooks.filter: h =>
-          pairedMembers.exists(h.is(_)),
-        monId
-      )
+      // Шаг 5.1: спаренные хуки — stolen; остальные кандидаты возвращаем в лобби через release,
+      // чтобы зарезервированные id не блокировали матчинг после волны (защита от дубля игры при гонке hook/wave)
+      val pairedIds = pairedMembers.map(_.userId).toSet
+
+      hookThieve.stolen(hooks.filter { h => pairedIds.contains(h.member.userId) }, monId)
+      hookThieve.release(hooks.filterNot { h => pairedIds.contains(h.member.userId) })
 
       members = members.diff(pairedMembers).map(_.incMisses)
       publishMembers()
