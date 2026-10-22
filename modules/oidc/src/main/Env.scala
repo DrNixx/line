@@ -3,6 +3,7 @@ package lila.oidc
 import com.softwaremill.macwire.*
 import play.api.ConfigLoader
 import play.api.Configuration
+import play.api.libs.ws.StandaloneWSClient
 import scala.concurrent.duration.FiniteDuration
 
 import lila.common.autoconfig.{ *, given }
@@ -38,7 +39,8 @@ final class Env(
     userRepo: lila.user.UserRepo,
     identity: lila.identity.Env,
     db: lila.db.Db,
-    mode: play.api.Mode
+    mode: play.api.Mode,
+    ws: StandaloneWSClient
 )(using Executor, akka.stream.Materializer):
   import net.baseUrl
 
@@ -75,6 +77,16 @@ final class Env(
   def allowedSignatureProviders: Set[PlatformProvider] = signatureProviders
   def signatureTimeout: FiniteDuration                 = config.signature.timeout
   def signatureExchangeUrl: String                     = config.signature.exchangeUrl
+
+  lazy val signatureBroker: PlatformSignatureBroker =
+    PlatformSignatureApi(
+      ws = ws,
+      exchangeUrl = config.signature.exchangeUrl,
+      clientId = config.clientId,
+      clientSecret = config.clientSecret,
+      issuer = config.issuer,
+      timeout = config.signature.timeout
+    )
 
   private lazy val oidc = OIDCFactory.apply(
     config.issuer,
