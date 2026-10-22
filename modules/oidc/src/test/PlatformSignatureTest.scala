@@ -1,5 +1,7 @@
 package lila.oidc
 
+import play.api.libs.json.*
+
 class PlatformSignatureTest extends munit.FunSuite:
 
   private val allowed = PlatformProvider.all.toSet
@@ -38,5 +40,41 @@ class PlatformSignatureTest extends munit.FunSuite:
     assertEquals(
       PlatformSignature.validate("yandex-game", "  abc  ", allowed),
       Right(PlatformProvider.YandexGame -> "abc")
+    )
+  }
+
+  test("request JSON requires provider and signature strings") {
+    assertEquals(SignatureRequest.fromJson(Json.obj()), Left(SignatureError.InvalidRequest))
+    assertEquals(
+      SignatureRequest.fromJson(Json.obj("provider" -> "  ", "signature" -> "abc")),
+      Left(SignatureError.InvalidRequest)
+    )
+    assertEquals(
+      SignatureRequest.fromJson(Json.obj("provider" -> "yandex-game", "signature" -> 12)),
+      Left(SignatureError.InvalidRequest)
+    )
+    assertEquals(SignatureRequest.fromJson(Json.arr()), Left(SignatureError.InvalidRequest))
+    assertEquals(
+      SignatureRequest.fromJson(Json.obj("provider" -> " yandex-game ", "signature" -> "abc")),
+      Right(SignatureRequest("yandex-game", "abc"))
+    )
+  }
+
+  test("JSON validation applies provider allowlist and signature limits") {
+    val request = Json.obj("provider" -> "vk-game", "signature" -> "abc")
+    assertEquals(
+      PlatformSignature.validateJson(request, Set(PlatformProvider.YandexGame)),
+      Left(SignatureError.UnknownProvider)
+    )
+    assertEquals(
+      PlatformSignature.validateJson(request, allowed),
+      Right(PlatformProvider.VkGame -> "abc")
+    )
+    assertEquals(
+      PlatformSignature.validateJson(
+        Json.obj("provider" -> "vk-game", "signature" -> " "),
+        allowed
+      ),
+      Left(SignatureError.InvalidRequest)
     )
   }

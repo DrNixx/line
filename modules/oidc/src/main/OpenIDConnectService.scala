@@ -104,6 +104,29 @@ final class OpenIDConnectService(
         val state = new State()
         s"$endpoint${separator}id_token_hint=${encode(idToken)}&state=${encode(state.getValue)}"
 
+  /** Token endpoint advertised by the provider, used for RFC 8693 token exchange. */
+  def tokenEndpoint: Fu[java.net.URI] =
+    metadata.map(_.getTokenEndpointURI)
+
+  /** Validate an ID token obtained through token exchange. This flow has no nonce. */
+  def validateExchangedIdToken(token: String): Fu[IDTokenClaimsSet] =
+    metadata.flatMap { metadata =>
+      JwsAlgorithmValidation.ensureSupported(oidc.jwsAlgorithm)(metadata) match
+        case Left(err) => fufail(err)
+        case Right(jwsAlgorithm) =>
+          val validator = new IDTokenValidator(
+            metadata.getIssuer,
+            oidc.clientID,
+            jwsAlgorithm,
+            metadata.getJWKSetURI.toURL,
+            new DefaultResourceRetriever(JWK_REQUEST_TIMEOUT, JWK_REQUEST_TIMEOUT)
+          )
+          try fuccess(validator.validate(SignedJWT.parse(token), null))
+          catch
+            case e @ (_: BadJOSEException | _: JOSEException | _: java.text.ParseException) =>
+              fufail(s"OIDC exchanged ID token has error: $e")
+    }
+
   /** Validate a signed backchannel logout token. */
   def validateLogoutToken(token: String): Fu[LogoutTokenClaimsSet] =
     metadata.flatMap { metadata =>

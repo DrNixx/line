@@ -24,7 +24,6 @@ private case class OidcConfig(
 @Module
 private case class SignatureConfig(
     enabled: Boolean,
-    @ConfigName("exchange_url") val exchangeUrl: String,
     providers: String,
     timeout: FiniteDuration
 )
@@ -64,10 +63,6 @@ final class Env(
       .toSet
 
   if config.signature.enabled then
-    if config.signature.exchangeUrl.trim.isEmpty then
-      throw new IllegalArgumentException(
-        "oidc.signature.exchange_url is required when signature login is enabled"
-      )
     if signatureProviders.isEmpty then
       throw new IllegalArgumentException("oidc.signature.providers must not be empty")
     if config.signature.timeout <= scala.concurrent.duration.Duration.Zero then
@@ -75,18 +70,6 @@ final class Env(
 
   def signatureEnabled: Boolean                        = config.signature.enabled
   def allowedSignatureProviders: Set[PlatformProvider] = signatureProviders
-  def signatureTimeout: FiniteDuration                 = config.signature.timeout
-  def signatureExchangeUrl: String                     = config.signature.exchangeUrl
-
-  lazy val signatureBroker: PlatformSignatureBroker =
-    PlatformSignatureApi(
-      ws = ws,
-      exchangeUrl = config.signature.exchangeUrl,
-      clientId = config.clientId,
-      clientSecret = config.clientSecret,
-      issuer = config.issuer,
-      timeout = config.signature.timeout
-    )
 
   private lazy val oidc = OIDCFactory.apply(
     config.issuer,
@@ -98,8 +81,13 @@ final class Env(
     config.tokenAuthMethod
   )
 
+  private lazy val oidcService = new OpenIDConnectService(oidc)
+
   private lazy val provisioning = UserProvisioning(userRepo, identity.statusRepo, identity.aliasRepo)
 
   private lazy val stateRepo = OidcStateRepo(db(lila.core.config.CollName("oidc_state")))
 
-  lazy val api = OidcApi(oidc, provisioning, stateRepo)
+  lazy val signatureBroker: PlatformSignatureBroker =
+    PlatformSignatureApi(ws, oidcService, config.signature.timeout)
+
+  lazy val api = OidcApi(oidcService, provisioning, stateRepo, signatureBroker)

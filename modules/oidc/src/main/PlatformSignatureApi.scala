@@ -1,86 +1,171 @@
 package lila.oidc
 
 import scala.concurrent.duration.FiniteDuration
+import scala.jdk.CollectionConverters.*
 import scala.util.Try
 
 import play.api.libs.json.*
-import play.api.libs.ws.JsonBodyWritables.*
 import play.api.libs.ws.{ StandaloneWSClient, WSAuthScheme }
+import play.api.libs.ws.DefaultBodyWritables.*
+
+import com.nimbusds.jwt.JWTClaimsSet
+import com.nimbusds.openid.connect.sdk.claims.{ IDTokenClaimsSet, UserInfo }
 
 import lila.common.EmailAddress
-import lila.core.config.Secret
 
 final class PlatformSignatureApi(
     ws: StandaloneWSClient,
-    exchangeUrl: String,
-    clientId: String,
-    clientSecret: Secret,
-    issuer: String,
+    service: OpenIDConnectService,
     timeout: FiniteDuration
 )(using Executor)
     extends PlatformSignatureBroker:
 
   import PlatformSignatureApi.*
 
+  private val logger = lila.log("oidc")
+
   def exchange(
       provider: PlatformProvider,
       signature: String
   ): Fu[Either[SignatureError, ExternalIdentity]] =
-    ws.url(exchangeUrl)
-      .withRequestTimeout(timeout)
-      .withAuth(clientId, clientSecret.value, WSAuthScheme.BASIC)
-      .post(Json.obj("provider" -> provider.value, "signature" -> signature))
-      .map: response =>
-        val result = decode(issuer, response.status, response.body)
-        result match
-          case Right(_) => ()
-          case Left(SignatureError.InvalidSignature) =>
-            logger.info(s"platform signature rejected provider=${provider.value}")
-          case Left(error) =>
-            logger.warn(
-              s"platform signature exchange failed provider=${provider.value} status=${response.status} error=$error"
+    service.tokenEndpoint
+      .flatMap: endpoint =>
+        ws.url(endpoint.toString)
+          .withRequestTimeout(timeout)
+          .withAuth(
+            service.oidc.clientID.getValue,
+            service.oidc.clientSecret.getValue,
+            WSAuthScheme.BASIC
+          )
+          .post:
+            requestParams(
+              provider = provider,
+              signature = signature,
+              audience = service.oidc.clientID.getValue,
+              scopes = service.oidc.scopes
             )
-        result
-      .recover { case e: Exception =>
+          .flatMap: response =>
+            parseTokenResponse(response.status, response.body) match
+              case Left(error) =>
+                logError(provider, response.status, error)
+                fuccess(Left(error))
+              case Right(idToken) =>
+                service
+                  .validateExchangedIdToken(idToken)
+                  .map: claims =>
+                    if validLifetime(claims) then
+                      toIdentity(claims.toJWTClaimsSet, service.oidc.clientID.getValue)
+                    else Left(SignatureError.ProviderError)
+                  .recover: e =>
+                    logger.warn(
+                      s"platform ID token rejected provider=${provider.value} ${e.getClass.getSimpleName}"
+                    )
+                    Left(SignatureError.ProviderError)
+      .recover: e =>
         logger.warn(
-          s"platform signature exchange unavailable provider=${provider.value} ${e.getClass.getSimpleName}"
+          s"platform token exchange unavailable provider=${provider.value} ${e.getClass.getSimpleName}"
         )
         Left(SignatureError.Unavailable)
-      }
+
+  private def logError(
+      provider: PlatformProvider,
+      status: Int,
+      error: SignatureError
+  ): Unit =
+    error match
+      case SignatureError.InvalidSignature =>
+        logger.info(s"platform signature rejected provider=${provider.value}")
+      case SignatureError.AccessDenied =>
+        logger.info(s"platform account denied provider=${provider.value}")
+      case _ =>
+        logger.warn(
+          s"platform token exchange failed provider=${provider.value} status=$status error=$error"
+        )
 
 private[oidc] object PlatformSignatureApi:
 
-  private val MaxResponseChars = 16 * 1024
+  val IdTokenType            = "urn:ietf:params:oauth:token-type:id_token"
+  val TokenExchangeGrantType = "urn:ietf:params:oauth:grant-type:token-exchange"
 
-  def decode(
-      issuer: String,
-      status: Int,
-      body: String
-  ): Either[SignatureError, ExternalIdentity] =
+  def requestParams(
+      provider: PlatformProvider,
+      signature: String,
+      audience: String,
+      scopes: Set[String]
+  ): Map[String, Seq[String]] =
+    Map(
+      "grant_type"           -> Seq(TokenExchangeGrantType),
+      "subject_token"        -> Seq(signature),
+      "subject_token_type"   -> Seq(provider.subjectTokenType),
+      "requested_token_type" -> Seq(IdTokenType),
+      "audience"             -> Seq(audience),
+      "scope"                -> Seq(scopes.toSeq.sorted.mkString(" "))
+    )
+
+  /** Parse the RFC 8693 response. The issued ID token travels in `access_token`. */
+  def parseTokenResponse(status: Int, body: String): Either[SignatureError, String] =
     status match
       case 200 =>
-        if body.length > MaxResponseChars then Left(SignatureError.ProviderError)
-        else
-          Try(Json.parse(body)).toOption
-            .flatMap(_.asOpt[JsObject])
+        Try(Json.parse(body)).toOption
+          .flatMap(_.asOpt[JsObject])
+          .toRight(SignatureError.ProviderError)
+          .flatMap: obj =>
+            for
+              issued <- (obj \ "issued_token_type")
+                .asOpt[String]
+                .filter(_ == IdTokenType)
+                .toRight(SignatureError.ProviderError)
+              token <- (obj \ "access_token")
+                .asOpt[String]
+                .map(_.trim)
+                .filter(_.nonEmpty)
+                .toRight(SignatureError.ProviderError)
+            yield token
+      case 400 =>
+        errorCode(body) match
+          case Some("invalid_grant") => Left(SignatureError.InvalidSignature)
+          case Some("access_denied") => Left(SignatureError.AccessDenied)
+          case _                     => Left(SignatureError.ProviderError)
+      case 429 => Left(SignatureError.RateLimited)
+      case _   => Left(SignatureError.Unavailable)
+
+  /** The exchanged ID token must be short-lived; passport issues 60 seconds, 120 is the hard limit. */
+  def validLifetime(claims: IDTokenClaimsSet, maxSeconds: Long = 120): Boolean =
+    Option(claims.getIssueTime)
+      .zip(Option(claims.getExpirationTime))
+      .exists: (iat, exp) =>
+        val seconds = (exp.getTime - iat.getTime) / 1000
+        seconds > 0 && seconds <= maxSeconds
+
+  def toIdentity(claims: JWTClaimsSet, audience: String): Either[SignatureError, ExternalIdentity] =
+    if claims.getAudience.asScala.toList != List(audience) then Left(SignatureError.ProviderError)
+    else
+      Try:
+        val userInfo = new UserInfo(claims)
+        for
+          subject <- Option(claims.getSubject)
+            .map(_.trim)
+            .filter(_.nonEmpty)
             .toRight(SignatureError.ProviderError)
-            .flatMap: obj =>
-              for
-                sub      <- requiredString(obj, "sub")
-                username <- requiredString(obj, "preferred_username")
-              yield ExternalIdentity(
-                issuer = issuer,
-                subject = sub,
-                username = username,
-                email = optionalEmail(obj),
-                emailVerified = (obj \ "email_verified").asOpt[Boolean].getOrElse(false),
-                globallyEnabled = (obj \ "globally_enabled").asOpt[Boolean]
-              )
-      case 400 | 403 => Left(SignatureError.InvalidSignature)
-      case _         => Left(SignatureError.Unavailable)
+          username <- Option(userInfo.getPreferredUsername)
+            .map(_.trim)
+            .filter(_.nonEmpty)
+            .toRight(SignatureError.ProviderError)
+        yield ExternalIdentity(
+          issuer = Option(claims.getIssuer).getOrElse(""),
+          subject = subject,
+          username = username,
+          email = Option(userInfo.getEmailAddress).flatMap(EmailAddress.from),
+          emailVerified = Option(userInfo.getEmailVerified).exists(_.booleanValue),
+          globallyEnabled = Option(userInfo.getClaim("globally_enabled")).flatMap:
+            case b: java.lang.Boolean => Some(b.booleanValue)
+            case _                    => None
+        )
+      .toOption
+        .flatMap(_.toOption)
+        .toRight(SignatureError.ProviderError)
 
-  private def requiredString(obj: JsObject, field: String): Either[SignatureError, String] =
-    (obj \ field).asOpt[String].map(_.trim).filter(_.nonEmpty).toRight(SignatureError.ProviderError)
-
-  private def optionalEmail(obj: JsObject): Option[EmailAddress] =
-    (obj \ "email").asOpt[String].map(_.trim).filter(_.nonEmpty).flatMap(EmailAddress.from)
+  private def errorCode(body: String): Option[String] =
+    Try(Json.parse(body)).toOption
+      .flatMap(_.asOpt[JsObject])
+      .flatMap(obj => (obj \ "error").asOpt[String])

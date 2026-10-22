@@ -5,6 +5,9 @@
 #
 # Webhook checks additionally need the same secret the app was started with:
 #   BASE_URL=http://localhost:8080 WEBHOOK_SECRET=test-secret bin/tests/oidc-smoke
+#
+# Platform signature checks (expect 404 unless signature login is enabled):
+#   BASE_URL=http://localhost:8080 SIGNATURE_ENABLED=1 bin/tests/oidc-smoke
 
 set -euo pipefail
 
@@ -39,6 +42,21 @@ check "POST /login removed" 404 "$(status -X POST "$BASE_URL/login" -d 'username
 for path in /password/reset /auth/magic-link /account/passwd /account/email /account/twofactor /account/delete; do
   check "removed $path" 404 "$(status "$BASE_URL$path")"
 done
+
+echo "== platform signature =="
+sig_url="$BASE_URL/auth/signature"
+if [[ "${SIGNATURE_ENABLED:-0}" == "1" ]]; then
+  check "signature rejects empty request" 400 \
+    "$(status -X POST "$sig_url" -H 'Content-Type: application/json' -d '{}')"
+  check "signature rejects unknown provider" 400 \
+    "$(status -X POST "$sig_url" -H 'Content-Type: application/json' -d '{"provider":"steam","signature":"x"}')"
+  long_sig=$(printf 'x%.0s' {1..9000})
+  check "signature rejects oversized assertion" 400 \
+    "$(status -X POST "$sig_url" -H 'Content-Type: application/json' --data-binary "{\"provider\":\"yandex-game\",\"signature\":\"$long_sig\"}")"
+else
+  check "signature disabled" 404 \
+    "$(status -X POST "$sig_url" -H 'Content-Type: application/json' -d '{}')"
+fi
 
 echo "== id routes =="
 check "profile by sub" 200 "$(status "$BASE_URL/@/2")"

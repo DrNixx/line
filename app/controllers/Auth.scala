@@ -10,7 +10,7 @@ import lila.core.email.{ UserIdOrEmail, UserStrOrEmail }
 import lila.core.net.IpAddress
 import lila.core.security.ClearPassword
 import lila.memo.RateLimit
-import lila.oidc.{ LoginError, LoginOutcome }
+import lila.oidc.{ LoginError, LoginOutcome, PlatformSignature, SignatureError }
 import lila.security.FingerPrint
 import lila.security.EmailConfirm
 
@@ -109,6 +109,53 @@ final class Auth(
         }
 
   def signinOidc = Open(oidcCallback)
+
+  private val MaxSignatureBodyBytes = 16 * 1024L
+
+  def signature = AnonBodyOf(parse.tolerantJson(MaxSignatureBodyBytes)): body =>
+    NoBot:
+      if !env.oidc.signatureEnabled then fuccess(NotFound)
+      else
+        PlatformSignature.validateJson(body, env.oidc.allowedSignatureProviders) match
+          case Left(error) => fuccess(signatureError(error))
+          case Right((provider, signature)) =>
+            limit.signatureLogin(ctx.ip, fuccess(rateLimitedJson)):
+              env.oidc.api
+                .authenticateSignature(provider, signature)
+                .flatMap:
+                  case Left(error) => fuccess(signatureError(error))
+                  case Right(LoginOutcome.Success(user, _)) =>
+                    limit.signatureLoginUser(user.id, fuccess(rateLimitedJson)):
+                      api
+                        .saveAuthentication(
+                          user.id,
+                          ctx.mobileApiVersion,
+                          checkEmailConfirmation = !env.ssoOnly,
+                          provider = provider.value.some
+                        )
+                        .flatMap: sessionId =>
+                          mobileUserOk(user, sessionId)
+                            .map(authenticateCookie(sessionId, remember = true))
+                            .recoverWith(authRecovery)
+                  case Right(LoginOutcome.Refused(error, _)) => fuccess(signatureRefusal(error))
+
+  private def signatureError(error: SignatureError): Result =
+    import SignatureError.*
+    error match
+      case InvalidRequest   => BadRequest(jsonError("Invalid signature request"))
+      case UnknownProvider  => BadRequest(jsonError("Unknown provider"))
+      case InvalidSignature => Unauthorized(jsonError("Invalid signature"))
+      case AccessDenied     => Forbidden(jsonError("Account is unavailable"))
+      case RateLimited      => TooManyRequests(jsonError("Too many requests"))
+      case Unavailable | ProviderError =>
+        ServiceUnavailable(jsonError("Authentication service unavailable"))
+
+  private def signatureRefusal(error: LoginError): Result =
+    error match
+      case LoginError.Banned                            => Forbidden(jsonError("Account is banned"))
+      case LoginError.Closed | LoginError.ClosedForever => Forbidden(jsonError("Account is closed"))
+      case LoginError.Deleted                           => Forbidden(jsonError("Account is unavailable"))
+      case _                                            => BadRequest(jsonError("Authentication failed"))
 
   private def oidcCallback(using ctx: Context) = NoBot:
     env.oidc.api

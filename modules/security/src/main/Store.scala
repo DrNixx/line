@@ -54,8 +54,13 @@ final class Store(val coll: Coll, cacheApi: lila.memo.CacheApi)(using Executor):
       up: Boolean,
       fp: Option[FingerPrint],
       proxy: lila.core.security.IsProxy,
-      oidcSession: Option[lila.oidc.OidcSession] = None
+      oidcSession: Option[lila.oidc.OidcSession] = None,
+      provider: Option[String] = None
   ): Funit =
+    val oidcFields = oidcSession.fold($empty): session =>
+      $doc("idToken" -> session.idToken, "iss" -> session.issuer) ++
+        session.sid.fold($empty)(sid => $doc("sid" -> sid)) ++
+        session.authTime.fold($empty)(at => $doc("authTime" -> at))
     coll.insert
       .one:
         $doc(
@@ -69,10 +74,7 @@ final class Store(val coll: Coll, cacheApi: lila.memo.CacheApi)(using Executor):
           "fp"        -> fp.flatMap(lila.security.FingerHash.from),
           "proxy"     -> proxy,
           "expiresAt" -> nowInstant.plusSeconds(30L * 24 * 3600)
-        ) ++ oidcSession.fold($empty): session =>
-          $doc("idToken" -> session.idToken, "iss" -> session.issuer) ++
-            session.sid.fold($empty)(sid => $doc("sid" -> sid)) ++
-            session.authTime.fold($empty)(at => $doc("authTime" -> at))
+        ) ++ oidcFields ++ provider.fold($empty)(p => $doc("provider" -> p))
       .void
 
   def oidcSession(sessionId: String): Fu[Option[lila.oidc.OidcSession]] =

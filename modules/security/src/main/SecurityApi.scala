@@ -33,7 +33,8 @@ final class SecurityApi(
       userId: UserId,
       apiVersion: Option[ApiVersion],
       checkEmailConfirmation: Boolean = true,
-      oidcSession: Option[lila.oidc.OidcSession] = None
+      oidcSession: Option[lila.oidc.OidcSession] = None,
+      provider: Option[String] = None
   )(using req: RequestHeader): Fu[String] =
     (if checkEmailConfirmation then userRepo.mustConfirmEmail(userId) else fuccess(false)).flatMap {
       if _ then fufail(SecurityApi.MustConfirmEmail(userId))
@@ -50,7 +51,8 @@ final class SecurityApi(
             up = true,
             fp = none,
             proxy = proxy,
-            oidcSession = oidcSession
+            oidcSession = oidcSession,
+            provider = provider
           )
         yield sessionId
     }

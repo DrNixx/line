@@ -27,7 +27,7 @@
 - **Phase 4:** `id_token`/`iss`/`expiresAt` в сессии (4.1), RP-initiated logout (4.2), backchannel logout (4.3), TTL сессий + миграция (4.5).
 - **Phase 5:** server-side одноразовые `state`/`nonce` + cookie (5.1/5.2), allowlist реферера (5.3, уже был), `LoginError`/`LoginOutcome` (5.4), scopes из конфига (5.5), PKCE S256 (5.6), `token_auth_method` (5.7).
 - **Phase 6/7:** SSO-баннер, email как контакт, non-unique email index + миграции, индексы, prod-валидация `client_id`/`secret` (6.1–6.4, 6.6, 7.1–7.5).
-- **Phase 9:** удалены мёртвые `Signup`/`PasswordReset`/`LoginToken`/`EmailChange`, `LoginCandidate`, guard-хелперы; runbook и smoke-тест.
+- **Phase 9:** удалены мёртвые `Signup`/`PasswordReset`/`LoginToken`/`EmailChange`, `LoginCandidate`, guard-хелперы; runbook и smoke-тест; добавлен адаптер platform-signature (`POST /auth/signature` → RFC 8693 token exchange на IdP, provider в `security`, rate limit, allowlist) — по умолчанию выключен (`oidc.signature.enabled=false`).
 
 ### Проверено на реальном IdP (dev)
 - `sub` numeric, совпадает с `_id`; новый пользователь `375100` создан без `bpass`.
@@ -70,7 +70,7 @@
 
 ### P2 — опционально
 11. Refresh tokens (4.4) — потребителя access token в lila нет.
-12. Дальнейшая чистка мёртвого кода/доков; `Phase 9.4` финальный аудит.
+12. Дальнейшая чистка мёртвого кода/доков (финальный аудит Phase 9.4 выполнен 2026-10-22).
 13. `sid`/backchannel: если IdP начнёт отдавать `sid`, включить точечное закрытие по сессии; сейчас только `sub`.
 
 ## Как продолжить в новой сессии
@@ -700,14 +700,20 @@ git switch -c <task> origin/chess-online2   # default after merge #21
 
 ### Phase 9 — Out of scope: YandexGame / VkGame / FridayGame (D12 hybrid)
 
-**Статус:** ✅ 9.2/9.3; ⚠️ 9.1/9.4 частично; signature-flow остаётся отдельной задачей.
+**Статус:** ✅ 9.1–9.4 (2026-10-22); фича выключена по умолчанию до готовности IdP-контракта. Клиентская интеграция `arena` и WS-проверки — отдельная cross-repo задача.
+
+Выполнено:
+- **9.1:** `PlatformProvider` (allowlist), `SignatureError`, `PlatformSignature.validate`, `PlatformSignatureBroker`, конфиг `oidc.signature.*`; unit-тесты.
+- **9.2:** `PlatformSignatureApi` — RFC 8693 Token Exchange на `token_endpoint` из discovery (Basic auth, `subject_token_type` на провайдера, `audience=client_id`), валидация выданного ID token по JWKS (`iss`/`aud`/`exp`/подпись), маппинг OAuth2-ошибок.
+- **9.3:** `POST /auth/signature` (`AnonBodyOf`, JSON, без CSRF), body ≤ 16 KiB, signature ≤ 8 KiB, rate limit IP + user, provider в документе `security`, ответ — мобильный `Session` с `sessionId`; ошибки 400/401/403/429/503 без утечки assertion/токена.
+- **9.4:** runbook `docs/oidc-sso-deployment.md` (IdP-контракт, конфиг, проверки) и `bin/tests/oidc-smoke` (404 при выключенной фиче).
 
 
 Отдельная задача после Phase 1–8. Фактическое состояние на момент планирования:
 
 - клиент `arena/src` — Capacitor/Yandex Games, один код для first-party и платформ;
 - логин: `POST /auth/signature` с `{ provider: 'yandex-game', signature }`, ожидает `Session` с `sessionId`;
-- `/auth/signature` в `line` пока не реализован;
+- `/auth/signature` в `line` реализован как адаптер к IdP; выключен по умолчанию до готовности обмена на стороне IdP;
 - клиент хранит `sessionId` в storage, шлёт его заголовком в HTTP и query-параметром в WS;
 - WS (`line-ws`) читает `sessionId` из cookie `live2` или query и проверяет только `security._id + up=true`;
 - OAuth/Bearer в клиенте и WS отсутствует.
@@ -815,7 +821,7 @@ git switch -c <task> origin/chess-online2   # default after merge #21
 - [ ] Logout завершает SSO-сессию; backchannel logout работает.
 - [ ] `sessionId` имеет TTL, привязан к платформе, старые сессии закрываются; `line-ws` проверяет TTL/`enabled`; `sessionId` не уходит в query-логи; header/cookie precedence зафиксирован.
 - [ ] Клиент `arena/src` и `line-ws` обновлены синхронно: username не используется как ключ, WS принимает/отзывает сессии по новым правилам.
-- [ ] D12 hybrid зафиксирован: клиент/WS на `sessionId`, OAuth Bearer — для API/server-to-server; `/auth/signature` реализован как адаптер к IdP.
+- [x] D12 hybrid зафиксирован: клиент/WS на `sessionId`, OAuth Bearer — для API/server-to-server; `/auth/signature` реализован как адаптер к IdP (backend; клиент/WS — отдельные PR).
 - [ ] Scopes соответствуют IdP; используется только `response_mode=query`, `POST /signin-oidc` отсутствует.
 - [ ] Негативные OIDC-сценарии дают управляемый ответ, не 500.
 - [ ] Metadata/JWKS кэшируются; таймауты конечны; нет blocking I/O на request dispatcher.
@@ -850,4 +856,4 @@ git switch -c <task> origin/chess-online2   # default after merge #21
 
 Все решения **D1–D12 закрыты** (см. журнал в разделе 2). Блокирующих вопросов нет.
 
-Можно переходить к исполнению Phase 0–8 в порядке приоритета. Phase 9 (signature-flow) остаётся отдельной задачей и использует зафиксированный D12 hybrid.
+Phase 9 (signature-flow) реализована в backend 2026-10-22 и использует зафиксированный D12 hybrid. Остаток — включить `oidc.signature.enabled` после готовности IdP-обмена и синхронизировать `arena/src`/`line-ws` отдельными PR.

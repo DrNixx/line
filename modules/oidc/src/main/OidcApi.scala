@@ -8,12 +8,11 @@ import lila.common.EmailAddress
 import play.api.mvc.RequestHeader
 
 final class OidcApi(
-    oidc: OIDC,
+    client: OpenIDConnectService,
     provisioning: UserProvisioning,
-    stateRepo: OidcStateRepo
+    stateRepo: OidcStateRepo,
+    signatureBroker: PlatformSignatureBroker
 )(using Executor):
-
-  private val client = new OpenIDConnectService(oidc)
 
   def getAuthenticationRequest(): Fu[(AuthenticationRequest, com.nimbusds.oauth2.sdk.pkce.CodeVerifier)] =
     client.createOIDCAuthenticationRequest()
@@ -61,7 +60,16 @@ final class OidcApi(
             }
       }
 
-  def issuer: String = oidc.issuer.getValue
+  def authenticateSignature(
+      provider: PlatformProvider,
+      signature: String
+  ): Fu[Either[SignatureError, LoginOutcome]] =
+    signatureBroker.exchange(provider, signature).flatMap {
+      case Left(error)     => fuccess(Left(error))
+      case Right(identity) => provisioning.resolve(identity).map(Right(_))
+    }
+
+  def issuer: String = client.oidc.issuer.getValue
 
   def endSessionUrl(idToken: String): Fu[Option[String]] =
     client.endSessionUrl(idToken)
@@ -85,7 +93,7 @@ final class OidcApi(
         case b: java.lang.Boolean => Some(b.booleanValue)
         case _                    => None
     yield ExternalIdentity(
-      issuer = oidc.issuer.getValue,
+      issuer = client.oidc.issuer.getValue,
       subject = subject,
       username = username,
       email = email,

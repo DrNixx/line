@@ -524,6 +524,7 @@ POST  /logout                          controllers.Auth.logout
 GET   /signout-oidc                    controllers.Auth.signoutOidc
 GET   /signup                          controllers.Auth.signup
 GET   /$lang<\w\w\w?>/signup           controllers.Auth.signupLang(lang: Language)
+POST  /auth/signature                  controllers.Auth.signature
 POST  /auth/set-fp/:fp/:ms             controllers.Auth.setFingerPrint(fp, ms: Int)
 
 # Mod

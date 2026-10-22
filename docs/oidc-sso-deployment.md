@@ -17,6 +17,7 @@ OIDC-клиент:
 | PKCE | обязателен, `S256` |
 | `token_endpoint_auth_method` | `client_secret_post` (или `client_secret_basic`) |
 | `id_token_signing_alg_values_supported` | должен содержать настроенный `jws_alg` (например `RS256`) |
+| `grant_types_supported` | должен содержать `urn:ietf:params:oauth:grant-type:token-exchange` для platform login |
 
 Claims в ID token / UserInfo:
 
@@ -26,6 +27,80 @@ Claims в ID token / UserInfo:
 - `sid` — идентификатор SSO-сессии (для backchannel logout);
 - `auth_time` — опционально;
 - `globally_enabled` — опционально, `false` означает глобальный бан.
+
+### Platform signature exchange (`POST /auth/signature`)
+
+Платформенный вход (YandexGame / VkGame / FridayGame) идёт только через IdP.
+Lila не разбирает platform assertion и не доверяет полям из него.
+
+Обмен выполняется по RFC 8693 Token Exchange на `token_endpoint` из OIDC
+discovery. Аутентификация клиента — HTTP Basic
+(`oidc.issuer.client_id` + `oidc.issuer.client_secret`).
+`oidc.signature.timeout` ограничивает запрос.
+
+| Параметр | Значение |
+|---|---|
+| `grant_type` | `urn:ietf:params:oauth:grant-type:token-exchange` |
+| `subject_token` | platform assertion (`signature.payload`) |
+| `subject_token_type` | URN провайдера (см. ниже) |
+| `requested_token_type` | `urn:ietf:params:oauth:token-type:id_token` |
+| `audience` | `oidc.issuer.client_id` |
+| `scope` | `openid profile email` из `oidc.issuer.scopes` |
+
+`subject_token_type`:
+
+- `urn:chess-online:params:token-type:yandex-game-signature`
+- `urn:chess-online:params:token-type:vk-game-signature`
+- `urn:chess-online:params:token-type:friday-game-signature`
+
+#### Формат platform assertion
+
+`subject_token` — подпись в формате `signature.payload` (HMAC-SHA256, см. контракт
+passport). `payload` — base64 от JSON, например:
+
+```json
+{
+  "algorithm": "HMAC-SHA256",
+  "issuedAt": 1764319157,
+  "data": {
+    "uniqueID": "<platform identity key>",
+    "publicName": "Nick Panteleeff"
+  }
+}
+```
+
+`issuedAt` **обязателен**: это положительный Unix timestamp; passport отклоняет
+assertion, если он опережает серверное время больше чем на 60 секунд или старше
+300 секунд. Каждый `subject_token` одноразовый: passport сохраняет его хеш и
+повторную отправку отклоняет с `400 invalid_grant`.
+
+Lila assertion не разбирает и `issuedAt` не проверяет — для неё это непрозрачный
+`subject_token`. Она только обрезает пробелы и ограничивает длину (8 KiB), затем
+передаёт assertion в passport. Поэтому lila не повторяет запрос с тем же
+`subject_token`: при `invalid_grant` клиент должен получить у платформы свежую
+подпись.
+
+Успешный ответ — `200` JSON; выданный ID token передаётся в `access_token`,
+его тип — в `issued_token_type` (RFC 8693):
+
+```json
+{
+  "access_token": "<signed id_token JWT>",
+  "issued_token_type": "urn:ietf:params:oauth:token-type:id_token",
+  "token_type": "N/A",
+  "expires_in": 60
+}
+```
+
+Lila принимает токен только при точном `issued_token_type` и валидирует JWT по
+JWKS: подпись и `alg`, `kid`, `iss`, `aud` (= `client_id` lila), `iat`/`exp`.
+Claims: `sub` (канонический `UserId`), `preferred_username`, `globally_enabled`,
+опционально `email`/`email_verified`. TTL токена — 60 секунд; refresh token не
+выпускается.
+
+Platform assertion одноразовый: lila не повторяет запрос с тем же
+`subject_token`. `400 invalid_grant` означает невалидную/просроченную/повторную
+подпись; `400 access_denied` — удалённый или недоступный аккаунт.
 
 ## 2. Конфигурация lila
 
@@ -38,6 +113,14 @@ oidc {
     scopes            = "openid profile email"
     jws_alg           = "RS256"
     token_auth_method = "client_secret_post"
+  }
+
+  # Платформенный вход. Выключено по умолчанию: POST /auth/signature отвечает 404.
+  # token_endpoint берётся из OIDC discovery; отдельный URL не настраивается.
+  signature {
+    enabled   = false
+    providers = "yandex-game vk-game friday-game"
+    timeout   = 5 seconds
   }
 }
 
@@ -60,6 +143,11 @@ identity {
 - `identity.webhook.secret` пустой → endpoint `/internal/identity/events` отвечает `404`.
 - `jws_alg` обязателен; `none` и `HS*` запрещены.
 - `token_auth_method` допустим только `client_secret_post` или `client_secret_basic`.
+- `oidc.signature.enabled=true` требует непустой `providers`; неизвестный
+  provider в конфиге останавливает приложение.
+- Для token exchange клиент lila должен быть конфиденциальным и иметь разрешённый
+  `grant_type=urn:ietf:params:oauth:grant-type:token-exchange`.
+- При выключенной фиче `POST /auth/signature` отвечает `404`.
 
 ## 3. MongoDB: индексы и миграции
 
@@ -165,6 +253,38 @@ X-Identity-Signature: <hex(HMAC-SHA256(raw_body, identity.webhook.secret))>
 - `deleted` → то же + анонимизация username/email/profile (`_id` и игры сохраняются).
 - `active` после `deleted` восстанавливает только локальный tombstone.
 
+### Platform signature login
+
+`POST https://<lila-base-url>/auth/signature` (`application/json`, без CSRF-токена;
+эндпоинт для мобильного/игрового клиента).
+
+```json
+{"provider":"yandex-game","signature":"<platform assertion>"}
+```
+
+- provider проходит allowlist `oidc.signature.providers`;
+- тело ограничено 16 KiB, signature — 8 KiB;
+- rate limit по IP до обмена с IdP и по `userId` после успешного resolve;
+- assertion и полученный ID token не логируются и не сохраняются в БД;
+- обмен идёт по RFC 8693 на `token_endpoint`; ID token валидируется по JWKS;
+- `sub` из ID token становится `UserId`; используется общий `UserProvisioning`
+  и те же проверки `enabled`/`foreverClosed`/`identity_status`;
+- при успехе возвращается мобильный `Session` с `sessionId` и cookie; в документе
+  `security` сохраняется `provider` (например `yandex-game`).
+
+Коды ответа:
+
+| Код | Причина |
+|---|---|
+| `200` | сессия создана, тело — user JSON + `sessionId` |
+| `400` | невалидный JSON/запрос или неизвестный/запрещённый provider |
+| `401` | IdP отклонил подпись (`invalid_grant`) |
+| `403` | аккаунт забанен/закрыт/удалён (`access_denied` или claims) |
+| `404` | `oidc.signature.enabled=false` |
+| `413` | тело больше 16 KiB |
+| `429` | превышен rate limit |
+| `503` | IdP недоступен, ошибка конфигурации обмена, таймаут или невалидный ID token |
+
 Backchannel logout:
 
 `POST https://<lila-base-url>/internal/identity/backchannel-logout`
@@ -184,6 +304,8 @@ Backchannel logout:
 - [ ] Событие `banned` закрывает сессии/OAuth/push/WS.
 - [ ] Событие `deleted` очищает username/email/profile.
 - [ ] `/login` (POST), `/signup` (POST), `/password/reset`, `/account/passwd`, `/account/email`, `/account/twofactor` → `404` (маршруты удалены).
+- [ ] `POST /auth/signature` → `404` при `oidc.signature.enabled=false`.
+- [ ] При включённой фиче валидная platform-подпись создаёт сессию с `sessionId`, а в `db.security` есть `provider`; невалидная подпись → `401`, неизвестный provider → `400`.
 
 ### Smoke-тест
 
@@ -198,6 +320,13 @@ BASE_URL=http://localhost:8080 WEBHOOK_SECRET=<secret> bin/tests/oidc-smoke
 Проверяет: редиректы SSO, отсутствие локальных маршрутов, ID-only профили,
 PKCE/S256, scopes, state-cookie, одноразовый state, backchannel 400,
 HMAC-подпись, идемпотентность и отказ при чужом `issuer`.
+
+Проверка platform-signature:
+
+```bash
+BASE_URL=http://localhost:8080 bin/tests/oidc-smoke            # ожидает 404
+BASE_URL=http://localhost:8080 SIGNATURE_ENABLED=1 bin/tests/oidc-smoke  # проверяет 400 на плохой запрос
+```
 
 Пример подписи для ручной проверки:
 
@@ -223,6 +352,10 @@ curl -sS -X POST https://<base>/internal/identity/events \
 
 - `line-ws` и `arena` (отдельные репозитории) ещё не проверяют `identity_status`.
 - Refresh tokens не реализованы (4.4 — опционально).
+- Platform signature login реализован в backend через RFC 8693 token exchange,
+  но выключен по умолчанию: включение требует готового grant в passport и
+  проверки реальным Yandex/VK/Friday assertion. Клиент `arena` и `line-ws` —
+  отдельные PR.
 - Интеграционные тесты с mock IdP/БД не добавлены: в репозитории нет тестового
   Mongo/Play-контура (Phase 8).
 - Локальные формы, где пользователь вводит имя вручную (`msg` compat,

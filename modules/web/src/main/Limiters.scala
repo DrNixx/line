@@ -68,6 +68,12 @@ final class Limiters(using Executor, lila.core.config.RateLimit):
 
   val magicLink = RateLimit[String](credits = 3, duration = 1.hour, key = "login.magicLink.token")
 
+  val signatureLogin = RateLimit.composite[IpAddress](key = "auth.signature.ip")(
+    ("fast", 20, 1.minute),
+    ("slow", 200, 1.day)
+  )
+  val signatureLoginUser = RateLimit[UserId](credits = 30, duration = 1.hour, key = "auth.signature.user")
+
   val challenge = RateLimit[IpAddress](
     500,
     10.minute,
